@@ -33,20 +33,20 @@ namespace DSA_Project
         }
         public static void saveBasisDaten(Charakter charakter, XmlDocument characterFile, XmlElement BasisDatenElement)
         {
-            BasisDatenElement.AppendChild(characterFile.CreateElement("Name")).InnerText                = charakter.getBasicValues(DSA_BASICVALUES.NAME)[0];
-            BasisDatenElement.AppendChild(characterFile.CreateElement("AlterGeburstag")).InnerText      = charakter.getBasicValues(DSA_BASICVALUES.ALTER)[0];
-            BasisDatenElement.AppendChild(characterFile.CreateElement("Geschlecht")).InnerText          = charakter.getBasicValues(DSA_BASICVALUES.GESCHLECHT)[0];
-            BasisDatenElement.AppendChild(characterFile.CreateElement("Größe")).InnerText               = charakter.getBasicValues(DSA_BASICVALUES.GRÖSE)[0];
-            BasisDatenElement.AppendChild(characterFile.CreateElement("Gewicht")).InnerText             = charakter.getBasicValues(DSA_BASICVALUES.GEWICHT)[0];
-            BasisDatenElement.AppendChild(characterFile.CreateElement("Augenfarbe")).InnerText          = charakter.getBasicValues(DSA_BASICVALUES.AUGENFARBE)[0];
-            BasisDatenElement.AppendChild(characterFile.CreateElement("HaarFellFarbe")).InnerText       = charakter.getBasicValues(DSA_BASICVALUES.HAARFARBE)[0];
-            BasisDatenElement.AppendChild(characterFile.CreateElement("Hautfarbe")).InnerText           = charakter.getBasicValues(DSA_BASICVALUES.HAUTFARBE)[0];
-            BasisDatenElement.AppendChild(characterFile.CreateElement("Familienstand")).InnerText       = charakter.getBasicValues(DSA_BASICVALUES.FAMILIENSTAND)[0];
-            BasisDatenElement.AppendChild(characterFile.CreateElement("Anrede")).InnerText              = charakter.getBasicValues(DSA_BASICVALUES.ANREDE)[0];
-            BasisDatenElement.AppendChild(characterFile.CreateElement("Gottheit-en")).InnerText         = charakter.getBasicValues(DSA_BASICVALUES.GOTTHEIT)[0];
-            BasisDatenElement.AppendChild(characterFile.CreateElement("Resse-en")).InnerText            = charakter.getBasicValues(DSA_BASICVALUES.RASSE)[0];
-            BasisDatenElement.AppendChild(characterFile.CreateElement("Kultur-en")).InnerText           = charakter.getBasicValues(DSA_BASICVALUES.KULTUR)[0];
-            BasisDatenElement.AppendChild(characterFile.CreateElement("Profession")).InnerText          = charakter.getBasicValues(DSA_BASICVALUES.PROFESSION)[0];
+            BasisDatenElement.AppendChild(characterFile.CreateElement("Name")).InnerText                = charakter.getBasicValue(DSA_BASICVALUES.NAME)[0];
+            BasisDatenElement.AppendChild(characterFile.CreateElement("AlterGeburstag")).InnerText      = charakter.getBasicValue(DSA_BASICVALUES.ALTER)[0];
+            BasisDatenElement.AppendChild(characterFile.CreateElement("Geschlecht")).InnerText          = charakter.getBasicValue(DSA_BASICVALUES.GESCHLECHT)[0];
+            BasisDatenElement.AppendChild(characterFile.CreateElement("Größe")).InnerText               = charakter.getBasicValue(DSA_BASICVALUES.GRÖSE)[0];
+            BasisDatenElement.AppendChild(characterFile.CreateElement("Gewicht")).InnerText             = charakter.getBasicValue(DSA_BASICVALUES.GEWICHT)[0];
+            BasisDatenElement.AppendChild(characterFile.CreateElement("Augenfarbe")).InnerText          = charakter.getBasicValue(DSA_BASICVALUES.AUGENFARBE)[0];
+            BasisDatenElement.AppendChild(characterFile.CreateElement("HaarFellFarbe")).InnerText       = charakter.getBasicValue(DSA_BASICVALUES.HAARFARBE)[0];
+            BasisDatenElement.AppendChild(characterFile.CreateElement("Hautfarbe")).InnerText           = charakter.getBasicValue(DSA_BASICVALUES.HAUTFARBE)[0];
+            BasisDatenElement.AppendChild(characterFile.CreateElement("Familienstand")).InnerText       = charakter.getBasicValue(DSA_BASICVALUES.FAMILIENSTAND)[0];
+            BasisDatenElement.AppendChild(characterFile.CreateElement("Anrede")).InnerText              = charakter.getBasicValue(DSA_BASICVALUES.ANREDE)[0];
+            BasisDatenElement.AppendChild(characterFile.CreateElement("Gottheit-en")).InnerText         = charakter.getBasicValue(DSA_BASICVALUES.GOTTHEIT)[0];
+            BasisDatenElement.AppendChild(characterFile.CreateElement("Resse-en")).InnerText            = charakter.getBasicValue(DSA_BASICVALUES.RASSE)[0];
+            BasisDatenElement.AppendChild(characterFile.CreateElement("Kultur-en")).InnerText           = charakter.getBasicValue(DSA_BASICVALUES.KULTUR)[0];
+            BasisDatenElement.AppendChild(characterFile.CreateElement("Profession")).InnerText          = charakter.getBasicValue(DSA_BASICVALUES.PROFESSION)[0];
 
             //Andere.....
             XmlElement ModifikatorenElement             = characterFile.CreateElement("Modifikatoren");
@@ -55,8 +55,8 @@ namespace DSA_Project
             BasisDatenElement.AppendChild(ModifikatorenElement);
             BasisDatenElement.AppendChild(GöttergeschenkeElement);
 
-            String[] Modifikatoren = charakter.getBasicValues(DSA_BASICVALUES.MODIFIKATOREN);
-            String[] Göttergeschenke = charakter.getBasicValues(DSA_BASICVALUES.GÖTTERGESCHENKE);
+            String[] Modifikatoren = charakter.getBasicValue(DSA_BASICVALUES.MODIFIKATOREN);
+            String[] Göttergeschenke = charakter.getBasicValue(DSA_BASICVALUES.GÖTTERGESCHENKE);
             
             for (int i=0; i < Modifikatoren.Length; i++)
             {

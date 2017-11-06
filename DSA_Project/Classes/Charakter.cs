@@ -6,10 +6,6 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    enum DSA_BASICVALUES { NAME, ALTER, GESCHLECHT, GRÖSE, GEWICHT, AUGENFARBE, HAUTFARBE, HAARFARBE, FAMILIENSTAND, ANREDE, GOTTHEIT, GÖTTERGESCHENKE, RASSE, KULTUR, PROFESSION, MODIFIKATOREN }
-    enum DSA_Attribute { MUT, KLUGHEIT, INTUITION, CHARISMA, FINGERFERTIGKEIT, GEWANDHEIT, KONSTITUTION, KÖRPERKRAFT, SOZAILSTATUS }
-    enum DSA_ADVANCEDVALUES { ATTACKE_BASIS, PARADE_BASIS, FERNKAMPF_BASIS, INITATIVE_BASIS, BEHERSCHUNGSWERT, ARTEFAKTKONTROLLE, WUNDSCHWELLE, ENTRÜCKUNG, GESCHWINDIGKEIT }
-    enum DSA_ENERGIEN { LEBENSENERGIE, AUSDAUER, ASTRALENERGIE, KARMAENERGIE, MAGIERESISTENZ }
     class Charakter
     {
         //BasicValues
@@ -82,7 +78,7 @@ namespace DSA_Project
                 case DSA_BASICVALUES.GÖTTERGESCHENKE: if (stringValue == "") break; Göttergeschenke.Add(stringValue); break;
             }
         }
-        public String[] getBasicValues(DSA_BASICVALUES value)
+        public String[] getBasicValue(DSA_BASICVALUES value)
         {
             String[] ret;
             int i;
@@ -126,101 +122,96 @@ namespace DSA_Project
             }
             return new[] { "" };
         }
-        public void setAttribute(DSA_Attribute attribute, int wert)
+        public void setAttribute(DSA_ATTRIBUTE attribute, int wert)
         {
             switch (attribute)
             {
-                case DSA_Attribute.MUT:                 Mut                 = wert; break;
-                case DSA_Attribute.KLUGHEIT:            Klugheit            = wert; break;
-                case DSA_Attribute.INTUITION:           Intuition           = wert; break;
-                case DSA_Attribute.CHARISMA:            Charisma            = wert; break;
-                case DSA_Attribute.FINGERFERTIGKEIT:    Fingerfertigkeit    = wert; break;
-                case DSA_Attribute.GEWANDHEIT:          Gewandheit          = wert; break;
-                case DSA_Attribute.KONSTITUTION:        Konstitution        = wert; break;
-                case DSA_Attribute.KÖRPERKRAFT:         Körperkraft         = wert; break;
-                case DSA_Attribute.SOZAILSTATUS:        Sozailstatus        = wert; break;
+                case DSA_ATTRIBUTE.MUT:                 Mut                 = wert; break;
+                case DSA_ATTRIBUTE.KLUGHEIT:            Klugheit            = wert; break;
+                case DSA_ATTRIBUTE.INTUITION:           Intuition           = wert; break;
+                case DSA_ATTRIBUTE.CHARISMA:            Charisma            = wert; break;
+                case DSA_ATTRIBUTE.FINGERFERTIGKEIT:    Fingerfertigkeit    = wert; break;
+                case DSA_ATTRIBUTE.GEWANDHEIT:          Gewandheit          = wert; break;
+                case DSA_ATTRIBUTE.KONSTITUTION:        Konstitution        = wert; break;
+                case DSA_ATTRIBUTE.KÖRPERKRAFT:         Körperkraft         = wert; break;
+                case DSA_ATTRIBUTE.SOZAILSTATUS:        Sozailstatus        = wert; break;
             }
         }
-        public int getAttribute(DSA_Attribute attribute)
+        public int getAttributeAKT(DSA_ATTRIBUTE attribute)
         {
             switch (attribute)
             {
-                case DSA_Attribute.MUT:                 return Mut; 
-                case DSA_Attribute.KLUGHEIT:            return Klugheit;
-                case DSA_Attribute.INTUITION:           return Intuition; 
-                case DSA_Attribute.CHARISMA:            return Charisma; 
-                case DSA_Attribute.FINGERFERTIGKEIT:    return Fingerfertigkeit; 
-                case DSA_Attribute.GEWANDHEIT:          return Gewandheit; 
-                case DSA_Attribute.KONSTITUTION:        return Konstitution; 
-                case DSA_Attribute.KÖRPERKRAFT:         return Körperkraft; 
-                case DSA_Attribute.SOZAILSTATUS:        return Sozailstatus;
-            }
-            return 0;
-        }
-        public int getAttribute_Mod(DSA_Attribute attribute)
-        {
-            switch (attribute)
-            {
-                case DSA_Attribute.MUT:                 return Mut_mod;
-                case DSA_Attribute.KLUGHEIT:            return Klugheit_mod;
-                case DSA_Attribute.INTUITION:           return Intuition_mod;
-                case DSA_Attribute.CHARISMA:            return Charisma_mod;
-                case DSA_Attribute.FINGERFERTIGKEIT:    return Fingerfertigkeit_mod;
-                case DSA_Attribute.GEWANDHEIT:          return Gewandheit_mod;
-                case DSA_Attribute.KONSTITUTION:        return Konstitution_mod;
-                case DSA_Attribute.KÖRPERKRAFT:         return Körperkraft_mod;
-                case DSA_Attribute.SOZAILSTATUS:        return Sozailstatus_mod;
+                case DSA_ATTRIBUTE.MUT:                 return Mut; 
+                case DSA_ATTRIBUTE.KLUGHEIT:            return Klugheit;
+                case DSA_ATTRIBUTE.INTUITION:           return Intuition; 
+                case DSA_ATTRIBUTE.CHARISMA:            return Charisma; 
+                case DSA_ATTRIBUTE.FINGERFERTIGKEIT:    return Fingerfertigkeit; 
+                case DSA_ATTRIBUTE.GEWANDHEIT:          return Gewandheit; 
+                case DSA_ATTRIBUTE.KONSTITUTION:        return Konstitution; 
+                case DSA_ATTRIBUTE.KÖRPERKRAFT:         return Körperkraft; 
+                case DSA_ATTRIBUTE.SOZAILSTATUS:        return Sozailstatus;
+                case DSA_ATTRIBUTE.SUMME:               return Mut + Klugheit + Intuition + Charisma + Fingerfertigkeit + Gewandheit + Konstitution + Körperkraft + Sozailstatus;
             }
             return 0;
         }
-        public int getAttribute_Max(DSA_Attribute attribute)
+        public int getAttribute_Mod(DSA_ATTRIBUTE attribute)
         {
             switch (attribute)
             {
-                case DSA_Attribute.MUT:                 return Mut * Mut_mod;
-                case DSA_Attribute.KLUGHEIT:            return Klugheit * Klugheit_mod;
-                case DSA_Attribute.INTUITION:           return Intuition * Intuition_mod;
-                case DSA_Attribute.CHARISMA:            return Charisma * Charisma_mod;
-                case DSA_Attribute.FINGERFERTIGKEIT:    return Fingerfertigkeit * Fingerfertigkeit_mod;
-                case DSA_Attribute.GEWANDHEIT:          return Gewandheit * Gewandheit_mod;
-                case DSA_Attribute.KONSTITUTION:        return Konstitution * Konstitution_mod;
-                case DSA_Attribute.KÖRPERKRAFT:         return Körperkraft * Körperkraft_mod;
-                case DSA_Attribute.SOZAILSTATUS:        return Sozailstatus * Sozailstatus_mod;
+                case DSA_ATTRIBUTE.MUT:                 return Mut_mod;
+                case DSA_ATTRIBUTE.KLUGHEIT:            return Klugheit_mod;
+                case DSA_ATTRIBUTE.INTUITION:           return Intuition_mod;
+                case DSA_ATTRIBUTE.CHARISMA:            return Charisma_mod;
+                case DSA_ATTRIBUTE.FINGERFERTIGKEIT:    return Fingerfertigkeit_mod;
+                case DSA_ATTRIBUTE.GEWANDHEIT:          return Gewandheit_mod;
+                case DSA_ATTRIBUTE.KONSTITUTION:        return Konstitution_mod;
+                case DSA_ATTRIBUTE.KÖRPERKRAFT:         return Körperkraft_mod;
+                case DSA_ATTRIBUTE.SOZAILSTATUS:        return Sozailstatus_mod;
             }
             return 0;
         }
-        public int getAttributeGesamt_AKT()
+        public int getAttribute_Max(DSA_ATTRIBUTE attribute)
         {
-            return Mut + Klugheit + Intuition + Charisma + Fingerfertigkeit + Gewandheit + Konstitution + Körperkraft + Sozailstatus;
+            switch (attribute)
+            {
+                case DSA_ATTRIBUTE.MUT:                 return Mut * Mut_mod;
+                case DSA_ATTRIBUTE.KLUGHEIT:            return Klugheit * Klugheit_mod;
+                case DSA_ATTRIBUTE.INTUITION:           return Intuition * Intuition_mod;
+                case DSA_ATTRIBUTE.CHARISMA:            return Charisma * Charisma_mod;
+                case DSA_ATTRIBUTE.FINGERFERTIGKEIT:    return Fingerfertigkeit * Fingerfertigkeit_mod;
+                case DSA_ATTRIBUTE.GEWANDHEIT:          return Gewandheit * Gewandheit_mod;
+                case DSA_ATTRIBUTE.KONSTITUTION:        return Konstitution * Konstitution_mod;
+                case DSA_ATTRIBUTE.KÖRPERKRAFT:         return Körperkraft * Körperkraft_mod;
+                case DSA_ATTRIBUTE.SOZAILSTATUS:        return Sozailstatus * Sozailstatus_mod;
+                case DSA_ATTRIBUTE.SUMME:               return Mut * Mut_mod + Klugheit * Klugheit_mod + Intuition * Intuition_mod + Charisma * Charisma_mod + Fingerfertigkeit * Fingerfertigkeit_mod
+                                                                    + Gewandheit * Gewandheit_mod + Konstitution * Konstitution_mod + Körperkraft * Körperkraft_mod + Sozailstatus * Sozailstatus_mod;
+            }
+            return 0;
         }
-        public int getAttributeGesamt_MAX()
-        {
-            return Mut * Mut_mod + Klugheit * Klugheit_mod + Intuition * Intuition_mod + Charisma * Charisma_mod + Fingerfertigkeit * Fingerfertigkeit_mod
-                                    + Gewandheit * Gewandheit_mod + Konstitution * Konstitution_mod + Körperkraft * Körperkraft_mod + Sozailstatus * Sozailstatus_mod;
-        }
-        public int getBasicValue_AKT(DSA_ADVANCEDVALUES value)
+        
+        public int getAdvancedValue_AKT(DSA_ADVANCEDVALUES value)
         {
             switch (value)
             {
                 case DSA_ADVANCEDVALUES.ATTACKE_BASIS:
-                    Double attacBasis = Convert.ToDouble(getAttribute_Max(DSA_Attribute.MUT) + getAttribute_Max(DSA_Attribute.GEWANDHEIT) + getAttribute_Max(DSA_Attribute.KÖRPERKRAFT)) / 5;
+                    Double attacBasis = Convert.ToDouble(getAttribute_Max(DSA_ATTRIBUTE.MUT) + getAttribute_Max(DSA_ATTRIBUTE.GEWANDHEIT) + getAttribute_Max(DSA_ATTRIBUTE.KÖRPERKRAFT)) / 5;
                     return (int)Math.Ceiling(attacBasis);
                 case DSA_ADVANCEDVALUES.PARADE_BASIS:
-                    Double paradeBasis = Convert.ToDouble(getAttribute_Max(DSA_Attribute.INTUITION) + getAttribute_Max(DSA_Attribute.GEWANDHEIT) + getAttribute_Max(DSA_Attribute.KÖRPERKRAFT)) / 5;
+                    Double paradeBasis = Convert.ToDouble(getAttribute_Max(DSA_ATTRIBUTE.INTUITION) + getAttribute_Max(DSA_ATTRIBUTE.GEWANDHEIT) + getAttribute_Max(DSA_ATTRIBUTE.KÖRPERKRAFT)) / 5;
                     return (int)Math.Ceiling(paradeBasis);
                 case DSA_ADVANCEDVALUES.FERNKAMPF_BASIS:
-                    Double fernkampfBasis = Convert.ToDouble(getAttribute_Max(DSA_Attribute.INTUITION) + getAttribute_Max(DSA_Attribute.FINGERFERTIGKEIT) + getAttribute_Max(DSA_Attribute.KÖRPERKRAFT)) / 5;
+                    Double fernkampfBasis = Convert.ToDouble(getAttribute_Max(DSA_ATTRIBUTE.INTUITION) + getAttribute_Max(DSA_ATTRIBUTE.FINGERFERTIGKEIT) + getAttribute_Max(DSA_ATTRIBUTE.KÖRPERKRAFT)) / 5;
                     return (int)Math.Ceiling(fernkampfBasis);
                 case DSA_ADVANCEDVALUES.INITATIVE_BASIS:
-                    Double initativeBasis = Convert.ToDouble(getAttribute_Max(DSA_Attribute.MUT) + getAttribute_Max(DSA_Attribute.MUT) + getAttribute_Max(DSA_Attribute.INTUITION) + getAttribute_Max(DSA_Attribute.GEWANDHEIT)) / 5;
+                    Double initativeBasis = Convert.ToDouble(getAttribute_Max(DSA_ATTRIBUTE.MUT) + getAttribute_Max(DSA_ATTRIBUTE.MUT) + getAttribute_Max(DSA_ATTRIBUTE.INTUITION) + getAttribute_Max(DSA_ATTRIBUTE.GEWANDHEIT)) / 5;
                     return (int)Math.Ceiling(initativeBasis);
                 case DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT:
                     return (Beherschungswert);
                 case DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE:
-                    Double artefaktkontrolle = Convert.ToDouble(getAttribute_Max(DSA_Attribute.INTUITION));
+                    Double artefaktkontrolle = Convert.ToDouble(getAttribute_Max(DSA_ATTRIBUTE.INTUITION));
                     return (int)Math.Ceiling(artefaktkontrolle);
                 case DSA_ADVANCEDVALUES.WUNDSCHWELLE:
-                    Double wundschwelle = Convert.ToDouble(getAttribute_Max(DSA_Attribute.KONSTITUTION)) / 2;
+                    Double wundschwelle = Convert.ToDouble(getAttribute_Max(DSA_ATTRIBUTE.KONSTITUTION)) / 2;
                     return (int)Math.Ceiling(wundschwelle);
                 case DSA_ADVANCEDVALUES.ENTRÜCKUNG:
                     return (Entrückung);
@@ -234,26 +225,26 @@ namespace DSA_Project
             switch (energie)
             {
                 case (DSA_ENERGIEN.LEBENSENERGIE):
-                    Double lebensenergie = Convert.ToDouble(getAttribute_Max(DSA_Attribute.KONSTITUTION) + getAttribute_Max(DSA_Attribute.KONSTITUTION) + getAttribute_Max(DSA_Attribute.KÖRPERKRAFT)) / 2;
+                    Double lebensenergie = Convert.ToDouble(getAttribute_Max(DSA_ATTRIBUTE.KONSTITUTION) + getAttribute_Max(DSA_ATTRIBUTE.KONSTITUTION) + getAttribute_Max(DSA_ATTRIBUTE.KÖRPERKRAFT)) / 2;
                     return (int)Math.Ceiling(lebensenergie);
                 case (DSA_ENERGIEN.AUSDAUER):
-                    Double ausdauer = Convert.ToDouble(getAttribute_Max(DSA_Attribute.MUT) + getAttribute_Max(DSA_Attribute.GEWANDHEIT) + getAttribute_Max(DSA_Attribute.KONSTITUTION)) / 2;
+                    Double ausdauer = Convert.ToDouble(getAttribute_Max(DSA_ATTRIBUTE.MUT) + getAttribute_Max(DSA_ATTRIBUTE.GEWANDHEIT) + getAttribute_Max(DSA_ATTRIBUTE.KONSTITUTION)) / 2;
                     return (int)Math.Ceiling(ausdauer);
                 case (DSA_ENERGIEN.ASTRALENERGIE):
-                    Double astralenergie = Convert.ToDouble(getAttribute_Max(DSA_Attribute.MUT) + getAttribute_Max(DSA_Attribute.INTUITION) + getAttribute_Max(DSA_Attribute.CHARISMA)) / 2;
+                    Double astralenergie = Convert.ToDouble(getAttribute_Max(DSA_ATTRIBUTE.MUT) + getAttribute_Max(DSA_ATTRIBUTE.INTUITION) + getAttribute_Max(DSA_ATTRIBUTE.CHARISMA)) / 2;
                     return (int)Math.Ceiling(astralenergie);
                 case (DSA_ENERGIEN.KARMAENERGIE):
                     return 0;
                 case (DSA_ENERGIEN.MAGIERESISTENZ):
-                    Double magieresistenz = Convert.ToDouble(getAttribute_Max(DSA_Attribute.MUT) + getAttribute_Max(DSA_Attribute.KLUGHEIT) + getAttribute_Max(DSA_Attribute.KONSTITUTION)) / 5;
+                    Double magieresistenz = Convert.ToDouble(getAttribute_Max(DSA_ATTRIBUTE.MUT) + getAttribute_Max(DSA_ATTRIBUTE.KLUGHEIT) + getAttribute_Max(DSA_ATTRIBUTE.KONSTITUTION)) / 5;
                     return (int)Math.Ceiling(magieresistenz);
             }
             return 0;
         }        
 
 
+       
 
-        int HP { get; set; }
-
+        
     }
 }

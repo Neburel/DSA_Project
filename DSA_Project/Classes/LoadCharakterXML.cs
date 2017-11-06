@@ -95,15 +95,15 @@ namespace DSA_Project
                             int.TryParse(AKTAttributeNode.InnerText, out var newValue);
                             switch (AKTAttributeNode.Name)
                             {
-                                case "Mut": charakter.setAttribute(DSA_Attribute.MUT, newValue); break;
-                                case "Klugheit": charakter.setAttribute(DSA_Attribute.KLUGHEIT, newValue); break;
-                                case "Intuition": charakter.setAttribute(DSA_Attribute.INTUITION, newValue); break;
-                                case "Charisma": charakter.setAttribute(DSA_Attribute.CHARISMA, newValue); break;
-                                case "Fingerfertigkeit": charakter.setAttribute(DSA_Attribute.FINGERFERTIGKEIT, newValue); break;
-                                case "Gewandheit": charakter.setAttribute(DSA_Attribute.GEWANDHEIT, newValue); break;
-                                case "Konstitution": charakter.setAttribute(DSA_Attribute.KONSTITUTION, newValue); break;
-                                case "Körperkraft": charakter.setAttribute(DSA_Attribute.KÖRPERKRAFT, newValue); break;
-                                case "Sozialstatus": charakter.setAttribute(DSA_Attribute.SOZAILSTATUS, newValue); break;
+                                case "Mut": charakter.setAttribute(DSA_ATTRIBUTE.MUT, newValue); break;
+                                case "Klugheit": charakter.setAttribute(DSA_ATTRIBUTE.KLUGHEIT, newValue); break;
+                                case "Intuition": charakter.setAttribute(DSA_ATTRIBUTE.INTUITION, newValue); break;
+                                case "Charisma": charakter.setAttribute(DSA_ATTRIBUTE.CHARISMA, newValue); break;
+                                case "Fingerfertigkeit": charakter.setAttribute(DSA_ATTRIBUTE.FINGERFERTIGKEIT, newValue); break;
+                                case "Gewandheit": charakter.setAttribute(DSA_ATTRIBUTE.GEWANDHEIT, newValue); break;
+                                case "Konstitution": charakter.setAttribute(DSA_ATTRIBUTE.KONSTITUTION, newValue); break;
+                                case "Körperkraft": charakter.setAttribute(DSA_ATTRIBUTE.KÖRPERKRAFT, newValue); break;
+                                case "Sozialstatus": charakter.setAttribute(DSA_ATTRIBUTE.SOZAILSTATUS, newValue); break;
                             }
 
                 
