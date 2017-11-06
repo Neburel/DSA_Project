@@ -102,6 +102,36 @@ namespace DSA_Project
             txtWundschwelleMOD.Text     = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
             txtEntrückungMOD.Text       = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
             txtGeschwindigkeitMOD.Text  = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
+
+            txtLebensenergieVOR.Text    = controll.EnergieVOR(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+            txtAusdauerVOR.Text         = controll.EnergieVOR(DSA_ENERGIEN.AUSDAUER).ToString();
+            txtKarmaenergieVOR.Text     = controll.EnergieVOR(DSA_ENERGIEN.KARMAENERGIE).ToString();
+            txtAstralenergieVOR.Text    = controll.EnergieVOR(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+            txtMagieresistenzVOR.Text   = controll.EnergieVOR(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+
+            txtLebensenergiePERM.Text   = controll.EnergiePERM(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+            txtAusdauerPERM.Text        = controll.EnergiePERM(DSA_ENERGIEN.AUSDAUER).ToString();
+            txtAstralenergiePERM.Text   = controll.EnergiePERM(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+            txtKarmaenergiePERM.Text    = controll.EnergiePERM(DSA_ENERGIEN.KARMAENERGIE).ToString();
+            txtMagieresistenzPERM.Text  = controll.EnergiePERM(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+
+            txtLebensenergieMOD.Text    = controll.EnergieMOD(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+            txtAusdauerMOD.Text         = controll.EnergieMOD(DSA_ENERGIEN.AUSDAUER).ToString();
+            txtKarmaenergieMOD.Text     = controll.EnergieMOD(DSA_ENERGIEN.KARMAENERGIE).ToString();
+            txtAstralenergieMOD.Text    = controll.EnergieMOD(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+            txtMagieresistenzMOD.Text   = controll.EnergieMOD(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+
+            txtLebensenergieMALI.Text   = controll.EnergieMALI(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+            txtAusdauerMALI.Text        = controll.EnergieMALI(DSA_ENERGIEN.AUSDAUER).ToString();
+            txtAstralenergieMALI.Text   = controll.EnergieMALI(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+            txtKarmaenergieMALI.Text    = controll.EnergieMALI(DSA_ENERGIEN.KARMAENERGIE).ToString();
+            txtMagieresistenzMALI.Text  = controll.EnergieMALI(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+
+            txtLebensenergieERG.Text    = controll.EnergieMAX(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+            txtAusdauerERG.Text         = controll.EnergieMAX(DSA_ENERGIEN.AUSDAUER).ToString();
+            txtAstralenergieERG.Text    = controll.EnergieMAX(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+            txtKarmaenergieERG.Text     = controll.EnergieMAX(DSA_ENERGIEN.KARMAENERGIE).ToString();
+            txtMagieresistenzERG.Text   = controll.EnergieMAX(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
         }
         /// <summary> 
         /// Ist bei einer Werteänderung eine Neuberechnung nötig muss dies Ausgelöst werden
@@ -138,8 +168,8 @@ namespace DSA_Project
             txtEntrückungMAX.Text       = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
             txtGeschwindigkeitMAX.Text  = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
 
-            txtGesamtAKT.Text = controll.AttributeAKT(DSA_ATTRIBUTE.SUMME).ToString();
-            txtGesamtMAX.Text = controll.AttributeMAX(DSA_ATTRIBUTE.SUMME).ToString();
+            txtGesamtAKT.Text           = controll.AttributeAKT(DSA_ATTRIBUTE.SUMME).ToString();
+            txtGesamtMAX.Text           = controll.AttributeMAX(DSA_ATTRIBUTE.SUMME).ToString();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -446,45 +476,147 @@ namespace DSA_Project
         {
             txtAttackeBaisMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
         }
-
         private void txtParadeBasisMAX_TextChanged(object sender, EventArgs e)
         {
             txtParadeBasisMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.PARADE_BASIS).ToString();
         }
-
         private void txtFernkampfBasisMAX_TextChanged(object sender, EventArgs e)
         {
             txtFernkampfBasisMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS).ToString();
         }
-
         private void txtInitativeBasisMAX_TextChanged(object sender, EventArgs e)
         {
             txtInitativeBasisMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.INITATIVE_BASIS).ToString();
         }
-
         private void txtBeherschungswertMAX_TextChanged(object sender, EventArgs e)
         {
             txtBeherschungswertMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT).ToString();
         }
-
         private void txtArtefaktkontrolleMAX_TextChanged(object sender, EventArgs e)
         {
             txtArtefaktkontrolleMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE).ToString();
         }
-
         private void txtWundschwelleMAX_TextChanged(object sender, EventArgs e)
         {
             txtWundschwelleMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
         }
-
         private void txtEntrückungMAX_TextChanged(object sender, EventArgs e)
         {
             txtEntrückungMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
         }
-
         private void txtGeschwindigkeitMAX_TextChanged(object sender, EventArgs e)
         {
             txtGeschwindigkeitMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
+        }
+
+
+        private void txtLebensenergieVOR_TextChanged(object sender, EventArgs e)
+        {
+            txtLebensenergieVOR.Text = controll.EnergieVOR(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+        }
+        private void txtAusdauerVOR_TextChanged(object sender, EventArgs e)
+        {
+            txtAusdauerVOR.Text = controll.EnergieVOR(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+        }
+        private void txtAstralenergieVOR_TextChanged(object sender, EventArgs e)
+        {
+            txtAstralenergieVOR.Text = controll.EnergieVOR(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+        }
+        private void txtKarmaenergieVOR_TextChanged(object sender, EventArgs e)
+        {
+            txtKarmaenergieVOR.Text = controll.EnergieVOR(DSA_ENERGIEN.KARMAENERGIE).ToString();
+        }
+        private void txtMagieresistenzVOR_TextChanged(object sender, EventArgs e)
+        {
+            txtMagieresistenzVOR.Text = controll.EnergieVOR(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+        }
+
+
+        private void txtLebensenergiePERM_TextChanged(object sender, EventArgs e)
+        {
+            txtLebensenergiePERM.Text = controll.EnergiePERM(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+        }
+        private void txtAusdauerPERM_TextChanged(object sender, EventArgs e)
+        {
+            txtAusdauerPERM.Text = controll.EnergiePERM(DSA_ENERGIEN.AUSDAUER).ToString();
+        }
+        private void txtAstralenergiePERM_TextChanged(object sender, EventArgs e)
+        {
+            txtAstralenergiePERM.Text = controll.EnergiePERM(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+        }
+        private void txtKarmaenergiePERM_TextChanged(object sender, EventArgs e)
+        {
+            txtKarmaenergiePERM.Text = controll.EnergiePERM(DSA_ENERGIEN.KARMAENERGIE).ToString();
+        }
+        private void txtMagieresistenzPERM_TextChanged(object sender, EventArgs e)
+        {
+           txtMagieresistenzPERM.Text = controll.EnergiePERM(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+        }
+
+
+        private void txtLebensenergieMOD_TextChanged(object sender, EventArgs e)
+        {
+            txtLebensenergieMOD.Text = controll.EnergieMOD(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+        }
+        private void txtAusdauerMOD_TextChanged(object sender, EventArgs e)
+        {
+            txtAusdauerMOD.Text = controll.EnergieMOD(DSA_ENERGIEN.AUSDAUER).ToString();
+        }
+        private void txtAstralenergieMOD_TextChanged(object sender, EventArgs e)
+        {
+            txtAstralenergieMOD.Text = controll.EnergieMOD(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+        }
+        private void txtKarmaenergieMOD_TextChanged(object sender, EventArgs e)
+        {
+            txtKarmaenergieMOD.Text = controll.EnergieMOD(DSA_ENERGIEN.KARMAENERGIE).ToString();
+        }
+        private void txtMagieresistenzMOD_TextChanged(object sender, EventArgs e)
+        {
+            txtMagieresistenzMOD.Text = controll.EnergieMOD(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+        }
+
+
+        private void txtLebensenergieMALI_TextChanged(object sender, EventArgs e)
+        {
+            txtLebensenergieMALI.Text = controll.EnergieMALI(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+        }
+        private void txtAusdauerMALI_TextChanged(object sender, EventArgs e)
+        {
+            txtAusdauerMALI.Text = controll.EnergieMALI(DSA_ENERGIEN.AUSDAUER).ToString();
+        }
+        private void txtAstralenergieMALI_TextChanged(object sender, EventArgs e)
+        {
+            txtAstralenergieMALI.Text = controll.EnergieMALI(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+        }
+        private void txtKarmaenergieMALI_TextChanged(object sender, EventArgs e)
+        {
+            txtKarmaenergieMALI.Text = controll.EnergieMALI(DSA_ENERGIEN.KARMAENERGIE).ToString();
+        }
+        private void txtMagieresistenzMALI_TextChanged(object sender, EventArgs e)
+        {
+            txtMagieresistenzMALI.Text = controll.EnergieMALI(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+        }
+
+
+        private void txtLebensenergieERG_TextChanged(object sender, EventArgs e)
+        {
+            txtLebensenergieERG.Text = controll.EnergieMAX(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+        }
+        private void txtAusdauerERG_TextChanged(object sender, EventArgs e)
+        {
+            txtAusdauerERG.Text = controll.EnergieMAX(DSA_ENERGIEN.AUSDAUER).ToString();
+        }
+        private void txtAstralenergieERG_TextChanged(object sender, EventArgs e)
+        {
+            txtAstralenergieERG.Text = controll.EnergieMAX(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+        }
+        private void txtKarmaenergieERG_TextChanged(object sender, EventArgs e)
+        {
+            txtKarmaenergieERG.Text = controll.EnergieMAX(DSA_ENERGIEN.KARMAENERGIE).ToString();
+        }
+        private void txtMagieresistenzERG_TextChanged(object sender, EventArgs e)
+        {
+            txtMagieresistenzERG.Text = controll.EnergieMAX(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
         }
     }
 }

@@ -144,9 +144,7 @@ namespace DSA_Project
             /*Dieser Wert soll nicht verändert werden*/           
             return AttributeMAX(attribute);
         }
-
-        
-
+                
 
         public int AdvancedValueAKT(DSA_ADVANCEDVALUES advancedValue)
         {
@@ -162,5 +160,26 @@ namespace DSA_Project
             return charakter.getAdvancedValueMAX(advancedValue);
         }
 
+
+        public int EnergieVOR(DSA_ENERGIEN energie)
+        {
+            return charakter.getEnergieVOR(energie);
+        }
+        public int EnergiePERM(DSA_ENERGIEN energie)
+        {
+            return charakter.getEnergiePERM(energie);
+        }
+        public int EnergieMOD(DSA_ENERGIEN enegie)
+        {
+            return charakter.getEnergieMOD(enegie);
+        }
+        public int EnergieMALI(DSA_ENERGIEN energie)
+        {
+            return charakter.getEnergieMALI(energie);
+        }
+        public int EnergieMAX(DSA_ENERGIEN energie)
+        {
+            return charakter.getEnergieMAX(energie);
+        }
     }
 }

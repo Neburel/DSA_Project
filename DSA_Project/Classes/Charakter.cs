@@ -65,6 +65,13 @@ namespace DSA_Project
         int EntrückungMOD           = 1;
         int GeschwindigkeitMOD      = 1;
 
+        //EnergieMOD
+        int LebensEnergieMOD        = 1;
+        int AusdauerEnergieMOD      = 1;
+        int AstralEnergieMOD        = 1;
+        int KarmaenergieMOD         = 1;
+        int MagieresistenzMOD       = 1;
+
         
         public void setBasicValues(DSA_BASICVALUES value, String stringValue)
         {  
@@ -197,6 +204,7 @@ namespace DSA_Project
             return 0;
         }
         
+
         public int getAdvancedValue_AKT(DSA_ADVANCEDVALUES value)
         {
             switch (value)
@@ -216,7 +224,7 @@ namespace DSA_Project
                 case DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT:
                     return (Beherschungswert);
                 case DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE:
-                    Double artefaktkontrolle = Convert.ToDouble(getAttribute_Max(DSA_ATTRIBUTE.INTUITION));
+                    Double artefaktkontrolle = Convert.ToDouble(getAttribute_Max(DSA_ATTRIBUTE.INTUITION)+getEnergieVOR(DSA_ENERGIEN.MAGIERESISTENZ));
                     return (int)Math.Ceiling(artefaktkontrolle);
                 case DSA_ADVANCEDVALUES.WUNDSCHWELLE:
                     Double wundschwelle = Convert.ToDouble(getAttribute_Max(DSA_ATTRIBUTE.KONSTITUTION)) / 2;
@@ -267,7 +275,7 @@ namespace DSA_Project
         }
 
 
-        public int getEnergie_VORERGEBNIS(DSA_ENERGIEN energie)
+        public int getEnergieVOR(DSA_ENERGIEN energie)
         {
             switch (energie)
             {
@@ -287,7 +295,41 @@ namespace DSA_Project
                     return (int)Math.Ceiling(magieresistenz);
             }
             return 0;
-        }        
+        }
+        public int getEnergiePERM(DSA_ENERGIEN energie)
+        {
+            return 0;
+        }
+        public int getEnergieMOD(DSA_ENERGIEN energie)
+        {
+            int ret = 0;
+            switch (energie)
+            {
+                case (DSA_ENERGIEN.LEBENSENERGIE):  ret = LebensEnergieMOD; break;
+                case (DSA_ENERGIEN.AUSDAUER):       ret = AusdauerEnergieMOD; break;
+                case (DSA_ENERGIEN.ASTRALENERGIE):  ret = AstralEnergieMOD; break;
+                case (DSA_ENERGIEN.KARMAENERGIE):   ret = KarmaenergieMOD; break;
+                case (DSA_ENERGIEN.MAGIERESISTENZ): ret = MagieresistenzMOD; break;
+            }
+            return ret;
+        }
+        public int getEnergieMALI(DSA_ENERGIEN energe)
+        {
+            return 0;
+        }
+        public int getEnergieMAX(DSA_ENERGIEN energie)
+        {
+            int ret = 0;
+            switch (energie)
+            {
+                case (DSA_ENERGIEN.LEBENSENERGIE):  ret = getEnergieVOR(DSA_ENERGIEN.LEBENSENERGIE) * LebensEnergieMOD; break;
+                case (DSA_ENERGIEN.AUSDAUER):       ret = getEnergieVOR(DSA_ENERGIEN.AUSDAUER) * AusdauerEnergieMOD; break;
+                case (DSA_ENERGIEN.ASTRALENERGIE):  ret = getEnergieVOR(DSA_ENERGIEN.ASTRALENERGIE) * AstralEnergieMOD; break;
+                case (DSA_ENERGIEN.KARMAENERGIE):   ret = getEnergieVOR(DSA_ENERGIEN.KARMAENERGIE) * KarmaenergieMOD; break;
+                case (DSA_ENERGIEN.MAGIERESISTENZ): ret = getEnergieVOR(DSA_ENERGIEN.MAGIERESISTENZ) * MagieresistenzMOD; break;
+            }
+            return ret;
+        }
 
 
        
