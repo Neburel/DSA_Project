@@ -11,7 +11,7 @@ namespace DSA_Project
     //*toDO: try Am obersten Punkt, bei Misserfolg alles als Korrupt erklären (Simple Lösung)
     static class LoadCharakterXML
     {
-        private static String Heldenbrief   = "/CharakterBogen/Heldenbrief";
+        private static String Heldenbrief   = "/CharakterBogen/HeldenBrief";
         public static Charakter loadCharakter(String fileName)
         {
             Charakter charakter = new Charakter();

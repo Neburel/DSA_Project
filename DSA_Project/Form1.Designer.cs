@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnSaveCharacter = new System.Windows.Forms.Button();
             this.btnLoadCharacter = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -152,7 +153,10 @@
             this.lblAugenfarbe = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnSaveCharacter = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -170,6 +174,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.textBox3);
             this.tabPage1.Controls.Add(this.btnSaveCharacter);
             this.tabPage1.Controls.Add(this.btnLoadCharacter);
             this.tabPage1.Controls.Add(this.label30);
@@ -299,6 +307,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
+            // btnSaveCharacter
+            // 
+            this.btnSaveCharacter.Location = new System.Drawing.Point(1046, 38);
+            this.btnSaveCharacter.Name = "btnSaveCharacter";
+            this.btnSaveCharacter.Size = new System.Drawing.Size(116, 23);
+            this.btnSaveCharacter.TabIndex = 207;
+            this.btnSaveCharacter.Text = "SaveCharacter";
+            this.btnSaveCharacter.UseVisualStyleBackColor = true;
+            this.btnSaveCharacter.Click += new System.EventHandler(this.btnSaveCharacter_Click);
+            // 
             // btnLoadCharacter
             // 
             this.btnLoadCharacter.Location = new System.Drawing.Point(1046, 9);
@@ -341,150 +359,196 @@
             // 
             // txtGeschwindigkeitMAX
             // 
+            this.txtGeschwindigkeitMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtGeschwindigkeitMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGeschwindigkeitMAX.Location = new System.Drawing.Point(319, 299);
             this.txtGeschwindigkeitMAX.Name = "txtGeschwindigkeitMAX";
             this.txtGeschwindigkeitMAX.Size = new System.Drawing.Size(24, 20);
             this.txtGeschwindigkeitMAX.TabIndex = 202;
             this.txtGeschwindigkeitMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGeschwindigkeitMAX.TextChanged += new System.EventHandler(this.txtGeschwindigkeitMAX_TextChanged);
             // 
             // txtEntrückungMAX
             // 
+            this.txtEntrückungMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtEntrückungMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEntrückungMAX.Location = new System.Drawing.Point(319, 280);
             this.txtEntrückungMAX.Name = "txtEntrückungMAX";
             this.txtEntrückungMAX.Size = new System.Drawing.Size(24, 20);
             this.txtEntrückungMAX.TabIndex = 201;
             this.txtEntrückungMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEntrückungMAX.TextChanged += new System.EventHandler(this.txtEntrückungMAX_TextChanged);
             // 
             // txtWundschwelleMAX
             // 
+            this.txtWundschwelleMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtWundschwelleMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWundschwelleMAX.Location = new System.Drawing.Point(319, 261);
             this.txtWundschwelleMAX.Name = "txtWundschwelleMAX";
             this.txtWundschwelleMAX.Size = new System.Drawing.Size(24, 20);
             this.txtWundschwelleMAX.TabIndex = 200;
             this.txtWundschwelleMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtWundschwelleMAX.TextChanged += new System.EventHandler(this.txtWundschwelleMAX_TextChanged);
             // 
             // txtArtefaktkontrolleMAX
             // 
+            this.txtArtefaktkontrolleMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtArtefaktkontrolleMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArtefaktkontrolleMAX.Location = new System.Drawing.Point(319, 242);
             this.txtArtefaktkontrolleMAX.Name = "txtArtefaktkontrolleMAX";
             this.txtArtefaktkontrolleMAX.Size = new System.Drawing.Size(24, 20);
             this.txtArtefaktkontrolleMAX.TabIndex = 199;
             this.txtArtefaktkontrolleMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtArtefaktkontrolleMAX.TextChanged += new System.EventHandler(this.txtArtefaktkontrolleMAX_TextChanged);
             // 
             // txtBeherschungswertMAX
             // 
+            this.txtBeherschungswertMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtBeherschungswertMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBeherschungswertMAX.Location = new System.Drawing.Point(319, 223);
             this.txtBeherschungswertMAX.Name = "txtBeherschungswertMAX";
             this.txtBeherschungswertMAX.Size = new System.Drawing.Size(24, 20);
             this.txtBeherschungswertMAX.TabIndex = 198;
             this.txtBeherschungswertMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBeherschungswertMAX.TextChanged += new System.EventHandler(this.txtBeherschungswertMAX_TextChanged);
             // 
             // txtInitativeBasisMAX
             // 
+            this.txtInitativeBasisMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtInitativeBasisMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInitativeBasisMAX.Location = new System.Drawing.Point(319, 203);
             this.txtInitativeBasisMAX.Name = "txtInitativeBasisMAX";
             this.txtInitativeBasisMAX.Size = new System.Drawing.Size(24, 20);
             this.txtInitativeBasisMAX.TabIndex = 197;
             this.txtInitativeBasisMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtInitativeBasisMAX.TextChanged += new System.EventHandler(this.txtInitativeBasisMAX_TextChanged);
             // 
             // txtFernkampfBasisMAX
             // 
+            this.txtFernkampfBasisMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtFernkampfBasisMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFernkampfBasisMAX.Location = new System.Drawing.Point(319, 186);
             this.txtFernkampfBasisMAX.Name = "txtFernkampfBasisMAX";
             this.txtFernkampfBasisMAX.Size = new System.Drawing.Size(24, 20);
             this.txtFernkampfBasisMAX.TabIndex = 196;
             this.txtFernkampfBasisMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtFernkampfBasisMAX.TextChanged += new System.EventHandler(this.txtFernkampfBasisMAX_TextChanged);
             // 
             // txtParadeBasisMAX
             // 
+            this.txtParadeBasisMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtParadeBasisMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtParadeBasisMAX.Location = new System.Drawing.Point(319, 167);
             this.txtParadeBasisMAX.Name = "txtParadeBasisMAX";
             this.txtParadeBasisMAX.Size = new System.Drawing.Size(24, 20);
             this.txtParadeBasisMAX.TabIndex = 195;
             this.txtParadeBasisMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtParadeBasisMAX.TextChanged += new System.EventHandler(this.txtParadeBasisMAX_TextChanged);
             // 
             // txtAttackeBaisMAX
             // 
+            this.txtAttackeBaisMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAttackeBaisMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAttackeBaisMAX.Location = new System.Drawing.Point(319, 147);
             this.txtAttackeBaisMAX.Name = "txtAttackeBaisMAX";
             this.txtAttackeBaisMAX.Size = new System.Drawing.Size(24, 20);
             this.txtAttackeBaisMAX.TabIndex = 194;
             this.txtAttackeBaisMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAttackeBaisMAX.TextChanged += new System.EventHandler(this.txtAttackeBaisMAX_TextChanged);
             // 
             // txtGeschwindigkeitMOD
             // 
+            this.txtGeschwindigkeitMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtGeschwindigkeitMOD.Location = new System.Drawing.Point(298, 299);
             this.txtGeschwindigkeitMOD.Name = "txtGeschwindigkeitMOD";
             this.txtGeschwindigkeitMOD.Size = new System.Drawing.Size(24, 20);
             this.txtGeschwindigkeitMOD.TabIndex = 193;
             this.txtGeschwindigkeitMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGeschwindigkeitMOD.TextChanged += new System.EventHandler(this.txtGeschwindigkeitMOD_TextChanged);
             // 
             // txtEntrückungMOD
             // 
+            this.txtEntrückungMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtEntrückungMOD.Location = new System.Drawing.Point(298, 280);
             this.txtEntrückungMOD.Name = "txtEntrückungMOD";
             this.txtEntrückungMOD.Size = new System.Drawing.Size(24, 20);
             this.txtEntrückungMOD.TabIndex = 192;
             this.txtEntrückungMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEntrückungMOD.TextChanged += new System.EventHandler(this.txtEntrückungMOD_TextChanged);
             // 
             // txtWundschwelleMOD
             // 
+            this.txtWundschwelleMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtWundschwelleMOD.Location = new System.Drawing.Point(298, 261);
             this.txtWundschwelleMOD.Name = "txtWundschwelleMOD";
             this.txtWundschwelleMOD.Size = new System.Drawing.Size(24, 20);
             this.txtWundschwelleMOD.TabIndex = 191;
             this.txtWundschwelleMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtWundschwelleMOD.TextChanged += new System.EventHandler(this.txtWundschwelleMOD_TextChanged);
             // 
             // txtArtefaktkontrolleMOD
             // 
+            this.txtArtefaktkontrolleMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtArtefaktkontrolleMOD.Location = new System.Drawing.Point(298, 242);
             this.txtArtefaktkontrolleMOD.Name = "txtArtefaktkontrolleMOD";
             this.txtArtefaktkontrolleMOD.Size = new System.Drawing.Size(24, 20);
             this.txtArtefaktkontrolleMOD.TabIndex = 190;
             this.txtArtefaktkontrolleMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtArtefaktkontrolleMOD.TextChanged += new System.EventHandler(this.txtArtefaktkontrolleMOD_TextChanged);
             // 
             // txtBeherschungswertMOD
             // 
+            this.txtBeherschungswertMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtBeherschungswertMOD.Location = new System.Drawing.Point(298, 223);
             this.txtBeherschungswertMOD.Name = "txtBeherschungswertMOD";
             this.txtBeherschungswertMOD.Size = new System.Drawing.Size(24, 20);
             this.txtBeherschungswertMOD.TabIndex = 189;
             this.txtBeherschungswertMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBeherschungswertMOD.TextChanged += new System.EventHandler(this.txtBeherschungswertMOD_TextChanged);
             // 
             // txtInitativeBasisMOD
             // 
+            this.txtInitativeBasisMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtInitativeBasisMOD.Location = new System.Drawing.Point(298, 203);
             this.txtInitativeBasisMOD.Name = "txtInitativeBasisMOD";
             this.txtInitativeBasisMOD.Size = new System.Drawing.Size(24, 20);
             this.txtInitativeBasisMOD.TabIndex = 188;
             this.txtInitativeBasisMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtInitativeBasisMOD.TextChanged += new System.EventHandler(this.txtInitativeBasisMOD_TextChanged);
             // 
             // txtFernkampfBasisMOD
             // 
+            this.txtFernkampfBasisMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtFernkampfBasisMOD.Location = new System.Drawing.Point(298, 186);
             this.txtFernkampfBasisMOD.Name = "txtFernkampfBasisMOD";
             this.txtFernkampfBasisMOD.Size = new System.Drawing.Size(24, 20);
             this.txtFernkampfBasisMOD.TabIndex = 187;
             this.txtFernkampfBasisMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtFernkampfBasisMOD.TextChanged += new System.EventHandler(this.txtFernkampfBasisMOD_TextChanged);
             // 
             // txtParadeBasisMOD
             // 
+            this.txtParadeBasisMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtParadeBasisMOD.Location = new System.Drawing.Point(298, 167);
             this.txtParadeBasisMOD.Name = "txtParadeBasisMOD";
             this.txtParadeBasisMOD.Size = new System.Drawing.Size(24, 20);
             this.txtParadeBasisMOD.TabIndex = 186;
             this.txtParadeBasisMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtParadeBasisMOD.TextChanged += new System.EventHandler(this.txtParadeBasisMOD_TextChanged);
             // 
             // txtAttackeBasisMOD
             // 
+            this.txtAttackeBasisMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtAttackeBasisMOD.Location = new System.Drawing.Point(298, 147);
             this.txtAttackeBasisMOD.Name = "txtAttackeBasisMOD";
             this.txtAttackeBasisMOD.Size = new System.Drawing.Size(24, 20);
             this.txtAttackeBasisMOD.TabIndex = 185;
             this.txtAttackeBasisMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAttackeBasisMOD.TextChanged += new System.EventHandler(this.txtAttackeBasisMOD_TextChanged);
             // 
             // txtGeschwindigkeitAKT
             // 
+            this.txtGeschwindigkeitAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtGeschwindigkeitAKT.Location = new System.Drawing.Point(277, 299);
             this.txtGeschwindigkeitAKT.Name = "txtGeschwindigkeitAKT";
             this.txtGeschwindigkeitAKT.Size = new System.Drawing.Size(24, 20);
@@ -503,6 +567,7 @@
             // 
             // txtEntrückungAKT
             // 
+            this.txtEntrückungAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtEntrückungAKT.Location = new System.Drawing.Point(277, 280);
             this.txtEntrückungAKT.Name = "txtEntrückungAKT";
             this.txtEntrückungAKT.Size = new System.Drawing.Size(24, 20);
@@ -521,6 +586,7 @@
             // 
             // txtWundschwelleAKT
             // 
+            this.txtWundschwelleAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtWundschwelleAKT.Location = new System.Drawing.Point(277, 261);
             this.txtWundschwelleAKT.Name = "txtWundschwelleAKT";
             this.txtWundschwelleAKT.Size = new System.Drawing.Size(24, 20);
@@ -539,6 +605,7 @@
             // 
             // txtArtefaktkontrolleAKT
             // 
+            this.txtArtefaktkontrolleAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtArtefaktkontrolleAKT.Location = new System.Drawing.Point(277, 242);
             this.txtArtefaktkontrolleAKT.Name = "txtArtefaktkontrolleAKT";
             this.txtArtefaktkontrolleAKT.Size = new System.Drawing.Size(24, 20);
@@ -548,6 +615,7 @@
             // 
             // txtBeherschungswertAKT
             // 
+            this.txtBeherschungswertAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtBeherschungswertAKT.Location = new System.Drawing.Point(277, 223);
             this.txtBeherschungswertAKT.Name = "txtBeherschungswertAKT";
             this.txtBeherschungswertAKT.Size = new System.Drawing.Size(24, 20);
@@ -557,6 +625,7 @@
             // 
             // txtInitativeBasisAKT
             // 
+            this.txtInitativeBasisAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtInitativeBasisAKT.Location = new System.Drawing.Point(277, 203);
             this.txtInitativeBasisAKT.Name = "txtInitativeBasisAKT";
             this.txtInitativeBasisAKT.Size = new System.Drawing.Size(24, 20);
@@ -566,6 +635,7 @@
             // 
             // txtFernkampfBasisAKT
             // 
+            this.txtFernkampfBasisAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtFernkampfBasisAKT.Location = new System.Drawing.Point(277, 186);
             this.txtFernkampfBasisAKT.Name = "txtFernkampfBasisAKT";
             this.txtFernkampfBasisAKT.Size = new System.Drawing.Size(24, 20);
@@ -575,6 +645,7 @@
             // 
             // txtParadeBasisAKT
             // 
+            this.txtParadeBasisAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtParadeBasisAKT.Location = new System.Drawing.Point(277, 167);
             this.txtParadeBasisAKT.Name = "txtParadeBasisAKT";
             this.txtParadeBasisAKT.Size = new System.Drawing.Size(24, 20);
@@ -584,6 +655,7 @@
             // 
             // txtAttackeBaisAKT
             // 
+            this.txtAttackeBaisAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtAttackeBaisAKT.Location = new System.Drawing.Point(277, 147);
             this.txtAttackeBaisAKT.Name = "txtAttackeBaisAKT";
             this.txtAttackeBaisAKT.Size = new System.Drawing.Size(24, 20);
@@ -647,6 +719,8 @@
             // 
             // txtGesamtMAX
             // 
+            this.txtGesamtMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtGesamtMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGesamtMAX.Location = new System.Drawing.Point(132, 327);
             this.txtGesamtMAX.Name = "txtGesamtMAX";
             this.txtGesamtMAX.Size = new System.Drawing.Size(24, 20);
@@ -656,6 +730,7 @@
             // 
             // txtGesamtAKT
             // 
+            this.txtGesamtAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtGesamtAKT.Location = new System.Drawing.Point(90, 327);
             this.txtGesamtAKT.Name = "txtGesamtAKT";
             this.txtGesamtAKT.Size = new System.Drawing.Size(24, 20);
@@ -704,6 +779,7 @@
             // 
             // txtSozialstatusMAX
             // 
+            this.txtSozialstatusMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtSozialstatusMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSozialstatusMAX.Location = new System.Drawing.Point(132, 299);
             this.txtSozialstatusMAX.Name = "txtSozialstatusMAX";
@@ -714,6 +790,7 @@
             // 
             // txtKörperkraftMAX
             // 
+            this.txtKörperkraftMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtKörperkraftMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKörperkraftMAX.Location = new System.Drawing.Point(132, 280);
             this.txtKörperkraftMAX.Name = "txtKörperkraftMAX";
@@ -724,6 +801,7 @@
             // 
             // txtKonstitutionMAX
             // 
+            this.txtKonstitutionMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtKonstitutionMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKonstitutionMAX.Location = new System.Drawing.Point(132, 261);
             this.txtKonstitutionMAX.Name = "txtKonstitutionMAX";
@@ -734,6 +812,7 @@
             // 
             // textGewandheitMAX
             // 
+            this.textGewandheitMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textGewandheitMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textGewandheitMAX.Location = new System.Drawing.Point(132, 242);
             this.textGewandheitMAX.Name = "textGewandheitMAX";
@@ -744,6 +823,7 @@
             // 
             // txtFingerfertigkeitMAX
             // 
+            this.txtFingerfertigkeitMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtFingerfertigkeitMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFingerfertigkeitMAX.Location = new System.Drawing.Point(132, 223);
             this.txtFingerfertigkeitMAX.Name = "txtFingerfertigkeitMAX";
@@ -754,6 +834,7 @@
             // 
             // txtCharismaMAX
             // 
+            this.txtCharismaMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtCharismaMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCharismaMAX.Location = new System.Drawing.Point(132, 203);
             this.txtCharismaMAX.Name = "txtCharismaMAX";
@@ -764,6 +845,7 @@
             // 
             // txtIntuitionMAX
             // 
+            this.txtIntuitionMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtIntuitionMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIntuitionMAX.Location = new System.Drawing.Point(132, 186);
             this.txtIntuitionMAX.Name = "txtIntuitionMAX";
@@ -774,6 +856,7 @@
             // 
             // txtKlugheitMAX
             // 
+            this.txtKlugheitMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtKlugheitMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKlugheitMAX.Location = new System.Drawing.Point(132, 167);
             this.txtKlugheitMAX.Name = "txtKlugheitMAX";
@@ -784,6 +867,7 @@
             // 
             // txtMutMAX
             // 
+            this.txtMutMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtMutMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMutMAX.Location = new System.Drawing.Point(132, 147);
             this.txtMutMAX.Name = "txtMutMAX";
@@ -794,6 +878,7 @@
             // 
             // txtSozialstatusMOD
             // 
+            this.txtSozialstatusMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtSozialstatusMOD.Location = new System.Drawing.Point(111, 299);
             this.txtSozialstatusMOD.Name = "txtSozialstatusMOD";
             this.txtSozialstatusMOD.Size = new System.Drawing.Size(24, 20);
@@ -803,6 +888,7 @@
             // 
             // txtKörperkraftMOD
             // 
+            this.txtKörperkraftMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtKörperkraftMOD.Location = new System.Drawing.Point(111, 280);
             this.txtKörperkraftMOD.Name = "txtKörperkraftMOD";
             this.txtKörperkraftMOD.Size = new System.Drawing.Size(24, 20);
@@ -812,6 +898,7 @@
             // 
             // txtKonstitutionMOD
             // 
+            this.txtKonstitutionMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtKonstitutionMOD.Location = new System.Drawing.Point(111, 261);
             this.txtKonstitutionMOD.Name = "txtKonstitutionMOD";
             this.txtKonstitutionMOD.Size = new System.Drawing.Size(24, 20);
@@ -821,6 +908,7 @@
             // 
             // textGewandheitMOD
             // 
+            this.textGewandheitMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textGewandheitMOD.Location = new System.Drawing.Point(111, 242);
             this.textGewandheitMOD.Name = "textGewandheitMOD";
             this.textGewandheitMOD.Size = new System.Drawing.Size(24, 20);
@@ -830,6 +918,7 @@
             // 
             // txtFingerfertigkeitMOD
             // 
+            this.txtFingerfertigkeitMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtFingerfertigkeitMOD.Location = new System.Drawing.Point(111, 223);
             this.txtFingerfertigkeitMOD.Name = "txtFingerfertigkeitMOD";
             this.txtFingerfertigkeitMOD.Size = new System.Drawing.Size(24, 20);
@@ -839,6 +928,7 @@
             // 
             // txtCharismaMOD
             // 
+            this.txtCharismaMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtCharismaMOD.Location = new System.Drawing.Point(111, 203);
             this.txtCharismaMOD.Name = "txtCharismaMOD";
             this.txtCharismaMOD.Size = new System.Drawing.Size(24, 20);
@@ -848,6 +938,7 @@
             // 
             // txtIntuitionMOD
             // 
+            this.txtIntuitionMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtIntuitionMOD.Location = new System.Drawing.Point(111, 186);
             this.txtIntuitionMOD.Name = "txtIntuitionMOD";
             this.txtIntuitionMOD.Size = new System.Drawing.Size(24, 20);
@@ -857,6 +948,7 @@
             // 
             // txtKlugheitMOD
             // 
+            this.txtKlugheitMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtKlugheitMOD.Location = new System.Drawing.Point(111, 167);
             this.txtKlugheitMOD.Name = "txtKlugheitMOD";
             this.txtKlugheitMOD.Size = new System.Drawing.Size(24, 20);
@@ -866,6 +958,7 @@
             // 
             // txtMutMOD
             // 
+            this.txtMutMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtMutMOD.Location = new System.Drawing.Point(111, 147);
             this.txtMutMOD.Name = "txtMutMOD";
             this.txtMutMOD.Size = new System.Drawing.Size(24, 20);
@@ -1041,6 +1134,7 @@
             this.txtGöttergeschenke4.Name = "txtGöttergeschenke4";
             this.txtGöttergeschenke4.Size = new System.Drawing.Size(188, 20);
             this.txtGöttergeschenke4.TabIndex = 82;
+            this.txtGöttergeschenke4.TextChanged += new System.EventHandler(this.txtGöttergeschenke4_TextChanged);
             // 
             // txtGöttergeschenke3
             // 
@@ -1048,6 +1142,7 @@
             this.txtGöttergeschenke3.Name = "txtGöttergeschenke3";
             this.txtGöttergeschenke3.Size = new System.Drawing.Size(188, 20);
             this.txtGöttergeschenke3.TabIndex = 81;
+            this.txtGöttergeschenke3.TextChanged += new System.EventHandler(this.txtGöttergeschenke3_TextChanged);
             // 
             // txtGöttergeschenke2
             // 
@@ -1055,6 +1150,7 @@
             this.txtGöttergeschenke2.Name = "txtGöttergeschenke2";
             this.txtGöttergeschenke2.Size = new System.Drawing.Size(188, 20);
             this.txtGöttergeschenke2.TabIndex = 80;
+            this.txtGöttergeschenke2.TextChanged += new System.EventHandler(this.txtGöttergeschenke2_TextChanged);
             // 
             // txtGöttergeschenke1
             // 
@@ -1062,6 +1158,7 @@
             this.txtGöttergeschenke1.Name = "txtGöttergeschenke1";
             this.txtGöttergeschenke1.Size = new System.Drawing.Size(188, 20);
             this.txtGöttergeschenke1.TabIndex = 79;
+            this.txtGöttergeschenke1.TextChanged += new System.EventHandler(this.txtGöttergeschenke1_TextChanged);
             // 
             // label16
             // 
@@ -1078,6 +1175,7 @@
             this.txtFamulienstand.Name = "txtFamulienstand";
             this.txtFamulienstand.Size = new System.Drawing.Size(43, 20);
             this.txtFamulienstand.TabIndex = 77;
+            this.txtFamulienstand.TextChanged += new System.EventHandler(this.txtFamulienstand_TextChanged);
             // 
             // label17
             // 
@@ -1094,6 +1192,7 @@
             this.txtGewicht.Name = "txtGewicht";
             this.txtGewicht.Size = new System.Drawing.Size(43, 20);
             this.txtGewicht.TabIndex = 75;
+            this.txtGewicht.TextChanged += new System.EventHandler(this.txtGewicht_TextChanged);
             // 
             // label15
             // 
@@ -1106,10 +1205,11 @@
             // 
             // txtGröße
             // 
-            this.txtGröße.Location = new System.Drawing.Point(618, 7);
+            this.txtGröße.Location = new System.Drawing.Point(618, 6);
             this.txtGröße.Name = "txtGröße";
             this.txtGröße.Size = new System.Drawing.Size(43, 20);
             this.txtGröße.TabIndex = 73;
+            this.txtGröße.TextChanged += new System.EventHandler(this.txtGröße_TextChanged);
             // 
             // label14
             // 
@@ -1126,6 +1226,7 @@
             this.txtHautfarbe.Name = "txtHautfarbe";
             this.txtHautfarbe.Size = new System.Drawing.Size(126, 20);
             this.txtHautfarbe.TabIndex = 69;
+            this.txtHautfarbe.TextChanged += new System.EventHandler(this.txtHautfarbe_TextChanged);
             // 
             // label12
             // 
@@ -1142,6 +1243,7 @@
             this.txtGeschlecht.Name = "txtGeschlecht";
             this.txtGeschlecht.Size = new System.Drawing.Size(26, 20);
             this.txtGeschlecht.TabIndex = 67;
+            this.txtGeschlecht.TextChanged += new System.EventHandler(this.txtGeschlecht_TextChanged);
             // 
             // label13
             // 
@@ -1158,6 +1260,7 @@
             this.txtModifikation3.Name = "txtModifikation3";
             this.txtModifikation3.Size = new System.Drawing.Size(338, 20);
             this.txtModifikation3.TabIndex = 65;
+            this.txtModifikation3.TextChanged += new System.EventHandler(this.txtModifikation3_TextChanged);
             // 
             // txtModifikation2
             // 
@@ -1165,6 +1268,7 @@
             this.txtModifikation2.Name = "txtModifikation2";
             this.txtModifikation2.Size = new System.Drawing.Size(338, 20);
             this.txtModifikation2.TabIndex = 64;
+            this.txtModifikation2.TextChanged += new System.EventHandler(this.txtModifikation2_TextChanged);
             // 
             // txtModifikation1
             // 
@@ -1172,6 +1276,7 @@
             this.txtModifikation1.Name = "txtModifikation1";
             this.txtModifikation1.Size = new System.Drawing.Size(338, 20);
             this.txtModifikation1.TabIndex = 63;
+            this.txtModifikation1.TextChanged += new System.EventHandler(this.txtModifikation1_TextChanged);
             // 
             // label8
             // 
@@ -1206,6 +1311,7 @@
             this.txtGottheit.Name = "txtGottheit";
             this.txtGottheit.Size = new System.Drawing.Size(115, 20);
             this.txtGottheit.TabIndex = 59;
+            this.txtGottheit.TextChanged += new System.EventHandler(this.txtGottheit_TextChanged);
             // 
             // label7
             // 
@@ -1222,6 +1328,7 @@
             this.txtHaarfarbe.Name = "txtHaarfarbe";
             this.txtHaarfarbe.Size = new System.Drawing.Size(115, 20);
             this.txtHaarfarbe.TabIndex = 57;
+            this.txtHaarfarbe.TextChanged += new System.EventHandler(this.txtHaarfarbe_TextChanged);
             // 
             // label6
             // 
@@ -1238,6 +1345,7 @@
             this.txtAlter.Name = "txtAlter";
             this.txtAlter.Size = new System.Drawing.Size(115, 20);
             this.txtAlter.TabIndex = 55;
+            this.txtAlter.TextChanged += new System.EventHandler(this.txtAlter_TextChanged);
             // 
             // label5
             // 
@@ -1254,6 +1362,7 @@
             this.txtProfession.Name = "txtProfession";
             this.txtProfession.Size = new System.Drawing.Size(115, 20);
             this.txtProfession.TabIndex = 53;
+            this.txtProfession.TextChanged += new System.EventHandler(this.txtProfession_TextChanged);
             // 
             // txtKultur
             // 
@@ -1261,6 +1370,7 @@
             this.txtKultur.Name = "txtKultur";
             this.txtKultur.Size = new System.Drawing.Size(115, 20);
             this.txtKultur.TabIndex = 52;
+            this.txtKultur.TextChanged += new System.EventHandler(this.txtKultur_TextChanged);
             // 
             // txtRasse
             // 
@@ -1268,6 +1378,7 @@
             this.txtRasse.Name = "txtRasse";
             this.txtRasse.Size = new System.Drawing.Size(115, 20);
             this.txtRasse.TabIndex = 51;
+            this.txtRasse.TextChanged += new System.EventHandler(this.txtRasse_TextChanged);
             // 
             // txtAnrede
             // 
@@ -1275,6 +1386,7 @@
             this.txtAnrede.Name = "txtAnrede";
             this.txtAnrede.Size = new System.Drawing.Size(115, 20);
             this.txtAnrede.TabIndex = 50;
+            this.txtAnrede.TextChanged += new System.EventHandler(this.txtAnrede_TextChanged);
             // 
             // txtAugenfarbe
             // 
@@ -1282,6 +1394,7 @@
             this.txtAugenfarbe.Name = "txtAugenfarbe";
             this.txtAugenfarbe.Size = new System.Drawing.Size(115, 20);
             this.txtAugenfarbe.TabIndex = 49;
+            this.txtAugenfarbe.TextChanged += new System.EventHandler(this.txtAugenfarbe_TextChanged);
             // 
             // txtName
             // 
@@ -1355,15 +1468,42 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btnSaveCharacter
+            // textBox1
             // 
-            this.btnSaveCharacter.Location = new System.Drawing.Point(1046, 38);
-            this.btnSaveCharacter.Name = "btnSaveCharacter";
-            this.btnSaveCharacter.Size = new System.Drawing.Size(116, 23);
-            this.btnSaveCharacter.TabIndex = 207;
-            this.btnSaveCharacter.Text = "SaveCharacter";
-            this.btnSaveCharacter.UseVisualStyleBackColor = true;
-            this.btnSaveCharacter.Click += new System.EventHandler(this.btnSaveCharacter_Click);
+            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(812, 440);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(24, 20);
+            this.textBox1.TabIndex = 210;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox2.Location = new System.Drawing.Point(791, 440);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(24, 20);
+            this.textBox2.TabIndex = 209;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox3.Location = new System.Drawing.Point(770, 440);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(24, 20);
+            this.textBox3.TabIndex = 208;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(427, 150);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(77, 13);
+            this.label11.TabIndex = 211;
+            this.label11.Text = "Lebensenergie";
             // 
             // Form1
             // 
@@ -1507,6 +1647,10 @@
         private System.Windows.Forms.TextBox txtFernkampfBasisMOD;
         private System.Windows.Forms.Button btnLoadCharacter;
         private System.Windows.Forms.Button btnSaveCharacter;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 

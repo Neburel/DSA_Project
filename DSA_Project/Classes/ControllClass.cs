@@ -72,9 +72,14 @@ namespace DSA_Project
         /// mit Ausnahme von Modifikatoren und Göttergeschenke ist dieser Wert stets im 0 vorhanden
         /// Bessere Lösung Möglich?
         /// </summary>
-        public String[] BasicValue(DSA_BASICVALUES attribute)
+        public String[] BasicValue(DSA_BASICVALUES value)
         {
-            return charakter.getBasicValue(attribute);
+            return charakter.getBasicValue(value);
+        }
+        public String[] BasicValue(DSA_BASICVALUES value, String wert)
+        {
+            charakter.setBasicValues(value, wert);
+            return BasicValue(value);
         }
 
 
@@ -141,12 +146,21 @@ namespace DSA_Project
         }
 
         
-        public int AdvancedValue_AKT(DSA_ADVANCEDVALUES advancedValue)
+
+
+        public int AdvancedValueAKT(DSA_ADVANCEDVALUES advancedValue)
         {
             /*Besseres Verhalten implementieren*/
             return charakter.getAdvancedValue_AKT(advancedValue);
         }
-
+        public int AdvancedValueMOD(DSA_ADVANCEDVALUES advancedValue)
+        {
+            return charakter.getAdvancedValue_MOD(advancedValue);
+        }
+        public int AdvancedValueMAX(DSA_ADVANCEDVALUES advancedValue)
+        {
+            return charakter.getAdvancedValueMAX(advancedValue);
+        }
 
     }
 }

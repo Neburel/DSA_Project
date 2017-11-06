@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <CharakterBogen>
-  <Heldenbrief>
+  <HeldenBrief>
     <BasisDaten>
       <Name>Kazarik</Name>
       <AlterGeburstag>25</AlterGeburstag>
@@ -51,5 +51,5 @@
         <Sozialstatus>1</Sozialstatus>
       </MOD>
     </Attribute>
-  </Heldenbrief>
+  </HeldenBrief>
 </CharakterBogen>

@@ -92,6 +92,16 @@ namespace DSA_Project
             txtKonstitutionMOD.Text     = controll.AttributeMOD(DSA_ATTRIBUTE.KONSTITUTION, txtKonstitutionMOD.Text).ToString();
             txtKörperkraftMOD.Text      = controll.AttributeMOD(DSA_ATTRIBUTE.KÖRPERKRAFT, txtKörperkraftMOD.Text).ToString();
             txtSozialstatusMOD.Text     = controll.AttributeMOD(DSA_ATTRIBUTE.SOZAILSTATUS, txtSozialstatusMOD.Text).ToString();
+
+            txtAttackeBasisMOD.Text     = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
+            txtParadeBasisMOD.Text      = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.PARADE_BASIS).ToString();
+            txtFernkampfBasisMOD.Text   = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS).ToString();
+            txtInitativeBasisMOD.Text   = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.INITATIVE_BASIS).ToString();
+            txtBeherschungswertMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT).ToString();
+            txtArtefaktkontrolleMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE).ToString();
+            txtWundschwelleMOD.Text     = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
+            txtEntrückungMOD.Text       = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
+            txtGeschwindigkeitMOD.Text  = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
         }
         /// <summary> 
         /// Ist bei einer Werteänderung eine Neuberechnung nötig muss dies Ausgelöst werden
@@ -108,15 +118,25 @@ namespace DSA_Project
             txtKörperkraftMAX.Text      = controll.AttributeMAX(DSA_ATTRIBUTE.KÖRPERKRAFT).ToString();
             txtSozialstatusMAX.Text     = controll.AttributeMAX(DSA_ATTRIBUTE.SOZAILSTATUS).ToString();
             
-            txtAttackeBaisAKT.Text      = controll.AdvancedValue_AKT(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
-            txtParadeBasisAKT.Text      = controll.AdvancedValue_AKT(DSA_ADVANCEDVALUES.PARADE_BASIS).ToString();
-            txtFernkampfBasisAKT.Text   = controll.AdvancedValue_AKT(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS).ToString();
-            txtInitativeBasisAKT.Text   = controll.AdvancedValue_AKT(DSA_ADVANCEDVALUES.INITATIVE_BASIS).ToString();
-            txtBeherschungswertAKT.Text = controll.AdvancedValue_AKT(DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT).ToString();
-            txtArtefaktkontrolleAKT.Text = controll.AdvancedValue_AKT(DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE).ToString();
-            txtWundschwelleAKT.Text     = controll.AdvancedValue_AKT(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
-            txtEntrückungAKT.Text       = controll.AdvancedValue_AKT(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
-            txtGeschwindigkeitAKT.Text  = controll.AdvancedValue_AKT(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
+            txtAttackeBaisAKT.Text      = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
+            txtParadeBasisAKT.Text      = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.PARADE_BASIS).ToString();
+            txtFernkampfBasisAKT.Text   = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS).ToString();
+            txtInitativeBasisAKT.Text   = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.INITATIVE_BASIS).ToString();
+            txtBeherschungswertAKT.Text = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT).ToString();
+            txtArtefaktkontrolleAKT.Text= controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE).ToString();
+            txtWundschwelleAKT.Text     = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
+            txtEntrückungAKT.Text       = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
+            txtGeschwindigkeitAKT.Text  = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
+
+            txtAttackeBaisMAX.Text      = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
+            txtParadeBasisMAX.Text      = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.PARADE_BASIS).ToString();
+            txtFernkampfBasisMAX.Text   = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS).ToString();
+            txtInitativeBasisMAX.Text   = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.INITATIVE_BASIS).ToString();
+            txtBeherschungswertMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT).ToString();
+            txtArtefaktkontrolleMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE).ToString();
+            txtWundschwelleMAX.Text     = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
+            txtEntrückungMAX.Text       = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
+            txtGeschwindigkeitMAX.Text  = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
 
             txtGesamtAKT.Text = controll.AttributeAKT(DSA_ATTRIBUTE.SUMME).ToString();
             txtGesamtMAX.Text = controll.AttributeMAX(DSA_ATTRIBUTE.SUMME).ToString();
@@ -294,15 +314,177 @@ namespace DSA_Project
         {
             refresh();
         }
+        /*Basiv Values Änderungen AKT ENDE*/
 
+
+        /*BasivValue Änderungen*/
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-
+            txtName.Text = controll.BasicValue(DSA_BASICVALUES.NAME, txtName.Text)[0];
+        }
+        private void txtAugenfarbe_TextChanged(object sender, EventArgs e)
+        {
+            txtAugenfarbe.Text = controll.BasicValue(DSA_BASICVALUES.AUGENFARBE, txtAugenfarbe.Text)[0];
+        }
+        private void txtAnrede_TextChanged(object sender, EventArgs e)
+        {
+            txtAnrede.Text = controll.BasicValue(DSA_BASICVALUES.ANREDE, txtAnrede.Text)[0];
+        }
+        private void txtRasse_TextChanged(object sender, EventArgs e)
+        {
+            txtRasse.Text = controll.BasicValue(DSA_BASICVALUES.RASSE, txtRasse.Text)[0];
+        }
+        private void txtKultur_TextChanged(object sender, EventArgs e)
+        {
+            txtKultur.Text = controll.BasicValue(DSA_BASICVALUES.KULTUR, txtKultur.Text)[0];
+        }
+        private void txtProfession_TextChanged(object sender, EventArgs e)
+        {
+            txtProfession.Name = controll.BasicValue(DSA_BASICVALUES.PROFESSION, txtProfession.Text)[0];
+        }
+        private void txtAlter_TextChanged(object sender, EventArgs e)
+        {
+            txtAlter.Text = controll.BasicValue(DSA_BASICVALUES.ALTER, txtAlter.Text)[0];
+        }
+        private void txtHaarfarbe_TextChanged(object sender, EventArgs e)
+        {
+            txtHaarfarbe.Text = controll.BasicValue(DSA_BASICVALUES.HAARFARBE, txtHaarfarbe.Text)[0];
+        }
+        private void txtGottheit_TextChanged(object sender, EventArgs e)
+        {
+            txtGottheit.Text = controll.BasicValue(DSA_BASICVALUES.GOTTHEIT, txtGottheit.Text)[0];
+        }
+        private void txtModifikation1_TextChanged(object sender, EventArgs e)
+        {
+            txtModifikation1.Text = controll.BasicValue(DSA_BASICVALUES.MODIFIKATOREN, txtModifikation1.Text)[0];
+        }
+        private void txtModifikation2_TextChanged(object sender, EventArgs e)
+        {
+            txtModifikation2.Text = controll.BasicValue(DSA_BASICVALUES.MODIFIKATOREN, txtModifikation2.Text)[1];
+        }
+        private void txtModifikation3_TextChanged(object sender, EventArgs e)
+        {
+            txtModifikation3.Text = controll.BasicValue(DSA_BASICVALUES.MODIFIKATOREN, txtModifikation3.Text)[2];
+        }
+        private void txtGewicht_TextChanged(object sender, EventArgs e)
+        {
+            txtGewicht.Text = controll.BasicValue(DSA_BASICVALUES.GEWICHT, txtGewicht.Text)[0];
+        }
+        private void txtFamulienstand_TextChanged(object sender, EventArgs e)
+        {
+            txtFamulienstand.Text = controll.BasicValue(DSA_BASICVALUES.FAMILIENSTAND, txtFamulienstand.Text)[0];
+        }
+        private void txtGöttergeschenke1_TextChanged(object sender, EventArgs e)
+        {
+            txtGöttergeschenke1.Text = controll.BasicValue(DSA_BASICVALUES.GÖTTERGESCHENKE, txtGöttergeschenke1.Text)[0];
+        }
+        private void txtGöttergeschenke2_TextChanged(object sender, EventArgs e)
+        {
+            txtGöttergeschenke2.Text = controll.BasicValue(DSA_BASICVALUES.GÖTTERGESCHENKE, txtGöttergeschenke2.Text)[1];
+        }
+        private void txtGöttergeschenke3_TextChanged(object sender, EventArgs e)
+        {
+            txtGöttergeschenke3.Text = controll.BasicValue(DSA_BASICVALUES.GÖTTERGESCHENKE, txtGöttergeschenke3.Text)[2];
+        }
+        private void txtGöttergeschenke4_TextChanged(object sender, EventArgs e)
+        {
+            txtGöttergeschenke4.Text = controll.BasicValue(DSA_BASICVALUES.GÖTTERGESCHENKE, txtGöttergeschenke4.Text)[3];
+        }
+        private void txtGeschlecht_TextChanged(object sender, EventArgs e)
+        {
+            txtGeschlecht.Text = controll.BasicValue(DSA_BASICVALUES.GESCHLECHT, txtGeschlecht.Text)[0];
+        }
+        private void txtGröße_TextChanged(object sender, EventArgs e)
+        {
+            txtGröße.Text = controll.BasicValue(DSA_BASICVALUES.GRÖSE, txtGröße.Text)[0];
+        }
+        private void txtHautfarbe_TextChanged(object sender, EventArgs e)
+        {
+            txtHautfarbe.Text = controll.BasicValue(DSA_BASICVALUES.HAUTFARBE, txtHautfarbe.Text)[0];
         }
 
 
+        private void txtAttackeBasisMOD_TextChanged(object sender, EventArgs e)
+        {
+            txtAttackeBasisMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
+        }
+        private void txtParadeBasisMOD_TextChanged(object sender, EventArgs e)
+        {
+            txtParadeBasisMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.PARADE_BASIS).ToString();
+        }
+        private void txtFernkampfBasisMOD_TextChanged(object sender, EventArgs e)
+        {
+            txtParadeBasisMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS).ToString();
+        }
+        private void txtInitativeBasisMOD_TextChanged(object sender, EventArgs e)
+        {
+            txtInitativeBasisMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.INITATIVE_BASIS).ToString();
+        }
+        private void txtBeherschungswertMOD_TextChanged(object sender, EventArgs e)
+        {
+            txtBeherschungswertMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT).ToString();
+        }
+        private void txtArtefaktkontrolleMOD_TextChanged(object sender, EventArgs e)
+        {
+            txtArtefaktkontrolleMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
+        }
+        private void txtWundschwelleMOD_TextChanged(object sender, EventArgs e)
+        {
+            txtWundschwelleMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
+        }
+        private void txtEntrückungMOD_TextChanged(object sender, EventArgs e)
+        {
+            txtEntrückungMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
+        }
+        private void txtGeschwindigkeitMOD_TextChanged(object sender, EventArgs e)
+        {
+            txtGeschwindigkeitMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
+        }
 
 
-        /*Vasiv Values Änderungen AKT ENDE*/
+        private void txtAttackeBaisMAX_TextChanged(object sender, EventArgs e)
+        {
+            txtAttackeBaisMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
+        }
+
+        private void txtParadeBasisMAX_TextChanged(object sender, EventArgs e)
+        {
+            txtParadeBasisMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.PARADE_BASIS).ToString();
+        }
+
+        private void txtFernkampfBasisMAX_TextChanged(object sender, EventArgs e)
+        {
+            txtFernkampfBasisMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS).ToString();
+        }
+
+        private void txtInitativeBasisMAX_TextChanged(object sender, EventArgs e)
+        {
+            txtInitativeBasisMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.INITATIVE_BASIS).ToString();
+        }
+
+        private void txtBeherschungswertMAX_TextChanged(object sender, EventArgs e)
+        {
+            txtBeherschungswertMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT).ToString();
+        }
+
+        private void txtArtefaktkontrolleMAX_TextChanged(object sender, EventArgs e)
+        {
+            txtArtefaktkontrolleMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE).ToString();
+        }
+
+        private void txtWundschwelleMAX_TextChanged(object sender, EventArgs e)
+        {
+            txtWundschwelleMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
+        }
+
+        private void txtEntrückungMAX_TextChanged(object sender, EventArgs e)
+        {
+            txtEntrückungMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
+        }
+
+        private void txtGeschwindigkeitMAX_TextChanged(object sender, EventArgs e)
+        {
+            txtGeschwindigkeitMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
+        }
     }
 }

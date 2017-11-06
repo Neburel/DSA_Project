@@ -37,7 +37,6 @@ namespace DSA_Project
         int Konstitution = 0;
         int Körperkraft = 0;
         int Sozailstatus = 0;
-        //Attribute Ende;
 
         //Attribute Modifikatioren
         int Mut_mod = 1;
@@ -49,12 +48,23 @@ namespace DSA_Project
         int Konstitution_mod = 1;
         int Körperkraft_mod = 1;
         int Sozailstatus_mod = 1;
-        //Attribute Modifikatoren Ende
 
         //Basic Values
         int Beherschungswert = 0;
         int Entrückung = 0;
         int Geschwindigkeit = 0;
+
+        //Basic Value Modifikation
+        int AttackeBasisMOD         = 1;
+        int ParadeBasisMOD          = 1;
+        int FernkampfBasisMOD       = 1;
+        int InitativeBasisMOD       = 1;
+        int BeherschungswertMOD     = 1;
+        int ArtefaktkontrolleMOD    = 1;
+        int WundschwelleMOD         = 1;
+        int EntrückungMOD           = 1;
+        int GeschwindigkeitMOD      = 1;
+
         
         public void setBasicValues(DSA_BASICVALUES value, String stringValue)
         {  
@@ -105,8 +115,6 @@ namespace DSA_Project
                     foreach (String Stringvalue in Modifikatoren)
                     {
                         ret[i] = Stringvalue;
-                        Console.WriteLine(ret[i]);
-
                         i++;
                     }
                     return ret;
@@ -220,6 +228,45 @@ namespace DSA_Project
             }
             return 0;
         }
+        public int getAdvancedValue_MOD(DSA_ADVANCEDVALUES value)
+        {
+            Double ret = 0;
+            switch (value)
+            {
+                case DSA_ADVANCEDVALUES.ATTACKE_BASIS:      ret = AttackeBasisMOD;      break;
+                case DSA_ADVANCEDVALUES.PARADE_BASIS:       ret = ParadeBasisMOD;       break;
+                case DSA_ADVANCEDVALUES.FERNKAMPF_BASIS:    ret = FernkampfBasisMOD;    break;
+                case DSA_ADVANCEDVALUES.INITATIVE_BASIS:    ret = InitativeBasisMOD;    break;
+                case DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT:   ret = BeherschungswertMOD;  break;
+                case DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE:  ret = ArtefaktkontrolleMOD; break;
+                case DSA_ADVANCEDVALUES.WUNDSCHWELLE:       ret = WundschwelleMOD;      break;
+                case DSA_ADVANCEDVALUES.ENTRÜCKUNG:         ret = EntrückungMOD;        break;
+                case DSA_ADVANCEDVALUES.GESCHWINDIGKEIT:    ret = GeschwindigkeitMOD;   break;
+                default: throw new Exception();
+            }
+            return (int)ret;
+        }
+        public int getAdvancedValueMAX(DSA_ADVANCEDVALUES value)
+        {
+            Double ret = 0;
+            switch (value)
+            {
+                case DSA_ADVANCEDVALUES.ATTACKE_BASIS: ret      = getAdvancedValue_AKT(value) * AttackeBasisMOD;        break;
+                case DSA_ADVANCEDVALUES.PARADE_BASIS: ret       = getAdvancedValue_AKT(value) * ParadeBasisMOD;         break;
+                case DSA_ADVANCEDVALUES.FERNKAMPF_BASIS: ret    = getAdvancedValue_AKT(value) * FernkampfBasisMOD;      break;
+                case DSA_ADVANCEDVALUES.INITATIVE_BASIS: ret    = getAdvancedValue_AKT(value) * InitativeBasisMOD;      break;
+                case DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT: ret   = getAdvancedValue_AKT(value) * BeherschungswertMOD;    break;
+                case DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE: ret  = getAdvancedValue_AKT(value) * ArtefaktkontrolleMOD;   break;
+                case DSA_ADVANCEDVALUES.WUNDSCHWELLE: ret       = getAdvancedValue_AKT(value) * WundschwelleMOD;        break;
+                case DSA_ADVANCEDVALUES.ENTRÜCKUNG: ret         = getAdvancedValue_AKT(value) * EntrückungMOD;          break;
+                case DSA_ADVANCEDVALUES.GESCHWINDIGKEIT: ret    = getAdvancedValue_AKT(value) * GeschwindigkeitMOD;     break;
+                default: throw new Exception();
+            }
+            return (int)ret;
+
+        }
+
+
         public int getEnergie_VORERGEBNIS(DSA_ENERGIEN energie)
         {
             switch (energie)

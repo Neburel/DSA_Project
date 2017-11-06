@@ -60,7 +60,7 @@ namespace DSA_Project
             
             for (int i=0; i < Modifikatoren.Length; i++)
             {
-                ModifikatorenElement.AppendChild(characterFile.CreateElement("Modifikatoren" + (i + 1).ToString())).InnerText = Göttergeschenke[i];
+                ModifikatorenElement.AppendChild(characterFile.CreateElement("Modifikatoren" + (i + 1).ToString())).InnerText = Modifikatoren[i];
             }
             for (int i = 0; i < Göttergeschenke.Length; i++)
             {
