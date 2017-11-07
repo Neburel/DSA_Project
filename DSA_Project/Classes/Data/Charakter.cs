@@ -72,7 +72,66 @@ namespace DSA_Project
         int KarmaenergieMOD         = 1;
         int MagieresistenzMOD       = 1;
 
-        
+        //Geld
+        int Bank                    = 0;
+        int Dukaten                 = 0;
+        int Silber                  = 0;
+        int Heller                  = 0;
+        int Kupfer                  = 0;
+
+        //Features
+        Feature[] Vorteile          = new Feature[0];
+        Feature[] Nachteile         = new Feature[0];
+
+        public void setMoney(DSA_MONEY type, int value)
+        {
+            switch (type)
+            {
+                case DSA_MONEY.D: Dukaten = value; break;
+                case DSA_MONEY.S: Silber = value; break;
+                case DSA_MONEY.H: Heller = value; break;
+                case DSA_MONEY.K: Kupfer = value; break;
+                case DSA_MONEY.BANK: Bank = value; break; 
+            }
+        }
+        public int getMoney(DSA_MONEY type )
+        {
+            int ret = 0;
+            switch (type)
+            {
+                case DSA_MONEY.D: ret = Dukaten; break;
+                case DSA_MONEY.S: ret = Silber; break;
+                case DSA_MONEY.H: ret = Heller; break;
+                case DSA_MONEY.K: ret = Kupfer; break;
+                case DSA_MONEY.BANK: ret = Bank; break;
+            }
+            return ret;
+        }
+
+
+        private int getFeaturePoints(DSA_FEATURES ftype, DSA_FEATUREBONUS btype)
+        {
+            Feature[] farray = null;
+            int points = 0;             
+
+            switch (ftype)
+            {
+                case DSA_FEATURES.VORTEIL: farray = Vorteile; break;
+                case DSA_FEATURES.NACHTEIL: farray = Nachteile; break;
+            }
+            
+            for (int i=1; i<farray.Length; i++)
+            {
+                if(farray[i].getType() == btype)
+                {
+                    points = points + farray[i].getBonus();
+                }
+            }
+            Console.WriteLine("FeaturePoints:" + points);
+            return points;
+        }
+
+
         public void setBasicValues(DSA_BASICVALUES value, String stringValue)
         {  
             switch (value)
@@ -189,7 +248,7 @@ namespace DSA_Project
         {
             switch (attribute)
             {
-                case DSA_ATTRIBUTE.MUT:                 return Mut * Mut_mod;
+                case DSA_ATTRIBUTE.MUT:                 return (Mut+getFeaturePoints(DSA_FEATURES.VORTEIL, DSA_FEATUREBONUS.MUT)) * Mut_mod;
                 case DSA_ATTRIBUTE.KLUGHEIT:            return Klugheit * Klugheit_mod;
                 case DSA_ATTRIBUTE.INTUITION:           return Intuition * Intuition_mod;
                 case DSA_ATTRIBUTE.CHARISMA:            return Charisma * Charisma_mod;
@@ -205,7 +264,7 @@ namespace DSA_Project
         }
         
 
-        public int getAdvancedValue_AKT(DSA_ADVANCEDVALUES value)
+        public int getAdvancedValueAKT(DSA_ADVANCEDVALUES value)
         {
             switch (value)
             {
@@ -236,7 +295,7 @@ namespace DSA_Project
             }
             return 0;
         }
-        public int getAdvancedValue_MOD(DSA_ADVANCEDVALUES value)
+        public int getAdvancedValueMOD(DSA_ADVANCEDVALUES value)
         {
             Double ret = 0;
             switch (value)
@@ -259,15 +318,15 @@ namespace DSA_Project
             Double ret = 0;
             switch (value)
             {
-                case DSA_ADVANCEDVALUES.ATTACKE_BASIS: ret      = getAdvancedValue_AKT(value) * AttackeBasisMOD;        break;
-                case DSA_ADVANCEDVALUES.PARADE_BASIS: ret       = getAdvancedValue_AKT(value) * ParadeBasisMOD;         break;
-                case DSA_ADVANCEDVALUES.FERNKAMPF_BASIS: ret    = getAdvancedValue_AKT(value) * FernkampfBasisMOD;      break;
-                case DSA_ADVANCEDVALUES.INITATIVE_BASIS: ret    = getAdvancedValue_AKT(value) * InitativeBasisMOD;      break;
-                case DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT: ret   = getAdvancedValue_AKT(value) * BeherschungswertMOD;    break;
-                case DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE: ret  = getAdvancedValue_AKT(value) * ArtefaktkontrolleMOD;   break;
-                case DSA_ADVANCEDVALUES.WUNDSCHWELLE: ret       = getAdvancedValue_AKT(value) * WundschwelleMOD;        break;
-                case DSA_ADVANCEDVALUES.ENTRÜCKUNG: ret         = getAdvancedValue_AKT(value) * EntrückungMOD;          break;
-                case DSA_ADVANCEDVALUES.GESCHWINDIGKEIT: ret    = getAdvancedValue_AKT(value) * GeschwindigkeitMOD;     break;
+                case DSA_ADVANCEDVALUES.ATTACKE_BASIS: ret      = getAdvancedValueAKT(value) * AttackeBasisMOD;        break;
+                case DSA_ADVANCEDVALUES.PARADE_BASIS: ret       = getAdvancedValueAKT(value) * ParadeBasisMOD;         break;
+                case DSA_ADVANCEDVALUES.FERNKAMPF_BASIS: ret    = getAdvancedValueAKT(value) * FernkampfBasisMOD;      break;
+                case DSA_ADVANCEDVALUES.INITATIVE_BASIS: ret    = getAdvancedValueAKT(value) * InitativeBasisMOD;      break;
+                case DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT: ret   = getAdvancedValueAKT(value) * BeherschungswertMOD;    break;
+                case DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE: ret  = getAdvancedValueAKT(value) * ArtefaktkontrolleMOD;   break;
+                case DSA_ADVANCEDVALUES.WUNDSCHWELLE: ret       = getAdvancedValueAKT(value) * WundschwelleMOD;        break;
+                case DSA_ADVANCEDVALUES.ENTRÜCKUNG: ret         = getAdvancedValueAKT(value) * EntrückungMOD;          break;
+                case DSA_ADVANCEDVALUES.GESCHWINDIGKEIT: ret    = getAdvancedValueAKT(value) * GeschwindigkeitMOD;     break;
                 default: throw new Exception();
             }
             return (int)ret;
@@ -332,8 +391,48 @@ namespace DSA_Project
         }
 
 
-       
+        public void addFeature(DSA_FEATURES type, int number, Feature feature)
+        {
+            switch (type)
+            {
+                case DSA_FEATURES.VORTEIL:  setVorteil(number, feature); break;
+                case DSA_FEATURES.NACHTEIL: setNachteil(number, feature); break;
+            }
+        }
+        private void setVorteil(int number, Feature feature)
+        {
+            if(Vorteile.Length-1 < number)
+            {   
+                Console.WriteLine("Vorteile + 1");
+                Array.Resize(ref Vorteile, Vorteile.Length +1);
+                setVorteil(number, feature);
+                return;
+            }
+            Vorteile[number] = feature;
+        }
+        private void setNachteil(int number, Feature feature)
+        {
+            if (Nachteile.Length-1 < number)
+            {
+                Array.Resize(ref Vorteile, Nachteile.Length + 1);
+                setNachteil(number, feature);
+            }
+            Nachteile[number] = feature;
+        }
+        public Feature getVorteil(int number)
+        {
+            Feature ret = null;
+            if (number < Vorteile.Length) ret = Vorteile[number];
+            return ret;
+        }
+        public Feature getNachteil(int number)
+        {
+            Feature ret = null;
+            if (Nachteile.Length < number) ret = Nachteile[number];
+            return ret;
+        }
 
-        
+
+
     }
 }

@@ -12,6 +12,9 @@ namespace DSA_Project
     enum DSA_ATTRIBUTE { MUT, KLUGHEIT, INTUITION, CHARISMA, FINGERFERTIGKEIT, GEWANDHEIT, KONSTITUTION, KÖRPERKRAFT, SOZAILSTATUS, SUMME }
     enum DSA_ADVANCEDVALUES { ATTACKE_BASIS, PARADE_BASIS, FERNKAMPF_BASIS, INITATIVE_BASIS, BEHERSCHUNGSWERT, ARTEFAKTKONTROLLE, WUNDSCHWELLE, ENTRÜCKUNG, GESCHWINDIGKEIT }
     enum DSA_ENERGIEN { LEBENSENERGIE, AUSDAUER, ASTRALENERGIE, KARMAENERGIE, MAGIERESISTENZ }
+    enum DSA_MONEY { D, S, H, K, BANK}
+    enum DSA_FEATURES { VORTEIL, NACHTEIL }
+    enum DSA_FEATUREBONUS { NONE,  MUT, KLUGHEIT, INTUITION, CHARISMA, FINGERFERTIGKEIT, GEWANDHEIT, KONSTITUTION, KÖRPERKRAFT, SOZAILSTATUS, LEBENSENERGIE, AUSDAUER, ASTRALENERGIE, KARMAENERGIE, MAGIERESISTENZ }
     /// <summary>
     /// Die Kontroll Klasse dient als Zentrale Anlaufstelle für das Programm
     /// Sie bestimmt was bei Wereänderungen Passiert, wie und wohin sie geschrieben werden
@@ -25,11 +28,30 @@ namespace DSA_Project
     class ControllClass
     {
         Form1 form;
+        String[] MapFeatureBonus;
         Charakter charakter = new Charakter();
 
+        
         public ControllClass(Form1 form)
         {
             this.form = form;
+
+            MapFeatureBonus = new String[Enum.GetNames(typeof(DSA_FEATUREBONUS)).Length];
+            MapFeatureBonus[(int)DSA_FEATUREBONUS.NONE]             = "";
+            MapFeatureBonus[(int)DSA_FEATUREBONUS.MUT]              = "MU";
+            MapFeatureBonus[(int)DSA_FEATUREBONUS.KLUGHEIT]         = "KL";
+            MapFeatureBonus[(int)DSA_FEATUREBONUS.INTUITION]        = "IN";
+            MapFeatureBonus[(int)DSA_FEATUREBONUS.CHARISMA]         = "CH";
+            MapFeatureBonus[(int)DSA_FEATUREBONUS.FINGERFERTIGKEIT] = "FF";
+            MapFeatureBonus[(int)DSA_FEATUREBONUS.GEWANDHEIT]       = "GE";
+            MapFeatureBonus[(int)DSA_FEATUREBONUS.KONSTITUTION]     = "KO";
+            MapFeatureBonus[(int)DSA_FEATUREBONUS.KÖRPERKRAFT]      = "KK";
+            MapFeatureBonus[(int)DSA_FEATUREBONUS.SOZAILSTATUS]     = "S";
+            MapFeatureBonus[(int)DSA_FEATUREBONUS.LEBENSENERGIE]    = "LE";
+            MapFeatureBonus[(int)DSA_FEATUREBONUS.AUSDAUER]         = "A";
+            MapFeatureBonus[(int)DSA_FEATUREBONUS.ASTRALENERGIE]    = "AE";
+            MapFeatureBonus[(int)DSA_FEATUREBONUS.KARMAENERGIE]     = "KE";
+            MapFeatureBonus[(int)DSA_FEATUREBONUS.MAGIERESISTENZ]   = "MR";
         }
 
 
@@ -66,6 +88,31 @@ namespace DSA_Project
             form.load();
             form.refresh();
         }
+
+
+        public List<String> getBonusList()
+        {
+            //Die Werte Müssen mit dem enum "DSA_FEATUREBONUS" übereinstimmen, da mit dem Index gearbeitet wird
+            List<String> BonusList = new List<string>();
+
+            for(int i=0; i < Enum.GetNames(typeof(DSA_FEATUREBONUS)).Length; i++)
+            {
+                BonusList.Add(MapFeatureBonus[i]);
+            }
+            return BonusList;
+        }    
+        public int getBonusID(String value)
+        {
+            for (int i = 0; i< Enum.GetNames(typeof(DSA_FEATUREBONUS)).Length; i++)
+            {
+                if(MapFeatureBonus[i] == value)
+                {
+                    return i; 
+                }
+            }
+            return 0;
+        }
+
 
         /// <summary>
         /// Gibt ein Basic Value in Form eines Array Zurück
@@ -149,11 +196,11 @@ namespace DSA_Project
         public int AdvancedValueAKT(DSA_ADVANCEDVALUES advancedValue)
         {
             /*Besseres Verhalten implementieren*/
-            return charakter.getAdvancedValue_AKT(advancedValue);
+            return charakter.getAdvancedValueAKT(advancedValue);
         }
         public int AdvancedValueMOD(DSA_ADVANCEDVALUES advancedValue)
         {
-            return charakter.getAdvancedValue_MOD(advancedValue);
+            return charakter.getAdvancedValueMOD(advancedValue);
         }
         public int AdvancedValueMAX(DSA_ADVANCEDVALUES advancedValue)
         {
@@ -180,6 +227,57 @@ namespace DSA_Project
         public int EnergieMAX(DSA_ENERGIEN energie)
         {
             return charakter.getEnergieMAX(energie);
+        }
+
+
+        public int Money(DSA_MONEY type)
+        {
+            return charakter.getMoney(type);
+        }
+        public int Money(DSA_MONEY type, String money)
+        {
+            var isNumeric = int.TryParse(money, out var wert_int);
+            if (isNumeric == true)
+            {
+                charakter.setMoney(type, wert_int);
+            }
+            return Money(type);
+        }
+
+
+        public Feature Feature(DSA_FEATURES FeatureType, String type, int number, String Name, String Value, String GP, String Description, String Bonus)
+        {
+            Feature feature = null;
+            DSA_FEATUREBONUS ftype = (DSA_FEATUREBONUS)getBonusID(type);
+            int Bonus_int = 0;
+
+            switch (FeatureType)
+            {
+                case DSA_FEATURES.VORTEIL: feature = charakter.getVorteil(number); break;
+                case DSA_FEATURES.NACHTEIL: feature = charakter.getNachteil(number); break;
+            }
+
+            var isNumeric = int.TryParse(Bonus, out var wert_int);
+            if (isNumeric == true)
+            {
+                Bonus_int = wert_int;
+            }
+            if (feature == null)
+            {
+                feature = new Feature(ftype, Name, Description, Value, GP, Bonus_int);
+                charakter.addFeature(FeatureType, number, feature);
+            }
+            else
+            {
+                feature.setName(Name);
+                feature.setDescription(Description);
+                feature.setValue(Value);
+                feature.setGP(GP);
+                feature.setBonus(Bonus_int);
+                feature.setBonusType(ftype);
+            }
+            form.refresh();
+            return feature;
         }
     }
 }

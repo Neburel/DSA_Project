@@ -45,19 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Charakter.cs" />
-    <Compile Include="Classes\ControllClass.cs" />
-    <Compile Include="Classes\LoadCharakterXML.cs" />
-    <Compile Include="Classes\SaveCharakterXML.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Classes\Data\Charakter.cs" />
+    <Compile Include="Classes\Controller\ControllClass.cs" />
+    <Compile Include="Classes\Data\Feature.cs" />
+    <Compile Include="Classes\Util\LoadCharakterXML.cs" />
+    <Compile Include="Classes\Util\SaveCharakterXML.cs" />
+    <Compile Include="Classes\View\Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Classes\View\Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Classes\Util\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Classes\View\Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -88,5 +89,6 @@
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

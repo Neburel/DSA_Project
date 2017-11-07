@@ -30,6 +30,33 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.drpVorteile1Type = new System.Windows.Forms.ComboBox();
+            this.txtVorteil1Bonus = new System.Windows.Forms.TextBox();
+            this.txtVorteil1Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtVorteil1GP = new System.Windows.Forms.TextBox();
+            this.txtVorteil1Wert = new System.Windows.Forms.TextBox();
+            this.txtVorteil1Name = new System.Windows.Forms.TextBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.txtStufe = new System.Windows.Forms.TextBox();
+            this.txtAbenteuerpunkte = new System.Windows.Forms.TextBox();
+            this.txtAbenteuerpunkteInvestiert = new System.Windows.Forms.TextBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.txtAbenteuerpunkteGuthaben = new System.Windows.Forms.TextBox();
+            this.Stufe = new System.Windows.Forms.Label();
+            this.txtGeldK = new System.Windows.Forms.TextBox();
+            this.txtGeldH = new System.Windows.Forms.TextBox();
+            this.txtGeldS = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.txtBank = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.txtGeldD = new System.Windows.Forms.TextBox();
             this.txtMagieresistenzERG = new System.Windows.Forms.TextBox();
             this.txtMagieresistenzMALI = new System.Windows.Forms.TextBox();
             this.txtMagieresistenzMOD = new System.Windows.Forms.TextBox();
@@ -190,6 +217,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -199,12 +227,28 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1176, 616);
+            this.tabControl1.Size = new System.Drawing.Size(1176, 722);
             this.tabControl1.TabIndex = 124;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.txtStufe);
+            this.tabPage1.Controls.Add(this.txtAbenteuerpunkte);
+            this.tabPage1.Controls.Add(this.txtAbenteuerpunkteInvestiert);
+            this.tabPage1.Controls.Add(this.label56);
+            this.tabPage1.Controls.Add(this.label55);
+            this.tabPage1.Controls.Add(this.label54);
+            this.tabPage1.Controls.Add(this.txtAbenteuerpunkteGuthaben);
+            this.tabPage1.Controls.Add(this.Stufe);
+            this.tabPage1.Controls.Add(this.txtGeldK);
+            this.tabPage1.Controls.Add(this.txtGeldH);
+            this.tabPage1.Controls.Add(this.txtGeldS);
+            this.tabPage1.Controls.Add(this.label53);
+            this.tabPage1.Controls.Add(this.txtBank);
+            this.tabPage1.Controls.Add(this.label52);
+            this.tabPage1.Controls.Add(this.txtGeldD);
             this.tabPage1.Controls.Add(this.txtMagieresistenzERG);
             this.tabPage1.Controls.Add(this.txtMagieresistenzMALI);
             this.tabPage1.Controls.Add(this.txtMagieresistenzMOD);
@@ -366,9 +410,291 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1168, 590);
+            this.tabPage1.Size = new System.Drawing.Size(1168, 696);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.drpVorteile1Type);
+            this.groupBox1.Controls.Add(this.txtVorteil1Bonus);
+            this.groupBox1.Controls.Add(this.txtVorteil1Beschreibung);
+            this.groupBox1.Controls.Add(this.txtVorteil1GP);
+            this.groupBox1.Controls.Add(this.txtVorteil1Wert);
+            this.groupBox1.Controls.Add(this.txtVorteil1Name);
+            this.groupBox1.Controls.Add(this.label61);
+            this.groupBox1.Controls.Add(this.label60);
+            this.groupBox1.Controls.Add(this.label59);
+            this.groupBox1.Controls.Add(this.label58);
+            this.groupBox1.Controls.Add(this.label57);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(16, 423);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1024, 209);
+            this.groupBox1.TabIndex = 265;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Vorteile";
+            // 
+            // drpVorteile1Type
+            // 
+            this.drpVorteile1Type.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.drpVorteile1Type.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.drpVorteile1Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.drpVorteile1Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drpVorteile1Type.FormattingEnabled = true;
+            this.drpVorteile1Type.Location = new System.Drawing.Point(953, 48);
+            this.drpVorteile1Type.Name = "drpVorteile1Type";
+            this.drpVorteile1Type.Size = new System.Drawing.Size(61, 21);
+            this.drpVorteile1Type.Sorted = true;
+            this.drpVorteile1Type.TabIndex = 275;
+            this.drpVorteile1Type.TextChanged += new System.EventHandler(this.txtVorteil1_ValueChanged);
+            // 
+            // txtVorteil1Bonus
+            // 
+            this.txtVorteil1Bonus.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil1Bonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil1Bonus.Location = new System.Drawing.Point(910, 48);
+            this.txtVorteil1Bonus.Name = "txtVorteil1Bonus";
+            this.txtVorteil1Bonus.Size = new System.Drawing.Size(37, 21);
+            this.txtVorteil1Bonus.TabIndex = 274;
+            this.txtVorteil1Bonus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil1Bonus.TextChanged += new System.EventHandler(this.txtVorteil1_ValueChanged);
+            // 
+            // txtVorteil1Beschreibung
+            // 
+            this.txtVorteil1Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil1Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil1Beschreibung.Location = new System.Drawing.Point(504, 48);
+            this.txtVorteil1Beschreibung.Name = "txtVorteil1Beschreibung";
+            this.txtVorteil1Beschreibung.Size = new System.Drawing.Size(400, 21);
+            this.txtVorteil1Beschreibung.TabIndex = 273;
+            this.txtVorteil1Beschreibung.TextChanged += new System.EventHandler(this.txtVorteil1_ValueChanged);
+            // 
+            // txtVorteil1GP
+            // 
+            this.txtVorteil1GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil1GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil1GP.Location = new System.Drawing.Point(458, 48);
+            this.txtVorteil1GP.Name = "txtVorteil1GP";
+            this.txtVorteil1GP.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil1GP.TabIndex = 272;
+            this.txtVorteil1GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil1GP.TextChanged += new System.EventHandler(this.txtVorteil1_ValueChanged);
+            // 
+            // txtVorteil1Wert
+            // 
+            this.txtVorteil1Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil1Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil1Wert.Location = new System.Drawing.Point(412, 48);
+            this.txtVorteil1Wert.Name = "txtVorteil1Wert";
+            this.txtVorteil1Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil1Wert.TabIndex = 271;
+            this.txtVorteil1Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil1Wert.TextChanged += new System.EventHandler(this.txtVorteil1_ValueChanged);
+            // 
+            // txtVorteil1Name
+            // 
+            this.txtVorteil1Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil1Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil1Name.Location = new System.Drawing.Point(6, 48);
+            this.txtVorteil1Name.Name = "txtVorteil1Name";
+            this.txtVorteil1Name.Size = new System.Drawing.Size(400, 21);
+            this.txtVorteil1Name.TabIndex = 266;
+            this.txtVorteil1Name.TextChanged += new System.EventHandler(this.txtVorteil1_ValueChanged);
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label61.Location = new System.Drawing.Point(907, 32);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(42, 13);
+            this.label61.TabIndex = 270;
+            this.label61.Text = "Bonus";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label60.Location = new System.Drawing.Point(669, 32);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(84, 13);
+            this.label60.TabIndex = 269;
+            this.label60.Text = "Beschreibung";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label59.Location = new System.Drawing.Point(466, 32);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(24, 13);
+            this.label59.TabIndex = 268;
+            this.label59.Text = "GP";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label58.Location = new System.Drawing.Point(414, 32);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(34, 13);
+            this.label58.TabIndex = 267;
+            this.label58.Text = "Wert";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label57.Location = new System.Drawing.Point(175, 32);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(43, 13);
+            this.label57.TabIndex = 266;
+            this.label57.Text = "Vorteil";
+            // 
+            // txtStufe
+            // 
+            this.txtStufe.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtStufe.Location = new System.Drawing.Point(900, 173);
+            this.txtStufe.Name = "txtStufe";
+            this.txtStufe.Size = new System.Drawing.Size(29, 20);
+            this.txtStufe.TabIndex = 264;
+            this.txtStufe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtStufe.TextChanged += new System.EventHandler(this.txtStufe_TextChanged);
+            // 
+            // txtAbenteuerpunkte
+            // 
+            this.txtAbenteuerpunkte.BackColor = System.Drawing.SystemColors.Window;
+            this.txtAbenteuerpunkte.Location = new System.Drawing.Point(881, 199);
+            this.txtAbenteuerpunkte.Name = "txtAbenteuerpunkte";
+            this.txtAbenteuerpunkte.Size = new System.Drawing.Size(77, 20);
+            this.txtAbenteuerpunkte.TabIndex = 263;
+            this.txtAbenteuerpunkte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAbenteuerpunkte.TextChanged += new System.EventHandler(this.txtAbenteuerpunkte_TextChanged);
+            // 
+            // txtAbenteuerpunkteInvestiert
+            // 
+            this.txtAbenteuerpunkteInvestiert.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAbenteuerpunkteInvestiert.Location = new System.Drawing.Point(881, 225);
+            this.txtAbenteuerpunkteInvestiert.Name = "txtAbenteuerpunkteInvestiert";
+            this.txtAbenteuerpunkteInvestiert.Size = new System.Drawing.Size(77, 20);
+            this.txtAbenteuerpunkteInvestiert.TabIndex = 262;
+            this.txtAbenteuerpunkteInvestiert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAbenteuerpunkteInvestiert.TextChanged += new System.EventHandler(this.txtAbenteuerpunkteInvestiert_TextChanged);
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(736, 254);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(139, 13);
+            this.label56.TabIndex = 261;
+            this.label56.Text = "Abenteuerpunkte-Guthaben";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(736, 228);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(135, 13);
+            this.label55.TabIndex = 260;
+            this.label55.Text = "Abenteuerpunkte-Investiert";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(736, 202);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(89, 13);
+            this.label54.TabIndex = 259;
+            this.label54.Text = "Abenteuerpunkte";
+            // 
+            // txtAbenteuerpunkteGuthaben
+            // 
+            this.txtAbenteuerpunkteGuthaben.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAbenteuerpunkteGuthaben.Location = new System.Drawing.Point(881, 251);
+            this.txtAbenteuerpunkteGuthaben.Name = "txtAbenteuerpunkteGuthaben";
+            this.txtAbenteuerpunkteGuthaben.Size = new System.Drawing.Size(77, 20);
+            this.txtAbenteuerpunkteGuthaben.TabIndex = 258;
+            this.txtAbenteuerpunkteGuthaben.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAbenteuerpunkteGuthaben.TextChanged += new System.EventHandler(this.txtAbenteuerpunkteGuthaben_TextChanged);
+            // 
+            // Stufe
+            // 
+            this.Stufe.AutoSize = true;
+            this.Stufe.Location = new System.Drawing.Point(736, 176);
+            this.Stufe.Name = "Stufe";
+            this.Stufe.Size = new System.Drawing.Size(32, 13);
+            this.Stufe.TabIndex = 257;
+            this.Stufe.Text = "Stufe";
+            // 
+            // txtGeldK
+            // 
+            this.txtGeldK.BackColor = System.Drawing.SystemColors.Window;
+            this.txtGeldK.Location = new System.Drawing.Point(671, 329);
+            this.txtGeldK.Name = "txtGeldK";
+            this.txtGeldK.Size = new System.Drawing.Size(34, 20);
+            this.txtGeldK.TabIndex = 256;
+            this.txtGeldK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGeldK.TextChanged += new System.EventHandler(this.txtGeldK_TextChanged);
+            // 
+            // txtGeldH
+            // 
+            this.txtGeldH.BackColor = System.Drawing.SystemColors.Window;
+            this.txtGeldH.Location = new System.Drawing.Point(633, 329);
+            this.txtGeldH.Name = "txtGeldH";
+            this.txtGeldH.Size = new System.Drawing.Size(34, 20);
+            this.txtGeldH.TabIndex = 255;
+            this.txtGeldH.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGeldH.TextChanged += new System.EventHandler(this.txtGeldH_TextChanged);
+            // 
+            // txtGeldS
+            // 
+            this.txtGeldS.BackColor = System.Drawing.SystemColors.Window;
+            this.txtGeldS.Location = new System.Drawing.Point(593, 329);
+            this.txtGeldS.Name = "txtGeldS";
+            this.txtGeldS.Size = new System.Drawing.Size(34, 20);
+            this.txtGeldS.TabIndex = 254;
+            this.txtGeldS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGeldS.TextChanged += new System.EventHandler(this.txtGeldS_TextChanged);
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(457, 358);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(32, 13);
+            this.label53.TabIndex = 253;
+            this.label53.Text = "Bank";
+            // 
+            // txtBank
+            // 
+            this.txtBank.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBank.Location = new System.Drawing.Point(553, 355);
+            this.txtBank.Name = "txtBank";
+            this.txtBank.Size = new System.Drawing.Size(53, 20);
+            this.txtBank.TabIndex = 251;
+            this.txtBank.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBank.TextChanged += new System.EventHandler(this.txtBank_TextChanged);
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(457, 332);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(29, 13);
+            this.label52.TabIndex = 247;
+            this.label52.Text = "Geld";
+            // 
+            // txtGeldD
+            // 
+            this.txtGeldD.BackColor = System.Drawing.SystemColors.Window;
+            this.txtGeldD.Location = new System.Drawing.Point(553, 329);
+            this.txtGeldD.Name = "txtGeldD";
+            this.txtGeldD.Size = new System.Drawing.Size(34, 20);
+            this.txtGeldD.TabIndex = 245;
+            this.txtGeldD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtGeldD.TextChanged += new System.EventHandler(this.txtGeldD_TextChanged);
             // 
             // txtMagieresistenzERG
             // 
@@ -1886,7 +2212,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1168, 590);
+            this.tabPage2.Size = new System.Drawing.Size(1168, 696);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1903,6 +2229,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2068,6 +2396,33 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.TextBox txtLebensenergieMALI;
         private System.Windows.Forms.TextBox txtLebensenergieMOD;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.TextBox txtBank;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.TextBox txtGeldD;
+        private System.Windows.Forms.TextBox txtGeldK;
+        private System.Windows.Forms.TextBox txtGeldH;
+        private System.Windows.Forms.TextBox txtGeldS;
+        private System.Windows.Forms.TextBox txtStufe;
+        private System.Windows.Forms.TextBox txtAbenteuerpunkte;
+        private System.Windows.Forms.TextBox txtAbenteuerpunkteInvestiert;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.TextBox txtAbenteuerpunkteGuthaben;
+        private System.Windows.Forms.Label Stufe;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtVorteil1Name;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.TextBox txtVorteil1Wert;
+        private System.Windows.Forms.TextBox txtVorteil1Bonus;
+        private System.Windows.Forms.TextBox txtVorteil1Beschreibung;
+        private System.Windows.Forms.TextBox txtVorteil1GP;
+        private System.Windows.Forms.ComboBox drpVorteile1Type;
     }
 }
 

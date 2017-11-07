@@ -29,7 +29,9 @@ namespace DSA_Project
             txtBoxListModifikatoren.Add(txtModifikation1);
             txtBoxListModifikatoren.Add(txtModifikation2);
             txtBoxListModifikatoren.Add(txtModifikation3);
-            
+
+            drpVorteile1Type.DataSource = controll.getBonusList();
+
             load();
             refresh();
         }
@@ -132,6 +134,12 @@ namespace DSA_Project
             txtAstralenergieERG.Text    = controll.EnergieMAX(DSA_ENERGIEN.ASTRALENERGIE).ToString();
             txtKarmaenergieERG.Text     = controll.EnergieMAX(DSA_ENERGIEN.KARMAENERGIE).ToString();
             txtMagieresistenzERG.Text   = controll.EnergieMAX(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+
+            txtGeldD.Text = controll.Money(DSA_MONEY.D).ToString();
+            txtGeldH.Text = controll.Money(DSA_MONEY.H).ToString();
+            txtGeldS.Text = controll.Money(DSA_MONEY.S).ToString();
+            txtGeldK.Text = controll.Money(DSA_MONEY.K).ToString();
+            txtBank.Text = controll.Money(DSA_MONEY.BANK).ToString();
         }
         /// <summary> 
         /// Ist bei einer Werteänderung eine Neuberechnung nötig muss dies Ausgelöst werden
@@ -618,5 +626,68 @@ namespace DSA_Project
         {
             txtMagieresistenzERG.Text = controll.EnergieMAX(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
         }
+
+       
+        private void txtGeldD_TextChanged(object sender, EventArgs e)
+        {  
+            txtGeldD.Text = controll.Money(DSA_MONEY.D, txtGeldD.Text.TrimEnd('D')).ToString() + "D";
+        }
+        private void txtGeldS_TextChanged(object sender, EventArgs e)
+        {
+            txtGeldS.Text = controll.Money(DSA_MONEY.S, txtGeldS.Text.TrimEnd('S')).ToString() + "S";
+        }
+        private void txtGeldH_TextChanged(object sender, EventArgs e)
+        {
+            txtGeldH.Text = controll.Money(DSA_MONEY.H, txtGeldH.Text.TrimEnd('H')).ToString() + "H";
+        }
+        private void txtGeldK_TextChanged(object sender, EventArgs e)
+        {
+            txtGeldK.Text = controll.Money(DSA_MONEY.K, txtGeldK.Text.TrimEnd('K')).ToString() + "K";
+        }
+        private void txtBank_TextChanged(object sender, EventArgs e)
+        {
+            txtBank.Text = controll.Money(DSA_MONEY.BANK, txtBank.Text.TrimEnd('D')).ToString() + "D";
+        }
+
+
+        private void txtStufe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void txtAbenteuerpunkte_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void txtAbenteuerpunkteInvestiert_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void txtAbenteuerpunkteGuthaben_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
+        private void txtVorteil1_ValueChanged(object sender, EventArgs e)
+        {
+            String Name             = txtVorteil1Name.Text;
+            String Wert             = txtVorteil1Wert.Text;
+            String GP               = txtVorteil1GP.Text;
+            String Description      = txtVorteil1Beschreibung.Text;
+            String Bonus            = txtVorteil1Bonus.Text;
+            String type             = drpVorteile1Type.Text;
+
+            
+            Feature feature = controll.Feature(DSA_FEATURES.VORTEIL, type, 1, Name, Wert, GP, Description, Bonus);
+           
+            txtVorteil1Name.Text            = feature.getName();
+            txtVorteil1Wert.Text            = feature.getValue();
+            txtVorteil1GP.Text              = feature.getGP();
+            txtVorteil1Beschreibung.Text    = feature.getDescription();
+            txtVorteil1Bonus.Text           = feature.getBonus().ToString();
+
+        }
+
+        
     }
 }
