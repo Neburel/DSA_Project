@@ -61,18 +61,6 @@ namespace DSA_Project
                     case "Resse-en":            charakter.setBasicValues(DSA_BASICVALUES.RASSE, node.InnerText);            break;
                     case "Kultur-en":           charakter.setBasicValues(DSA_BASICVALUES.KULTUR, node.InnerText);           break;
                     case "Profession-en":       charakter.setBasicValues(DSA_BASICVALUES.PROFESSION, node.InnerText);       break;
-                    case "Modifikatoren":
-                                                foreach(XmlNode Modifikatoren_node in node)
-                                                {
-                                                    charakter.setBasicValues(DSA_BASICVALUES.MODIFIKATOREN, Modifikatoren_node.InnerText);
-                                                }
-                                                                                                                        break;
-                    case "Göttergeschenke":
-                                                foreach (XmlNode Göttergeschenke_node in node)
-                                                {
-                                                    charakter.setBasicValues(DSA_BASICVALUES.GÖTTERGESCHENKE, Göttergeschenke_node.InnerText);
-                                                }
-                                                                                                                        break;
                 }
             }
 

@@ -6,99 +6,136 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    class Feature
+    public class Feature
     {
-        private DSA_FEATUREBONUS type   = DSA_FEATUREBONUS.NONE;
-        private String Name             = "";
-        private String Description      = "";
-        private String Value            = "";
-        private String GP               = "";
-        private int Bonus               = 0;
+        String Name;
+        String Description;
+        String Value;
+        String GP;
+        
+        Dictionary<DSA_ATTRIBUTE, int> attributeBonus;
+        Dictionary<DSA_ENERGIEN, int> energieBonus;
 
-        public Feature(DSA_FEATUREBONUS type, String Name, String Description, String Value, String GP, int Bonus)
+        public Feature(String Name, String Description, String Value, String GP)
         {
-            this.type = type;
-            this.Name = Name;
-            this.Description = Description;
-            setBonus(Bonus);
+            attributeBonus = new Dictionary<DSA_ATTRIBUTE, int>();
+            energieBonus = new Dictionary<DSA_ENERGIEN, int>();
+
+            setName(Name);
+            setDescription(Description);
             setValue(Value);
             setGP(GP);
-
         }
-        public String getName()
+
+        public void setName(String Name)
         {
+            this.Name = Name;
+        }
+        public void setDescription(String Description)
+        {
+            this.Description = Description;
+        }
+        public void setValue(String Value)
+        {
+            int x = 0;
+            if (Value.ToUpper().CompareTo("X") == 0)
+            {
+                this.Value = "X"; 
+            } else  
+            {
+                if(Int32.TryParse(Value, out x))
+                {
+                    this.Value = x.ToString();
+                } else
+                {
+                    this.Value = "";
+                }
+            }
+        }
+        public void setGP(String GP)
+        {
+            var isNumeric = int.TryParse(GP, out var wert_int);
+            if (isNumeric == true)
+            {
+                this.GP = wert_int.ToString();
+            } else
+            {
+                this.GP = "";
+            }
+        }
+        public void setAttributeBonus(DSA_ATTRIBUTE attribute, int value)
+        {
+            attributeBonus.Remove(attribute);
+            attributeBonus.Add(attribute, value);
+        }
+        public void setEnergieBonus(DSA_ENERGIEN energie, int value)
+        {
+            energieBonus.Remove(energie);
+            energieBonus.Add(energie, value);
+        }
+
+        public String getName(){
             return Name;
         }
         public String getDescription()
         {
-            return Description;
+            String totalDescription = String.Copy(this.Description);
+            totalDescription = totalDescription + getAttributeString() + getEnergieString();
+            
+            return totalDescription;
+        }
+        public String getSimpleDescription()
+        {
+            return this.Description;
         }
         public String getValue()
         {
-            return this.Value;
+            return Value;
         }
         public String getGP()
         {
             return GP;
         }
-        public int getBonus()
+        public int getAttributeBonus(DSA_ATTRIBUTE attribute)
         {
-            return this.Bonus;
+            int x;
+            attributeBonus.TryGetValue(attribute, out x);
+            return x;
+        }
+        public int getEnergieBonus(DSA_ENERGIEN energie)
+        {
+            int x;
+            energieBonus.TryGetValue(energie, out x);
+            return x;
         }
 
-        public void setName(String name)
+        private String getAttributeString()
         {
-            this.Name = name;
-        }
-        public void setDescription(String description)
-        {
-            this.Description = description;
-        }
-
-        public void setGP(String GP)
-        {
-            var isNumeric = int.TryParse(Value, out var GP_int);
-            if (isNumeric != true)
+            String ret = "";
+            int x = 0;
+            for (int i = 0; i < Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length; i++)
             {
-               this.GP = "";
-            }
-            else
-            {
-                this.GP = GP_int.ToString();
-            }
-        }
-        
-        public void setValue(String Value)
-        {
-            if (!Value.Equals("X"))
-            {
-                var isNumeric = int.TryParse(Value, out var Wert_int);
-                if (isNumeric != true)
+                attributeBonus.TryGetValue((DSA_ATTRIBUTE)i, out x);
+                if (x != 0)
                 {
-                    this.Value = "";
+                    ret = ret + " " + x + ControllAttribute.getAcronym((DSA_ATTRIBUTE)i);
                 }
-                else
-                {
-                    this.Value = Wert_int.ToString();
-                }
-            } else
-            {
-                this.Value = Value;
             }
+            return ret;
         }
-        public void setBonus(int Bonus)
+        private String getEnergieString()
         {
-            this.Bonus = Bonus;
-        }
-
-        public DSA_FEATUREBONUS getType()
-        {
-            Console.WriteLine("Type: " + type);
-            return type;
-        }
-        public void setBonusType(DSA_FEATUREBONUS BType)
-        {
-            this.type = BType;
+            String ret = "";
+            int x = 0;
+            for (int i = 0; i < Enum.GetNames(typeof(DSA_ENERGIEN)).Length; i++)
+            {
+                energieBonus.TryGetValue((DSA_ENERGIEN)i, out x);
+                if (x != 0)
+                {
+                    ret = ret + " " + x + ControllEnergien.getAcronym((DSA_ENERGIEN)i);
+                }
+            }
+            return ret;
         }
     }
 }

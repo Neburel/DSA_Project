@@ -8,10 +8,8 @@ using System.Windows.Forms;
 
 namespace DSA_Project
 {
-    enum DSA_BASICVALUES { NAME, ALTER, GESCHLECHT, GRÖSE, GEWICHT, AUGENFARBE, HAUTFARBE, HAARFARBE, FAMILIENSTAND, ANREDE, GOTTHEIT, GÖTTERGESCHENKE, RASSE, KULTUR, PROFESSION, MODIFIKATOREN }
-    enum DSA_ATTRIBUTE { MUT, KLUGHEIT, INTUITION, CHARISMA, FINGERFERTIGKEIT, GEWANDHEIT, KONSTITUTION, KÖRPERKRAFT, SOZAILSTATUS, SUMME }
+    enum DSA_BASICVALUES { NAME, ALTER, GESCHLECHT, GRÖSE, GEWICHT, AUGENFARBE, HAUTFARBE, HAARFARBE, FAMILIENSTAND, ANREDE, GOTTHEIT, RASSE, KULTUR, PROFESSION }    
     enum DSA_ADVANCEDVALUES { ATTACKE_BASIS, PARADE_BASIS, FERNKAMPF_BASIS, INITATIVE_BASIS, BEHERSCHUNGSWERT, ARTEFAKTKONTROLLE, WUNDSCHWELLE, ENTRÜCKUNG, GESCHWINDIGKEIT }
-    enum DSA_ENERGIEN { LEBENSENERGIE, AUSDAUER, ASTRALENERGIE, KARMAENERGIE, MAGIERESISTENZ }
     enum DSA_MONEY { D, S, H, K, BANK}
     enum DSA_FEATURES { VORTEIL, NACHTEIL }
     enum DSA_FEATUREBONUS { NONE,  MUT, KLUGHEIT, INTUITION, CHARISMA, FINGERFERTIGKEIT, GEWANDHEIT, KONSTITUTION, KÖRPERKRAFT, SOZAILSTATUS, LEBENSENERGIE, AUSDAUER, ASTRALENERGIE, KARMAENERGIE, MAGIERESISTENZ }
@@ -29,9 +27,10 @@ namespace DSA_Project
     {
         Form1 form;
         String[] MapFeatureBonus;
-        Charakter charakter = new Charakter();
+        Charakter charakter                 = new Charakter();
+        Dictionary<int, Feature> Advantages = new Dictionary<int, Feature>();
 
-        
+
         public ControllClass(Form1 form)
         {
             this.form = form;
@@ -119,11 +118,11 @@ namespace DSA_Project
         /// mit Ausnahme von Modifikatoren und Göttergeschenke ist dieser Wert stets im 0 vorhanden
         /// Bessere Lösung Möglich?
         /// </summary>
-        public String[] BasicValue(DSA_BASICVALUES value)
+        public String BasicValue(DSA_BASICVALUES value)
         {
             return charakter.getBasicValue(value);
         }
-        public String[] BasicValue(DSA_BASICVALUES value, String wert)
+        public String BasicValue(DSA_BASICVALUES value, String wert)
         {
             charakter.setBasicValues(value, wert);
             return BasicValue(value);
@@ -191,8 +190,15 @@ namespace DSA_Project
             /*Dieser Wert soll nicht verändert werden*/           
             return AttributeMAX(attribute);
         }
-                
-
+        public int getAttributeAKTSumme()
+        {
+            return charakter.getSummeAttributeAKT();
+        }
+        public int getAttributeMAXSumme()
+        {
+            return charakter.getSummeAttributeMAX();
+        }
+        
         public int AdvancedValueAKT(DSA_ADVANCEDVALUES advancedValue)
         {
             /*Besseres Verhalten implementieren*/
@@ -207,7 +213,7 @@ namespace DSA_Project
             return charakter.getAdvancedValueMAX(advancedValue);
         }
 
-
+        
         public int EnergieVOR(DSA_ENERGIEN energie)
         {
             return charakter.getEnergieVOR(energie);
@@ -245,38 +251,29 @@ namespace DSA_Project
         }
 
 
-        public Feature Feature(DSA_FEATURES FeatureType, String type, int number, String Name, String Value, String GP, String Description, String Bonus)
+        public Feature Feature(int number, DSA_FEATURES type)
         {
-            Feature feature = null;
-            DSA_FEATUREBONUS ftype = (DSA_FEATUREBONUS)getBonusID(type);
-            int Bonus_int = 0;
+            CreateFeature createFeature;
+            Feature feature                 = charakter.getFeature(type,number);
 
-            switch (FeatureType)
-            {
-                case DSA_FEATURES.VORTEIL: feature = charakter.getVorteil(number); break;
-                case DSA_FEATURES.NACHTEIL: feature = charakter.getNachteil(number); break;
-            }
-
-            var isNumeric = int.TryParse(Bonus, out var wert_int);
-            if (isNumeric == true)
-            {
-                Bonus_int = wert_int;
-            }
             if (feature == null)
             {
-                feature = new Feature(ftype, Name, Description, Value, GP, Bonus_int);
-                charakter.addFeature(FeatureType, number, feature);
+                createFeature = new CreateFeature();
             }
             else
             {
-                feature.setName(Name);
-                feature.setDescription(Description);
-                feature.setValue(Value);
-                feature.setGP(GP);
-                feature.setBonus(Bonus_int);
-                feature.setBonusType(ftype);
+                createFeature = new CreateFeature(feature);
             }
+            createFeature.ShowDialog();
+            feature = createFeature.feature();
+
+            charakter.addFeature(type, number, feature);
+            
+            Advantages.Remove(number);
+            Advantages.Add(number, feature);
+
             form.refresh();
+
             return feature;
         }
     }

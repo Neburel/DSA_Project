@@ -14,67 +14,33 @@ namespace DSA_Project
     public partial class Form1 : Form
     {
         ControllClass controll;                  
-
-        List<TextBox> txtBoxListGöttergeschenke = new List<TextBox>();
-        List<TextBox> txtBoxListModifikatoren   = new List<TextBox>();
+                
         public Form1()
         {
             controll = new ControllClass(this);
             InitializeComponent();
-            /*Nötige Listen Erstellen*/
-            txtBoxListGöttergeschenke.Add(txtGöttergeschenke1);
-            txtBoxListGöttergeschenke.Add(txtGöttergeschenke2);
-            txtBoxListGöttergeschenke.Add(txtGöttergeschenke3);
-
-            txtBoxListModifikatoren.Add(txtModifikation1);
-            txtBoxListModifikatoren.Add(txtModifikation2);
-            txtBoxListModifikatoren.Add(txtModifikation3);
-
-            drpVorteile1Type.DataSource = controll.getBonusList();
-
+            
             load();
             refresh();
         }
 
         public void load()
         {
-            txtName.Text                = (controll.BasicValue(DSA_BASICVALUES.NAME))[0];
-            txtAlter.Text               = (controll.BasicValue(DSA_BASICVALUES.ALTER))[0];
-            txtGeschlecht.Text          = (controll.BasicValue(DSA_BASICVALUES.GESCHLECHT))[0];
-            txtGröße.Text               = (controll.BasicValue(DSA_BASICVALUES.GRÖSE))[0];
-            txtGewicht.Text             = (controll.BasicValue(DSA_BASICVALUES.GEWICHT))[0];
-            txtAugenfarbe.Text          = (controll.BasicValue(DSA_BASICVALUES.AUGENFARBE))[0];
-            txtHaarfarbe.Text           = (controll.BasicValue(DSA_BASICVALUES.HAARFARBE))[0];
-            txtHautfarbe.Text           = (controll.BasicValue(DSA_BASICVALUES.HAUTFARBE))[0];
-            txtFamulienstand.Text       = (controll.BasicValue(DSA_BASICVALUES.FAMILIENSTAND))[0];
-            txtAnrede.Text              = (controll.BasicValue(DSA_BASICVALUES.ANREDE))[0];
-            txtGottheit.Text            = (controll.BasicValue(DSA_BASICVALUES.GOTTHEIT))[0];
-            txtRasse.Text               = (controll.BasicValue(DSA_BASICVALUES.RASSE))[0];
-            txtKultur.Text              = (controll.BasicValue(DSA_BASICVALUES.KULTUR))[0];
-            txtProfession.Text          = (controll.BasicValue(DSA_BASICVALUES.PROFESSION))[0];
-
-            String[] Göttergeschenke    = controll.BasicValue(DSA_BASICVALUES.GÖTTERGESCHENKE);
-            String[] Modifikatoren      = controll.BasicValue(DSA_BASICVALUES.MODIFIKATOREN);
-
-            Console.WriteLine(Göttergeschenke.Length);
-            Console.WriteLine(txtBoxListGöttergeschenke.Count);
-
-            for (int i=0; i< Göttergeschenke.Length; i++)
-            {
-                if(i >= txtBoxListGöttergeschenke.Count){ break; }
-
-                TextBox Box = txtBoxListGöttergeschenke[i];
-                Box.Text = Göttergeschenke[i];
-            }
-
-            for (int i = 0; i < Modifikatoren.Length; i++)
-            {
-                if (i >= txtBoxListModifikatoren.Count) { break; }
-
-                TextBox Box = txtBoxListModifikatoren[i];
-                Box.Text = Modifikatoren[i];
-            }
-
+            txtName.Text                = (controll.BasicValue(DSA_BASICVALUES.NAME));
+            txtAlter.Text               = (controll.BasicValue(DSA_BASICVALUES.ALTER));
+            txtGeschlecht.Text          = (controll.BasicValue(DSA_BASICVALUES.GESCHLECHT));
+            txtGröße.Text               = (controll.BasicValue(DSA_BASICVALUES.GRÖSE));
+            txtGewicht.Text             = (controll.BasicValue(DSA_BASICVALUES.GEWICHT));
+            txtAugenfarbe.Text          = (controll.BasicValue(DSA_BASICVALUES.AUGENFARBE));
+            txtHaarfarbe.Text           = (controll.BasicValue(DSA_BASICVALUES.HAARFARBE));
+            txtHautfarbe.Text           = (controll.BasicValue(DSA_BASICVALUES.HAUTFARBE));
+            txtFamulienstand.Text       = (controll.BasicValue(DSA_BASICVALUES.FAMILIENSTAND));
+            txtAnrede.Text              = (controll.BasicValue(DSA_BASICVALUES.ANREDE));
+            txtGottheit.Text            = (controll.BasicValue(DSA_BASICVALUES.GOTTHEIT));
+            txtRasse.Text               = (controll.BasicValue(DSA_BASICVALUES.RASSE));
+            txtKultur.Text              = (controll.BasicValue(DSA_BASICVALUES.KULTUR));
+            txtProfession.Text          = (controll.BasicValue(DSA_BASICVALUES.PROFESSION));
+                        
             txtMutAKT.Text              = controll.AttributeAKT(DSA_ATTRIBUTE.MUT, "notNumeric").ToString();
             txtKlugheitAKT.Text         = controll.AttributeAKT(DSA_ATTRIBUTE.KLUGHEIT, "notNumeric").ToString();
             txtIntuitionAKT.Text        = controll.AttributeAKT(DSA_ATTRIBUTE.INTUITION, "notNumeric").ToString();
@@ -104,37 +70,7 @@ namespace DSA_Project
             txtWundschwelleMOD.Text     = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
             txtEntrückungMOD.Text       = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
             txtGeschwindigkeitMOD.Text  = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
-
-            txtLebensenergieVOR.Text    = controll.EnergieVOR(DSA_ENERGIEN.LEBENSENERGIE).ToString();
-            txtAusdauerVOR.Text         = controll.EnergieVOR(DSA_ENERGIEN.AUSDAUER).ToString();
-            txtKarmaenergieVOR.Text     = controll.EnergieVOR(DSA_ENERGIEN.KARMAENERGIE).ToString();
-            txtAstralenergieVOR.Text    = controll.EnergieVOR(DSA_ENERGIEN.ASTRALENERGIE).ToString();
-            txtMagieresistenzVOR.Text   = controll.EnergieVOR(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
-
-            txtLebensenergiePERM.Text   = controll.EnergiePERM(DSA_ENERGIEN.LEBENSENERGIE).ToString();
-            txtAusdauerPERM.Text        = controll.EnergiePERM(DSA_ENERGIEN.AUSDAUER).ToString();
-            txtAstralenergiePERM.Text   = controll.EnergiePERM(DSA_ENERGIEN.ASTRALENERGIE).ToString();
-            txtKarmaenergiePERM.Text    = controll.EnergiePERM(DSA_ENERGIEN.KARMAENERGIE).ToString();
-            txtMagieresistenzPERM.Text  = controll.EnergiePERM(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
-
-            txtLebensenergieMOD.Text    = controll.EnergieMOD(DSA_ENERGIEN.LEBENSENERGIE).ToString();
-            txtAusdauerMOD.Text         = controll.EnergieMOD(DSA_ENERGIEN.AUSDAUER).ToString();
-            txtKarmaenergieMOD.Text     = controll.EnergieMOD(DSA_ENERGIEN.KARMAENERGIE).ToString();
-            txtAstralenergieMOD.Text    = controll.EnergieMOD(DSA_ENERGIEN.ASTRALENERGIE).ToString();
-            txtMagieresistenzMOD.Text   = controll.EnergieMOD(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
-
-            txtLebensenergieMALI.Text   = controll.EnergieMALI(DSA_ENERGIEN.LEBENSENERGIE).ToString();
-            txtAusdauerMALI.Text        = controll.EnergieMALI(DSA_ENERGIEN.AUSDAUER).ToString();
-            txtAstralenergieMALI.Text   = controll.EnergieMALI(DSA_ENERGIEN.ASTRALENERGIE).ToString();
-            txtKarmaenergieMALI.Text    = controll.EnergieMALI(DSA_ENERGIEN.KARMAENERGIE).ToString();
-            txtMagieresistenzMALI.Text  = controll.EnergieMALI(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
-
-            txtLebensenergieERG.Text    = controll.EnergieMAX(DSA_ENERGIEN.LEBENSENERGIE).ToString();
-            txtAusdauerERG.Text         = controll.EnergieMAX(DSA_ENERGIEN.AUSDAUER).ToString();
-            txtAstralenergieERG.Text    = controll.EnergieMAX(DSA_ENERGIEN.ASTRALENERGIE).ToString();
-            txtKarmaenergieERG.Text     = controll.EnergieMAX(DSA_ENERGIEN.KARMAENERGIE).ToString();
-            txtMagieresistenzERG.Text   = controll.EnergieMAX(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
-
+            
             txtGeldD.Text = controll.Money(DSA_MONEY.D).ToString();
             txtGeldH.Text = controll.Money(DSA_MONEY.H).ToString();
             txtGeldS.Text = controll.Money(DSA_MONEY.S).ToString();
@@ -176,8 +112,38 @@ namespace DSA_Project
             txtEntrückungMAX.Text       = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
             txtGeschwindigkeitMAX.Text  = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
 
-            txtGesamtAKT.Text           = controll.AttributeAKT(DSA_ATTRIBUTE.SUMME).ToString();
-            txtGesamtMAX.Text           = controll.AttributeMAX(DSA_ATTRIBUTE.SUMME).ToString();
+            txtGesamtAKT.Text           = controll.getAttributeAKTSumme().ToString();
+            txtGesamtMAX.Text           = controll.getAttributeMAXSumme().ToString();
+
+            txtLebensenergieVOR.Text    = controll.EnergieVOR(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+            txtAusdauerVOR.Text         = controll.EnergieVOR(DSA_ENERGIEN.AUSDAUER).ToString();
+            txtKarmaenergieVOR.Text     = controll.EnergieVOR(DSA_ENERGIEN.KARMAENERGIE).ToString();
+            txtAstralenergieVOR.Text    = controll.EnergieVOR(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+            txtMagieresistenzVOR.Text   = controll.EnergieVOR(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+
+            txtLebensenergiePERM.Text   = controll.EnergiePERM(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+            txtAusdauerPERM.Text        = controll.EnergiePERM(DSA_ENERGIEN.AUSDAUER).ToString();
+            txtAstralenergiePERM.Text   = controll.EnergiePERM(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+            txtKarmaenergiePERM.Text    = controll.EnergiePERM(DSA_ENERGIEN.KARMAENERGIE).ToString();
+            txtMagieresistenzPERM.Text  = controll.EnergiePERM(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+
+            txtLebensenergieMOD.Text    = controll.EnergieMOD(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+            txtAusdauerMOD.Text         = controll.EnergieMOD(DSA_ENERGIEN.AUSDAUER).ToString();
+            txtKarmaenergieMOD.Text     = controll.EnergieMOD(DSA_ENERGIEN.KARMAENERGIE).ToString();
+            txtAstralenergieMOD.Text    = controll.EnergieMOD(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+            txtMagieresistenzMOD.Text   = controll.EnergieMOD(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+
+            txtLebensenergieMALI.Text   = controll.EnergieMALI(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+            txtAusdauerMALI.Text        = controll.EnergieMALI(DSA_ENERGIEN.AUSDAUER).ToString();
+            txtAstralenergieMALI.Text   = controll.EnergieMALI(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+            txtKarmaenergieMALI.Text    = controll.EnergieMALI(DSA_ENERGIEN.KARMAENERGIE).ToString();
+            txtMagieresistenzMALI.Text  = controll.EnergieMALI(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+
+            txtLebensenergieERG.Text    = controll.EnergieMAX(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+            txtAusdauerERG.Text         = controll.EnergieMAX(DSA_ENERGIEN.AUSDAUER).ToString();
+            txtAstralenergieERG.Text    = controll.EnergieMAX(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+            txtKarmaenergieERG.Text     = controll.EnergieMAX(DSA_ENERGIEN.KARMAENERGIE).ToString();
+            txtMagieresistenzERG.Text   = controll.EnergieMAX(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -358,87 +324,80 @@ namespace DSA_Project
         /*BasivValue Änderungen*/
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            txtName.Text = controll.BasicValue(DSA_BASICVALUES.NAME, txtName.Text)[0];
+            txtName.Text = controll.BasicValue(DSA_BASICVALUES.NAME, txtName.Text);
         }
         private void txtAugenfarbe_TextChanged(object sender, EventArgs e)
         {
-            txtAugenfarbe.Text = controll.BasicValue(DSA_BASICVALUES.AUGENFARBE, txtAugenfarbe.Text)[0];
+            txtAugenfarbe.Text = controll.BasicValue(DSA_BASICVALUES.AUGENFARBE, txtAugenfarbe.Text);
         }
         private void txtAnrede_TextChanged(object sender, EventArgs e)
         {
-            txtAnrede.Text = controll.BasicValue(DSA_BASICVALUES.ANREDE, txtAnrede.Text)[0];
+            txtAnrede.Text = controll.BasicValue(DSA_BASICVALUES.ANREDE, txtAnrede.Text);
         }
         private void txtRasse_TextChanged(object sender, EventArgs e)
         {
-            txtRasse.Text = controll.BasicValue(DSA_BASICVALUES.RASSE, txtRasse.Text)[0];
+            txtRasse.Text = controll.BasicValue(DSA_BASICVALUES.RASSE, txtRasse.Text);
         }
         private void txtKultur_TextChanged(object sender, EventArgs e)
         {
-            txtKultur.Text = controll.BasicValue(DSA_BASICVALUES.KULTUR, txtKultur.Text)[0];
+            txtKultur.Text = controll.BasicValue(DSA_BASICVALUES.KULTUR, txtKultur.Text);
         }
         private void txtProfession_TextChanged(object sender, EventArgs e)
         {
-            txtProfession.Name = controll.BasicValue(DSA_BASICVALUES.PROFESSION, txtProfession.Text)[0];
+            txtProfession.Name = controll.BasicValue(DSA_BASICVALUES.PROFESSION, txtProfession.Text);
         }
         private void txtAlter_TextChanged(object sender, EventArgs e)
         {
-            txtAlter.Text = controll.BasicValue(DSA_BASICVALUES.ALTER, txtAlter.Text)[0];
+            txtAlter.Text = controll.BasicValue(DSA_BASICVALUES.ALTER, txtAlter.Text);
         }
         private void txtHaarfarbe_TextChanged(object sender, EventArgs e)
         {
-            txtHaarfarbe.Text = controll.BasicValue(DSA_BASICVALUES.HAARFARBE, txtHaarfarbe.Text)[0];
+            txtHaarfarbe.Text = controll.BasicValue(DSA_BASICVALUES.HAARFARBE, txtHaarfarbe.Text);
         }
         private void txtGottheit_TextChanged(object sender, EventArgs e)
         {
-            txtGottheit.Text = controll.BasicValue(DSA_BASICVALUES.GOTTHEIT, txtGottheit.Text)[0];
+            txtGottheit.Text = controll.BasicValue(DSA_BASICVALUES.GOTTHEIT, txtGottheit.Text);
         }
         private void txtModifikation1_TextChanged(object sender, EventArgs e)
         {
-            txtModifikation1.Text = controll.BasicValue(DSA_BASICVALUES.MODIFIKATOREN, txtModifikation1.Text)[0];
         }
         private void txtModifikation2_TextChanged(object sender, EventArgs e)
         {
-            txtModifikation2.Text = controll.BasicValue(DSA_BASICVALUES.MODIFIKATOREN, txtModifikation2.Text)[1];
         }
         private void txtModifikation3_TextChanged(object sender, EventArgs e)
         {
-            txtModifikation3.Text = controll.BasicValue(DSA_BASICVALUES.MODIFIKATOREN, txtModifikation3.Text)[2];
         }
         private void txtGewicht_TextChanged(object sender, EventArgs e)
         {
-            txtGewicht.Text = controll.BasicValue(DSA_BASICVALUES.GEWICHT, txtGewicht.Text)[0];
+            txtGewicht.Text = controll.BasicValue(DSA_BASICVALUES.GEWICHT, txtGewicht.Text);
         }
         private void txtFamulienstand_TextChanged(object sender, EventArgs e)
         {
-            txtFamulienstand.Text = controll.BasicValue(DSA_BASICVALUES.FAMILIENSTAND, txtFamulienstand.Text)[0];
+            txtFamulienstand.Text = controll.BasicValue(DSA_BASICVALUES.FAMILIENSTAND, txtFamulienstand.Text);
         }
         private void txtGöttergeschenke1_TextChanged(object sender, EventArgs e)
         {
-            txtGöttergeschenke1.Text = controll.BasicValue(DSA_BASICVALUES.GÖTTERGESCHENKE, txtGöttergeschenke1.Text)[0];
         }
         private void txtGöttergeschenke2_TextChanged(object sender, EventArgs e)
         {
-            txtGöttergeschenke2.Text = controll.BasicValue(DSA_BASICVALUES.GÖTTERGESCHENKE, txtGöttergeschenke2.Text)[1];
         }
         private void txtGöttergeschenke3_TextChanged(object sender, EventArgs e)
         {
-            txtGöttergeschenke3.Text = controll.BasicValue(DSA_BASICVALUES.GÖTTERGESCHENKE, txtGöttergeschenke3.Text)[2];
         }
         private void txtGöttergeschenke4_TextChanged(object sender, EventArgs e)
         {
-            txtGöttergeschenke4.Text = controll.BasicValue(DSA_BASICVALUES.GÖTTERGESCHENKE, txtGöttergeschenke4.Text)[3];
         }
         private void txtGeschlecht_TextChanged(object sender, EventArgs e)
         {
-            txtGeschlecht.Text = controll.BasicValue(DSA_BASICVALUES.GESCHLECHT, txtGeschlecht.Text)[0];
+            txtGeschlecht.Text = controll.BasicValue(DSA_BASICVALUES.GESCHLECHT, txtGeschlecht.Text);
         }
         private void txtGröße_TextChanged(object sender, EventArgs e)
         {
-            txtGröße.Text = controll.BasicValue(DSA_BASICVALUES.GRÖSE, txtGröße.Text)[0];
+            txtGröße.Text = controll.BasicValue(DSA_BASICVALUES.GRÖSE, txtGröße.Text);
         }
         private void txtHautfarbe_TextChanged(object sender, EventArgs e)
         {
-            txtHautfarbe.Text = controll.BasicValue(DSA_BASICVALUES.HAUTFARBE, txtHautfarbe.Text)[0];
+            txtHautfarbe.Text = controll.BasicValue(DSA_BASICVALUES.HAUTFARBE, txtHautfarbe.Text);
         }
 
 
@@ -670,24 +629,311 @@ namespace DSA_Project
         
         private void txtVorteil1_ValueChanged(object sender, EventArgs e)
         {
-            String Name             = txtVorteil1Name.Text;
-            String Wert             = txtVorteil1Wert.Text;
-            String GP               = txtVorteil1GP.Text;
-            String Description      = txtVorteil1Beschreibung.Text;
-            String Bonus            = txtVorteil1Bonus.Text;
-            String type             = drpVorteile1Type.Text;
+            int number = 1;
+            Feature feature = controll.Feature(number, DSA_FEATURES.VORTEIL);
 
-            
-            Feature feature = controll.Feature(DSA_FEATURES.VORTEIL, type, 1, Name, Wert, GP, Description, Bonus);
-           
-            txtVorteil1Name.Text            = feature.getName();
-            txtVorteil1Wert.Text            = feature.getValue();
-            txtVorteil1GP.Text              = feature.getGP();
-            txtVorteil1Beschreibung.Text    = feature.getDescription();
-            txtVorteil1Bonus.Text           = feature.getBonus().ToString();
+            txtVorteil1Name.Text = feature.getName();
+            txtVorteil1Beschreibung.Text = feature.getDescription();
+            txtVorteil1GP.Text = feature.getGP();
+            txtVorteil1Wert.Text = feature.getValue();
+        }
+        private void txtVorteil2_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 2;
+            Feature feature = controll.Feature(number, DSA_FEATURES.VORTEIL);
 
+            txtVorteil2Name.Text = feature.getName();
+            txtVorteil2Beschreibung.Text = feature.getDescription();
+            txtVorteil2GP.Text = feature.getGP();
+            txtVorteil2Wert.Text = feature.getValue();
+        }
+        private void txtVorteil3_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 3;
+            Feature feature = controll.Feature(number, DSA_FEATURES.VORTEIL);
+
+            txtVorteil3Name.Text = feature.getName();
+            txtVorteil3Beschreibung.Text = feature.getDescription();
+            txtVorteil3GP.Text = feature.getGP();
+            txtVorteil3Wert.Text = feature.getValue();
+        }
+        private void txtVorteil4_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 4;
+            Feature feature = controll.Feature(number, DSA_FEATURES.VORTEIL);
+
+            txtVorteil4Name.Text = feature.getName();
+            txtVorteil4Beschreibung.Text = feature.getDescription();
+            txtVorteil4GP.Text = feature.getGP();
+            txtVorteil4Wert.Text = feature.getValue();
+        }
+        private void txtVorteil5_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 5;
+            Feature feature = controll.Feature(number, DSA_FEATURES.VORTEIL);
+
+            txtVorteil5Name.Text = feature.getName();
+            txtVorteil5Beschreibung.Text = feature.getDescription();
+            txtVorteil5GP.Text = feature.getGP();
+            txtVorteil5Wert.Text = feature.getValue();
+        }
+        private void txtVorteil6_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 6;
+            Feature feature = controll.Feature(number, DSA_FEATURES.VORTEIL);
+
+            txtVorteil6Name.Text = feature.getName();
+            txtVorteil6Beschreibung.Text = feature.getDescription();
+            txtVorteil6GP.Text = feature.getGP();
+            txtVorteil6Wert.Text = feature.getValue();
+        }
+        private void txtVorteil7_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 7;
+            Feature feature = controll.Feature(number, DSA_FEATURES.VORTEIL);
+
+            txtVorteil7Name.Text = feature.getName();
+            txtVorteil7Beschreibung.Text = feature.getDescription();
+            txtVorteil7GP.Text = feature.getGP();
+            txtVorteil7Wert.Text = feature.getValue();
+        }
+        private void txtVorteil8_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 8;
+            Feature feature = controll.Feature(number, DSA_FEATURES.VORTEIL);
+
+            txtVorteil8Name.Text = feature.getName();
+            txtVorteil8Beschreibung.Text = feature.getDescription();
+            txtVorteil8GP.Text = feature.getGP();
+            txtVorteil8Wert.Text = feature.getValue();
+        }
+        private void txtVorteil9_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 9;
+            Feature feature = controll.Feature(number, DSA_FEATURES.VORTEIL);
+
+            txtVorteil9Name.Text = feature.getName();
+            txtVorteil9Beschreibung.Text = feature.getDescription();
+            txtVorteil9GP.Text = feature.getGP();
+            txtVorteil9Wert.Text = feature.getValue();
+        }
+        private void txtVorteil10_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 10;
+            Feature feature = controll.Feature(number, DSA_FEATURES.VORTEIL);
+
+            txtVorteil10Name.Text = feature.getName();
+            txtVorteil10Beschreibung.Text = feature.getDescription();
+            txtVorteil10GP.Text = feature.getGP();
+            txtVorteil10Wert.Text = feature.getValue();
+        }
+        private void txtVorteil11_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 11;
+            Feature feature = controll.Feature(number, DSA_FEATURES.VORTEIL);
+
+            txtVorteil11Name.Text = feature.getName();
+            txtVorteil11Beschreibung.Text = feature.getDescription();
+            txtVorteil11GP.Text = feature.getGP();
+            txtVorteil11Wert.Text = feature.getValue();
+        }
+        private void txtVorteil12_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 12;
+            Feature feature = controll.Feature(number, DSA_FEATURES.VORTEIL);
+
+            txtVorteil12Name.Text = feature.getName();
+            txtVorteil12Beschreibung.Text = feature.getDescription();
+            txtVorteil12GP.Text = feature.getGP();
+            txtVorteil12Wert.Text = feature.getValue();
+        }
+        private void txtVorteil13_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 13;
+            Feature feature = controll.Feature(number, DSA_FEATURES.VORTEIL);
+
+            txtVorteil13Name.Text = feature.getName();
+            txtVorteil13Beschreibung.Text = feature.getDescription();
+            txtVorteil13GP.Text = feature.getGP();
+            txtVorteil13Wert.Text = feature.getValue();
+        }
+        private void txtVortei14_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 14;
+            Feature feature = controll.Feature(number, DSA_FEATURES.VORTEIL);
+
+            txtVorteil14Name.Text = feature.getName();
+            txtVorteil14Beschreibung.Text = feature.getDescription();
+            txtVorteil14GP.Text = feature.getGP();
+            txtVorteil14Wert.Text = feature.getValue();
+        }
+        private void txtVorteil15_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 15;
+            Feature feature = controll.Feature(number, DSA_FEATURES.VORTEIL);
+
+            txtVorteil15Name.Text = feature.getName();
+            txtVorteil15Beschreibung.Text = feature.getDescription();
+            txtVorteil15GP.Text = feature.getGP();
+            txtVorteil15Wert.Text = feature.getValue();
         }
 
-        
+
+        private void txtNachteil1_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 1;
+            Feature feature = controll.Feature(number, DSA_FEATURES.NACHTEIL);
+
+            txtNachteil1Name.Text = feature.getName();
+            txtNachteil1Beschreibung.Text = feature.getDescription();
+            txtNachteil1GP.Text = feature.getGP();
+            txtNachteil1Wert.Text = feature.getValue();
+        }
+        private void txtNachteil2_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 2;
+            Feature feature = controll.Feature(number, DSA_FEATURES.NACHTEIL);
+
+            txtNachteil2Name.Text = feature.getName();
+            txtNachteil2Beschreibung.Text = feature.getDescription();
+            txtNachteil2GP.Text = feature.getGP();
+            txtNachteil2Wert.Text = feature.getValue();
+        }
+        private void txtNachteil3_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 3;
+            Feature feature = controll.Feature(number, DSA_FEATURES.NACHTEIL);
+
+            txtNachteil3Name.Text = feature.getName();
+            txtNachteil3Beschreibung.Text = feature.getDescription();
+            txtNachteil3GP.Text = feature.getGP();
+            txtNachteil3Wert.Text = feature.getValue();
+        }
+        private void txtNachteil4_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 4;
+            Feature feature = controll.Feature(number, DSA_FEATURES.NACHTEIL);
+
+            txtNachteil4Name.Text = feature.getName();
+            txtNachteil4Beschreibung.Text = feature.getDescription();
+            txtNachteil4GP.Text = feature.getGP();
+            txtNachteil4Wert.Text = feature.getValue();
+        }
+        private void txtNachteil5_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 5;
+            Feature feature = controll.Feature(number, DSA_FEATURES.NACHTEIL);
+
+            txtNachteil5Name.Text = feature.getName();
+            txtNachteil5Beschreibung.Text = feature.getDescription();
+            txtNachteil5GP.Text = feature.getGP();
+            txtNachteil5Wert.Text = feature.getValue();
+        }
+        private void txtNachteil6_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 6;
+            Feature feature = controll.Feature(number, DSA_FEATURES.NACHTEIL);
+
+            txtNachteil6Name.Text = feature.getName();
+            txtNachteil6Beschreibung.Text = feature.getDescription();
+            txtNachteil6GP.Text = feature.getGP();
+            txtNachteil6Wert.Text = feature.getValue();
+        }
+        private void txtNachteil7_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 7;
+            Feature feature = controll.Feature(number, DSA_FEATURES.NACHTEIL);
+
+            txtNachteil7Name.Text = feature.getName();
+            txtNachteil7Beschreibung.Text = feature.getDescription();
+            txtNachteil7GP.Text = feature.getGP();
+            txtNachteil7Wert.Text = feature.getValue();
+        }
+        private void txtNachteil8_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 8;
+            Feature feature = controll.Feature(number, DSA_FEATURES.NACHTEIL);
+
+            txtNachteil8Name.Text = feature.getName();
+            txtNachteil8Beschreibung.Text = feature.getDescription();
+            txtNachteil8GP.Text = feature.getGP();
+            txtNachteil8Wert.Text = feature.getValue();
+        }
+        private void txtNachteil9_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 9;
+            Feature feature = controll.Feature(number, DSA_FEATURES.NACHTEIL);
+
+            txtNachteil9Name.Text = feature.getName();
+            txtNachteil9Beschreibung.Text = feature.getDescription();
+            txtNachteil9GP.Text = feature.getGP();
+            txtNachteil9Wert.Text = feature.getValue();
+        }
+        private void txtNachteil10_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 10;
+            Feature feature = controll.Feature(number, DSA_FEATURES.NACHTEIL);
+
+            txtNachteil10Name.Text = feature.getName();
+            txtNachteil10Beschreibung.Text = feature.getDescription();
+            txtNachteil10GP.Text = feature.getGP();
+            txtNachteil10Wert.Text = feature.getValue();
+        }
+        private void txtNachteil11_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 11;
+            Feature feature = controll.Feature(number, DSA_FEATURES.NACHTEIL);
+
+            txtNachteil11Name.Text = feature.getName();
+            txtNachteil11Beschreibung.Text = feature.getDescription();
+            txtNachteil11GP.Text = feature.getGP();
+            txtNachteil11Wert.Text = feature.getValue();
+        }
+        private void txtNachteil12_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 12;
+            Feature feature = controll.Feature(number, DSA_FEATURES.NACHTEIL);
+
+            txtNachteil12Name.Text = feature.getName();
+            txtNachteil12Beschreibung.Text = feature.getDescription();
+            txtNachteil12GP.Text = feature.getGP();
+            txtNachteil12Wert.Text = feature.getValue();
+        }
+        private void txtNachteil13_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 13;
+            Feature feature = controll.Feature(number, DSA_FEATURES.NACHTEIL);
+
+            txtNachteil13Name.Text = feature.getName();
+            txtNachteil13Beschreibung.Text = feature.getDescription();
+            txtNachteil13GP.Text = feature.getGP();
+            txtNachteil13Wert.Text = feature.getValue();
+        }
+        private void txtNachteil14_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 14;
+            Feature feature = controll.Feature(number, DSA_FEATURES.NACHTEIL);
+
+            txtNachteil14Name.Text = feature.getName();
+            txtNachteil14Beschreibung.Text = feature.getDescription();
+            txtNachteil14GP.Text = feature.getGP();
+            txtNachteil14Wert.Text = feature.getValue();
+        }
+        private void txtNachteil15_ValueChanged(object sender, EventArgs e)
+        {
+            int number = 15;
+            Feature feature = controll.Feature(number, DSA_FEATURES.NACHTEIL);
+
+            txtNachteil15Name.Text = feature.getName();
+            txtNachteil15Beschreibung.Text = feature.getDescription();
+            txtNachteil15GP.Text = feature.getGP();
+            txtNachteil15Wert.Text = feature.getValue();
+        }
+
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,14 +30,132 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtNachteil15Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtNachteil15GP = new System.Windows.Forms.TextBox();
+            this.txtNachteil15Wert = new System.Windows.Forms.TextBox();
+            this.txtNachteil15Name = new System.Windows.Forms.TextBox();
+            this.txtNachteil14Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtNachteil14GP = new System.Windows.Forms.TextBox();
+            this.txtNachteil14Wert = new System.Windows.Forms.TextBox();
+            this.txtNachteil14Name = new System.Windows.Forms.TextBox();
+            this.txtNachteil13Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtNachteil13GP = new System.Windows.Forms.TextBox();
+            this.txtNachteil13Wert = new System.Windows.Forms.TextBox();
+            this.txtNachteil13Name = new System.Windows.Forms.TextBox();
+            this.txtNachteil12Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtNachteil12GP = new System.Windows.Forms.TextBox();
+            this.txtNachteil12Wert = new System.Windows.Forms.TextBox();
+            this.txtNachteil12Name = new System.Windows.Forms.TextBox();
+            this.txtNachteil11Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtNachteil11GP = new System.Windows.Forms.TextBox();
+            this.txtNachteil11Wert = new System.Windows.Forms.TextBox();
+            this.txtNachteil11Name = new System.Windows.Forms.TextBox();
+            this.txtNachteil10Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtNachteil10GP = new System.Windows.Forms.TextBox();
+            this.txtNachteil10Wert = new System.Windows.Forms.TextBox();
+            this.txtNachteil10Name = new System.Windows.Forms.TextBox();
+            this.txtNachteil9Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtNachteil9GP = new System.Windows.Forms.TextBox();
+            this.txtNachteil9Wert = new System.Windows.Forms.TextBox();
+            this.txtNachteil9Name = new System.Windows.Forms.TextBox();
+            this.txtNachteil8Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtNachteil8GP = new System.Windows.Forms.TextBox();
+            this.txtNachteil8Wert = new System.Windows.Forms.TextBox();
+            this.txtNachteil8Name = new System.Windows.Forms.TextBox();
+            this.txtNachteil7Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtNachteil7GP = new System.Windows.Forms.TextBox();
+            this.txtNachteil7Wert = new System.Windows.Forms.TextBox();
+            this.txtNachteil7Name = new System.Windows.Forms.TextBox();
+            this.txtNachteil6Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtNachteil6GP = new System.Windows.Forms.TextBox();
+            this.txtNachteil6Wert = new System.Windows.Forms.TextBox();
+            this.txtNachteil6Name = new System.Windows.Forms.TextBox();
+            this.txtNachteil5Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtNachteil5GP = new System.Windows.Forms.TextBox();
+            this.txtNachteil5Wert = new System.Windows.Forms.TextBox();
+            this.txtNachteil5Name = new System.Windows.Forms.TextBox();
+            this.txtNachteil4Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtNachteil4GP = new System.Windows.Forms.TextBox();
+            this.txtNachteil4Wert = new System.Windows.Forms.TextBox();
+            this.txtNachteil4Name = new System.Windows.Forms.TextBox();
+            this.txtNachteil3Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtNachteil3GP = new System.Windows.Forms.TextBox();
+            this.txtNachteil3Wert = new System.Windows.Forms.TextBox();
+            this.txtNachteil3Name = new System.Windows.Forms.TextBox();
+            this.txtNachteil2Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtNachteil2GP = new System.Windows.Forms.TextBox();
+            this.txtNachteil2Wert = new System.Windows.Forms.TextBox();
+            this.txtNachteil2Name = new System.Windows.Forms.TextBox();
+            this.txtNachteil1Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtNachteil1GP = new System.Windows.Forms.TextBox();
+            this.txtNachteil1Wert = new System.Windows.Forms.TextBox();
+            this.txtNachteil1Name = new System.Windows.Forms.TextBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.drpVorteile1Type = new System.Windows.Forms.ComboBox();
-            this.txtVorteil1Bonus = new System.Windows.Forms.TextBox();
+            this.txtVorteil15Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtVorteil15GP = new System.Windows.Forms.TextBox();
+            this.txtVorteil15Wert = new System.Windows.Forms.TextBox();
+            this.txtVorteil15Name = new System.Windows.Forms.TextBox();
+            this.txtVorteil14Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtVorteil14GP = new System.Windows.Forms.TextBox();
+            this.txtVorteil14Wert = new System.Windows.Forms.TextBox();
+            this.txtVorteil14Name = new System.Windows.Forms.TextBox();
+            this.txtVorteil13Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtVorteil13GP = new System.Windows.Forms.TextBox();
+            this.txtVorteil13Wert = new System.Windows.Forms.TextBox();
+            this.txtVorteil13Name = new System.Windows.Forms.TextBox();
+            this.txtVorteil12Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtVorteil12GP = new System.Windows.Forms.TextBox();
+            this.txtVorteil12Wert = new System.Windows.Forms.TextBox();
+            this.txtVorteil12Name = new System.Windows.Forms.TextBox();
+            this.txtVorteil11Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtVorteil11GP = new System.Windows.Forms.TextBox();
+            this.txtVorteil11Wert = new System.Windows.Forms.TextBox();
+            this.txtVorteil11Name = new System.Windows.Forms.TextBox();
+            this.txtVorteil10Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtVorteil10GP = new System.Windows.Forms.TextBox();
+            this.txtVorteil10Wert = new System.Windows.Forms.TextBox();
+            this.txtVorteil10Name = new System.Windows.Forms.TextBox();
+            this.txtVorteil9Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtVorteil9GP = new System.Windows.Forms.TextBox();
+            this.txtVorteil9Wert = new System.Windows.Forms.TextBox();
+            this.txtVorteil9Name = new System.Windows.Forms.TextBox();
+            this.txtVorteil8Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtVorteil8GP = new System.Windows.Forms.TextBox();
+            this.txtVorteil8Wert = new System.Windows.Forms.TextBox();
+            this.txtVorteil8Name = new System.Windows.Forms.TextBox();
+            this.txtVorteil7Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtVorteil7GP = new System.Windows.Forms.TextBox();
+            this.txtVorteil7Wert = new System.Windows.Forms.TextBox();
+            this.txtVorteil7Name = new System.Windows.Forms.TextBox();
+            this.txtVorteil6Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtVorteil6GP = new System.Windows.Forms.TextBox();
+            this.txtVorteil6Wert = new System.Windows.Forms.TextBox();
+            this.txtVorteil6Name = new System.Windows.Forms.TextBox();
+            this.txtVorteil5Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtVorteil5GP = new System.Windows.Forms.TextBox();
+            this.txtVorteil5Wert = new System.Windows.Forms.TextBox();
+            this.txtVorteil5Name = new System.Windows.Forms.TextBox();
+            this.txtVorteil4Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtVorteil4GP = new System.Windows.Forms.TextBox();
+            this.txtVorteil4Wert = new System.Windows.Forms.TextBox();
+            this.txtVorteil4Name = new System.Windows.Forms.TextBox();
+            this.txtVorteil3Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtVorteil3GP = new System.Windows.Forms.TextBox();
+            this.txtVorteil3Wert = new System.Windows.Forms.TextBox();
+            this.txtVorteil3Name = new System.Windows.Forms.TextBox();
+            this.txtVorteil2Beschreibung = new System.Windows.Forms.TextBox();
+            this.txtVorteil2GP = new System.Windows.Forms.TextBox();
+            this.txtVorteil2Wert = new System.Windows.Forms.TextBox();
+            this.txtVorteil2Name = new System.Windows.Forms.TextBox();
             this.txtVorteil1Beschreibung = new System.Windows.Forms.TextBox();
             this.txtVorteil1GP = new System.Windows.Forms.TextBox();
             this.txtVorteil1Wert = new System.Windows.Forms.TextBox();
             this.txtVorteil1Name = new System.Windows.Forms.TextBox();
-            this.label61 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
@@ -217,6 +335,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -227,12 +346,13 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1176, 722);
+            this.tabControl1.Size = new System.Drawing.Size(1446, 905);
             this.tabControl1.TabIndex = 124;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.txtStufe);
             this.tabPage1.Controls.Add(this.txtAbenteuerpunkte);
@@ -410,19 +530,817 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1168, 696);
+            this.tabPage1.Size = new System.Drawing.Size(1438, 879);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtNachteil15Beschreibung);
+            this.groupBox2.Controls.Add(this.txtNachteil15GP);
+            this.groupBox2.Controls.Add(this.txtNachteil15Wert);
+            this.groupBox2.Controls.Add(this.txtNachteil15Name);
+            this.groupBox2.Controls.Add(this.txtNachteil14Beschreibung);
+            this.groupBox2.Controls.Add(this.txtNachteil14GP);
+            this.groupBox2.Controls.Add(this.txtNachteil14Wert);
+            this.groupBox2.Controls.Add(this.txtNachteil14Name);
+            this.groupBox2.Controls.Add(this.txtNachteil13Beschreibung);
+            this.groupBox2.Controls.Add(this.txtNachteil13GP);
+            this.groupBox2.Controls.Add(this.txtNachteil13Wert);
+            this.groupBox2.Controls.Add(this.txtNachteil13Name);
+            this.groupBox2.Controls.Add(this.txtNachteil12Beschreibung);
+            this.groupBox2.Controls.Add(this.txtNachteil12GP);
+            this.groupBox2.Controls.Add(this.txtNachteil12Wert);
+            this.groupBox2.Controls.Add(this.txtNachteil12Name);
+            this.groupBox2.Controls.Add(this.txtNachteil11Beschreibung);
+            this.groupBox2.Controls.Add(this.txtNachteil11GP);
+            this.groupBox2.Controls.Add(this.txtNachteil11Wert);
+            this.groupBox2.Controls.Add(this.txtNachteil11Name);
+            this.groupBox2.Controls.Add(this.txtNachteil10Beschreibung);
+            this.groupBox2.Controls.Add(this.txtNachteil10GP);
+            this.groupBox2.Controls.Add(this.txtNachteil10Wert);
+            this.groupBox2.Controls.Add(this.txtNachteil10Name);
+            this.groupBox2.Controls.Add(this.txtNachteil9Beschreibung);
+            this.groupBox2.Controls.Add(this.txtNachteil9GP);
+            this.groupBox2.Controls.Add(this.txtNachteil9Wert);
+            this.groupBox2.Controls.Add(this.txtNachteil9Name);
+            this.groupBox2.Controls.Add(this.txtNachteil8Beschreibung);
+            this.groupBox2.Controls.Add(this.txtNachteil8GP);
+            this.groupBox2.Controls.Add(this.txtNachteil8Wert);
+            this.groupBox2.Controls.Add(this.txtNachteil8Name);
+            this.groupBox2.Controls.Add(this.txtNachteil7Beschreibung);
+            this.groupBox2.Controls.Add(this.txtNachteil7GP);
+            this.groupBox2.Controls.Add(this.txtNachteil7Wert);
+            this.groupBox2.Controls.Add(this.txtNachteil7Name);
+            this.groupBox2.Controls.Add(this.txtNachteil6Beschreibung);
+            this.groupBox2.Controls.Add(this.txtNachteil6GP);
+            this.groupBox2.Controls.Add(this.txtNachteil6Wert);
+            this.groupBox2.Controls.Add(this.txtNachteil6Name);
+            this.groupBox2.Controls.Add(this.txtNachteil5Beschreibung);
+            this.groupBox2.Controls.Add(this.txtNachteil5GP);
+            this.groupBox2.Controls.Add(this.txtNachteil5Wert);
+            this.groupBox2.Controls.Add(this.txtNachteil5Name);
+            this.groupBox2.Controls.Add(this.txtNachteil4Beschreibung);
+            this.groupBox2.Controls.Add(this.txtNachteil4GP);
+            this.groupBox2.Controls.Add(this.txtNachteil4Wert);
+            this.groupBox2.Controls.Add(this.txtNachteil4Name);
+            this.groupBox2.Controls.Add(this.txtNachteil3Beschreibung);
+            this.groupBox2.Controls.Add(this.txtNachteil3GP);
+            this.groupBox2.Controls.Add(this.txtNachteil3Wert);
+            this.groupBox2.Controls.Add(this.txtNachteil3Name);
+            this.groupBox2.Controls.Add(this.txtNachteil2Beschreibung);
+            this.groupBox2.Controls.Add(this.txtNachteil2GP);
+            this.groupBox2.Controls.Add(this.txtNachteil2Wert);
+            this.groupBox2.Controls.Add(this.txtNachteil2Name);
+            this.groupBox2.Controls.Add(this.txtNachteil1Beschreibung);
+            this.groupBox2.Controls.Add(this.txtNachteil1GP);
+            this.groupBox2.Controls.Add(this.txtNachteil1Wert);
+            this.groupBox2.Controls.Add(this.txtNachteil1Name);
+            this.groupBox2.Controls.Add(this.label61);
+            this.groupBox2.Controls.Add(this.label62);
+            this.groupBox2.Controls.Add(this.label63);
+            this.groupBox2.Controls.Add(this.label64);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(722, 423);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(700, 455);
+            this.groupBox2.TabIndex = 358;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Nachteile";
+            // 
+            // txtNachteil15Beschreibung
+            // 
+            this.txtNachteil15Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil15Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil15Beschreibung.Location = new System.Drawing.Point(334, 428);
+            this.txtNachteil15Beschreibung.Name = "txtNachteil15Beschreibung";
+            this.txtNachteil15Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtNachteil15Beschreibung.TabIndex = 357;
+            this.txtNachteil15Beschreibung.Click += new System.EventHandler(this.txtNachteil15_ValueChanged);
+            // 
+            // txtNachteil15GP
+            // 
+            this.txtNachteil15GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil15GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil15GP.Location = new System.Drawing.Point(288, 426);
+            this.txtNachteil15GP.Name = "txtNachteil15GP";
+            this.txtNachteil15GP.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil15GP.TabIndex = 356;
+            this.txtNachteil15GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil15GP.Click += new System.EventHandler(this.txtNachteil15_ValueChanged);
+            // 
+            // txtNachteil15Wert
+            // 
+            this.txtNachteil15Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil15Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil15Wert.Location = new System.Drawing.Point(242, 426);
+            this.txtNachteil15Wert.Name = "txtNachteil15Wert";
+            this.txtNachteil15Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil15Wert.TabIndex = 355;
+            this.txtNachteil15Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil15Wert.Click += new System.EventHandler(this.txtNachteil15_ValueChanged);
+            // 
+            // txtNachteil15Name
+            // 
+            this.txtNachteil15Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil15Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil15Name.Location = new System.Drawing.Point(6, 426);
+            this.txtNachteil15Name.Name = "txtNachteil15Name";
+            this.txtNachteil15Name.Size = new System.Drawing.Size(230, 21);
+            this.txtNachteil15Name.TabIndex = 354;
+            this.txtNachteil15Name.Click += new System.EventHandler(this.txtNachteil15_ValueChanged);
+            // 
+            // txtNachteil14Beschreibung
+            // 
+            this.txtNachteil14Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil14Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil14Beschreibung.Location = new System.Drawing.Point(334, 399);
+            this.txtNachteil14Beschreibung.Name = "txtNachteil14Beschreibung";
+            this.txtNachteil14Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtNachteil14Beschreibung.TabIndex = 351;
+            this.txtNachteil14Beschreibung.Click += new System.EventHandler(this.txtNachteil14_ValueChanged);
+            // 
+            // txtNachteil14GP
+            // 
+            this.txtNachteil14GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil14GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil14GP.Location = new System.Drawing.Point(288, 399);
+            this.txtNachteil14GP.Name = "txtNachteil14GP";
+            this.txtNachteil14GP.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil14GP.TabIndex = 350;
+            this.txtNachteil14GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil14GP.Click += new System.EventHandler(this.txtNachteil14_ValueChanged);
+            // 
+            // txtNachteil14Wert
+            // 
+            this.txtNachteil14Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil14Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil14Wert.Location = new System.Drawing.Point(242, 399);
+            this.txtNachteil14Wert.Name = "txtNachteil14Wert";
+            this.txtNachteil14Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil14Wert.TabIndex = 349;
+            this.txtNachteil14Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil14Wert.Click += new System.EventHandler(this.txtNachteil14_ValueChanged);
+            // 
+            // txtNachteil14Name
+            // 
+            this.txtNachteil14Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil14Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil14Name.Location = new System.Drawing.Point(6, 399);
+            this.txtNachteil14Name.Name = "txtNachteil14Name";
+            this.txtNachteil14Name.Size = new System.Drawing.Size(230, 21);
+            this.txtNachteil14Name.TabIndex = 348;
+            this.txtNachteil14Name.Click += new System.EventHandler(this.txtNachteil14_ValueChanged);
+            // 
+            // txtNachteil13Beschreibung
+            // 
+            this.txtNachteil13Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil13Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil13Beschreibung.Location = new System.Drawing.Point(334, 372);
+            this.txtNachteil13Beschreibung.Name = "txtNachteil13Beschreibung";
+            this.txtNachteil13Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtNachteil13Beschreibung.TabIndex = 345;
+            this.txtNachteil13Beschreibung.Click += new System.EventHandler(this.txtNachteil13_ValueChanged);
+            // 
+            // txtNachteil13GP
+            // 
+            this.txtNachteil13GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil13GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil13GP.Location = new System.Drawing.Point(288, 372);
+            this.txtNachteil13GP.Name = "txtNachteil13GP";
+            this.txtNachteil13GP.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil13GP.TabIndex = 344;
+            this.txtNachteil13GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil13GP.Click += new System.EventHandler(this.txtNachteil13_ValueChanged);
+            // 
+            // txtNachteil13Wert
+            // 
+            this.txtNachteil13Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil13Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil13Wert.Location = new System.Drawing.Point(242, 372);
+            this.txtNachteil13Wert.Name = "txtNachteil13Wert";
+            this.txtNachteil13Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil13Wert.TabIndex = 343;
+            this.txtNachteil13Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil13Wert.Click += new System.EventHandler(this.txtNachteil13_ValueChanged);
+            // 
+            // txtNachteil13Name
+            // 
+            this.txtNachteil13Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil13Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil13Name.Location = new System.Drawing.Point(6, 372);
+            this.txtNachteil13Name.Name = "txtNachteil13Name";
+            this.txtNachteil13Name.Size = new System.Drawing.Size(230, 21);
+            this.txtNachteil13Name.TabIndex = 342;
+            this.txtNachteil13Name.Click += new System.EventHandler(this.txtNachteil13_ValueChanged);
+            // 
+            // txtNachteil12Beschreibung
+            // 
+            this.txtNachteil12Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil12Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil12Beschreibung.Location = new System.Drawing.Point(334, 345);
+            this.txtNachteil12Beschreibung.Name = "txtNachteil12Beschreibung";
+            this.txtNachteil12Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtNachteil12Beschreibung.TabIndex = 339;
+            this.txtNachteil12Beschreibung.Click += new System.EventHandler(this.txtNachteil12_ValueChanged);
+            // 
+            // txtNachteil12GP
+            // 
+            this.txtNachteil12GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil12GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil12GP.Location = new System.Drawing.Point(288, 345);
+            this.txtNachteil12GP.Name = "txtNachteil12GP";
+            this.txtNachteil12GP.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil12GP.TabIndex = 338;
+            this.txtNachteil12GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil12GP.Click += new System.EventHandler(this.txtNachteil12_ValueChanged);
+            // 
+            // txtNachteil12Wert
+            // 
+            this.txtNachteil12Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil12Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil12Wert.Location = new System.Drawing.Point(242, 345);
+            this.txtNachteil12Wert.Name = "txtNachteil12Wert";
+            this.txtNachteil12Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil12Wert.TabIndex = 337;
+            this.txtNachteil12Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil12Wert.Click += new System.EventHandler(this.txtNachteil12_ValueChanged);
+            // 
+            // txtNachteil12Name
+            // 
+            this.txtNachteil12Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil12Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil12Name.Location = new System.Drawing.Point(6, 345);
+            this.txtNachteil12Name.Name = "txtNachteil12Name";
+            this.txtNachteil12Name.Size = new System.Drawing.Size(230, 21);
+            this.txtNachteil12Name.TabIndex = 336;
+            this.txtNachteil12Name.Click += new System.EventHandler(this.txtNachteil12_ValueChanged);
+            // 
+            // txtNachteil11Beschreibung
+            // 
+            this.txtNachteil11Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil11Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil11Beschreibung.Location = new System.Drawing.Point(334, 318);
+            this.txtNachteil11Beschreibung.Name = "txtNachteil11Beschreibung";
+            this.txtNachteil11Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtNachteil11Beschreibung.TabIndex = 333;
+            this.txtNachteil11Beschreibung.Click += new System.EventHandler(this.txtNachteil11_ValueChanged);
+            // 
+            // txtNachteil11GP
+            // 
+            this.txtNachteil11GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil11GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil11GP.Location = new System.Drawing.Point(288, 318);
+            this.txtNachteil11GP.Name = "txtNachteil11GP";
+            this.txtNachteil11GP.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil11GP.TabIndex = 332;
+            this.txtNachteil11GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil11GP.Click += new System.EventHandler(this.txtNachteil11_ValueChanged);
+            // 
+            // txtNachteil11Wert
+            // 
+            this.txtNachteil11Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil11Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil11Wert.Location = new System.Drawing.Point(242, 318);
+            this.txtNachteil11Wert.Name = "txtNachteil11Wert";
+            this.txtNachteil11Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil11Wert.TabIndex = 331;
+            this.txtNachteil11Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil11Wert.Click += new System.EventHandler(this.txtNachteil11_ValueChanged);
+            // 
+            // txtNachteil11Name
+            // 
+            this.txtNachteil11Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil11Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil11Name.Location = new System.Drawing.Point(6, 318);
+            this.txtNachteil11Name.Name = "txtNachteil11Name";
+            this.txtNachteil11Name.Size = new System.Drawing.Size(230, 21);
+            this.txtNachteil11Name.TabIndex = 330;
+            this.txtNachteil11Name.Click += new System.EventHandler(this.txtNachteil11_ValueChanged);
+            // 
+            // txtNachteil10Beschreibung
+            // 
+            this.txtNachteil10Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil10Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil10Beschreibung.Location = new System.Drawing.Point(334, 291);
+            this.txtNachteil10Beschreibung.Name = "txtNachteil10Beschreibung";
+            this.txtNachteil10Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtNachteil10Beschreibung.TabIndex = 327;
+            this.txtNachteil10Beschreibung.Click += new System.EventHandler(this.txtNachteil10_ValueChanged);
+            // 
+            // txtNachteil10GP
+            // 
+            this.txtNachteil10GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil10GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil10GP.Location = new System.Drawing.Point(288, 291);
+            this.txtNachteil10GP.Name = "txtNachteil10GP";
+            this.txtNachteil10GP.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil10GP.TabIndex = 326;
+            this.txtNachteil10GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil10GP.Click += new System.EventHandler(this.txtNachteil10_ValueChanged);
+            // 
+            // txtNachteil10Wert
+            // 
+            this.txtNachteil10Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil10Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil10Wert.Location = new System.Drawing.Point(242, 291);
+            this.txtNachteil10Wert.Name = "txtNachteil10Wert";
+            this.txtNachteil10Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil10Wert.TabIndex = 325;
+            this.txtNachteil10Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil10Wert.Click += new System.EventHandler(this.txtNachteil10_ValueChanged);
+            // 
+            // txtNachteil10Name
+            // 
+            this.txtNachteil10Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil10Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil10Name.Location = new System.Drawing.Point(6, 291);
+            this.txtNachteil10Name.Name = "txtNachteil10Name";
+            this.txtNachteil10Name.Size = new System.Drawing.Size(230, 21);
+            this.txtNachteil10Name.TabIndex = 324;
+            this.txtNachteil10Name.Click += new System.EventHandler(this.txtNachteil10_ValueChanged);
+            // 
+            // txtNachteil9Beschreibung
+            // 
+            this.txtNachteil9Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil9Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil9Beschreibung.Location = new System.Drawing.Point(334, 264);
+            this.txtNachteil9Beschreibung.Name = "txtNachteil9Beschreibung";
+            this.txtNachteil9Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtNachteil9Beschreibung.TabIndex = 321;
+            this.txtNachteil9Beschreibung.Click += new System.EventHandler(this.txtNachteil9_ValueChanged);
+            // 
+            // txtNachteil9GP
+            // 
+            this.txtNachteil9GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil9GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil9GP.Location = new System.Drawing.Point(288, 264);
+            this.txtNachteil9GP.Name = "txtNachteil9GP";
+            this.txtNachteil9GP.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil9GP.TabIndex = 320;
+            this.txtNachteil9GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil9GP.Click += new System.EventHandler(this.txtNachteil9_ValueChanged);
+            // 
+            // txtNachteil9Wert
+            // 
+            this.txtNachteil9Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil9Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil9Wert.Location = new System.Drawing.Point(242, 264);
+            this.txtNachteil9Wert.Name = "txtNachteil9Wert";
+            this.txtNachteil9Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil9Wert.TabIndex = 319;
+            this.txtNachteil9Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil9Wert.Click += new System.EventHandler(this.txtNachteil9_ValueChanged);
+            // 
+            // txtNachteil9Name
+            // 
+            this.txtNachteil9Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil9Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil9Name.Location = new System.Drawing.Point(6, 264);
+            this.txtNachteil9Name.Name = "txtNachteil9Name";
+            this.txtNachteil9Name.Size = new System.Drawing.Size(230, 21);
+            this.txtNachteil9Name.TabIndex = 318;
+            this.txtNachteil9Name.Click += new System.EventHandler(this.txtNachteil9_ValueChanged);
+            // 
+            // txtNachteil8Beschreibung
+            // 
+            this.txtNachteil8Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil8Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil8Beschreibung.Location = new System.Drawing.Point(334, 237);
+            this.txtNachteil8Beschreibung.Name = "txtNachteil8Beschreibung";
+            this.txtNachteil8Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtNachteil8Beschreibung.TabIndex = 315;
+            this.txtNachteil8Beschreibung.Click += new System.EventHandler(this.txtNachteil8_ValueChanged);
+            // 
+            // txtNachteil8GP
+            // 
+            this.txtNachteil8GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil8GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil8GP.Location = new System.Drawing.Point(288, 237);
+            this.txtNachteil8GP.Name = "txtNachteil8GP";
+            this.txtNachteil8GP.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil8GP.TabIndex = 314;
+            this.txtNachteil8GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil8GP.Click += new System.EventHandler(this.txtNachteil8_ValueChanged);
+            // 
+            // txtNachteil8Wert
+            // 
+            this.txtNachteil8Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil8Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil8Wert.Location = new System.Drawing.Point(242, 237);
+            this.txtNachteil8Wert.Name = "txtNachteil8Wert";
+            this.txtNachteil8Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil8Wert.TabIndex = 313;
+            this.txtNachteil8Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil8Wert.Click += new System.EventHandler(this.txtNachteil8_ValueChanged);
+            // 
+            // txtNachteil8Name
+            // 
+            this.txtNachteil8Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil8Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil8Name.Location = new System.Drawing.Point(6, 237);
+            this.txtNachteil8Name.Name = "txtNachteil8Name";
+            this.txtNachteil8Name.Size = new System.Drawing.Size(230, 21);
+            this.txtNachteil8Name.TabIndex = 312;
+            this.txtNachteil8Name.Click += new System.EventHandler(this.txtNachteil8_ValueChanged);
+            // 
+            // txtNachteil7Beschreibung
+            // 
+            this.txtNachteil7Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil7Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil7Beschreibung.Location = new System.Drawing.Point(334, 210);
+            this.txtNachteil7Beschreibung.Name = "txtNachteil7Beschreibung";
+            this.txtNachteil7Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtNachteil7Beschreibung.TabIndex = 309;
+            this.txtNachteil7Beschreibung.Click += new System.EventHandler(this.txtNachteil7_ValueChanged);
+            // 
+            // txtNachteil7GP
+            // 
+            this.txtNachteil7GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil7GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil7GP.Location = new System.Drawing.Point(288, 210);
+            this.txtNachteil7GP.Name = "txtNachteil7GP";
+            this.txtNachteil7GP.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil7GP.TabIndex = 308;
+            this.txtNachteil7GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil7GP.Click += new System.EventHandler(this.txtNachteil7_ValueChanged);
+            // 
+            // txtNachteil7Wert
+            // 
+            this.txtNachteil7Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil7Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil7Wert.Location = new System.Drawing.Point(242, 210);
+            this.txtNachteil7Wert.Name = "txtNachteil7Wert";
+            this.txtNachteil7Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil7Wert.TabIndex = 307;
+            this.txtNachteil7Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil7Wert.Click += new System.EventHandler(this.txtNachteil7_ValueChanged);
+            // 
+            // txtNachteil7Name
+            // 
+            this.txtNachteil7Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil7Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil7Name.Location = new System.Drawing.Point(6, 210);
+            this.txtNachteil7Name.Name = "txtNachteil7Name";
+            this.txtNachteil7Name.Size = new System.Drawing.Size(230, 21);
+            this.txtNachteil7Name.TabIndex = 306;
+            this.txtNachteil7Name.Click += new System.EventHandler(this.txtNachteil7_ValueChanged);
+            // 
+            // txtNachteil6Beschreibung
+            // 
+            this.txtNachteil6Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil6Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil6Beschreibung.Location = new System.Drawing.Point(334, 183);
+            this.txtNachteil6Beschreibung.Name = "txtNachteil6Beschreibung";
+            this.txtNachteil6Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtNachteil6Beschreibung.TabIndex = 303;
+            this.txtNachteil6Beschreibung.Click += new System.EventHandler(this.txtNachteil6_ValueChanged);
+            // 
+            // txtNachteil6GP
+            // 
+            this.txtNachteil6GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil6GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil6GP.Location = new System.Drawing.Point(288, 183);
+            this.txtNachteil6GP.Name = "txtNachteil6GP";
+            this.txtNachteil6GP.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil6GP.TabIndex = 302;
+            this.txtNachteil6GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil6GP.Click += new System.EventHandler(this.txtNachteil6_ValueChanged);
+            // 
+            // txtNachteil6Wert
+            // 
+            this.txtNachteil6Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil6Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil6Wert.Location = new System.Drawing.Point(242, 183);
+            this.txtNachteil6Wert.Name = "txtNachteil6Wert";
+            this.txtNachteil6Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil6Wert.TabIndex = 301;
+            this.txtNachteil6Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil6Wert.Click += new System.EventHandler(this.txtNachteil6_ValueChanged);
+            // 
+            // txtNachteil6Name
+            // 
+            this.txtNachteil6Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil6Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil6Name.Location = new System.Drawing.Point(6, 183);
+            this.txtNachteil6Name.Name = "txtNachteil6Name";
+            this.txtNachteil6Name.Size = new System.Drawing.Size(230, 21);
+            this.txtNachteil6Name.TabIndex = 300;
+            this.txtNachteil6Name.Click += new System.EventHandler(this.txtNachteil6_ValueChanged);
+            // 
+            // txtNachteil5Beschreibung
+            // 
+            this.txtNachteil5Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil5Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil5Beschreibung.Location = new System.Drawing.Point(334, 156);
+            this.txtNachteil5Beschreibung.Name = "txtNachteil5Beschreibung";
+            this.txtNachteil5Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtNachteil5Beschreibung.TabIndex = 297;
+            this.txtNachteil5Beschreibung.Click += new System.EventHandler(this.txtNachteil5_ValueChanged);
+            // 
+            // txtNachteil5GP
+            // 
+            this.txtNachteil5GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil5GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil5GP.Location = new System.Drawing.Point(288, 156);
+            this.txtNachteil5GP.Name = "txtNachteil5GP";
+            this.txtNachteil5GP.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil5GP.TabIndex = 296;
+            this.txtNachteil5GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil5GP.Click += new System.EventHandler(this.txtNachteil5_ValueChanged);
+            // 
+            // txtNachteil5Wert
+            // 
+            this.txtNachteil5Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil5Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil5Wert.Location = new System.Drawing.Point(242, 156);
+            this.txtNachteil5Wert.Name = "txtNachteil5Wert";
+            this.txtNachteil5Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil5Wert.TabIndex = 295;
+            this.txtNachteil5Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil5Wert.Click += new System.EventHandler(this.txtNachteil5_ValueChanged);
+            // 
+            // txtNachteil5Name
+            // 
+            this.txtNachteil5Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil5Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil5Name.Location = new System.Drawing.Point(6, 156);
+            this.txtNachteil5Name.Name = "txtNachteil5Name";
+            this.txtNachteil5Name.Size = new System.Drawing.Size(230, 21);
+            this.txtNachteil5Name.TabIndex = 294;
+            this.txtNachteil5Name.Click += new System.EventHandler(this.txtNachteil5_ValueChanged);
+            // 
+            // txtNachteil4Beschreibung
+            // 
+            this.txtNachteil4Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil4Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil4Beschreibung.Location = new System.Drawing.Point(334, 129);
+            this.txtNachteil4Beschreibung.Name = "txtNachteil4Beschreibung";
+            this.txtNachteil4Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtNachteil4Beschreibung.TabIndex = 291;
+            this.txtNachteil4Beschreibung.Click += new System.EventHandler(this.txtNachteil4_ValueChanged);
+            // 
+            // txtNachteil4GP
+            // 
+            this.txtNachteil4GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil4GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil4GP.Location = new System.Drawing.Point(288, 129);
+            this.txtNachteil4GP.Name = "txtNachteil4GP";
+            this.txtNachteil4GP.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil4GP.TabIndex = 290;
+            this.txtNachteil4GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil4GP.Click += new System.EventHandler(this.txtNachteil4_ValueChanged);
+            // 
+            // txtNachteil4Wert
+            // 
+            this.txtNachteil4Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil4Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil4Wert.Location = new System.Drawing.Point(242, 129);
+            this.txtNachteil4Wert.Name = "txtNachteil4Wert";
+            this.txtNachteil4Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil4Wert.TabIndex = 289;
+            this.txtNachteil4Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil4Wert.Click += new System.EventHandler(this.txtNachteil4_ValueChanged);
+            // 
+            // txtNachteil4Name
+            // 
+            this.txtNachteil4Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil4Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil4Name.Location = new System.Drawing.Point(6, 129);
+            this.txtNachteil4Name.Name = "txtNachteil4Name";
+            this.txtNachteil4Name.Size = new System.Drawing.Size(230, 21);
+            this.txtNachteil4Name.TabIndex = 288;
+            this.txtNachteil4Name.Click += new System.EventHandler(this.txtNachteil4_ValueChanged);
+            // 
+            // txtNachteil3Beschreibung
+            // 
+            this.txtNachteil3Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil3Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil3Beschreibung.Location = new System.Drawing.Point(334, 102);
+            this.txtNachteil3Beschreibung.Name = "txtNachteil3Beschreibung";
+            this.txtNachteil3Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtNachteil3Beschreibung.TabIndex = 285;
+            this.txtNachteil3Beschreibung.Click += new System.EventHandler(this.txtNachteil3_ValueChanged);
+            // 
+            // txtNachteil3GP
+            // 
+            this.txtNachteil3GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil3GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil3GP.Location = new System.Drawing.Point(288, 102);
+            this.txtNachteil3GP.Name = "txtNachteil3GP";
+            this.txtNachteil3GP.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil3GP.TabIndex = 284;
+            this.txtNachteil3GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil3GP.Click += new System.EventHandler(this.txtNachteil3_ValueChanged);
+            // 
+            // txtNachteil3Wert
+            // 
+            this.txtNachteil3Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil3Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil3Wert.Location = new System.Drawing.Point(242, 102);
+            this.txtNachteil3Wert.Name = "txtNachteil3Wert";
+            this.txtNachteil3Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil3Wert.TabIndex = 283;
+            this.txtNachteil3Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil3Wert.Click += new System.EventHandler(this.txtNachteil3_ValueChanged);
+            // 
+            // txtNachteil3Name
+            // 
+            this.txtNachteil3Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil3Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil3Name.Location = new System.Drawing.Point(6, 102);
+            this.txtNachteil3Name.Name = "txtNachteil3Name";
+            this.txtNachteil3Name.Size = new System.Drawing.Size(230, 21);
+            this.txtNachteil3Name.TabIndex = 282;
+            this.txtNachteil3Name.Click += new System.EventHandler(this.txtNachteil3_ValueChanged);
+            // 
+            // txtNachteil2Beschreibung
+            // 
+            this.txtNachteil2Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil2Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil2Beschreibung.Location = new System.Drawing.Point(334, 75);
+            this.txtNachteil2Beschreibung.Name = "txtNachteil2Beschreibung";
+            this.txtNachteil2Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtNachteil2Beschreibung.TabIndex = 279;
+            this.txtNachteil2Beschreibung.Click += new System.EventHandler(this.txtNachteil2_ValueChanged);
+            // 
+            // txtNachteil2GP
+            // 
+            this.txtNachteil2GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil2GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil2GP.Location = new System.Drawing.Point(288, 75);
+            this.txtNachteil2GP.Name = "txtNachteil2GP";
+            this.txtNachteil2GP.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil2GP.TabIndex = 278;
+            this.txtNachteil2GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil2GP.Click += new System.EventHandler(this.txtNachteil2_ValueChanged);
+            // 
+            // txtNachteil2Wert
+            // 
+            this.txtNachteil2Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil2Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil2Wert.Location = new System.Drawing.Point(242, 75);
+            this.txtNachteil2Wert.Name = "txtNachteil2Wert";
+            this.txtNachteil2Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil2Wert.TabIndex = 277;
+            this.txtNachteil2Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil2Wert.Click += new System.EventHandler(this.txtNachteil2_ValueChanged);
+            // 
+            // txtNachteil2Name
+            // 
+            this.txtNachteil2Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil2Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil2Name.Location = new System.Drawing.Point(6, 75);
+            this.txtNachteil2Name.Name = "txtNachteil2Name";
+            this.txtNachteil2Name.Size = new System.Drawing.Size(230, 21);
+            this.txtNachteil2Name.TabIndex = 276;
+            this.txtNachteil2Name.Click += new System.EventHandler(this.txtNachteil2_ValueChanged);
+            // 
+            // txtNachteil1Beschreibung
+            // 
+            this.txtNachteil1Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil1Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil1Beschreibung.Location = new System.Drawing.Point(334, 48);
+            this.txtNachteil1Beschreibung.Name = "txtNachteil1Beschreibung";
+            this.txtNachteil1Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtNachteil1Beschreibung.TabIndex = 273;
+            this.txtNachteil1Beschreibung.Click += new System.EventHandler(this.txtNachteil1_ValueChanged);
+            // 
+            // txtNachteil1GP
+            // 
+            this.txtNachteil1GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil1GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil1GP.Location = new System.Drawing.Point(288, 48);
+            this.txtNachteil1GP.Name = "txtNachteil1GP";
+            this.txtNachteil1GP.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil1GP.TabIndex = 272;
+            this.txtNachteil1GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil1GP.Click += new System.EventHandler(this.txtNachteil1_ValueChanged);
+            // 
+            // txtNachteil1Wert
+            // 
+            this.txtNachteil1Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil1Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil1Wert.Location = new System.Drawing.Point(242, 48);
+            this.txtNachteil1Wert.Name = "txtNachteil1Wert";
+            this.txtNachteil1Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtNachteil1Wert.TabIndex = 271;
+            this.txtNachteil1Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNachteil1Wert.Click += new System.EventHandler(this.txtNachteil1_ValueChanged);
+            // 
+            // txtNachteil1Name
+            // 
+            this.txtNachteil1Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNachteil1Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNachteil1Name.Location = new System.Drawing.Point(6, 48);
+            this.txtNachteil1Name.Name = "txtNachteil1Name";
+            this.txtNachteil1Name.Size = new System.Drawing.Size(230, 21);
+            this.txtNachteil1Name.TabIndex = 266;
+            this.txtNachteil1Name.Click += new System.EventHandler(this.txtNachteil1_ValueChanged);
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label61.Location = new System.Drawing.Point(477, 32);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(84, 13);
+            this.label61.TabIndex = 269;
+            this.label61.Text = "Beschreibung";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label62.Location = new System.Drawing.Point(296, 32);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(24, 13);
+            this.label62.TabIndex = 268;
+            this.label62.Text = "GP";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label63.Location = new System.Drawing.Point(245, 32);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(34, 13);
+            this.label63.TabIndex = 267;
+            this.label63.Text = "Wert";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.label64.Location = new System.Drawing.Point(97, 32);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(54, 13);
+            this.label64.TabIndex = 266;
+            this.label64.Text = "Nachteil";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.drpVorteile1Type);
-            this.groupBox1.Controls.Add(this.txtVorteil1Bonus);
+            this.groupBox1.Controls.Add(this.txtVorteil15Beschreibung);
+            this.groupBox1.Controls.Add(this.txtVorteil15GP);
+            this.groupBox1.Controls.Add(this.txtVorteil15Wert);
+            this.groupBox1.Controls.Add(this.txtVorteil15Name);
+            this.groupBox1.Controls.Add(this.txtVorteil14Beschreibung);
+            this.groupBox1.Controls.Add(this.txtVorteil14GP);
+            this.groupBox1.Controls.Add(this.txtVorteil14Wert);
+            this.groupBox1.Controls.Add(this.txtVorteil14Name);
+            this.groupBox1.Controls.Add(this.txtVorteil13Beschreibung);
+            this.groupBox1.Controls.Add(this.txtVorteil13GP);
+            this.groupBox1.Controls.Add(this.txtVorteil13Wert);
+            this.groupBox1.Controls.Add(this.txtVorteil13Name);
+            this.groupBox1.Controls.Add(this.txtVorteil12Beschreibung);
+            this.groupBox1.Controls.Add(this.txtVorteil12GP);
+            this.groupBox1.Controls.Add(this.txtVorteil12Wert);
+            this.groupBox1.Controls.Add(this.txtVorteil12Name);
+            this.groupBox1.Controls.Add(this.txtVorteil11Beschreibung);
+            this.groupBox1.Controls.Add(this.txtVorteil11GP);
+            this.groupBox1.Controls.Add(this.txtVorteil11Wert);
+            this.groupBox1.Controls.Add(this.txtVorteil11Name);
+            this.groupBox1.Controls.Add(this.txtVorteil10Beschreibung);
+            this.groupBox1.Controls.Add(this.txtVorteil10GP);
+            this.groupBox1.Controls.Add(this.txtVorteil10Wert);
+            this.groupBox1.Controls.Add(this.txtVorteil10Name);
+            this.groupBox1.Controls.Add(this.txtVorteil9Beschreibung);
+            this.groupBox1.Controls.Add(this.txtVorteil9GP);
+            this.groupBox1.Controls.Add(this.txtVorteil9Wert);
+            this.groupBox1.Controls.Add(this.txtVorteil9Name);
+            this.groupBox1.Controls.Add(this.txtVorteil8Beschreibung);
+            this.groupBox1.Controls.Add(this.txtVorteil8GP);
+            this.groupBox1.Controls.Add(this.txtVorteil8Wert);
+            this.groupBox1.Controls.Add(this.txtVorteil8Name);
+            this.groupBox1.Controls.Add(this.txtVorteil7Beschreibung);
+            this.groupBox1.Controls.Add(this.txtVorteil7GP);
+            this.groupBox1.Controls.Add(this.txtVorteil7Wert);
+            this.groupBox1.Controls.Add(this.txtVorteil7Name);
+            this.groupBox1.Controls.Add(this.txtVorteil6Beschreibung);
+            this.groupBox1.Controls.Add(this.txtVorteil6GP);
+            this.groupBox1.Controls.Add(this.txtVorteil6Wert);
+            this.groupBox1.Controls.Add(this.txtVorteil6Name);
+            this.groupBox1.Controls.Add(this.txtVorteil5Beschreibung);
+            this.groupBox1.Controls.Add(this.txtVorteil5GP);
+            this.groupBox1.Controls.Add(this.txtVorteil5Wert);
+            this.groupBox1.Controls.Add(this.txtVorteil5Name);
+            this.groupBox1.Controls.Add(this.txtVorteil4Beschreibung);
+            this.groupBox1.Controls.Add(this.txtVorteil4GP);
+            this.groupBox1.Controls.Add(this.txtVorteil4Wert);
+            this.groupBox1.Controls.Add(this.txtVorteil4Name);
+            this.groupBox1.Controls.Add(this.txtVorteil3Beschreibung);
+            this.groupBox1.Controls.Add(this.txtVorteil3GP);
+            this.groupBox1.Controls.Add(this.txtVorteil3Wert);
+            this.groupBox1.Controls.Add(this.txtVorteil3Name);
+            this.groupBox1.Controls.Add(this.txtVorteil2Beschreibung);
+            this.groupBox1.Controls.Add(this.txtVorteil2GP);
+            this.groupBox1.Controls.Add(this.txtVorteil2Wert);
+            this.groupBox1.Controls.Add(this.txtVorteil2Name);
             this.groupBox1.Controls.Add(this.txtVorteil1Beschreibung);
             this.groupBox1.Controls.Add(this.txtVorteil1GP);
             this.groupBox1.Controls.Add(this.txtVorteil1Wert);
             this.groupBox1.Controls.Add(this.txtVorteil1Name);
-            this.groupBox1.Controls.Add(this.label61);
             this.groupBox1.Controls.Add(this.label60);
             this.groupBox1.Controls.Add(this.label59);
             this.groupBox1.Controls.Add(this.label58);
@@ -430,67 +1348,630 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(16, 423);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1024, 209);
+            this.groupBox1.Size = new System.Drawing.Size(700, 455);
             this.groupBox1.TabIndex = 265;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vorteile";
             // 
-            // drpVorteile1Type
+            // txtVorteil15Beschreibung
             // 
-            this.drpVorteile1Type.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.drpVorteile1Type.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.drpVorteile1Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.drpVorteile1Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drpVorteile1Type.FormattingEnabled = true;
-            this.drpVorteile1Type.Location = new System.Drawing.Point(953, 48);
-            this.drpVorteile1Type.Name = "drpVorteile1Type";
-            this.drpVorteile1Type.Size = new System.Drawing.Size(61, 21);
-            this.drpVorteile1Type.Sorted = true;
-            this.drpVorteile1Type.TabIndex = 275;
-            this.drpVorteile1Type.TextChanged += new System.EventHandler(this.txtVorteil1_ValueChanged);
+            this.txtVorteil15Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil15Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil15Beschreibung.Location = new System.Drawing.Point(334, 426);
+            this.txtVorteil15Beschreibung.Name = "txtVorteil15Beschreibung";
+            this.txtVorteil15Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtVorteil15Beschreibung.TabIndex = 357;
+            this.txtVorteil15Beschreibung.Click += new System.EventHandler(this.txtVorteil15_ValueChanged);
             // 
-            // txtVorteil1Bonus
+            // txtVorteil15GP
             // 
-            this.txtVorteil1Bonus.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil1Bonus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil1Bonus.Location = new System.Drawing.Point(910, 48);
-            this.txtVorteil1Bonus.Name = "txtVorteil1Bonus";
-            this.txtVorteil1Bonus.Size = new System.Drawing.Size(37, 21);
-            this.txtVorteil1Bonus.TabIndex = 274;
-            this.txtVorteil1Bonus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtVorteil1Bonus.TextChanged += new System.EventHandler(this.txtVorteil1_ValueChanged);
+            this.txtVorteil15GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil15GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil15GP.Location = new System.Drawing.Point(288, 426);
+            this.txtVorteil15GP.Name = "txtVorteil15GP";
+            this.txtVorteil15GP.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil15GP.TabIndex = 356;
+            this.txtVorteil15GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil15GP.Click += new System.EventHandler(this.txtVorteil15_ValueChanged);
+            // 
+            // txtVorteil15Wert
+            // 
+            this.txtVorteil15Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil15Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil15Wert.Location = new System.Drawing.Point(242, 426);
+            this.txtVorteil15Wert.Name = "txtVorteil15Wert";
+            this.txtVorteil15Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil15Wert.TabIndex = 355;
+            this.txtVorteil15Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil15Wert.Click += new System.EventHandler(this.txtVorteil15_ValueChanged);
+            // 
+            // txtVorteil15Name
+            // 
+            this.txtVorteil15Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil15Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil15Name.Location = new System.Drawing.Point(6, 426);
+            this.txtVorteil15Name.Name = "txtVorteil15Name";
+            this.txtVorteil15Name.Size = new System.Drawing.Size(230, 21);
+            this.txtVorteil15Name.TabIndex = 354;
+            this.txtVorteil15Name.Click += new System.EventHandler(this.txtVorteil15_ValueChanged);
+            // 
+            // txtVorteil14Beschreibung
+            // 
+            this.txtVorteil14Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil14Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil14Beschreibung.Location = new System.Drawing.Point(334, 399);
+            this.txtVorteil14Beschreibung.Name = "txtVorteil14Beschreibung";
+            this.txtVorteil14Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtVorteil14Beschreibung.TabIndex = 351;
+            this.txtVorteil14Beschreibung.Click += new System.EventHandler(this.txtVortei14_ValueChanged);
+            // 
+            // txtVorteil14GP
+            // 
+            this.txtVorteil14GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil14GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil14GP.Location = new System.Drawing.Point(288, 399);
+            this.txtVorteil14GP.Name = "txtVorteil14GP";
+            this.txtVorteil14GP.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil14GP.TabIndex = 350;
+            this.txtVorteil14GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil14GP.Click += new System.EventHandler(this.txtVortei14_ValueChanged);
+            // 
+            // txtVorteil14Wert
+            // 
+            this.txtVorteil14Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil14Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil14Wert.Location = new System.Drawing.Point(242, 399);
+            this.txtVorteil14Wert.Name = "txtVorteil14Wert";
+            this.txtVorteil14Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil14Wert.TabIndex = 349;
+            this.txtVorteil14Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil14Wert.Click += new System.EventHandler(this.txtVortei14_ValueChanged);
+            // 
+            // txtVorteil14Name
+            // 
+            this.txtVorteil14Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil14Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil14Name.Location = new System.Drawing.Point(6, 399);
+            this.txtVorteil14Name.Name = "txtVorteil14Name";
+            this.txtVorteil14Name.Size = new System.Drawing.Size(230, 21);
+            this.txtVorteil14Name.TabIndex = 348;
+            this.txtVorteil14Name.Click += new System.EventHandler(this.txtVortei14_ValueChanged);
+            // 
+            // txtVorteil13Beschreibung
+            // 
+            this.txtVorteil13Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil13Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil13Beschreibung.Location = new System.Drawing.Point(334, 372);
+            this.txtVorteil13Beschreibung.Name = "txtVorteil13Beschreibung";
+            this.txtVorteil13Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtVorteil13Beschreibung.TabIndex = 345;
+            this.txtVorteil13Beschreibung.Click += new System.EventHandler(this.txtVorteil13_ValueChanged);
+            // 
+            // txtVorteil13GP
+            // 
+            this.txtVorteil13GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil13GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil13GP.Location = new System.Drawing.Point(288, 372);
+            this.txtVorteil13GP.Name = "txtVorteil13GP";
+            this.txtVorteil13GP.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil13GP.TabIndex = 344;
+            this.txtVorteil13GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil13GP.Click += new System.EventHandler(this.txtVorteil13_ValueChanged);
+            // 
+            // txtVorteil13Wert
+            // 
+            this.txtVorteil13Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil13Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil13Wert.Location = new System.Drawing.Point(242, 372);
+            this.txtVorteil13Wert.Name = "txtVorteil13Wert";
+            this.txtVorteil13Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil13Wert.TabIndex = 343;
+            this.txtVorteil13Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil13Wert.Click += new System.EventHandler(this.txtVorteil13_ValueChanged);
+            // 
+            // txtVorteil13Name
+            // 
+            this.txtVorteil13Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil13Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil13Name.Location = new System.Drawing.Point(6, 372);
+            this.txtVorteil13Name.Name = "txtVorteil13Name";
+            this.txtVorteil13Name.Size = new System.Drawing.Size(230, 21);
+            this.txtVorteil13Name.TabIndex = 342;
+            this.txtVorteil13Name.Click += new System.EventHandler(this.txtVorteil13_ValueChanged);
+            // 
+            // txtVorteil12Beschreibung
+            // 
+            this.txtVorteil12Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil12Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil12Beschreibung.Location = new System.Drawing.Point(334, 345);
+            this.txtVorteil12Beschreibung.Name = "txtVorteil12Beschreibung";
+            this.txtVorteil12Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtVorteil12Beschreibung.TabIndex = 339;
+            this.txtVorteil12Beschreibung.Click += new System.EventHandler(this.txtVorteil12_ValueChanged);
+            // 
+            // txtVorteil12GP
+            // 
+            this.txtVorteil12GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil12GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil12GP.Location = new System.Drawing.Point(288, 345);
+            this.txtVorteil12GP.Name = "txtVorteil12GP";
+            this.txtVorteil12GP.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil12GP.TabIndex = 338;
+            this.txtVorteil12GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil12GP.Click += new System.EventHandler(this.txtVorteil12_ValueChanged);
+            // 
+            // txtVorteil12Wert
+            // 
+            this.txtVorteil12Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil12Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil12Wert.Location = new System.Drawing.Point(242, 345);
+            this.txtVorteil12Wert.Name = "txtVorteil12Wert";
+            this.txtVorteil12Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil12Wert.TabIndex = 337;
+            this.txtVorteil12Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil12Wert.Click += new System.EventHandler(this.txtVorteil12_ValueChanged);
+            // 
+            // txtVorteil12Name
+            // 
+            this.txtVorteil12Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil12Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil12Name.Location = new System.Drawing.Point(6, 345);
+            this.txtVorteil12Name.Name = "txtVorteil12Name";
+            this.txtVorteil12Name.Size = new System.Drawing.Size(230, 21);
+            this.txtVorteil12Name.TabIndex = 336;
+            this.txtVorteil12Name.Click += new System.EventHandler(this.txtVorteil12_ValueChanged);
+            // 
+            // txtVorteil11Beschreibung
+            // 
+            this.txtVorteil11Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil11Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil11Beschreibung.Location = new System.Drawing.Point(334, 318);
+            this.txtVorteil11Beschreibung.Name = "txtVorteil11Beschreibung";
+            this.txtVorteil11Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtVorteil11Beschreibung.TabIndex = 333;
+            this.txtVorteil11Beschreibung.Click += new System.EventHandler(this.txtVorteil11_ValueChanged);
+            // 
+            // txtVorteil11GP
+            // 
+            this.txtVorteil11GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil11GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil11GP.Location = new System.Drawing.Point(288, 318);
+            this.txtVorteil11GP.Name = "txtVorteil11GP";
+            this.txtVorteil11GP.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil11GP.TabIndex = 332;
+            this.txtVorteil11GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil11GP.Click += new System.EventHandler(this.txtVorteil11_ValueChanged);
+            // 
+            // txtVorteil11Wert
+            // 
+            this.txtVorteil11Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil11Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil11Wert.Location = new System.Drawing.Point(242, 318);
+            this.txtVorteil11Wert.Name = "txtVorteil11Wert";
+            this.txtVorteil11Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil11Wert.TabIndex = 331;
+            this.txtVorteil11Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil11Wert.Click += new System.EventHandler(this.txtVorteil11_ValueChanged);
+            // 
+            // txtVorteil11Name
+            // 
+            this.txtVorteil11Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil11Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil11Name.Location = new System.Drawing.Point(6, 318);
+            this.txtVorteil11Name.Name = "txtVorteil11Name";
+            this.txtVorteil11Name.Size = new System.Drawing.Size(230, 21);
+            this.txtVorteil11Name.TabIndex = 330;
+            this.txtVorteil11Name.Click += new System.EventHandler(this.txtVorteil11_ValueChanged);
+            // 
+            // txtVorteil10Beschreibung
+            // 
+            this.txtVorteil10Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil10Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil10Beschreibung.Location = new System.Drawing.Point(334, 291);
+            this.txtVorteil10Beschreibung.Name = "txtVorteil10Beschreibung";
+            this.txtVorteil10Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtVorteil10Beschreibung.TabIndex = 327;
+            this.txtVorteil10Beschreibung.Click += new System.EventHandler(this.txtVorteil10_ValueChanged);
+            // 
+            // txtVorteil10GP
+            // 
+            this.txtVorteil10GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil10GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil10GP.Location = new System.Drawing.Point(288, 291);
+            this.txtVorteil10GP.Name = "txtVorteil10GP";
+            this.txtVorteil10GP.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil10GP.TabIndex = 326;
+            this.txtVorteil10GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil10GP.Click += new System.EventHandler(this.txtVorteil10_ValueChanged);
+            // 
+            // txtVorteil10Wert
+            // 
+            this.txtVorteil10Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil10Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil10Wert.Location = new System.Drawing.Point(242, 291);
+            this.txtVorteil10Wert.Name = "txtVorteil10Wert";
+            this.txtVorteil10Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil10Wert.TabIndex = 325;
+            this.txtVorteil10Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil10Wert.Click += new System.EventHandler(this.txtVorteil10_ValueChanged);
+            // 
+            // txtVorteil10Name
+            // 
+            this.txtVorteil10Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil10Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil10Name.Location = new System.Drawing.Point(6, 291);
+            this.txtVorteil10Name.Name = "txtVorteil10Name";
+            this.txtVorteil10Name.Size = new System.Drawing.Size(230, 21);
+            this.txtVorteil10Name.TabIndex = 324;
+            this.txtVorteil10Name.Click += new System.EventHandler(this.txtVorteil10_ValueChanged);
+            // 
+            // txtVorteil9Beschreibung
+            // 
+            this.txtVorteil9Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil9Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil9Beschreibung.Location = new System.Drawing.Point(334, 264);
+            this.txtVorteil9Beschreibung.Name = "txtVorteil9Beschreibung";
+            this.txtVorteil9Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtVorteil9Beschreibung.TabIndex = 321;
+            this.txtVorteil9Beschreibung.Click += new System.EventHandler(this.txtVorteil9_ValueChanged);
+            // 
+            // txtVorteil9GP
+            // 
+            this.txtVorteil9GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil9GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil9GP.Location = new System.Drawing.Point(288, 264);
+            this.txtVorteil9GP.Name = "txtVorteil9GP";
+            this.txtVorteil9GP.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil9GP.TabIndex = 320;
+            this.txtVorteil9GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil9GP.Click += new System.EventHandler(this.txtVorteil9_ValueChanged);
+            // 
+            // txtVorteil9Wert
+            // 
+            this.txtVorteil9Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil9Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil9Wert.Location = new System.Drawing.Point(242, 264);
+            this.txtVorteil9Wert.Name = "txtVorteil9Wert";
+            this.txtVorteil9Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil9Wert.TabIndex = 319;
+            this.txtVorteil9Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil9Wert.Click += new System.EventHandler(this.txtVorteil9_ValueChanged);
+            // 
+            // txtVorteil9Name
+            // 
+            this.txtVorteil9Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil9Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil9Name.Location = new System.Drawing.Point(6, 264);
+            this.txtVorteil9Name.Name = "txtVorteil9Name";
+            this.txtVorteil9Name.Size = new System.Drawing.Size(230, 21);
+            this.txtVorteil9Name.TabIndex = 318;
+            this.txtVorteil9Name.Click += new System.EventHandler(this.txtVorteil9_ValueChanged);
+            // 
+            // txtVorteil8Beschreibung
+            // 
+            this.txtVorteil8Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil8Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil8Beschreibung.Location = new System.Drawing.Point(334, 237);
+            this.txtVorteil8Beschreibung.Name = "txtVorteil8Beschreibung";
+            this.txtVorteil8Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtVorteil8Beschreibung.TabIndex = 315;
+            this.txtVorteil8Beschreibung.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
+            // 
+            // txtVorteil8GP
+            // 
+            this.txtVorteil8GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil8GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil8GP.Location = new System.Drawing.Point(288, 237);
+            this.txtVorteil8GP.Name = "txtVorteil8GP";
+            this.txtVorteil8GP.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil8GP.TabIndex = 314;
+            this.txtVorteil8GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil8GP.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
+            // 
+            // txtVorteil8Wert
+            // 
+            this.txtVorteil8Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil8Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil8Wert.Location = new System.Drawing.Point(242, 237);
+            this.txtVorteil8Wert.Name = "txtVorteil8Wert";
+            this.txtVorteil8Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil8Wert.TabIndex = 313;
+            this.txtVorteil8Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil8Wert.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
+            // 
+            // txtVorteil8Name
+            // 
+            this.txtVorteil8Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil8Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil8Name.Location = new System.Drawing.Point(6, 237);
+            this.txtVorteil8Name.Name = "txtVorteil8Name";
+            this.txtVorteil8Name.Size = new System.Drawing.Size(230, 21);
+            this.txtVorteil8Name.TabIndex = 312;
+            this.txtVorteil8Name.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
+            // 
+            // txtVorteil7Beschreibung
+            // 
+            this.txtVorteil7Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil7Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil7Beschreibung.Location = new System.Drawing.Point(334, 210);
+            this.txtVorteil7Beschreibung.Name = "txtVorteil7Beschreibung";
+            this.txtVorteil7Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtVorteil7Beschreibung.TabIndex = 309;
+            this.txtVorteil7Beschreibung.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
+            // 
+            // txtVorteil7GP
+            // 
+            this.txtVorteil7GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil7GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil7GP.Location = new System.Drawing.Point(288, 210);
+            this.txtVorteil7GP.Name = "txtVorteil7GP";
+            this.txtVorteil7GP.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil7GP.TabIndex = 308;
+            this.txtVorteil7GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil7GP.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
+            // 
+            // txtVorteil7Wert
+            // 
+            this.txtVorteil7Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil7Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil7Wert.Location = new System.Drawing.Point(242, 210);
+            this.txtVorteil7Wert.Name = "txtVorteil7Wert";
+            this.txtVorteil7Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil7Wert.TabIndex = 307;
+            this.txtVorteil7Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil7Wert.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
+            // 
+            // txtVorteil7Name
+            // 
+            this.txtVorteil7Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil7Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil7Name.Location = new System.Drawing.Point(6, 210);
+            this.txtVorteil7Name.Name = "txtVorteil7Name";
+            this.txtVorteil7Name.Size = new System.Drawing.Size(230, 21);
+            this.txtVorteil7Name.TabIndex = 306;
+            this.txtVorteil7Name.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
+            // 
+            // txtVorteil6Beschreibung
+            // 
+            this.txtVorteil6Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil6Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil6Beschreibung.Location = new System.Drawing.Point(334, 183);
+            this.txtVorteil6Beschreibung.Name = "txtVorteil6Beschreibung";
+            this.txtVorteil6Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtVorteil6Beschreibung.TabIndex = 303;
+            this.txtVorteil6Beschreibung.Click += new System.EventHandler(this.txtVorteil7_ValueChanged);
+            // 
+            // txtVorteil6GP
+            // 
+            this.txtVorteil6GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil6GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil6GP.Location = new System.Drawing.Point(288, 183);
+            this.txtVorteil6GP.Name = "txtVorteil6GP";
+            this.txtVorteil6GP.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil6GP.TabIndex = 302;
+            this.txtVorteil6GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil6GP.Click += new System.EventHandler(this.txtVorteil7_ValueChanged);
+            // 
+            // txtVorteil6Wert
+            // 
+            this.txtVorteil6Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil6Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil6Wert.Location = new System.Drawing.Point(242, 183);
+            this.txtVorteil6Wert.Name = "txtVorteil6Wert";
+            this.txtVorteil6Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil6Wert.TabIndex = 301;
+            this.txtVorteil6Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil6Wert.Click += new System.EventHandler(this.txtVorteil7_ValueChanged);
+            // 
+            // txtVorteil6Name
+            // 
+            this.txtVorteil6Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil6Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil6Name.Location = new System.Drawing.Point(6, 183);
+            this.txtVorteil6Name.Name = "txtVorteil6Name";
+            this.txtVorteil6Name.Size = new System.Drawing.Size(230, 21);
+            this.txtVorteil6Name.TabIndex = 300;
+            this.txtVorteil6Name.Click += new System.EventHandler(this.txtVorteil7_ValueChanged);
+            // 
+            // txtVorteil5Beschreibung
+            // 
+            this.txtVorteil5Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil5Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil5Beschreibung.Location = new System.Drawing.Point(334, 156);
+            this.txtVorteil5Beschreibung.Name = "txtVorteil5Beschreibung";
+            this.txtVorteil5Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtVorteil5Beschreibung.TabIndex = 297;
+            this.txtVorteil5Beschreibung.Click += new System.EventHandler(this.txtVorteil5_ValueChanged);
+            // 
+            // txtVorteil5GP
+            // 
+            this.txtVorteil5GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil5GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil5GP.Location = new System.Drawing.Point(288, 156);
+            this.txtVorteil5GP.Name = "txtVorteil5GP";
+            this.txtVorteil5GP.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil5GP.TabIndex = 296;
+            this.txtVorteil5GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil5GP.Click += new System.EventHandler(this.txtVorteil5_ValueChanged);
+            // 
+            // txtVorteil5Wert
+            // 
+            this.txtVorteil5Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil5Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil5Wert.Location = new System.Drawing.Point(242, 156);
+            this.txtVorteil5Wert.Name = "txtVorteil5Wert";
+            this.txtVorteil5Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil5Wert.TabIndex = 295;
+            this.txtVorteil5Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil5Wert.Click += new System.EventHandler(this.txtVorteil5_ValueChanged);
+            // 
+            // txtVorteil5Name
+            // 
+            this.txtVorteil5Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil5Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil5Name.Location = new System.Drawing.Point(6, 156);
+            this.txtVorteil5Name.Name = "txtVorteil5Name";
+            this.txtVorteil5Name.Size = new System.Drawing.Size(230, 21);
+            this.txtVorteil5Name.TabIndex = 294;
+            this.txtVorteil5Name.Click += new System.EventHandler(this.txtVorteil5_ValueChanged);
+            // 
+            // txtVorteil4Beschreibung
+            // 
+            this.txtVorteil4Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil4Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil4Beschreibung.Location = new System.Drawing.Point(334, 129);
+            this.txtVorteil4Beschreibung.Name = "txtVorteil4Beschreibung";
+            this.txtVorteil4Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtVorteil4Beschreibung.TabIndex = 291;
+            this.txtVorteil4Beschreibung.Click += new System.EventHandler(this.txtVorteil4_ValueChanged);
+            // 
+            // txtVorteil4GP
+            // 
+            this.txtVorteil4GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil4GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil4GP.Location = new System.Drawing.Point(288, 129);
+            this.txtVorteil4GP.Name = "txtVorteil4GP";
+            this.txtVorteil4GP.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil4GP.TabIndex = 290;
+            this.txtVorteil4GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil4GP.Click += new System.EventHandler(this.txtVorteil4_ValueChanged);
+            // 
+            // txtVorteil4Wert
+            // 
+            this.txtVorteil4Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil4Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil4Wert.Location = new System.Drawing.Point(242, 129);
+            this.txtVorteil4Wert.Name = "txtVorteil4Wert";
+            this.txtVorteil4Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil4Wert.TabIndex = 289;
+            this.txtVorteil4Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil4Wert.Click += new System.EventHandler(this.txtVorteil4_ValueChanged);
+            // 
+            // txtVorteil4Name
+            // 
+            this.txtVorteil4Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil4Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil4Name.Location = new System.Drawing.Point(6, 129);
+            this.txtVorteil4Name.Name = "txtVorteil4Name";
+            this.txtVorteil4Name.Size = new System.Drawing.Size(230, 21);
+            this.txtVorteil4Name.TabIndex = 288;
+            this.txtVorteil4Name.Click += new System.EventHandler(this.txtVorteil4_ValueChanged);
+            // 
+            // txtVorteil3Beschreibung
+            // 
+            this.txtVorteil3Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil3Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil3Beschreibung.Location = new System.Drawing.Point(334, 102);
+            this.txtVorteil3Beschreibung.Name = "txtVorteil3Beschreibung";
+            this.txtVorteil3Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtVorteil3Beschreibung.TabIndex = 285;
+            this.txtVorteil3Beschreibung.Click += new System.EventHandler(this.txtVorteil3_ValueChanged);
+            // 
+            // txtVorteil3GP
+            // 
+            this.txtVorteil3GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil3GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil3GP.Location = new System.Drawing.Point(288, 102);
+            this.txtVorteil3GP.Name = "txtVorteil3GP";
+            this.txtVorteil3GP.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil3GP.TabIndex = 284;
+            this.txtVorteil3GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil3GP.Click += new System.EventHandler(this.txtVorteil3_ValueChanged);
+            // 
+            // txtVorteil3Wert
+            // 
+            this.txtVorteil3Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil3Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil3Wert.Location = new System.Drawing.Point(242, 102);
+            this.txtVorteil3Wert.Name = "txtVorteil3Wert";
+            this.txtVorteil3Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil3Wert.TabIndex = 283;
+            this.txtVorteil3Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil3Wert.Click += new System.EventHandler(this.txtVorteil3_ValueChanged);
+            // 
+            // txtVorteil3Name
+            // 
+            this.txtVorteil3Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil3Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil3Name.Location = new System.Drawing.Point(6, 102);
+            this.txtVorteil3Name.Name = "txtVorteil3Name";
+            this.txtVorteil3Name.Size = new System.Drawing.Size(230, 21);
+            this.txtVorteil3Name.TabIndex = 282;
+            this.txtVorteil3Name.Click += new System.EventHandler(this.txtVorteil3_ValueChanged);
+            // 
+            // txtVorteil2Beschreibung
+            // 
+            this.txtVorteil2Beschreibung.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil2Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil2Beschreibung.Location = new System.Drawing.Point(334, 75);
+            this.txtVorteil2Beschreibung.Name = "txtVorteil2Beschreibung";
+            this.txtVorteil2Beschreibung.Size = new System.Drawing.Size(360, 21);
+            this.txtVorteil2Beschreibung.TabIndex = 279;
+            this.txtVorteil2Beschreibung.Click += new System.EventHandler(this.txtVorteil2_ValueChanged);
+            // 
+            // txtVorteil2GP
+            // 
+            this.txtVorteil2GP.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil2GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil2GP.Location = new System.Drawing.Point(288, 75);
+            this.txtVorteil2GP.Name = "txtVorteil2GP";
+            this.txtVorteil2GP.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil2GP.TabIndex = 278;
+            this.txtVorteil2GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil2GP.Click += new System.EventHandler(this.txtVorteil2_ValueChanged);
+            // 
+            // txtVorteil2Wert
+            // 
+            this.txtVorteil2Wert.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil2Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil2Wert.Location = new System.Drawing.Point(242, 75);
+            this.txtVorteil2Wert.Name = "txtVorteil2Wert";
+            this.txtVorteil2Wert.Size = new System.Drawing.Size(40, 21);
+            this.txtVorteil2Wert.TabIndex = 277;
+            this.txtVorteil2Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVorteil2Wert.Click += new System.EventHandler(this.txtVorteil2_ValueChanged);
+            // 
+            // txtVorteil2Name
+            // 
+            this.txtVorteil2Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txtVorteil2Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVorteil2Name.Location = new System.Drawing.Point(6, 75);
+            this.txtVorteil2Name.Name = "txtVorteil2Name";
+            this.txtVorteil2Name.Size = new System.Drawing.Size(230, 21);
+            this.txtVorteil2Name.TabIndex = 276;
+            this.txtVorteil2Name.Click += new System.EventHandler(this.txtVorteil2_ValueChanged);
             // 
             // txtVorteil1Beschreibung
             // 
             this.txtVorteil1Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             this.txtVorteil1Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil1Beschreibung.Location = new System.Drawing.Point(504, 48);
+            this.txtVorteil1Beschreibung.Location = new System.Drawing.Point(334, 48);
             this.txtVorteil1Beschreibung.Name = "txtVorteil1Beschreibung";
-            this.txtVorteil1Beschreibung.Size = new System.Drawing.Size(400, 21);
+            this.txtVorteil1Beschreibung.Size = new System.Drawing.Size(360, 21);
             this.txtVorteil1Beschreibung.TabIndex = 273;
-            this.txtVorteil1Beschreibung.TextChanged += new System.EventHandler(this.txtVorteil1_ValueChanged);
+            this.txtVorteil1Beschreibung.Click += new System.EventHandler(this.txtVorteil1_ValueChanged);
             // 
             // txtVorteil1GP
             // 
             this.txtVorteil1GP.BackColor = System.Drawing.SystemColors.Window;
             this.txtVorteil1GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil1GP.Location = new System.Drawing.Point(458, 48);
+            this.txtVorteil1GP.Location = new System.Drawing.Point(288, 48);
             this.txtVorteil1GP.Name = "txtVorteil1GP";
             this.txtVorteil1GP.Size = new System.Drawing.Size(40, 21);
             this.txtVorteil1GP.TabIndex = 272;
             this.txtVorteil1GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtVorteil1GP.TextChanged += new System.EventHandler(this.txtVorteil1_ValueChanged);
+            this.txtVorteil1GP.Click += new System.EventHandler(this.txtVorteil1_ValueChanged);
             // 
             // txtVorteil1Wert
             // 
             this.txtVorteil1Wert.BackColor = System.Drawing.SystemColors.Window;
             this.txtVorteil1Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil1Wert.Location = new System.Drawing.Point(412, 48);
+            this.txtVorteil1Wert.Location = new System.Drawing.Point(242, 48);
             this.txtVorteil1Wert.Name = "txtVorteil1Wert";
             this.txtVorteil1Wert.Size = new System.Drawing.Size(40, 21);
             this.txtVorteil1Wert.TabIndex = 271;
             this.txtVorteil1Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtVorteil1Wert.TextChanged += new System.EventHandler(this.txtVorteil1_ValueChanged);
+            this.txtVorteil1Wert.Click += new System.EventHandler(this.txtVorteil1_ValueChanged);
             // 
             // txtVorteil1Name
             // 
@@ -498,25 +1979,15 @@
             this.txtVorteil1Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVorteil1Name.Location = new System.Drawing.Point(6, 48);
             this.txtVorteil1Name.Name = "txtVorteil1Name";
-            this.txtVorteil1Name.Size = new System.Drawing.Size(400, 21);
+            this.txtVorteil1Name.Size = new System.Drawing.Size(230, 21);
             this.txtVorteil1Name.TabIndex = 266;
-            this.txtVorteil1Name.TextChanged += new System.EventHandler(this.txtVorteil1_ValueChanged);
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label61.Location = new System.Drawing.Point(907, 32);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(42, 13);
-            this.label61.TabIndex = 270;
-            this.label61.Text = "Bonus";
+            this.txtVorteil1Name.Click += new System.EventHandler(this.txtVorteil1_ValueChanged);
             // 
             // label60
             // 
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label60.Location = new System.Drawing.Point(669, 32);
+            this.label60.Location = new System.Drawing.Point(477, 32);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(84, 13);
             this.label60.TabIndex = 269;
@@ -526,7 +1997,7 @@
             // 
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label59.Location = new System.Drawing.Point(466, 32);
+            this.label59.Location = new System.Drawing.Point(296, 32);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(24, 13);
             this.label59.TabIndex = 268;
@@ -536,7 +2007,7 @@
             // 
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label58.Location = new System.Drawing.Point(414, 32);
+            this.label58.Location = new System.Drawing.Point(245, 32);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(34, 13);
             this.label58.TabIndex = 267;
@@ -546,7 +2017,7 @@
             // 
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label57.Location = new System.Drawing.Point(175, 32);
+            this.label57.Location = new System.Drawing.Point(97, 32);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(43, 13);
             this.label57.TabIndex = 266;
@@ -2212,7 +3683,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1168, 696);
+            this.tabPage2.Size = new System.Drawing.Size(1438, 974);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -2221,7 +3692,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1325, 772);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1507, 927);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -2229,6 +3701,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -2413,16 +3887,134 @@
         private System.Windows.Forms.Label Stufe;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtVorteil1Name;
-        private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.TextBox txtVorteil1Wert;
-        private System.Windows.Forms.TextBox txtVorteil1Bonus;
         private System.Windows.Forms.TextBox txtVorteil1Beschreibung;
         private System.Windows.Forms.TextBox txtVorteil1GP;
-        private System.Windows.Forms.ComboBox drpVorteile1Type;
+        private System.Windows.Forms.TextBox txtVorteil10Beschreibung;
+        private System.Windows.Forms.TextBox txtVorteil10GP;
+        private System.Windows.Forms.TextBox txtVorteil10Wert;
+        private System.Windows.Forms.TextBox txtVorteil10Name;
+        private System.Windows.Forms.TextBox txtVorteil9Beschreibung;
+        private System.Windows.Forms.TextBox txtVorteil9GP;
+        private System.Windows.Forms.TextBox txtVorteil9Wert;
+        private System.Windows.Forms.TextBox txtVorteil9Name;
+        private System.Windows.Forms.TextBox txtVorteil8Beschreibung;
+        private System.Windows.Forms.TextBox txtVorteil8GP;
+        private System.Windows.Forms.TextBox txtVorteil8Wert;
+        private System.Windows.Forms.TextBox txtVorteil8Name;
+        private System.Windows.Forms.TextBox txtVorteil7Beschreibung;
+        private System.Windows.Forms.TextBox txtVorteil7GP;
+        private System.Windows.Forms.TextBox txtVorteil7Wert;
+        private System.Windows.Forms.TextBox txtVorteil7Name;
+        private System.Windows.Forms.TextBox txtVorteil6Beschreibung;
+        private System.Windows.Forms.TextBox txtVorteil6GP;
+        private System.Windows.Forms.TextBox txtVorteil6Wert;
+        private System.Windows.Forms.TextBox txtVorteil6Name;
+        private System.Windows.Forms.TextBox txtVorteil5Beschreibung;
+        private System.Windows.Forms.TextBox txtVorteil5GP;
+        private System.Windows.Forms.TextBox txtVorteil5Wert;
+        private System.Windows.Forms.TextBox txtVorteil5Name;
+        private System.Windows.Forms.TextBox txtVorteil4Beschreibung;
+        private System.Windows.Forms.TextBox txtVorteil4GP;
+        private System.Windows.Forms.TextBox txtVorteil4Wert;
+        private System.Windows.Forms.TextBox txtVorteil4Name;
+        private System.Windows.Forms.TextBox txtVorteil3Beschreibung;
+        private System.Windows.Forms.TextBox txtVorteil3GP;
+        private System.Windows.Forms.TextBox txtVorteil3Wert;
+        private System.Windows.Forms.TextBox txtVorteil3Name;
+        private System.Windows.Forms.TextBox txtVorteil2Beschreibung;
+        private System.Windows.Forms.TextBox txtVorteil2GP;
+        private System.Windows.Forms.TextBox txtVorteil2Wert;
+        private System.Windows.Forms.TextBox txtVorteil2Name;
+        private System.Windows.Forms.TextBox txtVorteil15Beschreibung;
+        private System.Windows.Forms.TextBox txtVorteil15GP;
+        private System.Windows.Forms.TextBox txtVorteil15Wert;
+        private System.Windows.Forms.TextBox txtVorteil15Name;
+        private System.Windows.Forms.TextBox txtVorteil14Beschreibung;
+        private System.Windows.Forms.TextBox txtVorteil14GP;
+        private System.Windows.Forms.TextBox txtVorteil14Wert;
+        private System.Windows.Forms.TextBox txtVorteil14Name;
+        private System.Windows.Forms.TextBox txtVorteil13Beschreibung;
+        private System.Windows.Forms.TextBox txtVorteil13GP;
+        private System.Windows.Forms.TextBox txtVorteil13Wert;
+        private System.Windows.Forms.TextBox txtVorteil13Name;
+        private System.Windows.Forms.TextBox txtVorteil12Beschreibung;
+        private System.Windows.Forms.TextBox txtVorteil12GP;
+        private System.Windows.Forms.TextBox txtVorteil12Wert;
+        private System.Windows.Forms.TextBox txtVorteil12Name;
+        private System.Windows.Forms.TextBox txtVorteil11Beschreibung;
+        private System.Windows.Forms.TextBox txtVorteil11GP;
+        private System.Windows.Forms.TextBox txtVorteil11Wert;
+        private System.Windows.Forms.TextBox txtVorteil11Name;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtNachteil15Beschreibung;
+        private System.Windows.Forms.TextBox txtNachteil15GP;
+        private System.Windows.Forms.TextBox txtNachteil15Wert;
+        private System.Windows.Forms.TextBox txtNachteil15Name;
+        private System.Windows.Forms.TextBox txtNachteil14Beschreibung;
+        private System.Windows.Forms.TextBox txtNachteil14GP;
+        private System.Windows.Forms.TextBox txtNachteil14Wert;
+        private System.Windows.Forms.TextBox txtNachteil14Name;
+        private System.Windows.Forms.TextBox txtNachteil13Beschreibung;
+        private System.Windows.Forms.TextBox txtNachteil13GP;
+        private System.Windows.Forms.TextBox txtNachteil13Wert;
+        private System.Windows.Forms.TextBox txtNachteil13Name;
+        private System.Windows.Forms.TextBox txtNachteil12Beschreibung;
+        private System.Windows.Forms.TextBox txtNachteil12GP;
+        private System.Windows.Forms.TextBox txtNachteil12Wert;
+        private System.Windows.Forms.TextBox txtNachteil12Name;
+        private System.Windows.Forms.TextBox txtNachteil11Beschreibung;
+        private System.Windows.Forms.TextBox txtNachteil11GP;
+        private System.Windows.Forms.TextBox txtNachteil11Wert;
+        private System.Windows.Forms.TextBox txtNachteil11Name;
+        private System.Windows.Forms.TextBox txtNachteil10Beschreibung;
+        private System.Windows.Forms.TextBox txtNachteil10GP;
+        private System.Windows.Forms.TextBox txtNachteil10Wert;
+        private System.Windows.Forms.TextBox txtNachteil10Name;
+        private System.Windows.Forms.TextBox txtNachteil9Beschreibung;
+        private System.Windows.Forms.TextBox txtNachteil9GP;
+        private System.Windows.Forms.TextBox txtNachteil9Wert;
+        private System.Windows.Forms.TextBox txtNachteil9Name;
+        private System.Windows.Forms.TextBox txtNachteil8Beschreibung;
+        private System.Windows.Forms.TextBox txtNachteil8GP;
+        private System.Windows.Forms.TextBox txtNachteil8Wert;
+        private System.Windows.Forms.TextBox txtNachteil8Name;
+        private System.Windows.Forms.TextBox txtNachteil7Beschreibung;
+        private System.Windows.Forms.TextBox txtNachteil7GP;
+        private System.Windows.Forms.TextBox txtNachteil7Wert;
+        private System.Windows.Forms.TextBox txtNachteil7Name;
+        private System.Windows.Forms.TextBox txtNachteil6Beschreibung;
+        private System.Windows.Forms.TextBox txtNachteil6GP;
+        private System.Windows.Forms.TextBox txtNachteil6Wert;
+        private System.Windows.Forms.TextBox txtNachteil6Name;
+        private System.Windows.Forms.TextBox txtNachteil5Beschreibung;
+        private System.Windows.Forms.TextBox txtNachteil5GP;
+        private System.Windows.Forms.TextBox txtNachteil5Wert;
+        private System.Windows.Forms.TextBox txtNachteil5Name;
+        private System.Windows.Forms.TextBox txtNachteil4Beschreibung;
+        private System.Windows.Forms.TextBox txtNachteil4GP;
+        private System.Windows.Forms.TextBox txtNachteil4Wert;
+        private System.Windows.Forms.TextBox txtNachteil4Name;
+        private System.Windows.Forms.TextBox txtNachteil3Beschreibung;
+        private System.Windows.Forms.TextBox txtNachteil3GP;
+        private System.Windows.Forms.TextBox txtNachteil3Wert;
+        private System.Windows.Forms.TextBox txtNachteil3Name;
+        private System.Windows.Forms.TextBox txtNachteil2Beschreibung;
+        private System.Windows.Forms.TextBox txtNachteil2GP;
+        private System.Windows.Forms.TextBox txtNachteil2Wert;
+        private System.Windows.Forms.TextBox txtNachteil2Name;
+        private System.Windows.Forms.TextBox txtNachteil1Beschreibung;
+        private System.Windows.Forms.TextBox txtNachteil1GP;
+        private System.Windows.Forms.TextBox txtNachteil1Wert;
+        private System.Windows.Forms.TextBox txtNachteil1Name;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label64;
     }
 }
 
