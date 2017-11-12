@@ -12,12 +12,44 @@ namespace DSA_Project
 {
     public partial class CreateFeature : Form
     {
-        Dictionary<DSA_ATTRIBUTE, int> attributeBonus;
         Feature Feature;
 
         public CreateFeature()
         {
             setUP();
+
+            txtName.Text            = "";
+            txtDescription.Text     = "";
+            txtGP.Text              = "";
+            txtValue.Text           = "";
+
+            String zero = (0).ToString();
+
+            txtCharisma.Text            = zero;
+            txtFingerfertigkeit.Text    = zero;
+            txtGewandheit.Text          = zero;
+            txtIntuition.Text           = zero;
+            txtKlugheit.Text            = zero;
+            txtKonstitution.Text        = zero;
+            txtKörperkraft.Text         = zero;
+            txtMut.Text                 = zero;
+            txtSozialstatus.Text        = zero;
+
+            txtAstralenergie.Text       = zero;
+            txtAusdauer.Text            = zero;
+            txtKarmaenergie.Text        = zero;
+            txtLebensenergie.Text       = zero;
+            txtMagieresistenz.Text      = zero;
+
+            txtAttacke.Text             = zero;
+            txtParade.Text              = zero;
+            txtFernkampf.Text           = zero;
+            txtInitiative.Text          = zero;
+            txtBeherschungswert.Text    = zero;
+            txtArtefaktKontrolle.Text   = zero;
+            txtWundschwelle.Text        = zero;
+            txtEntrückung.Text          = zero;
+            txtGeschwindigkeit.Text     = zero;            
         }
         public CreateFeature(Feature feature)
         {
@@ -28,17 +60,16 @@ namespace DSA_Project
             txtDescription.Text = feature.getSimpleDescription();
             txtGP.Text = feature.getGP();
             txtValue.Text = feature.getValue();
-
-            
-            txtCharisma.Text = feature.getAttributeBonus(DSA_ATTRIBUTE.CHARISMA).ToString();
-            txtFingerfertigkeit.Text = feature.getAttributeBonus(DSA_ATTRIBUTE.FINGERFERTIGKEIT).ToString();
-            txtGewandheit.Text      = feature.getAttributeBonus(DSA_ATTRIBUTE.GEWANDHEIT).ToString();
-            txtIntuition.Text       = feature.getAttributeBonus(DSA_ATTRIBUTE.INTUITION).ToString();
-            txtKlugheit.Text        = feature.getAttributeBonus(DSA_ATTRIBUTE.KLUGHEIT).ToString();
-            txtKonstitution.Text    = feature.getAttributeBonus(DSA_ATTRIBUTE.KONSTITUTION).ToString();
-            txtKörperkraft.Text     = feature.getAttributeBonus(DSA_ATTRIBUTE.KÖRPERKRAFT).ToString();
-            txtMut.Text             = feature.getAttributeBonus(DSA_ATTRIBUTE.MUT).ToString();
-            txtSozialstatus.Text    = feature.getAttributeBonus(DSA_ATTRIBUTE.SOZAILSTATUS).ToString();
+                        
+            txtCharisma.Text = feature.getAttributeBonus(DSA_ATTRIBUTE.CH).ToString();
+            txtFingerfertigkeit.Text = feature.getAttributeBonus(DSA_ATTRIBUTE.FF).ToString();
+            txtGewandheit.Text      = feature.getAttributeBonus(DSA_ATTRIBUTE.GE).ToString();
+            txtIntuition.Text       = feature.getAttributeBonus(DSA_ATTRIBUTE.IN).ToString();
+            txtKlugheit.Text        = feature.getAttributeBonus(DSA_ATTRIBUTE.KL).ToString();
+            txtKonstitution.Text    = feature.getAttributeBonus(DSA_ATTRIBUTE.KO).ToString();
+            txtKörperkraft.Text     = feature.getAttributeBonus(DSA_ATTRIBUTE.KK).ToString();
+            txtMut.Text             = feature.getAttributeBonus(DSA_ATTRIBUTE.MU).ToString();
+            txtSozialstatus.Text    = feature.getAttributeBonus(DSA_ATTRIBUTE.SO).ToString();
 
             txtAstralenergie.Text   = feature.getEnergieBonus(DSA_ENERGIEN.ASTRALENERGIE).ToString();
             txtAusdauer.Text        = feature.getEnergieBonus(DSA_ENERGIEN.AUSDAUER).ToString();
@@ -50,7 +81,6 @@ namespace DSA_Project
         {
             InitializeComponent();
             
-            attributeBonus = new Dictionary<DSA_ATTRIBUTE, int>();
             Feature = null;
 
             List<String> talente = new List<string>();
@@ -81,21 +111,31 @@ namespace DSA_Project
         {
             Feature newFeature = new Feature(txtName.Text, txtDescription.Text, txtValue.Text, txtGP.Text);
 
-            newFeature.setAttributeBonus(DSA_ATTRIBUTE.MUT, convertToInt(txtMut.Text));
-            newFeature.setAttributeBonus(DSA_ATTRIBUTE.KLUGHEIT, convertToInt(txtKlugheit.Text));
-            newFeature.setAttributeBonus(DSA_ATTRIBUTE.INTUITION, convertToInt(txtIntuition.Text));
-            newFeature.setAttributeBonus(DSA_ATTRIBUTE.CHARISMA, convertToInt(txtCharisma.Text));
-            newFeature.setAttributeBonus(DSA_ATTRIBUTE.FINGERFERTIGKEIT, convertToInt(txtFingerfertigkeit.Text));
-            newFeature.setAttributeBonus(DSA_ATTRIBUTE.GEWANDHEIT, convertToInt(txtGewandheit.Text));
-            newFeature.setAttributeBonus(DSA_ATTRIBUTE.KONSTITUTION, convertToInt(txtKonstitution.Text));
-            newFeature.setAttributeBonus(DSA_ATTRIBUTE.KÖRPERKRAFT, convertToInt(txtKörperkraft.Text));
-            newFeature.setAttributeBonus(DSA_ATTRIBUTE.SOZAILSTATUS, convertToInt(txtSozialstatus.Text));
+            newFeature.setAttributeBonus(DSA_ATTRIBUTE.MU, convertToInt(txtMut.Text));
+            newFeature.setAttributeBonus(DSA_ATTRIBUTE.KL, convertToInt(txtKlugheit.Text));
+            newFeature.setAttributeBonus(DSA_ATTRIBUTE.IN, convertToInt(txtIntuition.Text));
+            newFeature.setAttributeBonus(DSA_ATTRIBUTE.CH, convertToInt(txtCharisma.Text));
+            newFeature.setAttributeBonus(DSA_ATTRIBUTE.FF, convertToInt(txtFingerfertigkeit.Text));
+            newFeature.setAttributeBonus(DSA_ATTRIBUTE.GE, convertToInt(txtGewandheit.Text));
+            newFeature.setAttributeBonus(DSA_ATTRIBUTE.KO, convertToInt(txtKonstitution.Text));
+            newFeature.setAttributeBonus(DSA_ATTRIBUTE.KK, convertToInt(txtKörperkraft.Text));
+            newFeature.setAttributeBonus(DSA_ATTRIBUTE.SO, convertToInt(txtSozialstatus.Text));
 
             newFeature.setEnergieBonus(DSA_ENERGIEN.ASTRALENERGIE, convertToInt(txtAstralenergie.Text));
             newFeature.setEnergieBonus(DSA_ENERGIEN.AUSDAUER, convertToInt(txtAusdauer.Text));
             newFeature.setEnergieBonus(DSA_ENERGIEN.KARMAENERGIE, convertToInt(txtKarmaenergie.Text));
             newFeature.setEnergieBonus(DSA_ENERGIEN.LEBENSENERGIE, convertToInt(txtLebensenergie.Text));
             newFeature.setEnergieBonus(DSA_ENERGIEN.MAGIERESISTENZ, convertToInt(txtMagieresistenz.Text));
+
+            newFeature.setAdvancedValues(DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, convertToInt(txtArtefaktKontrolle.Text));
+            newFeature.setAdvancedValues(DSA_ADVANCEDVALUES.ATTACKE_BASIS, convertToInt(txtAttacke.Text));
+            newFeature.setAdvancedValues(DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT, convertToInt(txtBeherschungswert.Text));
+            newFeature.setAdvancedValues(DSA_ADVANCEDVALUES.ENTRÜCKUNG, convertToInt(txtEntrückung.Text));
+            newFeature.setAdvancedValues(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS, convertToInt(txtFernkampf.Text));
+            newFeature.setAdvancedValues(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT, convertToInt(txtGeschwindigkeit.Text));
+            newFeature.setAdvancedValues(DSA_ADVANCEDVALUES.INITATIVE_BASIS, convertToInt(txtInitiative.Text));
+            newFeature.setAdvancedValues(DSA_ADVANCEDVALUES.PARADE_BASIS, convertToInt(txtParade.Text));
+            newFeature.setAdvancedValues(DSA_ADVANCEDVALUES.WUNDSCHWELLE, convertToInt(txtWundschwelle.Text));
 
             return newFeature;
         }
@@ -186,6 +226,51 @@ namespace DSA_Project
         }
 
         private void CreateFeature_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAttacke_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtParade_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFernkampf_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtInitiative_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBeherschungswert_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtArtefaktKontrolle_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Wundschwelle_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEntrückung_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGeschwindigkeit_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -11,7 +11,6 @@ namespace DSA_Project
     //*toDO: try Am obersten Punkt, bei Misserfolg alles als Korrupt erklären (Simple Lösung)
     static class LoadCharakterXML
     {
-        private static String Heldenbrief   = "/CharakterBogen/HeldenBrief";
         public static Charakter loadCharakter(String fileName)
         {
             Charakter charakter = new Charakter();
@@ -19,86 +18,200 @@ namespace DSA_Project
             XmlDocument characterFile = new XmlDocument();
             characterFile.Load(fileName);
 
-            loadHeldenbrief(characterFile.SelectSingleNode(Heldenbrief), charakter);
-            
-            
+            XmlNode characterNode = characterFile.SelectSingleNode("/" + ManagmentSave.CharacterBogenElement);
+            XmlNode heldenbriefNode = characterNode.SelectSingleNode(ManagmentSave.HeldenBriefElement);
+
+            loadHeldenbrief(heldenbriefNode, charakter);
+
             return charakter;
         }
+
         private static void loadHeldenbrief(XmlNode HeldenbriefNode, Charakter charakter)
         {
-            foreach(XmlNode node in HeldenbriefNode)
+            foreach (XmlNode node in HeldenbriefNode)
             {
                 switch (node.Name)
                 {
-                    case "BasisDaten": loadBasicData(node, charakter); break;
-                    case "Attribute": loadAttribute(node, charakter); break;
+                    case ManagmentSave.BasisDatenElement: loadBasicData(node, charakter); break;
+                    case ManagmentSave.AttributeElement: loadAttribute(node, charakter); break;
+                    case ManagmentSave.MoneyElement: loadMoney(node, charakter); break;
+                    case ManagmentSave.FeatureElement: loadFeature(node, charakter); break;
                 }
-            }            
+            }
         }
         private static void loadBasicData(XmlNode BasicDataNode, Charakter charakter)
         {
-            if(BasicDataNode == null)
+            String[] name = Enum.GetNames(typeof(DSA_BASICVALUES));
+            int length = Enum.GetNames(typeof(DSA_BASICVALUES)).Length;
+
+            for (int i = 0; i < length; i++)
             {
-                Console.WriteLine("BasisDaten is null");
-                return;
+                foreach (XmlNode node in BasicDataNode)
+                {
+                    if ((node.Name).ToUpper() == name[i].ToUpper())
+                    {
+                        charakter.setBasicValues((DSA_BASICVALUES)i, node.InnerText);
+                    }
+                }
             }
-            
+
             foreach (XmlNode node in BasicDataNode)
             {
-                switch (node.Name)
+                if (ManagmentSave.Modification.Length < node.Name.Length)
                 {
-                    case "Name":                charakter.setBasicValues(DSA_BASICVALUES.NAME, node.InnerText);             break;
-                    case "AlterGeburstag":      charakter.setBasicValues(DSA_BASICVALUES.ALTER, node.InnerText);            break;
-                    case "Geschlecht":          charakter.setBasicValues(DSA_BASICVALUES.GESCHLECHT, node.InnerText);       break;
-                    case "Größe":               charakter.setBasicValues(DSA_BASICVALUES.GRÖSE, node.InnerText);            break;
-                    case "Gewicht":             charakter.setBasicValues(DSA_BASICVALUES.GEWICHT, node.InnerText);          break;
-                    case "Augenfarbe":          charakter.setBasicValues(DSA_BASICVALUES.AUGENFARBE, node.InnerText);       break;
-                    case "HaarFellFarbe":       charakter.setBasicValues(DSA_BASICVALUES.HAARFARBE, node.InnerText);        break;
-                    case "Hautfarbe":           charakter.setBasicValues(DSA_BASICVALUES.HAUTFARBE, node.InnerText);        break;
-                    case "Familienstand":       charakter.setBasicValues(DSA_BASICVALUES.FAMILIENSTAND, node.InnerText);    break;
-                    case "Anrede":              charakter.setBasicValues(DSA_BASICVALUES.ANREDE, node.InnerText);           break;
-                    case "Gottheit-en":         charakter.setBasicValues(DSA_BASICVALUES.GOTTHEIT, node.InnerXml);          break;
-                    case "Resse-en":            charakter.setBasicValues(DSA_BASICVALUES.RASSE, node.InnerText);            break;
-                    case "Kultur-en":           charakter.setBasicValues(DSA_BASICVALUES.KULTUR, node.InnerText);           break;
-                    case "Profession-en":       charakter.setBasicValues(DSA_BASICVALUES.PROFESSION, node.InnerText);       break;
+                    if (String.Compare(node.Name.Substring(0, ManagmentSave.Modification.Length), ManagmentSave.Modification, true) == 0)
+                    {
+                        int number = 0;
+                        String numberString = node.Name.Substring(ManagmentSave.Modification.Length, node.Name.Length - ManagmentSave.Modification.Length);
+                        Int32.TryParse(numberString, out number);
+
+                        charakter.setModifikatoren(number, node.InnerText);
+                    }
+                }
+                if (ManagmentSave.Göttergeschenke.Length < node.Name.Length)
+                {
+                    if (String.Compare(node.Name.Substring(0, ManagmentSave.Göttergeschenke.Length), ManagmentSave.Göttergeschenke, true) == 0)
+                    {
+                        int number = 0;
+                        String numberString = node.Name.Substring(ManagmentSave.Göttergeschenke.Length, node.Name.Length - ManagmentSave.Göttergeschenke.Length);
+                        Int32.TryParse(numberString, out number);
+
+                        charakter.setGöttergeschenk(number, node.InnerText);
+                    }
                 }
             }
 
         }
         private static void loadAttribute(XmlNode AttributeNode, Charakter charakter)
         {
-            if (AttributeNode == null)
-            {
-                Console.WriteLine("Attribute is null");
-                return;
-            }
+            String[] name = Enum.GetNames(typeof(DSA_ATTRIBUTE));
+            int length = Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length;
 
-            foreach (XmlNode node in AttributeNode)
+            for (int i = 0; i < length; i++)
+            {
+                foreach (XmlNode node in AttributeNode)
+                {
+                    if ((node.Name).ToUpper() == name[i].ToUpper())
+                    {
+                        int x;
+                        Int32.TryParse(node.InnerText, out x);
+                        charakter.setAttribute((DSA_ATTRIBUTE)i, x);
+                    }
+                }
+            }
+        }
+        private static void loadMoney(XmlNode MoneyNode, Charakter charakter)
+        {
+            String[] name = Enum.GetNames(typeof(DSA_MONEY));
+            int length = Enum.GetNames(typeof(DSA_MONEY)).Length;
+
+            for (int i = 0; i < length; i++)
+            {
+                foreach (XmlNode node in MoneyNode)
+                {
+                    if ((node.Name).ToUpper() == name[i].ToUpper())
+                    {
+                        int x;
+                        Int32.TryParse(node.InnerText, out x);
+                        charakter.setMoney((DSA_MONEY)i, x);
+                    }
+                }
+            }
+        }
+
+        private static void loadFeature(XmlNode featureNode, Charakter charakter)
+        {
+            foreach (XmlNode node in featureNode)
             {
                 switch (node.Name)
                 {
-                    case "AKT":
-                        foreach (XmlNode AKTAttributeNode in node)
-                        {
-                            int.TryParse(AKTAttributeNode.InnerText, out var newValue);
-                            switch (AKTAttributeNode.Name)
-                            {
-                                case "Mut": charakter.setAttribute(DSA_ATTRIBUTE.MUT, newValue); break;
-                                case "Klugheit": charakter.setAttribute(DSA_ATTRIBUTE.KLUGHEIT, newValue); break;
-                                case "Intuition": charakter.setAttribute(DSA_ATTRIBUTE.INTUITION, newValue); break;
-                                case "Charisma": charakter.setAttribute(DSA_ATTRIBUTE.CHARISMA, newValue); break;
-                                case "Fingerfertigkeit": charakter.setAttribute(DSA_ATTRIBUTE.FINGERFERTIGKEIT, newValue); break;
-                                case "Gewandheit": charakter.setAttribute(DSA_ATTRIBUTE.GEWANDHEIT, newValue); break;
-                                case "Konstitution": charakter.setAttribute(DSA_ATTRIBUTE.KONSTITUTION, newValue); break;
-                                case "Körperkraft": charakter.setAttribute(DSA_ATTRIBUTE.KÖRPERKRAFT, newValue); break;
-                                case "Sozialstatus": charakter.setAttribute(DSA_ATTRIBUTE.SOZAILSTATUS, newValue); break;
-                            }
+                    case ManagmentSave.Advantages: loadFeature(node, charakter, DSA_FEATURES.VORTEIL); break;
+                    case ManagmentSave.DisAdvantages: loadFeature(node, charakter, DSA_FEATURES.NACHTEIL); break;
+                }
+            }
+        }
+        private static void loadFeature(XmlNode featureNode, Charakter charakter, DSA_FEATURES type)
+        {
+            int i = 0;
+            foreach (XmlNode node in featureNode)
+            {
+                i++;
+                Feature feature = loadFeature(node, i);
+                charakter.addFeature(type, i, feature);
+            }
+        }
+        private static Feature loadFeature(XmlNode featureNode, int number)
+        {
+            Feature feature = new Feature();
 
-                
+            foreach (XmlNode node in featureNode)
+            {
+                switch (node.Name)
+                {
+                    case ManagmentSave.Name: feature.setName(node.InnerText); break;
+                    case ManagmentSave.Description: feature.setDescription(node.InnerText); break;
+                    case ManagmentSave.Value: feature.setValue(node.InnerText); break;
+                    case ManagmentSave.GP: feature.setGP(node.InnerText); break;
+                    case ManagmentSave.AttributeElement: LoadAttribute(node, feature); break;
+                    case ManagmentSave.EnergienElement: LoadEnergien(node, feature); break;
+                    case ManagmentSave.AdvancedElement: LoadAdvanced(node, feature); break;
+                }
+            }
 
-                        }
+            return feature;
+        }
+        private static void LoadAttribute(XmlNode attributenode, Feature feature)
+        {
+            String[] Attributenames = Enum.GetNames(typeof(DSA_ATTRIBUTE));
+
+
+            foreach (XmlNode node in attributenode)
+            {
+                for (int i = 0; i < Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length; i++)
+                {
+                    if (String.Equals(Attributenames[i], node.Name))
+                    {
+                        int x;
+                        Int32.TryParse(node.InnerText, out x);
+                        feature.setAttributeBonus((DSA_ATTRIBUTE)i, x);
                         break;
+                    }
+                }
+            }
+        }
+        private static void LoadEnergien(XmlNode attributenode, Feature feature)
+        {
+            String[] Energienames = Enum.GetNames(typeof(DSA_ENERGIEN));
 
+            foreach (XmlNode node in attributenode)
+            {
+                for (int i = 0; i < Enum.GetNames(typeof(DSA_ENERGIEN)).Length; i++)
+                {
+                    if (String.Equals(Energienames[i], node.Name))
+                    {
+                        int x;
+                        Int32.TryParse(node.InnerText, out x);
+                        feature.setEnergieBonus((DSA_ENERGIEN)i, x);
+                        break;
+                    }
+                }
+            }
+        }
+        private static void LoadAdvanced(XmlNode advancedNode, Feature feature)
+        {
+            String[] AdvancedNames = Enum.GetNames(typeof(DSA_ADVANCEDVALUES));
+
+            foreach (XmlNode node in advancedNode)
+            {
+                for (int i = 0; i < Enum.GetNames(typeof(DSA_ADVANCEDVALUES)).Length; i++)
+                {
+                    if (String.Equals(AdvancedNames[i], node.Name))
+                    {
+                        int x;
+                        Int32.TryParse(node.InnerText, out x);
+                        feature.setAdvancedValues((DSA_ADVANCEDVALUES)i, x);
+                        break;
+                    }
                 }
             }
         }

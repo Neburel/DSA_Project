@@ -75,10 +75,30 @@
             this.txtMagieresistenz = new System.Windows.Forms.TextBox();
             this.txtAstralenergie = new System.Windows.Forms.TextBox();
             this.txtKarmaenergie = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtGeschwindigkeit = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtEntrückung = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtWundschwelle = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtArtefaktKontrolle = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtAttacke = new System.Windows.Forms.TextBox();
+            this.txtParade = new System.Windows.Forms.TextBox();
+            this.txtBeherschungswert = new System.Windows.Forms.TextBox();
+            this.txtFernkampf = new System.Windows.Forms.TextBox();
+            this.txtInitiative = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtSozialstatus
@@ -263,7 +283,7 @@
             this.groupBox1.Controls.Add(this.txtFingerfertigkeit);
             this.groupBox1.Controls.Add(this.txtIntuition);
             this.groupBox1.Controls.Add(this.txtCharisma);
-            this.groupBox1.Location = new System.Drawing.Point(12, 121);
+            this.groupBox1.Location = new System.Drawing.Point(12, 122);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(120, 259);
             this.groupBox1.TabIndex = 160;
@@ -274,7 +294,7 @@
             // 
             this.ListTalente.Location = new System.Drawing.Point(6, 23);
             this.ListTalente.Name = "ListTalente";
-            this.ListTalente.Size = new System.Drawing.Size(195, 107);
+            this.ListTalente.Size = new System.Drawing.Size(195, 224);
             this.ListTalente.TabIndex = 161;
             this.ListTalente.UseCompatibleStateImageBehavior = false;
             this.ListTalente.View = System.Windows.Forms.View.Details;
@@ -291,7 +311,7 @@
             this.groupBox2.Controls.Add(this.txtDescription);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(471, 104);
+            this.groupBox2.Size = new System.Drawing.Size(403, 104);
             this.groupBox2.TabIndex = 162;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "GeneralData";
@@ -343,7 +363,7 @@
             // 
             this.txtName.Location = new System.Drawing.Point(84, 22);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(381, 20);
+            this.txtName.Size = new System.Drawing.Size(308, 20);
             this.txtName.TabIndex = 164;
             // 
             // label3
@@ -359,7 +379,7 @@
             // 
             this.txtDescription.Location = new System.Drawing.Point(84, 48);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(381, 20);
+            this.txtDescription.Size = new System.Drawing.Size(308, 20);
             this.txtDescription.TabIndex = 165;
             // 
             // groupBox3
@@ -370,16 +390,16 @@
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.cbTalente);
             this.groupBox3.Controls.Add(this.ListTalente);
-            this.groupBox3.Location = new System.Drawing.Point(274, 123);
+            this.groupBox3.Location = new System.Drawing.Point(421, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(209, 258);
+            this.groupBox3.Size = new System.Drawing.Size(209, 369);
             this.groupBox3.TabIndex = 163;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Talente";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(6, 220);
+            this.button1.Location = new System.Drawing.Point(21, 335);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(167, 23);
             this.button1.TabIndex = 166;
@@ -388,7 +408,7 @@
             // 
             // btADD
             // 
-            this.btADD.Location = new System.Drawing.Point(6, 191);
+            this.btADD.Location = new System.Drawing.Point(21, 306);
             this.btADD.Name = "btADD";
             this.btADD.Size = new System.Drawing.Size(167, 23);
             this.btADD.TabIndex = 165;
@@ -398,7 +418,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(84, 162);
+            this.textBox5.Location = new System.Drawing.Point(136, 280);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(52, 20);
             this.textBox5.TabIndex = 164;
@@ -406,7 +426,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 164);
+            this.label5.Location = new System.Drawing.Point(18, 287);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 13);
             this.label5.TabIndex = 163;
@@ -415,7 +435,7 @@
             // cbTalente
             // 
             this.cbTalente.FormattingEnabled = true;
-            this.cbTalente.Location = new System.Drawing.Point(6, 136);
+            this.cbTalente.Location = new System.Drawing.Point(21, 253);
             this.cbTalente.Name = "cbTalente";
             this.cbTalente.Size = new System.Drawing.Size(167, 21);
             this.cbTalente.TabIndex = 162;
@@ -539,11 +559,201 @@
             this.txtKarmaenergie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtKarmaenergie.TextChanged += new System.EventHandler(this.txtKarmaenergie_TextChanged);
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label28);
+            this.groupBox5.Controls.Add(this.txtGeschwindigkeit);
+            this.groupBox5.Controls.Add(this.label27);
+            this.groupBox5.Controls.Add(this.txtEntrückung);
+            this.groupBox5.Controls.Add(this.label17);
+            this.groupBox5.Controls.Add(this.txtWundschwelle);
+            this.groupBox5.Controls.Add(this.label16);
+            this.groupBox5.Controls.Add(this.txtArtefaktKontrolle);
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Controls.Add(this.label11);
+            this.groupBox5.Controls.Add(this.label13);
+            this.groupBox5.Controls.Add(this.label14);
+            this.groupBox5.Controls.Add(this.label15);
+            this.groupBox5.Controls.Add(this.txtAttacke);
+            this.groupBox5.Controls.Add(this.txtParade);
+            this.groupBox5.Controls.Add(this.txtBeherschungswert);
+            this.groupBox5.Controls.Add(this.txtFernkampf);
+            this.groupBox5.Controls.Add(this.txtInitiative);
+            this.groupBox5.Location = new System.Drawing.Point(274, 122);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(141, 259);
+            this.groupBox5.TabIndex = 162;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Grundwerte";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(5, 235);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(85, 13);
+            this.label28.TabIndex = 159;
+            this.label28.Text = "Geschwindigkeit";
+            // 
+            // txtGeschwindigkeit
+            // 
+            this.txtGeschwindigkeit.Location = new System.Drawing.Point(106, 232);
+            this.txtGeschwindigkeit.Name = "txtGeschwindigkeit";
+            this.txtGeschwindigkeit.Size = new System.Drawing.Size(24, 20);
+            this.txtGeschwindigkeit.TabIndex = 160;
+            this.txtGeschwindigkeit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGeschwindigkeit.TextChanged += new System.EventHandler(this.txtGeschwindigkeit_TextChanged);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(5, 209);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(62, 13);
+            this.label27.TabIndex = 157;
+            this.label27.Text = "Entrückung";
+            // 
+            // txtEntrückung
+            // 
+            this.txtEntrückung.Location = new System.Drawing.Point(106, 206);
+            this.txtEntrückung.Name = "txtEntrückung";
+            this.txtEntrückung.Size = new System.Drawing.Size(24, 20);
+            this.txtEntrückung.TabIndex = 158;
+            this.txtEntrückung.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEntrückung.TextChanged += new System.EventHandler(this.txtEntrückung_TextChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(5, 183);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(77, 13);
+            this.label17.TabIndex = 155;
+            this.label17.Text = "Wundschwelle";
+            // 
+            // txtWundschwelle
+            // 
+            this.txtWundschwelle.Location = new System.Drawing.Point(106, 180);
+            this.txtWundschwelle.Name = "txtWundschwelle";
+            this.txtWundschwelle.Size = new System.Drawing.Size(24, 20);
+            this.txtWundschwelle.TabIndex = 156;
+            this.txtWundschwelle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtWundschwelle.TextChanged += new System.EventHandler(this.Wundschwelle_TextChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(5, 157);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(85, 13);
+            this.label16.TabIndex = 153;
+            this.label16.Text = "ArtefaktKontrolle";
+            // 
+            // txtArtefaktKontrolle
+            // 
+            this.txtArtefaktKontrolle.Location = new System.Drawing.Point(106, 154);
+            this.txtArtefaktKontrolle.Name = "txtArtefaktKontrolle";
+            this.txtArtefaktKontrolle.Size = new System.Drawing.Size(24, 20);
+            this.txtArtefaktKontrolle.TabIndex = 154;
+            this.txtArtefaktKontrolle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtArtefaktKontrolle.TextChanged += new System.EventHandler(this.txtArtefaktKontrolle_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(72, 13);
+            this.label8.TabIndex = 142;
+            this.label8.Text = "Attacke-Basis";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 53);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 13);
+            this.label11.TabIndex = 143;
+            this.label11.Text = "Parade-Basis";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 79);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(85, 13);
+            this.label13.TabIndex = 144;
+            this.label13.Text = "Fernkampf-Basis";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 105);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(72, 13);
+            this.label14.TabIndex = 145;
+            this.label14.Text = "Initative-Basis";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(5, 131);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(95, 13);
+            this.label15.TabIndex = 146;
+            this.label15.Text = "Beherschungswert";
+            // 
+            // txtAttacke
+            // 
+            this.txtAttacke.Location = new System.Drawing.Point(106, 24);
+            this.txtAttacke.Name = "txtAttacke";
+            this.txtAttacke.Size = new System.Drawing.Size(24, 20);
+            this.txtAttacke.TabIndex = 148;
+            this.txtAttacke.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAttacke.TextChanged += new System.EventHandler(this.txtAttacke_TextChanged);
+            // 
+            // txtParade
+            // 
+            this.txtParade.Location = new System.Drawing.Point(106, 50);
+            this.txtParade.Name = "txtParade";
+            this.txtParade.Size = new System.Drawing.Size(24, 20);
+            this.txtParade.TabIndex = 149;
+            this.txtParade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtParade.TextChanged += new System.EventHandler(this.txtParade_TextChanged);
+            // 
+            // txtBeherschungswert
+            // 
+            this.txtBeherschungswert.Location = new System.Drawing.Point(106, 128);
+            this.txtBeherschungswert.Name = "txtBeherschungswert";
+            this.txtBeherschungswert.Size = new System.Drawing.Size(24, 20);
+            this.txtBeherschungswert.TabIndex = 152;
+            this.txtBeherschungswert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBeherschungswert.TextChanged += new System.EventHandler(this.txtBeherschungswert_TextChanged);
+            // 
+            // txtFernkampf
+            // 
+            this.txtFernkampf.Location = new System.Drawing.Point(106, 76);
+            this.txtFernkampf.Name = "txtFernkampf";
+            this.txtFernkampf.Size = new System.Drawing.Size(24, 20);
+            this.txtFernkampf.TabIndex = 150;
+            this.txtFernkampf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtFernkampf.TextChanged += new System.EventHandler(this.txtFernkampf_TextChanged);
+            // 
+            // txtInitiative
+            // 
+            this.txtInitiative.Location = new System.Drawing.Point(106, 102);
+            this.txtInitiative.Name = "txtInitiative";
+            this.txtInitiative.Size = new System.Drawing.Size(24, 20);
+            this.txtInitiative.TabIndex = 151;
+            this.txtInitiative.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtInitiative.TextChanged += new System.EventHandler(this.txtInitiative_TextChanged);
+            // 
             // CreateFeature
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 386);
+            this.ClientSize = new System.Drawing.Size(636, 386);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btnFertig);
             this.Controls.Add(this.groupBox3);
@@ -560,6 +770,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -613,5 +825,24 @@
         private System.Windows.Forms.TextBox txtMagieresistenz;
         private System.Windows.Forms.TextBox txtAstralenergie;
         private System.Windows.Forms.TextBox txtKarmaenergie;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox txtGeschwindigkeit;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox txtEntrückung;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtWundschwelle;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtArtefaktKontrolle;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtAttacke;
+        private System.Windows.Forms.TextBox txtParade;
+        private System.Windows.Forms.TextBox txtBeherschungswert;
+        private System.Windows.Forms.TextBox txtFernkampf;
+        private System.Windows.Forms.TextBox txtInitiative;
     }
 }

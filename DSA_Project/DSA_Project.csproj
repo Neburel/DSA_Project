@@ -45,13 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Controller\ControllAttribute.cs" />
-    <Compile Include="Classes\Controller\ControllEnergien.cs" />
     <Compile Include="Classes\Data\Charakter.cs" />
     <Compile Include="Classes\Controller\ControllClass.cs" />
     <Compile Include="Classes\Data\Feature.cs" />
-    <Compile Include="Classes\Data\Physicaltalent.cs" />
     <Compile Include="Classes\Managment\ManagmentFeature.cs" />
+    <Compile Include="Classes\Managment\ManagmentSave.cs" />
     <Compile Include="Classes\Util\LoadCharakterXML.cs" />
     <Compile Include="Classes\Util\SaveCharakterXML.cs" />
     <Compile Include="Classes\View\Forms\Form1.cs">

@@ -13,8 +13,11 @@ namespace DSA_Project
         Dictionary<int, Feature> AdvantageFeatures          = new Dictionary<int, Feature>();
         Dictionary<int, Feature> DisAdvantageFeatures       = new Dictionary<int, Feature>();
         Dictionary<DSA_ATTRIBUTE, int> attributeBonus       = new Dictionary<DSA_ATTRIBUTE, int>();
+        Dictionary<DSA_ADVANCEDVALUES, int> advantageBonus  = new Dictionary<DSA_ADVANCEDVALUES, int>();
         Dictionary<DSA_ENERGIEN, int> energienBonus         = new Dictionary<DSA_ENERGIEN, int>();
         Dictionary<DSA_ENERGIEN, int> energienMali          = new Dictionary<DSA_ENERGIEN, int>();
+
+        int HighestNumber                                   = 0;
 
 
         public ManagmentFeature()
@@ -33,6 +36,8 @@ namespace DSA_Project
         }
         public void addFeature(DSA_FEATURES type,Feature feature, int number)
         {
+            HighestNumber = number;
+
             switch (type)
             {
                 case DSA_FEATURES.VORTEIL: addAdvantage(feature, number); break;
@@ -81,6 +86,8 @@ namespace DSA_Project
                 case DSA_FEATURES.VORTEIL: CalculaeEnergieBonus(currentFeature, factor); break;
                 case DSA_FEATURES.NACHTEIL: CalculaeEnergieMali(currentFeature, factor); break;
             }
+
+            CalculateAdvancedBonus(currentFeature, factor);
         }
         private void CalculateAttributeBonus(Feature feature, int factor)
         {
@@ -96,6 +103,22 @@ namespace DSA_Project
 
                 attributeBonus.Remove((DSA_ATTRIBUTE)i);
                 attributeBonus.Add((DSA_ATTRIBUTE)i, x);
+            }
+        }
+        private void CalculateAdvancedBonus(Feature feature, int factor)
+        {
+            int x = 0;
+            int y = 0;
+
+            int count = Enum.GetNames(typeof(DSA_ADVANCEDVALUES)).Length;
+            for (int i = 0; i < count; i++)
+            {
+                advantageBonus.TryGetValue((DSA_ADVANCEDVALUES)i, out x);
+                y = feature.getAdvancedValues((DSA_ADVANCEDVALUES)i);
+                x = x + factor * y;
+
+                advantageBonus.Remove((DSA_ADVANCEDVALUES)i);
+                advantageBonus.Add((DSA_ADVANCEDVALUES)i, x);
             }
         }
         private void CalculaeEnergieBonus(Feature feature, int factor)
@@ -149,6 +172,12 @@ namespace DSA_Project
             attributeBonus.TryGetValue(attribute, out x);
             return x;
         }
+        public int getAdvancedBonus(DSA_ADVANCEDVALUES value)
+        {
+            int x = 0;
+            advantageBonus.TryGetValue(value, out x);
+            return x;
+        }
         public int getEnergienBonus(DSA_ENERGIEN energie)
         {
             int x = 0;
@@ -160,6 +189,12 @@ namespace DSA_Project
             int x = 0;
             energienMali.TryGetValue(energie, out x);
             return x;
+        }
+
+        
+        public int getHighestNumber()
+        {
+            return HighestNumber;
         }
     }
 }

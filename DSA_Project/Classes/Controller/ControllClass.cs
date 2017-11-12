@@ -8,8 +8,10 @@ using System.Windows.Forms;
 
 namespace DSA_Project
 {
-    enum DSA_BASICVALUES { NAME, ALTER, GESCHLECHT, GRÖSE, GEWICHT, AUGENFARBE, HAUTFARBE, HAARFARBE, FAMILIENSTAND, ANREDE, GOTTHEIT, RASSE, KULTUR, PROFESSION }    
-    enum DSA_ADVANCEDVALUES { ATTACKE_BASIS, PARADE_BASIS, FERNKAMPF_BASIS, INITATIVE_BASIS, BEHERSCHUNGSWERT, ARTEFAKTKONTROLLE, WUNDSCHWELLE, ENTRÜCKUNG, GESCHWINDIGKEIT }
+    public enum DSA_ATTRIBUTE { MU, KL, IN, CH, FF, GE, KO, KK, SO }
+    public enum DSA_ENERGIEN { LEBENSENERGIE, AUSDAUER, ASTRALENERGIE, KARMAENERGIE, MAGIERESISTENZ }
+    public enum DSA_ADVANCEDVALUES { ATTACKE_BASIS, PARADE_BASIS, FERNKAMPF_BASIS, INITATIVE_BASIS, BEHERSCHUNGSWERT, ARTEFAKTKONTROLLE, WUNDSCHWELLE, ENTRÜCKUNG, GESCHWINDIGKEIT }
+    enum DSA_BASICVALUES { NAME, ALTER, GESCHLECHT, GRÖSE, GEWICHT, AUGENFARBE, HAUTFARBE, HAARFARBE, FAMILIENSTAND, ANREDE, GOTTHEIT, RASSE, KULTUR, PROFESSION }
     enum DSA_MONEY { D, S, H, K, BANK}
     enum DSA_FEATURES { VORTEIL, NACHTEIL }
     enum DSA_FEATUREBONUS { NONE,  MUT, KLUGHEIT, INTUITION, CHARISMA, FINGERFERTIGKEIT, GEWANDHEIT, KONSTITUTION, KÖRPERKRAFT, SOZAILSTATUS, LEBENSENERGIE, AUSDAUER, ASTRALENERGIE, KARMAENERGIE, MAGIERESISTENZ }
@@ -19,14 +21,10 @@ namespace DSA_Project
     /// Sie bestimmt welche Werte bei Anfragen zurückgegeben weden
     /// Wie wird gespeichert, geladen
     /// etc....
-    /// 
-    /// 
-    /// Die Mehtoden für AKT, MOD, MAX sind einzehlnd, damit kein Zeitverlust durch noch weitere Entscheidungen entsteht
     /// <summary>
     class ControllClass
     {
         Form1 form;
-        String[] MapFeatureBonus;
         Charakter charakter                 = new Charakter();
         Dictionary<int, Feature> Advantages = new Dictionary<int, Feature>();
 
@@ -34,23 +32,6 @@ namespace DSA_Project
         public ControllClass(Form1 form)
         {
             this.form = form;
-
-            MapFeatureBonus = new String[Enum.GetNames(typeof(DSA_FEATUREBONUS)).Length];
-            MapFeatureBonus[(int)DSA_FEATUREBONUS.NONE]             = "";
-            MapFeatureBonus[(int)DSA_FEATUREBONUS.MUT]              = "MU";
-            MapFeatureBonus[(int)DSA_FEATUREBONUS.KLUGHEIT]         = "KL";
-            MapFeatureBonus[(int)DSA_FEATUREBONUS.INTUITION]        = "IN";
-            MapFeatureBonus[(int)DSA_FEATUREBONUS.CHARISMA]         = "CH";
-            MapFeatureBonus[(int)DSA_FEATUREBONUS.FINGERFERTIGKEIT] = "FF";
-            MapFeatureBonus[(int)DSA_FEATUREBONUS.GEWANDHEIT]       = "GE";
-            MapFeatureBonus[(int)DSA_FEATUREBONUS.KONSTITUTION]     = "KO";
-            MapFeatureBonus[(int)DSA_FEATUREBONUS.KÖRPERKRAFT]      = "KK";
-            MapFeatureBonus[(int)DSA_FEATUREBONUS.SOZAILSTATUS]     = "S";
-            MapFeatureBonus[(int)DSA_FEATUREBONUS.LEBENSENERGIE]    = "LE";
-            MapFeatureBonus[(int)DSA_FEATUREBONUS.AUSDAUER]         = "A";
-            MapFeatureBonus[(int)DSA_FEATUREBONUS.ASTRALENERGIE]    = "AE";
-            MapFeatureBonus[(int)DSA_FEATUREBONUS.KARMAENERGIE]     = "KE";
-            MapFeatureBonus[(int)DSA_FEATUREBONUS.MAGIERESISTENZ]   = "MR";
         }
 
 
@@ -88,31 +69,7 @@ namespace DSA_Project
             form.refresh();
         }
 
-
-        public List<String> getBonusList()
-        {
-            //Die Werte Müssen mit dem enum "DSA_FEATUREBONUS" übereinstimmen, da mit dem Index gearbeitet wird
-            List<String> BonusList = new List<string>();
-
-            for(int i=0; i < Enum.GetNames(typeof(DSA_FEATUREBONUS)).Length; i++)
-            {
-                BonusList.Add(MapFeatureBonus[i]);
-            }
-            return BonusList;
-        }    
-        public int getBonusID(String value)
-        {
-            for (int i = 0; i< Enum.GetNames(typeof(DSA_FEATUREBONUS)).Length; i++)
-            {
-                if(MapFeatureBonus[i] == value)
-                {
-                    return i; 
-                }
-            }
-            return 0;
-        }
-
-
+   
         /// <summary>
         /// Gibt ein Basic Value in Form eines Array Zurück
         /// mit Ausnahme von Modifikatoren und Göttergeschenke ist dieser Wert stets im 0 vorhanden
@@ -200,9 +157,18 @@ namespace DSA_Project
         }
         
         public int AdvancedValueAKT(DSA_ADVANCEDVALUES advancedValue)
-        {
-            /*Besseres Verhalten implementieren*/
+        {   
             return charakter.getAdvancedValueAKT(advancedValue);
+        }
+        public int AdvancedValueAKT(DSA_ADVANCEDVALUES advancedValue, string value)
+        {
+            var isNumeric = int.TryParse(value, out var value_out);
+            if (isNumeric == true)
+            {
+                charakter.setAdvancedValueAKT(advancedValue, value_out);
+            }
+            form.refresh();
+            return AdvancedValueAKT(advancedValue);
         }
         public int AdvancedValueMOD(DSA_ADVANCEDVALUES advancedValue)
         {
@@ -276,5 +242,29 @@ namespace DSA_Project
 
             return feature;
         }
+        public Feature FeatureExisting(int number, DSA_FEATURES type)
+        {
+            return charakter.getFeature(type, number);
+        }
+
+        public String Göttergeschenk(int number)
+        {
+            return charakter.getGöttergeschenk(number);
+        }
+        public String Göttergeschenk(int number, String description)
+        {
+            charakter.setGöttergeschenk(number, description);
+            return Göttergeschenk(number);
+        }
+        public String Moodifikator(int number)
+        {
+            return charakter.getModifikatoren(number);
+        }
+        public String Moodifikator(int number, String description)
+        {
+            charakter.setModifikatoren(number, description);
+            return Moodifikator(number);
+        }
+
     }
 }

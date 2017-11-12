@@ -8,6 +8,10 @@ namespace DSA_Project
 {
     public class Feature
     {
+        String[] attributeAcronyms  = Enum.GetNames(typeof(DSA_ATTRIBUTE));
+        String[] energienAcronyms   = Enum.GetNames(typeof(DSA_ENERGIEN));
+        String[] advancedAcronyms   = Enum.GetNames(typeof(DSA_ADVANCEDVALUES));
+
         String Name;
         String Description;
         String Value;
@@ -15,7 +19,17 @@ namespace DSA_Project
         
         Dictionary<DSA_ATTRIBUTE, int> attributeBonus;
         Dictionary<DSA_ENERGIEN, int> energieBonus;
+        Dictionary<DSA_ADVANCEDVALUES, int> advancedBonus;
 
+        public Feature()
+        {
+            setUP();
+
+            setName("");
+            setDescription("");
+            setValue("");
+            setGP("");            
+        }
         public Feature(String Name, String Description, String Value, String GP)
         {
             attributeBonus = new Dictionary<DSA_ATTRIBUTE, int>();
@@ -25,6 +39,15 @@ namespace DSA_Project
             setDescription(Description);
             setValue(Value);
             setGP(GP);
+
+            setUP();
+
+        }
+        private void setUP()
+        {
+            attributeBonus = new Dictionary<DSA_ATTRIBUTE, int>();
+            energieBonus = new Dictionary<DSA_ENERGIEN, int>();
+            advancedBonus = new Dictionary<DSA_ADVANCEDVALUES, int>();
         }
 
         public void setName(String Name)
@@ -73,6 +96,11 @@ namespace DSA_Project
             energieBonus.Remove(energie);
             energieBonus.Add(energie, value);
         }
+        public void setAdvancedValues(DSA_ADVANCEDVALUES values, int value)
+        {
+            advancedBonus.Remove(values);
+            advancedBonus.Add(values, value);
+        }
 
         public String getName(){
             return Name;
@@ -80,7 +108,7 @@ namespace DSA_Project
         public String getDescription()
         {
             String totalDescription = String.Copy(this.Description);
-            totalDescription = totalDescription + getAttributeString() + getEnergieString();
+            totalDescription = totalDescription + getAttributeString() + getEnergieString() + getAdvancedString();
             
             return totalDescription;
         }
@@ -108,6 +136,12 @@ namespace DSA_Project
             energieBonus.TryGetValue(energie, out x);
             return x;
         }
+        public int getAdvancedValues(DSA_ADVANCEDVALUES value)
+        {
+            int x;
+            advancedBonus.TryGetValue(value, out x);
+            return x;
+        }
 
         private String getAttributeString()
         {
@@ -118,7 +152,7 @@ namespace DSA_Project
                 attributeBonus.TryGetValue((DSA_ATTRIBUTE)i, out x);
                 if (x != 0)
                 {
-                    ret = ret + " " + x + ControllAttribute.getAcronym((DSA_ATTRIBUTE)i);
+                    ret = ret + " " + x + attributeAcronyms[i];
                 }
             }
             return ret;
@@ -132,7 +166,21 @@ namespace DSA_Project
                 energieBonus.TryGetValue((DSA_ENERGIEN)i, out x);
                 if (x != 0)
                 {
-                    ret = ret + " " + x + ControllEnergien.getAcronym((DSA_ENERGIEN)i);
+                    ret = ret + " " + x + energienAcronyms[i];
+                }
+            }
+            return ret;
+        }
+        private String getAdvancedString()
+        {
+            String ret = "";
+            int x = 0;
+            for(int i=0; i< Enum.GetNames(typeof(DSA_ADVANCEDVALUES)).Length; i++)
+            {
+                advancedBonus.TryGetValue((DSA_ADVANCEDVALUES)i, out x);
+                if(x!=0)
+                {
+                    ret = ret + " " + x + advancedAcronyms[i];
                 }
             }
             return ret;
