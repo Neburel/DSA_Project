@@ -20,15 +20,22 @@ namespace DSA_Project
         public const String Advantages             = "Advantages";
         public const String DisAdvantages          = "DisAdvantages";
 
-        public const string Number                  = "Number";
+        public const String Number                  = "Number";
 
-        public const string Name                    = "Name";
-        public const string Description             = "Description";
-        public const string Value                   = "Value";
-        public const string GP                      = "GP";
+        public const String Name                    = "Name";
+        public const String Description             = "Description";
+        public const String Value                   = "Value";
+        public const String GP                      = "GP";
 
-        public const string Modification            = "Modifikatoren";
-        public const string Göttergeschenke         = "Göttergeschenke";
+        public const String Modification            = "Modifikatoren";
+        public const String Göttergeschenke         = "Göttergeschenke";
+
+        public const String TAW                     = "TAW";
+
+        public const String TalentBriefElement      = "TalentBrief";
+        public const String Talente                 = "Talente";
+        public const String PhysicalTalentElement   = "PhysicalTalent";
+
     }
 
 }

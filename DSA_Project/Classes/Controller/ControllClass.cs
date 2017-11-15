@@ -24,16 +24,18 @@ namespace DSA_Project
     /// <summary>
     class ControllClass
     {
-        Form1 form;
-        Charakter charakter                 = new Charakter();
+        DSA form;
+        Charakter Charakter;                 
         Dictionary<int, Feature> Advantages = new Dictionary<int, Feature>();
 
+        ControllTalent ControllTalent;
 
-        public ControllClass(Form1 form)
+        public ControllClass(DSA form)
         {
             this.form = form;
+            ControllTalent = new ControllTalent();
+            Charakter = createNewCharater();
         }
-
 
         public void save()
         {
@@ -47,7 +49,7 @@ namespace DSA_Project
 
             if (savefileDialog.ShowDialog() == DialogResult.OK)
             {
-                SaveCharakterXML.saveCharakter(charakter, savefileDialog.FileName);
+                SaveCharakterXML.saveCharakter(Charakter, savefileDialog.FileName);
             }
         }
         public void load()
@@ -62,14 +64,27 @@ namespace DSA_Project
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                charakter = LoadCharakterXML.loadCharakter(openFileDialog.FileName);
+                Charakter       = LoadCharakterXML.loadCharakter(openFileDialog.FileName, createNewCharater());
             }
-
+            
             form.load();
             form.refresh();
         }
+        
+        public Charakter createNewCharater()
+        {
+            Charakter charakter                                     = new Charakter();
 
-   
+            for(int i=0; i< Enum.GetNames(typeof(DSA_TALENTS)).Length; i++)
+            {
+                List<Talent> talentList = ControllTalent.getTalentList((DSA_TALENTS)i);
+                for (int j = 0; j < talentList.Count; j++)
+                {
+                    charakter.addTalent((DSA_TALENTS)i, j, talentList[j]);
+                }
+            }
+            return charakter;
+        }        
         /// <summary>
         /// Gibt ein Basic Value in Form eines Array Zurück
         /// mit Ausnahme von Modifikatoren und Göttergeschenke ist dieser Wert stets im 0 vorhanden
@@ -77,14 +92,14 @@ namespace DSA_Project
         /// </summary>
         public String BasicValue(DSA_BASICVALUES value)
         {
-            return charakter.getBasicValue(value);
+            return Charakter.getBasicValue(value);
         }
         public String BasicValue(DSA_BASICVALUES value, String wert)
         {
-            charakter.setBasicValues(value, wert);
+            Charakter.setBasicValues(value, wert);
             return BasicValue(value);
         }
-
+        
 
         /// <summary>
         /// Funktion die bei einer Eingabe in eienem AKT Attribute Feld feststellt ob diese Korrekt ist,
@@ -96,14 +111,14 @@ namespace DSA_Project
         /// <returns></returns>
         public int AttributeAKT(DSA_ATTRIBUTE attribute)
         {
-            return charakter.getAttributeAKT(attribute);
+            return Charakter.getAttributeAKT(attribute);
         }
         public int AttributeAKT(DSA_ATTRIBUTE attribute, String wert)
         {
             var isNumeric = int.TryParse(wert, out var wert_int);
             if (isNumeric == true)
             {
-                charakter.setAttribute(attribute, wert_int);
+                Charakter.setAttribute(attribute, wert_int);
             }
             form.refresh();
             return AttributeAKT(attribute);
@@ -118,7 +133,7 @@ namespace DSA_Project
         /// <returns></returns>
         public int AttributeMOD(DSA_ATTRIBUTE attribute)
         {
-            return charakter.getAttribute_Mod(attribute);
+            return Charakter.getAttribute_Mod(attribute);
         }
         public int AttributeMOD(DSA_ATTRIBUTE attribute, String wert)
         {
@@ -140,7 +155,7 @@ namespace DSA_Project
         /// <returns></returns>
         public int AttributeMAX(DSA_ATTRIBUTE attribute)
         {
-            return charakter.getAttribute_Max(attribute);
+            return Charakter.getAttribute_Max(attribute);
         }
         public int AttributeMAX(DSA_ATTRIBUTE attribute, String Wert)
         {
@@ -149,69 +164,69 @@ namespace DSA_Project
         }
         public int getAttributeAKTSumme()
         {
-            return charakter.getSummeAttributeAKT();
+            return Charakter.getSummeAttributeAKT();
         }
         public int getAttributeMAXSumme()
         {
-            return charakter.getSummeAttributeMAX();
+            return Charakter.getSummeAttributeMAX();
         }
         
         public int AdvancedValueAKT(DSA_ADVANCEDVALUES advancedValue)
         {   
-            return charakter.getAdvancedValueAKT(advancedValue);
+            return Charakter.getAdvancedValueAKT(advancedValue);
         }
         public int AdvancedValueAKT(DSA_ADVANCEDVALUES advancedValue, string value)
         {
             var isNumeric = int.TryParse(value, out var value_out);
             if (isNumeric == true)
             {
-                charakter.setAdvancedValueAKT(advancedValue, value_out);
+                Charakter.setAdvancedValueAKT(advancedValue, value_out);
             }
             form.refresh();
             return AdvancedValueAKT(advancedValue);
         }
         public int AdvancedValueMOD(DSA_ADVANCEDVALUES advancedValue)
         {
-            return charakter.getAdvancedValueMOD(advancedValue);
+            return Charakter.getAdvancedValueMOD(advancedValue);
         }
         public int AdvancedValueMAX(DSA_ADVANCEDVALUES advancedValue)
         {
-            return charakter.getAdvancedValueMAX(advancedValue);
+            return Charakter.getAdvancedValueMAX(advancedValue);
         }
 
         
         public int EnergieVOR(DSA_ENERGIEN energie)
         {
-            return charakter.getEnergieVOR(energie);
+            return Charakter.getEnergieVOR(energie);
         }
         public int EnergiePERM(DSA_ENERGIEN energie)
         {
-            return charakter.getEnergiePERM(energie);
+            return Charakter.getEnergiePERM(energie);
         }
         public int EnergieMOD(DSA_ENERGIEN enegie)
         {
-            return charakter.getEnergieMOD(enegie);
+            return Charakter.getEnergieMOD(enegie);
         }
         public int EnergieMALI(DSA_ENERGIEN energie)
         {
-            return charakter.getEnergieMALI(energie);
+            return Charakter.getEnergieMALI(energie);
         }
         public int EnergieMAX(DSA_ENERGIEN energie)
         {
-            return charakter.getEnergieMAX(energie);
+            return Charakter.getEnergieMAX(energie);
         }
 
 
         public int Money(DSA_MONEY type)
         {
-            return charakter.getMoney(type);
+            return Charakter.getMoney(type);
         }
         public int Money(DSA_MONEY type, String money)
         {
             var isNumeric = int.TryParse(money, out var wert_int);
             if (isNumeric == true)
             {
-                charakter.setMoney(type, wert_int);
+                Charakter.setMoney(type, wert_int);
             }
             return Money(type);
         }
@@ -220,7 +235,7 @@ namespace DSA_Project
         public Feature Feature(int number, DSA_FEATURES type)
         {
             CreateFeature createFeature;
-            Feature feature                 = charakter.getFeature(type,number);
+            Feature feature                 = Charakter.getFeature(type,number);
 
             if (feature == null)
             {
@@ -233,7 +248,7 @@ namespace DSA_Project
             createFeature.ShowDialog();
             feature = createFeature.feature();
 
-            charakter.addFeature(type, number, feature);
+            Charakter.addFeature(type, number, feature);
             
             Advantages.Remove(number);
             Advantages.Add(number, feature);
@@ -244,27 +259,42 @@ namespace DSA_Project
         }
         public Feature FeatureExisting(int number, DSA_FEATURES type)
         {
-            return charakter.getFeature(type, number);
+            return Charakter.getFeature(type, number);
         }
 
         public String Göttergeschenk(int number)
         {
-            return charakter.getGöttergeschenk(number);
+            return Charakter.getGöttergeschenk(number);
         }
         public String Göttergeschenk(int number, String description)
         {
-            charakter.setGöttergeschenk(number, description);
+            Charakter.setGöttergeschenk(number, description);
             return Göttergeschenk(number);
         }
         public String Moodifikator(int number)
         {
-            return charakter.getModifikatoren(number);
+            return Charakter.getModifikatoren(number);
         }
         public String Moodifikator(int number, String description)
         {
-            charakter.setModifikatoren(number, description);
+            Charakter.setModifikatoren(number, description);
             return Moodifikator(number);
         }
 
+        public Talent getTalent(DSA_TALENTS type, int number)
+        {
+            //-1 um die einfacheren Zahlen zu verwenden
+            Talent talent = Charakter.getTalent(type, number - 1);
+            return talent;
+        }
+        public Talent getTalent(DSA_TALENTS type,  String number)
+        {
+            var isNumeric = int.TryParse(number, out var wert_int);
+            if (isNumeric == true)
+            {
+                return Charakter.getTalent(type, wert_int - 1);
+            }
+            return new Talent("", new List<DSA_ATTRIBUTE> { }, 0, "", "");
+        }
     }
 }

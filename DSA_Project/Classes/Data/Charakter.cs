@@ -11,15 +11,14 @@ namespace DSA_Project
         ManagmentFeature featureManagment               = new ManagmentFeature();
 
         private Dictionary<DSA_ATTRIBUTE, int> attributeAKT;
-        private Dictionary<DSA_ATTRIBUTE, int> attributeMod;
         private Dictionary<DSA_MONEY, int> money;
         private Dictionary<DSA_BASICVALUES, String> basicValues;
         private Dictionary<DSA_ADVANCEDVALUES, int> advancedValues;
-        private Dictionary<DSA_ADVANCEDVALUES, int> advancedValuesMOD;
-        private Dictionary<DSA_ENERGIEN, int> energieMod;
         private Dictionary<int, String> göttergerschenke;
         private Dictionary<int, String> modifikatoren;
-       
+
+        private Dictionary<DSA_TALENTS, Dictionary<int, Talent>> talente;
+        
 
         int Beherschungswert    = 0;
         int Entrückung          = 0;
@@ -34,22 +33,19 @@ namespace DSA_Project
             int enumBasicValueLength        = Enum.GetNames(typeof(DSA_BASICVALUES)).Length;
             int enumAdvatageValuesLength    = Enum.GetNames(typeof(DSA_BASICVALUES)).Length;
             int enumEnergienLength          = Enum.GetNames(typeof(DSA_ENERGIEN)).Length;
+            int enumTalentLentgh            = Enum.GetNames(typeof(DSA_TALENTS)).Length;
 
             attributeAKT                    = new Dictionary<DSA_ATTRIBUTE, int>();
-            attributeMod                    = new Dictionary<DSA_ATTRIBUTE, int>();
             money                           = new Dictionary<DSA_MONEY, int>();
             basicValues                     = new Dictionary<DSA_BASICVALUES, string>();
             advancedValues                  = new Dictionary<DSA_ADVANCEDVALUES, int>();
-            advancedValuesMOD               = new Dictionary<DSA_ADVANCEDVALUES, int>();
-            energieMod                      = new Dictionary<DSA_ENERGIEN, int>();
             göttergerschenke                = new Dictionary<int, string>();
             modifikatoren                   = new Dictionary<int, string>();
-
+            talente                         = new Dictionary<DSA_TALENTS, Dictionary<int, Talent>>();
 
             for (int i=0; i<enumAttributLength; i++)
             {
                 attributeAKT.Add((DSA_ATTRIBUTE)i, 0);
-                attributeMod.Add((DSA_ATTRIBUTE)i, 1);
             }
             for(int i=0; i<enumMoneyLength; i++)
             {
@@ -62,11 +58,11 @@ namespace DSA_Project
             for(int i=0; i<enumAdvatageValuesLength; i++)
             {
                 advancedValues.Add((DSA_ADVANCEDVALUES)i, 0);
-                advancedValuesMOD.Add((DSA_ADVANCEDVALUES)i, 1);
             }
-            for(int i=0; i<enumEnergienLength; i++)
+            
+            for(int i=0; i<enumTalentLentgh; i++)
             {
-                energieMod.Add((DSA_ENERGIEN)i, 1);
+                talente.Add((DSA_TALENTS)i, new Dictionary<int, Talent>());
             }
         }
 
@@ -107,23 +103,17 @@ namespace DSA_Project
         }
         public int getAttribute_Mod(DSA_ATTRIBUTE attribute)
         {
-            int x;
-            attributeMod.TryGetValue(attribute, out x);
-            return x;
+            return featureManagment.getAttributeBonus(attribute);
         }
         public int getAttribute_Max(DSA_ATTRIBUTE attribute)
         {
             int featurePoints;
             int akt;
-            int mod;
 
             featurePoints = featureManagment.getAttributeBonus(attribute);
             attributeAKT.TryGetValue(attribute, out akt);
-            attributeMod.TryGetValue(attribute, out mod);
             
-            
-
-            return (akt+featurePoints)*mod;
+            return (akt+featurePoints);
         }
         public int getSummeAttributeAKT()
         {
@@ -188,13 +178,11 @@ namespace DSA_Project
         }
         public int getAdvancedValueMOD(DSA_ADVANCEDVALUES value)
         {
-            int x;
-            advancedValuesMOD.TryGetValue(value, out x);
-            return x;
+            return featureManagment.getAdvancedBonus(value);
         }
         public int getAdvancedValueMAX(DSA_ADVANCEDVALUES value)
         {
-            return (getAdvancedValueAKT(value)+featureManagment.getAdvancedBonus(value)) * getAdvancedValueMOD(value);
+            return getAdvancedValueAKT(value) + getAdvancedValueMOD(value);
         }
 
         public int getEnergieVOR(DSA_ENERGIEN energie)
@@ -224,9 +212,7 @@ namespace DSA_Project
         }
         public int getEnergieMOD(DSA_ENERGIEN energie)
         {
-            int x;
-            energieMod.TryGetValue(energie, out x);
-            return x;
+            return featureManagment.getEnergienBonus(energie);
         }
         public int getEnergieMALI(DSA_ENERGIEN energie)
         {
@@ -234,7 +220,7 @@ namespace DSA_Project
         }
         public int getEnergieMAX(DSA_ENERGIEN energie)
         {
-            return (getEnergieVOR(energie)+getEnergiePERM(energie)) * getEnergieMOD(energie) + getEnergieMALI(energie);
+            return (getEnergieVOR(energie)+getEnergiePERM(energie))+getEnergieMALI(energie);
         }
         
         public void addFeature(DSA_FEATURES type, int number, Feature feature)
@@ -272,6 +258,32 @@ namespace DSA_Project
             String x;
             modifikatoren.TryGetValue(number, out x);
             return x;
+        }
+        
+        public void addTalent(DSA_TALENTS type, int number, Talent talent)
+        {
+            Dictionary<int,Talent> talentDictonary;
+            talente.TryGetValue(type, out talentDictonary);
+
+            talentDictonary.Remove(number);
+            talent.setCharacter(this);
+            talentDictonary.Add(number, talent);
+        }
+        public Talent getTalent(DSA_TALENTS type, int number)
+        {
+            Dictionary<int, Talent> talentDictonary;
+            talente.TryGetValue(type, out talentDictonary);
+
+            Talent x;
+            talentDictonary.TryGetValue(number, out x);
+            return x;
+        }
+        public int getCounttalent(DSA_TALENTS type)
+        {
+            Dictionary<int, Talent> talentDictonary;
+            talente.TryGetValue(type, out talentDictonary);
+
+            return talentDictonary.Count();
         }
     }
 }

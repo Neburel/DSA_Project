@@ -1,6 +1,6 @@
 ﻿namespace DSA_Project
 {
-    partial class Form1
+    partial class DSA
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DSA));
+            this.TabControl = new System.Windows.Forms.TabControl();
             this.Heldenbrief = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtNachteil15Beschreibung = new System.Windows.Forms.TextBox();
@@ -177,36 +178,30 @@
             this.txtGeldD = new System.Windows.Forms.TextBox();
             this.txtMagieresistenzERG = new System.Windows.Forms.TextBox();
             this.txtMagieresistenzMALI = new System.Windows.Forms.TextBox();
-            this.txtMagieresistenzMOD = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
             this.txtMagieresistenzPERM = new System.Windows.Forms.TextBox();
             this.txtMagieresistenzVOR = new System.Windows.Forms.TextBox();
             this.txtKarmaenergieERG = new System.Windows.Forms.TextBox();
             this.txtKarmaenergieMALI = new System.Windows.Forms.TextBox();
-            this.txtKarmaenergieMOD = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
             this.txtKarmaenergiePERM = new System.Windows.Forms.TextBox();
             this.txtKarmaenergieVOR = new System.Windows.Forms.TextBox();
             this.txtAstralenergieERG = new System.Windows.Forms.TextBox();
             this.txtAstralenergieMALI = new System.Windows.Forms.TextBox();
-            this.txtAstralenergieMOD = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
             this.txtAstralenergiePERM = new System.Windows.Forms.TextBox();
             this.txtAstralenergieVOR = new System.Windows.Forms.TextBox();
             this.txtAusdauerERG = new System.Windows.Forms.TextBox();
             this.txtAusdauerMALI = new System.Windows.Forms.TextBox();
-            this.txtAusdauerMOD = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.txtAusdauerPERM = new System.Windows.Forms.TextBox();
             this.txtAusdauerVOR = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
             this.txtLebensenergieERG = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.txtLebensenergieMALI = new System.Windows.Forms.TextBox();
-            this.txtLebensenergieMOD = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtLebensenergiePERM = new System.Windows.Forms.TextBox();
             this.txtLebensenergieVOR = new System.Windows.Forms.TextBox();
@@ -331,21 +326,251 @@
             this.lblAugenfarbe = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.radioNaturTalente = new System.Windows.Forms.RadioButton();
+            this.radioSozialTalente = new System.Windows.Forms.RadioButton();
+            this.radioKörperlicheTalente = new System.Windows.Forms.RadioButton();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.PTAbleiten1 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten2 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten18 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten3 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten17 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten4 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten16 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten5 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten15 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten6 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten14 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten7 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten13 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten8 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten12 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten9 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten11 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten10 = new System.Windows.Forms.TextBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.PTAnforderungen1 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen2 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen18 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen3 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen17 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen4 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen16 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen5 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen15 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen6 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen14 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen7 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen13 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen8 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen12 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen9 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen11 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen10 = new System.Windows.Forms.TextBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.PTSpezialisierung18 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung17 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung16 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung15 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung14 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung13 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung12 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung11 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung10 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung9 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung8 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung7 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung6 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung5 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung4 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung3 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung2 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung1 = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.PTBilliger17 = new System.Windows.Forms.TextBox();
+            this.PTBilliger18 = new System.Windows.Forms.TextBox();
+            this.PTBilliger16 = new System.Windows.Forms.TextBox();
+            this.PTBilliger12 = new System.Windows.Forms.TextBox();
+            this.PTBilliger13 = new System.Windows.Forms.TextBox();
+            this.PTBilliger14 = new System.Windows.Forms.TextBox();
+            this.PTBilliger15 = new System.Windows.Forms.TextBox();
+            this.PTBilliger11 = new System.Windows.Forms.TextBox();
+            this.PTBilliger7 = new System.Windows.Forms.TextBox();
+            this.PTBilliger8 = new System.Windows.Forms.TextBox();
+            this.PTBilliger9 = new System.Windows.Forms.TextBox();
+            this.PTBilliger10 = new System.Windows.Forms.TextBox();
+            this.PTBilliger6 = new System.Windows.Forms.TextBox();
+            this.PTBilliger2 = new System.Windows.Forms.TextBox();
+            this.PTBilliger3 = new System.Windows.Forms.TextBox();
+            this.PTBilliger4 = new System.Windows.Forms.TextBox();
+            this.PTBilliger5 = new System.Windows.Forms.TextBox();
+            this.PTBilliger1 = new System.Windows.Forms.TextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.PTBe17 = new System.Windows.Forms.TextBox();
+            this.PTBe18 = new System.Windows.Forms.TextBox();
+            this.PTBe16 = new System.Windows.Forms.TextBox();
+            this.PTBe12 = new System.Windows.Forms.TextBox();
+            this.PTBe13 = new System.Windows.Forms.TextBox();
+            this.PTBe14 = new System.Windows.Forms.TextBox();
+            this.PTBe15 = new System.Windows.Forms.TextBox();
+            this.PTBe11 = new System.Windows.Forms.TextBox();
+            this.PTBe7 = new System.Windows.Forms.TextBox();
+            this.PTBe8 = new System.Windows.Forms.TextBox();
+            this.PTBe9 = new System.Windows.Forms.TextBox();
+            this.PTBe10 = new System.Windows.Forms.TextBox();
+            this.PTBe6 = new System.Windows.Forms.TextBox();
+            this.PTBe2 = new System.Windows.Forms.TextBox();
+            this.PTBe3 = new System.Windows.Forms.TextBox();
+            this.PTBe4 = new System.Windows.Forms.TextBox();
+            this.PTBe5 = new System.Windows.Forms.TextBox();
+            this.PTBe1 = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.PTTaw18 = new System.Windows.Forms.TextBox();
+            this.PTTaw17 = new System.Windows.Forms.TextBox();
+            this.PTTaw16 = new System.Windows.Forms.TextBox();
+            this.PTTaw15 = new System.Windows.Forms.TextBox();
+            this.PTTaw14 = new System.Windows.Forms.TextBox();
+            this.PTTaw13 = new System.Windows.Forms.TextBox();
+            this.PTTaw12 = new System.Windows.Forms.TextBox();
+            this.PTTaw11 = new System.Windows.Forms.TextBox();
+            this.PTTaw10 = new System.Windows.Forms.TextBox();
+            this.PTTaw9 = new System.Windows.Forms.TextBox();
+            this.PTTaw8 = new System.Windows.Forms.TextBox();
+            this.PTTaw7 = new System.Windows.Forms.TextBox();
+            this.PTTaw6 = new System.Windows.Forms.TextBox();
+            this.PTTaw5 = new System.Windows.Forms.TextBox();
+            this.PTTaw4 = new System.Windows.Forms.TextBox();
+            this.PTTaw3 = new System.Windows.Forms.TextBox();
+            this.PTTaw2 = new System.Windows.Forms.TextBox();
+            this.PTTaw1 = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.PTWürfe17 = new System.Windows.Forms.TextBox();
+            this.PTWürfe18 = new System.Windows.Forms.TextBox();
+            this.PTWürfe16 = new System.Windows.Forms.TextBox();
+            this.PTWürfe12 = new System.Windows.Forms.TextBox();
+            this.PTWürfe13 = new System.Windows.Forms.TextBox();
+            this.PTWürfe15 = new System.Windows.Forms.TextBox();
+            this.PTWürfe14 = new System.Windows.Forms.TextBox();
+            this.PTWürfe11 = new System.Windows.Forms.TextBox();
+            this.PTWürfe7 = new System.Windows.Forms.TextBox();
+            this.PTWürfe8 = new System.Windows.Forms.TextBox();
+            this.PTWürfe10 = new System.Windows.Forms.TextBox();
+            this.PTWürfe9 = new System.Windows.Forms.TextBox();
+            this.PTWürfe6 = new System.Windows.Forms.TextBox();
+            this.PTWürfe2 = new System.Windows.Forms.TextBox();
+            this.PTWürfe3 = new System.Windows.Forms.TextBox();
+            this.PTWürfe5 = new System.Windows.Forms.TextBox();
+            this.PTWürfe4 = new System.Windows.Forms.TextBox();
+            this.PTWürfe1 = new System.Windows.Forms.TextBox();
+            this.PTProbe17 = new System.Windows.Forms.TextBox();
+            this.PTProbe18 = new System.Windows.Forms.TextBox();
+            this.PTProbe16 = new System.Windows.Forms.TextBox();
+            this.PTProbe12 = new System.Windows.Forms.TextBox();
+            this.PTProbe13 = new System.Windows.Forms.TextBox();
+            this.PTProbe15 = new System.Windows.Forms.TextBox();
+            this.PTProbe14 = new System.Windows.Forms.TextBox();
+            this.PTProbe11 = new System.Windows.Forms.TextBox();
+            this.PTProbe7 = new System.Windows.Forms.TextBox();
+            this.PTProbe8 = new System.Windows.Forms.TextBox();
+            this.PTProbe10 = new System.Windows.Forms.TextBox();
+            this.PTProbe9 = new System.Windows.Forms.TextBox();
+            this.PTProbe6 = new System.Windows.Forms.TextBox();
+            this.PTProbe2 = new System.Windows.Forms.TextBox();
+            this.PTProbe3 = new System.Windows.Forms.TextBox();
+            this.PTProbe5 = new System.Windows.Forms.TextBox();
+            this.PTProbe4 = new System.Windows.Forms.TextBox();
+            this.PTProbe1 = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.PTName18 = new System.Windows.Forms.Label();
+            this.PTName17 = new System.Windows.Forms.Label();
+            this.PTName16 = new System.Windows.Forms.Label();
+            this.PTName15 = new System.Windows.Forms.Label();
+            this.PTName14 = new System.Windows.Forms.Label();
+            this.PTName13 = new System.Windows.Forms.Label();
+            this.PTName12 = new System.Windows.Forms.Label();
+            this.PTName11 = new System.Windows.Forms.Label();
+            this.PTName10 = new System.Windows.Forms.Label();
+            this.PTName9 = new System.Windows.Forms.Label();
+            this.PTName8 = new System.Windows.Forms.Label();
+            this.PTName7 = new System.Windows.Forms.Label();
+            this.PTName6 = new System.Windows.Forms.Label();
+            this.PTName5 = new System.Windows.Forms.Label();
+            this.PTName4 = new System.Windows.Forms.Label();
+            this.PTName3 = new System.Windows.Forms.Label();
+            this.PTName2 = new System.Windows.Forms.Label();
+            this.PTName1 = new System.Windows.Forms.Label();
+            this.socialTalents = new System.Windows.Forms.TabPage();
+            this.radioKnowldageTalente = new System.Windows.Forms.RadioButton();
+            this.PTName22 = new System.Windows.Forms.Label();
+            this.PTName21 = new System.Windows.Forms.Label();
+            this.PTName20 = new System.Windows.Forms.Label();
+            this.PTName19 = new System.Windows.Forms.Label();
+            this.PTWürfe21 = new System.Windows.Forms.TextBox();
+            this.PTWürfe22 = new System.Windows.Forms.TextBox();
+            this.PTWürfe20 = new System.Windows.Forms.TextBox();
+            this.PTWürfe19 = new System.Windows.Forms.TextBox();
+            this.PTProbe21 = new System.Windows.Forms.TextBox();
+            this.PTProbe22 = new System.Windows.Forms.TextBox();
+            this.PTProbe20 = new System.Windows.Forms.TextBox();
+            this.PTProbe19 = new System.Windows.Forms.TextBox();
+            this.PTTaw22 = new System.Windows.Forms.TextBox();
+            this.PTTaw21 = new System.Windows.Forms.TextBox();
+            this.PTTaw20 = new System.Windows.Forms.TextBox();
+            this.PTTaw19 = new System.Windows.Forms.TextBox();
+            this.PTBe21 = new System.Windows.Forms.TextBox();
+            this.PTBe22 = new System.Windows.Forms.TextBox();
+            this.PTBe20 = new System.Windows.Forms.TextBox();
+            this.PTBe19 = new System.Windows.Forms.TextBox();
+            this.PTBilliger21 = new System.Windows.Forms.TextBox();
+            this.PTBilliger22 = new System.Windows.Forms.TextBox();
+            this.PTBilliger20 = new System.Windows.Forms.TextBox();
+            this.PTBilliger19 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung22 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung21 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung20 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung19 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen22 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen21 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen20 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen19 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten22 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten21 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten20 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten19 = new System.Windows.Forms.TextBox();
+            this.PTWürfe23 = new System.Windows.Forms.TextBox();
+            this.PTProbe23 = new System.Windows.Forms.TextBox();
+            this.PTTaw23 = new System.Windows.Forms.TextBox();
+            this.PTBe23 = new System.Windows.Forms.TextBox();
+            this.PTBilliger23 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung23 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen23 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten23 = new System.Windows.Forms.TextBox();
+            this.PTName23 = new System.Windows.Forms.Label();
+            this.TabControl.SuspendLayout();
             this.Heldenbrief.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox19.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // TabControl
             // 
-            this.tabControl1.Controls.Add(this.Heldenbrief);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1446, 905);
-            this.tabControl1.TabIndex = 124;
+            this.TabControl.Controls.Add(this.Heldenbrief);
+            this.TabControl.Controls.Add(this.tabPage2);
+            this.TabControl.Controls.Add(this.socialTalents);
+            resources.ApplyResources(this.TabControl, "TabControl");
+            this.TabControl.Name = "TabControl";
+            this.TabControl.SelectedIndex = 0;
             // 
             // Heldenbrief
             // 
@@ -369,36 +594,30 @@
             this.Heldenbrief.Controls.Add(this.txtGeldD);
             this.Heldenbrief.Controls.Add(this.txtMagieresistenzERG);
             this.Heldenbrief.Controls.Add(this.txtMagieresistenzMALI);
-            this.Heldenbrief.Controls.Add(this.txtMagieresistenzMOD);
             this.Heldenbrief.Controls.Add(this.label51);
             this.Heldenbrief.Controls.Add(this.txtMagieresistenzPERM);
             this.Heldenbrief.Controls.Add(this.txtMagieresistenzVOR);
             this.Heldenbrief.Controls.Add(this.txtKarmaenergieERG);
             this.Heldenbrief.Controls.Add(this.txtKarmaenergieMALI);
-            this.Heldenbrief.Controls.Add(this.txtKarmaenergieMOD);
             this.Heldenbrief.Controls.Add(this.label50);
             this.Heldenbrief.Controls.Add(this.txtKarmaenergiePERM);
             this.Heldenbrief.Controls.Add(this.txtKarmaenergieVOR);
             this.Heldenbrief.Controls.Add(this.txtAstralenergieERG);
             this.Heldenbrief.Controls.Add(this.txtAstralenergieMALI);
-            this.Heldenbrief.Controls.Add(this.txtAstralenergieMOD);
             this.Heldenbrief.Controls.Add(this.label49);
             this.Heldenbrief.Controls.Add(this.txtAstralenergiePERM);
             this.Heldenbrief.Controls.Add(this.txtAstralenergieVOR);
             this.Heldenbrief.Controls.Add(this.txtAusdauerERG);
             this.Heldenbrief.Controls.Add(this.txtAusdauerMALI);
-            this.Heldenbrief.Controls.Add(this.txtAusdauerMOD);
             this.Heldenbrief.Controls.Add(this.label48);
             this.Heldenbrief.Controls.Add(this.txtAusdauerPERM);
             this.Heldenbrief.Controls.Add(this.txtAusdauerVOR);
             this.Heldenbrief.Controls.Add(this.label46);
             this.Heldenbrief.Controls.Add(this.txtLebensenergieERG);
             this.Heldenbrief.Controls.Add(this.label47);
-            this.Heldenbrief.Controls.Add(this.label45);
             this.Heldenbrief.Controls.Add(this.label44);
             this.Heldenbrief.Controls.Add(this.label43);
             this.Heldenbrief.Controls.Add(this.txtLebensenergieMALI);
-            this.Heldenbrief.Controls.Add(this.txtLebensenergieMOD);
             this.Heldenbrief.Controls.Add(this.label11);
             this.Heldenbrief.Controls.Add(this.txtLebensenergiePERM);
             this.Heldenbrief.Controls.Add(this.txtLebensenergieVOR);
@@ -522,14 +741,8 @@
             this.Heldenbrief.Controls.Add(this.label1);
             this.Heldenbrief.Controls.Add(this.lblAugenfarbe);
             this.Heldenbrief.Controls.Add(this.lblName);
-            this.Heldenbrief.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Heldenbrief.Location = new System.Drawing.Point(4, 22);
+            resources.ApplyResources(this.Heldenbrief, "Heldenbrief");
             this.Heldenbrief.Name = "Heldenbrief";
-            this.Heldenbrief.Padding = new System.Windows.Forms.Padding(3);
-            this.Heldenbrief.Size = new System.Drawing.Size(1438, 879);
-            this.Heldenbrief.TabIndex = 0;
-            this.Heldenbrief.Text = "Heldenbrief";
-            this.Heldenbrief.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // groupBox2
             // 
@@ -597,683 +810,449 @@
             this.groupBox2.Controls.Add(this.label62);
             this.groupBox2.Controls.Add(this.label63);
             this.groupBox2.Controls.Add(this.label64);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(722, 423);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(700, 455);
-            this.groupBox2.TabIndex = 358;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Nachteile";
             // 
             // txtNachteil15Beschreibung
             // 
             this.txtNachteil15Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil15Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil15Beschreibung.Location = new System.Drawing.Point(334, 428);
+            resources.ApplyResources(this.txtNachteil15Beschreibung, "txtNachteil15Beschreibung");
             this.txtNachteil15Beschreibung.Name = "txtNachteil15Beschreibung";
-            this.txtNachteil15Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtNachteil15Beschreibung.TabIndex = 357;
             this.txtNachteil15Beschreibung.Click += new System.EventHandler(this.txtNachteil15_ValueChanged);
             // 
             // txtNachteil15GP
             // 
             this.txtNachteil15GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil15GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil15GP.Location = new System.Drawing.Point(288, 426);
+            resources.ApplyResources(this.txtNachteil15GP, "txtNachteil15GP");
             this.txtNachteil15GP.Name = "txtNachteil15GP";
-            this.txtNachteil15GP.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil15GP.TabIndex = 356;
-            this.txtNachteil15GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil15GP.Click += new System.EventHandler(this.txtNachteil15_ValueChanged);
             // 
             // txtNachteil15Wert
             // 
             this.txtNachteil15Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil15Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil15Wert.Location = new System.Drawing.Point(242, 426);
+            resources.ApplyResources(this.txtNachteil15Wert, "txtNachteil15Wert");
             this.txtNachteil15Wert.Name = "txtNachteil15Wert";
-            this.txtNachteil15Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil15Wert.TabIndex = 355;
-            this.txtNachteil15Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil15Wert.Click += new System.EventHandler(this.txtNachteil15_ValueChanged);
             // 
             // txtNachteil15Name
             // 
             this.txtNachteil15Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil15Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil15Name.Location = new System.Drawing.Point(6, 426);
+            resources.ApplyResources(this.txtNachteil15Name, "txtNachteil15Name");
             this.txtNachteil15Name.Name = "txtNachteil15Name";
-            this.txtNachteil15Name.Size = new System.Drawing.Size(230, 21);
-            this.txtNachteil15Name.TabIndex = 354;
             this.txtNachteil15Name.Click += new System.EventHandler(this.txtNachteil15_ValueChanged);
             // 
             // txtNachteil14Beschreibung
             // 
             this.txtNachteil14Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil14Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil14Beschreibung.Location = new System.Drawing.Point(334, 399);
+            resources.ApplyResources(this.txtNachteil14Beschreibung, "txtNachteil14Beschreibung");
             this.txtNachteil14Beschreibung.Name = "txtNachteil14Beschreibung";
-            this.txtNachteil14Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtNachteil14Beschreibung.TabIndex = 351;
             this.txtNachteil14Beschreibung.Click += new System.EventHandler(this.txtNachteil14_ValueChanged);
             // 
             // txtNachteil14GP
             // 
             this.txtNachteil14GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil14GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil14GP.Location = new System.Drawing.Point(288, 399);
+            resources.ApplyResources(this.txtNachteil14GP, "txtNachteil14GP");
             this.txtNachteil14GP.Name = "txtNachteil14GP";
-            this.txtNachteil14GP.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil14GP.TabIndex = 350;
-            this.txtNachteil14GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil14GP.Click += new System.EventHandler(this.txtNachteil14_ValueChanged);
             // 
             // txtNachteil14Wert
             // 
             this.txtNachteil14Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil14Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil14Wert.Location = new System.Drawing.Point(242, 399);
+            resources.ApplyResources(this.txtNachteil14Wert, "txtNachteil14Wert");
             this.txtNachteil14Wert.Name = "txtNachteil14Wert";
-            this.txtNachteil14Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil14Wert.TabIndex = 349;
-            this.txtNachteil14Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil14Wert.Click += new System.EventHandler(this.txtNachteil14_ValueChanged);
             // 
             // txtNachteil14Name
             // 
             this.txtNachteil14Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil14Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil14Name.Location = new System.Drawing.Point(6, 399);
+            resources.ApplyResources(this.txtNachteil14Name, "txtNachteil14Name");
             this.txtNachteil14Name.Name = "txtNachteil14Name";
-            this.txtNachteil14Name.Size = new System.Drawing.Size(230, 21);
-            this.txtNachteil14Name.TabIndex = 348;
             this.txtNachteil14Name.Click += new System.EventHandler(this.txtNachteil14_ValueChanged);
             // 
             // txtNachteil13Beschreibung
             // 
             this.txtNachteil13Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil13Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil13Beschreibung.Location = new System.Drawing.Point(334, 372);
+            resources.ApplyResources(this.txtNachteil13Beschreibung, "txtNachteil13Beschreibung");
             this.txtNachteil13Beschreibung.Name = "txtNachteil13Beschreibung";
-            this.txtNachteil13Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtNachteil13Beschreibung.TabIndex = 345;
             this.txtNachteil13Beschreibung.Click += new System.EventHandler(this.txtNachteil13_ValueChanged);
             // 
             // txtNachteil13GP
             // 
             this.txtNachteil13GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil13GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil13GP.Location = new System.Drawing.Point(288, 372);
+            resources.ApplyResources(this.txtNachteil13GP, "txtNachteil13GP");
             this.txtNachteil13GP.Name = "txtNachteil13GP";
-            this.txtNachteil13GP.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil13GP.TabIndex = 344;
-            this.txtNachteil13GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil13GP.Click += new System.EventHandler(this.txtNachteil13_ValueChanged);
             // 
             // txtNachteil13Wert
             // 
             this.txtNachteil13Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil13Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil13Wert.Location = new System.Drawing.Point(242, 372);
+            resources.ApplyResources(this.txtNachteil13Wert, "txtNachteil13Wert");
             this.txtNachteil13Wert.Name = "txtNachteil13Wert";
-            this.txtNachteil13Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil13Wert.TabIndex = 343;
-            this.txtNachteil13Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil13Wert.Click += new System.EventHandler(this.txtNachteil13_ValueChanged);
             // 
             // txtNachteil13Name
             // 
             this.txtNachteil13Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil13Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil13Name.Location = new System.Drawing.Point(6, 372);
+            resources.ApplyResources(this.txtNachteil13Name, "txtNachteil13Name");
             this.txtNachteil13Name.Name = "txtNachteil13Name";
-            this.txtNachteil13Name.Size = new System.Drawing.Size(230, 21);
-            this.txtNachteil13Name.TabIndex = 342;
             this.txtNachteil13Name.Click += new System.EventHandler(this.txtNachteil13_ValueChanged);
             // 
             // txtNachteil12Beschreibung
             // 
             this.txtNachteil12Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil12Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil12Beschreibung.Location = new System.Drawing.Point(334, 345);
+            resources.ApplyResources(this.txtNachteil12Beschreibung, "txtNachteil12Beschreibung");
             this.txtNachteil12Beschreibung.Name = "txtNachteil12Beschreibung";
-            this.txtNachteil12Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtNachteil12Beschreibung.TabIndex = 339;
             this.txtNachteil12Beschreibung.Click += new System.EventHandler(this.txtNachteil12_ValueChanged);
             // 
             // txtNachteil12GP
             // 
             this.txtNachteil12GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil12GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil12GP.Location = new System.Drawing.Point(288, 345);
+            resources.ApplyResources(this.txtNachteil12GP, "txtNachteil12GP");
             this.txtNachteil12GP.Name = "txtNachteil12GP";
-            this.txtNachteil12GP.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil12GP.TabIndex = 338;
-            this.txtNachteil12GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil12GP.Click += new System.EventHandler(this.txtNachteil12_ValueChanged);
             // 
             // txtNachteil12Wert
             // 
             this.txtNachteil12Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil12Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil12Wert.Location = new System.Drawing.Point(242, 345);
+            resources.ApplyResources(this.txtNachteil12Wert, "txtNachteil12Wert");
             this.txtNachteil12Wert.Name = "txtNachteil12Wert";
-            this.txtNachteil12Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil12Wert.TabIndex = 337;
-            this.txtNachteil12Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil12Wert.Click += new System.EventHandler(this.txtNachteil12_ValueChanged);
             // 
             // txtNachteil12Name
             // 
             this.txtNachteil12Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil12Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil12Name.Location = new System.Drawing.Point(6, 345);
+            resources.ApplyResources(this.txtNachteil12Name, "txtNachteil12Name");
             this.txtNachteil12Name.Name = "txtNachteil12Name";
-            this.txtNachteil12Name.Size = new System.Drawing.Size(230, 21);
-            this.txtNachteil12Name.TabIndex = 336;
             this.txtNachteil12Name.Click += new System.EventHandler(this.txtNachteil12_ValueChanged);
             // 
             // txtNachteil11Beschreibung
             // 
             this.txtNachteil11Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil11Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil11Beschreibung.Location = new System.Drawing.Point(334, 318);
+            resources.ApplyResources(this.txtNachteil11Beschreibung, "txtNachteil11Beschreibung");
             this.txtNachteil11Beschreibung.Name = "txtNachteil11Beschreibung";
-            this.txtNachteil11Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtNachteil11Beschreibung.TabIndex = 333;
             this.txtNachteil11Beschreibung.Click += new System.EventHandler(this.txtNachteil11_ValueChanged);
             // 
             // txtNachteil11GP
             // 
             this.txtNachteil11GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil11GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil11GP.Location = new System.Drawing.Point(288, 318);
+            resources.ApplyResources(this.txtNachteil11GP, "txtNachteil11GP");
             this.txtNachteil11GP.Name = "txtNachteil11GP";
-            this.txtNachteil11GP.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil11GP.TabIndex = 332;
-            this.txtNachteil11GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil11GP.Click += new System.EventHandler(this.txtNachteil11_ValueChanged);
             // 
             // txtNachteil11Wert
             // 
             this.txtNachteil11Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil11Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil11Wert.Location = new System.Drawing.Point(242, 318);
+            resources.ApplyResources(this.txtNachteil11Wert, "txtNachteil11Wert");
             this.txtNachteil11Wert.Name = "txtNachteil11Wert";
-            this.txtNachteil11Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil11Wert.TabIndex = 331;
-            this.txtNachteil11Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil11Wert.Click += new System.EventHandler(this.txtNachteil11_ValueChanged);
             // 
             // txtNachteil11Name
             // 
             this.txtNachteil11Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil11Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil11Name.Location = new System.Drawing.Point(6, 318);
+            resources.ApplyResources(this.txtNachteil11Name, "txtNachteil11Name");
             this.txtNachteil11Name.Name = "txtNachteil11Name";
-            this.txtNachteil11Name.Size = new System.Drawing.Size(230, 21);
-            this.txtNachteil11Name.TabIndex = 330;
             this.txtNachteil11Name.Click += new System.EventHandler(this.txtNachteil11_ValueChanged);
             // 
             // txtNachteil10Beschreibung
             // 
             this.txtNachteil10Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil10Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil10Beschreibung.Location = new System.Drawing.Point(334, 291);
+            resources.ApplyResources(this.txtNachteil10Beschreibung, "txtNachteil10Beschreibung");
             this.txtNachteil10Beschreibung.Name = "txtNachteil10Beschreibung";
-            this.txtNachteil10Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtNachteil10Beschreibung.TabIndex = 327;
             this.txtNachteil10Beschreibung.Click += new System.EventHandler(this.txtNachteil10_ValueChanged);
             // 
             // txtNachteil10GP
             // 
             this.txtNachteil10GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil10GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil10GP.Location = new System.Drawing.Point(288, 291);
+            resources.ApplyResources(this.txtNachteil10GP, "txtNachteil10GP");
             this.txtNachteil10GP.Name = "txtNachteil10GP";
-            this.txtNachteil10GP.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil10GP.TabIndex = 326;
-            this.txtNachteil10GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil10GP.Click += new System.EventHandler(this.txtNachteil10_ValueChanged);
             // 
             // txtNachteil10Wert
             // 
             this.txtNachteil10Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil10Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil10Wert.Location = new System.Drawing.Point(242, 291);
+            resources.ApplyResources(this.txtNachteil10Wert, "txtNachteil10Wert");
             this.txtNachteil10Wert.Name = "txtNachteil10Wert";
-            this.txtNachteil10Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil10Wert.TabIndex = 325;
-            this.txtNachteil10Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil10Wert.Click += new System.EventHandler(this.txtNachteil10_ValueChanged);
             // 
             // txtNachteil10Name
             // 
             this.txtNachteil10Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil10Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil10Name.Location = new System.Drawing.Point(6, 291);
+            resources.ApplyResources(this.txtNachteil10Name, "txtNachteil10Name");
             this.txtNachteil10Name.Name = "txtNachteil10Name";
-            this.txtNachteil10Name.Size = new System.Drawing.Size(230, 21);
-            this.txtNachteil10Name.TabIndex = 324;
             this.txtNachteil10Name.Click += new System.EventHandler(this.txtNachteil10_ValueChanged);
             // 
             // txtNachteil9Beschreibung
             // 
             this.txtNachteil9Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil9Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil9Beschreibung.Location = new System.Drawing.Point(334, 264);
+            resources.ApplyResources(this.txtNachteil9Beschreibung, "txtNachteil9Beschreibung");
             this.txtNachteil9Beschreibung.Name = "txtNachteil9Beschreibung";
-            this.txtNachteil9Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtNachteil9Beschreibung.TabIndex = 321;
             this.txtNachteil9Beschreibung.Click += new System.EventHandler(this.txtNachteil9_ValueChanged);
             // 
             // txtNachteil9GP
             // 
             this.txtNachteil9GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil9GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil9GP.Location = new System.Drawing.Point(288, 264);
+            resources.ApplyResources(this.txtNachteil9GP, "txtNachteil9GP");
             this.txtNachteil9GP.Name = "txtNachteil9GP";
-            this.txtNachteil9GP.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil9GP.TabIndex = 320;
-            this.txtNachteil9GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil9GP.Click += new System.EventHandler(this.txtNachteil9_ValueChanged);
             // 
             // txtNachteil9Wert
             // 
             this.txtNachteil9Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil9Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil9Wert.Location = new System.Drawing.Point(242, 264);
+            resources.ApplyResources(this.txtNachteil9Wert, "txtNachteil9Wert");
             this.txtNachteil9Wert.Name = "txtNachteil9Wert";
-            this.txtNachteil9Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil9Wert.TabIndex = 319;
-            this.txtNachteil9Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil9Wert.Click += new System.EventHandler(this.txtNachteil9_ValueChanged);
             // 
             // txtNachteil9Name
             // 
             this.txtNachteil9Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil9Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil9Name.Location = new System.Drawing.Point(6, 264);
+            resources.ApplyResources(this.txtNachteil9Name, "txtNachteil9Name");
             this.txtNachteil9Name.Name = "txtNachteil9Name";
-            this.txtNachteil9Name.Size = new System.Drawing.Size(230, 21);
-            this.txtNachteil9Name.TabIndex = 318;
             this.txtNachteil9Name.Click += new System.EventHandler(this.txtNachteil9_ValueChanged);
             // 
             // txtNachteil8Beschreibung
             // 
             this.txtNachteil8Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil8Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil8Beschreibung.Location = new System.Drawing.Point(334, 237);
+            resources.ApplyResources(this.txtNachteil8Beschreibung, "txtNachteil8Beschreibung");
             this.txtNachteil8Beschreibung.Name = "txtNachteil8Beschreibung";
-            this.txtNachteil8Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtNachteil8Beschreibung.TabIndex = 315;
             this.txtNachteil8Beschreibung.Click += new System.EventHandler(this.txtNachteil8_ValueChanged);
             // 
             // txtNachteil8GP
             // 
             this.txtNachteil8GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil8GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil8GP.Location = new System.Drawing.Point(288, 237);
+            resources.ApplyResources(this.txtNachteil8GP, "txtNachteil8GP");
             this.txtNachteil8GP.Name = "txtNachteil8GP";
-            this.txtNachteil8GP.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil8GP.TabIndex = 314;
-            this.txtNachteil8GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil8GP.Click += new System.EventHandler(this.txtNachteil8_ValueChanged);
             // 
             // txtNachteil8Wert
             // 
             this.txtNachteil8Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil8Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil8Wert.Location = new System.Drawing.Point(242, 237);
+            resources.ApplyResources(this.txtNachteil8Wert, "txtNachteil8Wert");
             this.txtNachteil8Wert.Name = "txtNachteil8Wert";
-            this.txtNachteil8Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil8Wert.TabIndex = 313;
-            this.txtNachteil8Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil8Wert.Click += new System.EventHandler(this.txtNachteil8_ValueChanged);
             // 
             // txtNachteil8Name
             // 
             this.txtNachteil8Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil8Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil8Name.Location = new System.Drawing.Point(6, 237);
+            resources.ApplyResources(this.txtNachteil8Name, "txtNachteil8Name");
             this.txtNachteil8Name.Name = "txtNachteil8Name";
-            this.txtNachteil8Name.Size = new System.Drawing.Size(230, 21);
-            this.txtNachteil8Name.TabIndex = 312;
             this.txtNachteil8Name.Click += new System.EventHandler(this.txtNachteil8_ValueChanged);
             // 
             // txtNachteil7Beschreibung
             // 
             this.txtNachteil7Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil7Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil7Beschreibung.Location = new System.Drawing.Point(334, 210);
+            resources.ApplyResources(this.txtNachteil7Beschreibung, "txtNachteil7Beschreibung");
             this.txtNachteil7Beschreibung.Name = "txtNachteil7Beschreibung";
-            this.txtNachteil7Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtNachteil7Beschreibung.TabIndex = 309;
             this.txtNachteil7Beschreibung.Click += new System.EventHandler(this.txtNachteil7_ValueChanged);
             // 
             // txtNachteil7GP
             // 
             this.txtNachteil7GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil7GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil7GP.Location = new System.Drawing.Point(288, 210);
+            resources.ApplyResources(this.txtNachteil7GP, "txtNachteil7GP");
             this.txtNachteil7GP.Name = "txtNachteil7GP";
-            this.txtNachteil7GP.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil7GP.TabIndex = 308;
-            this.txtNachteil7GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil7GP.Click += new System.EventHandler(this.txtNachteil7_ValueChanged);
             // 
             // txtNachteil7Wert
             // 
             this.txtNachteil7Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil7Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil7Wert.Location = new System.Drawing.Point(242, 210);
+            resources.ApplyResources(this.txtNachteil7Wert, "txtNachteil7Wert");
             this.txtNachteil7Wert.Name = "txtNachteil7Wert";
-            this.txtNachteil7Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil7Wert.TabIndex = 307;
-            this.txtNachteil7Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil7Wert.Click += new System.EventHandler(this.txtNachteil7_ValueChanged);
             // 
             // txtNachteil7Name
             // 
             this.txtNachteil7Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil7Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil7Name.Location = new System.Drawing.Point(6, 210);
+            resources.ApplyResources(this.txtNachteil7Name, "txtNachteil7Name");
             this.txtNachteil7Name.Name = "txtNachteil7Name";
-            this.txtNachteil7Name.Size = new System.Drawing.Size(230, 21);
-            this.txtNachteil7Name.TabIndex = 306;
             this.txtNachteil7Name.Click += new System.EventHandler(this.txtNachteil7_ValueChanged);
             // 
             // txtNachteil6Beschreibung
             // 
             this.txtNachteil6Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil6Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil6Beschreibung.Location = new System.Drawing.Point(334, 183);
+            resources.ApplyResources(this.txtNachteil6Beschreibung, "txtNachteil6Beschreibung");
             this.txtNachteil6Beschreibung.Name = "txtNachteil6Beschreibung";
-            this.txtNachteil6Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtNachteil6Beschreibung.TabIndex = 303;
             this.txtNachteil6Beschreibung.Click += new System.EventHandler(this.txtNachteil6_ValueChanged);
             // 
             // txtNachteil6GP
             // 
             this.txtNachteil6GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil6GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil6GP.Location = new System.Drawing.Point(288, 183);
+            resources.ApplyResources(this.txtNachteil6GP, "txtNachteil6GP");
             this.txtNachteil6GP.Name = "txtNachteil6GP";
-            this.txtNachteil6GP.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil6GP.TabIndex = 302;
-            this.txtNachteil6GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil6GP.Click += new System.EventHandler(this.txtNachteil6_ValueChanged);
             // 
             // txtNachteil6Wert
             // 
             this.txtNachteil6Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil6Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil6Wert.Location = new System.Drawing.Point(242, 183);
+            resources.ApplyResources(this.txtNachteil6Wert, "txtNachteil6Wert");
             this.txtNachteil6Wert.Name = "txtNachteil6Wert";
-            this.txtNachteil6Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil6Wert.TabIndex = 301;
-            this.txtNachteil6Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil6Wert.Click += new System.EventHandler(this.txtNachteil6_ValueChanged);
             // 
             // txtNachteil6Name
             // 
             this.txtNachteil6Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil6Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil6Name.Location = new System.Drawing.Point(6, 183);
+            resources.ApplyResources(this.txtNachteil6Name, "txtNachteil6Name");
             this.txtNachteil6Name.Name = "txtNachteil6Name";
-            this.txtNachteil6Name.Size = new System.Drawing.Size(230, 21);
-            this.txtNachteil6Name.TabIndex = 300;
             this.txtNachteil6Name.Click += new System.EventHandler(this.txtNachteil6_ValueChanged);
             // 
             // txtNachteil5Beschreibung
             // 
             this.txtNachteil5Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil5Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil5Beschreibung.Location = new System.Drawing.Point(334, 156);
+            resources.ApplyResources(this.txtNachteil5Beschreibung, "txtNachteil5Beschreibung");
             this.txtNachteil5Beschreibung.Name = "txtNachteil5Beschreibung";
-            this.txtNachteil5Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtNachteil5Beschreibung.TabIndex = 297;
             this.txtNachteil5Beschreibung.Click += new System.EventHandler(this.txtNachteil5_ValueChanged);
             // 
             // txtNachteil5GP
             // 
             this.txtNachteil5GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil5GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil5GP.Location = new System.Drawing.Point(288, 156);
+            resources.ApplyResources(this.txtNachteil5GP, "txtNachteil5GP");
             this.txtNachteil5GP.Name = "txtNachteil5GP";
-            this.txtNachteil5GP.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil5GP.TabIndex = 296;
-            this.txtNachteil5GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil5GP.Click += new System.EventHandler(this.txtNachteil5_ValueChanged);
             // 
             // txtNachteil5Wert
             // 
             this.txtNachteil5Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil5Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil5Wert.Location = new System.Drawing.Point(242, 156);
+            resources.ApplyResources(this.txtNachteil5Wert, "txtNachteil5Wert");
             this.txtNachteil5Wert.Name = "txtNachteil5Wert";
-            this.txtNachteil5Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil5Wert.TabIndex = 295;
-            this.txtNachteil5Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil5Wert.Click += new System.EventHandler(this.txtNachteil5_ValueChanged);
             // 
             // txtNachteil5Name
             // 
             this.txtNachteil5Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil5Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil5Name.Location = new System.Drawing.Point(6, 156);
+            resources.ApplyResources(this.txtNachteil5Name, "txtNachteil5Name");
             this.txtNachteil5Name.Name = "txtNachteil5Name";
-            this.txtNachteil5Name.Size = new System.Drawing.Size(230, 21);
-            this.txtNachteil5Name.TabIndex = 294;
             this.txtNachteil5Name.Click += new System.EventHandler(this.txtNachteil5_ValueChanged);
             // 
             // txtNachteil4Beschreibung
             // 
             this.txtNachteil4Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil4Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil4Beschreibung.Location = new System.Drawing.Point(334, 129);
+            resources.ApplyResources(this.txtNachteil4Beschreibung, "txtNachteil4Beschreibung");
             this.txtNachteil4Beschreibung.Name = "txtNachteil4Beschreibung";
-            this.txtNachteil4Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtNachteil4Beschreibung.TabIndex = 291;
             this.txtNachteil4Beschreibung.Click += new System.EventHandler(this.txtNachteil4_ValueChanged);
             // 
             // txtNachteil4GP
             // 
             this.txtNachteil4GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil4GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil4GP.Location = new System.Drawing.Point(288, 129);
+            resources.ApplyResources(this.txtNachteil4GP, "txtNachteil4GP");
             this.txtNachteil4GP.Name = "txtNachteil4GP";
-            this.txtNachteil4GP.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil4GP.TabIndex = 290;
-            this.txtNachteil4GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil4GP.Click += new System.EventHandler(this.txtNachteil4_ValueChanged);
             // 
             // txtNachteil4Wert
             // 
             this.txtNachteil4Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil4Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil4Wert.Location = new System.Drawing.Point(242, 129);
+            resources.ApplyResources(this.txtNachteil4Wert, "txtNachteil4Wert");
             this.txtNachteil4Wert.Name = "txtNachteil4Wert";
-            this.txtNachteil4Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil4Wert.TabIndex = 289;
-            this.txtNachteil4Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil4Wert.Click += new System.EventHandler(this.txtNachteil4_ValueChanged);
             // 
             // txtNachteil4Name
             // 
             this.txtNachteil4Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil4Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil4Name.Location = new System.Drawing.Point(6, 129);
+            resources.ApplyResources(this.txtNachteil4Name, "txtNachteil4Name");
             this.txtNachteil4Name.Name = "txtNachteil4Name";
-            this.txtNachteil4Name.Size = new System.Drawing.Size(230, 21);
-            this.txtNachteil4Name.TabIndex = 288;
             this.txtNachteil4Name.Click += new System.EventHandler(this.txtNachteil4_ValueChanged);
             // 
             // txtNachteil3Beschreibung
             // 
             this.txtNachteil3Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil3Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil3Beschreibung.Location = new System.Drawing.Point(334, 102);
+            resources.ApplyResources(this.txtNachteil3Beschreibung, "txtNachteil3Beschreibung");
             this.txtNachteil3Beschreibung.Name = "txtNachteil3Beschreibung";
-            this.txtNachteil3Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtNachteil3Beschreibung.TabIndex = 285;
             this.txtNachteil3Beschreibung.Click += new System.EventHandler(this.txtNachteil3_ValueChanged);
             // 
             // txtNachteil3GP
             // 
             this.txtNachteil3GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil3GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil3GP.Location = new System.Drawing.Point(288, 102);
+            resources.ApplyResources(this.txtNachteil3GP, "txtNachteil3GP");
             this.txtNachteil3GP.Name = "txtNachteil3GP";
-            this.txtNachteil3GP.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil3GP.TabIndex = 284;
-            this.txtNachteil3GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil3GP.Click += new System.EventHandler(this.txtNachteil3_ValueChanged);
             // 
             // txtNachteil3Wert
             // 
             this.txtNachteil3Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil3Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil3Wert.Location = new System.Drawing.Point(242, 102);
+            resources.ApplyResources(this.txtNachteil3Wert, "txtNachteil3Wert");
             this.txtNachteil3Wert.Name = "txtNachteil3Wert";
-            this.txtNachteil3Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil3Wert.TabIndex = 283;
-            this.txtNachteil3Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil3Wert.Click += new System.EventHandler(this.txtNachteil3_ValueChanged);
             // 
             // txtNachteil3Name
             // 
             this.txtNachteil3Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil3Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil3Name.Location = new System.Drawing.Point(6, 102);
+            resources.ApplyResources(this.txtNachteil3Name, "txtNachteil3Name");
             this.txtNachteil3Name.Name = "txtNachteil3Name";
-            this.txtNachteil3Name.Size = new System.Drawing.Size(230, 21);
-            this.txtNachteil3Name.TabIndex = 282;
             this.txtNachteil3Name.Click += new System.EventHandler(this.txtNachteil3_ValueChanged);
             // 
             // txtNachteil2Beschreibung
             // 
             this.txtNachteil2Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil2Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil2Beschreibung.Location = new System.Drawing.Point(334, 75);
+            resources.ApplyResources(this.txtNachteil2Beschreibung, "txtNachteil2Beschreibung");
             this.txtNachteil2Beschreibung.Name = "txtNachteil2Beschreibung";
-            this.txtNachteil2Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtNachteil2Beschreibung.TabIndex = 279;
             this.txtNachteil2Beschreibung.Click += new System.EventHandler(this.txtNachteil2_ValueChanged);
             // 
             // txtNachteil2GP
             // 
             this.txtNachteil2GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil2GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil2GP.Location = new System.Drawing.Point(288, 75);
+            resources.ApplyResources(this.txtNachteil2GP, "txtNachteil2GP");
             this.txtNachteil2GP.Name = "txtNachteil2GP";
-            this.txtNachteil2GP.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil2GP.TabIndex = 278;
-            this.txtNachteil2GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil2GP.Click += new System.EventHandler(this.txtNachteil2_ValueChanged);
             // 
             // txtNachteil2Wert
             // 
             this.txtNachteil2Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil2Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil2Wert.Location = new System.Drawing.Point(242, 75);
+            resources.ApplyResources(this.txtNachteil2Wert, "txtNachteil2Wert");
             this.txtNachteil2Wert.Name = "txtNachteil2Wert";
-            this.txtNachteil2Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil2Wert.TabIndex = 277;
-            this.txtNachteil2Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil2Wert.Click += new System.EventHandler(this.txtNachteil2_ValueChanged);
             // 
             // txtNachteil2Name
             // 
             this.txtNachteil2Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil2Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil2Name.Location = new System.Drawing.Point(6, 75);
+            resources.ApplyResources(this.txtNachteil2Name, "txtNachteil2Name");
             this.txtNachteil2Name.Name = "txtNachteil2Name";
-            this.txtNachteil2Name.Size = new System.Drawing.Size(230, 21);
-            this.txtNachteil2Name.TabIndex = 276;
             this.txtNachteil2Name.Click += new System.EventHandler(this.txtNachteil2_ValueChanged);
             // 
             // txtNachteil1Beschreibung
             // 
             this.txtNachteil1Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil1Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil1Beschreibung.Location = new System.Drawing.Point(334, 48);
+            resources.ApplyResources(this.txtNachteil1Beschreibung, "txtNachteil1Beschreibung");
             this.txtNachteil1Beschreibung.Name = "txtNachteil1Beschreibung";
-            this.txtNachteil1Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtNachteil1Beschreibung.TabIndex = 273;
             this.txtNachteil1Beschreibung.Click += new System.EventHandler(this.txtNachteil1_ValueChanged);
             // 
             // txtNachteil1GP
             // 
             this.txtNachteil1GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil1GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil1GP.Location = new System.Drawing.Point(288, 48);
+            resources.ApplyResources(this.txtNachteil1GP, "txtNachteil1GP");
             this.txtNachteil1GP.Name = "txtNachteil1GP";
-            this.txtNachteil1GP.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil1GP.TabIndex = 272;
-            this.txtNachteil1GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil1GP.Click += new System.EventHandler(this.txtNachteil1_ValueChanged);
             // 
             // txtNachteil1Wert
             // 
             this.txtNachteil1Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil1Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil1Wert.Location = new System.Drawing.Point(242, 48);
+            resources.ApplyResources(this.txtNachteil1Wert, "txtNachteil1Wert");
             this.txtNachteil1Wert.Name = "txtNachteil1Wert";
-            this.txtNachteil1Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtNachteil1Wert.TabIndex = 271;
-            this.txtNachteil1Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNachteil1Wert.Click += new System.EventHandler(this.txtNachteil1_ValueChanged);
             // 
             // txtNachteil1Name
             // 
             this.txtNachteil1Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNachteil1Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNachteil1Name.Location = new System.Drawing.Point(6, 48);
+            resources.ApplyResources(this.txtNachteil1Name, "txtNachteil1Name");
             this.txtNachteil1Name.Name = "txtNachteil1Name";
-            this.txtNachteil1Name.Size = new System.Drawing.Size(230, 21);
-            this.txtNachteil1Name.TabIndex = 266;
             this.txtNachteil1Name.Click += new System.EventHandler(this.txtNachteil1_ValueChanged);
             // 
             // label61
             // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label61.Location = new System.Drawing.Point(477, 32);
+            resources.ApplyResources(this.label61, "label61");
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(84, 13);
-            this.label61.TabIndex = 269;
-            this.label61.Text = "Beschreibung";
             // 
             // label62
             // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label62.Location = new System.Drawing.Point(296, 32);
+            resources.ApplyResources(this.label62, "label62");
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(24, 13);
-            this.label62.TabIndex = 268;
-            this.label62.Text = "GP";
             // 
             // label63
             // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label63.Location = new System.Drawing.Point(245, 32);
+            resources.ApplyResources(this.label63, "label63");
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(34, 13);
-            this.label63.TabIndex = 267;
-            this.label63.Text = "Wert";
             // 
             // label64
             // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label64.Location = new System.Drawing.Point(97, 32);
+            resources.ApplyResources(this.label64, "label64");
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(54, 13);
-            this.label64.TabIndex = 266;
-            this.label64.Text = "Nachteil";
             // 
             // groupBox1
             // 
@@ -1341,2354 +1320,3032 @@
             this.groupBox1.Controls.Add(this.label59);
             this.groupBox1.Controls.Add(this.label58);
             this.groupBox1.Controls.Add(this.label57);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(16, 423);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(700, 455);
-            this.groupBox1.TabIndex = 265;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Vorteile";
             // 
             // txtVorteil15Beschreibung
             // 
             this.txtVorteil15Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil15Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil15Beschreibung.Location = new System.Drawing.Point(334, 426);
+            resources.ApplyResources(this.txtVorteil15Beschreibung, "txtVorteil15Beschreibung");
             this.txtVorteil15Beschreibung.Name = "txtVorteil15Beschreibung";
-            this.txtVorteil15Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtVorteil15Beschreibung.TabIndex = 357;
             this.txtVorteil15Beschreibung.Click += new System.EventHandler(this.txtVorteil15_ValueChanged);
             // 
             // txtVorteil15GP
             // 
             this.txtVorteil15GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil15GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil15GP.Location = new System.Drawing.Point(288, 426);
+            resources.ApplyResources(this.txtVorteil15GP, "txtVorteil15GP");
             this.txtVorteil15GP.Name = "txtVorteil15GP";
-            this.txtVorteil15GP.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil15GP.TabIndex = 356;
-            this.txtVorteil15GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil15GP.Click += new System.EventHandler(this.txtVorteil15_ValueChanged);
             // 
             // txtVorteil15Wert
             // 
             this.txtVorteil15Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil15Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil15Wert.Location = new System.Drawing.Point(242, 426);
+            resources.ApplyResources(this.txtVorteil15Wert, "txtVorteil15Wert");
             this.txtVorteil15Wert.Name = "txtVorteil15Wert";
-            this.txtVorteil15Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil15Wert.TabIndex = 355;
-            this.txtVorteil15Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil15Wert.Click += new System.EventHandler(this.txtVorteil15_ValueChanged);
             // 
             // txtVorteil15Name
             // 
             this.txtVorteil15Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil15Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil15Name.Location = new System.Drawing.Point(6, 426);
+            resources.ApplyResources(this.txtVorteil15Name, "txtVorteil15Name");
             this.txtVorteil15Name.Name = "txtVorteil15Name";
-            this.txtVorteil15Name.Size = new System.Drawing.Size(230, 21);
-            this.txtVorteil15Name.TabIndex = 354;
             this.txtVorteil15Name.Click += new System.EventHandler(this.txtVorteil15_ValueChanged);
             // 
             // txtVorteil14Beschreibung
             // 
             this.txtVorteil14Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil14Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil14Beschreibung.Location = new System.Drawing.Point(334, 399);
+            resources.ApplyResources(this.txtVorteil14Beschreibung, "txtVorteil14Beschreibung");
             this.txtVorteil14Beschreibung.Name = "txtVorteil14Beschreibung";
-            this.txtVorteil14Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtVorteil14Beschreibung.TabIndex = 351;
             this.txtVorteil14Beschreibung.Click += new System.EventHandler(this.txtVortei14_ValueChanged);
             // 
             // txtVorteil14GP
             // 
             this.txtVorteil14GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil14GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil14GP.Location = new System.Drawing.Point(288, 399);
+            resources.ApplyResources(this.txtVorteil14GP, "txtVorteil14GP");
             this.txtVorteil14GP.Name = "txtVorteil14GP";
-            this.txtVorteil14GP.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil14GP.TabIndex = 350;
-            this.txtVorteil14GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil14GP.Click += new System.EventHandler(this.txtVortei14_ValueChanged);
             // 
             // txtVorteil14Wert
             // 
             this.txtVorteil14Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil14Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil14Wert.Location = new System.Drawing.Point(242, 399);
+            resources.ApplyResources(this.txtVorteil14Wert, "txtVorteil14Wert");
             this.txtVorteil14Wert.Name = "txtVorteil14Wert";
-            this.txtVorteil14Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil14Wert.TabIndex = 349;
-            this.txtVorteil14Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil14Wert.Click += new System.EventHandler(this.txtVortei14_ValueChanged);
             // 
             // txtVorteil14Name
             // 
             this.txtVorteil14Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil14Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil14Name.Location = new System.Drawing.Point(6, 399);
+            resources.ApplyResources(this.txtVorteil14Name, "txtVorteil14Name");
             this.txtVorteil14Name.Name = "txtVorteil14Name";
-            this.txtVorteil14Name.Size = new System.Drawing.Size(230, 21);
-            this.txtVorteil14Name.TabIndex = 348;
             this.txtVorteil14Name.Click += new System.EventHandler(this.txtVortei14_ValueChanged);
             // 
             // txtVorteil13Beschreibung
             // 
             this.txtVorteil13Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil13Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil13Beschreibung.Location = new System.Drawing.Point(334, 372);
+            resources.ApplyResources(this.txtVorteil13Beschreibung, "txtVorteil13Beschreibung");
             this.txtVorteil13Beschreibung.Name = "txtVorteil13Beschreibung";
-            this.txtVorteil13Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtVorteil13Beschreibung.TabIndex = 345;
             this.txtVorteil13Beschreibung.Click += new System.EventHandler(this.txtVorteil13_ValueChanged);
             // 
             // txtVorteil13GP
             // 
             this.txtVorteil13GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil13GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil13GP.Location = new System.Drawing.Point(288, 372);
+            resources.ApplyResources(this.txtVorteil13GP, "txtVorteil13GP");
             this.txtVorteil13GP.Name = "txtVorteil13GP";
-            this.txtVorteil13GP.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil13GP.TabIndex = 344;
-            this.txtVorteil13GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil13GP.Click += new System.EventHandler(this.txtVorteil13_ValueChanged);
             // 
             // txtVorteil13Wert
             // 
             this.txtVorteil13Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil13Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil13Wert.Location = new System.Drawing.Point(242, 372);
+            resources.ApplyResources(this.txtVorteil13Wert, "txtVorteil13Wert");
             this.txtVorteil13Wert.Name = "txtVorteil13Wert";
-            this.txtVorteil13Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil13Wert.TabIndex = 343;
-            this.txtVorteil13Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil13Wert.Click += new System.EventHandler(this.txtVorteil13_ValueChanged);
             // 
             // txtVorteil13Name
             // 
             this.txtVorteil13Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil13Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil13Name.Location = new System.Drawing.Point(6, 372);
+            resources.ApplyResources(this.txtVorteil13Name, "txtVorteil13Name");
             this.txtVorteil13Name.Name = "txtVorteil13Name";
-            this.txtVorteil13Name.Size = new System.Drawing.Size(230, 21);
-            this.txtVorteil13Name.TabIndex = 342;
             this.txtVorteil13Name.Click += new System.EventHandler(this.txtVorteil13_ValueChanged);
             // 
             // txtVorteil12Beschreibung
             // 
             this.txtVorteil12Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil12Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil12Beschreibung.Location = new System.Drawing.Point(334, 345);
+            resources.ApplyResources(this.txtVorteil12Beschreibung, "txtVorteil12Beschreibung");
             this.txtVorteil12Beschreibung.Name = "txtVorteil12Beschreibung";
-            this.txtVorteil12Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtVorteil12Beschreibung.TabIndex = 339;
             this.txtVorteil12Beschreibung.Click += new System.EventHandler(this.txtVorteil12_ValueChanged);
             // 
             // txtVorteil12GP
             // 
             this.txtVorteil12GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil12GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil12GP.Location = new System.Drawing.Point(288, 345);
+            resources.ApplyResources(this.txtVorteil12GP, "txtVorteil12GP");
             this.txtVorteil12GP.Name = "txtVorteil12GP";
-            this.txtVorteil12GP.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil12GP.TabIndex = 338;
-            this.txtVorteil12GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil12GP.Click += new System.EventHandler(this.txtVorteil12_ValueChanged);
             // 
             // txtVorteil12Wert
             // 
             this.txtVorteil12Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil12Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil12Wert.Location = new System.Drawing.Point(242, 345);
+            resources.ApplyResources(this.txtVorteil12Wert, "txtVorteil12Wert");
             this.txtVorteil12Wert.Name = "txtVorteil12Wert";
-            this.txtVorteil12Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil12Wert.TabIndex = 337;
-            this.txtVorteil12Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil12Wert.Click += new System.EventHandler(this.txtVorteil12_ValueChanged);
             // 
             // txtVorteil12Name
             // 
             this.txtVorteil12Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil12Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil12Name.Location = new System.Drawing.Point(6, 345);
+            resources.ApplyResources(this.txtVorteil12Name, "txtVorteil12Name");
             this.txtVorteil12Name.Name = "txtVorteil12Name";
-            this.txtVorteil12Name.Size = new System.Drawing.Size(230, 21);
-            this.txtVorteil12Name.TabIndex = 336;
             this.txtVorteil12Name.Click += new System.EventHandler(this.txtVorteil12_ValueChanged);
             // 
             // txtVorteil11Beschreibung
             // 
             this.txtVorteil11Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil11Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil11Beschreibung.Location = new System.Drawing.Point(334, 318);
+            resources.ApplyResources(this.txtVorteil11Beschreibung, "txtVorteil11Beschreibung");
             this.txtVorteil11Beschreibung.Name = "txtVorteil11Beschreibung";
-            this.txtVorteil11Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtVorteil11Beschreibung.TabIndex = 333;
             this.txtVorteil11Beschreibung.Click += new System.EventHandler(this.txtVorteil11_ValueChanged);
             // 
             // txtVorteil11GP
             // 
             this.txtVorteil11GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil11GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil11GP.Location = new System.Drawing.Point(288, 318);
+            resources.ApplyResources(this.txtVorteil11GP, "txtVorteil11GP");
             this.txtVorteil11GP.Name = "txtVorteil11GP";
-            this.txtVorteil11GP.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil11GP.TabIndex = 332;
-            this.txtVorteil11GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil11GP.Click += new System.EventHandler(this.txtVorteil11_ValueChanged);
             // 
             // txtVorteil11Wert
             // 
             this.txtVorteil11Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil11Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil11Wert.Location = new System.Drawing.Point(242, 318);
+            resources.ApplyResources(this.txtVorteil11Wert, "txtVorteil11Wert");
             this.txtVorteil11Wert.Name = "txtVorteil11Wert";
-            this.txtVorteil11Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil11Wert.TabIndex = 331;
-            this.txtVorteil11Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil11Wert.Click += new System.EventHandler(this.txtVorteil11_ValueChanged);
             // 
             // txtVorteil11Name
             // 
             this.txtVorteil11Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil11Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil11Name.Location = new System.Drawing.Point(6, 318);
+            resources.ApplyResources(this.txtVorteil11Name, "txtVorteil11Name");
             this.txtVorteil11Name.Name = "txtVorteil11Name";
-            this.txtVorteil11Name.Size = new System.Drawing.Size(230, 21);
-            this.txtVorteil11Name.TabIndex = 330;
             this.txtVorteil11Name.Click += new System.EventHandler(this.txtVorteil11_ValueChanged);
             // 
             // txtVorteil10Beschreibung
             // 
             this.txtVorteil10Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil10Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil10Beschreibung.Location = new System.Drawing.Point(334, 291);
+            resources.ApplyResources(this.txtVorteil10Beschreibung, "txtVorteil10Beschreibung");
             this.txtVorteil10Beschreibung.Name = "txtVorteil10Beschreibung";
-            this.txtVorteil10Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtVorteil10Beschreibung.TabIndex = 327;
             this.txtVorteil10Beschreibung.Click += new System.EventHandler(this.txtVorteil10_ValueChanged);
             // 
             // txtVorteil10GP
             // 
             this.txtVorteil10GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil10GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil10GP.Location = new System.Drawing.Point(288, 291);
+            resources.ApplyResources(this.txtVorteil10GP, "txtVorteil10GP");
             this.txtVorteil10GP.Name = "txtVorteil10GP";
-            this.txtVorteil10GP.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil10GP.TabIndex = 326;
-            this.txtVorteil10GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil10GP.Click += new System.EventHandler(this.txtVorteil10_ValueChanged);
             // 
             // txtVorteil10Wert
             // 
             this.txtVorteil10Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil10Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil10Wert.Location = new System.Drawing.Point(242, 291);
+            resources.ApplyResources(this.txtVorteil10Wert, "txtVorteil10Wert");
             this.txtVorteil10Wert.Name = "txtVorteil10Wert";
-            this.txtVorteil10Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil10Wert.TabIndex = 325;
-            this.txtVorteil10Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil10Wert.Click += new System.EventHandler(this.txtVorteil10_ValueChanged);
             // 
             // txtVorteil10Name
             // 
             this.txtVorteil10Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil10Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil10Name.Location = new System.Drawing.Point(6, 291);
+            resources.ApplyResources(this.txtVorteil10Name, "txtVorteil10Name");
             this.txtVorteil10Name.Name = "txtVorteil10Name";
-            this.txtVorteil10Name.Size = new System.Drawing.Size(230, 21);
-            this.txtVorteil10Name.TabIndex = 324;
             this.txtVorteil10Name.Click += new System.EventHandler(this.txtVorteil10_ValueChanged);
             // 
             // txtVorteil9Beschreibung
             // 
             this.txtVorteil9Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil9Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil9Beschreibung.Location = new System.Drawing.Point(334, 264);
+            resources.ApplyResources(this.txtVorteil9Beschreibung, "txtVorteil9Beschreibung");
             this.txtVorteil9Beschreibung.Name = "txtVorteil9Beschreibung";
-            this.txtVorteil9Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtVorteil9Beschreibung.TabIndex = 321;
             this.txtVorteil9Beschreibung.Click += new System.EventHandler(this.txtVorteil9_ValueChanged);
             // 
             // txtVorteil9GP
             // 
             this.txtVorteil9GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil9GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil9GP.Location = new System.Drawing.Point(288, 264);
+            resources.ApplyResources(this.txtVorteil9GP, "txtVorteil9GP");
             this.txtVorteil9GP.Name = "txtVorteil9GP";
-            this.txtVorteil9GP.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil9GP.TabIndex = 320;
-            this.txtVorteil9GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil9GP.Click += new System.EventHandler(this.txtVorteil9_ValueChanged);
             // 
             // txtVorteil9Wert
             // 
             this.txtVorteil9Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil9Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil9Wert.Location = new System.Drawing.Point(242, 264);
+            resources.ApplyResources(this.txtVorteil9Wert, "txtVorteil9Wert");
             this.txtVorteil9Wert.Name = "txtVorteil9Wert";
-            this.txtVorteil9Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil9Wert.TabIndex = 319;
-            this.txtVorteil9Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil9Wert.Click += new System.EventHandler(this.txtVorteil9_ValueChanged);
             // 
             // txtVorteil9Name
             // 
             this.txtVorteil9Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil9Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil9Name.Location = new System.Drawing.Point(6, 264);
+            resources.ApplyResources(this.txtVorteil9Name, "txtVorteil9Name");
             this.txtVorteil9Name.Name = "txtVorteil9Name";
-            this.txtVorteil9Name.Size = new System.Drawing.Size(230, 21);
-            this.txtVorteil9Name.TabIndex = 318;
             this.txtVorteil9Name.Click += new System.EventHandler(this.txtVorteil9_ValueChanged);
             // 
             // txtVorteil8Beschreibung
             // 
             this.txtVorteil8Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil8Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil8Beschreibung.Location = new System.Drawing.Point(334, 237);
+            resources.ApplyResources(this.txtVorteil8Beschreibung, "txtVorteil8Beschreibung");
             this.txtVorteil8Beschreibung.Name = "txtVorteil8Beschreibung";
-            this.txtVorteil8Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtVorteil8Beschreibung.TabIndex = 315;
             this.txtVorteil8Beschreibung.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
             // 
             // txtVorteil8GP
             // 
             this.txtVorteil8GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil8GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil8GP.Location = new System.Drawing.Point(288, 237);
+            resources.ApplyResources(this.txtVorteil8GP, "txtVorteil8GP");
             this.txtVorteil8GP.Name = "txtVorteil8GP";
-            this.txtVorteil8GP.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil8GP.TabIndex = 314;
-            this.txtVorteil8GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil8GP.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
             // 
             // txtVorteil8Wert
             // 
             this.txtVorteil8Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil8Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil8Wert.Location = new System.Drawing.Point(242, 237);
+            resources.ApplyResources(this.txtVorteil8Wert, "txtVorteil8Wert");
             this.txtVorteil8Wert.Name = "txtVorteil8Wert";
-            this.txtVorteil8Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil8Wert.TabIndex = 313;
-            this.txtVorteil8Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil8Wert.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
             // 
             // txtVorteil8Name
             // 
             this.txtVorteil8Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil8Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil8Name.Location = new System.Drawing.Point(6, 237);
+            resources.ApplyResources(this.txtVorteil8Name, "txtVorteil8Name");
             this.txtVorteil8Name.Name = "txtVorteil8Name";
-            this.txtVorteil8Name.Size = new System.Drawing.Size(230, 21);
-            this.txtVorteil8Name.TabIndex = 312;
             this.txtVorteil8Name.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
             // 
             // txtVorteil7Beschreibung
             // 
             this.txtVorteil7Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil7Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil7Beschreibung.Location = new System.Drawing.Point(334, 210);
+            resources.ApplyResources(this.txtVorteil7Beschreibung, "txtVorteil7Beschreibung");
             this.txtVorteil7Beschreibung.Name = "txtVorteil7Beschreibung";
-            this.txtVorteil7Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtVorteil7Beschreibung.TabIndex = 309;
             this.txtVorteil7Beschreibung.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
             // 
             // txtVorteil7GP
             // 
             this.txtVorteil7GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil7GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil7GP.Location = new System.Drawing.Point(288, 210);
+            resources.ApplyResources(this.txtVorteil7GP, "txtVorteil7GP");
             this.txtVorteil7GP.Name = "txtVorteil7GP";
-            this.txtVorteil7GP.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil7GP.TabIndex = 308;
-            this.txtVorteil7GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil7GP.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
             // 
             // txtVorteil7Wert
             // 
             this.txtVorteil7Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil7Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil7Wert.Location = new System.Drawing.Point(242, 210);
+            resources.ApplyResources(this.txtVorteil7Wert, "txtVorteil7Wert");
             this.txtVorteil7Wert.Name = "txtVorteil7Wert";
-            this.txtVorteil7Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil7Wert.TabIndex = 307;
-            this.txtVorteil7Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil7Wert.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
             // 
             // txtVorteil7Name
             // 
             this.txtVorteil7Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil7Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil7Name.Location = new System.Drawing.Point(6, 210);
+            resources.ApplyResources(this.txtVorteil7Name, "txtVorteil7Name");
             this.txtVorteil7Name.Name = "txtVorteil7Name";
-            this.txtVorteil7Name.Size = new System.Drawing.Size(230, 21);
-            this.txtVorteil7Name.TabIndex = 306;
             this.txtVorteil7Name.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
             // 
             // txtVorteil6Beschreibung
             // 
             this.txtVorteil6Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil6Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil6Beschreibung.Location = new System.Drawing.Point(334, 183);
+            resources.ApplyResources(this.txtVorteil6Beschreibung, "txtVorteil6Beschreibung");
             this.txtVorteil6Beschreibung.Name = "txtVorteil6Beschreibung";
-            this.txtVorteil6Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtVorteil6Beschreibung.TabIndex = 303;
             this.txtVorteil6Beschreibung.Click += new System.EventHandler(this.txtVorteil7_ValueChanged);
             // 
             // txtVorteil6GP
             // 
             this.txtVorteil6GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil6GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil6GP.Location = new System.Drawing.Point(288, 183);
+            resources.ApplyResources(this.txtVorteil6GP, "txtVorteil6GP");
             this.txtVorteil6GP.Name = "txtVorteil6GP";
-            this.txtVorteil6GP.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil6GP.TabIndex = 302;
-            this.txtVorteil6GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil6GP.Click += new System.EventHandler(this.txtVorteil7_ValueChanged);
             // 
             // txtVorteil6Wert
             // 
             this.txtVorteil6Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil6Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil6Wert.Location = new System.Drawing.Point(242, 183);
+            resources.ApplyResources(this.txtVorteil6Wert, "txtVorteil6Wert");
             this.txtVorteil6Wert.Name = "txtVorteil6Wert";
-            this.txtVorteil6Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil6Wert.TabIndex = 301;
-            this.txtVorteil6Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil6Wert.Click += new System.EventHandler(this.txtVorteil7_ValueChanged);
             // 
             // txtVorteil6Name
             // 
             this.txtVorteil6Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil6Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil6Name.Location = new System.Drawing.Point(6, 183);
+            resources.ApplyResources(this.txtVorteil6Name, "txtVorteil6Name");
             this.txtVorteil6Name.Name = "txtVorteil6Name";
-            this.txtVorteil6Name.Size = new System.Drawing.Size(230, 21);
-            this.txtVorteil6Name.TabIndex = 300;
             this.txtVorteil6Name.Click += new System.EventHandler(this.txtVorteil7_ValueChanged);
             // 
             // txtVorteil5Beschreibung
             // 
             this.txtVorteil5Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil5Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil5Beschreibung.Location = new System.Drawing.Point(334, 156);
+            resources.ApplyResources(this.txtVorteil5Beschreibung, "txtVorteil5Beschreibung");
             this.txtVorteil5Beschreibung.Name = "txtVorteil5Beschreibung";
-            this.txtVorteil5Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtVorteil5Beschreibung.TabIndex = 297;
             this.txtVorteil5Beschreibung.Click += new System.EventHandler(this.txtVorteil5_ValueChanged);
             // 
             // txtVorteil5GP
             // 
             this.txtVorteil5GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil5GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil5GP.Location = new System.Drawing.Point(288, 156);
+            resources.ApplyResources(this.txtVorteil5GP, "txtVorteil5GP");
             this.txtVorteil5GP.Name = "txtVorteil5GP";
-            this.txtVorteil5GP.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil5GP.TabIndex = 296;
-            this.txtVorteil5GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil5GP.Click += new System.EventHandler(this.txtVorteil5_ValueChanged);
             // 
             // txtVorteil5Wert
             // 
             this.txtVorteil5Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil5Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil5Wert.Location = new System.Drawing.Point(242, 156);
+            resources.ApplyResources(this.txtVorteil5Wert, "txtVorteil5Wert");
             this.txtVorteil5Wert.Name = "txtVorteil5Wert";
-            this.txtVorteil5Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil5Wert.TabIndex = 295;
-            this.txtVorteil5Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil5Wert.Click += new System.EventHandler(this.txtVorteil5_ValueChanged);
             // 
             // txtVorteil5Name
             // 
             this.txtVorteil5Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil5Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil5Name.Location = new System.Drawing.Point(6, 156);
+            resources.ApplyResources(this.txtVorteil5Name, "txtVorteil5Name");
             this.txtVorteil5Name.Name = "txtVorteil5Name";
-            this.txtVorteil5Name.Size = new System.Drawing.Size(230, 21);
-            this.txtVorteil5Name.TabIndex = 294;
             this.txtVorteil5Name.Click += new System.EventHandler(this.txtVorteil5_ValueChanged);
             // 
             // txtVorteil4Beschreibung
             // 
             this.txtVorteil4Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil4Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil4Beschreibung.Location = new System.Drawing.Point(334, 129);
+            resources.ApplyResources(this.txtVorteil4Beschreibung, "txtVorteil4Beschreibung");
             this.txtVorteil4Beschreibung.Name = "txtVorteil4Beschreibung";
-            this.txtVorteil4Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtVorteil4Beschreibung.TabIndex = 291;
             this.txtVorteil4Beschreibung.Click += new System.EventHandler(this.txtVorteil4_ValueChanged);
             // 
             // txtVorteil4GP
             // 
             this.txtVorteil4GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil4GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil4GP.Location = new System.Drawing.Point(288, 129);
+            resources.ApplyResources(this.txtVorteil4GP, "txtVorteil4GP");
             this.txtVorteil4GP.Name = "txtVorteil4GP";
-            this.txtVorteil4GP.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil4GP.TabIndex = 290;
-            this.txtVorteil4GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil4GP.Click += new System.EventHandler(this.txtVorteil4_ValueChanged);
             // 
             // txtVorteil4Wert
             // 
             this.txtVorteil4Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil4Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil4Wert.Location = new System.Drawing.Point(242, 129);
+            resources.ApplyResources(this.txtVorteil4Wert, "txtVorteil4Wert");
             this.txtVorteil4Wert.Name = "txtVorteil4Wert";
-            this.txtVorteil4Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil4Wert.TabIndex = 289;
-            this.txtVorteil4Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil4Wert.Click += new System.EventHandler(this.txtVorteil4_ValueChanged);
             // 
             // txtVorteil4Name
             // 
             this.txtVorteil4Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil4Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil4Name.Location = new System.Drawing.Point(6, 129);
+            resources.ApplyResources(this.txtVorteil4Name, "txtVorteil4Name");
             this.txtVorteil4Name.Name = "txtVorteil4Name";
-            this.txtVorteil4Name.Size = new System.Drawing.Size(230, 21);
-            this.txtVorteil4Name.TabIndex = 288;
             this.txtVorteil4Name.Click += new System.EventHandler(this.txtVorteil4_ValueChanged);
             // 
             // txtVorteil3Beschreibung
             // 
             this.txtVorteil3Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil3Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil3Beschreibung.Location = new System.Drawing.Point(334, 102);
+            resources.ApplyResources(this.txtVorteil3Beschreibung, "txtVorteil3Beschreibung");
             this.txtVorteil3Beschreibung.Name = "txtVorteil3Beschreibung";
-            this.txtVorteil3Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtVorteil3Beschreibung.TabIndex = 285;
             this.txtVorteil3Beschreibung.Click += new System.EventHandler(this.txtVorteil3_ValueChanged);
             // 
             // txtVorteil3GP
             // 
             this.txtVorteil3GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil3GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil3GP.Location = new System.Drawing.Point(288, 102);
+            resources.ApplyResources(this.txtVorteil3GP, "txtVorteil3GP");
             this.txtVorteil3GP.Name = "txtVorteil3GP";
-            this.txtVorteil3GP.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil3GP.TabIndex = 284;
-            this.txtVorteil3GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil3GP.Click += new System.EventHandler(this.txtVorteil3_ValueChanged);
             // 
             // txtVorteil3Wert
             // 
             this.txtVorteil3Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil3Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil3Wert.Location = new System.Drawing.Point(242, 102);
+            resources.ApplyResources(this.txtVorteil3Wert, "txtVorteil3Wert");
             this.txtVorteil3Wert.Name = "txtVorteil3Wert";
-            this.txtVorteil3Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil3Wert.TabIndex = 283;
-            this.txtVorteil3Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil3Wert.Click += new System.EventHandler(this.txtVorteil3_ValueChanged);
             // 
             // txtVorteil3Name
             // 
             this.txtVorteil3Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil3Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil3Name.Location = new System.Drawing.Point(6, 102);
+            resources.ApplyResources(this.txtVorteil3Name, "txtVorteil3Name");
             this.txtVorteil3Name.Name = "txtVorteil3Name";
-            this.txtVorteil3Name.Size = new System.Drawing.Size(230, 21);
-            this.txtVorteil3Name.TabIndex = 282;
             this.txtVorteil3Name.Click += new System.EventHandler(this.txtVorteil3_ValueChanged);
             // 
             // txtVorteil2Beschreibung
             // 
             this.txtVorteil2Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil2Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil2Beschreibung.Location = new System.Drawing.Point(334, 75);
+            resources.ApplyResources(this.txtVorteil2Beschreibung, "txtVorteil2Beschreibung");
             this.txtVorteil2Beschreibung.Name = "txtVorteil2Beschreibung";
-            this.txtVorteil2Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtVorteil2Beschreibung.TabIndex = 279;
             this.txtVorteil2Beschreibung.Click += new System.EventHandler(this.txtVorteil2_ValueChanged);
             // 
             // txtVorteil2GP
             // 
             this.txtVorteil2GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil2GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil2GP.Location = new System.Drawing.Point(288, 75);
+            resources.ApplyResources(this.txtVorteil2GP, "txtVorteil2GP");
             this.txtVorteil2GP.Name = "txtVorteil2GP";
-            this.txtVorteil2GP.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil2GP.TabIndex = 278;
-            this.txtVorteil2GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil2GP.Click += new System.EventHandler(this.txtVorteil2_ValueChanged);
             // 
             // txtVorteil2Wert
             // 
             this.txtVorteil2Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil2Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil2Wert.Location = new System.Drawing.Point(242, 75);
+            resources.ApplyResources(this.txtVorteil2Wert, "txtVorteil2Wert");
             this.txtVorteil2Wert.Name = "txtVorteil2Wert";
-            this.txtVorteil2Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil2Wert.TabIndex = 277;
-            this.txtVorteil2Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil2Wert.Click += new System.EventHandler(this.txtVorteil2_ValueChanged);
             // 
             // txtVorteil2Name
             // 
             this.txtVorteil2Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil2Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil2Name.Location = new System.Drawing.Point(6, 75);
+            resources.ApplyResources(this.txtVorteil2Name, "txtVorteil2Name");
             this.txtVorteil2Name.Name = "txtVorteil2Name";
-            this.txtVorteil2Name.Size = new System.Drawing.Size(230, 21);
-            this.txtVorteil2Name.TabIndex = 276;
             this.txtVorteil2Name.Click += new System.EventHandler(this.txtVorteil2_ValueChanged);
             // 
             // txtVorteil1Beschreibung
             // 
             this.txtVorteil1Beschreibung.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil1Beschreibung.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil1Beschreibung.Location = new System.Drawing.Point(334, 48);
+            resources.ApplyResources(this.txtVorteil1Beschreibung, "txtVorteil1Beschreibung");
             this.txtVorteil1Beschreibung.Name = "txtVorteil1Beschreibung";
-            this.txtVorteil1Beschreibung.Size = new System.Drawing.Size(360, 21);
-            this.txtVorteil1Beschreibung.TabIndex = 273;
             this.txtVorteil1Beschreibung.Click += new System.EventHandler(this.txtVorteil1_ValueChanged);
             // 
             // txtVorteil1GP
             // 
             this.txtVorteil1GP.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil1GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil1GP.Location = new System.Drawing.Point(288, 48);
+            resources.ApplyResources(this.txtVorteil1GP, "txtVorteil1GP");
             this.txtVorteil1GP.Name = "txtVorteil1GP";
-            this.txtVorteil1GP.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil1GP.TabIndex = 272;
-            this.txtVorteil1GP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil1GP.Click += new System.EventHandler(this.txtVorteil1_ValueChanged);
             // 
             // txtVorteil1Wert
             // 
             this.txtVorteil1Wert.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil1Wert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil1Wert.Location = new System.Drawing.Point(242, 48);
+            resources.ApplyResources(this.txtVorteil1Wert, "txtVorteil1Wert");
             this.txtVorteil1Wert.Name = "txtVorteil1Wert";
-            this.txtVorteil1Wert.Size = new System.Drawing.Size(40, 21);
-            this.txtVorteil1Wert.TabIndex = 271;
-            this.txtVorteil1Wert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVorteil1Wert.Click += new System.EventHandler(this.txtVorteil1_ValueChanged);
             // 
             // txtVorteil1Name
             // 
             this.txtVorteil1Name.BackColor = System.Drawing.SystemColors.Window;
-            this.txtVorteil1Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVorteil1Name.Location = new System.Drawing.Point(6, 48);
+            resources.ApplyResources(this.txtVorteil1Name, "txtVorteil1Name");
             this.txtVorteil1Name.Name = "txtVorteil1Name";
-            this.txtVorteil1Name.Size = new System.Drawing.Size(230, 21);
-            this.txtVorteil1Name.TabIndex = 266;
             this.txtVorteil1Name.Click += new System.EventHandler(this.txtVorteil1_ValueChanged);
             // 
             // label60
             // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label60.Location = new System.Drawing.Point(477, 32);
+            resources.ApplyResources(this.label60, "label60");
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(84, 13);
-            this.label60.TabIndex = 269;
-            this.label60.Text = "Beschreibung";
             // 
             // label59
             // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label59.Location = new System.Drawing.Point(296, 32);
+            resources.ApplyResources(this.label59, "label59");
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(24, 13);
-            this.label59.TabIndex = 268;
-            this.label59.Text = "GP";
             // 
             // label58
             // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label58.Location = new System.Drawing.Point(245, 32);
+            resources.ApplyResources(this.label58, "label58");
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(34, 13);
-            this.label58.TabIndex = 267;
-            this.label58.Text = "Wert";
             // 
             // label57
             // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.label57.Location = new System.Drawing.Point(97, 32);
+            resources.ApplyResources(this.label57, "label57");
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(43, 13);
-            this.label57.TabIndex = 266;
-            this.label57.Text = "Vorteil";
             // 
             // txtStufe
             // 
             this.txtStufe.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtStufe.Location = new System.Drawing.Point(900, 173);
+            resources.ApplyResources(this.txtStufe, "txtStufe");
             this.txtStufe.Name = "txtStufe";
-            this.txtStufe.Size = new System.Drawing.Size(29, 20);
-            this.txtStufe.TabIndex = 264;
-            this.txtStufe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtStufe.TextChanged += new System.EventHandler(this.txtStufe_TextChanged);
             // 
             // txtAbenteuerpunkte
             // 
             this.txtAbenteuerpunkte.BackColor = System.Drawing.SystemColors.Window;
-            this.txtAbenteuerpunkte.Location = new System.Drawing.Point(881, 199);
+            resources.ApplyResources(this.txtAbenteuerpunkte, "txtAbenteuerpunkte");
             this.txtAbenteuerpunkte.Name = "txtAbenteuerpunkte";
-            this.txtAbenteuerpunkte.Size = new System.Drawing.Size(77, 20);
-            this.txtAbenteuerpunkte.TabIndex = 263;
-            this.txtAbenteuerpunkte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAbenteuerpunkte.TextChanged += new System.EventHandler(this.txtAbenteuerpunkte_TextChanged);
             // 
             // txtAbenteuerpunkteInvestiert
             // 
             this.txtAbenteuerpunkteInvestiert.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtAbenteuerpunkteInvestiert.Location = new System.Drawing.Point(881, 225);
+            resources.ApplyResources(this.txtAbenteuerpunkteInvestiert, "txtAbenteuerpunkteInvestiert");
             this.txtAbenteuerpunkteInvestiert.Name = "txtAbenteuerpunkteInvestiert";
-            this.txtAbenteuerpunkteInvestiert.Size = new System.Drawing.Size(77, 20);
-            this.txtAbenteuerpunkteInvestiert.TabIndex = 262;
-            this.txtAbenteuerpunkteInvestiert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAbenteuerpunkteInvestiert.TextChanged += new System.EventHandler(this.txtAbenteuerpunkteInvestiert_TextChanged);
             // 
             // label56
             // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(736, 254);
+            resources.ApplyResources(this.label56, "label56");
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(139, 13);
-            this.label56.TabIndex = 261;
-            this.label56.Text = "Abenteuerpunkte-Guthaben";
             // 
             // label55
             // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(736, 228);
+            resources.ApplyResources(this.label55, "label55");
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(135, 13);
-            this.label55.TabIndex = 260;
-            this.label55.Text = "Abenteuerpunkte-Investiert";
             // 
             // label54
             // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(736, 202);
+            resources.ApplyResources(this.label54, "label54");
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(89, 13);
-            this.label54.TabIndex = 259;
-            this.label54.Text = "Abenteuerpunkte";
             // 
             // txtAbenteuerpunkteGuthaben
             // 
             this.txtAbenteuerpunkteGuthaben.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtAbenteuerpunkteGuthaben.Location = new System.Drawing.Point(881, 251);
+            resources.ApplyResources(this.txtAbenteuerpunkteGuthaben, "txtAbenteuerpunkteGuthaben");
             this.txtAbenteuerpunkteGuthaben.Name = "txtAbenteuerpunkteGuthaben";
-            this.txtAbenteuerpunkteGuthaben.Size = new System.Drawing.Size(77, 20);
-            this.txtAbenteuerpunkteGuthaben.TabIndex = 258;
-            this.txtAbenteuerpunkteGuthaben.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAbenteuerpunkteGuthaben.TextChanged += new System.EventHandler(this.txtAbenteuerpunkteGuthaben_TextChanged);
             // 
             // Stufe
             // 
-            this.Stufe.AutoSize = true;
-            this.Stufe.Location = new System.Drawing.Point(736, 176);
+            resources.ApplyResources(this.Stufe, "Stufe");
             this.Stufe.Name = "Stufe";
-            this.Stufe.Size = new System.Drawing.Size(32, 13);
-            this.Stufe.TabIndex = 257;
-            this.Stufe.Text = "Stufe";
             // 
             // txtGeldK
             // 
             this.txtGeldK.BackColor = System.Drawing.SystemColors.Window;
-            this.txtGeldK.Location = new System.Drawing.Point(671, 329);
+            resources.ApplyResources(this.txtGeldK, "txtGeldK");
             this.txtGeldK.Name = "txtGeldK";
-            this.txtGeldK.Size = new System.Drawing.Size(34, 20);
-            this.txtGeldK.TabIndex = 256;
-            this.txtGeldK.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtGeldK.TextChanged += new System.EventHandler(this.txtGeldK_TextChanged);
             // 
             // txtGeldH
             // 
             this.txtGeldH.BackColor = System.Drawing.SystemColors.Window;
-            this.txtGeldH.Location = new System.Drawing.Point(633, 329);
+            resources.ApplyResources(this.txtGeldH, "txtGeldH");
             this.txtGeldH.Name = "txtGeldH";
-            this.txtGeldH.Size = new System.Drawing.Size(34, 20);
-            this.txtGeldH.TabIndex = 255;
-            this.txtGeldH.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtGeldH.TextChanged += new System.EventHandler(this.txtGeldH_TextChanged);
             // 
             // txtGeldS
             // 
             this.txtGeldS.BackColor = System.Drawing.SystemColors.Window;
-            this.txtGeldS.Location = new System.Drawing.Point(593, 329);
+            resources.ApplyResources(this.txtGeldS, "txtGeldS");
             this.txtGeldS.Name = "txtGeldS";
-            this.txtGeldS.Size = new System.Drawing.Size(34, 20);
-            this.txtGeldS.TabIndex = 254;
-            this.txtGeldS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtGeldS.TextChanged += new System.EventHandler(this.txtGeldS_TextChanged);
             // 
             // label53
             // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(457, 358);
+            resources.ApplyResources(this.label53, "label53");
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(32, 13);
-            this.label53.TabIndex = 253;
-            this.label53.Text = "Bank";
             // 
             // txtBank
             // 
             this.txtBank.BackColor = System.Drawing.SystemColors.Window;
-            this.txtBank.Location = new System.Drawing.Point(553, 355);
+            resources.ApplyResources(this.txtBank, "txtBank");
             this.txtBank.Name = "txtBank";
-            this.txtBank.Size = new System.Drawing.Size(53, 20);
-            this.txtBank.TabIndex = 251;
-            this.txtBank.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBank.TextChanged += new System.EventHandler(this.txtBank_TextChanged);
             // 
             // label52
             // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(457, 332);
+            resources.ApplyResources(this.label52, "label52");
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(29, 13);
-            this.label52.TabIndex = 247;
-            this.label52.Text = "Geld";
             // 
             // txtGeldD
             // 
             this.txtGeldD.BackColor = System.Drawing.SystemColors.Window;
-            this.txtGeldD.Location = new System.Drawing.Point(553, 329);
+            resources.ApplyResources(this.txtGeldD, "txtGeldD");
             this.txtGeldD.Name = "txtGeldD";
-            this.txtGeldD.Size = new System.Drawing.Size(34, 20);
-            this.txtGeldD.TabIndex = 245;
-            this.txtGeldD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtGeldD.TextChanged += new System.EventHandler(this.txtGeldD_TextChanged);
             // 
             // txtMagieresistenzERG
             // 
             this.txtMagieresistenzERG.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtMagieresistenzERG.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMagieresistenzERG.Location = new System.Drawing.Point(673, 277);
+            resources.ApplyResources(this.txtMagieresistenzERG, "txtMagieresistenzERG");
             this.txtMagieresistenzERG.Name = "txtMagieresistenzERG";
-            this.txtMagieresistenzERG.Size = new System.Drawing.Size(32, 20);
-            this.txtMagieresistenzERG.TabIndex = 244;
-            this.txtMagieresistenzERG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMagieresistenzERG.TextChanged += new System.EventHandler(this.txtMagieresistenzERG_TextChanged);
             // 
             // txtMagieresistenzMALI
             // 
             this.txtMagieresistenzMALI.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtMagieresistenzMALI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMagieresistenzMALI.Location = new System.Drawing.Point(643, 277);
+            resources.ApplyResources(this.txtMagieresistenzMALI, "txtMagieresistenzMALI");
             this.txtMagieresistenzMALI.Name = "txtMagieresistenzMALI";
-            this.txtMagieresistenzMALI.Size = new System.Drawing.Size(24, 20);
-            this.txtMagieresistenzMALI.TabIndex = 243;
-            this.txtMagieresistenzMALI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMagieresistenzMALI.TextChanged += new System.EventHandler(this.txtMagieresistenzMALI_TextChanged);
-            // 
-            // txtMagieresistenzMOD
-            // 
-            this.txtMagieresistenzMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtMagieresistenzMOD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMagieresistenzMOD.Location = new System.Drawing.Point(613, 277);
-            this.txtMagieresistenzMOD.Name = "txtMagieresistenzMOD";
-            this.txtMagieresistenzMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtMagieresistenzMOD.TabIndex = 242;
-            this.txtMagieresistenzMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtMagieresistenzMOD.TextChanged += new System.EventHandler(this.txtMagieresistenzMOD_TextChanged);
             // 
             // label51
             // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(457, 280);
+            resources.ApplyResources(this.label51, "label51");
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(77, 13);
-            this.label51.TabIndex = 241;
-            this.label51.Text = "Magieresistenz";
             // 
             // txtMagieresistenzPERM
             // 
             this.txtMagieresistenzPERM.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtMagieresistenzPERM.Location = new System.Drawing.Point(583, 277);
+            resources.ApplyResources(this.txtMagieresistenzPERM, "txtMagieresistenzPERM");
             this.txtMagieresistenzPERM.Name = "txtMagieresistenzPERM";
-            this.txtMagieresistenzPERM.Size = new System.Drawing.Size(24, 20);
-            this.txtMagieresistenzPERM.TabIndex = 240;
-            this.txtMagieresistenzPERM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMagieresistenzPERM.TextChanged += new System.EventHandler(this.txtMagieresistenzPERM_TextChanged);
             // 
             // txtMagieresistenzVOR
             // 
             this.txtMagieresistenzVOR.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtMagieresistenzVOR.Location = new System.Drawing.Point(553, 277);
+            resources.ApplyResources(this.txtMagieresistenzVOR, "txtMagieresistenzVOR");
             this.txtMagieresistenzVOR.Name = "txtMagieresistenzVOR";
-            this.txtMagieresistenzVOR.Size = new System.Drawing.Size(24, 20);
-            this.txtMagieresistenzVOR.TabIndex = 239;
-            this.txtMagieresistenzVOR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMagieresistenzVOR.TextChanged += new System.EventHandler(this.txtMagieresistenzVOR_TextChanged);
             // 
             // txtKarmaenergieERG
             // 
             this.txtKarmaenergieERG.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtKarmaenergieERG.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKarmaenergieERG.Location = new System.Drawing.Point(673, 251);
+            resources.ApplyResources(this.txtKarmaenergieERG, "txtKarmaenergieERG");
             this.txtKarmaenergieERG.Name = "txtKarmaenergieERG";
-            this.txtKarmaenergieERG.Size = new System.Drawing.Size(32, 20);
-            this.txtKarmaenergieERG.TabIndex = 238;
-            this.txtKarmaenergieERG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtKarmaenergieERG.TextChanged += new System.EventHandler(this.txtKarmaenergieERG_TextChanged);
             // 
             // txtKarmaenergieMALI
             // 
             this.txtKarmaenergieMALI.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtKarmaenergieMALI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKarmaenergieMALI.Location = new System.Drawing.Point(643, 251);
+            resources.ApplyResources(this.txtKarmaenergieMALI, "txtKarmaenergieMALI");
             this.txtKarmaenergieMALI.Name = "txtKarmaenergieMALI";
-            this.txtKarmaenergieMALI.Size = new System.Drawing.Size(24, 20);
-            this.txtKarmaenergieMALI.TabIndex = 237;
-            this.txtKarmaenergieMALI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtKarmaenergieMALI.TextChanged += new System.EventHandler(this.txtKarmaenergieMALI_TextChanged);
-            // 
-            // txtKarmaenergieMOD
-            // 
-            this.txtKarmaenergieMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtKarmaenergieMOD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKarmaenergieMOD.Location = new System.Drawing.Point(613, 251);
-            this.txtKarmaenergieMOD.Name = "txtKarmaenergieMOD";
-            this.txtKarmaenergieMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtKarmaenergieMOD.TabIndex = 236;
-            this.txtKarmaenergieMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtKarmaenergieMOD.TextChanged += new System.EventHandler(this.txtKarmaenergieMOD_TextChanged);
             // 
             // label50
             // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(457, 254);
+            resources.ApplyResources(this.label50, "label50");
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(72, 13);
-            this.label50.TabIndex = 235;
-            this.label50.Text = "Karmaenergie";
             // 
             // txtKarmaenergiePERM
             // 
             this.txtKarmaenergiePERM.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtKarmaenergiePERM.Location = new System.Drawing.Point(583, 251);
+            resources.ApplyResources(this.txtKarmaenergiePERM, "txtKarmaenergiePERM");
             this.txtKarmaenergiePERM.Name = "txtKarmaenergiePERM";
-            this.txtKarmaenergiePERM.Size = new System.Drawing.Size(24, 20);
-            this.txtKarmaenergiePERM.TabIndex = 234;
-            this.txtKarmaenergiePERM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtKarmaenergiePERM.TextChanged += new System.EventHandler(this.txtKarmaenergiePERM_TextChanged);
             // 
             // txtKarmaenergieVOR
             // 
             this.txtKarmaenergieVOR.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtKarmaenergieVOR.Location = new System.Drawing.Point(553, 251);
+            resources.ApplyResources(this.txtKarmaenergieVOR, "txtKarmaenergieVOR");
             this.txtKarmaenergieVOR.Name = "txtKarmaenergieVOR";
-            this.txtKarmaenergieVOR.Size = new System.Drawing.Size(24, 20);
-            this.txtKarmaenergieVOR.TabIndex = 233;
-            this.txtKarmaenergieVOR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtKarmaenergieVOR.TextChanged += new System.EventHandler(this.txtKarmaenergieVOR_TextChanged);
             // 
             // txtAstralenergieERG
             // 
             this.txtAstralenergieERG.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtAstralenergieERG.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAstralenergieERG.Location = new System.Drawing.Point(673, 225);
+            resources.ApplyResources(this.txtAstralenergieERG, "txtAstralenergieERG");
             this.txtAstralenergieERG.Name = "txtAstralenergieERG";
-            this.txtAstralenergieERG.Size = new System.Drawing.Size(32, 20);
-            this.txtAstralenergieERG.TabIndex = 232;
-            this.txtAstralenergieERG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAstralenergieERG.TextChanged += new System.EventHandler(this.txtAstralenergieERG_TextChanged);
             // 
             // txtAstralenergieMALI
             // 
             this.txtAstralenergieMALI.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtAstralenergieMALI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAstralenergieMALI.Location = new System.Drawing.Point(643, 225);
+            resources.ApplyResources(this.txtAstralenergieMALI, "txtAstralenergieMALI");
             this.txtAstralenergieMALI.Name = "txtAstralenergieMALI";
-            this.txtAstralenergieMALI.Size = new System.Drawing.Size(24, 20);
-            this.txtAstralenergieMALI.TabIndex = 231;
-            this.txtAstralenergieMALI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAstralenergieMALI.TextChanged += new System.EventHandler(this.txtAstralenergieMALI_TextChanged);
-            // 
-            // txtAstralenergieMOD
-            // 
-            this.txtAstralenergieMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtAstralenergieMOD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAstralenergieMOD.Location = new System.Drawing.Point(613, 225);
-            this.txtAstralenergieMOD.Name = "txtAstralenergieMOD";
-            this.txtAstralenergieMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtAstralenergieMOD.TabIndex = 230;
-            this.txtAstralenergieMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAstralenergieMOD.TextChanged += new System.EventHandler(this.txtAstralenergieMOD_TextChanged);
             // 
             // label49
             // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(457, 228);
+            resources.ApplyResources(this.label49, "label49");
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(68, 13);
-            this.label49.TabIndex = 229;
-            this.label49.Text = "Astralenergie";
             // 
             // txtAstralenergiePERM
             // 
             this.txtAstralenergiePERM.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtAstralenergiePERM.Location = new System.Drawing.Point(583, 225);
+            resources.ApplyResources(this.txtAstralenergiePERM, "txtAstralenergiePERM");
             this.txtAstralenergiePERM.Name = "txtAstralenergiePERM";
-            this.txtAstralenergiePERM.Size = new System.Drawing.Size(24, 20);
-            this.txtAstralenergiePERM.TabIndex = 228;
-            this.txtAstralenergiePERM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAstralenergiePERM.TextChanged += new System.EventHandler(this.txtAstralenergiePERM_TextChanged);
             // 
             // txtAstralenergieVOR
             // 
             this.txtAstralenergieVOR.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtAstralenergieVOR.Location = new System.Drawing.Point(553, 225);
+            resources.ApplyResources(this.txtAstralenergieVOR, "txtAstralenergieVOR");
             this.txtAstralenergieVOR.Name = "txtAstralenergieVOR";
-            this.txtAstralenergieVOR.Size = new System.Drawing.Size(24, 20);
-            this.txtAstralenergieVOR.TabIndex = 227;
-            this.txtAstralenergieVOR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAstralenergieVOR.TextChanged += new System.EventHandler(this.txtAstralenergieVOR_TextChanged);
             // 
             // txtAusdauerERG
             // 
             this.txtAusdauerERG.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtAusdauerERG.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAusdauerERG.Location = new System.Drawing.Point(673, 199);
+            resources.ApplyResources(this.txtAusdauerERG, "txtAusdauerERG");
             this.txtAusdauerERG.Name = "txtAusdauerERG";
-            this.txtAusdauerERG.Size = new System.Drawing.Size(32, 20);
-            this.txtAusdauerERG.TabIndex = 226;
-            this.txtAusdauerERG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAusdauerERG.TextChanged += new System.EventHandler(this.txtAusdauerERG_TextChanged);
             // 
             // txtAusdauerMALI
             // 
             this.txtAusdauerMALI.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtAusdauerMALI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAusdauerMALI.Location = new System.Drawing.Point(643, 199);
+            resources.ApplyResources(this.txtAusdauerMALI, "txtAusdauerMALI");
             this.txtAusdauerMALI.Name = "txtAusdauerMALI";
-            this.txtAusdauerMALI.Size = new System.Drawing.Size(24, 20);
-            this.txtAusdauerMALI.TabIndex = 225;
-            this.txtAusdauerMALI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAusdauerMALI.TextChanged += new System.EventHandler(this.txtAusdauerMALI_TextChanged);
-            // 
-            // txtAusdauerMOD
-            // 
-            this.txtAusdauerMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtAusdauerMOD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAusdauerMOD.Location = new System.Drawing.Point(613, 199);
-            this.txtAusdauerMOD.Name = "txtAusdauerMOD";
-            this.txtAusdauerMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtAusdauerMOD.TabIndex = 224;
-            this.txtAusdauerMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAusdauerMOD.TextChanged += new System.EventHandler(this.txtAusdauerMOD_TextChanged);
             // 
             // label48
             // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(457, 202);
+            resources.ApplyResources(this.label48, "label48");
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(52, 13);
-            this.label48.TabIndex = 223;
-            this.label48.Text = "Ausdauer";
             // 
             // txtAusdauerPERM
             // 
             this.txtAusdauerPERM.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtAusdauerPERM.Location = new System.Drawing.Point(583, 199);
+            resources.ApplyResources(this.txtAusdauerPERM, "txtAusdauerPERM");
             this.txtAusdauerPERM.Name = "txtAusdauerPERM";
-            this.txtAusdauerPERM.Size = new System.Drawing.Size(24, 20);
-            this.txtAusdauerPERM.TabIndex = 222;
-            this.txtAusdauerPERM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAusdauerPERM.TextChanged += new System.EventHandler(this.txtAusdauerPERM_TextChanged);
             // 
             // txtAusdauerVOR
             // 
             this.txtAusdauerVOR.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtAusdauerVOR.Location = new System.Drawing.Point(553, 199);
+            resources.ApplyResources(this.txtAusdauerVOR, "txtAusdauerVOR");
             this.txtAusdauerVOR.Name = "txtAusdauerVOR";
-            this.txtAusdauerVOR.Size = new System.Drawing.Size(24, 20);
-            this.txtAusdauerVOR.TabIndex = 221;
-            this.txtAusdauerVOR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAusdauerVOR.TextChanged += new System.EventHandler(this.txtAusdauerVOR_TextChanged);
             // 
             // label46
             // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(673, 163);
+            resources.ApplyResources(this.label46, "label46");
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(33, 7);
-            this.label46.TabIndex = 220;
-            this.label46.Text = "Ergebnis";
             // 
             // txtLebensenergieERG
             // 
             this.txtLebensenergieERG.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtLebensenergieERG.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLebensenergieERG.Location = new System.Drawing.Point(673, 173);
+            resources.ApplyResources(this.txtLebensenergieERG, "txtLebensenergieERG");
             this.txtLebensenergieERG.Name = "txtLebensenergieERG";
-            this.txtLebensenergieERG.Size = new System.Drawing.Size(32, 20);
-            this.txtLebensenergieERG.TabIndex = 219;
-            this.txtLebensenergieERG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtLebensenergieERG.TextChanged += new System.EventHandler(this.txtLebensenergieERG_TextChanged);
             // 
             // label47
             // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(646, 163);
+            resources.ApplyResources(this.label47, "label47");
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(20, 7);
-            this.label47.TabIndex = 218;
-            this.label47.Text = "Mali.";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(615, 163);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(20, 7);
-            this.label45.TabIndex = 217;
-            this.label45.Text = "Mod.";
             // 
             // label44
             // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(585, 163);
+            resources.ApplyResources(this.label44, "label44");
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(21, 7);
-            this.label44.TabIndex = 215;
-            this.label44.Text = "Perm";
             // 
             // label43
             // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(556, 163);
+            resources.ApplyResources(this.label43, "label43");
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(17, 7);
-            this.label43.TabIndex = 214;
-            this.label43.Text = "Vor.";
             // 
             // txtLebensenergieMALI
             // 
             this.txtLebensenergieMALI.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtLebensenergieMALI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLebensenergieMALI.Location = new System.Drawing.Point(643, 173);
+            resources.ApplyResources(this.txtLebensenergieMALI, "txtLebensenergieMALI");
             this.txtLebensenergieMALI.Name = "txtLebensenergieMALI";
-            this.txtLebensenergieMALI.Size = new System.Drawing.Size(24, 20);
-            this.txtLebensenergieMALI.TabIndex = 213;
-            this.txtLebensenergieMALI.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtLebensenergieMALI.TextChanged += new System.EventHandler(this.txtLebensenergieMALI_TextChanged);
-            // 
-            // txtLebensenergieMOD
-            // 
-            this.txtLebensenergieMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtLebensenergieMOD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLebensenergieMOD.Location = new System.Drawing.Point(613, 173);
-            this.txtLebensenergieMOD.Name = "txtLebensenergieMOD";
-            this.txtLebensenergieMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtLebensenergieMOD.TabIndex = 212;
-            this.txtLebensenergieMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtLebensenergieMOD.TextChanged += new System.EventHandler(this.txtLebensenergieMOD_TextChanged);
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(457, 176);
+            resources.ApplyResources(this.label11, "label11");
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 13);
-            this.label11.TabIndex = 211;
-            this.label11.Text = "Lebensenergie";
             // 
             // txtLebensenergiePERM
             // 
             this.txtLebensenergiePERM.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtLebensenergiePERM.Location = new System.Drawing.Point(583, 173);
+            resources.ApplyResources(this.txtLebensenergiePERM, "txtLebensenergiePERM");
             this.txtLebensenergiePERM.Name = "txtLebensenergiePERM";
-            this.txtLebensenergiePERM.Size = new System.Drawing.Size(24, 20);
-            this.txtLebensenergiePERM.TabIndex = 209;
-            this.txtLebensenergiePERM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtLebensenergiePERM.TextChanged += new System.EventHandler(this.txtLebensenergiePERM_TextChanged);
             // 
             // txtLebensenergieVOR
             // 
             this.txtLebensenergieVOR.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtLebensenergieVOR.Location = new System.Drawing.Point(553, 173);
+            resources.ApplyResources(this.txtLebensenergieVOR, "txtLebensenergieVOR");
             this.txtLebensenergieVOR.Name = "txtLebensenergieVOR";
-            this.txtLebensenergieVOR.Size = new System.Drawing.Size(24, 20);
-            this.txtLebensenergieVOR.TabIndex = 208;
-            this.txtLebensenergieVOR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtLebensenergieVOR.TextChanged += new System.EventHandler(this.txtLebensenergieVOR_TextChanged);
             // 
             // btnSaveCharacter
             // 
-            this.btnSaveCharacter.Location = new System.Drawing.Point(1046, 38);
+            resources.ApplyResources(this.btnSaveCharacter, "btnSaveCharacter");
             this.btnSaveCharacter.Name = "btnSaveCharacter";
-            this.btnSaveCharacter.Size = new System.Drawing.Size(116, 23);
-            this.btnSaveCharacter.TabIndex = 207;
-            this.btnSaveCharacter.Text = "SaveCharacter";
             this.btnSaveCharacter.UseVisualStyleBackColor = true;
             this.btnSaveCharacter.Click += new System.EventHandler(this.btnSaveCharacter_Click);
             // 
             // btnLoadCharacter
             // 
-            this.btnLoadCharacter.Location = new System.Drawing.Point(1046, 9);
+            resources.ApplyResources(this.btnLoadCharacter, "btnLoadCharacter");
             this.btnLoadCharacter.Name = "btnLoadCharacter";
-            this.btnLoadCharacter.Size = new System.Drawing.Size(116, 23);
-            this.btnLoadCharacter.TabIndex = 206;
-            this.btnLoadCharacter.Text = "LoadCharacter";
             this.btnLoadCharacter.UseVisualStyleBackColor = true;
             this.btnLoadCharacter.Click += new System.EventHandler(this.btnLoadCharacter_Click);
             // 
             // label30
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(366, 137);
+            resources.ApplyResources(this.label30, "label30");
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(20, 7);
-            this.label30.TabIndex = 205;
-            this.label30.Text = "Max.";
             // 
             // label31
             // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(345, 137);
+            resources.ApplyResources(this.label31, "label31");
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(20, 7);
-            this.label31.TabIndex = 204;
-            this.label31.Text = "Mod.";
             // 
             // label32
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(325, 137);
+            resources.ApplyResources(this.label32, "label32");
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(17, 7);
-            this.label32.TabIndex = 203;
-            this.label32.Text = "Akt.";
             // 
             // txtGeschwindigkeitMAX
             // 
             this.txtGeschwindigkeitMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtGeschwindigkeitMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGeschwindigkeitMAX.Location = new System.Drawing.Point(364, 355);
+            resources.ApplyResources(this.txtGeschwindigkeitMAX, "txtGeschwindigkeitMAX");
             this.txtGeschwindigkeitMAX.Name = "txtGeschwindigkeitMAX";
-            this.txtGeschwindigkeitMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtGeschwindigkeitMAX.TabIndex = 202;
-            this.txtGeschwindigkeitMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtGeschwindigkeitMAX.TextChanged += new System.EventHandler(this.txtGeschwindigkeitMAX_TextChanged);
             // 
             // txtEntrückungMAX
             // 
             this.txtEntrückungMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtEntrückungMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEntrückungMAX.Location = new System.Drawing.Point(365, 329);
+            resources.ApplyResources(this.txtEntrückungMAX, "txtEntrückungMAX");
             this.txtEntrückungMAX.Name = "txtEntrückungMAX";
-            this.txtEntrückungMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtEntrückungMAX.TabIndex = 201;
-            this.txtEntrückungMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtEntrückungMAX.TextChanged += new System.EventHandler(this.txtEntrückungMAX_TextChanged);
             // 
             // txtWundschwelleMAX
             // 
             this.txtWundschwelleMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtWundschwelleMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWundschwelleMAX.Location = new System.Drawing.Point(364, 303);
+            resources.ApplyResources(this.txtWundschwelleMAX, "txtWundschwelleMAX");
             this.txtWundschwelleMAX.Name = "txtWundschwelleMAX";
-            this.txtWundschwelleMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtWundschwelleMAX.TabIndex = 200;
-            this.txtWundschwelleMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtWundschwelleMAX.TextChanged += new System.EventHandler(this.txtWundschwelleMAX_TextChanged);
             // 
             // txtArtefaktkontrolleMAX
             // 
             this.txtArtefaktkontrolleMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtArtefaktkontrolleMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtArtefaktkontrolleMAX.Location = new System.Drawing.Point(364, 277);
+            resources.ApplyResources(this.txtArtefaktkontrolleMAX, "txtArtefaktkontrolleMAX");
             this.txtArtefaktkontrolleMAX.Name = "txtArtefaktkontrolleMAX";
-            this.txtArtefaktkontrolleMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtArtefaktkontrolleMAX.TabIndex = 199;
-            this.txtArtefaktkontrolleMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtArtefaktkontrolleMAX.TextChanged += new System.EventHandler(this.txtArtefaktkontrolleMAX_TextChanged);
             // 
             // txtBeherschungswertMAX
             // 
             this.txtBeherschungswertMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtBeherschungswertMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBeherschungswertMAX.Location = new System.Drawing.Point(364, 251);
+            resources.ApplyResources(this.txtBeherschungswertMAX, "txtBeherschungswertMAX");
             this.txtBeherschungswertMAX.Name = "txtBeherschungswertMAX";
-            this.txtBeherschungswertMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtBeherschungswertMAX.TabIndex = 198;
-            this.txtBeherschungswertMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBeherschungswertMAX.TextChanged += new System.EventHandler(this.txtBeherschungswertMAX_TextChanged);
             // 
             // txtInitativeBasisMAX
             // 
             this.txtInitativeBasisMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtInitativeBasisMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInitativeBasisMAX.Location = new System.Drawing.Point(365, 225);
+            resources.ApplyResources(this.txtInitativeBasisMAX, "txtInitativeBasisMAX");
             this.txtInitativeBasisMAX.Name = "txtInitativeBasisMAX";
-            this.txtInitativeBasisMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtInitativeBasisMAX.TabIndex = 197;
-            this.txtInitativeBasisMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtInitativeBasisMAX.TextChanged += new System.EventHandler(this.txtInitativeBasisMAX_TextChanged);
             // 
             // txtFernkampfBasisMAX
             // 
             this.txtFernkampfBasisMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtFernkampfBasisMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFernkampfBasisMAX.Location = new System.Drawing.Point(365, 199);
+            resources.ApplyResources(this.txtFernkampfBasisMAX, "txtFernkampfBasisMAX");
             this.txtFernkampfBasisMAX.Name = "txtFernkampfBasisMAX";
-            this.txtFernkampfBasisMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtFernkampfBasisMAX.TabIndex = 196;
-            this.txtFernkampfBasisMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtFernkampfBasisMAX.TextChanged += new System.EventHandler(this.txtFernkampfBasisMAX_TextChanged);
             // 
             // txtParadeBasisMAX
             // 
             this.txtParadeBasisMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtParadeBasisMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParadeBasisMAX.Location = new System.Drawing.Point(365, 173);
+            resources.ApplyResources(this.txtParadeBasisMAX, "txtParadeBasisMAX");
             this.txtParadeBasisMAX.Name = "txtParadeBasisMAX";
-            this.txtParadeBasisMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtParadeBasisMAX.TabIndex = 195;
-            this.txtParadeBasisMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtParadeBasisMAX.TextChanged += new System.EventHandler(this.txtParadeBasisMAX_TextChanged);
             // 
             // txtAttackeBaisMAX
             // 
             this.txtAttackeBaisMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtAttackeBaisMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAttackeBaisMAX.Location = new System.Drawing.Point(365, 147);
+            resources.ApplyResources(this.txtAttackeBaisMAX, "txtAttackeBaisMAX");
             this.txtAttackeBaisMAX.Name = "txtAttackeBaisMAX";
-            this.txtAttackeBaisMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtAttackeBaisMAX.TabIndex = 194;
-            this.txtAttackeBaisMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAttackeBaisMAX.TextChanged += new System.EventHandler(this.txtAttackeBaisMAX_TextChanged);
             // 
             // txtGeschwindigkeitMOD
             // 
             this.txtGeschwindigkeitMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtGeschwindigkeitMOD.Location = new System.Drawing.Point(343, 355);
+            resources.ApplyResources(this.txtGeschwindigkeitMOD, "txtGeschwindigkeitMOD");
             this.txtGeschwindigkeitMOD.Name = "txtGeschwindigkeitMOD";
-            this.txtGeschwindigkeitMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtGeschwindigkeitMOD.TabIndex = 193;
-            this.txtGeschwindigkeitMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtGeschwindigkeitMOD.TextChanged += new System.EventHandler(this.txtGeschwindigkeitMOD_TextChanged);
             // 
             // txtEntrückungMOD
             // 
             this.txtEntrückungMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtEntrückungMOD.Location = new System.Drawing.Point(344, 329);
+            resources.ApplyResources(this.txtEntrückungMOD, "txtEntrückungMOD");
             this.txtEntrückungMOD.Name = "txtEntrückungMOD";
-            this.txtEntrückungMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtEntrückungMOD.TabIndex = 192;
-            this.txtEntrückungMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtEntrückungMOD.TextChanged += new System.EventHandler(this.txtEntrückungMOD_TextChanged);
             // 
             // txtWundschwelleMOD
             // 
             this.txtWundschwelleMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtWundschwelleMOD.Location = new System.Drawing.Point(343, 303);
+            resources.ApplyResources(this.txtWundschwelleMOD, "txtWundschwelleMOD");
             this.txtWundschwelleMOD.Name = "txtWundschwelleMOD";
-            this.txtWundschwelleMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtWundschwelleMOD.TabIndex = 191;
-            this.txtWundschwelleMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtWundschwelleMOD.TextChanged += new System.EventHandler(this.txtWundschwelleMOD_TextChanged);
             // 
             // txtArtefaktkontrolleMOD
             // 
             this.txtArtefaktkontrolleMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtArtefaktkontrolleMOD.Location = new System.Drawing.Point(343, 277);
+            resources.ApplyResources(this.txtArtefaktkontrolleMOD, "txtArtefaktkontrolleMOD");
             this.txtArtefaktkontrolleMOD.Name = "txtArtefaktkontrolleMOD";
-            this.txtArtefaktkontrolleMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtArtefaktkontrolleMOD.TabIndex = 190;
-            this.txtArtefaktkontrolleMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtArtefaktkontrolleMOD.TextChanged += new System.EventHandler(this.txtArtefaktkontrolleMOD_TextChanged);
             // 
             // txtBeherschungswertMOD
             // 
             this.txtBeherschungswertMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtBeherschungswertMOD.Location = new System.Drawing.Point(343, 251);
+            resources.ApplyResources(this.txtBeherschungswertMOD, "txtBeherschungswertMOD");
             this.txtBeherschungswertMOD.Name = "txtBeherschungswertMOD";
-            this.txtBeherschungswertMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtBeherschungswertMOD.TabIndex = 189;
-            this.txtBeherschungswertMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBeherschungswertMOD.TextChanged += new System.EventHandler(this.txtBeherschungswertMOD_TextChanged);
             // 
             // txtInitativeBasisMOD
             // 
             this.txtInitativeBasisMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtInitativeBasisMOD.Location = new System.Drawing.Point(344, 225);
+            resources.ApplyResources(this.txtInitativeBasisMOD, "txtInitativeBasisMOD");
             this.txtInitativeBasisMOD.Name = "txtInitativeBasisMOD";
-            this.txtInitativeBasisMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtInitativeBasisMOD.TabIndex = 188;
-            this.txtInitativeBasisMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtInitativeBasisMOD.TextChanged += new System.EventHandler(this.txtInitativeBasisMOD_TextChanged);
             // 
             // txtFernkampfBasisMOD
             // 
             this.txtFernkampfBasisMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtFernkampfBasisMOD.Location = new System.Drawing.Point(344, 199);
+            resources.ApplyResources(this.txtFernkampfBasisMOD, "txtFernkampfBasisMOD");
             this.txtFernkampfBasisMOD.Name = "txtFernkampfBasisMOD";
-            this.txtFernkampfBasisMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtFernkampfBasisMOD.TabIndex = 187;
-            this.txtFernkampfBasisMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtFernkampfBasisMOD.TextChanged += new System.EventHandler(this.txtFernkampfBasisMOD_TextChanged);
             // 
             // txtParadeBasisMOD
             // 
             this.txtParadeBasisMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtParadeBasisMOD.Location = new System.Drawing.Point(344, 173);
+            resources.ApplyResources(this.txtParadeBasisMOD, "txtParadeBasisMOD");
             this.txtParadeBasisMOD.Name = "txtParadeBasisMOD";
-            this.txtParadeBasisMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtParadeBasisMOD.TabIndex = 186;
-            this.txtParadeBasisMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtParadeBasisMOD.TextChanged += new System.EventHandler(this.txtParadeBasisMOD_TextChanged);
             // 
             // txtAttackeBasisMOD
             // 
             this.txtAttackeBasisMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtAttackeBasisMOD.Location = new System.Drawing.Point(344, 147);
+            resources.ApplyResources(this.txtAttackeBasisMOD, "txtAttackeBasisMOD");
             this.txtAttackeBasisMOD.Name = "txtAttackeBasisMOD";
-            this.txtAttackeBasisMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtAttackeBasisMOD.TabIndex = 185;
-            this.txtAttackeBasisMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAttackeBasisMOD.TextChanged += new System.EventHandler(this.txtAttackeBasisMOD_TextChanged);
             // 
             // txtGeschwindigkeitAKT
             // 
             this.txtGeschwindigkeitAKT.BackColor = System.Drawing.SystemColors.Window;
-            this.txtGeschwindigkeitAKT.Location = new System.Drawing.Point(322, 355);
+            resources.ApplyResources(this.txtGeschwindigkeitAKT, "txtGeschwindigkeitAKT");
             this.txtGeschwindigkeitAKT.Name = "txtGeschwindigkeitAKT";
-            this.txtGeschwindigkeitAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtGeschwindigkeitAKT.TabIndex = 184;
-            this.txtGeschwindigkeitAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtGeschwindigkeitAKT.TextChanged += new System.EventHandler(this.txtGeschwindigkeitAKT_TextChanged);
             // 
             // label33
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(221, 358);
+            resources.ApplyResources(this.label33, "label33");
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(85, 13);
-            this.label33.TabIndex = 183;
-            this.label33.Text = "Geschwindigkeit";
             // 
             // txtEntrückungAKT
             // 
             this.txtEntrückungAKT.BackColor = System.Drawing.SystemColors.Window;
-            this.txtEntrückungAKT.Location = new System.Drawing.Point(323, 329);
+            resources.ApplyResources(this.txtEntrückungAKT, "txtEntrückungAKT");
             this.txtEntrückungAKT.Name = "txtEntrückungAKT";
-            this.txtEntrückungAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtEntrückungAKT.TabIndex = 182;
-            this.txtEntrückungAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtEntrückungAKT.TextChanged += new System.EventHandler(this.txtEntrückungAKT_TextChanged);
             // 
             // label34
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(221, 332);
+            resources.ApplyResources(this.label34, "label34");
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(62, 13);
-            this.label34.TabIndex = 181;
-            this.label34.Text = "Entrückung";
             // 
             // txtWundschwelleAKT
             // 
             this.txtWundschwelleAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtWundschwelleAKT.Location = new System.Drawing.Point(322, 303);
+            resources.ApplyResources(this.txtWundschwelleAKT, "txtWundschwelleAKT");
             this.txtWundschwelleAKT.Name = "txtWundschwelleAKT";
-            this.txtWundschwelleAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtWundschwelleAKT.TabIndex = 180;
-            this.txtWundschwelleAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtWundschwelleAKT.TextChanged += new System.EventHandler(this.txtWundschwelleAKT_TextChanged);
             // 
             // label35
             // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(221, 306);
+            resources.ApplyResources(this.label35, "label35");
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(77, 13);
-            this.label35.TabIndex = 179;
-            this.label35.Text = "Wundschwelle";
             // 
             // txtArtefaktkontrolleAKT
             // 
             this.txtArtefaktkontrolleAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtArtefaktkontrolleAKT.Location = new System.Drawing.Point(322, 277);
+            resources.ApplyResources(this.txtArtefaktkontrolleAKT, "txtArtefaktkontrolleAKT");
             this.txtArtefaktkontrolleAKT.Name = "txtArtefaktkontrolleAKT";
-            this.txtArtefaktkontrolleAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtArtefaktkontrolleAKT.TabIndex = 178;
-            this.txtArtefaktkontrolleAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtArtefaktkontrolleAKT.TextChanged += new System.EventHandler(this.txtArtefaktkontrolleAKT_TextChanged);
             // 
             // txtBeherschungswertAKT
             // 
             this.txtBeherschungswertAKT.BackColor = System.Drawing.SystemColors.Window;
-            this.txtBeherschungswertAKT.Location = new System.Drawing.Point(322, 251);
+            resources.ApplyResources(this.txtBeherschungswertAKT, "txtBeherschungswertAKT");
             this.txtBeherschungswertAKT.Name = "txtBeherschungswertAKT";
-            this.txtBeherschungswertAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtBeherschungswertAKT.TabIndex = 177;
-            this.txtBeherschungswertAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBeherschungswertAKT.TextChanged += new System.EventHandler(this.txtBeherschungswertAKT_TextChanged);
             // 
             // txtInitativeBasisAKT
             // 
             this.txtInitativeBasisAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtInitativeBasisAKT.Location = new System.Drawing.Point(323, 225);
+            resources.ApplyResources(this.txtInitativeBasisAKT, "txtInitativeBasisAKT");
             this.txtInitativeBasisAKT.Name = "txtInitativeBasisAKT";
-            this.txtInitativeBasisAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtInitativeBasisAKT.TabIndex = 176;
-            this.txtInitativeBasisAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtInitativeBasisAKT.TextChanged += new System.EventHandler(this.txtInitativeBasisAKT_TextChanged);
             // 
             // txtFernkampfBasisAKT
             // 
             this.txtFernkampfBasisAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtFernkampfBasisAKT.Location = new System.Drawing.Point(323, 199);
+            resources.ApplyResources(this.txtFernkampfBasisAKT, "txtFernkampfBasisAKT");
             this.txtFernkampfBasisAKT.Name = "txtFernkampfBasisAKT";
-            this.txtFernkampfBasisAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtFernkampfBasisAKT.TabIndex = 175;
-            this.txtFernkampfBasisAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtFernkampfBasisAKT.TextChanged += new System.EventHandler(this.txtFernkampfBasisAKT_TextChanged);
             // 
             // txtParadeBasisAKT
             // 
             this.txtParadeBasisAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtParadeBasisAKT.Location = new System.Drawing.Point(323, 173);
+            resources.ApplyResources(this.txtParadeBasisAKT, "txtParadeBasisAKT");
             this.txtParadeBasisAKT.Name = "txtParadeBasisAKT";
-            this.txtParadeBasisAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtParadeBasisAKT.TabIndex = 174;
-            this.txtParadeBasisAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtParadeBasisAKT.TextChanged += new System.EventHandler(this.txtParadeBasisAKT_TextChanged);
             // 
             // txtAttackeBaisAKT
             // 
             this.txtAttackeBaisAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtAttackeBaisAKT.Location = new System.Drawing.Point(323, 147);
+            resources.ApplyResources(this.txtAttackeBaisAKT, "txtAttackeBaisAKT");
             this.txtAttackeBaisAKT.Name = "txtAttackeBaisAKT";
-            this.txtAttackeBaisAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtAttackeBaisAKT.TabIndex = 173;
-            this.txtAttackeBaisAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAttackeBaisAKT.TextChanged += new System.EventHandler(this.txtAttackeBaisAKT_TextChanged);
             // 
             // label36
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(221, 280);
+            resources.ApplyResources(this.label36, "label36");
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(84, 13);
-            this.label36.TabIndex = 172;
-            this.label36.Text = "Artefaktkontrolle";
             // 
             // label37
             // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(221, 254);
+            resources.ApplyResources(this.label37, "label37");
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(95, 13);
-            this.label37.TabIndex = 171;
-            this.label37.Text = "Beherschungswert";
             // 
             // label38
             // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(221, 228);
+            resources.ApplyResources(this.label38, "label38");
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(72, 13);
-            this.label38.TabIndex = 170;
-            this.label38.Text = "Initative-Basis";
             // 
             // label39
             // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(221, 202);
+            resources.ApplyResources(this.label39, "label39");
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(85, 13);
-            this.label39.TabIndex = 169;
-            this.label39.Text = "Fernkampf-Basis";
             // 
             // label40
             // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(221, 176);
+            resources.ApplyResources(this.label40, "label40");
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(69, 13);
-            this.label40.TabIndex = 168;
-            this.label40.Text = "Parade-Basis";
             // 
             // label41
             // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(221, 150);
+            resources.ApplyResources(this.label41, "label41");
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(72, 13);
-            this.label41.TabIndex = 167;
-            this.label41.Text = "Attacke-Basis";
             // 
             // txtGesamtMAX
             // 
             this.txtGesamtMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtGesamtMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGesamtMAX.Location = new System.Drawing.Point(132, 389);
+            resources.ApplyResources(this.txtGesamtMAX, "txtGesamtMAX");
             this.txtGesamtMAX.Name = "txtGesamtMAX";
-            this.txtGesamtMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtGesamtMAX.TabIndex = 166;
-            this.txtGesamtMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtGesamtMAX.TextChanged += new System.EventHandler(this.txtGesamtMAX_TextChanged);
             // 
             // txtGesamtAKT
             // 
             this.txtGesamtAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtGesamtAKT.Location = new System.Drawing.Point(90, 389);
+            resources.ApplyResources(this.txtGesamtAKT, "txtGesamtAKT");
             this.txtGesamtAKT.Name = "txtGesamtAKT";
-            this.txtGesamtAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtGesamtAKT.TabIndex = 164;
-            this.txtGesamtAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtGesamtAKT.TextChanged += new System.EventHandler(this.txtGesamtAKT_TextChanged);
             // 
             // label42
             // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(14, 392);
+            resources.ApplyResources(this.label42, "label42");
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(43, 13);
-            this.label42.TabIndex = 163;
-            this.label42.Text = "Gesamt";
             // 
             // label29
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(133, 137);
+            resources.ApplyResources(this.label29, "label29");
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(20, 7);
-            this.label29.TabIndex = 162;
-            this.label29.Text = "Max.";
             // 
             // label28
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(112, 137);
+            resources.ApplyResources(this.label28, "label28");
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(20, 7);
-            this.label28.TabIndex = 161;
-            this.label28.Text = "Mod.";
             // 
             // label27
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(92, 137);
+            resources.ApplyResources(this.label27, "label27");
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(17, 7);
-            this.label27.TabIndex = 160;
-            this.label27.Text = "Akt.";
             // 
             // txtSozialstatusMAX
             // 
             this.txtSozialstatusMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtSozialstatusMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSozialstatusMAX.Location = new System.Drawing.Point(132, 355);
+            resources.ApplyResources(this.txtSozialstatusMAX, "txtSozialstatusMAX");
             this.txtSozialstatusMAX.Name = "txtSozialstatusMAX";
-            this.txtSozialstatusMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtSozialstatusMAX.TabIndex = 159;
-            this.txtSozialstatusMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSozialstatusMAX.TextChanged += new System.EventHandler(this.txtSozialstatusMAX_TextChanged);
             // 
             // txtKörperkraftMAX
             // 
             this.txtKörperkraftMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtKörperkraftMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKörperkraftMAX.Location = new System.Drawing.Point(132, 329);
+            resources.ApplyResources(this.txtKörperkraftMAX, "txtKörperkraftMAX");
             this.txtKörperkraftMAX.Name = "txtKörperkraftMAX";
-            this.txtKörperkraftMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtKörperkraftMAX.TabIndex = 158;
-            this.txtKörperkraftMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtKörperkraftMAX.TextChanged += new System.EventHandler(this.txtKörperkraftMAX_TextChanged);
             // 
             // txtKonstitutionMAX
             // 
             this.txtKonstitutionMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtKonstitutionMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKonstitutionMAX.Location = new System.Drawing.Point(132, 303);
+            resources.ApplyResources(this.txtKonstitutionMAX, "txtKonstitutionMAX");
             this.txtKonstitutionMAX.Name = "txtKonstitutionMAX";
-            this.txtKonstitutionMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtKonstitutionMAX.TabIndex = 157;
-            this.txtKonstitutionMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtKonstitutionMAX.TextChanged += new System.EventHandler(this.TxtKonstitutionMAX_TextChanged);
             // 
             // textGewandheitMAX
             // 
             this.textGewandheitMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textGewandheitMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textGewandheitMAX.Location = new System.Drawing.Point(132, 277);
+            resources.ApplyResources(this.textGewandheitMAX, "textGewandheitMAX");
             this.textGewandheitMAX.Name = "textGewandheitMAX";
-            this.textGewandheitMAX.Size = new System.Drawing.Size(24, 20);
-            this.textGewandheitMAX.TabIndex = 156;
-            this.textGewandheitMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textGewandheitMAX.TextChanged += new System.EventHandler(this.textGewandheitMAX_TextChanged);
             // 
             // txtFingerfertigkeitMAX
             // 
             this.txtFingerfertigkeitMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtFingerfertigkeitMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFingerfertigkeitMAX.Location = new System.Drawing.Point(132, 251);
+            resources.ApplyResources(this.txtFingerfertigkeitMAX, "txtFingerfertigkeitMAX");
             this.txtFingerfertigkeitMAX.Name = "txtFingerfertigkeitMAX";
-            this.txtFingerfertigkeitMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtFingerfertigkeitMAX.TabIndex = 155;
-            this.txtFingerfertigkeitMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtFingerfertigkeitMAX.TextChanged += new System.EventHandler(this.txtFingerfertigkeitMAX_TextChanged);
             // 
             // txtCharismaMAX
             // 
             this.txtCharismaMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtCharismaMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCharismaMAX.Location = new System.Drawing.Point(132, 225);
+            resources.ApplyResources(this.txtCharismaMAX, "txtCharismaMAX");
             this.txtCharismaMAX.Name = "txtCharismaMAX";
-            this.txtCharismaMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtCharismaMAX.TabIndex = 154;
-            this.txtCharismaMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCharismaMAX.TextChanged += new System.EventHandler(this.txtCharismaMAX_TextChanged);
             // 
             // txtIntuitionMAX
             // 
             this.txtIntuitionMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtIntuitionMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIntuitionMAX.Location = new System.Drawing.Point(132, 199);
+            resources.ApplyResources(this.txtIntuitionMAX, "txtIntuitionMAX");
             this.txtIntuitionMAX.Name = "txtIntuitionMAX";
-            this.txtIntuitionMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtIntuitionMAX.TabIndex = 153;
-            this.txtIntuitionMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtIntuitionMAX.TextChanged += new System.EventHandler(this.txtIntuitionMAX_TextChanged);
             // 
             // txtKlugheitMAX
             // 
             this.txtKlugheitMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtKlugheitMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKlugheitMAX.Location = new System.Drawing.Point(132, 173);
+            resources.ApplyResources(this.txtKlugheitMAX, "txtKlugheitMAX");
             this.txtKlugheitMAX.Name = "txtKlugheitMAX";
-            this.txtKlugheitMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtKlugheitMAX.TabIndex = 152;
-            this.txtKlugheitMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtKlugheitMAX.TextChanged += new System.EventHandler(this.txtKlugheitMAX_TextChanged);
             // 
             // txtMutMAX
             // 
             this.txtMutMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtMutMAX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMutMAX.Location = new System.Drawing.Point(132, 147);
+            resources.ApplyResources(this.txtMutMAX, "txtMutMAX");
             this.txtMutMAX.Name = "txtMutMAX";
-            this.txtMutMAX.Size = new System.Drawing.Size(24, 20);
-            this.txtMutMAX.TabIndex = 151;
-            this.txtMutMAX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMutMAX.TextChanged += new System.EventHandler(this.txtMutMAX_TextChanged);
             // 
             // txtSozialstatusMOD
             // 
             this.txtSozialstatusMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtSozialstatusMOD.Location = new System.Drawing.Point(111, 355);
+            resources.ApplyResources(this.txtSozialstatusMOD, "txtSozialstatusMOD");
             this.txtSozialstatusMOD.Name = "txtSozialstatusMOD";
-            this.txtSozialstatusMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtSozialstatusMOD.TabIndex = 150;
-            this.txtSozialstatusMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSozialstatusMOD.TextChanged += new System.EventHandler(this.txtSozialstatusMOD_TextChanged);
             // 
             // txtKörperkraftMOD
             // 
             this.txtKörperkraftMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtKörperkraftMOD.Location = new System.Drawing.Point(111, 329);
+            resources.ApplyResources(this.txtKörperkraftMOD, "txtKörperkraftMOD");
             this.txtKörperkraftMOD.Name = "txtKörperkraftMOD";
-            this.txtKörperkraftMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtKörperkraftMOD.TabIndex = 149;
-            this.txtKörperkraftMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtKörperkraftMOD.TextChanged += new System.EventHandler(this.txtKörperkraftMOD_TextChanged);
             // 
             // txtKonstitutionMOD
             // 
             this.txtKonstitutionMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtKonstitutionMOD.Location = new System.Drawing.Point(111, 303);
+            resources.ApplyResources(this.txtKonstitutionMOD, "txtKonstitutionMOD");
             this.txtKonstitutionMOD.Name = "txtKonstitutionMOD";
-            this.txtKonstitutionMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtKonstitutionMOD.TabIndex = 148;
-            this.txtKonstitutionMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtKonstitutionMOD.TextChanged += new System.EventHandler(this.txtKonstitutionMOD_TextChanged);
             // 
             // textGewandheitMOD
             // 
             this.textGewandheitMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textGewandheitMOD.Location = new System.Drawing.Point(111, 277);
+            resources.ApplyResources(this.textGewandheitMOD, "textGewandheitMOD");
             this.textGewandheitMOD.Name = "textGewandheitMOD";
-            this.textGewandheitMOD.Size = new System.Drawing.Size(24, 20);
-            this.textGewandheitMOD.TabIndex = 147;
-            this.textGewandheitMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textGewandheitMOD.TextChanged += new System.EventHandler(this.textGewandheitMOD_TextChanged);
             // 
             // txtFingerfertigkeitMOD
             // 
             this.txtFingerfertigkeitMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtFingerfertigkeitMOD.Location = new System.Drawing.Point(111, 251);
+            resources.ApplyResources(this.txtFingerfertigkeitMOD, "txtFingerfertigkeitMOD");
             this.txtFingerfertigkeitMOD.Name = "txtFingerfertigkeitMOD";
-            this.txtFingerfertigkeitMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtFingerfertigkeitMOD.TabIndex = 146;
-            this.txtFingerfertigkeitMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtFingerfertigkeitMOD.TextChanged += new System.EventHandler(this.txtFingerfertigkeitMOD_TextChanged);
             // 
             // txtCharismaMOD
             // 
             this.txtCharismaMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtCharismaMOD.Location = new System.Drawing.Point(111, 225);
+            resources.ApplyResources(this.txtCharismaMOD, "txtCharismaMOD");
             this.txtCharismaMOD.Name = "txtCharismaMOD";
-            this.txtCharismaMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtCharismaMOD.TabIndex = 145;
-            this.txtCharismaMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCharismaMOD.TextChanged += new System.EventHandler(this.txtCharismaMOD_TextChanged);
             // 
             // txtIntuitionMOD
             // 
             this.txtIntuitionMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtIntuitionMOD.Location = new System.Drawing.Point(111, 199);
+            resources.ApplyResources(this.txtIntuitionMOD, "txtIntuitionMOD");
             this.txtIntuitionMOD.Name = "txtIntuitionMOD";
-            this.txtIntuitionMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtIntuitionMOD.TabIndex = 144;
-            this.txtIntuitionMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtIntuitionMOD.TextChanged += new System.EventHandler(this.txtIntuitionMOD_TextChanged);
             // 
             // txtKlugheitMOD
             // 
             this.txtKlugheitMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtKlugheitMOD.Location = new System.Drawing.Point(111, 173);
+            resources.ApplyResources(this.txtKlugheitMOD, "txtKlugheitMOD");
             this.txtKlugheitMOD.Name = "txtKlugheitMOD";
-            this.txtKlugheitMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtKlugheitMOD.TabIndex = 143;
-            this.txtKlugheitMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtKlugheitMOD.TextChanged += new System.EventHandler(this.txtKlugheitMOD_TextChanged);
             // 
             // txtMutMOD
             // 
             this.txtMutMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtMutMOD.Location = new System.Drawing.Point(111, 147);
+            resources.ApplyResources(this.txtMutMOD, "txtMutMOD");
             this.txtMutMOD.Name = "txtMutMOD";
-            this.txtMutMOD.Size = new System.Drawing.Size(24, 20);
-            this.txtMutMOD.TabIndex = 142;
-            this.txtMutMOD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMutMOD.TextChanged += new System.EventHandler(this.txtMutMOD_TextChanged);
             // 
             // txtSozialstatusAKT
             // 
-            this.txtSozialstatusAKT.Location = new System.Drawing.Point(90, 355);
+            resources.ApplyResources(this.txtSozialstatusAKT, "txtSozialstatusAKT");
             this.txtSozialstatusAKT.Name = "txtSozialstatusAKT";
-            this.txtSozialstatusAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtSozialstatusAKT.TabIndex = 141;
-            this.txtSozialstatusAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSozialstatusAKT.TextChanged += new System.EventHandler(this.txtSozialstatusAKT_TextChanged);
             // 
             // label26
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(14, 358);
+            resources.ApplyResources(this.label26, "label26");
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(63, 13);
-            this.label26.TabIndex = 140;
-            this.label26.Text = "Sozialstatus";
             // 
             // txtKörperkraftAKT
             // 
-            this.txtKörperkraftAKT.Location = new System.Drawing.Point(90, 329);
+            resources.ApplyResources(this.txtKörperkraftAKT, "txtKörperkraftAKT");
             this.txtKörperkraftAKT.Name = "txtKörperkraftAKT";
-            this.txtKörperkraftAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtKörperkraftAKT.TabIndex = 139;
-            this.txtKörperkraftAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtKörperkraftAKT.TextChanged += new System.EventHandler(this.txtKörperkraftAKT_TextChanged);
             // 
             // label25
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(14, 332);
+            resources.ApplyResources(this.label25, "label25");
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(59, 13);
-            this.label25.TabIndex = 138;
-            this.label25.Text = "Körperkraft";
             // 
             // txtKonstitutionAKT
             // 
-            this.txtKonstitutionAKT.Location = new System.Drawing.Point(90, 303);
+            resources.ApplyResources(this.txtKonstitutionAKT, "txtKonstitutionAKT");
             this.txtKonstitutionAKT.Name = "txtKonstitutionAKT";
-            this.txtKonstitutionAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtKonstitutionAKT.TabIndex = 137;
-            this.txtKonstitutionAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtKonstitutionAKT.TextChanged += new System.EventHandler(this.txtKonstitutionAKT_TextChanged);
             // 
             // label24
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(14, 306);
+            resources.ApplyResources(this.label24, "label24");
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(62, 13);
-            this.label24.TabIndex = 136;
-            this.label24.Text = "Konstitution";
             // 
             // textGewandheitAKT
             // 
-            this.textGewandheitAKT.Location = new System.Drawing.Point(90, 277);
+            resources.ApplyResources(this.textGewandheitAKT, "textGewandheitAKT");
             this.textGewandheitAKT.Name = "textGewandheitAKT";
-            this.textGewandheitAKT.Size = new System.Drawing.Size(24, 20);
-            this.textGewandheitAKT.TabIndex = 135;
-            this.textGewandheitAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textGewandheitAKT.TextChanged += new System.EventHandler(this.textGewandheitAKT_TextChanged);
             // 
             // txtFingerfertigkeitAKT
             // 
-            this.txtFingerfertigkeitAKT.Location = new System.Drawing.Point(90, 251);
+            resources.ApplyResources(this.txtFingerfertigkeitAKT, "txtFingerfertigkeitAKT");
             this.txtFingerfertigkeitAKT.Name = "txtFingerfertigkeitAKT";
-            this.txtFingerfertigkeitAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtFingerfertigkeitAKT.TabIndex = 134;
-            this.txtFingerfertigkeitAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtFingerfertigkeitAKT.TextChanged += new System.EventHandler(this.txtFingerfertigkeitAKT_TextChanged);
             // 
             // txtCharismaAKT
             // 
-            this.txtCharismaAKT.Location = new System.Drawing.Point(90, 225);
+            resources.ApplyResources(this.txtCharismaAKT, "txtCharismaAKT");
             this.txtCharismaAKT.Name = "txtCharismaAKT";
-            this.txtCharismaAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtCharismaAKT.TabIndex = 133;
-            this.txtCharismaAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCharismaAKT.TextChanged += new System.EventHandler(this.txtCharismaAKT_TextChanged);
             // 
             // txtIntuitionAKT
             // 
-            this.txtIntuitionAKT.Location = new System.Drawing.Point(90, 199);
+            resources.ApplyResources(this.txtIntuitionAKT, "txtIntuitionAKT");
             this.txtIntuitionAKT.Name = "txtIntuitionAKT";
-            this.txtIntuitionAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtIntuitionAKT.TabIndex = 132;
-            this.txtIntuitionAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtIntuitionAKT.TextChanged += new System.EventHandler(this.txtIntuitionAKT_TextChanged);
             // 
             // txtKlugheitAKT
             // 
-            this.txtKlugheitAKT.Location = new System.Drawing.Point(90, 173);
+            resources.ApplyResources(this.txtKlugheitAKT, "txtKlugheitAKT");
             this.txtKlugheitAKT.Name = "txtKlugheitAKT";
-            this.txtKlugheitAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtKlugheitAKT.TabIndex = 131;
-            this.txtKlugheitAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtKlugheitAKT.TextChanged += new System.EventHandler(this.txtKlugheitAKT_TextChanged);
             // 
             // txtMutAKT
             // 
-            this.txtMutAKT.Location = new System.Drawing.Point(90, 147);
+            resources.ApplyResources(this.txtMutAKT, "txtMutAKT");
             this.txtMutAKT.Name = "txtMutAKT";
-            this.txtMutAKT.Size = new System.Drawing.Size(24, 20);
-            this.txtMutAKT.TabIndex = 130;
-            this.txtMutAKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMutAKT.TextChanged += new System.EventHandler(this.txtMutAKT_TextChanged);
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(14, 280);
+            resources.ApplyResources(this.label18, "label18");
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(64, 13);
-            this.label18.TabIndex = 129;
-            this.label18.Text = "Gewandheit";
             // 
             // label19
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(13, 254);
+            resources.ApplyResources(this.label19, "label19");
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(76, 13);
-            this.label19.TabIndex = 128;
-            this.label19.Text = "Fingerfertigkeit";
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(14, 228);
+            resources.ApplyResources(this.label20, "label20");
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(50, 13);
-            this.label20.TabIndex = 127;
-            this.label20.Text = "Charisma";
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(14, 202);
+            resources.ApplyResources(this.label21, "label21");
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(44, 13);
-            this.label21.TabIndex = 126;
-            this.label21.Text = "Intuition";
             // 
             // label22
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(14, 176);
+            resources.ApplyResources(this.label22, "label22");
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(45, 13);
-            this.label22.TabIndex = 125;
-            this.label22.Text = "Klugheit";
             // 
             // label23
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(14, 150);
+            resources.ApplyResources(this.label23, "label23");
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(25, 13);
-            this.label23.TabIndex = 124;
-            this.label23.Text = "Mut";
             // 
             // txtGöttergeschenke4
             // 
-            this.txtGöttergeschenke4.Location = new System.Drawing.Point(770, 104);
+            resources.ApplyResources(this.txtGöttergeschenke4, "txtGöttergeschenke4");
             this.txtGöttergeschenke4.Name = "txtGöttergeschenke4";
-            this.txtGöttergeschenke4.Size = new System.Drawing.Size(188, 20);
-            this.txtGöttergeschenke4.TabIndex = 82;
             this.txtGöttergeschenke4.TextChanged += new System.EventHandler(this.txtGöttergeschenke4_TextChanged);
             // 
             // txtGöttergeschenke3
             // 
-            this.txtGöttergeschenke3.Location = new System.Drawing.Point(770, 85);
+            resources.ApplyResources(this.txtGöttergeschenke3, "txtGöttergeschenke3");
             this.txtGöttergeschenke3.Name = "txtGöttergeschenke3";
-            this.txtGöttergeschenke3.Size = new System.Drawing.Size(188, 20);
-            this.txtGöttergeschenke3.TabIndex = 81;
             this.txtGöttergeschenke3.TextChanged += new System.EventHandler(this.txtGöttergeschenke3_TextChanged);
             // 
             // txtGöttergeschenke2
             // 
-            this.txtGöttergeschenke2.Location = new System.Drawing.Point(770, 65);
+            resources.ApplyResources(this.txtGöttergeschenke2, "txtGöttergeschenke2");
             this.txtGöttergeschenke2.Name = "txtGöttergeschenke2";
-            this.txtGöttergeschenke2.Size = new System.Drawing.Size(188, 20);
-            this.txtGöttergeschenke2.TabIndex = 80;
             this.txtGöttergeschenke2.TextChanged += new System.EventHandler(this.txtGöttergeschenke2_TextChanged);
             // 
             // txtGöttergeschenke1
             // 
-            this.txtGöttergeschenke1.Location = new System.Drawing.Point(770, 46);
+            resources.ApplyResources(this.txtGöttergeschenke1, "txtGöttergeschenke1");
             this.txtGöttergeschenke1.Name = "txtGöttergeschenke1";
-            this.txtGöttergeschenke1.Size = new System.Drawing.Size(188, 20);
-            this.txtGöttergeschenke1.TabIndex = 79;
             this.txtGöttergeschenke1.TextChanged += new System.EventHandler(this.txtGöttergeschenke1_TextChanged);
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(677, 49);
+            resources.ApplyResources(this.label16, "label16");
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(92, 13);
-            this.label16.TabIndex = 78;
-            this.label16.Text = "Göttergeschenke:";
             // 
             // txtFamulienstand
             // 
-            this.txtFamulienstand.Location = new System.Drawing.Point(770, 27);
+            resources.ApplyResources(this.txtFamulienstand, "txtFamulienstand");
             this.txtFamulienstand.Name = "txtFamulienstand";
-            this.txtFamulienstand.Size = new System.Drawing.Size(43, 20);
-            this.txtFamulienstand.TabIndex = 77;
             this.txtFamulienstand.TextChanged += new System.EventHandler(this.txtFamulienstand_TextChanged);
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(677, 30);
+            resources.ApplyResources(this.label17, "label17");
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(74, 13);
-            this.label17.TabIndex = 76;
-            this.label17.Text = "Familienstand:";
             // 
             // txtGewicht
             // 
-            this.txtGewicht.Location = new System.Drawing.Point(770, 6);
+            resources.ApplyResources(this.txtGewicht, "txtGewicht");
             this.txtGewicht.Name = "txtGewicht";
-            this.txtGewicht.Size = new System.Drawing.Size(43, 20);
-            this.txtGewicht.TabIndex = 75;
             this.txtGewicht.TextChanged += new System.EventHandler(this.txtGewicht_TextChanged);
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(677, 10);
+            resources.ApplyResources(this.label15, "label15");
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(49, 13);
-            this.label15.TabIndex = 74;
-            this.label15.Text = "Gewicht:";
             // 
             // txtGröße
             // 
-            this.txtGröße.Location = new System.Drawing.Point(618, 6);
+            resources.ApplyResources(this.txtGröße, "txtGröße");
             this.txtGröße.Name = "txtGröße";
-            this.txtGröße.Size = new System.Drawing.Size(43, 20);
-            this.txtGröße.TabIndex = 73;
             this.txtGröße.TextChanged += new System.EventHandler(this.txtGröße_TextChanged);
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(577, 10);
+            resources.ApplyResources(this.label14, "label14");
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(39, 13);
-            this.label14.TabIndex = 72;
-            this.label14.Text = "Größe:";
             // 
             // txtHautfarbe
             // 
-            this.txtHautfarbe.Location = new System.Drawing.Point(535, 26);
+            resources.ApplyResources(this.txtHautfarbe, "txtHautfarbe");
             this.txtHautfarbe.Name = "txtHautfarbe";
-            this.txtHautfarbe.Size = new System.Drawing.Size(126, 20);
-            this.txtHautfarbe.TabIndex = 69;
             this.txtHautfarbe.TextChanged += new System.EventHandler(this.txtHautfarbe_TextChanged);
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(457, 29);
+            resources.ApplyResources(this.label12, "label12");
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(57, 13);
-            this.label12.TabIndex = 68;
-            this.label12.Text = "Hautfarbe:";
             // 
             // txtGeschlecht
             // 
-            this.txtGeschlecht.Location = new System.Drawing.Point(535, 6);
+            resources.ApplyResources(this.txtGeschlecht, "txtGeschlecht");
             this.txtGeschlecht.Name = "txtGeschlecht";
-            this.txtGeschlecht.Size = new System.Drawing.Size(26, 20);
-            this.txtGeschlecht.TabIndex = 67;
             this.txtGeschlecht.TextChanged += new System.EventHandler(this.txtGeschlecht_TextChanged);
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(457, 9);
+            resources.ApplyResources(this.label13, "label13");
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(64, 13);
-            this.label13.TabIndex = 66;
-            this.label13.Text = "Geschlecht:";
             // 
             // txtModifikation3
             // 
-            this.txtModifikation3.Location = new System.Drawing.Point(323, 104);
+            resources.ApplyResources(this.txtModifikation3, "txtModifikation3");
             this.txtModifikation3.Name = "txtModifikation3";
-            this.txtModifikation3.Size = new System.Drawing.Size(338, 20);
-            this.txtModifikation3.TabIndex = 65;
             this.txtModifikation3.TextChanged += new System.EventHandler(this.txtModifikation3_TextChanged);
             // 
             // txtModifikation2
             // 
-            this.txtModifikation2.Location = new System.Drawing.Point(323, 85);
+            resources.ApplyResources(this.txtModifikation2, "txtModifikation2");
             this.txtModifikation2.Name = "txtModifikation2";
-            this.txtModifikation2.Size = new System.Drawing.Size(338, 20);
-            this.txtModifikation2.TabIndex = 64;
             this.txtModifikation2.TextChanged += new System.EventHandler(this.txtModifikation2_TextChanged);
             // 
             // txtModifikation1
             // 
-            this.txtModifikation1.Location = new System.Drawing.Point(323, 65);
+            resources.ApplyResources(this.txtModifikation1, "txtModifikation1");
             this.txtModifikation1.Name = "txtModifikation1";
-            this.txtModifikation1.Size = new System.Drawing.Size(338, 20);
-            this.txtModifikation1.TabIndex = 63;
             this.txtModifikation1.TextChanged += new System.EventHandler(this.txtModifikation1_TextChanged);
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(221, 68);
+            resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 13);
-            this.label10.TabIndex = 60;
-            this.label10.Text = "Modifikationen:";
             // 
             // txtGottheit
             // 
-            this.txtGottheit.Location = new System.Drawing.Point(323, 45);
+            resources.ApplyResources(this.txtGottheit, "txtGottheit");
             this.txtGottheit.Name = "txtGottheit";
-            this.txtGottheit.Size = new System.Drawing.Size(115, 20);
-            this.txtGottheit.TabIndex = 59;
             this.txtGottheit.TextChanged += new System.EventHandler(this.txtGottheit_TextChanged);
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(221, 48);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 13);
-            this.label7.TabIndex = 58;
-            this.label7.Text = "Gottheit/-en:";
             // 
             // txtHaarfarbe
             // 
-            this.txtHaarfarbe.Location = new System.Drawing.Point(323, 26);
+            resources.ApplyResources(this.txtHaarfarbe, "txtHaarfarbe");
             this.txtHaarfarbe.Name = "txtHaarfarbe";
-            this.txtHaarfarbe.Size = new System.Drawing.Size(115, 20);
-            this.txtHaarfarbe.TabIndex = 57;
             this.txtHaarfarbe.TextChanged += new System.EventHandler(this.txtHaarfarbe_TextChanged);
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(221, 29);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 13);
-            this.label6.TabIndex = 56;
-            this.label6.Text = "Haarfarbe/Fellfarbe:";
             // 
             // txtAlter
             // 
-            this.txtAlter.Location = new System.Drawing.Point(323, 6);
+            resources.ApplyResources(this.txtAlter, "txtAlter");
             this.txtAlter.Name = "txtAlter";
-            this.txtAlter.Size = new System.Drawing.Size(115, 20);
-            this.txtAlter.TabIndex = 55;
             this.txtAlter.TextChanged += new System.EventHandler(this.txtAlter_TextChanged);
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(221, 9);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 13);
-            this.label5.TabIndex = 54;
-            this.label5.Text = "Alter/Geburstag:";
             // 
             // txtProfession
             // 
-            this.txtProfession.Location = new System.Drawing.Point(90, 101);
+            resources.ApplyResources(this.txtProfession, "txtProfession");
             this.txtProfession.Name = "txtProfession";
-            this.txtProfession.Size = new System.Drawing.Size(115, 20);
-            this.txtProfession.TabIndex = 53;
             this.txtProfession.TextChanged += new System.EventHandler(this.txtProfession_TextChanged);
             // 
             // txtKultur
             // 
-            this.txtKultur.Location = new System.Drawing.Point(90, 82);
+            resources.ApplyResources(this.txtKultur, "txtKultur");
             this.txtKultur.Name = "txtKultur";
-            this.txtKultur.Size = new System.Drawing.Size(115, 20);
-            this.txtKultur.TabIndex = 52;
             this.txtKultur.TextChanged += new System.EventHandler(this.txtKultur_TextChanged);
             // 
             // txtRasse
             // 
-            this.txtRasse.Location = new System.Drawing.Point(90, 62);
+            resources.ApplyResources(this.txtRasse, "txtRasse");
             this.txtRasse.Name = "txtRasse";
-            this.txtRasse.Size = new System.Drawing.Size(115, 20);
-            this.txtRasse.TabIndex = 51;
             this.txtRasse.TextChanged += new System.EventHandler(this.txtRasse_TextChanged);
             // 
             // txtAnrede
             // 
-            this.txtAnrede.Location = new System.Drawing.Point(90, 45);
+            resources.ApplyResources(this.txtAnrede, "txtAnrede");
             this.txtAnrede.Name = "txtAnrede";
-            this.txtAnrede.Size = new System.Drawing.Size(115, 20);
-            this.txtAnrede.TabIndex = 50;
             this.txtAnrede.TextChanged += new System.EventHandler(this.txtAnrede_TextChanged);
             // 
             // txtAugenfarbe
             // 
-            this.txtAugenfarbe.Location = new System.Drawing.Point(90, 26);
+            resources.ApplyResources(this.txtAugenfarbe, "txtAugenfarbe");
             this.txtAugenfarbe.Name = "txtAugenfarbe";
-            this.txtAugenfarbe.Size = new System.Drawing.Size(115, 20);
-            this.txtAugenfarbe.TabIndex = 49;
             this.txtAugenfarbe.TextChanged += new System.EventHandler(this.txtAugenfarbe_TextChanged);
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(90, 6);
+            resources.ApplyResources(this.txtName, "txtName");
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(115, 20);
-            this.txtName.TabIndex = 48;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 104);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 13);
-            this.label4.TabIndex = 47;
-            this.label4.Text = "Profession/-en:";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 85);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
-            this.label3.TabIndex = 46;
-            this.label3.Text = "Kultur/-en:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 65);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 45;
-            this.label2.Text = "Rasse/-en:";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 48);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "Anrede:";
             // 
             // lblAugenfarbe
             // 
-            this.lblAugenfarbe.AutoSize = true;
-            this.lblAugenfarbe.Location = new System.Drawing.Point(14, 29);
+            resources.ApplyResources(this.lblAugenfarbe, "lblAugenfarbe");
             this.lblAugenfarbe.Name = "lblAugenfarbe";
-            this.lblAugenfarbe.Size = new System.Drawing.Size(65, 13);
-            this.lblAugenfarbe.TabIndex = 43;
-            this.lblAugenfarbe.Text = "Augenfarbe:";
             // 
             // lblName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(14, 9);
+            resources.ApplyResources(this.lblName, "lblName");
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(38, 13);
-            this.lblName.TabIndex = 42;
-            this.lblName.Text = "Name:";
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.groupBox19);
+            this.tabPage2.Controls.Add(this.groupBox10);
+            this.tabPage2.Controls.Add(this.groupBox9);
+            this.tabPage2.Controls.Add(this.groupBox8);
+            this.tabPage2.Controls.Add(this.groupBox7);
+            this.tabPage2.Controls.Add(this.groupBox6);
+            this.tabPage2.Controls.Add(this.groupBox5);
+            this.tabPage2.Controls.Add(this.groupBox4);
+            this.tabPage2.Controls.Add(this.groupBox3);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1438, 879);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // groupBox19
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.groupBox19.Controls.Add(this.radioKnowldageTalente);
+            this.groupBox19.Controls.Add(this.radioNaturTalente);
+            this.groupBox19.Controls.Add(this.radioSozialTalente);
+            this.groupBox19.Controls.Add(this.radioKörperlicheTalente);
+            resources.ApplyResources(this.groupBox19, "groupBox19");
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.TabStop = false;
+            // 
+            // radioNaturTalente
+            // 
+            resources.ApplyResources(this.radioNaturTalente, "radioNaturTalente");
+            this.radioNaturTalente.Name = "radioNaturTalente";
+            this.radioNaturTalente.UseVisualStyleBackColor = true;
+            this.radioNaturTalente.CheckedChanged += new System.EventHandler(this.radioNaturTalente_CheckedChanged);
+            // 
+            // radioSozialTalente
+            // 
+            resources.ApplyResources(this.radioSozialTalente, "radioSozialTalente");
+            this.radioSozialTalente.Name = "radioSozialTalente";
+            this.radioSozialTalente.UseVisualStyleBackColor = true;
+            this.radioSozialTalente.CheckedChanged += new System.EventHandler(this.radioSozialTalente_CheckedChanged);
+            // 
+            // radioKörperlicheTalente
+            // 
+            resources.ApplyResources(this.radioKörperlicheTalente, "radioKörperlicheTalente");
+            this.radioKörperlicheTalente.Checked = true;
+            this.radioKörperlicheTalente.Name = "radioKörperlicheTalente";
+            this.radioKörperlicheTalente.TabStop = true;
+            this.radioKörperlicheTalente.UseVisualStyleBackColor = true;
+            this.radioKörperlicheTalente.CheckedChanged += new System.EventHandler(this.radioKörperlicheTalente_CheckedChanged);
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.PTAbleiten23);
+            this.groupBox10.Controls.Add(this.PTAbleiten22);
+            this.groupBox10.Controls.Add(this.PTAbleiten21);
+            this.groupBox10.Controls.Add(this.PTAbleiten20);
+            this.groupBox10.Controls.Add(this.PTAbleiten19);
+            this.groupBox10.Controls.Add(this.PTAbleiten1);
+            this.groupBox10.Controls.Add(this.PTAbleiten2);
+            this.groupBox10.Controls.Add(this.PTAbleiten18);
+            this.groupBox10.Controls.Add(this.PTAbleiten3);
+            this.groupBox10.Controls.Add(this.PTAbleiten17);
+            this.groupBox10.Controls.Add(this.PTAbleiten4);
+            this.groupBox10.Controls.Add(this.PTAbleiten16);
+            this.groupBox10.Controls.Add(this.PTAbleiten5);
+            this.groupBox10.Controls.Add(this.PTAbleiten15);
+            this.groupBox10.Controls.Add(this.PTAbleiten6);
+            this.groupBox10.Controls.Add(this.PTAbleiten14);
+            this.groupBox10.Controls.Add(this.PTAbleiten7);
+            this.groupBox10.Controls.Add(this.PTAbleiten13);
+            this.groupBox10.Controls.Add(this.PTAbleiten8);
+            this.groupBox10.Controls.Add(this.PTAbleiten12);
+            this.groupBox10.Controls.Add(this.PTAbleiten9);
+            this.groupBox10.Controls.Add(this.PTAbleiten11);
+            this.groupBox10.Controls.Add(this.PTAbleiten10);
+            resources.ApplyResources(this.groupBox10, "groupBox10");
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.TabStop = false;
+            // 
+            // PTAbleiten1
+            // 
+            resources.ApplyResources(this.PTAbleiten1, "PTAbleiten1");
+            this.PTAbleiten1.Name = "PTAbleiten1";
+            this.PTAbleiten1.ReadOnly = true;
+            // 
+            // PTAbleiten2
+            // 
+            resources.ApplyResources(this.PTAbleiten2, "PTAbleiten2");
+            this.PTAbleiten2.Name = "PTAbleiten2";
+            this.PTAbleiten2.ReadOnly = true;
+            // 
+            // PTAbleiten18
+            // 
+            resources.ApplyResources(this.PTAbleiten18, "PTAbleiten18");
+            this.PTAbleiten18.Name = "PTAbleiten18";
+            this.PTAbleiten18.ReadOnly = true;
+            // 
+            // PTAbleiten3
+            // 
+            resources.ApplyResources(this.PTAbleiten3, "PTAbleiten3");
+            this.PTAbleiten3.Name = "PTAbleiten3";
+            this.PTAbleiten3.ReadOnly = true;
+            // 
+            // PTAbleiten17
+            // 
+            resources.ApplyResources(this.PTAbleiten17, "PTAbleiten17");
+            this.PTAbleiten17.Name = "PTAbleiten17";
+            this.PTAbleiten17.ReadOnly = true;
+            // 
+            // PTAbleiten4
+            // 
+            resources.ApplyResources(this.PTAbleiten4, "PTAbleiten4");
+            this.PTAbleiten4.Name = "PTAbleiten4";
+            this.PTAbleiten4.ReadOnly = true;
+            // 
+            // PTAbleiten16
+            // 
+            resources.ApplyResources(this.PTAbleiten16, "PTAbleiten16");
+            this.PTAbleiten16.Name = "PTAbleiten16";
+            this.PTAbleiten16.ReadOnly = true;
+            // 
+            // PTAbleiten5
+            // 
+            resources.ApplyResources(this.PTAbleiten5, "PTAbleiten5");
+            this.PTAbleiten5.Name = "PTAbleiten5";
+            this.PTAbleiten5.ReadOnly = true;
+            // 
+            // PTAbleiten15
+            // 
+            resources.ApplyResources(this.PTAbleiten15, "PTAbleiten15");
+            this.PTAbleiten15.Name = "PTAbleiten15";
+            this.PTAbleiten15.ReadOnly = true;
+            // 
+            // PTAbleiten6
+            // 
+            resources.ApplyResources(this.PTAbleiten6, "PTAbleiten6");
+            this.PTAbleiten6.Name = "PTAbleiten6";
+            this.PTAbleiten6.ReadOnly = true;
+            // 
+            // PTAbleiten14
+            // 
+            resources.ApplyResources(this.PTAbleiten14, "PTAbleiten14");
+            this.PTAbleiten14.Name = "PTAbleiten14";
+            this.PTAbleiten14.ReadOnly = true;
+            // 
+            // PTAbleiten7
+            // 
+            resources.ApplyResources(this.PTAbleiten7, "PTAbleiten7");
+            this.PTAbleiten7.Name = "PTAbleiten7";
+            this.PTAbleiten7.ReadOnly = true;
+            // 
+            // PTAbleiten13
+            // 
+            resources.ApplyResources(this.PTAbleiten13, "PTAbleiten13");
+            this.PTAbleiten13.Name = "PTAbleiten13";
+            this.PTAbleiten13.ReadOnly = true;
+            // 
+            // PTAbleiten8
+            // 
+            resources.ApplyResources(this.PTAbleiten8, "PTAbleiten8");
+            this.PTAbleiten8.Name = "PTAbleiten8";
+            this.PTAbleiten8.ReadOnly = true;
+            // 
+            // PTAbleiten12
+            // 
+            resources.ApplyResources(this.PTAbleiten12, "PTAbleiten12");
+            this.PTAbleiten12.Name = "PTAbleiten12";
+            this.PTAbleiten12.ReadOnly = true;
+            // 
+            // PTAbleiten9
+            // 
+            resources.ApplyResources(this.PTAbleiten9, "PTAbleiten9");
+            this.PTAbleiten9.Name = "PTAbleiten9";
+            this.PTAbleiten9.ReadOnly = true;
+            // 
+            // PTAbleiten11
+            // 
+            resources.ApplyResources(this.PTAbleiten11, "PTAbleiten11");
+            this.PTAbleiten11.Name = "PTAbleiten11";
+            this.PTAbleiten11.ReadOnly = true;
+            // 
+            // PTAbleiten10
+            // 
+            resources.ApplyResources(this.PTAbleiten10, "PTAbleiten10");
+            this.PTAbleiten10.Name = "PTAbleiten10";
+            this.PTAbleiten10.ReadOnly = true;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.PTAnforderungen23);
+            this.groupBox9.Controls.Add(this.PTAnforderungen22);
+            this.groupBox9.Controls.Add(this.PTAnforderungen21);
+            this.groupBox9.Controls.Add(this.PTAnforderungen20);
+            this.groupBox9.Controls.Add(this.PTAnforderungen19);
+            this.groupBox9.Controls.Add(this.PTAnforderungen1);
+            this.groupBox9.Controls.Add(this.PTAnforderungen2);
+            this.groupBox9.Controls.Add(this.PTAnforderungen18);
+            this.groupBox9.Controls.Add(this.PTAnforderungen3);
+            this.groupBox9.Controls.Add(this.PTAnforderungen17);
+            this.groupBox9.Controls.Add(this.PTAnforderungen4);
+            this.groupBox9.Controls.Add(this.PTAnforderungen16);
+            this.groupBox9.Controls.Add(this.PTAnforderungen5);
+            this.groupBox9.Controls.Add(this.PTAnforderungen15);
+            this.groupBox9.Controls.Add(this.PTAnforderungen6);
+            this.groupBox9.Controls.Add(this.PTAnforderungen14);
+            this.groupBox9.Controls.Add(this.PTAnforderungen7);
+            this.groupBox9.Controls.Add(this.PTAnforderungen13);
+            this.groupBox9.Controls.Add(this.PTAnforderungen8);
+            this.groupBox9.Controls.Add(this.PTAnforderungen12);
+            this.groupBox9.Controls.Add(this.PTAnforderungen9);
+            this.groupBox9.Controls.Add(this.PTAnforderungen11);
+            this.groupBox9.Controls.Add(this.PTAnforderungen10);
+            resources.ApplyResources(this.groupBox9, "groupBox9");
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.TabStop = false;
+            // 
+            // PTAnforderungen1
+            // 
+            resources.ApplyResources(this.PTAnforderungen1, "PTAnforderungen1");
+            this.PTAnforderungen1.Name = "PTAnforderungen1";
+            this.PTAnforderungen1.ReadOnly = true;
+            // 
+            // PTAnforderungen2
+            // 
+            resources.ApplyResources(this.PTAnforderungen2, "PTAnforderungen2");
+            this.PTAnforderungen2.Name = "PTAnforderungen2";
+            this.PTAnforderungen2.ReadOnly = true;
+            // 
+            // PTAnforderungen18
+            // 
+            resources.ApplyResources(this.PTAnforderungen18, "PTAnforderungen18");
+            this.PTAnforderungen18.Name = "PTAnforderungen18";
+            this.PTAnforderungen18.ReadOnly = true;
+            // 
+            // PTAnforderungen3
+            // 
+            resources.ApplyResources(this.PTAnforderungen3, "PTAnforderungen3");
+            this.PTAnforderungen3.Name = "PTAnforderungen3";
+            this.PTAnforderungen3.ReadOnly = true;
+            // 
+            // PTAnforderungen17
+            // 
+            resources.ApplyResources(this.PTAnforderungen17, "PTAnforderungen17");
+            this.PTAnforderungen17.Name = "PTAnforderungen17";
+            this.PTAnforderungen17.ReadOnly = true;
+            // 
+            // PTAnforderungen4
+            // 
+            resources.ApplyResources(this.PTAnforderungen4, "PTAnforderungen4");
+            this.PTAnforderungen4.Name = "PTAnforderungen4";
+            this.PTAnforderungen4.ReadOnly = true;
+            // 
+            // PTAnforderungen16
+            // 
+            resources.ApplyResources(this.PTAnforderungen16, "PTAnforderungen16");
+            this.PTAnforderungen16.Name = "PTAnforderungen16";
+            this.PTAnforderungen16.ReadOnly = true;
+            // 
+            // PTAnforderungen5
+            // 
+            resources.ApplyResources(this.PTAnforderungen5, "PTAnforderungen5");
+            this.PTAnforderungen5.Name = "PTAnforderungen5";
+            this.PTAnforderungen5.ReadOnly = true;
+            // 
+            // PTAnforderungen15
+            // 
+            resources.ApplyResources(this.PTAnforderungen15, "PTAnforderungen15");
+            this.PTAnforderungen15.Name = "PTAnforderungen15";
+            this.PTAnforderungen15.ReadOnly = true;
+            // 
+            // PTAnforderungen6
+            // 
+            resources.ApplyResources(this.PTAnforderungen6, "PTAnforderungen6");
+            this.PTAnforderungen6.Name = "PTAnforderungen6";
+            this.PTAnforderungen6.ReadOnly = true;
+            // 
+            // PTAnforderungen14
+            // 
+            resources.ApplyResources(this.PTAnforderungen14, "PTAnforderungen14");
+            this.PTAnforderungen14.Name = "PTAnforderungen14";
+            this.PTAnforderungen14.ReadOnly = true;
+            // 
+            // PTAnforderungen7
+            // 
+            resources.ApplyResources(this.PTAnforderungen7, "PTAnforderungen7");
+            this.PTAnforderungen7.Name = "PTAnforderungen7";
+            this.PTAnforderungen7.ReadOnly = true;
+            // 
+            // PTAnforderungen13
+            // 
+            resources.ApplyResources(this.PTAnforderungen13, "PTAnforderungen13");
+            this.PTAnforderungen13.Name = "PTAnforderungen13";
+            this.PTAnforderungen13.ReadOnly = true;
+            // 
+            // PTAnforderungen8
+            // 
+            resources.ApplyResources(this.PTAnforderungen8, "PTAnforderungen8");
+            this.PTAnforderungen8.Name = "PTAnforderungen8";
+            this.PTAnforderungen8.ReadOnly = true;
+            // 
+            // PTAnforderungen12
+            // 
+            resources.ApplyResources(this.PTAnforderungen12, "PTAnforderungen12");
+            this.PTAnforderungen12.Name = "PTAnforderungen12";
+            this.PTAnforderungen12.ReadOnly = true;
+            // 
+            // PTAnforderungen9
+            // 
+            resources.ApplyResources(this.PTAnforderungen9, "PTAnforderungen9");
+            this.PTAnforderungen9.Name = "PTAnforderungen9";
+            this.PTAnforderungen9.ReadOnly = true;
+            // 
+            // PTAnforderungen11
+            // 
+            resources.ApplyResources(this.PTAnforderungen11, "PTAnforderungen11");
+            this.PTAnforderungen11.Name = "PTAnforderungen11";
+            this.PTAnforderungen11.ReadOnly = true;
+            // 
+            // PTAnforderungen10
+            // 
+            resources.ApplyResources(this.PTAnforderungen10, "PTAnforderungen10");
+            this.PTAnforderungen10.Name = "PTAnforderungen10";
+            this.PTAnforderungen10.ReadOnly = true;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.PTSpezialisierung23);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung22);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung21);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung20);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung19);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung18);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung17);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung16);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung15);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung14);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung13);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung12);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung11);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung10);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung9);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung8);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung7);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung6);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung5);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung4);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung3);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung2);
+            this.groupBox8.Controls.Add(this.PTSpezialisierung1);
+            resources.ApplyResources(this.groupBox8, "groupBox8");
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.TabStop = false;
+            // 
+            // PTSpezialisierung18
+            // 
+            resources.ApplyResources(this.PTSpezialisierung18, "PTSpezialisierung18");
+            this.PTSpezialisierung18.Name = "PTSpezialisierung18";
+            this.PTSpezialisierung18.ReadOnly = true;
+            // 
+            // PTSpezialisierung17
+            // 
+            resources.ApplyResources(this.PTSpezialisierung17, "PTSpezialisierung17");
+            this.PTSpezialisierung17.Name = "PTSpezialisierung17";
+            this.PTSpezialisierung17.ReadOnly = true;
+            // 
+            // PTSpezialisierung16
+            // 
+            resources.ApplyResources(this.PTSpezialisierung16, "PTSpezialisierung16");
+            this.PTSpezialisierung16.Name = "PTSpezialisierung16";
+            this.PTSpezialisierung16.ReadOnly = true;
+            // 
+            // PTSpezialisierung15
+            // 
+            resources.ApplyResources(this.PTSpezialisierung15, "PTSpezialisierung15");
+            this.PTSpezialisierung15.Name = "PTSpezialisierung15";
+            this.PTSpezialisierung15.ReadOnly = true;
+            // 
+            // PTSpezialisierung14
+            // 
+            resources.ApplyResources(this.PTSpezialisierung14, "PTSpezialisierung14");
+            this.PTSpezialisierung14.Name = "PTSpezialisierung14";
+            this.PTSpezialisierung14.ReadOnly = true;
+            // 
+            // PTSpezialisierung13
+            // 
+            resources.ApplyResources(this.PTSpezialisierung13, "PTSpezialisierung13");
+            this.PTSpezialisierung13.Name = "PTSpezialisierung13";
+            this.PTSpezialisierung13.ReadOnly = true;
+            // 
+            // PTSpezialisierung12
+            // 
+            resources.ApplyResources(this.PTSpezialisierung12, "PTSpezialisierung12");
+            this.PTSpezialisierung12.Name = "PTSpezialisierung12";
+            this.PTSpezialisierung12.ReadOnly = true;
+            // 
+            // PTSpezialisierung11
+            // 
+            resources.ApplyResources(this.PTSpezialisierung11, "PTSpezialisierung11");
+            this.PTSpezialisierung11.Name = "PTSpezialisierung11";
+            this.PTSpezialisierung11.ReadOnly = true;
+            // 
+            // PTSpezialisierung10
+            // 
+            resources.ApplyResources(this.PTSpezialisierung10, "PTSpezialisierung10");
+            this.PTSpezialisierung10.Name = "PTSpezialisierung10";
+            this.PTSpezialisierung10.ReadOnly = true;
+            // 
+            // PTSpezialisierung9
+            // 
+            resources.ApplyResources(this.PTSpezialisierung9, "PTSpezialisierung9");
+            this.PTSpezialisierung9.Name = "PTSpezialisierung9";
+            this.PTSpezialisierung9.ReadOnly = true;
+            // 
+            // PTSpezialisierung8
+            // 
+            resources.ApplyResources(this.PTSpezialisierung8, "PTSpezialisierung8");
+            this.PTSpezialisierung8.Name = "PTSpezialisierung8";
+            this.PTSpezialisierung8.ReadOnly = true;
+            // 
+            // PTSpezialisierung7
+            // 
+            resources.ApplyResources(this.PTSpezialisierung7, "PTSpezialisierung7");
+            this.PTSpezialisierung7.Name = "PTSpezialisierung7";
+            this.PTSpezialisierung7.ReadOnly = true;
+            // 
+            // PTSpezialisierung6
+            // 
+            resources.ApplyResources(this.PTSpezialisierung6, "PTSpezialisierung6");
+            this.PTSpezialisierung6.Name = "PTSpezialisierung6";
+            this.PTSpezialisierung6.ReadOnly = true;
+            // 
+            // PTSpezialisierung5
+            // 
+            resources.ApplyResources(this.PTSpezialisierung5, "PTSpezialisierung5");
+            this.PTSpezialisierung5.Name = "PTSpezialisierung5";
+            this.PTSpezialisierung5.ReadOnly = true;
+            // 
+            // PTSpezialisierung4
+            // 
+            resources.ApplyResources(this.PTSpezialisierung4, "PTSpezialisierung4");
+            this.PTSpezialisierung4.Name = "PTSpezialisierung4";
+            this.PTSpezialisierung4.ReadOnly = true;
+            // 
+            // PTSpezialisierung3
+            // 
+            resources.ApplyResources(this.PTSpezialisierung3, "PTSpezialisierung3");
+            this.PTSpezialisierung3.Name = "PTSpezialisierung3";
+            this.PTSpezialisierung3.ReadOnly = true;
+            // 
+            // PTSpezialisierung2
+            // 
+            resources.ApplyResources(this.PTSpezialisierung2, "PTSpezialisierung2");
+            this.PTSpezialisierung2.Name = "PTSpezialisierung2";
+            this.PTSpezialisierung2.ReadOnly = true;
+            // 
+            // PTSpezialisierung1
+            // 
+            resources.ApplyResources(this.PTSpezialisierung1, "PTSpezialisierung1");
+            this.PTSpezialisierung1.Name = "PTSpezialisierung1";
+            this.PTSpezialisierung1.ReadOnly = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.PTBilliger23);
+            this.groupBox7.Controls.Add(this.PTBilliger21);
+            this.groupBox7.Controls.Add(this.PTBilliger22);
+            this.groupBox7.Controls.Add(this.PTBilliger20);
+            this.groupBox7.Controls.Add(this.PTBilliger19);
+            this.groupBox7.Controls.Add(this.PTBilliger17);
+            this.groupBox7.Controls.Add(this.PTBilliger18);
+            this.groupBox7.Controls.Add(this.PTBilliger16);
+            this.groupBox7.Controls.Add(this.PTBilliger12);
+            this.groupBox7.Controls.Add(this.PTBilliger13);
+            this.groupBox7.Controls.Add(this.PTBilliger14);
+            this.groupBox7.Controls.Add(this.PTBilliger15);
+            this.groupBox7.Controls.Add(this.PTBilliger11);
+            this.groupBox7.Controls.Add(this.PTBilliger7);
+            this.groupBox7.Controls.Add(this.PTBilliger8);
+            this.groupBox7.Controls.Add(this.PTBilliger9);
+            this.groupBox7.Controls.Add(this.PTBilliger10);
+            this.groupBox7.Controls.Add(this.PTBilliger6);
+            this.groupBox7.Controls.Add(this.PTBilliger2);
+            this.groupBox7.Controls.Add(this.PTBilliger3);
+            this.groupBox7.Controls.Add(this.PTBilliger4);
+            this.groupBox7.Controls.Add(this.PTBilliger5);
+            this.groupBox7.Controls.Add(this.PTBilliger1);
+            resources.ApplyResources(this.groupBox7, "groupBox7");
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.TabStop = false;
+            // 
+            // PTBilliger17
+            // 
+            resources.ApplyResources(this.PTBilliger17, "PTBilliger17");
+            this.PTBilliger17.Name = "PTBilliger17";
+            this.PTBilliger17.ReadOnly = true;
+            // 
+            // PTBilliger18
+            // 
+            resources.ApplyResources(this.PTBilliger18, "PTBilliger18");
+            this.PTBilliger18.Name = "PTBilliger18";
+            this.PTBilliger18.ReadOnly = true;
+            // 
+            // PTBilliger16
+            // 
+            resources.ApplyResources(this.PTBilliger16, "PTBilliger16");
+            this.PTBilliger16.Name = "PTBilliger16";
+            this.PTBilliger16.ReadOnly = true;
+            // 
+            // PTBilliger12
+            // 
+            resources.ApplyResources(this.PTBilliger12, "PTBilliger12");
+            this.PTBilliger12.Name = "PTBilliger12";
+            this.PTBilliger12.ReadOnly = true;
+            // 
+            // PTBilliger13
+            // 
+            resources.ApplyResources(this.PTBilliger13, "PTBilliger13");
+            this.PTBilliger13.Name = "PTBilliger13";
+            this.PTBilliger13.ReadOnly = true;
+            // 
+            // PTBilliger14
+            // 
+            resources.ApplyResources(this.PTBilliger14, "PTBilliger14");
+            this.PTBilliger14.Name = "PTBilliger14";
+            this.PTBilliger14.ReadOnly = true;
+            // 
+            // PTBilliger15
+            // 
+            resources.ApplyResources(this.PTBilliger15, "PTBilliger15");
+            this.PTBilliger15.Name = "PTBilliger15";
+            this.PTBilliger15.ReadOnly = true;
+            // 
+            // PTBilliger11
+            // 
+            resources.ApplyResources(this.PTBilliger11, "PTBilliger11");
+            this.PTBilliger11.Name = "PTBilliger11";
+            this.PTBilliger11.ReadOnly = true;
+            // 
+            // PTBilliger7
+            // 
+            resources.ApplyResources(this.PTBilliger7, "PTBilliger7");
+            this.PTBilliger7.Name = "PTBilliger7";
+            this.PTBilliger7.ReadOnly = true;
+            // 
+            // PTBilliger8
+            // 
+            resources.ApplyResources(this.PTBilliger8, "PTBilliger8");
+            this.PTBilliger8.Name = "PTBilliger8";
+            this.PTBilliger8.ReadOnly = true;
+            // 
+            // PTBilliger9
+            // 
+            resources.ApplyResources(this.PTBilliger9, "PTBilliger9");
+            this.PTBilliger9.Name = "PTBilliger9";
+            this.PTBilliger9.ReadOnly = true;
+            // 
+            // PTBilliger10
+            // 
+            resources.ApplyResources(this.PTBilliger10, "PTBilliger10");
+            this.PTBilliger10.Name = "PTBilliger10";
+            this.PTBilliger10.ReadOnly = true;
+            // 
+            // PTBilliger6
+            // 
+            resources.ApplyResources(this.PTBilliger6, "PTBilliger6");
+            this.PTBilliger6.Name = "PTBilliger6";
+            this.PTBilliger6.ReadOnly = true;
+            // 
+            // PTBilliger2
+            // 
+            resources.ApplyResources(this.PTBilliger2, "PTBilliger2");
+            this.PTBilliger2.Name = "PTBilliger2";
+            this.PTBilliger2.ReadOnly = true;
+            // 
+            // PTBilliger3
+            // 
+            resources.ApplyResources(this.PTBilliger3, "PTBilliger3");
+            this.PTBilliger3.Name = "PTBilliger3";
+            this.PTBilliger3.ReadOnly = true;
+            // 
+            // PTBilliger4
+            // 
+            resources.ApplyResources(this.PTBilliger4, "PTBilliger4");
+            this.PTBilliger4.Name = "PTBilliger4";
+            this.PTBilliger4.ReadOnly = true;
+            // 
+            // PTBilliger5
+            // 
+            resources.ApplyResources(this.PTBilliger5, "PTBilliger5");
+            this.PTBilliger5.Name = "PTBilliger5";
+            this.PTBilliger5.ReadOnly = true;
+            // 
+            // PTBilliger1
+            // 
+            resources.ApplyResources(this.PTBilliger1, "PTBilliger1");
+            this.PTBilliger1.Name = "PTBilliger1";
+            this.PTBilliger1.ReadOnly = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.PTBe23);
+            this.groupBox6.Controls.Add(this.PTBe21);
+            this.groupBox6.Controls.Add(this.PTBe22);
+            this.groupBox6.Controls.Add(this.PTBe20);
+            this.groupBox6.Controls.Add(this.PTBe19);
+            this.groupBox6.Controls.Add(this.PTBe17);
+            this.groupBox6.Controls.Add(this.PTBe18);
+            this.groupBox6.Controls.Add(this.PTBe16);
+            this.groupBox6.Controls.Add(this.PTBe12);
+            this.groupBox6.Controls.Add(this.PTBe13);
+            this.groupBox6.Controls.Add(this.PTBe14);
+            this.groupBox6.Controls.Add(this.PTBe15);
+            this.groupBox6.Controls.Add(this.PTBe11);
+            this.groupBox6.Controls.Add(this.PTBe7);
+            this.groupBox6.Controls.Add(this.PTBe8);
+            this.groupBox6.Controls.Add(this.PTBe9);
+            this.groupBox6.Controls.Add(this.PTBe10);
+            this.groupBox6.Controls.Add(this.PTBe6);
+            this.groupBox6.Controls.Add(this.PTBe2);
+            this.groupBox6.Controls.Add(this.PTBe3);
+            this.groupBox6.Controls.Add(this.PTBe4);
+            this.groupBox6.Controls.Add(this.PTBe5);
+            this.groupBox6.Controls.Add(this.PTBe1);
+            resources.ApplyResources(this.groupBox6, "groupBox6");
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.TabStop = false;
+            // 
+            // PTBe17
+            // 
+            resources.ApplyResources(this.PTBe17, "PTBe17");
+            this.PTBe17.Name = "PTBe17";
+            this.PTBe17.ReadOnly = true;
+            // 
+            // PTBe18
+            // 
+            resources.ApplyResources(this.PTBe18, "PTBe18");
+            this.PTBe18.Name = "PTBe18";
+            this.PTBe18.ReadOnly = true;
+            // 
+            // PTBe16
+            // 
+            resources.ApplyResources(this.PTBe16, "PTBe16");
+            this.PTBe16.Name = "PTBe16";
+            this.PTBe16.ReadOnly = true;
+            // 
+            // PTBe12
+            // 
+            resources.ApplyResources(this.PTBe12, "PTBe12");
+            this.PTBe12.Name = "PTBe12";
+            this.PTBe12.ReadOnly = true;
+            // 
+            // PTBe13
+            // 
+            resources.ApplyResources(this.PTBe13, "PTBe13");
+            this.PTBe13.Name = "PTBe13";
+            this.PTBe13.ReadOnly = true;
+            // 
+            // PTBe14
+            // 
+            resources.ApplyResources(this.PTBe14, "PTBe14");
+            this.PTBe14.Name = "PTBe14";
+            this.PTBe14.ReadOnly = true;
+            // 
+            // PTBe15
+            // 
+            resources.ApplyResources(this.PTBe15, "PTBe15");
+            this.PTBe15.Name = "PTBe15";
+            this.PTBe15.ReadOnly = true;
+            // 
+            // PTBe11
+            // 
+            resources.ApplyResources(this.PTBe11, "PTBe11");
+            this.PTBe11.Name = "PTBe11";
+            this.PTBe11.ReadOnly = true;
+            // 
+            // PTBe7
+            // 
+            resources.ApplyResources(this.PTBe7, "PTBe7");
+            this.PTBe7.Name = "PTBe7";
+            this.PTBe7.ReadOnly = true;
+            // 
+            // PTBe8
+            // 
+            resources.ApplyResources(this.PTBe8, "PTBe8");
+            this.PTBe8.Name = "PTBe8";
+            this.PTBe8.ReadOnly = true;
+            // 
+            // PTBe9
+            // 
+            resources.ApplyResources(this.PTBe9, "PTBe9");
+            this.PTBe9.Name = "PTBe9";
+            this.PTBe9.ReadOnly = true;
+            // 
+            // PTBe10
+            // 
+            resources.ApplyResources(this.PTBe10, "PTBe10");
+            this.PTBe10.Name = "PTBe10";
+            this.PTBe10.ReadOnly = true;
+            // 
+            // PTBe6
+            // 
+            resources.ApplyResources(this.PTBe6, "PTBe6");
+            this.PTBe6.Name = "PTBe6";
+            this.PTBe6.ReadOnly = true;
+            // 
+            // PTBe2
+            // 
+            resources.ApplyResources(this.PTBe2, "PTBe2");
+            this.PTBe2.Name = "PTBe2";
+            this.PTBe2.ReadOnly = true;
+            // 
+            // PTBe3
+            // 
+            resources.ApplyResources(this.PTBe3, "PTBe3");
+            this.PTBe3.Name = "PTBe3";
+            this.PTBe3.ReadOnly = true;
+            // 
+            // PTBe4
+            // 
+            resources.ApplyResources(this.PTBe4, "PTBe4");
+            this.PTBe4.Name = "PTBe4";
+            this.PTBe4.ReadOnly = true;
+            // 
+            // PTBe5
+            // 
+            resources.ApplyResources(this.PTBe5, "PTBe5");
+            this.PTBe5.Name = "PTBe5";
+            this.PTBe5.ReadOnly = true;
+            // 
+            // PTBe1
+            // 
+            resources.ApplyResources(this.PTBe1, "PTBe1");
+            this.PTBe1.Name = "PTBe1";
+            this.PTBe1.ReadOnly = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.PTTaw23);
+            this.groupBox5.Controls.Add(this.PTTaw22);
+            this.groupBox5.Controls.Add(this.PTTaw21);
+            this.groupBox5.Controls.Add(this.PTTaw20);
+            this.groupBox5.Controls.Add(this.PTTaw19);
+            this.groupBox5.Controls.Add(this.PTTaw18);
+            this.groupBox5.Controls.Add(this.PTTaw17);
+            this.groupBox5.Controls.Add(this.PTTaw16);
+            this.groupBox5.Controls.Add(this.PTTaw15);
+            this.groupBox5.Controls.Add(this.PTTaw14);
+            this.groupBox5.Controls.Add(this.PTTaw13);
+            this.groupBox5.Controls.Add(this.PTTaw12);
+            this.groupBox5.Controls.Add(this.PTTaw11);
+            this.groupBox5.Controls.Add(this.PTTaw10);
+            this.groupBox5.Controls.Add(this.PTTaw9);
+            this.groupBox5.Controls.Add(this.PTTaw8);
+            this.groupBox5.Controls.Add(this.PTTaw7);
+            this.groupBox5.Controls.Add(this.PTTaw6);
+            this.groupBox5.Controls.Add(this.PTTaw5);
+            this.groupBox5.Controls.Add(this.PTTaw4);
+            this.groupBox5.Controls.Add(this.PTTaw3);
+            this.groupBox5.Controls.Add(this.PTTaw2);
+            this.groupBox5.Controls.Add(this.PTTaw1);
+            resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.TabStop = false;
+            this.groupBox5.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw18
+            // 
+            resources.ApplyResources(this.PTTaw18, "PTTaw18");
+            this.PTTaw18.Name = "PTTaw18";
+            this.PTTaw18.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw17
+            // 
+            resources.ApplyResources(this.PTTaw17, "PTTaw17");
+            this.PTTaw17.Name = "PTTaw17";
+            this.PTTaw17.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw16
+            // 
+            resources.ApplyResources(this.PTTaw16, "PTTaw16");
+            this.PTTaw16.Name = "PTTaw16";
+            this.PTTaw16.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw15
+            // 
+            resources.ApplyResources(this.PTTaw15, "PTTaw15");
+            this.PTTaw15.Name = "PTTaw15";
+            this.PTTaw15.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw14
+            // 
+            resources.ApplyResources(this.PTTaw14, "PTTaw14");
+            this.PTTaw14.Name = "PTTaw14";
+            this.PTTaw14.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw13
+            // 
+            resources.ApplyResources(this.PTTaw13, "PTTaw13");
+            this.PTTaw13.Name = "PTTaw13";
+            this.PTTaw13.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw12
+            // 
+            resources.ApplyResources(this.PTTaw12, "PTTaw12");
+            this.PTTaw12.Name = "PTTaw12";
+            this.PTTaw12.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw11
+            // 
+            resources.ApplyResources(this.PTTaw11, "PTTaw11");
+            this.PTTaw11.Name = "PTTaw11";
+            this.PTTaw11.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw10
+            // 
+            resources.ApplyResources(this.PTTaw10, "PTTaw10");
+            this.PTTaw10.Name = "PTTaw10";
+            this.PTTaw10.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw9
+            // 
+            resources.ApplyResources(this.PTTaw9, "PTTaw9");
+            this.PTTaw9.Name = "PTTaw9";
+            this.PTTaw9.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw8
+            // 
+            resources.ApplyResources(this.PTTaw8, "PTTaw8");
+            this.PTTaw8.Name = "PTTaw8";
+            this.PTTaw8.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw7
+            // 
+            resources.ApplyResources(this.PTTaw7, "PTTaw7");
+            this.PTTaw7.Name = "PTTaw7";
+            this.PTTaw7.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw6
+            // 
+            resources.ApplyResources(this.PTTaw6, "PTTaw6");
+            this.PTTaw6.Name = "PTTaw6";
+            this.PTTaw6.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw5
+            // 
+            resources.ApplyResources(this.PTTaw5, "PTTaw5");
+            this.PTTaw5.Name = "PTTaw5";
+            this.PTTaw5.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw4
+            // 
+            resources.ApplyResources(this.PTTaw4, "PTTaw4");
+            this.PTTaw4.Name = "PTTaw4";
+            this.PTTaw4.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw3
+            // 
+            resources.ApplyResources(this.PTTaw3, "PTTaw3");
+            this.PTTaw3.Name = "PTTaw3";
+            this.PTTaw3.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw2
+            // 
+            resources.ApplyResources(this.PTTaw2, "PTTaw2");
+            this.PTTaw2.Name = "PTTaw2";
+            this.PTTaw2.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw1
+            // 
+            resources.ApplyResources(this.PTTaw1, "PTTaw1");
+            this.PTTaw1.Name = "PTTaw1";
+            this.PTTaw1.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.PTWürfe23);
+            this.groupBox4.Controls.Add(this.PTProbe23);
+            this.groupBox4.Controls.Add(this.PTWürfe21);
+            this.groupBox4.Controls.Add(this.PTWürfe22);
+            this.groupBox4.Controls.Add(this.PTWürfe20);
+            this.groupBox4.Controls.Add(this.PTWürfe19);
+            this.groupBox4.Controls.Add(this.PTProbe21);
+            this.groupBox4.Controls.Add(this.PTProbe22);
+            this.groupBox4.Controls.Add(this.PTProbe20);
+            this.groupBox4.Controls.Add(this.PTProbe19);
+            this.groupBox4.Controls.Add(this.PTWürfe17);
+            this.groupBox4.Controls.Add(this.PTWürfe18);
+            this.groupBox4.Controls.Add(this.PTWürfe16);
+            this.groupBox4.Controls.Add(this.PTWürfe12);
+            this.groupBox4.Controls.Add(this.PTWürfe13);
+            this.groupBox4.Controls.Add(this.PTWürfe15);
+            this.groupBox4.Controls.Add(this.PTWürfe14);
+            this.groupBox4.Controls.Add(this.PTWürfe11);
+            this.groupBox4.Controls.Add(this.PTWürfe7);
+            this.groupBox4.Controls.Add(this.PTWürfe8);
+            this.groupBox4.Controls.Add(this.PTWürfe10);
+            this.groupBox4.Controls.Add(this.PTWürfe9);
+            this.groupBox4.Controls.Add(this.PTWürfe6);
+            this.groupBox4.Controls.Add(this.PTWürfe2);
+            this.groupBox4.Controls.Add(this.PTWürfe3);
+            this.groupBox4.Controls.Add(this.PTWürfe5);
+            this.groupBox4.Controls.Add(this.PTWürfe4);
+            this.groupBox4.Controls.Add(this.PTWürfe1);
+            this.groupBox4.Controls.Add(this.PTProbe17);
+            this.groupBox4.Controls.Add(this.PTProbe18);
+            this.groupBox4.Controls.Add(this.PTProbe16);
+            this.groupBox4.Controls.Add(this.PTProbe12);
+            this.groupBox4.Controls.Add(this.PTProbe13);
+            this.groupBox4.Controls.Add(this.PTProbe15);
+            this.groupBox4.Controls.Add(this.PTProbe14);
+            this.groupBox4.Controls.Add(this.PTProbe11);
+            this.groupBox4.Controls.Add(this.PTProbe7);
+            this.groupBox4.Controls.Add(this.PTProbe8);
+            this.groupBox4.Controls.Add(this.PTProbe10);
+            this.groupBox4.Controls.Add(this.PTProbe9);
+            this.groupBox4.Controls.Add(this.PTProbe6);
+            this.groupBox4.Controls.Add(this.PTProbe2);
+            this.groupBox4.Controls.Add(this.PTProbe3);
+            this.groupBox4.Controls.Add(this.PTProbe5);
+            this.groupBox4.Controls.Add(this.PTProbe4);
+            this.groupBox4.Controls.Add(this.PTProbe1);
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            // 
+            // PTWürfe17
+            // 
+            resources.ApplyResources(this.PTWürfe17, "PTWürfe17");
+            this.PTWürfe17.Name = "PTWürfe17";
+            this.PTWürfe17.ReadOnly = true;
+            // 
+            // PTWürfe18
+            // 
+            resources.ApplyResources(this.PTWürfe18, "PTWürfe18");
+            this.PTWürfe18.Name = "PTWürfe18";
+            this.PTWürfe18.ReadOnly = true;
+            // 
+            // PTWürfe16
+            // 
+            resources.ApplyResources(this.PTWürfe16, "PTWürfe16");
+            this.PTWürfe16.Name = "PTWürfe16";
+            this.PTWürfe16.ReadOnly = true;
+            // 
+            // PTWürfe12
+            // 
+            resources.ApplyResources(this.PTWürfe12, "PTWürfe12");
+            this.PTWürfe12.Name = "PTWürfe12";
+            this.PTWürfe12.ReadOnly = true;
+            // 
+            // PTWürfe13
+            // 
+            resources.ApplyResources(this.PTWürfe13, "PTWürfe13");
+            this.PTWürfe13.Name = "PTWürfe13";
+            this.PTWürfe13.ReadOnly = true;
+            // 
+            // PTWürfe15
+            // 
+            resources.ApplyResources(this.PTWürfe15, "PTWürfe15");
+            this.PTWürfe15.Name = "PTWürfe15";
+            this.PTWürfe15.ReadOnly = true;
+            // 
+            // PTWürfe14
+            // 
+            resources.ApplyResources(this.PTWürfe14, "PTWürfe14");
+            this.PTWürfe14.Name = "PTWürfe14";
+            this.PTWürfe14.ReadOnly = true;
+            // 
+            // PTWürfe11
+            // 
+            resources.ApplyResources(this.PTWürfe11, "PTWürfe11");
+            this.PTWürfe11.Name = "PTWürfe11";
+            this.PTWürfe11.ReadOnly = true;
+            // 
+            // PTWürfe7
+            // 
+            resources.ApplyResources(this.PTWürfe7, "PTWürfe7");
+            this.PTWürfe7.Name = "PTWürfe7";
+            this.PTWürfe7.ReadOnly = true;
+            // 
+            // PTWürfe8
+            // 
+            resources.ApplyResources(this.PTWürfe8, "PTWürfe8");
+            this.PTWürfe8.Name = "PTWürfe8";
+            this.PTWürfe8.ReadOnly = true;
+            // 
+            // PTWürfe10
+            // 
+            resources.ApplyResources(this.PTWürfe10, "PTWürfe10");
+            this.PTWürfe10.Name = "PTWürfe10";
+            this.PTWürfe10.ReadOnly = true;
+            // 
+            // PTWürfe9
+            // 
+            resources.ApplyResources(this.PTWürfe9, "PTWürfe9");
+            this.PTWürfe9.Name = "PTWürfe9";
+            this.PTWürfe9.ReadOnly = true;
+            // 
+            // PTWürfe6
+            // 
+            resources.ApplyResources(this.PTWürfe6, "PTWürfe6");
+            this.PTWürfe6.Name = "PTWürfe6";
+            this.PTWürfe6.ReadOnly = true;
+            // 
+            // PTWürfe2
+            // 
+            resources.ApplyResources(this.PTWürfe2, "PTWürfe2");
+            this.PTWürfe2.Name = "PTWürfe2";
+            this.PTWürfe2.ReadOnly = true;
+            // 
+            // PTWürfe3
+            // 
+            resources.ApplyResources(this.PTWürfe3, "PTWürfe3");
+            this.PTWürfe3.Name = "PTWürfe3";
+            this.PTWürfe3.ReadOnly = true;
+            // 
+            // PTWürfe5
+            // 
+            resources.ApplyResources(this.PTWürfe5, "PTWürfe5");
+            this.PTWürfe5.Name = "PTWürfe5";
+            this.PTWürfe5.ReadOnly = true;
+            // 
+            // PTWürfe4
+            // 
+            resources.ApplyResources(this.PTWürfe4, "PTWürfe4");
+            this.PTWürfe4.Name = "PTWürfe4";
+            this.PTWürfe4.ReadOnly = true;
+            // 
+            // PTWürfe1
+            // 
+            resources.ApplyResources(this.PTWürfe1, "PTWürfe1");
+            this.PTWürfe1.Name = "PTWürfe1";
+            this.PTWürfe1.ReadOnly = true;
+            // 
+            // PTProbe17
+            // 
+            resources.ApplyResources(this.PTProbe17, "PTProbe17");
+            this.PTProbe17.Name = "PTProbe17";
+            this.PTProbe17.ReadOnly = true;
+            // 
+            // PTProbe18
+            // 
+            resources.ApplyResources(this.PTProbe18, "PTProbe18");
+            this.PTProbe18.Name = "PTProbe18";
+            this.PTProbe18.ReadOnly = true;
+            // 
+            // PTProbe16
+            // 
+            resources.ApplyResources(this.PTProbe16, "PTProbe16");
+            this.PTProbe16.Name = "PTProbe16";
+            this.PTProbe16.ReadOnly = true;
+            // 
+            // PTProbe12
+            // 
+            resources.ApplyResources(this.PTProbe12, "PTProbe12");
+            this.PTProbe12.Name = "PTProbe12";
+            this.PTProbe12.ReadOnly = true;
+            // 
+            // PTProbe13
+            // 
+            resources.ApplyResources(this.PTProbe13, "PTProbe13");
+            this.PTProbe13.Name = "PTProbe13";
+            this.PTProbe13.ReadOnly = true;
+            // 
+            // PTProbe15
+            // 
+            resources.ApplyResources(this.PTProbe15, "PTProbe15");
+            this.PTProbe15.Name = "PTProbe15";
+            this.PTProbe15.ReadOnly = true;
+            // 
+            // PTProbe14
+            // 
+            resources.ApplyResources(this.PTProbe14, "PTProbe14");
+            this.PTProbe14.Name = "PTProbe14";
+            this.PTProbe14.ReadOnly = true;
+            // 
+            // PTProbe11
+            // 
+            resources.ApplyResources(this.PTProbe11, "PTProbe11");
+            this.PTProbe11.Name = "PTProbe11";
+            this.PTProbe11.ReadOnly = true;
+            // 
+            // PTProbe7
+            // 
+            resources.ApplyResources(this.PTProbe7, "PTProbe7");
+            this.PTProbe7.Name = "PTProbe7";
+            this.PTProbe7.ReadOnly = true;
+            // 
+            // PTProbe8
+            // 
+            resources.ApplyResources(this.PTProbe8, "PTProbe8");
+            this.PTProbe8.Name = "PTProbe8";
+            this.PTProbe8.ReadOnly = true;
+            // 
+            // PTProbe10
+            // 
+            resources.ApplyResources(this.PTProbe10, "PTProbe10");
+            this.PTProbe10.Name = "PTProbe10";
+            this.PTProbe10.ReadOnly = true;
+            // 
+            // PTProbe9
+            // 
+            resources.ApplyResources(this.PTProbe9, "PTProbe9");
+            this.PTProbe9.Name = "PTProbe9";
+            this.PTProbe9.ReadOnly = true;
+            // 
+            // PTProbe6
+            // 
+            resources.ApplyResources(this.PTProbe6, "PTProbe6");
+            this.PTProbe6.Name = "PTProbe6";
+            this.PTProbe6.ReadOnly = true;
+            // 
+            // PTProbe2
+            // 
+            resources.ApplyResources(this.PTProbe2, "PTProbe2");
+            this.PTProbe2.Name = "PTProbe2";
+            this.PTProbe2.ReadOnly = true;
+            // 
+            // PTProbe3
+            // 
+            resources.ApplyResources(this.PTProbe3, "PTProbe3");
+            this.PTProbe3.Name = "PTProbe3";
+            this.PTProbe3.ReadOnly = true;
+            // 
+            // PTProbe5
+            // 
+            resources.ApplyResources(this.PTProbe5, "PTProbe5");
+            this.PTProbe5.Name = "PTProbe5";
+            this.PTProbe5.ReadOnly = true;
+            // 
+            // PTProbe4
+            // 
+            resources.ApplyResources(this.PTProbe4, "PTProbe4");
+            this.PTProbe4.Name = "PTProbe4";
+            this.PTProbe4.ReadOnly = true;
+            // 
+            // PTProbe1
+            // 
+            resources.ApplyResources(this.PTProbe1, "PTProbe1");
+            this.PTProbe1.Name = "PTProbe1";
+            this.PTProbe1.ReadOnly = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.PTName23);
+            this.groupBox3.Controls.Add(this.PTName22);
+            this.groupBox3.Controls.Add(this.PTName21);
+            this.groupBox3.Controls.Add(this.PTName20);
+            this.groupBox3.Controls.Add(this.PTName19);
+            this.groupBox3.Controls.Add(this.PTName18);
+            this.groupBox3.Controls.Add(this.PTName17);
+            this.groupBox3.Controls.Add(this.PTName16);
+            this.groupBox3.Controls.Add(this.PTName15);
+            this.groupBox3.Controls.Add(this.PTName14);
+            this.groupBox3.Controls.Add(this.PTName13);
+            this.groupBox3.Controls.Add(this.PTName12);
+            this.groupBox3.Controls.Add(this.PTName11);
+            this.groupBox3.Controls.Add(this.PTName10);
+            this.groupBox3.Controls.Add(this.PTName9);
+            this.groupBox3.Controls.Add(this.PTName8);
+            this.groupBox3.Controls.Add(this.PTName7);
+            this.groupBox3.Controls.Add(this.PTName6);
+            this.groupBox3.Controls.Add(this.PTName5);
+            this.groupBox3.Controls.Add(this.PTName4);
+            this.groupBox3.Controls.Add(this.PTName3);
+            this.groupBox3.Controls.Add(this.PTName2);
+            this.groupBox3.Controls.Add(this.PTName1);
+            resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.TabStop = false;
+            // 
+            // PTName18
+            // 
+            resources.ApplyResources(this.PTName18, "PTName18");
+            this.PTName18.Name = "PTName18";
+            // 
+            // PTName17
+            // 
+            resources.ApplyResources(this.PTName17, "PTName17");
+            this.PTName17.Name = "PTName17";
+            // 
+            // PTName16
+            // 
+            resources.ApplyResources(this.PTName16, "PTName16");
+            this.PTName16.Name = "PTName16";
+            // 
+            // PTName15
+            // 
+            resources.ApplyResources(this.PTName15, "PTName15");
+            this.PTName15.Name = "PTName15";
+            // 
+            // PTName14
+            // 
+            resources.ApplyResources(this.PTName14, "PTName14");
+            this.PTName14.Name = "PTName14";
+            // 
+            // PTName13
+            // 
+            resources.ApplyResources(this.PTName13, "PTName13");
+            this.PTName13.Name = "PTName13";
+            // 
+            // PTName12
+            // 
+            resources.ApplyResources(this.PTName12, "PTName12");
+            this.PTName12.Name = "PTName12";
+            // 
+            // PTName11
+            // 
+            resources.ApplyResources(this.PTName11, "PTName11");
+            this.PTName11.Name = "PTName11";
+            // 
+            // PTName10
+            // 
+            resources.ApplyResources(this.PTName10, "PTName10");
+            this.PTName10.Name = "PTName10";
+            // 
+            // PTName9
+            // 
+            resources.ApplyResources(this.PTName9, "PTName9");
+            this.PTName9.Name = "PTName9";
+            // 
+            // PTName8
+            // 
+            resources.ApplyResources(this.PTName8, "PTName8");
+            this.PTName8.Name = "PTName8";
+            // 
+            // PTName7
+            // 
+            resources.ApplyResources(this.PTName7, "PTName7");
+            this.PTName7.Name = "PTName7";
+            // 
+            // PTName6
+            // 
+            resources.ApplyResources(this.PTName6, "PTName6");
+            this.PTName6.Name = "PTName6";
+            // 
+            // PTName5
+            // 
+            resources.ApplyResources(this.PTName5, "PTName5");
+            this.PTName5.Name = "PTName5";
+            // 
+            // PTName4
+            // 
+            resources.ApplyResources(this.PTName4, "PTName4");
+            this.PTName4.Name = "PTName4";
+            // 
+            // PTName3
+            // 
+            resources.ApplyResources(this.PTName3, "PTName3");
+            this.PTName3.Name = "PTName3";
+            // 
+            // PTName2
+            // 
+            resources.ApplyResources(this.PTName2, "PTName2");
+            this.PTName2.Name = "PTName2";
+            // 
+            // PTName1
+            // 
+            resources.ApplyResources(this.PTName1, "PTName1");
+            this.PTName1.Name = "PTName1";
+            // 
+            // socialTalents
+            // 
+            this.socialTalents.BackColor = System.Drawing.SystemColors.Control;
+            this.socialTalents.BackgroundImage = global::DSA_Project.Properties.Resources.aventurien_politisch;
+            resources.ApplyResources(this.socialTalents, "socialTalents");
+            this.socialTalents.Name = "socialTalents";
+            // 
+            // radioKnowldageTalente
+            // 
+            resources.ApplyResources(this.radioKnowldageTalente, "radioKnowldageTalente");
+            this.radioKnowldageTalente.Name = "radioKnowldageTalente";
+            this.radioKnowldageTalente.UseVisualStyleBackColor = true;
+            this.radioKnowldageTalente.CheckedChanged += new System.EventHandler(this.radioKnowldageTalente_CheckedChanged);
+            // 
+            // PTName22
+            // 
+            resources.ApplyResources(this.PTName22, "PTName22");
+            this.PTName22.Name = "PTName22";
+            // 
+            // PTName21
+            // 
+            resources.ApplyResources(this.PTName21, "PTName21");
+            this.PTName21.Name = "PTName21";
+            // 
+            // PTName20
+            // 
+            resources.ApplyResources(this.PTName20, "PTName20");
+            this.PTName20.Name = "PTName20";
+            // 
+            // PTName19
+            // 
+            resources.ApplyResources(this.PTName19, "PTName19");
+            this.PTName19.Name = "PTName19";
+            // 
+            // PTWürfe21
+            // 
+            resources.ApplyResources(this.PTWürfe21, "PTWürfe21");
+            this.PTWürfe21.Name = "PTWürfe21";
+            this.PTWürfe21.ReadOnly = true;
+            // 
+            // PTWürfe22
+            // 
+            resources.ApplyResources(this.PTWürfe22, "PTWürfe22");
+            this.PTWürfe22.Name = "PTWürfe22";
+            this.PTWürfe22.ReadOnly = true;
+            // 
+            // PTWürfe20
+            // 
+            resources.ApplyResources(this.PTWürfe20, "PTWürfe20");
+            this.PTWürfe20.Name = "PTWürfe20";
+            this.PTWürfe20.ReadOnly = true;
+            // 
+            // PTWürfe19
+            // 
+            resources.ApplyResources(this.PTWürfe19, "PTWürfe19");
+            this.PTWürfe19.Name = "PTWürfe19";
+            this.PTWürfe19.ReadOnly = true;
+            // 
+            // PTProbe21
+            // 
+            resources.ApplyResources(this.PTProbe21, "PTProbe21");
+            this.PTProbe21.Name = "PTProbe21";
+            this.PTProbe21.ReadOnly = true;
+            // 
+            // PTProbe22
+            // 
+            resources.ApplyResources(this.PTProbe22, "PTProbe22");
+            this.PTProbe22.Name = "PTProbe22";
+            this.PTProbe22.ReadOnly = true;
+            // 
+            // PTProbe20
+            // 
+            resources.ApplyResources(this.PTProbe20, "PTProbe20");
+            this.PTProbe20.Name = "PTProbe20";
+            this.PTProbe20.ReadOnly = true;
+            // 
+            // PTProbe19
+            // 
+            resources.ApplyResources(this.PTProbe19, "PTProbe19");
+            this.PTProbe19.Name = "PTProbe19";
+            this.PTProbe19.ReadOnly = true;
+            // 
+            // PTTaw22
+            // 
+            resources.ApplyResources(this.PTTaw22, "PTTaw22");
+            this.PTTaw22.Name = "PTTaw22";
+            this.PTTaw22.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw21
+            // 
+            resources.ApplyResources(this.PTTaw21, "PTTaw21");
+            this.PTTaw21.Name = "PTTaw21";
+            this.PTTaw21.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw20
+            // 
+            resources.ApplyResources(this.PTTaw20, "PTTaw20");
+            this.PTTaw20.Name = "PTTaw20";
+            this.PTTaw20.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw19
+            // 
+            resources.ApplyResources(this.PTTaw19, "PTTaw19");
+            this.PTTaw19.Name = "PTTaw19";
+            this.PTTaw19.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTBe21
+            // 
+            resources.ApplyResources(this.PTBe21, "PTBe21");
+            this.PTBe21.Name = "PTBe21";
+            this.PTBe21.ReadOnly = true;
+            // 
+            // PTBe22
+            // 
+            resources.ApplyResources(this.PTBe22, "PTBe22");
+            this.PTBe22.Name = "PTBe22";
+            this.PTBe22.ReadOnly = true;
+            // 
+            // PTBe20
+            // 
+            resources.ApplyResources(this.PTBe20, "PTBe20");
+            this.PTBe20.Name = "PTBe20";
+            this.PTBe20.ReadOnly = true;
+            // 
+            // PTBe19
+            // 
+            resources.ApplyResources(this.PTBe19, "PTBe19");
+            this.PTBe19.Name = "PTBe19";
+            this.PTBe19.ReadOnly = true;
+            // 
+            // PTBilliger21
+            // 
+            resources.ApplyResources(this.PTBilliger21, "PTBilliger21");
+            this.PTBilliger21.Name = "PTBilliger21";
+            this.PTBilliger21.ReadOnly = true;
+            // 
+            // PTBilliger22
+            // 
+            resources.ApplyResources(this.PTBilliger22, "PTBilliger22");
+            this.PTBilliger22.Name = "PTBilliger22";
+            this.PTBilliger22.ReadOnly = true;
+            // 
+            // PTBilliger20
+            // 
+            resources.ApplyResources(this.PTBilliger20, "PTBilliger20");
+            this.PTBilliger20.Name = "PTBilliger20";
+            this.PTBilliger20.ReadOnly = true;
+            // 
+            // PTBilliger19
+            // 
+            resources.ApplyResources(this.PTBilliger19, "PTBilliger19");
+            this.PTBilliger19.Name = "PTBilliger19";
+            this.PTBilliger19.ReadOnly = true;
+            // 
+            // PTSpezialisierung22
+            // 
+            resources.ApplyResources(this.PTSpezialisierung22, "PTSpezialisierung22");
+            this.PTSpezialisierung22.Name = "PTSpezialisierung22";
+            this.PTSpezialisierung22.ReadOnly = true;
+            // 
+            // PTSpezialisierung21
+            // 
+            resources.ApplyResources(this.PTSpezialisierung21, "PTSpezialisierung21");
+            this.PTSpezialisierung21.Name = "PTSpezialisierung21";
+            this.PTSpezialisierung21.ReadOnly = true;
+            // 
+            // PTSpezialisierung20
+            // 
+            resources.ApplyResources(this.PTSpezialisierung20, "PTSpezialisierung20");
+            this.PTSpezialisierung20.Name = "PTSpezialisierung20";
+            this.PTSpezialisierung20.ReadOnly = true;
+            // 
+            // PTSpezialisierung19
+            // 
+            resources.ApplyResources(this.PTSpezialisierung19, "PTSpezialisierung19");
+            this.PTSpezialisierung19.Name = "PTSpezialisierung19";
+            this.PTSpezialisierung19.ReadOnly = true;
+            // 
+            // PTAnforderungen22
+            // 
+            resources.ApplyResources(this.PTAnforderungen22, "PTAnforderungen22");
+            this.PTAnforderungen22.Name = "PTAnforderungen22";
+            this.PTAnforderungen22.ReadOnly = true;
+            // 
+            // PTAnforderungen21
+            // 
+            resources.ApplyResources(this.PTAnforderungen21, "PTAnforderungen21");
+            this.PTAnforderungen21.Name = "PTAnforderungen21";
+            this.PTAnforderungen21.ReadOnly = true;
+            // 
+            // PTAnforderungen20
+            // 
+            resources.ApplyResources(this.PTAnforderungen20, "PTAnforderungen20");
+            this.PTAnforderungen20.Name = "PTAnforderungen20";
+            this.PTAnforderungen20.ReadOnly = true;
+            // 
+            // PTAnforderungen19
+            // 
+            resources.ApplyResources(this.PTAnforderungen19, "PTAnforderungen19");
+            this.PTAnforderungen19.Name = "PTAnforderungen19";
+            this.PTAnforderungen19.ReadOnly = true;
+            // 
+            // PTAbleiten22
+            // 
+            resources.ApplyResources(this.PTAbleiten22, "PTAbleiten22");
+            this.PTAbleiten22.Name = "PTAbleiten22";
+            this.PTAbleiten22.ReadOnly = true;
+            // 
+            // PTAbleiten21
+            // 
+            resources.ApplyResources(this.PTAbleiten21, "PTAbleiten21");
+            this.PTAbleiten21.Name = "PTAbleiten21";
+            this.PTAbleiten21.ReadOnly = true;
+            // 
+            // PTAbleiten20
+            // 
+            resources.ApplyResources(this.PTAbleiten20, "PTAbleiten20");
+            this.PTAbleiten20.Name = "PTAbleiten20";
+            this.PTAbleiten20.ReadOnly = true;
+            // 
+            // PTAbleiten19
+            // 
+            resources.ApplyResources(this.PTAbleiten19, "PTAbleiten19");
+            this.PTAbleiten19.Name = "PTAbleiten19";
+            this.PTAbleiten19.ReadOnly = true;
+            // 
+            // PTWürfe23
+            // 
+            resources.ApplyResources(this.PTWürfe23, "PTWürfe23");
+            this.PTWürfe23.Name = "PTWürfe23";
+            this.PTWürfe23.ReadOnly = true;
+            // 
+            // PTProbe23
+            // 
+            resources.ApplyResources(this.PTProbe23, "PTProbe23");
+            this.PTProbe23.Name = "PTProbe23";
+            this.PTProbe23.ReadOnly = true;
+            // 
+            // PTTaw23
+            // 
+            resources.ApplyResources(this.PTTaw23, "PTTaw23");
+            this.PTTaw23.Name = "PTTaw23";
+            this.PTTaw23.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTBe23
+            // 
+            resources.ApplyResources(this.PTBe23, "PTBe23");
+            this.PTBe23.Name = "PTBe23";
+            this.PTBe23.ReadOnly = true;
+            // 
+            // PTBilliger23
+            // 
+            resources.ApplyResources(this.PTBilliger23, "PTBilliger23");
+            this.PTBilliger23.Name = "PTBilliger23";
+            this.PTBilliger23.ReadOnly = true;
+            // 
+            // PTSpezialisierung23
+            // 
+            resources.ApplyResources(this.PTSpezialisierung23, "PTSpezialisierung23");
+            this.PTSpezialisierung23.Name = "PTSpezialisierung23";
+            this.PTSpezialisierung23.ReadOnly = true;
+            // 
+            // PTAnforderungen23
+            // 
+            resources.ApplyResources(this.PTAnforderungen23, "PTAnforderungen23");
+            this.PTAnforderungen23.Name = "PTAnforderungen23";
+            this.PTAnforderungen23.ReadOnly = true;
+            // 
+            // PTAbleiten23
+            // 
+            resources.ApplyResources(this.PTAbleiten23, "PTAbleiten23");
+            this.PTAbleiten23.Name = "PTAbleiten23";
+            this.PTAbleiten23.ReadOnly = true;
+            // 
+            // PTName23
+            // 
+            resources.ApplyResources(this.PTName23, "PTName23");
+            this.PTName23.Name = "PTName23";
+            // 
+            // DSA
+            // 
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1507, 927);
-            this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.TabControl);
+            this.Name = "DSA";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.tabControl1.ResumeLayout(false);
+            this.TabControl.ResumeLayout(false);
             this.Heldenbrief.ResumeLayout(false);
             this.Heldenbrief.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl TabControl;
         private System.Windows.Forms.TabPage Heldenbrief;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label30;
@@ -3816,36 +4473,30 @@
         private System.Windows.Forms.TextBox txtLebensenergieVOR;
         private System.Windows.Forms.TextBox txtMagieresistenzERG;
         private System.Windows.Forms.TextBox txtMagieresistenzMALI;
-        private System.Windows.Forms.TextBox txtMagieresistenzMOD;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.TextBox txtMagieresistenzPERM;
         private System.Windows.Forms.TextBox txtMagieresistenzVOR;
         private System.Windows.Forms.TextBox txtKarmaenergieERG;
         private System.Windows.Forms.TextBox txtKarmaenergieMALI;
-        private System.Windows.Forms.TextBox txtKarmaenergieMOD;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.TextBox txtKarmaenergiePERM;
         private System.Windows.Forms.TextBox txtKarmaenergieVOR;
         private System.Windows.Forms.TextBox txtAstralenergieERG;
         private System.Windows.Forms.TextBox txtAstralenergieMALI;
-        private System.Windows.Forms.TextBox txtAstralenergieMOD;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.TextBox txtAstralenergiePERM;
         private System.Windows.Forms.TextBox txtAstralenergieVOR;
         private System.Windows.Forms.TextBox txtAusdauerERG;
         private System.Windows.Forms.TextBox txtAusdauerMALI;
-        private System.Windows.Forms.TextBox txtAusdauerMOD;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.TextBox txtAusdauerPERM;
         private System.Windows.Forms.TextBox txtAusdauerVOR;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.TextBox txtLebensenergieERG;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.TextBox txtLebensenergieMALI;
-        private System.Windows.Forms.TextBox txtLebensenergieMOD;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.TextBox txtBank;
         private System.Windows.Forms.Label label52;
@@ -3991,6 +4642,227 @@
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.TextBox PTProbe1;
+        private System.Windows.Forms.Label PTName1;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.TextBox PTAnforderungen1;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.TextBox PTSpezialisierung1;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox PTBilliger1;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox PTBe1;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox PTTaw1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.TextBox PTAbleiten1;
+        private System.Windows.Forms.TextBox PTAbleiten18;
+        private System.Windows.Forms.TextBox PTAbleiten3;
+        private System.Windows.Forms.TextBox PTAbleiten17;
+        private System.Windows.Forms.TextBox PTAbleiten4;
+        private System.Windows.Forms.TextBox PTAbleiten16;
+        private System.Windows.Forms.TextBox PTAbleiten5;
+        private System.Windows.Forms.TextBox PTAbleiten15;
+        private System.Windows.Forms.TextBox PTAbleiten6;
+        private System.Windows.Forms.TextBox PTAbleiten14;
+        private System.Windows.Forms.TextBox PTAbleiten7;
+        private System.Windows.Forms.TextBox PTAbleiten8;
+        private System.Windows.Forms.TextBox PTAbleiten12;
+        private System.Windows.Forms.TextBox PTAbleiten9;
+        private System.Windows.Forms.TextBox PTAbleiten11;
+        private System.Windows.Forms.TextBox PTAbleiten10;
+        private System.Windows.Forms.TextBox PTAnforderungen2;
+        private System.Windows.Forms.TextBox PTAnforderungen18;
+        private System.Windows.Forms.TextBox PTAnforderungen3;
+        private System.Windows.Forms.TextBox PTAnforderungen17;
+        private System.Windows.Forms.TextBox PTAnforderungen4;
+        private System.Windows.Forms.TextBox PTAnforderungen16;
+        private System.Windows.Forms.TextBox PTAnforderungen5;
+        private System.Windows.Forms.TextBox PTAnforderungen15;
+        private System.Windows.Forms.TextBox PTAnforderungen6;
+        private System.Windows.Forms.TextBox PTAnforderungen14;
+        private System.Windows.Forms.TextBox PTAnforderungen7;
+        private System.Windows.Forms.TextBox PTAnforderungen13;
+        private System.Windows.Forms.TextBox PTAnforderungen8;
+        private System.Windows.Forms.TextBox PTAnforderungen12;
+        private System.Windows.Forms.TextBox PTAnforderungen9;
+        private System.Windows.Forms.TextBox PTAnforderungen11;
+        private System.Windows.Forms.TextBox PTAnforderungen10;
+        private System.Windows.Forms.TextBox PTSpezialisierung18;
+        private System.Windows.Forms.TextBox PTSpezialisierung17;
+        private System.Windows.Forms.TextBox PTSpezialisierung16;
+        private System.Windows.Forms.TextBox PTSpezialisierung15;
+        private System.Windows.Forms.TextBox PTSpezialisierung14;
+        private System.Windows.Forms.TextBox PTSpezialisierung13;
+        private System.Windows.Forms.TextBox PTSpezialisierung12;
+        private System.Windows.Forms.TextBox PTSpezialisierung11;
+        private System.Windows.Forms.TextBox PTSpezialisierung10;
+        private System.Windows.Forms.TextBox PTSpezialisierung9;
+        private System.Windows.Forms.TextBox PTSpezialisierung8;
+        private System.Windows.Forms.TextBox PTSpezialisierung7;
+        private System.Windows.Forms.TextBox PTSpezialisierung6;
+        private System.Windows.Forms.TextBox PTSpezialisierung5;
+        private System.Windows.Forms.TextBox PTSpezialisierung4;
+        private System.Windows.Forms.TextBox PTSpezialisierung3;
+        private System.Windows.Forms.TextBox PTSpezialisierung2;
+        private System.Windows.Forms.TextBox PTBilliger17;
+        private System.Windows.Forms.TextBox PTBilliger18;
+        private System.Windows.Forms.TextBox PTBilliger16;
+        private System.Windows.Forms.TextBox PTBilliger12;
+        private System.Windows.Forms.TextBox PTBilliger13;
+        private System.Windows.Forms.TextBox PTBilliger14;
+        private System.Windows.Forms.TextBox PTBilliger15;
+        private System.Windows.Forms.TextBox PTBilliger11;
+        private System.Windows.Forms.TextBox PTBilliger7;
+        private System.Windows.Forms.TextBox PTBilliger8;
+        private System.Windows.Forms.TextBox PTBilliger9;
+        private System.Windows.Forms.TextBox PTBilliger10;
+        private System.Windows.Forms.TextBox PTBilliger6;
+        private System.Windows.Forms.TextBox PTBilliger2;
+        private System.Windows.Forms.TextBox PTBilliger3;
+        private System.Windows.Forms.TextBox PTBilliger4;
+        private System.Windows.Forms.TextBox PTBilliger5;
+        private System.Windows.Forms.TextBox PTBe17;
+        private System.Windows.Forms.TextBox PTBe18;
+        private System.Windows.Forms.TextBox PTBe16;
+        private System.Windows.Forms.TextBox PTBe12;
+        private System.Windows.Forms.TextBox PTBe13;
+        private System.Windows.Forms.TextBox PTBe14;
+        private System.Windows.Forms.TextBox PTBe15;
+        private System.Windows.Forms.TextBox PTBe11;
+        private System.Windows.Forms.TextBox PTBe7;
+        private System.Windows.Forms.TextBox PTBe8;
+        private System.Windows.Forms.TextBox PTBe9;
+        private System.Windows.Forms.TextBox PTBe10;
+        private System.Windows.Forms.TextBox PTBe6;
+        private System.Windows.Forms.TextBox PTBe2;
+        private System.Windows.Forms.TextBox PTBe3;
+        private System.Windows.Forms.TextBox PTBe4;
+        private System.Windows.Forms.TextBox PTBe5;
+        private System.Windows.Forms.TextBox PTTaw18;
+        private System.Windows.Forms.TextBox PTTaw17;
+        private System.Windows.Forms.TextBox PTTaw16;
+        private System.Windows.Forms.TextBox PTTaw15;
+        private System.Windows.Forms.TextBox PTTaw14;
+        private System.Windows.Forms.TextBox PTTaw13;
+        private System.Windows.Forms.TextBox PTTaw12;
+        private System.Windows.Forms.TextBox PTTaw11;
+        private System.Windows.Forms.TextBox PTTaw10;
+        private System.Windows.Forms.TextBox PTTaw9;
+        private System.Windows.Forms.TextBox PTTaw8;
+        private System.Windows.Forms.TextBox PTTaw7;
+        private System.Windows.Forms.TextBox PTTaw6;
+        private System.Windows.Forms.TextBox PTTaw5;
+        private System.Windows.Forms.TextBox PTTaw4;
+        private System.Windows.Forms.TextBox PTTaw3;
+        private System.Windows.Forms.TextBox PTTaw2;
+        private System.Windows.Forms.TextBox PTProbe17;
+        private System.Windows.Forms.TextBox PTProbe18;
+        private System.Windows.Forms.TextBox PTProbe16;
+        private System.Windows.Forms.TextBox PTProbe12;
+        private System.Windows.Forms.TextBox PTProbe13;
+        private System.Windows.Forms.TextBox PTProbe15;
+        private System.Windows.Forms.TextBox PTProbe14;
+        private System.Windows.Forms.TextBox PTProbe11;
+        private System.Windows.Forms.TextBox PTProbe7;
+        private System.Windows.Forms.TextBox PTProbe8;
+        private System.Windows.Forms.TextBox PTProbe10;
+        private System.Windows.Forms.TextBox PTProbe9;
+        private System.Windows.Forms.TextBox PTProbe6;
+        private System.Windows.Forms.TextBox PTProbe2;
+        private System.Windows.Forms.TextBox PTProbe3;
+        private System.Windows.Forms.TextBox PTProbe5;
+        private System.Windows.Forms.TextBox PTProbe4;
+        private System.Windows.Forms.Label PTName2;
+        private System.Windows.Forms.Label PTName5;
+        private System.Windows.Forms.Label PTName4;
+        private System.Windows.Forms.Label PTName3;
+        private System.Windows.Forms.Label PTName18;
+        private System.Windows.Forms.Label PTName17;
+        private System.Windows.Forms.Label PTName16;
+        private System.Windows.Forms.Label PTName15;
+        private System.Windows.Forms.Label PTName14;
+        private System.Windows.Forms.Label PTName13;
+        private System.Windows.Forms.Label PTName12;
+        private System.Windows.Forms.Label PTName11;
+        private System.Windows.Forms.Label PTName10;
+        private System.Windows.Forms.Label PTName9;
+        private System.Windows.Forms.Label PTName8;
+        private System.Windows.Forms.Label PTName7;
+        private System.Windows.Forms.Label PTName6;
+        private System.Windows.Forms.TextBox PTAbleiten2;
+        private System.Windows.Forms.TextBox PTAbleiten13;
+        private System.Windows.Forms.TextBox PTWürfe17;
+        private System.Windows.Forms.TextBox PTWürfe18;
+        private System.Windows.Forms.TextBox PTWürfe16;
+        private System.Windows.Forms.TextBox PTWürfe12;
+        private System.Windows.Forms.TextBox PTWürfe13;
+        private System.Windows.Forms.TextBox PTWürfe15;
+        private System.Windows.Forms.TextBox PTWürfe14;
+        private System.Windows.Forms.TextBox PTWürfe11;
+        private System.Windows.Forms.TextBox PTWürfe7;
+        private System.Windows.Forms.TextBox PTWürfe8;
+        private System.Windows.Forms.TextBox PTWürfe10;
+        private System.Windows.Forms.TextBox PTWürfe9;
+        private System.Windows.Forms.TextBox PTWürfe6;
+        private System.Windows.Forms.TextBox PTWürfe2;
+        private System.Windows.Forms.TextBox PTWürfe3;
+        private System.Windows.Forms.TextBox PTWürfe5;
+        private System.Windows.Forms.TextBox PTWürfe4;
+        private System.Windows.Forms.TextBox PTWürfe1;
+        private System.Windows.Forms.TabPage socialTalents;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.RadioButton radioSozialTalente;
+        private System.Windows.Forms.RadioButton radioKörperlicheTalente;
+        private System.Windows.Forms.RadioButton radioNaturTalente;
+        private System.Windows.Forms.RadioButton radioKnowldageTalente;
+        private System.Windows.Forms.TextBox PTAbleiten22;
+        private System.Windows.Forms.TextBox PTAbleiten21;
+        private System.Windows.Forms.TextBox PTAbleiten20;
+        private System.Windows.Forms.TextBox PTAbleiten19;
+        private System.Windows.Forms.TextBox PTAnforderungen22;
+        private System.Windows.Forms.TextBox PTAnforderungen21;
+        private System.Windows.Forms.TextBox PTAnforderungen20;
+        private System.Windows.Forms.TextBox PTAnforderungen19;
+        private System.Windows.Forms.TextBox PTSpezialisierung22;
+        private System.Windows.Forms.TextBox PTSpezialisierung21;
+        private System.Windows.Forms.TextBox PTSpezialisierung20;
+        private System.Windows.Forms.TextBox PTSpezialisierung19;
+        private System.Windows.Forms.TextBox PTBilliger21;
+        private System.Windows.Forms.TextBox PTBilliger22;
+        private System.Windows.Forms.TextBox PTBilliger20;
+        private System.Windows.Forms.TextBox PTBilliger19;
+        private System.Windows.Forms.TextBox PTBe21;
+        private System.Windows.Forms.TextBox PTBe22;
+        private System.Windows.Forms.TextBox PTBe20;
+        private System.Windows.Forms.TextBox PTBe19;
+        private System.Windows.Forms.TextBox PTTaw22;
+        private System.Windows.Forms.TextBox PTTaw21;
+        private System.Windows.Forms.TextBox PTTaw20;
+        private System.Windows.Forms.TextBox PTTaw19;
+        private System.Windows.Forms.TextBox PTWürfe21;
+        private System.Windows.Forms.TextBox PTWürfe22;
+        private System.Windows.Forms.TextBox PTWürfe20;
+        private System.Windows.Forms.TextBox PTWürfe19;
+        private System.Windows.Forms.TextBox PTProbe21;
+        private System.Windows.Forms.TextBox PTProbe22;
+        private System.Windows.Forms.TextBox PTProbe20;
+        private System.Windows.Forms.TextBox PTProbe19;
+        private System.Windows.Forms.Label PTName22;
+        private System.Windows.Forms.Label PTName21;
+        private System.Windows.Forms.Label PTName20;
+        private System.Windows.Forms.Label PTName19;
+        private System.Windows.Forms.TextBox PTAbleiten23;
+        private System.Windows.Forms.TextBox PTAnforderungen23;
+        private System.Windows.Forms.TextBox PTSpezialisierung23;
+        private System.Windows.Forms.TextBox PTBilliger23;
+        private System.Windows.Forms.TextBox PTBe23;
+        private System.Windows.Forms.TextBox PTTaw23;
+        private System.Windows.Forms.TextBox PTWürfe23;
+        private System.Windows.Forms.TextBox PTProbe23;
+        private System.Windows.Forms.Label PTName23;
     }
 }
 

@@ -45,18 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Controller\ControllTalent.cs" />
     <Compile Include="Classes\Data\Charakter.cs" />
     <Compile Include="Classes\Controller\ControllClass.cs" />
     <Compile Include="Classes\Data\Feature.cs" />
+    <Compile Include="Classes\Data\Talent.cs" />
     <Compile Include="Classes\Managment\ManagmentFeature.cs" />
     <Compile Include="Classes\Managment\ManagmentSave.cs" />
     <Compile Include="Classes\Util\LoadCharakterXML.cs" />
     <Compile Include="Classes\Util\SaveCharakterXML.cs" />
-    <Compile Include="Classes\View\Forms\Form1.cs">
+    <Compile Include="Classes\View\Forms\DSA.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Classes\View\Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Classes\View\Forms\DSA.Designer.cs">
+      <DependentUpon>DSA.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Util\Program.cs" />
     <Compile Include="Classes\View\Forms\CreateFeature.cs">
@@ -69,8 +71,11 @@
     <EmbeddedResource Include="Classes\View\Forms\CreateFeature.resx">
       <DependentUpon>CreateFeature.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Classes\View\Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Classes\View\Forms\DSA.de-DE.resx">
+      <DependentUpon>DSA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\View\Forms\DSA.resx">
+      <DependentUpon>DSA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -80,6 +85,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -95,6 +101,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Ressources\aventurien politisch.png" />
     <Content Include="Ressources\Kazarik.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>

@@ -11,79 +11,153 @@ using System.IO;
 
 namespace DSA_Project
 {
-    public partial class Form1 : Form
+    public partial class DSA : Form
     {
-        ControllClass controll;                  
-                
-        public Form1()
+        ControllClass controll;
+        DSA_TALENTS currentType;
+
+        public DSA()
         {
             controll = new ControllClass(this);
             InitializeComponent();
-            
+
+            setUPTalents(DSA_TALENTS.PHYSICALLY);
             load();
             refresh();
+
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            SetStyle(ControlStyles.UserPaint, true);
+            SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+        }
+
+        private void setUPTalents(DSA_TALENTS type)
+        {
+            setUPPT(controll.getTalent(type, 1), PTName1, PTProbe1, PTWürfe1, PTBe1, PTTaw1 ,PTBilliger1, PTSpezialisierung1, PTAnforderungen1, PTAbleiten1);
+            setUPPT(controll.getTalent(type, 2), PTName2, PTProbe2, PTWürfe2, PTBe2, PTTaw2, PTBilliger2, PTSpezialisierung2, PTAnforderungen2, PTAbleiten2);
+            setUPPT(controll.getTalent(type, 3), PTName3, PTProbe3, PTWürfe3, PTBe3, PTTaw3, PTBilliger3, PTSpezialisierung3, PTAnforderungen3, PTAbleiten3);
+            setUPPT(controll.getTalent(type, 4), PTName4, PTProbe4, PTWürfe4, PTBe4, PTTaw4, PTBilliger4, PTSpezialisierung4, PTAnforderungen4, PTAbleiten4);
+            setUPPT(controll.getTalent(type, 5), PTName5, PTProbe5, PTWürfe5, PTBe5, PTTaw5, PTBilliger5, PTSpezialisierung5, PTAnforderungen5, PTAbleiten5);
+            setUPPT(controll.getTalent(type, 6), PTName6, PTProbe6, PTWürfe6, PTBe6, PTTaw6, PTBilliger6, PTSpezialisierung6, PTAnforderungen6, PTAbleiten6);
+            setUPPT(controll.getTalent(type, 7), PTName7, PTProbe7, PTWürfe7, PTBe7, PTTaw7, PTBilliger7, PTSpezialisierung7, PTAnforderungen7, PTAbleiten7);
+            setUPPT(controll.getTalent(type, 8), PTName8, PTProbe8, PTWürfe8, PTBe8, PTTaw8, PTBilliger8, PTSpezialisierung8, PTAnforderungen8, PTAbleiten8);
+            setUPPT(controll.getTalent(type, 9), PTName9, PTProbe9, PTWürfe9, PTBe9, PTTaw9, PTBilliger9, PTSpezialisierung9, PTAnforderungen9, PTAbleiten9);
+            setUPPT(controll.getTalent(type, 10), PTName10, PTProbe10, PTWürfe10, PTBe10, PTTaw10, PTBilliger10, PTSpezialisierung10, PTAnforderungen10, PTAbleiten10);
+            setUPPT(controll.getTalent(type, 11), PTName11, PTProbe11, PTWürfe11, PTBe11, PTTaw11, PTBilliger11, PTSpezialisierung11, PTAnforderungen11, PTAbleiten11);
+            setUPPT(controll.getTalent(type, 12), PTName12, PTProbe12, PTWürfe12, PTBe12, PTTaw12, PTBilliger12, PTSpezialisierung12, PTAnforderungen12, PTAbleiten12);
+            setUPPT(controll.getTalent(type, 13), PTName13, PTProbe13, PTWürfe13, PTBe13, PTTaw13, PTBilliger13, PTSpezialisierung13, PTAnforderungen13, PTAbleiten13);
+            setUPPT(controll.getTalent(type, 14), PTName14, PTProbe14, PTWürfe14, PTBe14, PTTaw14, PTBilliger14, PTSpezialisierung14, PTAnforderungen14, PTAbleiten14);
+            setUPPT(controll.getTalent(type, 15), PTName15, PTProbe15, PTWürfe15, PTBe15, PTTaw15, PTBilliger15, PTSpezialisierung15, PTAnforderungen15, PTAbleiten15);
+            setUPPT(controll.getTalent(type, 16), PTName16, PTProbe16, PTWürfe16, PTBe16, PTTaw16, PTBilliger16, PTSpezialisierung16, PTAnforderungen16, PTAbleiten16);
+            setUPPT(controll.getTalent(type, 17), PTName17, PTProbe17, PTWürfe17, PTBe17, PTTaw17, PTBilliger17, PTSpezialisierung17, PTAnforderungen17, PTAbleiten17);
+            setUPPT(controll.getTalent(type, 18), PTName18, PTProbe18, PTWürfe18, PTBe18, PTTaw18, PTBilliger18, PTSpezialisierung18, PTAnforderungen18, PTAbleiten18);
+            setUPPT(controll.getTalent(type, 19), PTName19, PTProbe19, PTWürfe19, PTBe19, PTTaw19, PTBilliger19, PTSpezialisierung19, PTAnforderungen19, PTAbleiten19);
+            setUPPT(controll.getTalent(type, 20), PTName20, PTProbe20, PTWürfe20, PTBe20, PTTaw20, PTBilliger20, PTSpezialisierung20, PTAnforderungen20, PTAbleiten20);
+            setUPPT(controll.getTalent(type, 21), PTName21, PTProbe21, PTWürfe21, PTBe21, PTTaw21, PTBilliger21, PTSpezialisierung21, PTAnforderungen21, PTAbleiten21);
+            setUPPT(controll.getTalent(type, 22), PTName22, PTProbe22, PTWürfe22, PTBe22, PTTaw22, PTBilliger22, PTSpezialisierung22, PTAnforderungen22, PTAbleiten22);
+            setUPPT(controll.getTalent(type, 23), PTName23, PTProbe23, PTWürfe23, PTBe23, PTTaw23, PTBilliger23, PTSpezialisierung23, PTAnforderungen23, PTAbleiten23);
+        }
+        private void setUPPT(Talent talent, Label Name, TextBox Probe, TextBox  wurfProbe, TextBox Be, TextBox Taw, TextBox Billiger, TextBox Spezialisierung, TextBox Anforderungen, TextBox Ableiten)
+        {
+            Boolean visible = false;
+            if (talent == null)
+            {
+                Name.Text = "";
+                Probe.Text = "";
+                Taw.Text = "";
+                Be.Text = "";
+                Billiger.Text = "";
+                Spezialisierung.Text = "";
+                Anforderungen.Text = "";
+                Ableiten.Text = "";
+                wurfProbe.Text = "";
+            }
+            else
+            {
+                visible = true;
+                Name.Text = talent.getName();
+                Probe.Text = talent.getProbeValue().ToString();
+                Taw.Text = talent.getTaW().ToString();
+                Be.Text = "Bex" + talent.getBe().ToString();
+                Billiger.Text = "";
+                Spezialisierung.Text = "";
+                Anforderungen.Text = talent.getAnforderungen();
+                Ableiten.Text = talent.getAbleitenString();
+                wurfProbe.Text = talent.getProbeString();
+            }
+            Name.Visible            = visible;
+            Probe.Visible           = visible;
+            Taw.Visible             = visible;
+            Be.Visible              = visible;
+            Billiger.Visible        = visible;
+            Spezialisierung.Visible = visible;
+            Anforderungen.Visible   = visible;
+            wurfProbe.Visible       = visible;
+            Ableiten.Visible        = visible;
         }
 
         public void load()
         {
-            txtName.Text                = (controll.BasicValue(DSA_BASICVALUES.NAME));
-            txtAlter.Text               = (controll.BasicValue(DSA_BASICVALUES.ALTER));
-            txtGeschlecht.Text          = (controll.BasicValue(DSA_BASICVALUES.GESCHLECHT));
-            txtGröße.Text               = (controll.BasicValue(DSA_BASICVALUES.GRÖSE));
-            txtGewicht.Text             = (controll.BasicValue(DSA_BASICVALUES.GEWICHT));
-            txtAugenfarbe.Text          = (controll.BasicValue(DSA_BASICVALUES.AUGENFARBE));
-            txtHaarfarbe.Text           = (controll.BasicValue(DSA_BASICVALUES.HAARFARBE));
-            txtHautfarbe.Text           = (controll.BasicValue(DSA_BASICVALUES.HAUTFARBE));
-            txtFamulienstand.Text       = (controll.BasicValue(DSA_BASICVALUES.FAMILIENSTAND));
-            txtAnrede.Text              = (controll.BasicValue(DSA_BASICVALUES.ANREDE));
-            txtGottheit.Text            = (controll.BasicValue(DSA_BASICVALUES.GOTTHEIT));
-            txtRasse.Text               = (controll.BasicValue(DSA_BASICVALUES.RASSE));
-            txtKultur.Text              = (controll.BasicValue(DSA_BASICVALUES.KULTUR));
-            txtProfession.Text          = (controll.BasicValue(DSA_BASICVALUES.PROFESSION));
-            txtModifikation1.Text       = controll.Moodifikator(1);
-            txtModifikation2.Text       = controll.Moodifikator(2);
-            txtModifikation3.Text       = controll.Moodifikator(3);
-            txtGöttergeschenke1.Text    = controll.Göttergeschenk(1);
-            txtGöttergeschenke2.Text    = controll.Göttergeschenk(2);
-            txtGöttergeschenke3.Text    = controll.Göttergeschenk(3);
-            txtGöttergeschenke4.Text    = controll.Göttergeschenk(4);
+            currentType = DSA_TALENTS.PHYSICALLY;
+            setUPTalents(currentType);
+
+            txtName.Text = (controll.BasicValue(DSA_BASICVALUES.NAME));
+            txtAlter.Text = (controll.BasicValue(DSA_BASICVALUES.ALTER));
+            txtGeschlecht.Text = (controll.BasicValue(DSA_BASICVALUES.GESCHLECHT));
+            txtGröße.Text = (controll.BasicValue(DSA_BASICVALUES.GRÖSE));
+            txtGewicht.Text = (controll.BasicValue(DSA_BASICVALUES.GEWICHT));
+            txtAugenfarbe.Text = (controll.BasicValue(DSA_BASICVALUES.AUGENFARBE));
+            txtHaarfarbe.Text = (controll.BasicValue(DSA_BASICVALUES.HAARFARBE));
+            txtHautfarbe.Text = (controll.BasicValue(DSA_BASICVALUES.HAUTFARBE));
+            txtFamulienstand.Text = (controll.BasicValue(DSA_BASICVALUES.FAMILIENSTAND));
+            txtAnrede.Text = (controll.BasicValue(DSA_BASICVALUES.ANREDE));
+            txtGottheit.Text = (controll.BasicValue(DSA_BASICVALUES.GOTTHEIT));
+            txtRasse.Text = (controll.BasicValue(DSA_BASICVALUES.RASSE));
+            txtKultur.Text = (controll.BasicValue(DSA_BASICVALUES.KULTUR));
+            txtProfession.Text = (controll.BasicValue(DSA_BASICVALUES.PROFESSION));
+            txtModifikation1.Text = controll.Moodifikator(1);
+            txtModifikation2.Text = controll.Moodifikator(2);
+            txtModifikation3.Text = controll.Moodifikator(3);
+            txtGöttergeschenke1.Text = controll.Göttergeschenk(1);
+            txtGöttergeschenke2.Text = controll.Göttergeschenk(2);
+            txtGöttergeschenke3.Text = controll.Göttergeschenk(3);
+            txtGöttergeschenke4.Text = controll.Göttergeschenk(4);
 
 
-            txtMutAKT.Text              = controll.AttributeAKT(DSA_ATTRIBUTE.MU, "notNumeric").ToString();
-            txtKlugheitAKT.Text         = controll.AttributeAKT(DSA_ATTRIBUTE.KL, "notNumeric").ToString();
-            txtIntuitionAKT.Text        = controll.AttributeAKT(DSA_ATTRIBUTE.IN, "notNumeric").ToString();
-            txtCharismaAKT.Text         = controll.AttributeAKT(DSA_ATTRIBUTE.CH, "notNumeric").ToString();
+            txtMutAKT.Text = controll.AttributeAKT(DSA_ATTRIBUTE.MU, "notNumeric").ToString();
+            txtKlugheitAKT.Text = controll.AttributeAKT(DSA_ATTRIBUTE.KL, "notNumeric").ToString();
+            txtIntuitionAKT.Text = controll.AttributeAKT(DSA_ATTRIBUTE.IN, "notNumeric").ToString();
+            txtCharismaAKT.Text = controll.AttributeAKT(DSA_ATTRIBUTE.CH, "notNumeric").ToString();
             txtFingerfertigkeitAKT.Text = controll.AttributeAKT(DSA_ATTRIBUTE.FF, "notNumeric").ToString();
-            textGewandheitAKT.Text      = controll.AttributeAKT(DSA_ATTRIBUTE.GE, "notNumeric").ToString();
-            txtKonstitutionAKT.Text     = controll.AttributeAKT(DSA_ATTRIBUTE.KO, "notNumeric").ToString();
-            txtKörperkraftAKT.Text      = controll.AttributeAKT(DSA_ATTRIBUTE.KK, "notNumeric").ToString();
-            txtSozialstatusAKT.Text     = controll.AttributeAKT(DSA_ATTRIBUTE.SO, "notNumeric").ToString();
+            textGewandheitAKT.Text = controll.AttributeAKT(DSA_ATTRIBUTE.GE, "notNumeric").ToString();
+            txtKonstitutionAKT.Text = controll.AttributeAKT(DSA_ATTRIBUTE.KO, "notNumeric").ToString();
+            txtKörperkraftAKT.Text = controll.AttributeAKT(DSA_ATTRIBUTE.KK, "notNumeric").ToString();
+            txtSozialstatusAKT.Text = controll.AttributeAKT(DSA_ATTRIBUTE.SO, "notNumeric").ToString();
 
-            txtMutMOD.Text              = controll.AttributeMOD(DSA_ATTRIBUTE.MU, txtMutMOD.Text).ToString();
-            txtKlugheitMOD.Text         = controll.AttributeMOD(DSA_ATTRIBUTE.KL, txtKlugheitMOD.Text).ToString();
-            txtIntuitionMOD.Text        = controll.AttributeMOD(DSA_ATTRIBUTE.IN, txtIntuitionMOD.Text).ToString();
-            txtCharismaMOD.Text         = controll.AttributeMOD(DSA_ATTRIBUTE.CH, txtCharismaMOD.Text).ToString();
+            txtMutMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.MU, txtMutMOD.Text).ToString();
+            txtKlugheitMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.KL, txtKlugheitMOD.Text).ToString();
+            txtIntuitionMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.IN, txtIntuitionMOD.Text).ToString();
+            txtCharismaMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.CH, txtCharismaMOD.Text).ToString();
             txtFingerfertigkeitMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.FF, txtFingerfertigkeitMOD.Text).ToString();
-            textGewandheitMOD.Text      = controll.AttributeMOD(DSA_ATTRIBUTE.GE, textGewandheitMOD.Text).ToString();
-            txtKonstitutionMOD.Text     = controll.AttributeMOD(DSA_ATTRIBUTE.KO, txtKonstitutionMOD.Text).ToString();
-            txtKörperkraftMOD.Text      = controll.AttributeMOD(DSA_ATTRIBUTE.KK, txtKörperkraftMOD.Text).ToString();
-            txtSozialstatusMOD.Text     = controll.AttributeMOD(DSA_ATTRIBUTE.SO, txtSozialstatusMOD.Text).ToString();
+            textGewandheitMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.GE, textGewandheitMOD.Text).ToString();
+            txtKonstitutionMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.KO, txtKonstitutionMOD.Text).ToString();
+            txtKörperkraftMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.KK, txtKörperkraftMOD.Text).ToString();
+            txtSozialstatusMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.SO, txtSozialstatusMOD.Text).ToString();
 
-            txtAttackeBasisMOD.Text     = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
-            txtParadeBasisMOD.Text      = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.PARADE_BASIS).ToString();
-            txtFernkampfBasisMOD.Text   = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS).ToString();
-            txtInitativeBasisMOD.Text   = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.INITATIVE_BASIS).ToString();
+            txtAttackeBasisMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
+            txtParadeBasisMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.PARADE_BASIS).ToString();
+            txtFernkampfBasisMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS).ToString();
+            txtInitativeBasisMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.INITATIVE_BASIS).ToString();
             txtBeherschungswertMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT).ToString();
             txtArtefaktkontrolleMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE).ToString();
-            txtWundschwelleMOD.Text     = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
-            txtEntrückungMOD.Text       = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
-            txtGeschwindigkeitMOD.Text  = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
-            
-            txtGeldD.Text               = controll.Money(DSA_MONEY.D).ToString();
-            txtGeldH.Text               = controll.Money(DSA_MONEY.H).ToString();
-            txtGeldS.Text               = controll.Money(DSA_MONEY.S).ToString();
-            txtGeldK.Text               = controll.Money(DSA_MONEY.K).ToString();
-            txtBank.Text                = controll.Money(DSA_MONEY.BANK).ToString();
+            txtWundschwelleMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
+            txtEntrückungMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
+            txtGeschwindigkeitMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
+
+            txtGeldD.Text = controll.Money(DSA_MONEY.D).ToString();
+            txtGeldH.Text = controll.Money(DSA_MONEY.H).ToString();
+            txtGeldS.Text = controll.Money(DSA_MONEY.S).ToString();
+            txtGeldK.Text = controll.Money(DSA_MONEY.K).ToString();
+            txtBank.Text = controll.Money(DSA_MONEY.BANK).ToString();
 
             LoadFeature(txtVorteil1Name, txtVorteil1Beschreibung, txtVorteil1Wert, txtVorteil1GP, DSA_FEATURES.VORTEIL, 1);
             LoadFeature(txtVorteil2Name, txtVorteil2Beschreibung, txtVorteil2Wert, txtVorteil2GP, DSA_FEATURES.VORTEIL, 2);
@@ -122,87 +196,119 @@ namespace DSA_Project
         /// </summary>
         public void refresh()
         {
-            txtMutMAX.Text              = controll.AttributeMAX(DSA_ATTRIBUTE.MU).ToString();
-            txtKlugheitMAX.Text         = controll.AttributeMAX(DSA_ATTRIBUTE.KL).ToString();
-            txtIntuitionMAX.Text        = controll.AttributeMAX(DSA_ATTRIBUTE.IN).ToString();
-            txtCharismaMAX.Text         = controll.AttributeMAX(DSA_ATTRIBUTE.CH).ToString();
+            txtMutMAX.Text = controll.AttributeMAX(DSA_ATTRIBUTE.MU).ToString();
+            txtKlugheitMAX.Text = controll.AttributeMAX(DSA_ATTRIBUTE.KL).ToString();
+            txtIntuitionMAX.Text = controll.AttributeMAX(DSA_ATTRIBUTE.IN).ToString();
+            txtCharismaMAX.Text = controll.AttributeMAX(DSA_ATTRIBUTE.CH).ToString();
             txtFingerfertigkeitMAX.Text = controll.AttributeMAX(DSA_ATTRIBUTE.FF).ToString();
-            textGewandheitMAX.Text      = controll.AttributeMAX(DSA_ATTRIBUTE.GE).ToString();
-            txtKonstitutionMAX.Text     = controll.AttributeMAX(DSA_ATTRIBUTE.KO).ToString();
-            txtKörperkraftMAX.Text      = controll.AttributeMAX(DSA_ATTRIBUTE.KK).ToString();
-            txtSozialstatusMAX.Text     = controll.AttributeMAX(DSA_ATTRIBUTE.SO).ToString();
-            
-            txtAttackeBaisAKT.Text      = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
-            txtParadeBasisAKT.Text      = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.PARADE_BASIS).ToString();
-            txtFernkampfBasisAKT.Text   = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS).ToString();
-            txtInitativeBasisAKT.Text   = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.INITATIVE_BASIS).ToString();
-            txtBeherschungswertAKT.Text = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT).ToString();
-            txtArtefaktkontrolleAKT.Text= controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE).ToString();
-            txtWundschwelleAKT.Text     = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
-            txtEntrückungAKT.Text       = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
-            txtGeschwindigkeitAKT.Text  = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
+            textGewandheitMAX.Text = controll.AttributeMAX(DSA_ATTRIBUTE.GE).ToString();
+            txtKonstitutionMAX.Text = controll.AttributeMAX(DSA_ATTRIBUTE.KO).ToString();
+            txtKörperkraftMAX.Text = controll.AttributeMAX(DSA_ATTRIBUTE.KK).ToString();
+            txtSozialstatusMAX.Text = controll.AttributeMAX(DSA_ATTRIBUTE.SO).ToString();
 
-            txtAttackeBaisMAX.Text      = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
-            txtParadeBasisMAX.Text      = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.PARADE_BASIS).ToString();
-            txtFernkampfBasisMAX.Text   = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS).ToString();
-            txtInitativeBasisMAX.Text   = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.INITATIVE_BASIS).ToString();
+            txtAttackeBaisAKT.Text = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
+            txtParadeBasisAKT.Text = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.PARADE_BASIS).ToString();
+            txtFernkampfBasisAKT.Text = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS).ToString();
+            txtInitativeBasisAKT.Text = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.INITATIVE_BASIS).ToString();
+            txtBeherschungswertAKT.Text = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT).ToString();
+            txtArtefaktkontrolleAKT.Text = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE).ToString();
+            txtWundschwelleAKT.Text = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
+            txtEntrückungAKT.Text = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
+            txtGeschwindigkeitAKT.Text = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
+
+            txtAttackeBaisMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
+            txtParadeBasisMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.PARADE_BASIS).ToString();
+            txtFernkampfBasisMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS).ToString();
+            txtInitativeBasisMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.INITATIVE_BASIS).ToString();
             txtBeherschungswertMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT).ToString();
             txtArtefaktkontrolleMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE).ToString();
-            txtWundschwelleMAX.Text     = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
-            txtEntrückungMAX.Text       = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
-            txtGeschwindigkeitMAX.Text  = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
+            txtWundschwelleMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
+            txtEntrückungMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
+            txtGeschwindigkeitMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
 
-            txtGesamtAKT.Text           = controll.getAttributeAKTSumme().ToString();
-            txtGesamtMAX.Text           = controll.getAttributeMAXSumme().ToString();
+            txtGesamtAKT.Text = controll.getAttributeAKTSumme().ToString();
+            txtGesamtMAX.Text = controll.getAttributeMAXSumme().ToString();
 
-            txtLebensenergieVOR.Text    = controll.EnergieVOR(DSA_ENERGIEN.LEBENSENERGIE).ToString();
-            txtAusdauerVOR.Text         = controll.EnergieVOR(DSA_ENERGIEN.AUSDAUER).ToString();
-            txtKarmaenergieVOR.Text     = controll.EnergieVOR(DSA_ENERGIEN.KARMAENERGIE).ToString();
-            txtAstralenergieVOR.Text    = controll.EnergieVOR(DSA_ENERGIEN.ASTRALENERGIE).ToString();
-            txtMagieresistenzVOR.Text   = controll.EnergieVOR(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+            txtLebensenergieVOR.Text = controll.EnergieVOR(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+            txtAusdauerVOR.Text = controll.EnergieVOR(DSA_ENERGIEN.AUSDAUER).ToString();
+            txtKarmaenergieVOR.Text = controll.EnergieVOR(DSA_ENERGIEN.KARMAENERGIE).ToString();
+            txtAstralenergieVOR.Text = controll.EnergieVOR(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+            txtMagieresistenzVOR.Text = controll.EnergieVOR(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
 
-            txtLebensenergiePERM.Text   = controll.EnergiePERM(DSA_ENERGIEN.LEBENSENERGIE).ToString();
-            txtAusdauerPERM.Text        = controll.EnergiePERM(DSA_ENERGIEN.AUSDAUER).ToString();
-            txtAstralenergiePERM.Text   = controll.EnergiePERM(DSA_ENERGIEN.ASTRALENERGIE).ToString();
-            txtKarmaenergiePERM.Text    = controll.EnergiePERM(DSA_ENERGIEN.KARMAENERGIE).ToString();
-            txtMagieresistenzPERM.Text  = controll.EnergiePERM(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+            txtLebensenergiePERM.Text = controll.EnergiePERM(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+            txtAusdauerPERM.Text = controll.EnergiePERM(DSA_ENERGIEN.AUSDAUER).ToString();
+            txtAstralenergiePERM.Text = controll.EnergiePERM(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+            txtKarmaenergiePERM.Text = controll.EnergiePERM(DSA_ENERGIEN.KARMAENERGIE).ToString();
+            txtMagieresistenzPERM.Text = controll.EnergiePERM(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
 
-            txtLebensenergieMOD.Text    = controll.EnergieMOD(DSA_ENERGIEN.LEBENSENERGIE).ToString();
-            txtAusdauerMOD.Text         = controll.EnergieMOD(DSA_ENERGIEN.AUSDAUER).ToString();
-            txtKarmaenergieMOD.Text     = controll.EnergieMOD(DSA_ENERGIEN.KARMAENERGIE).ToString();
-            txtAstralenergieMOD.Text    = controll.EnergieMOD(DSA_ENERGIEN.ASTRALENERGIE).ToString();
-            txtMagieresistenzMOD.Text   = controll.EnergieMOD(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+            txtLebensenergieMALI.Text = controll.EnergieMALI(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+            txtAusdauerMALI.Text = controll.EnergieMALI(DSA_ENERGIEN.AUSDAUER).ToString();
+            txtAstralenergieMALI.Text = controll.EnergieMALI(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+            txtKarmaenergieMALI.Text = controll.EnergieMALI(DSA_ENERGIEN.KARMAENERGIE).ToString();
+            txtMagieresistenzMALI.Text = controll.EnergieMALI(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
 
-            txtLebensenergieMALI.Text   = controll.EnergieMALI(DSA_ENERGIEN.LEBENSENERGIE).ToString();
-            txtAusdauerMALI.Text        = controll.EnergieMALI(DSA_ENERGIEN.AUSDAUER).ToString();
-            txtAstralenergieMALI.Text   = controll.EnergieMALI(DSA_ENERGIEN.ASTRALENERGIE).ToString();
-            txtKarmaenergieMALI.Text    = controll.EnergieMALI(DSA_ENERGIEN.KARMAENERGIE).ToString();
-            txtMagieresistenzMALI.Text  = controll.EnergieMALI(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+            txtLebensenergieERG.Text = controll.EnergieMAX(DSA_ENERGIEN.LEBENSENERGIE).ToString();
+            txtAusdauerERG.Text = controll.EnergieMAX(DSA_ENERGIEN.AUSDAUER).ToString();
+            txtAstralenergieERG.Text = controll.EnergieMAX(DSA_ENERGIEN.ASTRALENERGIE).ToString();
+            txtKarmaenergieERG.Text = controll.EnergieMAX(DSA_ENERGIEN.KARMAENERGIE).ToString();
+            txtMagieresistenzERG.Text = controll.EnergieMAX(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
 
-            txtLebensenergieERG.Text    = controll.EnergieMAX(DSA_ENERGIEN.LEBENSENERGIE).ToString();
-            txtAusdauerERG.Text         = controll.EnergieMAX(DSA_ENERGIEN.AUSDAUER).ToString();
-            txtAstralenergieERG.Text    = controll.EnergieMAX(DSA_ENERGIEN.ASTRALENERGIE).ToString();
-            txtKarmaenergieERG.Text     = controll.EnergieMAX(DSA_ENERGIEN.KARMAENERGIE).ToString();
-            txtMagieresistenzERG.Text   = controll.EnergieMAX(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+            refreshTalentProbeBox(currentType);
         }
+        public void refreshTalentProbeBox(DSA_TALENTS type)
+        {
+            PTProbe1.Text = refreshTalent(type, 1);
+            PTProbe2.Text = refreshTalent(type, 2);
+            PTProbe3.Text = refreshTalent(type, 3);
+            PTProbe4.Text = refreshTalent(type, 4);
+            PTProbe5.Text = refreshTalent(type, 5);
+            PTProbe6.Text = refreshTalent(type, 6);
+            PTProbe7.Text = refreshTalent(type, 7);
+            PTProbe8.Text = refreshTalent(type, 8);
+            PTProbe9.Text = refreshTalent(type, 9);
+            PTProbe10.Text = refreshTalent(type, 10);
+            PTProbe11.Text = refreshTalent(type, 11);
+            PTProbe12.Text = refreshTalent(type, 12);
+            PTProbe13.Text = refreshTalent(type, 13);
+            PTProbe14.Text = refreshTalent(type, 14);
+            PTProbe15.Text = refreshTalent(type, 15);
+            PTProbe16.Text = refreshTalent(type, 16);
+            PTProbe17.Text = refreshTalent(type, 17);
+            PTProbe18.Text = refreshTalent(type, 18);
+            PTProbe19.Text = refreshTalent(type, 19);
+            PTProbe20.Text = refreshTalent(type, 20);
+            PTProbe21.Text = refreshTalent(type, 21);
+            PTProbe22.Text = refreshTalent(type, 22);
+            PTProbe23.Text = refreshTalent(type, 23);
+        }
+        private String refreshTalent(DSA_TALENTS type, int number)
+        {
+            Talent talent = controll.getTalent(type, number);
+            if (talent == null)
+            {
+                return "";
+            }
+            return talent.getProbeValue().ToString();
+        }
+
         private void LoadFeature(TextBox name, TextBox description, TextBox value, TextBox gp, DSA_FEATURES type, int number)
         {
             Feature feature = controll.FeatureExisting(number, type);
 
-            if(feature == null) { return; }
+            if (feature == null) { return; }
 
-            name.Text           = feature.getName();
-            description.Text    = feature.getDescription();
-            value.Text          = feature.getValue();
-            gp.Text             = feature.getGP();
+            name.Text = feature.getName();
+            description.Text = feature.getDescription();
+            value.Text = feature.getValue();
+            gp.Text = feature.getGP();
 
         }
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-            
+
+
         }
         private void btnLoadCharacter_Click(object sender, EventArgs e)
         {
@@ -259,7 +365,7 @@ namespace DSA_Project
         private void txtMutMOD_TextChanged(object sender, EventArgs e)
         {
             txtMutMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.MU, txtMutMOD.Text).ToString();
-        }   
+        }
         private void txtKlugheitMOD_TextChanged(object sender, EventArgs e)
         {
             txtKlugheitMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.KL, txtKlugheitMOD.Text).ToString();
@@ -583,31 +689,8 @@ namespace DSA_Project
         }
         private void txtMagieresistenzPERM_TextChanged(object sender, EventArgs e)
         {
-           txtMagieresistenzPERM.Text = controll.EnergiePERM(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+            txtMagieresistenzPERM.Text = controll.EnergiePERM(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
         }
-
-
-        private void txtLebensenergieMOD_TextChanged(object sender, EventArgs e)
-        {
-            txtLebensenergieMOD.Text = controll.EnergieMOD(DSA_ENERGIEN.LEBENSENERGIE).ToString();
-        }
-        private void txtAusdauerMOD_TextChanged(object sender, EventArgs e)
-        {
-            txtAusdauerMOD.Text = controll.EnergieMOD(DSA_ENERGIEN.AUSDAUER).ToString();
-        }
-        private void txtAstralenergieMOD_TextChanged(object sender, EventArgs e)
-        {
-            txtAstralenergieMOD.Text = controll.EnergieMOD(DSA_ENERGIEN.ASTRALENERGIE).ToString();
-        }
-        private void txtKarmaenergieMOD_TextChanged(object sender, EventArgs e)
-        {
-            txtKarmaenergieMOD.Text = controll.EnergieMOD(DSA_ENERGIEN.KARMAENERGIE).ToString();
-        }
-        private void txtMagieresistenzMOD_TextChanged(object sender, EventArgs e)
-        {
-            txtMagieresistenzMOD.Text = controll.EnergieMOD(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
-        }
-
 
         private void txtLebensenergieMALI_TextChanged(object sender, EventArgs e)
         {
@@ -652,9 +735,9 @@ namespace DSA_Project
             txtMagieresistenzERG.Text = controll.EnergieMAX(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
         }
 
-       
+
         private void txtGeldD_TextChanged(object sender, EventArgs e)
-        {  
+        {
             txtGeldD.Text = controll.Money(DSA_MONEY.D, txtGeldD.Text.TrimEnd('D')).ToString() + "D";
         }
         private void txtGeldS_TextChanged(object sender, EventArgs e)
@@ -692,7 +775,7 @@ namespace DSA_Project
 
         }
 
-        
+
         private void txtVorteil1_ValueChanged(object sender, EventArgs e)
         {
             int number = 1;
@@ -997,10 +1080,48 @@ namespace DSA_Project
         }
 
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void TAWChange(object sender, EventArgs e)
         {
+            TextBox box = (TextBox)sender;
+            String BasicString = "PTTaw";
+            String NameString = box.Name;
+            String number = NameString.Substring(BasicString.Length, NameString.Length- BasicString.Length);
 
+            Talent talent = controll.getTalent(currentType, number);
+
+            if (talent != null)
+            {
+                String Substring = box.Text;
+                if (String.Equals(Substring, "-"))
+                {
+                    return;
+                }
+
+                talent.setTaw(box.Text);
+                box.Text = talent.getTaW().ToString();
+            }
+            this.refresh();            
         }
-        
-    }
+
+        private void radioKörperlicheTalente_CheckedChanged(object sender, EventArgs e)
+        {
+            currentType = DSA_TALENTS.PHYSICALLY;
+            setUPTalents(currentType);
+        }
+        private void radioSozialTalente_CheckedChanged(object sender, EventArgs e)
+        {
+            currentType = DSA_TALENTS.SOCIAL;
+            setUPTalents(currentType);
+        }
+        private void radioNaturTalente_CheckedChanged(object sender, EventArgs e)
+        {
+            currentType = DSA_TALENTS.NATURE;
+            setUPTalents(currentType);
+        }
+        private void radioKnowldageTalente_CheckedChanged(object sender, EventArgs e)
+        {
+            currentType = DSA_TALENTS.KNOWLDAGE;
+            setUPTalents(currentType);
+        }
+    }        
 }
