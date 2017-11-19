@@ -325,12 +325,89 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblAugenfarbe = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.talents = new System.Windows.Forms.TabPage();
+            this.groupBoxKampf = new System.Windows.Forms.GroupBox();
+            this.PTPA29 = new System.Windows.Forms.TextBox();
+            this.PTPA30 = new System.Windows.Forms.TextBox();
+            this.PTPA28 = new System.Windows.Forms.TextBox();
+            this.PTPA24 = new System.Windows.Forms.TextBox();
+            this.PTPA25 = new System.Windows.Forms.TextBox();
+            this.PTPA27 = new System.Windows.Forms.TextBox();
+            this.PTPA26 = new System.Windows.Forms.TextBox();
+            this.PTAT29 = new System.Windows.Forms.TextBox();
+            this.PTAT30 = new System.Windows.Forms.TextBox();
+            this.PTAT28 = new System.Windows.Forms.TextBox();
+            this.PTAT24 = new System.Windows.Forms.TextBox();
+            this.PTAT25 = new System.Windows.Forms.TextBox();
+            this.PTAT27 = new System.Windows.Forms.TextBox();
+            this.PTAT26 = new System.Windows.Forms.TextBox();
+            this.PTPA23 = new System.Windows.Forms.TextBox();
+            this.PTAT23 = new System.Windows.Forms.TextBox();
+            this.PTPA21 = new System.Windows.Forms.TextBox();
+            this.PTPA22 = new System.Windows.Forms.TextBox();
+            this.PTPA20 = new System.Windows.Forms.TextBox();
+            this.PTPA19 = new System.Windows.Forms.TextBox();
+            this.PTAT21 = new System.Windows.Forms.TextBox();
+            this.PTAT22 = new System.Windows.Forms.TextBox();
+            this.PTAT20 = new System.Windows.Forms.TextBox();
+            this.PTAT19 = new System.Windows.Forms.TextBox();
+            this.PTPA17 = new System.Windows.Forms.TextBox();
+            this.PTPA18 = new System.Windows.Forms.TextBox();
+            this.PTPA16 = new System.Windows.Forms.TextBox();
+            this.PTPA12 = new System.Windows.Forms.TextBox();
+            this.PTPA13 = new System.Windows.Forms.TextBox();
+            this.PTPA15 = new System.Windows.Forms.TextBox();
+            this.PTPA14 = new System.Windows.Forms.TextBox();
+            this.PTPA11 = new System.Windows.Forms.TextBox();
+            this.PTPA7 = new System.Windows.Forms.TextBox();
+            this.PTPA8 = new System.Windows.Forms.TextBox();
+            this.PTPA10 = new System.Windows.Forms.TextBox();
+            this.PTPA9 = new System.Windows.Forms.TextBox();
+            this.PTPA6 = new System.Windows.Forms.TextBox();
+            this.PTPA2 = new System.Windows.Forms.TextBox();
+            this.PTPA3 = new System.Windows.Forms.TextBox();
+            this.PTPA5 = new System.Windows.Forms.TextBox();
+            this.PTPA4 = new System.Windows.Forms.TextBox();
+            this.PTPA1 = new System.Windows.Forms.TextBox();
+            this.PTAT17 = new System.Windows.Forms.TextBox();
+            this.PTAT18 = new System.Windows.Forms.TextBox();
+            this.PTAT16 = new System.Windows.Forms.TextBox();
+            this.PTAT12 = new System.Windows.Forms.TextBox();
+            this.PTAT13 = new System.Windows.Forms.TextBox();
+            this.PTAT15 = new System.Windows.Forms.TextBox();
+            this.PTAT14 = new System.Windows.Forms.TextBox();
+            this.PTAT11 = new System.Windows.Forms.TextBox();
+            this.PTAT7 = new System.Windows.Forms.TextBox();
+            this.PTAT8 = new System.Windows.Forms.TextBox();
+            this.PTAT10 = new System.Windows.Forms.TextBox();
+            this.PTAT9 = new System.Windows.Forms.TextBox();
+            this.PTAT6 = new System.Windows.Forms.TextBox();
+            this.PTAT2 = new System.Windows.Forms.TextBox();
+            this.PTAT3 = new System.Windows.Forms.TextBox();
+            this.PTAT5 = new System.Windows.Forms.TextBox();
+            this.PTAT4 = new System.Windows.Forms.TextBox();
+            this.PTAT1 = new System.Windows.Forms.TextBox();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.radioButtonFightingTaelnt = new System.Windows.Forms.RadioButton();
+            this.radioButtonCraftingTalent1 = new System.Windows.Forms.RadioButton();
+            this.radioCraftingTalent = new System.Windows.Forms.RadioButton();
+            this.radioKnowldageTalente = new System.Windows.Forms.RadioButton();
             this.radioNaturTalente = new System.Windows.Forms.RadioButton();
             this.radioSozialTalente = new System.Windows.Forms.RadioButton();
             this.radioKörperlicheTalente = new System.Windows.Forms.RadioButton();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.groupBoxAbleiten = new System.Windows.Forms.GroupBox();
+            this.PTAbleiten30 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten29 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten28 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten27 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten26 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten25 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten24 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten23 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten22 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten21 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten20 = new System.Windows.Forms.TextBox();
+            this.PTAbleiten19 = new System.Windows.Forms.TextBox();
             this.PTAbleiten1 = new System.Windows.Forms.TextBox();
             this.PTAbleiten2 = new System.Windows.Forms.TextBox();
             this.PTAbleiten18 = new System.Windows.Forms.TextBox();
@@ -349,7 +426,19 @@
             this.PTAbleiten9 = new System.Windows.Forms.TextBox();
             this.PTAbleiten11 = new System.Windows.Forms.TextBox();
             this.PTAbleiten10 = new System.Windows.Forms.TextBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.groupBoxAnforderungen = new System.Windows.Forms.GroupBox();
+            this.PTAnforderungen30 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen29 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen28 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen27 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen26 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen25 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen24 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen23 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen22 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen21 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen20 = new System.Windows.Forms.TextBox();
+            this.PTAnforderungen19 = new System.Windows.Forms.TextBox();
             this.PTAnforderungen1 = new System.Windows.Forms.TextBox();
             this.PTAnforderungen2 = new System.Windows.Forms.TextBox();
             this.PTAnforderungen18 = new System.Windows.Forms.TextBox();
@@ -368,7 +457,19 @@
             this.PTAnforderungen9 = new System.Windows.Forms.TextBox();
             this.PTAnforderungen11 = new System.Windows.Forms.TextBox();
             this.PTAnforderungen10 = new System.Windows.Forms.TextBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.groupBoxSpezialisierung = new System.Windows.Forms.GroupBox();
+            this.PTSpezialisierung30 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung29 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung28 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung27 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung26 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung25 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung24 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung23 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung22 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung21 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung20 = new System.Windows.Forms.TextBox();
+            this.PTSpezialisierung19 = new System.Windows.Forms.TextBox();
             this.PTSpezialisierung18 = new System.Windows.Forms.TextBox();
             this.PTSpezialisierung17 = new System.Windows.Forms.TextBox();
             this.PTSpezialisierung16 = new System.Windows.Forms.TextBox();
@@ -387,7 +488,19 @@
             this.PTSpezialisierung3 = new System.Windows.Forms.TextBox();
             this.PTSpezialisierung2 = new System.Windows.Forms.TextBox();
             this.PTSpezialisierung1 = new System.Windows.Forms.TextBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.groupBoxBilliger = new System.Windows.Forms.GroupBox();
+            this.PTBilliger30 = new System.Windows.Forms.TextBox();
+            this.PTBilliger29 = new System.Windows.Forms.TextBox();
+            this.PTBilliger27 = new System.Windows.Forms.TextBox();
+            this.PTBilliger28 = new System.Windows.Forms.TextBox();
+            this.PTBilliger26 = new System.Windows.Forms.TextBox();
+            this.PTBilliger24 = new System.Windows.Forms.TextBox();
+            this.PTBilliger25 = new System.Windows.Forms.TextBox();
+            this.PTBilliger23 = new System.Windows.Forms.TextBox();
+            this.PTBilliger21 = new System.Windows.Forms.TextBox();
+            this.PTBilliger22 = new System.Windows.Forms.TextBox();
+            this.PTBilliger20 = new System.Windows.Forms.TextBox();
+            this.PTBilliger19 = new System.Windows.Forms.TextBox();
             this.PTBilliger17 = new System.Windows.Forms.TextBox();
             this.PTBilliger18 = new System.Windows.Forms.TextBox();
             this.PTBilliger16 = new System.Windows.Forms.TextBox();
@@ -406,7 +519,19 @@
             this.PTBilliger4 = new System.Windows.Forms.TextBox();
             this.PTBilliger5 = new System.Windows.Forms.TextBox();
             this.PTBilliger1 = new System.Windows.Forms.TextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBoxBe = new System.Windows.Forms.GroupBox();
+            this.PTBe30 = new System.Windows.Forms.TextBox();
+            this.PTBe29 = new System.Windows.Forms.TextBox();
+            this.PTBe28 = new System.Windows.Forms.TextBox();
+            this.PTBe26 = new System.Windows.Forms.TextBox();
+            this.PTBe27 = new System.Windows.Forms.TextBox();
+            this.PTBe25 = new System.Windows.Forms.TextBox();
+            this.PTBe24 = new System.Windows.Forms.TextBox();
+            this.PTBe23 = new System.Windows.Forms.TextBox();
+            this.PTBe21 = new System.Windows.Forms.TextBox();
+            this.PTBe22 = new System.Windows.Forms.TextBox();
+            this.PTBe20 = new System.Windows.Forms.TextBox();
+            this.PTBe19 = new System.Windows.Forms.TextBox();
             this.PTBe17 = new System.Windows.Forms.TextBox();
             this.PTBe18 = new System.Windows.Forms.TextBox();
             this.PTBe16 = new System.Windows.Forms.TextBox();
@@ -425,7 +550,19 @@
             this.PTBe4 = new System.Windows.Forms.TextBox();
             this.PTBe5 = new System.Windows.Forms.TextBox();
             this.PTBe1 = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBoxTaW = new System.Windows.Forms.GroupBox();
+            this.PTTaw30 = new System.Windows.Forms.TextBox();
+            this.PTTaw29 = new System.Windows.Forms.TextBox();
+            this.PTTaw28 = new System.Windows.Forms.TextBox();
+            this.PTTaw27 = new System.Windows.Forms.TextBox();
+            this.PTTaw26 = new System.Windows.Forms.TextBox();
+            this.PTTaw25 = new System.Windows.Forms.TextBox();
+            this.PTTaw24 = new System.Windows.Forms.TextBox();
+            this.PTTaw23 = new System.Windows.Forms.TextBox();
+            this.PTTaw22 = new System.Windows.Forms.TextBox();
+            this.PTTaw21 = new System.Windows.Forms.TextBox();
+            this.PTTaw20 = new System.Windows.Forms.TextBox();
+            this.PTTaw19 = new System.Windows.Forms.TextBox();
             this.PTTaw18 = new System.Windows.Forms.TextBox();
             this.PTTaw17 = new System.Windows.Forms.TextBox();
             this.PTTaw16 = new System.Windows.Forms.TextBox();
@@ -444,7 +581,31 @@
             this.PTTaw3 = new System.Windows.Forms.TextBox();
             this.PTTaw2 = new System.Windows.Forms.TextBox();
             this.PTTaw1 = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBoxProbe = new System.Windows.Forms.GroupBox();
+            this.PTWürfe29 = new System.Windows.Forms.TextBox();
+            this.PTWürfe30 = new System.Windows.Forms.TextBox();
+            this.PTWürfe28 = new System.Windows.Forms.TextBox();
+            this.PTWürfe24 = new System.Windows.Forms.TextBox();
+            this.PTWürfe25 = new System.Windows.Forms.TextBox();
+            this.PTWürfe27 = new System.Windows.Forms.TextBox();
+            this.PTWürfe26 = new System.Windows.Forms.TextBox();
+            this.PTProbe29 = new System.Windows.Forms.TextBox();
+            this.PTProbe30 = new System.Windows.Forms.TextBox();
+            this.PTProbe28 = new System.Windows.Forms.TextBox();
+            this.PTProbe24 = new System.Windows.Forms.TextBox();
+            this.PTProbe25 = new System.Windows.Forms.TextBox();
+            this.PTProbe27 = new System.Windows.Forms.TextBox();
+            this.PTProbe26 = new System.Windows.Forms.TextBox();
+            this.PTWürfe23 = new System.Windows.Forms.TextBox();
+            this.PTProbe23 = new System.Windows.Forms.TextBox();
+            this.PTWürfe21 = new System.Windows.Forms.TextBox();
+            this.PTWürfe22 = new System.Windows.Forms.TextBox();
+            this.PTWürfe20 = new System.Windows.Forms.TextBox();
+            this.PTWürfe19 = new System.Windows.Forms.TextBox();
+            this.PTProbe21 = new System.Windows.Forms.TextBox();
+            this.PTProbe22 = new System.Windows.Forms.TextBox();
+            this.PTProbe20 = new System.Windows.Forms.TextBox();
+            this.PTProbe19 = new System.Windows.Forms.TextBox();
             this.PTWürfe17 = new System.Windows.Forms.TextBox();
             this.PTWürfe18 = new System.Windows.Forms.TextBox();
             this.PTWürfe16 = new System.Windows.Forms.TextBox();
@@ -481,7 +642,19 @@
             this.PTProbe5 = new System.Windows.Forms.TextBox();
             this.PTProbe4 = new System.Windows.Forms.TextBox();
             this.PTProbe1 = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBoxTalentName = new System.Windows.Forms.GroupBox();
+            this.PTName30 = new System.Windows.Forms.Label();
+            this.PTName29 = new System.Windows.Forms.Label();
+            this.PTName28 = new System.Windows.Forms.Label();
+            this.PTName27 = new System.Windows.Forms.Label();
+            this.PTName26 = new System.Windows.Forms.Label();
+            this.PTName25 = new System.Windows.Forms.Label();
+            this.PTName24 = new System.Windows.Forms.Label();
+            this.PTName23 = new System.Windows.Forms.Label();
+            this.PTName22 = new System.Windows.Forms.Label();
+            this.PTName21 = new System.Windows.Forms.Label();
+            this.PTName20 = new System.Windows.Forms.Label();
+            this.PTName19 = new System.Windows.Forms.Label();
             this.PTName18 = new System.Windows.Forms.Label();
             this.PTName17 = new System.Windows.Forms.Label();
             this.PTName16 = new System.Windows.Forms.Label();
@@ -500,74 +673,32 @@
             this.PTName3 = new System.Windows.Forms.Label();
             this.PTName2 = new System.Windows.Forms.Label();
             this.PTName1 = new System.Windows.Forms.Label();
-            this.socialTalents = new System.Windows.Forms.TabPage();
-            this.radioKnowldageTalente = new System.Windows.Forms.RadioButton();
-            this.PTName22 = new System.Windows.Forms.Label();
-            this.PTName21 = new System.Windows.Forms.Label();
-            this.PTName20 = new System.Windows.Forms.Label();
-            this.PTName19 = new System.Windows.Forms.Label();
-            this.PTWürfe21 = new System.Windows.Forms.TextBox();
-            this.PTWürfe22 = new System.Windows.Forms.TextBox();
-            this.PTWürfe20 = new System.Windows.Forms.TextBox();
-            this.PTWürfe19 = new System.Windows.Forms.TextBox();
-            this.PTProbe21 = new System.Windows.Forms.TextBox();
-            this.PTProbe22 = new System.Windows.Forms.TextBox();
-            this.PTProbe20 = new System.Windows.Forms.TextBox();
-            this.PTProbe19 = new System.Windows.Forms.TextBox();
-            this.PTTaw22 = new System.Windows.Forms.TextBox();
-            this.PTTaw21 = new System.Windows.Forms.TextBox();
-            this.PTTaw20 = new System.Windows.Forms.TextBox();
-            this.PTTaw19 = new System.Windows.Forms.TextBox();
-            this.PTBe21 = new System.Windows.Forms.TextBox();
-            this.PTBe22 = new System.Windows.Forms.TextBox();
-            this.PTBe20 = new System.Windows.Forms.TextBox();
-            this.PTBe19 = new System.Windows.Forms.TextBox();
-            this.PTBilliger21 = new System.Windows.Forms.TextBox();
-            this.PTBilliger22 = new System.Windows.Forms.TextBox();
-            this.PTBilliger20 = new System.Windows.Forms.TextBox();
-            this.PTBilliger19 = new System.Windows.Forms.TextBox();
-            this.PTSpezialisierung22 = new System.Windows.Forms.TextBox();
-            this.PTSpezialisierung21 = new System.Windows.Forms.TextBox();
-            this.PTSpezialisierung20 = new System.Windows.Forms.TextBox();
-            this.PTSpezialisierung19 = new System.Windows.Forms.TextBox();
-            this.PTAnforderungen22 = new System.Windows.Forms.TextBox();
-            this.PTAnforderungen21 = new System.Windows.Forms.TextBox();
-            this.PTAnforderungen20 = new System.Windows.Forms.TextBox();
-            this.PTAnforderungen19 = new System.Windows.Forms.TextBox();
-            this.PTAbleiten22 = new System.Windows.Forms.TextBox();
-            this.PTAbleiten21 = new System.Windows.Forms.TextBox();
-            this.PTAbleiten20 = new System.Windows.Forms.TextBox();
-            this.PTAbleiten19 = new System.Windows.Forms.TextBox();
-            this.PTWürfe23 = new System.Windows.Forms.TextBox();
-            this.PTProbe23 = new System.Windows.Forms.TextBox();
-            this.PTTaw23 = new System.Windows.Forms.TextBox();
-            this.PTBe23 = new System.Windows.Forms.TextBox();
-            this.PTBilliger23 = new System.Windows.Forms.TextBox();
-            this.PTSpezialisierung23 = new System.Windows.Forms.TextBox();
-            this.PTAnforderungen23 = new System.Windows.Forms.TextBox();
-            this.PTAbleiten23 = new System.Windows.Forms.TextBox();
-            this.PTName23 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.worldmap = new System.Windows.Forms.TabPage();
             this.TabControl.SuspendLayout();
             this.Heldenbrief.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.talents.SuspendLayout();
+            this.groupBoxKampf.SuspendLayout();
             this.groupBox19.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.groupBoxAbleiten.SuspendLayout();
+            this.groupBoxAnforderungen.SuspendLayout();
+            this.groupBoxSpezialisierung.SuspendLayout();
+            this.groupBoxBilliger.SuspendLayout();
+            this.groupBoxBe.SuspendLayout();
+            this.groupBoxTaW.SuspendLayout();
+            this.groupBoxProbe.SuspendLayout();
+            this.groupBoxTalentName.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabControl
             // 
             this.TabControl.Controls.Add(this.Heldenbrief);
-            this.TabControl.Controls.Add(this.tabPage2);
-            this.TabControl.Controls.Add(this.socialTalents);
+            this.TabControl.Controls.Add(this.worldmap);
+            this.TabControl.Controls.Add(this.talents);
             resources.ApplyResources(this.TabControl, "TabControl");
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
@@ -2770,23 +2901,516 @@
             resources.ApplyResources(this.lblName, "lblName");
             this.lblName.Name = "lblName";
             // 
-            // tabPage2
+            // talents
             // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage2.Controls.Add(this.groupBox19);
-            this.tabPage2.Controls.Add(this.groupBox10);
-            this.tabPage2.Controls.Add(this.groupBox9);
-            this.tabPage2.Controls.Add(this.groupBox8);
-            this.tabPage2.Controls.Add(this.groupBox7);
-            this.tabPage2.Controls.Add(this.groupBox6);
-            this.tabPage2.Controls.Add(this.groupBox5);
-            this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Controls.Add(this.groupBox3);
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.Name = "tabPage2";
+            resources.ApplyResources(this.talents, "talents");
+            this.talents.BackColor = System.Drawing.SystemColors.Control;
+            this.talents.Controls.Add(this.groupBoxKampf);
+            this.talents.Controls.Add(this.groupBox19);
+            this.talents.Controls.Add(this.groupBoxAbleiten);
+            this.talents.Controls.Add(this.groupBoxAnforderungen);
+            this.talents.Controls.Add(this.groupBoxSpezialisierung);
+            this.talents.Controls.Add(this.groupBoxBilliger);
+            this.talents.Controls.Add(this.groupBoxBe);
+            this.talents.Controls.Add(this.groupBoxTaW);
+            this.talents.Controls.Add(this.groupBoxProbe);
+            this.talents.Controls.Add(this.groupBoxTalentName);
+            this.talents.Name = "talents";
+            // 
+            // groupBoxKampf
+            // 
+            this.groupBoxKampf.Controls.Add(this.PTPA29);
+            this.groupBoxKampf.Controls.Add(this.PTPA30);
+            this.groupBoxKampf.Controls.Add(this.PTPA28);
+            this.groupBoxKampf.Controls.Add(this.PTPA24);
+            this.groupBoxKampf.Controls.Add(this.PTPA25);
+            this.groupBoxKampf.Controls.Add(this.PTPA27);
+            this.groupBoxKampf.Controls.Add(this.PTPA26);
+            this.groupBoxKampf.Controls.Add(this.PTAT29);
+            this.groupBoxKampf.Controls.Add(this.PTAT30);
+            this.groupBoxKampf.Controls.Add(this.PTAT28);
+            this.groupBoxKampf.Controls.Add(this.PTAT24);
+            this.groupBoxKampf.Controls.Add(this.PTAT25);
+            this.groupBoxKampf.Controls.Add(this.PTAT27);
+            this.groupBoxKampf.Controls.Add(this.PTAT26);
+            this.groupBoxKampf.Controls.Add(this.PTPA23);
+            this.groupBoxKampf.Controls.Add(this.PTAT23);
+            this.groupBoxKampf.Controls.Add(this.PTPA21);
+            this.groupBoxKampf.Controls.Add(this.PTPA22);
+            this.groupBoxKampf.Controls.Add(this.PTPA20);
+            this.groupBoxKampf.Controls.Add(this.PTPA19);
+            this.groupBoxKampf.Controls.Add(this.PTAT21);
+            this.groupBoxKampf.Controls.Add(this.PTAT22);
+            this.groupBoxKampf.Controls.Add(this.PTAT20);
+            this.groupBoxKampf.Controls.Add(this.PTAT19);
+            this.groupBoxKampf.Controls.Add(this.PTPA17);
+            this.groupBoxKampf.Controls.Add(this.PTPA18);
+            this.groupBoxKampf.Controls.Add(this.PTPA16);
+            this.groupBoxKampf.Controls.Add(this.PTPA12);
+            this.groupBoxKampf.Controls.Add(this.PTPA13);
+            this.groupBoxKampf.Controls.Add(this.PTPA15);
+            this.groupBoxKampf.Controls.Add(this.PTPA14);
+            this.groupBoxKampf.Controls.Add(this.PTPA11);
+            this.groupBoxKampf.Controls.Add(this.PTPA7);
+            this.groupBoxKampf.Controls.Add(this.PTPA8);
+            this.groupBoxKampf.Controls.Add(this.PTPA10);
+            this.groupBoxKampf.Controls.Add(this.PTPA9);
+            this.groupBoxKampf.Controls.Add(this.PTPA6);
+            this.groupBoxKampf.Controls.Add(this.PTPA2);
+            this.groupBoxKampf.Controls.Add(this.PTPA3);
+            this.groupBoxKampf.Controls.Add(this.PTPA5);
+            this.groupBoxKampf.Controls.Add(this.PTPA4);
+            this.groupBoxKampf.Controls.Add(this.PTPA1);
+            this.groupBoxKampf.Controls.Add(this.PTAT17);
+            this.groupBoxKampf.Controls.Add(this.PTAT18);
+            this.groupBoxKampf.Controls.Add(this.PTAT16);
+            this.groupBoxKampf.Controls.Add(this.PTAT12);
+            this.groupBoxKampf.Controls.Add(this.PTAT13);
+            this.groupBoxKampf.Controls.Add(this.PTAT15);
+            this.groupBoxKampf.Controls.Add(this.PTAT14);
+            this.groupBoxKampf.Controls.Add(this.PTAT11);
+            this.groupBoxKampf.Controls.Add(this.PTAT7);
+            this.groupBoxKampf.Controls.Add(this.PTAT8);
+            this.groupBoxKampf.Controls.Add(this.PTAT10);
+            this.groupBoxKampf.Controls.Add(this.PTAT9);
+            this.groupBoxKampf.Controls.Add(this.PTAT6);
+            this.groupBoxKampf.Controls.Add(this.PTAT2);
+            this.groupBoxKampf.Controls.Add(this.PTAT3);
+            this.groupBoxKampf.Controls.Add(this.PTAT5);
+            this.groupBoxKampf.Controls.Add(this.PTAT4);
+            this.groupBoxKampf.Controls.Add(this.PTAT1);
+            resources.ApplyResources(this.groupBoxKampf, "groupBoxKampf");
+            this.groupBoxKampf.Name = "groupBoxKampf";
+            this.groupBoxKampf.TabStop = false;
+            // 
+            // PTPA29
+            // 
+            this.PTPA29.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA29, "PTPA29");
+            this.PTPA29.Name = "PTPA29";
+            this.PTPA29.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA30
+            // 
+            this.PTPA30.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA30, "PTPA30");
+            this.PTPA30.Name = "PTPA30";
+            this.PTPA30.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA28
+            // 
+            this.PTPA28.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA28, "PTPA28");
+            this.PTPA28.Name = "PTPA28";
+            this.PTPA28.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA24
+            // 
+            this.PTPA24.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA24, "PTPA24");
+            this.PTPA24.Name = "PTPA24";
+            this.PTPA24.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA25
+            // 
+            this.PTPA25.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA25, "PTPA25");
+            this.PTPA25.Name = "PTPA25";
+            this.PTPA25.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA27
+            // 
+            this.PTPA27.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA27, "PTPA27");
+            this.PTPA27.Name = "PTPA27";
+            this.PTPA27.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA26
+            // 
+            this.PTPA26.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA26, "PTPA26");
+            this.PTPA26.Name = "PTPA26";
+            this.PTPA26.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTAT29
+            // 
+            this.PTAT29.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT29, "PTAT29");
+            this.PTAT29.Name = "PTAT29";
+            this.PTAT29.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT30
+            // 
+            this.PTAT30.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT30, "PTAT30");
+            this.PTAT30.Name = "PTAT30";
+            this.PTAT30.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT28
+            // 
+            this.PTAT28.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT28, "PTAT28");
+            this.PTAT28.Name = "PTAT28";
+            this.PTAT28.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT24
+            // 
+            this.PTAT24.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT24, "PTAT24");
+            this.PTAT24.Name = "PTAT24";
+            this.PTAT24.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT25
+            // 
+            this.PTAT25.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT25, "PTAT25");
+            this.PTAT25.Name = "PTAT25";
+            this.PTAT25.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT27
+            // 
+            this.PTAT27.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT27, "PTAT27");
+            this.PTAT27.Name = "PTAT27";
+            this.PTAT27.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT26
+            // 
+            this.PTAT26.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT26, "PTAT26");
+            this.PTAT26.Name = "PTAT26";
+            this.PTAT26.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTPA23
+            // 
+            this.PTPA23.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA23, "PTPA23");
+            this.PTPA23.Name = "PTPA23";
+            this.PTPA23.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTAT23
+            // 
+            this.PTAT23.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT23, "PTAT23");
+            this.PTAT23.Name = "PTAT23";
+            this.PTAT23.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTPA21
+            // 
+            this.PTPA21.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA21, "PTPA21");
+            this.PTPA21.Name = "PTPA21";
+            this.PTPA21.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA22
+            // 
+            this.PTPA22.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA22, "PTPA22");
+            this.PTPA22.Name = "PTPA22";
+            this.PTPA22.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA20
+            // 
+            this.PTPA20.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA20, "PTPA20");
+            this.PTPA20.Name = "PTPA20";
+            this.PTPA20.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA19
+            // 
+            this.PTPA19.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA19, "PTPA19");
+            this.PTPA19.Name = "PTPA19";
+            this.PTPA19.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTAT21
+            // 
+            this.PTAT21.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT21, "PTAT21");
+            this.PTAT21.Name = "PTAT21";
+            this.PTAT21.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT22
+            // 
+            this.PTAT22.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT22, "PTAT22");
+            this.PTAT22.Name = "PTAT22";
+            this.PTAT22.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT20
+            // 
+            this.PTAT20.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT20, "PTAT20");
+            this.PTAT20.Name = "PTAT20";
+            this.PTAT20.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT19
+            // 
+            this.PTAT19.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT19, "PTAT19");
+            this.PTAT19.Name = "PTAT19";
+            this.PTAT19.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTPA17
+            // 
+            this.PTPA17.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA17, "PTPA17");
+            this.PTPA17.Name = "PTPA17";
+            this.PTPA17.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA18
+            // 
+            this.PTPA18.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA18, "PTPA18");
+            this.PTPA18.Name = "PTPA18";
+            this.PTPA18.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA16
+            // 
+            this.PTPA16.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA16, "PTPA16");
+            this.PTPA16.Name = "PTPA16";
+            this.PTPA16.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA12
+            // 
+            this.PTPA12.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA12, "PTPA12");
+            this.PTPA12.Name = "PTPA12";
+            this.PTPA12.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA13
+            // 
+            this.PTPA13.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA13, "PTPA13");
+            this.PTPA13.Name = "PTPA13";
+            this.PTPA13.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA15
+            // 
+            this.PTPA15.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA15, "PTPA15");
+            this.PTPA15.Name = "PTPA15";
+            this.PTPA15.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA14
+            // 
+            this.PTPA14.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA14, "PTPA14");
+            this.PTPA14.Name = "PTPA14";
+            this.PTPA14.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA11
+            // 
+            this.PTPA11.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA11, "PTPA11");
+            this.PTPA11.Name = "PTPA11";
+            this.PTPA11.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA7
+            // 
+            this.PTPA7.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA7, "PTPA7");
+            this.PTPA7.Name = "PTPA7";
+            this.PTPA7.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA8
+            // 
+            this.PTPA8.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA8, "PTPA8");
+            this.PTPA8.Name = "PTPA8";
+            this.PTPA8.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA10
+            // 
+            this.PTPA10.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA10, "PTPA10");
+            this.PTPA10.Name = "PTPA10";
+            this.PTPA10.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA9
+            // 
+            this.PTPA9.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA9, "PTPA9");
+            this.PTPA9.Name = "PTPA9";
+            this.PTPA9.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA6
+            // 
+            this.PTPA6.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA6, "PTPA6");
+            this.PTPA6.Name = "PTPA6";
+            this.PTPA6.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA2
+            // 
+            this.PTPA2.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA2, "PTPA2");
+            this.PTPA2.Name = "PTPA2";
+            this.PTPA2.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA3
+            // 
+            this.PTPA3.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA3, "PTPA3");
+            this.PTPA3.Name = "PTPA3";
+            this.PTPA3.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA5
+            // 
+            this.PTPA5.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA5, "PTPA5");
+            this.PTPA5.Name = "PTPA5";
+            this.PTPA5.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA4
+            // 
+            this.PTPA4.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA4, "PTPA4");
+            this.PTPA4.Name = "PTPA4";
+            this.PTPA4.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTPA1
+            // 
+            this.PTPA1.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTPA1, "PTPA1");
+            this.PTPA1.Name = "PTPA1";
+            this.PTPA1.TextChanged += new System.EventHandler(this.PAChanged);
+            // 
+            // PTAT17
+            // 
+            this.PTAT17.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT17, "PTAT17");
+            this.PTAT17.Name = "PTAT17";
+            this.PTAT17.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT18
+            // 
+            this.PTAT18.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT18, "PTAT18");
+            this.PTAT18.Name = "PTAT18";
+            this.PTAT18.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT16
+            // 
+            this.PTAT16.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT16, "PTAT16");
+            this.PTAT16.Name = "PTAT16";
+            this.PTAT16.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT12
+            // 
+            this.PTAT12.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT12, "PTAT12");
+            this.PTAT12.Name = "PTAT12";
+            this.PTAT12.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT13
+            // 
+            this.PTAT13.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT13, "PTAT13");
+            this.PTAT13.Name = "PTAT13";
+            this.PTAT13.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT15
+            // 
+            this.PTAT15.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT15, "PTAT15");
+            this.PTAT15.Name = "PTAT15";
+            this.PTAT15.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT14
+            // 
+            this.PTAT14.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT14, "PTAT14");
+            this.PTAT14.Name = "PTAT14";
+            this.PTAT14.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT11
+            // 
+            this.PTAT11.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT11, "PTAT11");
+            this.PTAT11.Name = "PTAT11";
+            this.PTAT11.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT7
+            // 
+            this.PTAT7.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT7, "PTAT7");
+            this.PTAT7.Name = "PTAT7";
+            this.PTAT7.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT8
+            // 
+            this.PTAT8.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT8, "PTAT8");
+            this.PTAT8.Name = "PTAT8";
+            this.PTAT8.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT10
+            // 
+            this.PTAT10.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT10, "PTAT10");
+            this.PTAT10.Name = "PTAT10";
+            this.PTAT10.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT9
+            // 
+            this.PTAT9.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT9, "PTAT9");
+            this.PTAT9.Name = "PTAT9";
+            this.PTAT9.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT6
+            // 
+            this.PTAT6.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT6, "PTAT6");
+            this.PTAT6.Name = "PTAT6";
+            this.PTAT6.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT2
+            // 
+            this.PTAT2.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT2, "PTAT2");
+            this.PTAT2.Name = "PTAT2";
+            this.PTAT2.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT3
+            // 
+            this.PTAT3.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT3, "PTAT3");
+            this.PTAT3.Name = "PTAT3";
+            this.PTAT3.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT5
+            // 
+            this.PTAT5.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT5, "PTAT5");
+            this.PTAT5.Name = "PTAT5";
+            this.PTAT5.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT4
+            // 
+            this.PTAT4.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT4, "PTAT4");
+            this.PTAT4.Name = "PTAT4";
+            this.PTAT4.TextChanged += new System.EventHandler(this.ATChanged);
+            // 
+            // PTAT1
+            // 
+            this.PTAT1.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.PTAT1, "PTAT1");
+            this.PTAT1.Name = "PTAT1";
+            this.PTAT1.TextChanged += new System.EventHandler(this.ATChanged);
             // 
             // groupBox19
             // 
+            this.groupBox19.Controls.Add(this.radioButton3);
+            this.groupBox19.Controls.Add(this.radioButton2);
+            this.groupBox19.Controls.Add(this.radioButton1);
+            this.groupBox19.Controls.Add(this.radioButtonFightingTaelnt);
+            this.groupBox19.Controls.Add(this.radioButtonCraftingTalent1);
+            this.groupBox19.Controls.Add(this.radioCraftingTalent);
             this.groupBox19.Controls.Add(this.radioKnowldageTalente);
             this.groupBox19.Controls.Add(this.radioNaturTalente);
             this.groupBox19.Controls.Add(this.radioSozialTalente);
@@ -2794,6 +3418,34 @@
             resources.ApplyResources(this.groupBox19, "groupBox19");
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.TabStop = false;
+            // 
+            // radioButtonFightingTaelnt
+            // 
+            resources.ApplyResources(this.radioButtonFightingTaelnt, "radioButtonFightingTaelnt");
+            this.radioButtonFightingTaelnt.Name = "radioButtonFightingTaelnt";
+            this.radioButtonFightingTaelnt.UseVisualStyleBackColor = true;
+            this.radioButtonFightingTaelnt.CheckedChanged += new System.EventHandler(this.radioButtonFigtingTalent_ChecedChanged);
+            // 
+            // radioButtonCraftingTalent1
+            // 
+            resources.ApplyResources(this.radioButtonCraftingTalent1, "radioButtonCraftingTalent1");
+            this.radioButtonCraftingTalent1.Name = "radioButtonCraftingTalent1";
+            this.radioButtonCraftingTalent1.UseVisualStyleBackColor = true;
+            this.radioButtonCraftingTalent1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioCraftingTalent
+            // 
+            resources.ApplyResources(this.radioCraftingTalent, "radioCraftingTalent");
+            this.radioCraftingTalent.Name = "radioCraftingTalent";
+            this.radioCraftingTalent.UseVisualStyleBackColor = true;
+            this.radioCraftingTalent.CheckedChanged += new System.EventHandler(this.radioCraftingTalent_CheckedChanged);
+            // 
+            // radioKnowldageTalente
+            // 
+            resources.ApplyResources(this.radioKnowldageTalente, "radioKnowldageTalente");
+            this.radioKnowldageTalente.Name = "radioKnowldageTalente";
+            this.radioKnowldageTalente.UseVisualStyleBackColor = true;
+            this.radioKnowldageTalente.CheckedChanged += new System.EventHandler(this.radioKnowldageTalente_CheckedChanged);
             // 
             // radioNaturTalente
             // 
@@ -2818,34 +3470,113 @@
             this.radioKörperlicheTalente.UseVisualStyleBackColor = true;
             this.radioKörperlicheTalente.CheckedChanged += new System.EventHandler(this.radioKörperlicheTalente_CheckedChanged);
             // 
-            // groupBox10
+            // groupBoxAbleiten
             // 
-            this.groupBox10.Controls.Add(this.PTAbleiten23);
-            this.groupBox10.Controls.Add(this.PTAbleiten22);
-            this.groupBox10.Controls.Add(this.PTAbleiten21);
-            this.groupBox10.Controls.Add(this.PTAbleiten20);
-            this.groupBox10.Controls.Add(this.PTAbleiten19);
-            this.groupBox10.Controls.Add(this.PTAbleiten1);
-            this.groupBox10.Controls.Add(this.PTAbleiten2);
-            this.groupBox10.Controls.Add(this.PTAbleiten18);
-            this.groupBox10.Controls.Add(this.PTAbleiten3);
-            this.groupBox10.Controls.Add(this.PTAbleiten17);
-            this.groupBox10.Controls.Add(this.PTAbleiten4);
-            this.groupBox10.Controls.Add(this.PTAbleiten16);
-            this.groupBox10.Controls.Add(this.PTAbleiten5);
-            this.groupBox10.Controls.Add(this.PTAbleiten15);
-            this.groupBox10.Controls.Add(this.PTAbleiten6);
-            this.groupBox10.Controls.Add(this.PTAbleiten14);
-            this.groupBox10.Controls.Add(this.PTAbleiten7);
-            this.groupBox10.Controls.Add(this.PTAbleiten13);
-            this.groupBox10.Controls.Add(this.PTAbleiten8);
-            this.groupBox10.Controls.Add(this.PTAbleiten12);
-            this.groupBox10.Controls.Add(this.PTAbleiten9);
-            this.groupBox10.Controls.Add(this.PTAbleiten11);
-            this.groupBox10.Controls.Add(this.PTAbleiten10);
-            resources.ApplyResources(this.groupBox10, "groupBox10");
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.TabStop = false;
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten30);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten29);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten28);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten27);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten26);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten25);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten24);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten23);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten22);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten21);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten20);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten19);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten1);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten2);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten18);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten3);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten17);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten4);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten16);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten5);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten15);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten6);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten14);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten7);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten13);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten8);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten12);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten9);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten11);
+            this.groupBoxAbleiten.Controls.Add(this.PTAbleiten10);
+            resources.ApplyResources(this.groupBoxAbleiten, "groupBoxAbleiten");
+            this.groupBoxAbleiten.Name = "groupBoxAbleiten";
+            this.groupBoxAbleiten.TabStop = false;
+            // 
+            // PTAbleiten30
+            // 
+            resources.ApplyResources(this.PTAbleiten30, "PTAbleiten30");
+            this.PTAbleiten30.Name = "PTAbleiten30";
+            this.PTAbleiten30.ReadOnly = true;
+            // 
+            // PTAbleiten29
+            // 
+            resources.ApplyResources(this.PTAbleiten29, "PTAbleiten29");
+            this.PTAbleiten29.Name = "PTAbleiten29";
+            this.PTAbleiten29.ReadOnly = true;
+            // 
+            // PTAbleiten28
+            // 
+            resources.ApplyResources(this.PTAbleiten28, "PTAbleiten28");
+            this.PTAbleiten28.Name = "PTAbleiten28";
+            this.PTAbleiten28.ReadOnly = true;
+            // 
+            // PTAbleiten27
+            // 
+            resources.ApplyResources(this.PTAbleiten27, "PTAbleiten27");
+            this.PTAbleiten27.Name = "PTAbleiten27";
+            this.PTAbleiten27.ReadOnly = true;
+            // 
+            // PTAbleiten26
+            // 
+            resources.ApplyResources(this.PTAbleiten26, "PTAbleiten26");
+            this.PTAbleiten26.Name = "PTAbleiten26";
+            this.PTAbleiten26.ReadOnly = true;
+            // 
+            // PTAbleiten25
+            // 
+            resources.ApplyResources(this.PTAbleiten25, "PTAbleiten25");
+            this.PTAbleiten25.Name = "PTAbleiten25";
+            this.PTAbleiten25.ReadOnly = true;
+            // 
+            // PTAbleiten24
+            // 
+            resources.ApplyResources(this.PTAbleiten24, "PTAbleiten24");
+            this.PTAbleiten24.Name = "PTAbleiten24";
+            this.PTAbleiten24.ReadOnly = true;
+            // 
+            // PTAbleiten23
+            // 
+            resources.ApplyResources(this.PTAbleiten23, "PTAbleiten23");
+            this.PTAbleiten23.Name = "PTAbleiten23";
+            this.PTAbleiten23.ReadOnly = true;
+            // 
+            // PTAbleiten22
+            // 
+            resources.ApplyResources(this.PTAbleiten22, "PTAbleiten22");
+            this.PTAbleiten22.Name = "PTAbleiten22";
+            this.PTAbleiten22.ReadOnly = true;
+            // 
+            // PTAbleiten21
+            // 
+            resources.ApplyResources(this.PTAbleiten21, "PTAbleiten21");
+            this.PTAbleiten21.Name = "PTAbleiten21";
+            this.PTAbleiten21.ReadOnly = true;
+            // 
+            // PTAbleiten20
+            // 
+            resources.ApplyResources(this.PTAbleiten20, "PTAbleiten20");
+            this.PTAbleiten20.Name = "PTAbleiten20";
+            this.PTAbleiten20.ReadOnly = true;
+            // 
+            // PTAbleiten19
+            // 
+            resources.ApplyResources(this.PTAbleiten19, "PTAbleiten19");
+            this.PTAbleiten19.Name = "PTAbleiten19";
+            this.PTAbleiten19.ReadOnly = true;
             // 
             // PTAbleiten1
             // 
@@ -2955,34 +3686,113 @@
             this.PTAbleiten10.Name = "PTAbleiten10";
             this.PTAbleiten10.ReadOnly = true;
             // 
-            // groupBox9
+            // groupBoxAnforderungen
             // 
-            this.groupBox9.Controls.Add(this.PTAnforderungen23);
-            this.groupBox9.Controls.Add(this.PTAnforderungen22);
-            this.groupBox9.Controls.Add(this.PTAnforderungen21);
-            this.groupBox9.Controls.Add(this.PTAnforderungen20);
-            this.groupBox9.Controls.Add(this.PTAnforderungen19);
-            this.groupBox9.Controls.Add(this.PTAnforderungen1);
-            this.groupBox9.Controls.Add(this.PTAnforderungen2);
-            this.groupBox9.Controls.Add(this.PTAnforderungen18);
-            this.groupBox9.Controls.Add(this.PTAnforderungen3);
-            this.groupBox9.Controls.Add(this.PTAnforderungen17);
-            this.groupBox9.Controls.Add(this.PTAnforderungen4);
-            this.groupBox9.Controls.Add(this.PTAnforderungen16);
-            this.groupBox9.Controls.Add(this.PTAnforderungen5);
-            this.groupBox9.Controls.Add(this.PTAnforderungen15);
-            this.groupBox9.Controls.Add(this.PTAnforderungen6);
-            this.groupBox9.Controls.Add(this.PTAnforderungen14);
-            this.groupBox9.Controls.Add(this.PTAnforderungen7);
-            this.groupBox9.Controls.Add(this.PTAnforderungen13);
-            this.groupBox9.Controls.Add(this.PTAnforderungen8);
-            this.groupBox9.Controls.Add(this.PTAnforderungen12);
-            this.groupBox9.Controls.Add(this.PTAnforderungen9);
-            this.groupBox9.Controls.Add(this.PTAnforderungen11);
-            this.groupBox9.Controls.Add(this.PTAnforderungen10);
-            resources.ApplyResources(this.groupBox9, "groupBox9");
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.TabStop = false;
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen30);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen29);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen28);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen27);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen26);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen25);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen24);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen23);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen22);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen21);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen20);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen19);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen1);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen2);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen18);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen3);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen17);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen4);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen16);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen5);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen15);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen6);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen14);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen7);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen13);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen8);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen12);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen9);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen11);
+            this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen10);
+            resources.ApplyResources(this.groupBoxAnforderungen, "groupBoxAnforderungen");
+            this.groupBoxAnforderungen.Name = "groupBoxAnforderungen";
+            this.groupBoxAnforderungen.TabStop = false;
+            // 
+            // PTAnforderungen30
+            // 
+            resources.ApplyResources(this.PTAnforderungen30, "PTAnforderungen30");
+            this.PTAnforderungen30.Name = "PTAnforderungen30";
+            this.PTAnforderungen30.ReadOnly = true;
+            // 
+            // PTAnforderungen29
+            // 
+            resources.ApplyResources(this.PTAnforderungen29, "PTAnforderungen29");
+            this.PTAnforderungen29.Name = "PTAnforderungen29";
+            this.PTAnforderungen29.ReadOnly = true;
+            // 
+            // PTAnforderungen28
+            // 
+            resources.ApplyResources(this.PTAnforderungen28, "PTAnforderungen28");
+            this.PTAnforderungen28.Name = "PTAnforderungen28";
+            this.PTAnforderungen28.ReadOnly = true;
+            // 
+            // PTAnforderungen27
+            // 
+            resources.ApplyResources(this.PTAnforderungen27, "PTAnforderungen27");
+            this.PTAnforderungen27.Name = "PTAnforderungen27";
+            this.PTAnforderungen27.ReadOnly = true;
+            // 
+            // PTAnforderungen26
+            // 
+            resources.ApplyResources(this.PTAnforderungen26, "PTAnforderungen26");
+            this.PTAnforderungen26.Name = "PTAnforderungen26";
+            this.PTAnforderungen26.ReadOnly = true;
+            // 
+            // PTAnforderungen25
+            // 
+            resources.ApplyResources(this.PTAnforderungen25, "PTAnforderungen25");
+            this.PTAnforderungen25.Name = "PTAnforderungen25";
+            this.PTAnforderungen25.ReadOnly = true;
+            // 
+            // PTAnforderungen24
+            // 
+            resources.ApplyResources(this.PTAnforderungen24, "PTAnforderungen24");
+            this.PTAnforderungen24.Name = "PTAnforderungen24";
+            this.PTAnforderungen24.ReadOnly = true;
+            // 
+            // PTAnforderungen23
+            // 
+            resources.ApplyResources(this.PTAnforderungen23, "PTAnforderungen23");
+            this.PTAnforderungen23.Name = "PTAnforderungen23";
+            this.PTAnforderungen23.ReadOnly = true;
+            // 
+            // PTAnforderungen22
+            // 
+            resources.ApplyResources(this.PTAnforderungen22, "PTAnforderungen22");
+            this.PTAnforderungen22.Name = "PTAnforderungen22";
+            this.PTAnforderungen22.ReadOnly = true;
+            // 
+            // PTAnforderungen21
+            // 
+            resources.ApplyResources(this.PTAnforderungen21, "PTAnforderungen21");
+            this.PTAnforderungen21.Name = "PTAnforderungen21";
+            this.PTAnforderungen21.ReadOnly = true;
+            // 
+            // PTAnforderungen20
+            // 
+            resources.ApplyResources(this.PTAnforderungen20, "PTAnforderungen20");
+            this.PTAnforderungen20.Name = "PTAnforderungen20";
+            this.PTAnforderungen20.ReadOnly = true;
+            // 
+            // PTAnforderungen19
+            // 
+            resources.ApplyResources(this.PTAnforderungen19, "PTAnforderungen19");
+            this.PTAnforderungen19.Name = "PTAnforderungen19";
+            this.PTAnforderungen19.ReadOnly = true;
             // 
             // PTAnforderungen1
             // 
@@ -3092,34 +3902,113 @@
             this.PTAnforderungen10.Name = "PTAnforderungen10";
             this.PTAnforderungen10.ReadOnly = true;
             // 
-            // groupBox8
+            // groupBoxSpezialisierung
             // 
-            this.groupBox8.Controls.Add(this.PTSpezialisierung23);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung22);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung21);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung20);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung19);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung18);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung17);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung16);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung15);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung14);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung13);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung12);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung11);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung10);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung9);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung8);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung7);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung6);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung5);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung4);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung3);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung2);
-            this.groupBox8.Controls.Add(this.PTSpezialisierung1);
-            resources.ApplyResources(this.groupBox8, "groupBox8");
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.TabStop = false;
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung30);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung29);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung28);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung27);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung26);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung25);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung24);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung23);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung22);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung21);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung20);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung19);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung18);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung17);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung16);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung15);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung14);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung13);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung12);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung11);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung10);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung9);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung8);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung7);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung6);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung5);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung4);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung3);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung2);
+            this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung1);
+            resources.ApplyResources(this.groupBoxSpezialisierung, "groupBoxSpezialisierung");
+            this.groupBoxSpezialisierung.Name = "groupBoxSpezialisierung";
+            this.groupBoxSpezialisierung.TabStop = false;
+            // 
+            // PTSpezialisierung30
+            // 
+            resources.ApplyResources(this.PTSpezialisierung30, "PTSpezialisierung30");
+            this.PTSpezialisierung30.Name = "PTSpezialisierung30";
+            this.PTSpezialisierung30.ReadOnly = true;
+            // 
+            // PTSpezialisierung29
+            // 
+            resources.ApplyResources(this.PTSpezialisierung29, "PTSpezialisierung29");
+            this.PTSpezialisierung29.Name = "PTSpezialisierung29";
+            this.PTSpezialisierung29.ReadOnly = true;
+            // 
+            // PTSpezialisierung28
+            // 
+            resources.ApplyResources(this.PTSpezialisierung28, "PTSpezialisierung28");
+            this.PTSpezialisierung28.Name = "PTSpezialisierung28";
+            this.PTSpezialisierung28.ReadOnly = true;
+            // 
+            // PTSpezialisierung27
+            // 
+            resources.ApplyResources(this.PTSpezialisierung27, "PTSpezialisierung27");
+            this.PTSpezialisierung27.Name = "PTSpezialisierung27";
+            this.PTSpezialisierung27.ReadOnly = true;
+            // 
+            // PTSpezialisierung26
+            // 
+            resources.ApplyResources(this.PTSpezialisierung26, "PTSpezialisierung26");
+            this.PTSpezialisierung26.Name = "PTSpezialisierung26";
+            this.PTSpezialisierung26.ReadOnly = true;
+            // 
+            // PTSpezialisierung25
+            // 
+            resources.ApplyResources(this.PTSpezialisierung25, "PTSpezialisierung25");
+            this.PTSpezialisierung25.Name = "PTSpezialisierung25";
+            this.PTSpezialisierung25.ReadOnly = true;
+            // 
+            // PTSpezialisierung24
+            // 
+            resources.ApplyResources(this.PTSpezialisierung24, "PTSpezialisierung24");
+            this.PTSpezialisierung24.Name = "PTSpezialisierung24";
+            this.PTSpezialisierung24.ReadOnly = true;
+            // 
+            // PTSpezialisierung23
+            // 
+            resources.ApplyResources(this.PTSpezialisierung23, "PTSpezialisierung23");
+            this.PTSpezialisierung23.Name = "PTSpezialisierung23";
+            this.PTSpezialisierung23.ReadOnly = true;
+            // 
+            // PTSpezialisierung22
+            // 
+            resources.ApplyResources(this.PTSpezialisierung22, "PTSpezialisierung22");
+            this.PTSpezialisierung22.Name = "PTSpezialisierung22";
+            this.PTSpezialisierung22.ReadOnly = true;
+            // 
+            // PTSpezialisierung21
+            // 
+            resources.ApplyResources(this.PTSpezialisierung21, "PTSpezialisierung21");
+            this.PTSpezialisierung21.Name = "PTSpezialisierung21";
+            this.PTSpezialisierung21.ReadOnly = true;
+            // 
+            // PTSpezialisierung20
+            // 
+            resources.ApplyResources(this.PTSpezialisierung20, "PTSpezialisierung20");
+            this.PTSpezialisierung20.Name = "PTSpezialisierung20";
+            this.PTSpezialisierung20.ReadOnly = true;
+            // 
+            // PTSpezialisierung19
+            // 
+            resources.ApplyResources(this.PTSpezialisierung19, "PTSpezialisierung19");
+            this.PTSpezialisierung19.Name = "PTSpezialisierung19";
+            this.PTSpezialisierung19.ReadOnly = true;
             // 
             // PTSpezialisierung18
             // 
@@ -3229,34 +4118,113 @@
             this.PTSpezialisierung1.Name = "PTSpezialisierung1";
             this.PTSpezialisierung1.ReadOnly = true;
             // 
-            // groupBox7
+            // groupBoxBilliger
             // 
-            this.groupBox7.Controls.Add(this.PTBilliger23);
-            this.groupBox7.Controls.Add(this.PTBilliger21);
-            this.groupBox7.Controls.Add(this.PTBilliger22);
-            this.groupBox7.Controls.Add(this.PTBilliger20);
-            this.groupBox7.Controls.Add(this.PTBilliger19);
-            this.groupBox7.Controls.Add(this.PTBilliger17);
-            this.groupBox7.Controls.Add(this.PTBilliger18);
-            this.groupBox7.Controls.Add(this.PTBilliger16);
-            this.groupBox7.Controls.Add(this.PTBilliger12);
-            this.groupBox7.Controls.Add(this.PTBilliger13);
-            this.groupBox7.Controls.Add(this.PTBilliger14);
-            this.groupBox7.Controls.Add(this.PTBilliger15);
-            this.groupBox7.Controls.Add(this.PTBilliger11);
-            this.groupBox7.Controls.Add(this.PTBilliger7);
-            this.groupBox7.Controls.Add(this.PTBilliger8);
-            this.groupBox7.Controls.Add(this.PTBilliger9);
-            this.groupBox7.Controls.Add(this.PTBilliger10);
-            this.groupBox7.Controls.Add(this.PTBilliger6);
-            this.groupBox7.Controls.Add(this.PTBilliger2);
-            this.groupBox7.Controls.Add(this.PTBilliger3);
-            this.groupBox7.Controls.Add(this.PTBilliger4);
-            this.groupBox7.Controls.Add(this.PTBilliger5);
-            this.groupBox7.Controls.Add(this.PTBilliger1);
-            resources.ApplyResources(this.groupBox7, "groupBox7");
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.TabStop = false;
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger30);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger29);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger27);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger28);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger26);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger24);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger25);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger23);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger21);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger22);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger20);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger19);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger17);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger18);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger16);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger12);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger13);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger14);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger15);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger11);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger7);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger8);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger9);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger10);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger6);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger2);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger3);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger4);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger5);
+            this.groupBoxBilliger.Controls.Add(this.PTBilliger1);
+            resources.ApplyResources(this.groupBoxBilliger, "groupBoxBilliger");
+            this.groupBoxBilliger.Name = "groupBoxBilliger";
+            this.groupBoxBilliger.TabStop = false;
+            // 
+            // PTBilliger30
+            // 
+            resources.ApplyResources(this.PTBilliger30, "PTBilliger30");
+            this.PTBilliger30.Name = "PTBilliger30";
+            this.PTBilliger30.ReadOnly = true;
+            // 
+            // PTBilliger29
+            // 
+            resources.ApplyResources(this.PTBilliger29, "PTBilliger29");
+            this.PTBilliger29.Name = "PTBilliger29";
+            this.PTBilliger29.ReadOnly = true;
+            // 
+            // PTBilliger27
+            // 
+            resources.ApplyResources(this.PTBilliger27, "PTBilliger27");
+            this.PTBilliger27.Name = "PTBilliger27";
+            this.PTBilliger27.ReadOnly = true;
+            // 
+            // PTBilliger28
+            // 
+            resources.ApplyResources(this.PTBilliger28, "PTBilliger28");
+            this.PTBilliger28.Name = "PTBilliger28";
+            this.PTBilliger28.ReadOnly = true;
+            // 
+            // PTBilliger26
+            // 
+            resources.ApplyResources(this.PTBilliger26, "PTBilliger26");
+            this.PTBilliger26.Name = "PTBilliger26";
+            this.PTBilliger26.ReadOnly = true;
+            // 
+            // PTBilliger24
+            // 
+            resources.ApplyResources(this.PTBilliger24, "PTBilliger24");
+            this.PTBilliger24.Name = "PTBilliger24";
+            this.PTBilliger24.ReadOnly = true;
+            // 
+            // PTBilliger25
+            // 
+            resources.ApplyResources(this.PTBilliger25, "PTBilliger25");
+            this.PTBilliger25.Name = "PTBilliger25";
+            this.PTBilliger25.ReadOnly = true;
+            // 
+            // PTBilliger23
+            // 
+            resources.ApplyResources(this.PTBilliger23, "PTBilliger23");
+            this.PTBilliger23.Name = "PTBilliger23";
+            this.PTBilliger23.ReadOnly = true;
+            // 
+            // PTBilliger21
+            // 
+            resources.ApplyResources(this.PTBilliger21, "PTBilliger21");
+            this.PTBilliger21.Name = "PTBilliger21";
+            this.PTBilliger21.ReadOnly = true;
+            // 
+            // PTBilliger22
+            // 
+            resources.ApplyResources(this.PTBilliger22, "PTBilliger22");
+            this.PTBilliger22.Name = "PTBilliger22";
+            this.PTBilliger22.ReadOnly = true;
+            // 
+            // PTBilliger20
+            // 
+            resources.ApplyResources(this.PTBilliger20, "PTBilliger20");
+            this.PTBilliger20.Name = "PTBilliger20";
+            this.PTBilliger20.ReadOnly = true;
+            // 
+            // PTBilliger19
+            // 
+            resources.ApplyResources(this.PTBilliger19, "PTBilliger19");
+            this.PTBilliger19.Name = "PTBilliger19";
+            this.PTBilliger19.ReadOnly = true;
             // 
             // PTBilliger17
             // 
@@ -3366,34 +4334,113 @@
             this.PTBilliger1.Name = "PTBilliger1";
             this.PTBilliger1.ReadOnly = true;
             // 
-            // groupBox6
+            // groupBoxBe
             // 
-            this.groupBox6.Controls.Add(this.PTBe23);
-            this.groupBox6.Controls.Add(this.PTBe21);
-            this.groupBox6.Controls.Add(this.PTBe22);
-            this.groupBox6.Controls.Add(this.PTBe20);
-            this.groupBox6.Controls.Add(this.PTBe19);
-            this.groupBox6.Controls.Add(this.PTBe17);
-            this.groupBox6.Controls.Add(this.PTBe18);
-            this.groupBox6.Controls.Add(this.PTBe16);
-            this.groupBox6.Controls.Add(this.PTBe12);
-            this.groupBox6.Controls.Add(this.PTBe13);
-            this.groupBox6.Controls.Add(this.PTBe14);
-            this.groupBox6.Controls.Add(this.PTBe15);
-            this.groupBox6.Controls.Add(this.PTBe11);
-            this.groupBox6.Controls.Add(this.PTBe7);
-            this.groupBox6.Controls.Add(this.PTBe8);
-            this.groupBox6.Controls.Add(this.PTBe9);
-            this.groupBox6.Controls.Add(this.PTBe10);
-            this.groupBox6.Controls.Add(this.PTBe6);
-            this.groupBox6.Controls.Add(this.PTBe2);
-            this.groupBox6.Controls.Add(this.PTBe3);
-            this.groupBox6.Controls.Add(this.PTBe4);
-            this.groupBox6.Controls.Add(this.PTBe5);
-            this.groupBox6.Controls.Add(this.PTBe1);
-            resources.ApplyResources(this.groupBox6, "groupBox6");
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.TabStop = false;
+            this.groupBoxBe.Controls.Add(this.PTBe30);
+            this.groupBoxBe.Controls.Add(this.PTBe29);
+            this.groupBoxBe.Controls.Add(this.PTBe28);
+            this.groupBoxBe.Controls.Add(this.PTBe26);
+            this.groupBoxBe.Controls.Add(this.PTBe27);
+            this.groupBoxBe.Controls.Add(this.PTBe25);
+            this.groupBoxBe.Controls.Add(this.PTBe24);
+            this.groupBoxBe.Controls.Add(this.PTBe23);
+            this.groupBoxBe.Controls.Add(this.PTBe21);
+            this.groupBoxBe.Controls.Add(this.PTBe22);
+            this.groupBoxBe.Controls.Add(this.PTBe20);
+            this.groupBoxBe.Controls.Add(this.PTBe19);
+            this.groupBoxBe.Controls.Add(this.PTBe17);
+            this.groupBoxBe.Controls.Add(this.PTBe18);
+            this.groupBoxBe.Controls.Add(this.PTBe16);
+            this.groupBoxBe.Controls.Add(this.PTBe12);
+            this.groupBoxBe.Controls.Add(this.PTBe13);
+            this.groupBoxBe.Controls.Add(this.PTBe14);
+            this.groupBoxBe.Controls.Add(this.PTBe15);
+            this.groupBoxBe.Controls.Add(this.PTBe11);
+            this.groupBoxBe.Controls.Add(this.PTBe7);
+            this.groupBoxBe.Controls.Add(this.PTBe8);
+            this.groupBoxBe.Controls.Add(this.PTBe9);
+            this.groupBoxBe.Controls.Add(this.PTBe10);
+            this.groupBoxBe.Controls.Add(this.PTBe6);
+            this.groupBoxBe.Controls.Add(this.PTBe2);
+            this.groupBoxBe.Controls.Add(this.PTBe3);
+            this.groupBoxBe.Controls.Add(this.PTBe4);
+            this.groupBoxBe.Controls.Add(this.PTBe5);
+            this.groupBoxBe.Controls.Add(this.PTBe1);
+            resources.ApplyResources(this.groupBoxBe, "groupBoxBe");
+            this.groupBoxBe.Name = "groupBoxBe";
+            this.groupBoxBe.TabStop = false;
+            // 
+            // PTBe30
+            // 
+            resources.ApplyResources(this.PTBe30, "PTBe30");
+            this.PTBe30.Name = "PTBe30";
+            this.PTBe30.ReadOnly = true;
+            // 
+            // PTBe29
+            // 
+            resources.ApplyResources(this.PTBe29, "PTBe29");
+            this.PTBe29.Name = "PTBe29";
+            this.PTBe29.ReadOnly = true;
+            // 
+            // PTBe28
+            // 
+            resources.ApplyResources(this.PTBe28, "PTBe28");
+            this.PTBe28.Name = "PTBe28";
+            this.PTBe28.ReadOnly = true;
+            // 
+            // PTBe26
+            // 
+            resources.ApplyResources(this.PTBe26, "PTBe26");
+            this.PTBe26.Name = "PTBe26";
+            this.PTBe26.ReadOnly = true;
+            // 
+            // PTBe27
+            // 
+            resources.ApplyResources(this.PTBe27, "PTBe27");
+            this.PTBe27.Name = "PTBe27";
+            this.PTBe27.ReadOnly = true;
+            // 
+            // PTBe25
+            // 
+            resources.ApplyResources(this.PTBe25, "PTBe25");
+            this.PTBe25.Name = "PTBe25";
+            this.PTBe25.ReadOnly = true;
+            // 
+            // PTBe24
+            // 
+            resources.ApplyResources(this.PTBe24, "PTBe24");
+            this.PTBe24.Name = "PTBe24";
+            this.PTBe24.ReadOnly = true;
+            // 
+            // PTBe23
+            // 
+            resources.ApplyResources(this.PTBe23, "PTBe23");
+            this.PTBe23.Name = "PTBe23";
+            this.PTBe23.ReadOnly = true;
+            // 
+            // PTBe21
+            // 
+            resources.ApplyResources(this.PTBe21, "PTBe21");
+            this.PTBe21.Name = "PTBe21";
+            this.PTBe21.ReadOnly = true;
+            // 
+            // PTBe22
+            // 
+            resources.ApplyResources(this.PTBe22, "PTBe22");
+            this.PTBe22.Name = "PTBe22";
+            this.PTBe22.ReadOnly = true;
+            // 
+            // PTBe20
+            // 
+            resources.ApplyResources(this.PTBe20, "PTBe20");
+            this.PTBe20.Name = "PTBe20";
+            this.PTBe20.ReadOnly = true;
+            // 
+            // PTBe19
+            // 
+            resources.ApplyResources(this.PTBe19, "PTBe19");
+            this.PTBe19.Name = "PTBe19";
+            this.PTBe19.ReadOnly = true;
             // 
             // PTBe17
             // 
@@ -3503,35 +4550,114 @@
             this.PTBe1.Name = "PTBe1";
             this.PTBe1.ReadOnly = true;
             // 
-            // groupBox5
+            // groupBoxTaW
             // 
-            this.groupBox5.Controls.Add(this.PTTaw23);
-            this.groupBox5.Controls.Add(this.PTTaw22);
-            this.groupBox5.Controls.Add(this.PTTaw21);
-            this.groupBox5.Controls.Add(this.PTTaw20);
-            this.groupBox5.Controls.Add(this.PTTaw19);
-            this.groupBox5.Controls.Add(this.PTTaw18);
-            this.groupBox5.Controls.Add(this.PTTaw17);
-            this.groupBox5.Controls.Add(this.PTTaw16);
-            this.groupBox5.Controls.Add(this.PTTaw15);
-            this.groupBox5.Controls.Add(this.PTTaw14);
-            this.groupBox5.Controls.Add(this.PTTaw13);
-            this.groupBox5.Controls.Add(this.PTTaw12);
-            this.groupBox5.Controls.Add(this.PTTaw11);
-            this.groupBox5.Controls.Add(this.PTTaw10);
-            this.groupBox5.Controls.Add(this.PTTaw9);
-            this.groupBox5.Controls.Add(this.PTTaw8);
-            this.groupBox5.Controls.Add(this.PTTaw7);
-            this.groupBox5.Controls.Add(this.PTTaw6);
-            this.groupBox5.Controls.Add(this.PTTaw5);
-            this.groupBox5.Controls.Add(this.PTTaw4);
-            this.groupBox5.Controls.Add(this.PTTaw3);
-            this.groupBox5.Controls.Add(this.PTTaw2);
-            this.groupBox5.Controls.Add(this.PTTaw1);
-            resources.ApplyResources(this.groupBox5, "groupBox5");
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.TabStop = false;
-            this.groupBox5.TextChanged += new System.EventHandler(this.TAWChange);
+            this.groupBoxTaW.Controls.Add(this.PTTaw30);
+            this.groupBoxTaW.Controls.Add(this.PTTaw29);
+            this.groupBoxTaW.Controls.Add(this.PTTaw28);
+            this.groupBoxTaW.Controls.Add(this.PTTaw27);
+            this.groupBoxTaW.Controls.Add(this.PTTaw26);
+            this.groupBoxTaW.Controls.Add(this.PTTaw25);
+            this.groupBoxTaW.Controls.Add(this.PTTaw24);
+            this.groupBoxTaW.Controls.Add(this.PTTaw23);
+            this.groupBoxTaW.Controls.Add(this.PTTaw22);
+            this.groupBoxTaW.Controls.Add(this.PTTaw21);
+            this.groupBoxTaW.Controls.Add(this.PTTaw20);
+            this.groupBoxTaW.Controls.Add(this.PTTaw19);
+            this.groupBoxTaW.Controls.Add(this.PTTaw18);
+            this.groupBoxTaW.Controls.Add(this.PTTaw17);
+            this.groupBoxTaW.Controls.Add(this.PTTaw16);
+            this.groupBoxTaW.Controls.Add(this.PTTaw15);
+            this.groupBoxTaW.Controls.Add(this.PTTaw14);
+            this.groupBoxTaW.Controls.Add(this.PTTaw13);
+            this.groupBoxTaW.Controls.Add(this.PTTaw12);
+            this.groupBoxTaW.Controls.Add(this.PTTaw11);
+            this.groupBoxTaW.Controls.Add(this.PTTaw10);
+            this.groupBoxTaW.Controls.Add(this.PTTaw9);
+            this.groupBoxTaW.Controls.Add(this.PTTaw8);
+            this.groupBoxTaW.Controls.Add(this.PTTaw7);
+            this.groupBoxTaW.Controls.Add(this.PTTaw6);
+            this.groupBoxTaW.Controls.Add(this.PTTaw5);
+            this.groupBoxTaW.Controls.Add(this.PTTaw4);
+            this.groupBoxTaW.Controls.Add(this.PTTaw3);
+            this.groupBoxTaW.Controls.Add(this.PTTaw2);
+            this.groupBoxTaW.Controls.Add(this.PTTaw1);
+            resources.ApplyResources(this.groupBoxTaW, "groupBoxTaW");
+            this.groupBoxTaW.Name = "groupBoxTaW";
+            this.groupBoxTaW.TabStop = false;
+            this.groupBoxTaW.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw30
+            // 
+            resources.ApplyResources(this.PTTaw30, "PTTaw30");
+            this.PTTaw30.Name = "PTTaw30";
+            this.PTTaw30.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw29
+            // 
+            resources.ApplyResources(this.PTTaw29, "PTTaw29");
+            this.PTTaw29.Name = "PTTaw29";
+            this.PTTaw29.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw28
+            // 
+            resources.ApplyResources(this.PTTaw28, "PTTaw28");
+            this.PTTaw28.Name = "PTTaw28";
+            this.PTTaw28.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw27
+            // 
+            resources.ApplyResources(this.PTTaw27, "PTTaw27");
+            this.PTTaw27.Name = "PTTaw27";
+            this.PTTaw27.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw26
+            // 
+            resources.ApplyResources(this.PTTaw26, "PTTaw26");
+            this.PTTaw26.Name = "PTTaw26";
+            this.PTTaw26.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw25
+            // 
+            resources.ApplyResources(this.PTTaw25, "PTTaw25");
+            this.PTTaw25.Name = "PTTaw25";
+            this.PTTaw25.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw24
+            // 
+            resources.ApplyResources(this.PTTaw24, "PTTaw24");
+            this.PTTaw24.Name = "PTTaw24";
+            this.PTTaw24.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw23
+            // 
+            resources.ApplyResources(this.PTTaw23, "PTTaw23");
+            this.PTTaw23.Name = "PTTaw23";
+            this.PTTaw23.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw22
+            // 
+            resources.ApplyResources(this.PTTaw22, "PTTaw22");
+            this.PTTaw22.Name = "PTTaw22";
+            this.PTTaw22.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw21
+            // 
+            resources.ApplyResources(this.PTTaw21, "PTTaw21");
+            this.PTTaw21.Name = "PTTaw21";
+            this.PTTaw21.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw20
+            // 
+            resources.ApplyResources(this.PTTaw20, "PTTaw20");
+            this.PTTaw20.Name = "PTTaw20";
+            this.PTTaw20.TextChanged += new System.EventHandler(this.TAWChange);
+            // 
+            // PTTaw19
+            // 
+            resources.ApplyResources(this.PTTaw19, "PTTaw19");
+            this.PTTaw19.Name = "PTTaw19";
+            this.PTTaw19.TextChanged += new System.EventHandler(this.TAWChange);
             // 
             // PTTaw18
             // 
@@ -3641,57 +4767,215 @@
             this.PTTaw1.Name = "PTTaw1";
             this.PTTaw1.TextChanged += new System.EventHandler(this.TAWChange);
             // 
-            // groupBox4
+            // groupBoxProbe
             // 
-            this.groupBox4.Controls.Add(this.PTWürfe23);
-            this.groupBox4.Controls.Add(this.PTProbe23);
-            this.groupBox4.Controls.Add(this.PTWürfe21);
-            this.groupBox4.Controls.Add(this.PTWürfe22);
-            this.groupBox4.Controls.Add(this.PTWürfe20);
-            this.groupBox4.Controls.Add(this.PTWürfe19);
-            this.groupBox4.Controls.Add(this.PTProbe21);
-            this.groupBox4.Controls.Add(this.PTProbe22);
-            this.groupBox4.Controls.Add(this.PTProbe20);
-            this.groupBox4.Controls.Add(this.PTProbe19);
-            this.groupBox4.Controls.Add(this.PTWürfe17);
-            this.groupBox4.Controls.Add(this.PTWürfe18);
-            this.groupBox4.Controls.Add(this.PTWürfe16);
-            this.groupBox4.Controls.Add(this.PTWürfe12);
-            this.groupBox4.Controls.Add(this.PTWürfe13);
-            this.groupBox4.Controls.Add(this.PTWürfe15);
-            this.groupBox4.Controls.Add(this.PTWürfe14);
-            this.groupBox4.Controls.Add(this.PTWürfe11);
-            this.groupBox4.Controls.Add(this.PTWürfe7);
-            this.groupBox4.Controls.Add(this.PTWürfe8);
-            this.groupBox4.Controls.Add(this.PTWürfe10);
-            this.groupBox4.Controls.Add(this.PTWürfe9);
-            this.groupBox4.Controls.Add(this.PTWürfe6);
-            this.groupBox4.Controls.Add(this.PTWürfe2);
-            this.groupBox4.Controls.Add(this.PTWürfe3);
-            this.groupBox4.Controls.Add(this.PTWürfe5);
-            this.groupBox4.Controls.Add(this.PTWürfe4);
-            this.groupBox4.Controls.Add(this.PTWürfe1);
-            this.groupBox4.Controls.Add(this.PTProbe17);
-            this.groupBox4.Controls.Add(this.PTProbe18);
-            this.groupBox4.Controls.Add(this.PTProbe16);
-            this.groupBox4.Controls.Add(this.PTProbe12);
-            this.groupBox4.Controls.Add(this.PTProbe13);
-            this.groupBox4.Controls.Add(this.PTProbe15);
-            this.groupBox4.Controls.Add(this.PTProbe14);
-            this.groupBox4.Controls.Add(this.PTProbe11);
-            this.groupBox4.Controls.Add(this.PTProbe7);
-            this.groupBox4.Controls.Add(this.PTProbe8);
-            this.groupBox4.Controls.Add(this.PTProbe10);
-            this.groupBox4.Controls.Add(this.PTProbe9);
-            this.groupBox4.Controls.Add(this.PTProbe6);
-            this.groupBox4.Controls.Add(this.PTProbe2);
-            this.groupBox4.Controls.Add(this.PTProbe3);
-            this.groupBox4.Controls.Add(this.PTProbe5);
-            this.groupBox4.Controls.Add(this.PTProbe4);
-            this.groupBox4.Controls.Add(this.PTProbe1);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
+            this.groupBoxProbe.Controls.Add(this.PTWürfe29);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe30);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe28);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe24);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe25);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe27);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe26);
+            this.groupBoxProbe.Controls.Add(this.PTProbe29);
+            this.groupBoxProbe.Controls.Add(this.PTProbe30);
+            this.groupBoxProbe.Controls.Add(this.PTProbe28);
+            this.groupBoxProbe.Controls.Add(this.PTProbe24);
+            this.groupBoxProbe.Controls.Add(this.PTProbe25);
+            this.groupBoxProbe.Controls.Add(this.PTProbe27);
+            this.groupBoxProbe.Controls.Add(this.PTProbe26);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe23);
+            this.groupBoxProbe.Controls.Add(this.PTProbe23);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe21);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe22);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe20);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe19);
+            this.groupBoxProbe.Controls.Add(this.PTProbe21);
+            this.groupBoxProbe.Controls.Add(this.PTProbe22);
+            this.groupBoxProbe.Controls.Add(this.PTProbe20);
+            this.groupBoxProbe.Controls.Add(this.PTProbe19);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe17);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe18);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe16);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe12);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe13);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe15);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe14);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe11);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe7);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe8);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe10);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe9);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe6);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe2);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe3);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe5);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe4);
+            this.groupBoxProbe.Controls.Add(this.PTWürfe1);
+            this.groupBoxProbe.Controls.Add(this.PTProbe17);
+            this.groupBoxProbe.Controls.Add(this.PTProbe18);
+            this.groupBoxProbe.Controls.Add(this.PTProbe16);
+            this.groupBoxProbe.Controls.Add(this.PTProbe12);
+            this.groupBoxProbe.Controls.Add(this.PTProbe13);
+            this.groupBoxProbe.Controls.Add(this.PTProbe15);
+            this.groupBoxProbe.Controls.Add(this.PTProbe14);
+            this.groupBoxProbe.Controls.Add(this.PTProbe11);
+            this.groupBoxProbe.Controls.Add(this.PTProbe7);
+            this.groupBoxProbe.Controls.Add(this.PTProbe8);
+            this.groupBoxProbe.Controls.Add(this.PTProbe10);
+            this.groupBoxProbe.Controls.Add(this.PTProbe9);
+            this.groupBoxProbe.Controls.Add(this.PTProbe6);
+            this.groupBoxProbe.Controls.Add(this.PTProbe2);
+            this.groupBoxProbe.Controls.Add(this.PTProbe3);
+            this.groupBoxProbe.Controls.Add(this.PTProbe5);
+            this.groupBoxProbe.Controls.Add(this.PTProbe4);
+            this.groupBoxProbe.Controls.Add(this.PTProbe1);
+            resources.ApplyResources(this.groupBoxProbe, "groupBoxProbe");
+            this.groupBoxProbe.Name = "groupBoxProbe";
+            this.groupBoxProbe.TabStop = false;
+            // 
+            // PTWürfe29
+            // 
+            resources.ApplyResources(this.PTWürfe29, "PTWürfe29");
+            this.PTWürfe29.Name = "PTWürfe29";
+            this.PTWürfe29.ReadOnly = true;
+            // 
+            // PTWürfe30
+            // 
+            resources.ApplyResources(this.PTWürfe30, "PTWürfe30");
+            this.PTWürfe30.Name = "PTWürfe30";
+            this.PTWürfe30.ReadOnly = true;
+            // 
+            // PTWürfe28
+            // 
+            resources.ApplyResources(this.PTWürfe28, "PTWürfe28");
+            this.PTWürfe28.Name = "PTWürfe28";
+            this.PTWürfe28.ReadOnly = true;
+            // 
+            // PTWürfe24
+            // 
+            resources.ApplyResources(this.PTWürfe24, "PTWürfe24");
+            this.PTWürfe24.Name = "PTWürfe24";
+            this.PTWürfe24.ReadOnly = true;
+            // 
+            // PTWürfe25
+            // 
+            resources.ApplyResources(this.PTWürfe25, "PTWürfe25");
+            this.PTWürfe25.Name = "PTWürfe25";
+            this.PTWürfe25.ReadOnly = true;
+            // 
+            // PTWürfe27
+            // 
+            resources.ApplyResources(this.PTWürfe27, "PTWürfe27");
+            this.PTWürfe27.Name = "PTWürfe27";
+            this.PTWürfe27.ReadOnly = true;
+            // 
+            // PTWürfe26
+            // 
+            resources.ApplyResources(this.PTWürfe26, "PTWürfe26");
+            this.PTWürfe26.Name = "PTWürfe26";
+            this.PTWürfe26.ReadOnly = true;
+            // 
+            // PTProbe29
+            // 
+            resources.ApplyResources(this.PTProbe29, "PTProbe29");
+            this.PTProbe29.Name = "PTProbe29";
+            this.PTProbe29.ReadOnly = true;
+            // 
+            // PTProbe30
+            // 
+            resources.ApplyResources(this.PTProbe30, "PTProbe30");
+            this.PTProbe30.Name = "PTProbe30";
+            this.PTProbe30.ReadOnly = true;
+            // 
+            // PTProbe28
+            // 
+            resources.ApplyResources(this.PTProbe28, "PTProbe28");
+            this.PTProbe28.Name = "PTProbe28";
+            this.PTProbe28.ReadOnly = true;
+            // 
+            // PTProbe24
+            // 
+            resources.ApplyResources(this.PTProbe24, "PTProbe24");
+            this.PTProbe24.Name = "PTProbe24";
+            this.PTProbe24.ReadOnly = true;
+            // 
+            // PTProbe25
+            // 
+            resources.ApplyResources(this.PTProbe25, "PTProbe25");
+            this.PTProbe25.Name = "PTProbe25";
+            this.PTProbe25.ReadOnly = true;
+            // 
+            // PTProbe27
+            // 
+            resources.ApplyResources(this.PTProbe27, "PTProbe27");
+            this.PTProbe27.Name = "PTProbe27";
+            this.PTProbe27.ReadOnly = true;
+            // 
+            // PTProbe26
+            // 
+            resources.ApplyResources(this.PTProbe26, "PTProbe26");
+            this.PTProbe26.Name = "PTProbe26";
+            this.PTProbe26.ReadOnly = true;
+            // 
+            // PTWürfe23
+            // 
+            resources.ApplyResources(this.PTWürfe23, "PTWürfe23");
+            this.PTWürfe23.Name = "PTWürfe23";
+            this.PTWürfe23.ReadOnly = true;
+            // 
+            // PTProbe23
+            // 
+            resources.ApplyResources(this.PTProbe23, "PTProbe23");
+            this.PTProbe23.Name = "PTProbe23";
+            this.PTProbe23.ReadOnly = true;
+            // 
+            // PTWürfe21
+            // 
+            resources.ApplyResources(this.PTWürfe21, "PTWürfe21");
+            this.PTWürfe21.Name = "PTWürfe21";
+            this.PTWürfe21.ReadOnly = true;
+            // 
+            // PTWürfe22
+            // 
+            resources.ApplyResources(this.PTWürfe22, "PTWürfe22");
+            this.PTWürfe22.Name = "PTWürfe22";
+            this.PTWürfe22.ReadOnly = true;
+            // 
+            // PTWürfe20
+            // 
+            resources.ApplyResources(this.PTWürfe20, "PTWürfe20");
+            this.PTWürfe20.Name = "PTWürfe20";
+            this.PTWürfe20.ReadOnly = true;
+            // 
+            // PTWürfe19
+            // 
+            resources.ApplyResources(this.PTWürfe19, "PTWürfe19");
+            this.PTWürfe19.Name = "PTWürfe19";
+            this.PTWürfe19.ReadOnly = true;
+            // 
+            // PTProbe21
+            // 
+            resources.ApplyResources(this.PTProbe21, "PTProbe21");
+            this.PTProbe21.Name = "PTProbe21";
+            this.PTProbe21.ReadOnly = true;
+            // 
+            // PTProbe22
+            // 
+            resources.ApplyResources(this.PTProbe22, "PTProbe22");
+            this.PTProbe22.Name = "PTProbe22";
+            this.PTProbe22.ReadOnly = true;
+            // 
+            // PTProbe20
+            // 
+            resources.ApplyResources(this.PTProbe20, "PTProbe20");
+            this.PTProbe20.Name = "PTProbe20";
+            this.PTProbe20.ReadOnly = true;
+            // 
+            // PTProbe19
+            // 
+            resources.ApplyResources(this.PTProbe19, "PTProbe19");
+            this.PTProbe19.Name = "PTProbe19";
+            this.PTProbe19.ReadOnly = true;
             // 
             // PTWürfe17
             // 
@@ -3909,34 +5193,101 @@
             this.PTProbe1.Name = "PTProbe1";
             this.PTProbe1.ReadOnly = true;
             // 
-            // groupBox3
+            // groupBoxTalentName
             // 
-            this.groupBox3.Controls.Add(this.PTName23);
-            this.groupBox3.Controls.Add(this.PTName22);
-            this.groupBox3.Controls.Add(this.PTName21);
-            this.groupBox3.Controls.Add(this.PTName20);
-            this.groupBox3.Controls.Add(this.PTName19);
-            this.groupBox3.Controls.Add(this.PTName18);
-            this.groupBox3.Controls.Add(this.PTName17);
-            this.groupBox3.Controls.Add(this.PTName16);
-            this.groupBox3.Controls.Add(this.PTName15);
-            this.groupBox3.Controls.Add(this.PTName14);
-            this.groupBox3.Controls.Add(this.PTName13);
-            this.groupBox3.Controls.Add(this.PTName12);
-            this.groupBox3.Controls.Add(this.PTName11);
-            this.groupBox3.Controls.Add(this.PTName10);
-            this.groupBox3.Controls.Add(this.PTName9);
-            this.groupBox3.Controls.Add(this.PTName8);
-            this.groupBox3.Controls.Add(this.PTName7);
-            this.groupBox3.Controls.Add(this.PTName6);
-            this.groupBox3.Controls.Add(this.PTName5);
-            this.groupBox3.Controls.Add(this.PTName4);
-            this.groupBox3.Controls.Add(this.PTName3);
-            this.groupBox3.Controls.Add(this.PTName2);
-            this.groupBox3.Controls.Add(this.PTName1);
-            resources.ApplyResources(this.groupBox3, "groupBox3");
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.TabStop = false;
+            this.groupBoxTalentName.Controls.Add(this.PTName30);
+            this.groupBoxTalentName.Controls.Add(this.PTName29);
+            this.groupBoxTalentName.Controls.Add(this.PTName28);
+            this.groupBoxTalentName.Controls.Add(this.PTName27);
+            this.groupBoxTalentName.Controls.Add(this.PTName26);
+            this.groupBoxTalentName.Controls.Add(this.PTName25);
+            this.groupBoxTalentName.Controls.Add(this.PTName24);
+            this.groupBoxTalentName.Controls.Add(this.PTName23);
+            this.groupBoxTalentName.Controls.Add(this.PTName22);
+            this.groupBoxTalentName.Controls.Add(this.PTName21);
+            this.groupBoxTalentName.Controls.Add(this.PTName20);
+            this.groupBoxTalentName.Controls.Add(this.PTName19);
+            this.groupBoxTalentName.Controls.Add(this.PTName18);
+            this.groupBoxTalentName.Controls.Add(this.PTName17);
+            this.groupBoxTalentName.Controls.Add(this.PTName16);
+            this.groupBoxTalentName.Controls.Add(this.PTName15);
+            this.groupBoxTalentName.Controls.Add(this.PTName14);
+            this.groupBoxTalentName.Controls.Add(this.PTName13);
+            this.groupBoxTalentName.Controls.Add(this.PTName12);
+            this.groupBoxTalentName.Controls.Add(this.PTName11);
+            this.groupBoxTalentName.Controls.Add(this.PTName10);
+            this.groupBoxTalentName.Controls.Add(this.PTName9);
+            this.groupBoxTalentName.Controls.Add(this.PTName8);
+            this.groupBoxTalentName.Controls.Add(this.PTName7);
+            this.groupBoxTalentName.Controls.Add(this.PTName6);
+            this.groupBoxTalentName.Controls.Add(this.PTName5);
+            this.groupBoxTalentName.Controls.Add(this.PTName4);
+            this.groupBoxTalentName.Controls.Add(this.PTName3);
+            this.groupBoxTalentName.Controls.Add(this.PTName2);
+            this.groupBoxTalentName.Controls.Add(this.PTName1);
+            resources.ApplyResources(this.groupBoxTalentName, "groupBoxTalentName");
+            this.groupBoxTalentName.Name = "groupBoxTalentName";
+            this.groupBoxTalentName.TabStop = false;
+            // 
+            // PTName30
+            // 
+            resources.ApplyResources(this.PTName30, "PTName30");
+            this.PTName30.Name = "PTName30";
+            // 
+            // PTName29
+            // 
+            resources.ApplyResources(this.PTName29, "PTName29");
+            this.PTName29.Name = "PTName29";
+            // 
+            // PTName28
+            // 
+            resources.ApplyResources(this.PTName28, "PTName28");
+            this.PTName28.Name = "PTName28";
+            // 
+            // PTName27
+            // 
+            resources.ApplyResources(this.PTName27, "PTName27");
+            this.PTName27.Name = "PTName27";
+            // 
+            // PTName26
+            // 
+            resources.ApplyResources(this.PTName26, "PTName26");
+            this.PTName26.Name = "PTName26";
+            // 
+            // PTName25
+            // 
+            resources.ApplyResources(this.PTName25, "PTName25");
+            this.PTName25.Name = "PTName25";
+            // 
+            // PTName24
+            // 
+            resources.ApplyResources(this.PTName24, "PTName24");
+            this.PTName24.Name = "PTName24";
+            // 
+            // PTName23
+            // 
+            resources.ApplyResources(this.PTName23, "PTName23");
+            this.PTName23.Name = "PTName23";
+            // 
+            // PTName22
+            // 
+            resources.ApplyResources(this.PTName22, "PTName22");
+            this.PTName22.Name = "PTName22";
+            // 
+            // PTName21
+            // 
+            resources.ApplyResources(this.PTName21, "PTName21");
+            this.PTName21.Name = "PTName21";
+            // 
+            // PTName20
+            // 
+            resources.ApplyResources(this.PTName20, "PTName20");
+            this.PTName20.Name = "PTName20";
+            // 
+            // PTName19
+            // 
+            resources.ApplyResources(this.PTName19, "PTName19");
+            this.PTName19.Name = "PTName19";
             // 
             // PTName18
             // 
@@ -4028,284 +5379,30 @@
             resources.ApplyResources(this.PTName1, "PTName1");
             this.PTName1.Name = "PTName1";
             // 
-            // socialTalents
+            // radioButton1
             // 
-            this.socialTalents.BackColor = System.Drawing.SystemColors.Control;
-            this.socialTalents.BackgroundImage = global::DSA_Project.Properties.Resources.aventurien_politisch;
-            resources.ApplyResources(this.socialTalents, "socialTalents");
-            this.socialTalents.Name = "socialTalents";
+            resources.ApplyResources(this.radioButton1, "radioButton1");
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // radioKnowldageTalente
+            // radioButton2
             // 
-            resources.ApplyResources(this.radioKnowldageTalente, "radioKnowldageTalente");
-            this.radioKnowldageTalente.Name = "radioKnowldageTalente";
-            this.radioKnowldageTalente.UseVisualStyleBackColor = true;
-            this.radioKnowldageTalente.CheckedChanged += new System.EventHandler(this.radioKnowldageTalente_CheckedChanged);
+            resources.ApplyResources(this.radioButton2, "radioButton2");
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // PTName22
+            // radioButton3
             // 
-            resources.ApplyResources(this.PTName22, "PTName22");
-            this.PTName22.Name = "PTName22";
+            resources.ApplyResources(this.radioButton3, "radioButton3");
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // PTName21
+            // worldmap
             // 
-            resources.ApplyResources(this.PTName21, "PTName21");
-            this.PTName21.Name = "PTName21";
-            // 
-            // PTName20
-            // 
-            resources.ApplyResources(this.PTName20, "PTName20");
-            this.PTName20.Name = "PTName20";
-            // 
-            // PTName19
-            // 
-            resources.ApplyResources(this.PTName19, "PTName19");
-            this.PTName19.Name = "PTName19";
-            // 
-            // PTWürfe21
-            // 
-            resources.ApplyResources(this.PTWürfe21, "PTWürfe21");
-            this.PTWürfe21.Name = "PTWürfe21";
-            this.PTWürfe21.ReadOnly = true;
-            // 
-            // PTWürfe22
-            // 
-            resources.ApplyResources(this.PTWürfe22, "PTWürfe22");
-            this.PTWürfe22.Name = "PTWürfe22";
-            this.PTWürfe22.ReadOnly = true;
-            // 
-            // PTWürfe20
-            // 
-            resources.ApplyResources(this.PTWürfe20, "PTWürfe20");
-            this.PTWürfe20.Name = "PTWürfe20";
-            this.PTWürfe20.ReadOnly = true;
-            // 
-            // PTWürfe19
-            // 
-            resources.ApplyResources(this.PTWürfe19, "PTWürfe19");
-            this.PTWürfe19.Name = "PTWürfe19";
-            this.PTWürfe19.ReadOnly = true;
-            // 
-            // PTProbe21
-            // 
-            resources.ApplyResources(this.PTProbe21, "PTProbe21");
-            this.PTProbe21.Name = "PTProbe21";
-            this.PTProbe21.ReadOnly = true;
-            // 
-            // PTProbe22
-            // 
-            resources.ApplyResources(this.PTProbe22, "PTProbe22");
-            this.PTProbe22.Name = "PTProbe22";
-            this.PTProbe22.ReadOnly = true;
-            // 
-            // PTProbe20
-            // 
-            resources.ApplyResources(this.PTProbe20, "PTProbe20");
-            this.PTProbe20.Name = "PTProbe20";
-            this.PTProbe20.ReadOnly = true;
-            // 
-            // PTProbe19
-            // 
-            resources.ApplyResources(this.PTProbe19, "PTProbe19");
-            this.PTProbe19.Name = "PTProbe19";
-            this.PTProbe19.ReadOnly = true;
-            // 
-            // PTTaw22
-            // 
-            resources.ApplyResources(this.PTTaw22, "PTTaw22");
-            this.PTTaw22.Name = "PTTaw22";
-            this.PTTaw22.TextChanged += new System.EventHandler(this.TAWChange);
-            // 
-            // PTTaw21
-            // 
-            resources.ApplyResources(this.PTTaw21, "PTTaw21");
-            this.PTTaw21.Name = "PTTaw21";
-            this.PTTaw21.TextChanged += new System.EventHandler(this.TAWChange);
-            // 
-            // PTTaw20
-            // 
-            resources.ApplyResources(this.PTTaw20, "PTTaw20");
-            this.PTTaw20.Name = "PTTaw20";
-            this.PTTaw20.TextChanged += new System.EventHandler(this.TAWChange);
-            // 
-            // PTTaw19
-            // 
-            resources.ApplyResources(this.PTTaw19, "PTTaw19");
-            this.PTTaw19.Name = "PTTaw19";
-            this.PTTaw19.TextChanged += new System.EventHandler(this.TAWChange);
-            // 
-            // PTBe21
-            // 
-            resources.ApplyResources(this.PTBe21, "PTBe21");
-            this.PTBe21.Name = "PTBe21";
-            this.PTBe21.ReadOnly = true;
-            // 
-            // PTBe22
-            // 
-            resources.ApplyResources(this.PTBe22, "PTBe22");
-            this.PTBe22.Name = "PTBe22";
-            this.PTBe22.ReadOnly = true;
-            // 
-            // PTBe20
-            // 
-            resources.ApplyResources(this.PTBe20, "PTBe20");
-            this.PTBe20.Name = "PTBe20";
-            this.PTBe20.ReadOnly = true;
-            // 
-            // PTBe19
-            // 
-            resources.ApplyResources(this.PTBe19, "PTBe19");
-            this.PTBe19.Name = "PTBe19";
-            this.PTBe19.ReadOnly = true;
-            // 
-            // PTBilliger21
-            // 
-            resources.ApplyResources(this.PTBilliger21, "PTBilliger21");
-            this.PTBilliger21.Name = "PTBilliger21";
-            this.PTBilliger21.ReadOnly = true;
-            // 
-            // PTBilliger22
-            // 
-            resources.ApplyResources(this.PTBilliger22, "PTBilliger22");
-            this.PTBilliger22.Name = "PTBilliger22";
-            this.PTBilliger22.ReadOnly = true;
-            // 
-            // PTBilliger20
-            // 
-            resources.ApplyResources(this.PTBilliger20, "PTBilliger20");
-            this.PTBilliger20.Name = "PTBilliger20";
-            this.PTBilliger20.ReadOnly = true;
-            // 
-            // PTBilliger19
-            // 
-            resources.ApplyResources(this.PTBilliger19, "PTBilliger19");
-            this.PTBilliger19.Name = "PTBilliger19";
-            this.PTBilliger19.ReadOnly = true;
-            // 
-            // PTSpezialisierung22
-            // 
-            resources.ApplyResources(this.PTSpezialisierung22, "PTSpezialisierung22");
-            this.PTSpezialisierung22.Name = "PTSpezialisierung22";
-            this.PTSpezialisierung22.ReadOnly = true;
-            // 
-            // PTSpezialisierung21
-            // 
-            resources.ApplyResources(this.PTSpezialisierung21, "PTSpezialisierung21");
-            this.PTSpezialisierung21.Name = "PTSpezialisierung21";
-            this.PTSpezialisierung21.ReadOnly = true;
-            // 
-            // PTSpezialisierung20
-            // 
-            resources.ApplyResources(this.PTSpezialisierung20, "PTSpezialisierung20");
-            this.PTSpezialisierung20.Name = "PTSpezialisierung20";
-            this.PTSpezialisierung20.ReadOnly = true;
-            // 
-            // PTSpezialisierung19
-            // 
-            resources.ApplyResources(this.PTSpezialisierung19, "PTSpezialisierung19");
-            this.PTSpezialisierung19.Name = "PTSpezialisierung19";
-            this.PTSpezialisierung19.ReadOnly = true;
-            // 
-            // PTAnforderungen22
-            // 
-            resources.ApplyResources(this.PTAnforderungen22, "PTAnforderungen22");
-            this.PTAnforderungen22.Name = "PTAnforderungen22";
-            this.PTAnforderungen22.ReadOnly = true;
-            // 
-            // PTAnforderungen21
-            // 
-            resources.ApplyResources(this.PTAnforderungen21, "PTAnforderungen21");
-            this.PTAnforderungen21.Name = "PTAnforderungen21";
-            this.PTAnforderungen21.ReadOnly = true;
-            // 
-            // PTAnforderungen20
-            // 
-            resources.ApplyResources(this.PTAnforderungen20, "PTAnforderungen20");
-            this.PTAnforderungen20.Name = "PTAnforderungen20";
-            this.PTAnforderungen20.ReadOnly = true;
-            // 
-            // PTAnforderungen19
-            // 
-            resources.ApplyResources(this.PTAnforderungen19, "PTAnforderungen19");
-            this.PTAnforderungen19.Name = "PTAnforderungen19";
-            this.PTAnforderungen19.ReadOnly = true;
-            // 
-            // PTAbleiten22
-            // 
-            resources.ApplyResources(this.PTAbleiten22, "PTAbleiten22");
-            this.PTAbleiten22.Name = "PTAbleiten22";
-            this.PTAbleiten22.ReadOnly = true;
-            // 
-            // PTAbleiten21
-            // 
-            resources.ApplyResources(this.PTAbleiten21, "PTAbleiten21");
-            this.PTAbleiten21.Name = "PTAbleiten21";
-            this.PTAbleiten21.ReadOnly = true;
-            // 
-            // PTAbleiten20
-            // 
-            resources.ApplyResources(this.PTAbleiten20, "PTAbleiten20");
-            this.PTAbleiten20.Name = "PTAbleiten20";
-            this.PTAbleiten20.ReadOnly = true;
-            // 
-            // PTAbleiten19
-            // 
-            resources.ApplyResources(this.PTAbleiten19, "PTAbleiten19");
-            this.PTAbleiten19.Name = "PTAbleiten19";
-            this.PTAbleiten19.ReadOnly = true;
-            // 
-            // PTWürfe23
-            // 
-            resources.ApplyResources(this.PTWürfe23, "PTWürfe23");
-            this.PTWürfe23.Name = "PTWürfe23";
-            this.PTWürfe23.ReadOnly = true;
-            // 
-            // PTProbe23
-            // 
-            resources.ApplyResources(this.PTProbe23, "PTProbe23");
-            this.PTProbe23.Name = "PTProbe23";
-            this.PTProbe23.ReadOnly = true;
-            // 
-            // PTTaw23
-            // 
-            resources.ApplyResources(this.PTTaw23, "PTTaw23");
-            this.PTTaw23.Name = "PTTaw23";
-            this.PTTaw23.TextChanged += new System.EventHandler(this.TAWChange);
-            // 
-            // PTBe23
-            // 
-            resources.ApplyResources(this.PTBe23, "PTBe23");
-            this.PTBe23.Name = "PTBe23";
-            this.PTBe23.ReadOnly = true;
-            // 
-            // PTBilliger23
-            // 
-            resources.ApplyResources(this.PTBilliger23, "PTBilliger23");
-            this.PTBilliger23.Name = "PTBilliger23";
-            this.PTBilliger23.ReadOnly = true;
-            // 
-            // PTSpezialisierung23
-            // 
-            resources.ApplyResources(this.PTSpezialisierung23, "PTSpezialisierung23");
-            this.PTSpezialisierung23.Name = "PTSpezialisierung23";
-            this.PTSpezialisierung23.ReadOnly = true;
-            // 
-            // PTAnforderungen23
-            // 
-            resources.ApplyResources(this.PTAnforderungen23, "PTAnforderungen23");
-            this.PTAnforderungen23.Name = "PTAnforderungen23";
-            this.PTAnforderungen23.ReadOnly = true;
-            // 
-            // PTAbleiten23
-            // 
-            resources.ApplyResources(this.PTAbleiten23, "PTAbleiten23");
-            this.PTAbleiten23.Name = "PTAbleiten23";
-            this.PTAbleiten23.ReadOnly = true;
-            // 
-            // PTName23
-            // 
-            resources.ApplyResources(this.PTName23, "PTName23");
-            this.PTName23.Name = "PTName23";
+            this.worldmap.BackColor = System.Drawing.SystemColors.Control;
+            this.worldmap.BackgroundImage = global::DSA_Project.Properties.Resources.aventurien_politisch;
+            resources.ApplyResources(this.worldmap, "worldmap");
+            this.worldmap.Name = "worldmap";
             // 
             // DSA
             // 
@@ -4321,25 +5418,27 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
+            this.talents.ResumeLayout(false);
+            this.groupBoxKampf.ResumeLayout(false);
+            this.groupBoxKampf.PerformLayout();
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.groupBoxAbleiten.ResumeLayout(false);
+            this.groupBoxAbleiten.PerformLayout();
+            this.groupBoxAnforderungen.ResumeLayout(false);
+            this.groupBoxAnforderungen.PerformLayout();
+            this.groupBoxSpezialisierung.ResumeLayout(false);
+            this.groupBoxSpezialisierung.PerformLayout();
+            this.groupBoxBilliger.ResumeLayout(false);
+            this.groupBoxBilliger.PerformLayout();
+            this.groupBoxBe.ResumeLayout(false);
+            this.groupBoxBe.PerformLayout();
+            this.groupBoxTaW.ResumeLayout(false);
+            this.groupBoxTaW.PerformLayout();
+            this.groupBoxProbe.ResumeLayout(false);
+            this.groupBoxProbe.PerformLayout();
+            this.groupBoxTalentName.ResumeLayout(false);
+            this.groupBoxTalentName.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4347,7 +5446,6 @@
         #endregion
         private System.Windows.Forms.TabControl TabControl;
         private System.Windows.Forms.TabPage Heldenbrief;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
@@ -4642,22 +5740,29 @@
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.TextBox PTProbe1;
-        private System.Windows.Forms.Label PTName1;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.TextBox PTAnforderungen1;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.TextBox PTSpezialisierung1;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.TextBox PTBilliger1;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox PTBe1;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox PTTaw1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.TabPage worldmap;
+        private System.Windows.Forms.TabPage talents;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.RadioButton radioCraftingTalent;
+        private System.Windows.Forms.RadioButton radioKnowldageTalente;
+        private System.Windows.Forms.RadioButton radioNaturTalente;
+        private System.Windows.Forms.RadioButton radioSozialTalente;
+        private System.Windows.Forms.RadioButton radioKörperlicheTalente;
+        private System.Windows.Forms.GroupBox groupBoxAbleiten;
+        private System.Windows.Forms.TextBox PTAbleiten30;
+        private System.Windows.Forms.TextBox PTAbleiten29;
+        private System.Windows.Forms.TextBox PTAbleiten28;
+        private System.Windows.Forms.TextBox PTAbleiten27;
+        private System.Windows.Forms.TextBox PTAbleiten26;
+        private System.Windows.Forms.TextBox PTAbleiten25;
+        private System.Windows.Forms.TextBox PTAbleiten24;
+        private System.Windows.Forms.TextBox PTAbleiten23;
+        private System.Windows.Forms.TextBox PTAbleiten22;
+        private System.Windows.Forms.TextBox PTAbleiten21;
+        private System.Windows.Forms.TextBox PTAbleiten20;
+        private System.Windows.Forms.TextBox PTAbleiten19;
         private System.Windows.Forms.TextBox PTAbleiten1;
+        private System.Windows.Forms.TextBox PTAbleiten2;
         private System.Windows.Forms.TextBox PTAbleiten18;
         private System.Windows.Forms.TextBox PTAbleiten3;
         private System.Windows.Forms.TextBox PTAbleiten17;
@@ -4668,11 +5773,26 @@
         private System.Windows.Forms.TextBox PTAbleiten6;
         private System.Windows.Forms.TextBox PTAbleiten14;
         private System.Windows.Forms.TextBox PTAbleiten7;
+        private System.Windows.Forms.TextBox PTAbleiten13;
         private System.Windows.Forms.TextBox PTAbleiten8;
         private System.Windows.Forms.TextBox PTAbleiten12;
         private System.Windows.Forms.TextBox PTAbleiten9;
         private System.Windows.Forms.TextBox PTAbleiten11;
         private System.Windows.Forms.TextBox PTAbleiten10;
+        private System.Windows.Forms.GroupBox groupBoxAnforderungen;
+        private System.Windows.Forms.TextBox PTAnforderungen30;
+        private System.Windows.Forms.TextBox PTAnforderungen29;
+        private System.Windows.Forms.TextBox PTAnforderungen28;
+        private System.Windows.Forms.TextBox PTAnforderungen27;
+        private System.Windows.Forms.TextBox PTAnforderungen26;
+        private System.Windows.Forms.TextBox PTAnforderungen25;
+        private System.Windows.Forms.TextBox PTAnforderungen24;
+        private System.Windows.Forms.TextBox PTAnforderungen23;
+        private System.Windows.Forms.TextBox PTAnforderungen22;
+        private System.Windows.Forms.TextBox PTAnforderungen21;
+        private System.Windows.Forms.TextBox PTAnforderungen20;
+        private System.Windows.Forms.TextBox PTAnforderungen19;
+        private System.Windows.Forms.TextBox PTAnforderungen1;
         private System.Windows.Forms.TextBox PTAnforderungen2;
         private System.Windows.Forms.TextBox PTAnforderungen18;
         private System.Windows.Forms.TextBox PTAnforderungen3;
@@ -4690,6 +5810,19 @@
         private System.Windows.Forms.TextBox PTAnforderungen9;
         private System.Windows.Forms.TextBox PTAnforderungen11;
         private System.Windows.Forms.TextBox PTAnforderungen10;
+        private System.Windows.Forms.GroupBox groupBoxSpezialisierung;
+        private System.Windows.Forms.TextBox PTSpezialisierung30;
+        private System.Windows.Forms.TextBox PTSpezialisierung29;
+        private System.Windows.Forms.TextBox PTSpezialisierung28;
+        private System.Windows.Forms.TextBox PTSpezialisierung27;
+        private System.Windows.Forms.TextBox PTSpezialisierung26;
+        private System.Windows.Forms.TextBox PTSpezialisierung25;
+        private System.Windows.Forms.TextBox PTSpezialisierung24;
+        private System.Windows.Forms.TextBox PTSpezialisierung23;
+        private System.Windows.Forms.TextBox PTSpezialisierung22;
+        private System.Windows.Forms.TextBox PTSpezialisierung21;
+        private System.Windows.Forms.TextBox PTSpezialisierung20;
+        private System.Windows.Forms.TextBox PTSpezialisierung19;
         private System.Windows.Forms.TextBox PTSpezialisierung18;
         private System.Windows.Forms.TextBox PTSpezialisierung17;
         private System.Windows.Forms.TextBox PTSpezialisierung16;
@@ -4707,6 +5840,20 @@
         private System.Windows.Forms.TextBox PTSpezialisierung4;
         private System.Windows.Forms.TextBox PTSpezialisierung3;
         private System.Windows.Forms.TextBox PTSpezialisierung2;
+        private System.Windows.Forms.TextBox PTSpezialisierung1;
+        private System.Windows.Forms.GroupBox groupBoxBilliger;
+        private System.Windows.Forms.TextBox PTBilliger30;
+        private System.Windows.Forms.TextBox PTBilliger29;
+        private System.Windows.Forms.TextBox PTBilliger27;
+        private System.Windows.Forms.TextBox PTBilliger28;
+        private System.Windows.Forms.TextBox PTBilliger26;
+        private System.Windows.Forms.TextBox PTBilliger24;
+        private System.Windows.Forms.TextBox PTBilliger25;
+        private System.Windows.Forms.TextBox PTBilliger23;
+        private System.Windows.Forms.TextBox PTBilliger21;
+        private System.Windows.Forms.TextBox PTBilliger22;
+        private System.Windows.Forms.TextBox PTBilliger20;
+        private System.Windows.Forms.TextBox PTBilliger19;
         private System.Windows.Forms.TextBox PTBilliger17;
         private System.Windows.Forms.TextBox PTBilliger18;
         private System.Windows.Forms.TextBox PTBilliger16;
@@ -4724,6 +5871,20 @@
         private System.Windows.Forms.TextBox PTBilliger3;
         private System.Windows.Forms.TextBox PTBilliger4;
         private System.Windows.Forms.TextBox PTBilliger5;
+        private System.Windows.Forms.TextBox PTBilliger1;
+        private System.Windows.Forms.GroupBox groupBoxBe;
+        private System.Windows.Forms.TextBox PTBe30;
+        private System.Windows.Forms.TextBox PTBe29;
+        private System.Windows.Forms.TextBox PTBe28;
+        private System.Windows.Forms.TextBox PTBe26;
+        private System.Windows.Forms.TextBox PTBe27;
+        private System.Windows.Forms.TextBox PTBe25;
+        private System.Windows.Forms.TextBox PTBe24;
+        private System.Windows.Forms.TextBox PTBe23;
+        private System.Windows.Forms.TextBox PTBe21;
+        private System.Windows.Forms.TextBox PTBe22;
+        private System.Windows.Forms.TextBox PTBe20;
+        private System.Windows.Forms.TextBox PTBe19;
         private System.Windows.Forms.TextBox PTBe17;
         private System.Windows.Forms.TextBox PTBe18;
         private System.Windows.Forms.TextBox PTBe16;
@@ -4741,6 +5902,20 @@
         private System.Windows.Forms.TextBox PTBe3;
         private System.Windows.Forms.TextBox PTBe4;
         private System.Windows.Forms.TextBox PTBe5;
+        private System.Windows.Forms.TextBox PTBe1;
+        private System.Windows.Forms.GroupBox groupBoxTaW;
+        private System.Windows.Forms.TextBox PTTaw30;
+        private System.Windows.Forms.TextBox PTTaw29;
+        private System.Windows.Forms.TextBox PTTaw28;
+        private System.Windows.Forms.TextBox PTTaw27;
+        private System.Windows.Forms.TextBox PTTaw26;
+        private System.Windows.Forms.TextBox PTTaw25;
+        private System.Windows.Forms.TextBox PTTaw24;
+        private System.Windows.Forms.TextBox PTTaw23;
+        private System.Windows.Forms.TextBox PTTaw22;
+        private System.Windows.Forms.TextBox PTTaw21;
+        private System.Windows.Forms.TextBox PTTaw20;
+        private System.Windows.Forms.TextBox PTTaw19;
         private System.Windows.Forms.TextBox PTTaw18;
         private System.Windows.Forms.TextBox PTTaw17;
         private System.Windows.Forms.TextBox PTTaw16;
@@ -4758,42 +5933,32 @@
         private System.Windows.Forms.TextBox PTTaw4;
         private System.Windows.Forms.TextBox PTTaw3;
         private System.Windows.Forms.TextBox PTTaw2;
-        private System.Windows.Forms.TextBox PTProbe17;
-        private System.Windows.Forms.TextBox PTProbe18;
-        private System.Windows.Forms.TextBox PTProbe16;
-        private System.Windows.Forms.TextBox PTProbe12;
-        private System.Windows.Forms.TextBox PTProbe13;
-        private System.Windows.Forms.TextBox PTProbe15;
-        private System.Windows.Forms.TextBox PTProbe14;
-        private System.Windows.Forms.TextBox PTProbe11;
-        private System.Windows.Forms.TextBox PTProbe7;
-        private System.Windows.Forms.TextBox PTProbe8;
-        private System.Windows.Forms.TextBox PTProbe10;
-        private System.Windows.Forms.TextBox PTProbe9;
-        private System.Windows.Forms.TextBox PTProbe6;
-        private System.Windows.Forms.TextBox PTProbe2;
-        private System.Windows.Forms.TextBox PTProbe3;
-        private System.Windows.Forms.TextBox PTProbe5;
-        private System.Windows.Forms.TextBox PTProbe4;
-        private System.Windows.Forms.Label PTName2;
-        private System.Windows.Forms.Label PTName5;
-        private System.Windows.Forms.Label PTName4;
-        private System.Windows.Forms.Label PTName3;
-        private System.Windows.Forms.Label PTName18;
-        private System.Windows.Forms.Label PTName17;
-        private System.Windows.Forms.Label PTName16;
-        private System.Windows.Forms.Label PTName15;
-        private System.Windows.Forms.Label PTName14;
-        private System.Windows.Forms.Label PTName13;
-        private System.Windows.Forms.Label PTName12;
-        private System.Windows.Forms.Label PTName11;
-        private System.Windows.Forms.Label PTName10;
-        private System.Windows.Forms.Label PTName9;
-        private System.Windows.Forms.Label PTName8;
-        private System.Windows.Forms.Label PTName7;
-        private System.Windows.Forms.Label PTName6;
-        private System.Windows.Forms.TextBox PTAbleiten2;
-        private System.Windows.Forms.TextBox PTAbleiten13;
+        private System.Windows.Forms.TextBox PTTaw1;
+        private System.Windows.Forms.GroupBox groupBoxProbe;
+        private System.Windows.Forms.TextBox PTWürfe29;
+        private System.Windows.Forms.TextBox PTWürfe30;
+        private System.Windows.Forms.TextBox PTWürfe28;
+        private System.Windows.Forms.TextBox PTWürfe24;
+        private System.Windows.Forms.TextBox PTWürfe25;
+        private System.Windows.Forms.TextBox PTWürfe27;
+        private System.Windows.Forms.TextBox PTWürfe26;
+        private System.Windows.Forms.TextBox PTProbe29;
+        private System.Windows.Forms.TextBox PTProbe30;
+        private System.Windows.Forms.TextBox PTProbe28;
+        private System.Windows.Forms.TextBox PTProbe24;
+        private System.Windows.Forms.TextBox PTProbe25;
+        private System.Windows.Forms.TextBox PTProbe27;
+        private System.Windows.Forms.TextBox PTProbe26;
+        private System.Windows.Forms.TextBox PTWürfe23;
+        private System.Windows.Forms.TextBox PTProbe23;
+        private System.Windows.Forms.TextBox PTWürfe21;
+        private System.Windows.Forms.TextBox PTWürfe22;
+        private System.Windows.Forms.TextBox PTWürfe20;
+        private System.Windows.Forms.TextBox PTWürfe19;
+        private System.Windows.Forms.TextBox PTProbe21;
+        private System.Windows.Forms.TextBox PTProbe22;
+        private System.Windows.Forms.TextBox PTProbe20;
+        private System.Windows.Forms.TextBox PTProbe19;
         private System.Windows.Forms.TextBox PTWürfe17;
         private System.Windows.Forms.TextBox PTWürfe18;
         private System.Windows.Forms.TextBox PTWürfe16;
@@ -4812,57 +5977,121 @@
         private System.Windows.Forms.TextBox PTWürfe5;
         private System.Windows.Forms.TextBox PTWürfe4;
         private System.Windows.Forms.TextBox PTWürfe1;
-        private System.Windows.Forms.TabPage socialTalents;
-        private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.RadioButton radioSozialTalente;
-        private System.Windows.Forms.RadioButton radioKörperlicheTalente;
-        private System.Windows.Forms.RadioButton radioNaturTalente;
-        private System.Windows.Forms.RadioButton radioKnowldageTalente;
-        private System.Windows.Forms.TextBox PTAbleiten22;
-        private System.Windows.Forms.TextBox PTAbleiten21;
-        private System.Windows.Forms.TextBox PTAbleiten20;
-        private System.Windows.Forms.TextBox PTAbleiten19;
-        private System.Windows.Forms.TextBox PTAnforderungen22;
-        private System.Windows.Forms.TextBox PTAnforderungen21;
-        private System.Windows.Forms.TextBox PTAnforderungen20;
-        private System.Windows.Forms.TextBox PTAnforderungen19;
-        private System.Windows.Forms.TextBox PTSpezialisierung22;
-        private System.Windows.Forms.TextBox PTSpezialisierung21;
-        private System.Windows.Forms.TextBox PTSpezialisierung20;
-        private System.Windows.Forms.TextBox PTSpezialisierung19;
-        private System.Windows.Forms.TextBox PTBilliger21;
-        private System.Windows.Forms.TextBox PTBilliger22;
-        private System.Windows.Forms.TextBox PTBilliger20;
-        private System.Windows.Forms.TextBox PTBilliger19;
-        private System.Windows.Forms.TextBox PTBe21;
-        private System.Windows.Forms.TextBox PTBe22;
-        private System.Windows.Forms.TextBox PTBe20;
-        private System.Windows.Forms.TextBox PTBe19;
-        private System.Windows.Forms.TextBox PTTaw22;
-        private System.Windows.Forms.TextBox PTTaw21;
-        private System.Windows.Forms.TextBox PTTaw20;
-        private System.Windows.Forms.TextBox PTTaw19;
-        private System.Windows.Forms.TextBox PTWürfe21;
-        private System.Windows.Forms.TextBox PTWürfe22;
-        private System.Windows.Forms.TextBox PTWürfe20;
-        private System.Windows.Forms.TextBox PTWürfe19;
-        private System.Windows.Forms.TextBox PTProbe21;
-        private System.Windows.Forms.TextBox PTProbe22;
-        private System.Windows.Forms.TextBox PTProbe20;
-        private System.Windows.Forms.TextBox PTProbe19;
+        private System.Windows.Forms.TextBox PTProbe17;
+        private System.Windows.Forms.TextBox PTProbe18;
+        private System.Windows.Forms.TextBox PTProbe16;
+        private System.Windows.Forms.TextBox PTProbe12;
+        private System.Windows.Forms.TextBox PTProbe13;
+        private System.Windows.Forms.TextBox PTProbe15;
+        private System.Windows.Forms.TextBox PTProbe14;
+        private System.Windows.Forms.TextBox PTProbe11;
+        private System.Windows.Forms.TextBox PTProbe7;
+        private System.Windows.Forms.TextBox PTProbe8;
+        private System.Windows.Forms.TextBox PTProbe10;
+        private System.Windows.Forms.TextBox PTProbe9;
+        private System.Windows.Forms.TextBox PTProbe6;
+        private System.Windows.Forms.TextBox PTProbe2;
+        private System.Windows.Forms.TextBox PTProbe3;
+        private System.Windows.Forms.TextBox PTProbe5;
+        private System.Windows.Forms.TextBox PTProbe4;
+        private System.Windows.Forms.TextBox PTProbe1;
+        private System.Windows.Forms.GroupBox groupBoxTalentName;
+        private System.Windows.Forms.Label PTName30;
+        private System.Windows.Forms.Label PTName29;
+        private System.Windows.Forms.Label PTName28;
+        private System.Windows.Forms.Label PTName27;
+        private System.Windows.Forms.Label PTName26;
+        private System.Windows.Forms.Label PTName25;
+        private System.Windows.Forms.Label PTName24;
+        private System.Windows.Forms.Label PTName23;
         private System.Windows.Forms.Label PTName22;
         private System.Windows.Forms.Label PTName21;
         private System.Windows.Forms.Label PTName20;
         private System.Windows.Forms.Label PTName19;
-        private System.Windows.Forms.TextBox PTAbleiten23;
-        private System.Windows.Forms.TextBox PTAnforderungen23;
-        private System.Windows.Forms.TextBox PTSpezialisierung23;
-        private System.Windows.Forms.TextBox PTBilliger23;
-        private System.Windows.Forms.TextBox PTBe23;
-        private System.Windows.Forms.TextBox PTTaw23;
-        private System.Windows.Forms.TextBox PTWürfe23;
-        private System.Windows.Forms.TextBox PTProbe23;
-        private System.Windows.Forms.Label PTName23;
+        private System.Windows.Forms.Label PTName18;
+        private System.Windows.Forms.Label PTName17;
+        private System.Windows.Forms.Label PTName16;
+        private System.Windows.Forms.Label PTName15;
+        private System.Windows.Forms.Label PTName14;
+        private System.Windows.Forms.Label PTName13;
+        private System.Windows.Forms.Label PTName12;
+        private System.Windows.Forms.Label PTName11;
+        private System.Windows.Forms.Label PTName10;
+        private System.Windows.Forms.Label PTName9;
+        private System.Windows.Forms.Label PTName8;
+        private System.Windows.Forms.Label PTName7;
+        private System.Windows.Forms.Label PTName6;
+        private System.Windows.Forms.Label PTName5;
+        private System.Windows.Forms.Label PTName4;
+        private System.Windows.Forms.Label PTName3;
+        private System.Windows.Forms.Label PTName2;
+        private System.Windows.Forms.Label PTName1;
+        private System.Windows.Forms.RadioButton radioButtonCraftingTalent1;
+        private System.Windows.Forms.GroupBox groupBoxKampf;
+        private System.Windows.Forms.TextBox PTPA29;
+        private System.Windows.Forms.TextBox PTPA30;
+        private System.Windows.Forms.TextBox PTPA28;
+        private System.Windows.Forms.TextBox PTPA24;
+        private System.Windows.Forms.TextBox PTPA25;
+        private System.Windows.Forms.TextBox PTPA27;
+        private System.Windows.Forms.TextBox PTPA26;
+        private System.Windows.Forms.TextBox PTAT29;
+        private System.Windows.Forms.TextBox PTAT30;
+        private System.Windows.Forms.TextBox PTAT28;
+        private System.Windows.Forms.TextBox PTAT24;
+        private System.Windows.Forms.TextBox PTAT25;
+        private System.Windows.Forms.TextBox PTAT27;
+        private System.Windows.Forms.TextBox PTAT26;
+        private System.Windows.Forms.TextBox PTPA23;
+        private System.Windows.Forms.TextBox PTAT23;
+        private System.Windows.Forms.TextBox PTPA21;
+        private System.Windows.Forms.TextBox PTPA22;
+        private System.Windows.Forms.TextBox PTPA20;
+        private System.Windows.Forms.TextBox PTPA19;
+        private System.Windows.Forms.TextBox PTAT21;
+        private System.Windows.Forms.TextBox PTAT22;
+        private System.Windows.Forms.TextBox PTAT20;
+        private System.Windows.Forms.TextBox PTAT19;
+        private System.Windows.Forms.TextBox PTPA17;
+        private System.Windows.Forms.TextBox PTPA18;
+        private System.Windows.Forms.TextBox PTPA12;
+        private System.Windows.Forms.TextBox PTPA13;
+        private System.Windows.Forms.TextBox PTPA15;
+        private System.Windows.Forms.TextBox PTPA14;
+        private System.Windows.Forms.TextBox PTPA7;
+        private System.Windows.Forms.TextBox PTPA8;
+        private System.Windows.Forms.TextBox PTPA10;
+        private System.Windows.Forms.TextBox PTPA9;
+        private System.Windows.Forms.TextBox PTPA6;
+        private System.Windows.Forms.TextBox PTPA2;
+        private System.Windows.Forms.TextBox PTPA3;
+        private System.Windows.Forms.TextBox PTPA5;
+        private System.Windows.Forms.TextBox PTPA4;
+        private System.Windows.Forms.TextBox PTPA1;
+        private System.Windows.Forms.TextBox PTAT17;
+        private System.Windows.Forms.TextBox PTAT18;
+        private System.Windows.Forms.TextBox PTAT16;
+        private System.Windows.Forms.TextBox PTAT12;
+        private System.Windows.Forms.TextBox PTAT15;
+        private System.Windows.Forms.TextBox PTAT14;
+        private System.Windows.Forms.TextBox PTAT11;
+        private System.Windows.Forms.TextBox PTAT7;
+        private System.Windows.Forms.TextBox PTAT8;
+        private System.Windows.Forms.TextBox PTAT10;
+        private System.Windows.Forms.TextBox PTAT9;
+        private System.Windows.Forms.TextBox PTAT6;
+        private System.Windows.Forms.TextBox PTAT2;
+        private System.Windows.Forms.TextBox PTAT3;
+        private System.Windows.Forms.TextBox PTAT5;
+        private System.Windows.Forms.TextBox PTAT4;
+        private System.Windows.Forms.TextBox PTAT1;
+        private System.Windows.Forms.TextBox PTAT13;
+        private System.Windows.Forms.TextBox PTPA11;
+        private System.Windows.Forms.TextBox PTPA16;
+        private System.Windows.Forms.RadioButton radioButtonFightingTaelnt;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
 

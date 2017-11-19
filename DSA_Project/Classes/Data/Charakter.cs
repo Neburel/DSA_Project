@@ -17,7 +17,7 @@ namespace DSA_Project
         private Dictionary<int, String> göttergerschenke;
         private Dictionary<int, String> modifikatoren;
 
-        private Dictionary<DSA_TALENTS, Dictionary<int, Talent>> talente;
+        private Dictionary<DSA_TALENTS, Dictionary<int, InterfaceTalent>> talente;
         
 
         int Beherschungswert    = 0;
@@ -41,7 +41,7 @@ namespace DSA_Project
             advancedValues                  = new Dictionary<DSA_ADVANCEDVALUES, int>();
             göttergerschenke                = new Dictionary<int, string>();
             modifikatoren                   = new Dictionary<int, string>();
-            talente                         = new Dictionary<DSA_TALENTS, Dictionary<int, Talent>>();
+            talente                         = new Dictionary<DSA_TALENTS, Dictionary<int, InterfaceTalent>>();
 
             for (int i=0; i<enumAttributLength; i++)
             {
@@ -62,7 +62,7 @@ namespace DSA_Project
             
             for(int i=0; i<enumTalentLentgh; i++)
             {
-                talente.Add((DSA_TALENTS)i, new Dictionary<int, Talent>());
+                talente.Add((DSA_TALENTS)i, new Dictionary<int, InterfaceTalent>());
             }
         }
 
@@ -260,27 +260,27 @@ namespace DSA_Project
             return x;
         }
         
-        public void addTalent(DSA_TALENTS type, int number, Talent talent)
+        public void addTalent(DSA_TALENTS type, int number, InterfaceTalent talent)
         {
-            Dictionary<int,Talent> talentDictonary;
+            Dictionary<int, InterfaceTalent> talentDictonary;
             talente.TryGetValue(type, out talentDictonary);
 
             talentDictonary.Remove(number);
             talent.setCharacter(this);
             talentDictonary.Add(number, talent);
         }
-        public Talent getTalent(DSA_TALENTS type, int number)
+        public InterfaceTalent getTalent(DSA_TALENTS type, int number)
         {
-            Dictionary<int, Talent> talentDictonary;
+            Dictionary<int, InterfaceTalent> talentDictonary;
             talente.TryGetValue(type, out talentDictonary);
 
-            Talent x;
+            InterfaceTalent x;
             talentDictonary.TryGetValue(number, out x);
             return x;
         }
         public int getCounttalent(DSA_TALENTS type)
         {
-            Dictionary<int, Talent> talentDictonary;
+            Dictionary<int, InterfaceTalent> talentDictonary;
             talente.TryGetValue(type, out talentDictonary);
 
             return talentDictonary.Count();

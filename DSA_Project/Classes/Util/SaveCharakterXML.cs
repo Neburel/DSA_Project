@@ -189,10 +189,12 @@ namespace DSA_Project
                 j++;
             }
         }
-        private static void saveTalent(Talent talent, XmlDocument characterFile, XmlElement element)
+        private static void saveTalent(InterfaceTalent talent, XmlDocument characterFile, XmlElement element)
         {
             String name = talent.getName();
             String taw  = talent.getTaW().ToString();
+
+            name = name.Replace(" ", ".");
 
             XmlElement NameElement = characterFile.CreateElement(name);
             XmlElement TawElement  = characterFile.CreateElement(ManagmentSave.TAW);

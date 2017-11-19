@@ -9,97 +9,205 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+//toDO:     Zeitverlust durch Aufruf change wenn Projekt diesen Change (nicht von Außen) vornimmt
+
 namespace DSA_Project
 {
     public partial class DSA : Form
     {
         ControllClass controll;
-        DSA_TALENTS currentType;
+        DSA_TALENTS lastUsedTalentType;
 
         public DSA()
         {
             controll = new ControllClass(this);
             InitializeComponent();
 
-            setUPTalents(DSA_TALENTS.PHYSICALLY);
             load();
-            refresh();
+            refreshHeroPage();
 
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             SetStyle(ControlStyles.UserPaint, true);
             SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-        }
 
-        private void setUPTalents(DSA_TALENTS type)
-        {
-            setUPPT(controll.getTalent(type, 1), PTName1, PTProbe1, PTWürfe1, PTBe1, PTTaw1 ,PTBilliger1, PTSpezialisierung1, PTAnforderungen1, PTAbleiten1);
-            setUPPT(controll.getTalent(type, 2), PTName2, PTProbe2, PTWürfe2, PTBe2, PTTaw2, PTBilliger2, PTSpezialisierung2, PTAnforderungen2, PTAbleiten2);
-            setUPPT(controll.getTalent(type, 3), PTName3, PTProbe3, PTWürfe3, PTBe3, PTTaw3, PTBilliger3, PTSpezialisierung3, PTAnforderungen3, PTAbleiten3);
-            setUPPT(controll.getTalent(type, 4), PTName4, PTProbe4, PTWürfe4, PTBe4, PTTaw4, PTBilliger4, PTSpezialisierung4, PTAnforderungen4, PTAbleiten4);
-            setUPPT(controll.getTalent(type, 5), PTName5, PTProbe5, PTWürfe5, PTBe5, PTTaw5, PTBilliger5, PTSpezialisierung5, PTAnforderungen5, PTAbleiten5);
-            setUPPT(controll.getTalent(type, 6), PTName6, PTProbe6, PTWürfe6, PTBe6, PTTaw6, PTBilliger6, PTSpezialisierung6, PTAnforderungen6, PTAbleiten6);
-            setUPPT(controll.getTalent(type, 7), PTName7, PTProbe7, PTWürfe7, PTBe7, PTTaw7, PTBilliger7, PTSpezialisierung7, PTAnforderungen7, PTAbleiten7);
-            setUPPT(controll.getTalent(type, 8), PTName8, PTProbe8, PTWürfe8, PTBe8, PTTaw8, PTBilliger8, PTSpezialisierung8, PTAnforderungen8, PTAbleiten8);
-            setUPPT(controll.getTalent(type, 9), PTName9, PTProbe9, PTWürfe9, PTBe9, PTTaw9, PTBilliger9, PTSpezialisierung9, PTAnforderungen9, PTAbleiten9);
-            setUPPT(controll.getTalent(type, 10), PTName10, PTProbe10, PTWürfe10, PTBe10, PTTaw10, PTBilliger10, PTSpezialisierung10, PTAnforderungen10, PTAbleiten10);
-            setUPPT(controll.getTalent(type, 11), PTName11, PTProbe11, PTWürfe11, PTBe11, PTTaw11, PTBilliger11, PTSpezialisierung11, PTAnforderungen11, PTAbleiten11);
-            setUPPT(controll.getTalent(type, 12), PTName12, PTProbe12, PTWürfe12, PTBe12, PTTaw12, PTBilliger12, PTSpezialisierung12, PTAnforderungen12, PTAbleiten12);
-            setUPPT(controll.getTalent(type, 13), PTName13, PTProbe13, PTWürfe13, PTBe13, PTTaw13, PTBilliger13, PTSpezialisierung13, PTAnforderungen13, PTAbleiten13);
-            setUPPT(controll.getTalent(type, 14), PTName14, PTProbe14, PTWürfe14, PTBe14, PTTaw14, PTBilliger14, PTSpezialisierung14, PTAnforderungen14, PTAbleiten14);
-            setUPPT(controll.getTalent(type, 15), PTName15, PTProbe15, PTWürfe15, PTBe15, PTTaw15, PTBilliger15, PTSpezialisierung15, PTAnforderungen15, PTAbleiten15);
-            setUPPT(controll.getTalent(type, 16), PTName16, PTProbe16, PTWürfe16, PTBe16, PTTaw16, PTBilliger16, PTSpezialisierung16, PTAnforderungen16, PTAbleiten16);
-            setUPPT(controll.getTalent(type, 17), PTName17, PTProbe17, PTWürfe17, PTBe17, PTTaw17, PTBilliger17, PTSpezialisierung17, PTAnforderungen17, PTAbleiten17);
-            setUPPT(controll.getTalent(type, 18), PTName18, PTProbe18, PTWürfe18, PTBe18, PTTaw18, PTBilliger18, PTSpezialisierung18, PTAnforderungen18, PTAbleiten18);
-            setUPPT(controll.getTalent(type, 19), PTName19, PTProbe19, PTWürfe19, PTBe19, PTTaw19, PTBilliger19, PTSpezialisierung19, PTAnforderungen19, PTAbleiten19);
-            setUPPT(controll.getTalent(type, 20), PTName20, PTProbe20, PTWürfe20, PTBe20, PTTaw20, PTBilliger20, PTSpezialisierung20, PTAnforderungen20, PTAbleiten20);
-            setUPPT(controll.getTalent(type, 21), PTName21, PTProbe21, PTWürfe21, PTBe21, PTTaw21, PTBilliger21, PTSpezialisierung21, PTAnforderungen21, PTAbleiten21);
-            setUPPT(controll.getTalent(type, 22), PTName22, PTProbe22, PTWürfe22, PTBe22, PTTaw22, PTBilliger22, PTSpezialisierung22, PTAnforderungen22, PTAbleiten22);
-            setUPPT(controll.getTalent(type, 23), PTName23, PTProbe23, PTWürfe23, PTBe23, PTTaw23, PTBilliger23, PTSpezialisierung23, PTAnforderungen23, PTAbleiten23);
+            groupBoxTalentName.AutoSize = true;
+            groupBoxTalentName.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupBoxProbe.AutoSize = true;
+            groupBoxProbe.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupBoxTaW.AutoSize = true;
+            groupBoxTaW.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupBoxBilliger.AutoSize = true;
+            groupBoxBilliger.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupBoxBe.AutoSize = true;
+            groupBoxBe.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupBoxAbleiten.AutoSize = true;
+            groupBoxAbleiten.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupBoxAnforderungen.AutoSize = true;
+            groupBoxAnforderungen.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupBoxSpezialisierung.AutoSize = true;
+            groupBoxSpezialisierung.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupBoxKampf.AutoSize = true;
+            groupBoxKampf.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
-        private void setUPPT(Talent talent, Label Name, TextBox Probe, TextBox  wurfProbe, TextBox Be, TextBox Taw, TextBox Billiger, TextBox Spezialisierung, TextBox Anforderungen, TextBox Ableiten)
+        private void setUPGeneralTalent(DSA_TALENTS type)
+        {
+            lastUsedTalentType = type;
+            setUPTalentRowGeneral(1, controll.getTalent(type, 1), PTName1, PTProbe1, PTWürfe1, PTBe1, PTTaw1, PTBilliger1, PTSpezialisierung1, PTAnforderungen1, PTAbleiten1);
+            setUPTalentRowGeneral(2, controll.getTalent(type, 2), PTName2, PTProbe2, PTWürfe2, PTBe2, PTTaw2, PTBilliger2, PTSpezialisierung2, PTAnforderungen2, PTAbleiten2);
+            setUPTalentRowGeneral(3, controll.getTalent(type, 3), PTName3, PTProbe3, PTWürfe3, PTBe3, PTTaw3, PTBilliger3, PTSpezialisierung3, PTAnforderungen3, PTAbleiten3);
+            setUPTalentRowGeneral(4, controll.getTalent(type, 4), PTName4, PTProbe4, PTWürfe4, PTBe4, PTTaw4, PTBilliger4, PTSpezialisierung4, PTAnforderungen4, PTAbleiten4);
+            setUPTalentRowGeneral(5, controll.getTalent(type, 5), PTName5, PTProbe5, PTWürfe5, PTBe5, PTTaw5, PTBilliger5, PTSpezialisierung5, PTAnforderungen5, PTAbleiten5);
+            setUPTalentRowGeneral(6, controll.getTalent(type, 6), PTName6, PTProbe6, PTWürfe6, PTBe6, PTTaw6, PTBilliger6, PTSpezialisierung6, PTAnforderungen6, PTAbleiten6);
+            setUPTalentRowGeneral(7, controll.getTalent(type, 7), PTName7, PTProbe7, PTWürfe7, PTBe7, PTTaw7, PTBilliger7, PTSpezialisierung7, PTAnforderungen7, PTAbleiten7);
+            setUPTalentRowGeneral(8, controll.getTalent(type, 8), PTName8, PTProbe8, PTWürfe8, PTBe8, PTTaw8, PTBilliger8, PTSpezialisierung8, PTAnforderungen8, PTAbleiten8);
+            setUPTalentRowGeneral(9, controll.getTalent(type, 9), PTName9, PTProbe9, PTWürfe9, PTBe9, PTTaw9, PTBilliger9, PTSpezialisierung9, PTAnforderungen9, PTAbleiten9);
+            setUPTalentRowGeneral(10, controll.getTalent(type, 10), PTName10, PTProbe10, PTWürfe10, PTBe10, PTTaw10, PTBilliger10, PTSpezialisierung10, PTAnforderungen10, PTAbleiten10);
+            setUPTalentRowGeneral(11, controll.getTalent(type, 11), PTName11, PTProbe11, PTWürfe11, PTBe11, PTTaw11, PTBilliger11, PTSpezialisierung11, PTAnforderungen11, PTAbleiten11);
+            setUPTalentRowGeneral(12, controll.getTalent(type, 12), PTName12, PTProbe12, PTWürfe12, PTBe12, PTTaw12, PTBilliger12, PTSpezialisierung12, PTAnforderungen12, PTAbleiten12);
+            setUPTalentRowGeneral(13, controll.getTalent(type, 13), PTName13, PTProbe13, PTWürfe13, PTBe13, PTTaw13, PTBilliger13, PTSpezialisierung13, PTAnforderungen13, PTAbleiten13);
+            setUPTalentRowGeneral(14, controll.getTalent(type, 14), PTName14, PTProbe14, PTWürfe14, PTBe14, PTTaw14, PTBilliger14, PTSpezialisierung14, PTAnforderungen14, PTAbleiten14);
+            setUPTalentRowGeneral(15, controll.getTalent(type, 15), PTName15, PTProbe15, PTWürfe15, PTBe15, PTTaw15, PTBilliger15, PTSpezialisierung15, PTAnforderungen15, PTAbleiten15);
+            setUPTalentRowGeneral(16, controll.getTalent(type, 16), PTName16, PTProbe16, PTWürfe16, PTBe16, PTTaw16, PTBilliger16, PTSpezialisierung16, PTAnforderungen16, PTAbleiten16);
+            setUPTalentRowGeneral(17, controll.getTalent(type, 17), PTName17, PTProbe17, PTWürfe17, PTBe17, PTTaw17, PTBilliger17, PTSpezialisierung17, PTAnforderungen17, PTAbleiten17);
+            setUPTalentRowGeneral(18, controll.getTalent(type, 18), PTName18, PTProbe18, PTWürfe18, PTBe18, PTTaw18, PTBilliger18, PTSpezialisierung18, PTAnforderungen18, PTAbleiten18);
+            setUPTalentRowGeneral(19, controll.getTalent(type, 19), PTName19, PTProbe19, PTWürfe19, PTBe19, PTTaw19, PTBilliger19, PTSpezialisierung19, PTAnforderungen19, PTAbleiten19);
+            setUPTalentRowGeneral(20, controll.getTalent(type, 20), PTName20, PTProbe20, PTWürfe20, PTBe20, PTTaw20, PTBilliger20, PTSpezialisierung20, PTAnforderungen20, PTAbleiten20);
+            setUPTalentRowGeneral(21, controll.getTalent(type, 21), PTName21, PTProbe21, PTWürfe21, PTBe21, PTTaw21, PTBilliger21, PTSpezialisierung21, PTAnforderungen21, PTAbleiten21);
+            setUPTalentRowGeneral(22, controll.getTalent(type, 22), PTName22, PTProbe22, PTWürfe22, PTBe22, PTTaw22, PTBilliger22, PTSpezialisierung22, PTAnforderungen22, PTAbleiten22);
+            setUPTalentRowGeneral(23, controll.getTalent(type, 23), PTName23, PTProbe23, PTWürfe23, PTBe23, PTTaw23, PTBilliger23, PTSpezialisierung23, PTAnforderungen23, PTAbleiten23);
+            setUPTalentRowGeneral(24, controll.getTalent(type, 24), PTName24, PTProbe24, PTWürfe24, PTBe24, PTTaw24, PTBilliger24, PTSpezialisierung24, PTAnforderungen24, PTAbleiten24);
+            setUPTalentRowGeneral(25, controll.getTalent(type, 25), PTName25, PTProbe25, PTWürfe25, PTBe25, PTTaw25, PTBilliger25, PTSpezialisierung25, PTAnforderungen25, PTAbleiten25);
+            setUPTalentRowGeneral(26, controll.getTalent(type, 26), PTName26, PTProbe26, PTWürfe26, PTBe26, PTTaw26, PTBilliger26, PTSpezialisierung26, PTAnforderungen26, PTAbleiten26);
+            setUPTalentRowGeneral(27, controll.getTalent(type, 27), PTName27, PTProbe27, PTWürfe27, PTBe27, PTTaw27, PTBilliger27, PTSpezialisierung27, PTAnforderungen27, PTAbleiten27);
+            setUPTalentRowGeneral(28, controll.getTalent(type, 28), PTName28, PTProbe28, PTWürfe28, PTBe28, PTTaw28, PTBilliger28, PTSpezialisierung28, PTAnforderungen28, PTAbleiten28);
+            setUPTalentRowGeneral(29, controll.getTalent(type, 29), PTName29, PTProbe29, PTWürfe29, PTBe29, PTTaw29, PTBilliger29, PTSpezialisierung29, PTAnforderungen29, PTAbleiten29);
+            setUPTalentRowGeneral(30, controll.getTalent(type, 30), PTName30, PTProbe30, PTWürfe30, PTBe30, PTTaw30, PTBilliger30, PTSpezialisierung30, PTAnforderungen30, PTAbleiten30);
+
+            groupBoxKampf.Visible = false;
+
+            groupBoxProbe.Left = groupBoxTalentName.Right + 5;
+            groupBoxTaW.Left = groupBoxProbe.Right + 5;
+            groupBoxBilliger.Left = groupBoxTaW.Right + 5;
+            groupBoxBe.Left = groupBoxBilliger.Right + 5;
+            groupBoxAbleiten.Left = groupBoxBe.Right + 5;
+            groupBoxAnforderungen.Left = groupBoxAbleiten.Right + 5;
+            groupBoxSpezialisierung.Left = groupBoxAnforderungen.Right + 5;
+        }
+        private void setUPFightingTalent(DSA_TALENTS type)
+        {
+            lastUsedTalentType = type;
+            setUPTalentRowFighting(1, controll.getTalent(type, 1), PTName1, PTProbe1, PTWürfe1, PTBe1, PTTaw1, PTBilliger1, PTSpezialisierung1, PTAnforderungen1, PTAbleiten1, PTAT1, PTPA1);
+            setUPTalentRowFighting(2, controll.getTalent(type, 2), PTName2, PTProbe2, PTWürfe2, PTBe2, PTTaw2, PTBilliger2, PTSpezialisierung2, PTAnforderungen2, PTAbleiten2, PTAT2, PTPA2);
+            setUPTalentRowFighting(3, controll.getTalent(type, 3), PTName3, PTProbe3, PTWürfe3, PTBe3, PTTaw3, PTBilliger3, PTSpezialisierung3, PTAnforderungen3, PTAbleiten3, PTAT3, PTPA3);
+            setUPTalentRowFighting(4, controll.getTalent(type, 4), PTName4, PTProbe4, PTWürfe4, PTBe4, PTTaw4, PTBilliger4, PTSpezialisierung4, PTAnforderungen4, PTAbleiten4, PTAT4, PTPA4);
+            setUPTalentRowFighting(5, controll.getTalent(type, 5), PTName5, PTProbe5, PTWürfe5, PTBe5, PTTaw5, PTBilliger5, PTSpezialisierung5, PTAnforderungen5, PTAbleiten5, PTAT5, PTPA5);
+            setUPTalentRowFighting(6, controll.getTalent(type, 6), PTName6, PTProbe6, PTWürfe6, PTBe6, PTTaw6, PTBilliger6, PTSpezialisierung6, PTAnforderungen6, PTAbleiten6, PTAT6, PTPA6);
+            setUPTalentRowFighting(7, controll.getTalent(type, 7), PTName7, PTProbe7, PTWürfe7, PTBe7, PTTaw7, PTBilliger7, PTSpezialisierung7, PTAnforderungen7, PTAbleiten7, PTAT7, PTPA7);
+            setUPTalentRowFighting(8, controll.getTalent(type, 8), PTName8, PTProbe8, PTWürfe8, PTBe8, PTTaw8, PTBilliger8, PTSpezialisierung8, PTAnforderungen8, PTAbleiten8, PTAT8, PTPA8);
+            setUPTalentRowFighting(9, controll.getTalent(type, 9), PTName9, PTProbe9, PTWürfe9, PTBe9, PTTaw9, PTBilliger9, PTSpezialisierung9, PTAnforderungen9, PTAbleiten9, PTAT9, PTPA9);
+            setUPTalentRowFighting(10, controll.getTalent(type, 10), PTName10, PTProbe10, PTWürfe10, PTBe10, PTTaw10, PTBilliger10, PTSpezialisierung10, PTAnforderungen10, PTAbleiten10, PTAT10, PTPA10);
+            setUPTalentRowFighting(11, controll.getTalent(type, 11), PTName11, PTProbe11, PTWürfe11, PTBe11, PTTaw11, PTBilliger11, PTSpezialisierung11, PTAnforderungen11, PTAbleiten11, PTAT11, PTPA11);
+            setUPTalentRowFighting(12, controll.getTalent(type, 12), PTName12, PTProbe12, PTWürfe12, PTBe12, PTTaw12, PTBilliger12, PTSpezialisierung12, PTAnforderungen12, PTAbleiten12, PTAT12, PTPA12);
+            setUPTalentRowFighting(13, controll.getTalent(type, 13), PTName13, PTProbe13, PTWürfe13, PTBe13, PTTaw13, PTBilliger13, PTSpezialisierung13, PTAnforderungen13, PTAbleiten13, PTAT13, PTPA13);
+            setUPTalentRowFighting(14, controll.getTalent(type, 14), PTName14, PTProbe14, PTWürfe14, PTBe14, PTTaw14, PTBilliger14, PTSpezialisierung14, PTAnforderungen14, PTAbleiten14, PTAT14, PTPA14);
+            setUPTalentRowFighting(15, controll.getTalent(type, 15), PTName15, PTProbe15, PTWürfe15, PTBe15, PTTaw15, PTBilliger15, PTSpezialisierung15, PTAnforderungen15, PTAbleiten15, PTAT15, PTPA15);
+            setUPTalentRowFighting(16, controll.getTalent(type, 16), PTName16, PTProbe16, PTWürfe16, PTBe16, PTTaw16, PTBilliger16, PTSpezialisierung16, PTAnforderungen16, PTAbleiten16, PTAT16, PTPA16);
+            setUPTalentRowFighting(17, controll.getTalent(type, 17), PTName17, PTProbe17, PTWürfe17, PTBe17, PTTaw17, PTBilliger17, PTSpezialisierung17, PTAnforderungen17, PTAbleiten17, PTAT17, PTPA17);
+            setUPTalentRowFighting(18, controll.getTalent(type, 18), PTName18, PTProbe18, PTWürfe18, PTBe18, PTTaw18, PTBilliger18, PTSpezialisierung18, PTAnforderungen18, PTAbleiten18, PTAT18, PTPA18);
+            setUPTalentRowFighting(19, controll.getTalent(type, 19), PTName19, PTProbe19, PTWürfe19, PTBe19, PTTaw19, PTBilliger19, PTSpezialisierung19, PTAnforderungen19, PTAbleiten19, PTAT19, PTPA19);
+            setUPTalentRowFighting(20, controll.getTalent(type, 20), PTName20, PTProbe20, PTWürfe20, PTBe20, PTTaw20, PTBilliger20, PTSpezialisierung20, PTAnforderungen20, PTAbleiten20, PTAT20, PTPA20);
+            setUPTalentRowFighting(21, controll.getTalent(type, 21), PTName21, PTProbe21, PTWürfe21, PTBe21, PTTaw21, PTBilliger21, PTSpezialisierung21, PTAnforderungen21, PTAbleiten21, PTAT21, PTPA21);
+            setUPTalentRowFighting(22, controll.getTalent(type, 22), PTName22, PTProbe22, PTWürfe22, PTBe22, PTTaw22, PTBilliger22, PTSpezialisierung22, PTAnforderungen22, PTAbleiten22, PTAT22, PTPA22);
+            setUPTalentRowFighting(23, controll.getTalent(type, 23), PTName23, PTProbe23, PTWürfe23, PTBe23, PTTaw23, PTBilliger23, PTSpezialisierung23, PTAnforderungen23, PTAbleiten23, PTAT23, PTPA23);
+            setUPTalentRowFighting(24, controll.getTalent(type, 24), PTName24, PTProbe24, PTWürfe24, PTBe24, PTTaw24, PTBilliger24, PTSpezialisierung24, PTAnforderungen24, PTAbleiten24, PTAT24, PTPA24);
+            setUPTalentRowFighting(25, controll.getTalent(type, 25), PTName25, PTProbe25, PTWürfe25, PTBe25, PTTaw25, PTBilliger25, PTSpezialisierung25, PTAnforderungen25, PTAbleiten25, PTAT25, PTPA25);
+            setUPTalentRowFighting(26, controll.getTalent(type, 26), PTName26, PTProbe26, PTWürfe26, PTBe26, PTTaw26, PTBilliger26, PTSpezialisierung26, PTAnforderungen26, PTAbleiten26, PTAT26, PTPA26);
+            setUPTalentRowFighting(27, controll.getTalent(type, 27), PTName27, PTProbe27, PTWürfe27, PTBe27, PTTaw27, PTBilliger27, PTSpezialisierung27, PTAnforderungen27, PTAbleiten27, PTAT27, PTPA27);
+            setUPTalentRowFighting(28, controll.getTalent(type, 28), PTName28, PTProbe28, PTWürfe28, PTBe28, PTTaw28, PTBilliger28, PTSpezialisierung28, PTAnforderungen28, PTAbleiten28, PTAT28, PTPA28);
+            setUPTalentRowFighting(29, controll.getTalent(type, 29), PTName29, PTProbe29, PTWürfe29, PTBe29, PTTaw29, PTBilliger29, PTSpezialisierung29, PTAnforderungen29, PTAbleiten29, PTAT29, PTPA29);
+            setUPTalentRowFighting(30, controll.getTalent(type, 30), PTName30, PTProbe30, PTWürfe30, PTBe30, PTTaw30, PTBilliger30, PTSpezialisierung30, PTAnforderungen30, PTAbleiten30, PTAT30, PTPA30);
+
+            groupBoxKampf.Visible = true;
+
+            groupBoxProbe.Left = groupBoxTalentName.Right + 5;
+            groupBoxTaW.Left = groupBoxProbe.Right + 5;
+            groupBoxKampf.Left = groupBoxTaW.Right + 5;
+            groupBoxBe.Left = groupBoxKampf.Right + 5;
+            groupBoxBilliger.Left = groupBoxBe.Right + 5;
+            groupBoxSpezialisierung.Left = groupBoxBilliger.Right + 5;
+            groupBoxAbleiten.Left = groupBoxSpezialisierung.Right + 5;
+        }
+        private void setUPTalentRowGeneral(int number, InterfaceTalent talent, Label Name, TextBox Probe, TextBox wurfProbe, TextBox Be, TextBox Taw, TextBox Billiger, TextBox Spezialisierung, TextBox Anforderungen, TextBox Ableiten)
         {
             Boolean visible = false;
             if (talent == null)
             {
-                Name.Text = "";
-                Probe.Text = "";
-                Taw.Text = "";
-                Be.Text = "";
-                Billiger.Text = "";
-                Spezialisierung.Text = "";
-                Anforderungen.Text = "";
-                Ableiten.Text = "";
-                wurfProbe.Text = "";
+                visible = false;
             }
             else
             {
+                GeneralTalent Talent = (GeneralTalent)talent;
                 visible = true;
-                Name.Text = talent.getName();
-                Probe.Text = talent.getProbeValue().ToString();
-                Taw.Text = talent.getTaW().ToString();
-                Be.Text = "Bex" + talent.getBe().ToString();
+                Name.Text = Talent.getName();
+                Probe.Text = Talent.getProbeStringOne().ToString();
+                Taw.Text = Talent.getTaW().ToString();
+                Be.Text = Talent.getBe().ToString();
                 Billiger.Text = "";
                 Spezialisierung.Text = "";
-                Anforderungen.Text = talent.getAnforderungen();
-                Ableiten.Text = talent.getAbleitenString();
-                wurfProbe.Text = talent.getProbeString();
+                Anforderungen.Text = Talent.getAnforderungen();
+                Ableiten.Text = Talent.getAbleitenString();
+                wurfProbe.Text = Talent.getProbeStringOne();
             }
-            Name.Visible            = visible;
-            Probe.Visible           = visible;
-            Taw.Visible             = visible;
-            Be.Visible              = visible;
-            Billiger.Visible        = visible;
+            Name.Visible = visible;
+            Probe.Visible = visible;
+            Taw.Visible = visible;
+            Be.Visible = visible;
+            Billiger.Visible = visible;
             Spezialisierung.Visible = visible;
-            Anforderungen.Visible   = visible;
-            wurfProbe.Visible       = visible;
-            Ableiten.Visible        = visible;
+            Anforderungen.Visible = visible;
+            wurfProbe.Visible = visible;
+            Ableiten.Visible = visible;
+        }
+        private void setUPTalentRowFighting(int number, InterfaceTalent talent, Label Name, TextBox ProbeAT, TextBox ProbePA, TextBox Be, TextBox Taw, TextBox Billiger, TextBox Spezialisierung, TextBox Anforderungen, TextBox Ableiten, TextBox AT, TextBox PA)
+        {
+            Boolean visible = false;
+            if (talent == null)
+            {
+                visible = false;
+            }
+            else
+            {
+                visible                 = true;
+                FightTalent Talent      = (FightTalent)talent;
+
+                Name.Text               = Talent.getName();
+                Taw.Text                = Talent.getTaW().ToString();
+                ProbeAT.Text            = Talent.getProbeValueAT().ToString();
+                ProbePA.Text            = Talent.getProbeValuePA().ToString();                          
+                Be.Text                 = Talent.getBe().ToString();
+                Billiger.Text           = "";
+                Spezialisierung.Text    = "";
+                Ableiten.Text           = Talent.getAbleitenString();
+
+                AT.Text                 = Talent.getAT().ToString();
+                PA.Text                 = Talent.getPA().ToString();
+            }
+
+            Name.Visible = visible;
+            ProbeAT.Visible = visible;
+            Taw.Visible = visible;
+            Be.Visible = visible;
+            Billiger.Visible = visible;
+            Spezialisierung.Visible = visible;
+            Anforderungen.Visible = visible;
+            ProbePA.Visible = visible;
+            Ableiten.Visible = visible;
+            AT.Visible = visible;
+            PA.Visible = visible;
         }
 
         public void load()
         {
-            currentType = DSA_TALENTS.PHYSICALLY;
-            setUPTalents(currentType);
-
             txtName.Text = (controll.BasicValue(DSA_BASICVALUES.NAME));
             txtAlter.Text = (controll.BasicValue(DSA_BASICVALUES.ALTER));
             txtGeschlecht.Text = (controll.BasicValue(DSA_BASICVALUES.GESCHLECHT));
@@ -194,7 +302,7 @@ namespace DSA_Project
         /// <summary> 
         /// Ist bei einer Werteänderung eine Neuberechnung nötig muss dies Ausgelöst werden
         /// </summary>
-        public void refresh()
+        public void refreshHeroPage()
         {
             txtMutMAX.Text = controll.AttributeMAX(DSA_ATTRIBUTE.MU).ToString();
             txtKlugheitMAX.Text = controll.AttributeMAX(DSA_ATTRIBUTE.KL).ToString();
@@ -251,44 +359,91 @@ namespace DSA_Project
             txtAusdauerERG.Text = controll.EnergieMAX(DSA_ENERGIEN.AUSDAUER).ToString();
             txtAstralenergieERG.Text = controll.EnergieMAX(DSA_ENERGIEN.ASTRALENERGIE).ToString();
             txtKarmaenergieERG.Text = controll.EnergieMAX(DSA_ENERGIEN.KARMAENERGIE).ToString();
-            txtMagieresistenzERG.Text = controll.EnergieMAX(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
-
-            refreshTalentProbeBox(currentType);
+            txtMagieresistenzERG.Text = controll.EnergieMAX(DSA_ENERGIEN.MAGIERESISTENZ).ToString();            
         }
         public void refreshTalentProbeBox(DSA_TALENTS type)
         {
-            PTProbe1.Text = refreshTalent(type, 1);
-            PTProbe2.Text = refreshTalent(type, 2);
-            PTProbe3.Text = refreshTalent(type, 3);
-            PTProbe4.Text = refreshTalent(type, 4);
-            PTProbe5.Text = refreshTalent(type, 5);
-            PTProbe6.Text = refreshTalent(type, 6);
-            PTProbe7.Text = refreshTalent(type, 7);
-            PTProbe8.Text = refreshTalent(type, 8);
-            PTProbe9.Text = refreshTalent(type, 9);
-            PTProbe10.Text = refreshTalent(type, 10);
-            PTProbe11.Text = refreshTalent(type, 11);
-            PTProbe12.Text = refreshTalent(type, 12);
-            PTProbe13.Text = refreshTalent(type, 13);
-            PTProbe14.Text = refreshTalent(type, 14);
-            PTProbe15.Text = refreshTalent(type, 15);
-            PTProbe16.Text = refreshTalent(type, 16);
-            PTProbe17.Text = refreshTalent(type, 17);
-            PTProbe18.Text = refreshTalent(type, 18);
-            PTProbe19.Text = refreshTalent(type, 19);
-            PTProbe20.Text = refreshTalent(type, 20);
-            PTProbe21.Text = refreshTalent(type, 21);
-            PTProbe22.Text = refreshTalent(type, 22);
-            PTProbe23.Text = refreshTalent(type, 23);
+            PTProbe1.Text = refreshTalentProbe(type, 1);
+            PTProbe2.Text = refreshTalentProbe(type, 2);
+            PTProbe3.Text = refreshTalentProbe(type, 3);
+            PTProbe4.Text = refreshTalentProbe(type, 4);
+            PTProbe5.Text = refreshTalentProbe(type, 5);
+            PTProbe6.Text = refreshTalentProbe(type, 6);
+            PTProbe7.Text = refreshTalentProbe(type, 7);
+            PTProbe8.Text = refreshTalentProbe(type, 8);
+            PTProbe9.Text = refreshTalentProbe(type, 9);
+            PTProbe10.Text = refreshTalentProbe(type, 10);
+            PTProbe11.Text = refreshTalentProbe(type, 11);
+            PTProbe12.Text = refreshTalentProbe(type, 12);
+            PTProbe13.Text = refreshTalentProbe(type, 13);
+            PTProbe14.Text = refreshTalentProbe(type, 14);
+            PTProbe15.Text = refreshTalentProbe(type, 15);
+            PTProbe16.Text = refreshTalentProbe(type, 16);
+            PTProbe17.Text = refreshTalentProbe(type, 17);
+            PTProbe18.Text = refreshTalentProbe(type, 18);
+            PTProbe19.Text = refreshTalentProbe(type, 19);
+            PTProbe20.Text = refreshTalentProbe(type, 20);
+            PTProbe21.Text = refreshTalentProbe(type, 21);
+            PTProbe22.Text = refreshTalentProbe(type, 22);
+            PTProbe23.Text = refreshTalentProbe(type, 23);
+            PTProbe24.Text = refreshTalentProbe(type, 24);
+            PTProbe25.Text = refreshTalentProbe(type, 25);
+            PTProbe26.Text = refreshTalentProbe(type, 26);
+            PTProbe27.Text = refreshTalentProbe(type, 27);
+            PTProbe28.Text = refreshTalentProbe(type, 28);
+            PTProbe29.Text = refreshTalentProbe(type, 29);
+            PTProbe30.Text = refreshTalentProbe(type, 30);
         }
-        private String refreshTalent(DSA_TALENTS type, int number)
+        public void refreshTalentProbeWürfeText(DSA_TALENTS type)
         {
-            Talent talent = controll.getTalent(type, number);
+            PTWürfe1.Text = refreshTalentWürfe(type, 1);
+            PTWürfe2.Text = refreshTalentWürfe(type, 2);
+            PTWürfe3.Text = refreshTalentWürfe(type, 3);
+            PTWürfe4.Text = refreshTalentWürfe(type, 4);
+            PTWürfe5.Text = refreshTalentWürfe(type, 5);
+            PTWürfe6.Text = refreshTalentWürfe(type, 6);
+            PTWürfe7.Text = refreshTalentWürfe(type, 7);
+            PTWürfe8.Text = refreshTalentWürfe(type, 8);
+            PTWürfe9.Text = refreshTalentWürfe(type, 9);
+            PTWürfe10.Text = refreshTalentWürfe(type, 10);
+            PTWürfe11.Text = refreshTalentWürfe(type, 11);
+            PTWürfe12.Text = refreshTalentWürfe(type, 12);
+            PTWürfe13.Text = refreshTalentWürfe(type, 13);
+            PTWürfe14.Text = refreshTalentWürfe(type, 14);
+            PTWürfe15.Text = refreshTalentWürfe(type, 15);
+            PTWürfe16.Text = refreshTalentWürfe(type, 16);
+            PTWürfe17.Text = refreshTalentWürfe(type, 17);
+            PTWürfe18.Text = refreshTalentWürfe(type, 18);
+            PTWürfe19.Text = refreshTalentWürfe(type, 19);
+            PTWürfe20.Text = refreshTalentWürfe(type, 20);
+            PTWürfe21.Text = refreshTalentWürfe(type, 21);
+            PTWürfe22.Text = refreshTalentWürfe(type, 22);
+            PTWürfe23.Text = refreshTalentWürfe(type, 23);
+            PTWürfe24.Text = refreshTalentWürfe(type, 24);
+            PTWürfe25.Text = refreshTalentWürfe(type, 25);
+            PTWürfe26.Text = refreshTalentWürfe(type, 26);
+            PTWürfe27.Text = refreshTalentWürfe(type, 27);
+            PTWürfe28.Text = refreshTalentWürfe(type, 28);
+            PTWürfe29.Text = refreshTalentWürfe(type, 29);
+            PTWürfe30.Text = refreshTalentWürfe(type, 30);
+        }
+        private String refreshTalentProbe(DSA_TALENTS type, int number)
+        {
+            InterfaceTalent talent = controll.getTalent(type, number);
             if (talent == null)
             {
                 return "";
             }
-            return talent.getProbeValue().ToString();
+            return talent.getProbeStringOne().ToString();
+        }
+        private String refreshTalentWürfe(DSA_TALENTS type, int number)
+        {
+            InterfaceTalent talent = controll.getTalent(type, number);
+            if (talent == null)
+            {
+                return "";
+            }
+            return talent.getProbeStringTwo();
         }
 
         private void LoadFeature(TextBox name, TextBox description, TextBox value, TextBox gp, DSA_FEATURES type, int number)
@@ -301,7 +456,6 @@ namespace DSA_Project
             description.Text = feature.getDescription();
             value.Text = feature.getValue();
             gp.Text = feature.getGP();
-
         }
 
 
@@ -357,7 +511,7 @@ namespace DSA_Project
         }
         private void txtGesamtAKT_TextChanged(object sender, EventArgs e)
         {
-            refresh();
+            refreshHeroPage();
         }
         /*Attribut Änderungen Aktuelle Werte Ende*/
 
@@ -438,25 +592,25 @@ namespace DSA_Project
         }
         private void txtGesamtMAX_TextChanged(object sender, EventArgs e)
         {
-            refresh();
+            refreshHeroPage();
         }
         /*Attribut Änderungen MAX Ende*/
         /*Basic Values Änderungen AKT*/
         private void txtAttackeBaisAKT_TextChanged(object sender, EventArgs e)
         {
-            refresh();
+            refreshHeroPage();
         }
         private void txtParadeBasisAKT_TextChanged(object sender, EventArgs e)
         {
-            refresh();
+            refreshHeroPage();
         }
         private void txtFernkampfBasisAKT_TextChanged(object sender, EventArgs e)
         {
-            refresh();
+            refreshHeroPage();
         }
         private void txtInitativeBasisAKT_TextChanged(object sender, EventArgs e)
         {
-            refresh();
+            refreshHeroPage();
         }
         private void txtBeherschungswertAKT_TextChanged(object sender, EventArgs e)
         {
@@ -1085,9 +1239,9 @@ namespace DSA_Project
             TextBox box = (TextBox)sender;
             String BasicString = "PTTaw";
             String NameString = box.Name;
-            String number = NameString.Substring(BasicString.Length, NameString.Length- BasicString.Length);
+            String number = NameString.Substring(BasicString.Length, NameString.Length - BasicString.Length);
 
-            Talent talent = controll.getTalent(currentType, number);
+            InterfaceTalent talent = controll.getTalent(lastUsedTalentType, number);
 
             if (talent != null)
             {
@@ -1100,28 +1254,107 @@ namespace DSA_Project
                 talent.setTaw(box.Text);
                 box.Text = talent.getTaW().ToString();
             }
-            this.refresh();            
+            this.refreshTalentProbeBox(lastUsedTalentType);
+        }
+        private void ATChanged(object sender, EventArgs e)
+        {
+            TextBox box = (TextBox)sender;
+            if (box.Visible == false) return;
+
+            String BasicString = "PTAT";
+            String NameString = box.Name;
+            String number = NameString.Substring(BasicString.Length, NameString.Length - BasicString.Length);
+            FightTalent talent = (FightTalent)controll.getTalent(lastUsedTalentType, number);
+
+            if (talent != null)
+            {
+                String Substring = box.Text;
+                if (String.Equals(Substring, "-"))
+                {
+                    return;
+                }
+                int result;
+                Int32.TryParse(box.Text, out result);
+
+                talent.setAT(result);
+                box.Text = talent.getAT().ToString();
+            }
+            this.refreshTalentProbeBox(lastUsedTalentType);
+        }
+        private void PAChanged(object sender, EventArgs e)
+        {
+            TextBox box = (TextBox)sender;
+            if (box.Visible == false) return;
+
+            String BasicString = "PTPA";
+            String NameString = box.Name;
+            String number = NameString.Substring(BasicString.Length, NameString.Length - BasicString.Length);
+            FightTalent talent = (FightTalent)controll.getTalent(lastUsedTalentType, number);
+
+            if (talent != null)
+            {
+                String Substring = box.Text;
+                if (String.Equals(Substring, "-"))
+                {
+                    return;
+                }
+                int result;
+                Int32.TryParse(box.Text, out result);
+
+                talent.setPA(result);
+                box.Text = talent.getPA().ToString();
+            }
+            this.refreshTalentProbeWürfeText(lastUsedTalentType);
         }
 
         private void radioKörperlicheTalente_CheckedChanged(object sender, EventArgs e)
         {
-            currentType = DSA_TALENTS.PHYSICALLY;
-            setUPTalents(currentType);
+            RadioButton button = (RadioButton)sender;
+            if (button.Checked == false) return;
+            
+            setUPGeneralTalent(DSA_TALENTS.PHYSICALLY);
         }
         private void radioSozialTalente_CheckedChanged(object sender, EventArgs e)
         {
-            currentType = DSA_TALENTS.SOCIAL;
-            setUPTalents(currentType);
+            RadioButton button = (RadioButton)sender;
+            if (button.Checked == false) return;
+            
+            setUPGeneralTalent(DSA_TALENTS.SOCIAL);
         }
         private void radioNaturTalente_CheckedChanged(object sender, EventArgs e)
         {
-            currentType = DSA_TALENTS.NATURE;
-            setUPTalents(currentType);
+            RadioButton button = (RadioButton)sender;
+            if (button.Checked == false) return;
+            
+            setUPGeneralTalent(DSA_TALENTS.NATURE);
         }
         private void radioKnowldageTalente_CheckedChanged(object sender, EventArgs e)
         {
-            currentType = DSA_TALENTS.KNOWLDAGE;
-            setUPTalents(currentType);
+            RadioButton button = (RadioButton)sender;
+            if (button.Checked == false) return;
+            
+            setUPGeneralTalent(DSA_TALENTS.KNOWLDAGE);
         }
-    }        
+        private void radioCraftingTalent_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton button = (RadioButton)sender;
+            if (button.Checked == false) return;
+            
+            setUPGeneralTalent(DSA_TALENTS.CRAFTING);
+        }
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton button = (RadioButton)sender;
+            if (button.Checked == false) return;
+            
+            setUPGeneralTalent(DSA_TALENTS.CRAFTING1);
+        }
+        private void radioButtonFigtingTalent_ChecedChanged(object sender, EventArgs e)
+        {
+            RadioButton button = (RadioButton)sender;
+            if (button.Checked == false) return;
+            
+            setUPFightingTalent(DSA_TALENTS.WEAPONLESS);
+        }
+    }
 }

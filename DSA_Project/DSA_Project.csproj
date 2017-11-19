@@ -49,7 +49,10 @@
     <Compile Include="Classes\Data\Charakter.cs" />
     <Compile Include="Classes\Controller\ControllClass.cs" />
     <Compile Include="Classes\Data\Feature.cs" />
-    <Compile Include="Classes\Data\Talent.cs" />
+    <Compile Include="Classes\Data\Talente\FightTalent.cs" />
+    <Compile Include="Classes\Data\Talente\GeneralTalent.cs" />
+    <Compile Include="Classes\Data\Talente\InterfaceTalent.cs" />
+    <Compile Include="Classes\Data\Talente\Talent.cs" />
     <Compile Include="Classes\Managment\ManagmentFeature.cs" />
     <Compile Include="Classes\Managment\ManagmentSave.cs" />
     <Compile Include="Classes\Util\LoadCharakterXML.cs" />
@@ -101,12 +104,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Ressources\aventurien politisch.png" />
-    <Content Include="Ressources\Kazarik.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </Content>
+    <None Include="Resources\anj80eb_700b.jpg" />
+    <Content Include="Resources\aventurien politisch.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Ressources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

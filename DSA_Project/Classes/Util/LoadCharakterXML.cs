@@ -235,10 +235,11 @@ namespace DSA_Project
             int TalentListLength = charakter.getCounttalent(type);   
             for(int i=0; i < TalentListLength; i++)
             {
-                Talent talent = charakter.getTalent(type, i);
+                InterfaceTalent talent = charakter.getTalent(type, i);
                 foreach(XmlNode node in CatecorieNode)
                 {
-                    if(String.Equals(node.Name, talent.getName())){
+                    String name = node.Name.Replace(".", " ");
+                    if(String.Equals(name, talent.getName())){
                         talent.setTaw(node.InnerText);
                     }
                 }

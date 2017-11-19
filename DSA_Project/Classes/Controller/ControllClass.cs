@@ -68,7 +68,7 @@ namespace DSA_Project
             }
             
             form.load();
-            form.refresh();
+            form.refreshHeroPage();
         }
         
         public Charakter createNewCharater()
@@ -77,7 +77,7 @@ namespace DSA_Project
 
             for(int i=0; i< Enum.GetNames(typeof(DSA_TALENTS)).Length; i++)
             {
-                List<Talent> talentList = ControllTalent.getTalentList((DSA_TALENTS)i);
+                List<InterfaceTalent> talentList = ControllTalent.getTalentList((DSA_TALENTS)i);
                 for (int j = 0; j < talentList.Count; j++)
                 {
                     charakter.addTalent((DSA_TALENTS)i, j, talentList[j]);
@@ -120,7 +120,7 @@ namespace DSA_Project
             {
                 Charakter.setAttribute(attribute, wert_int);
             }
-            form.refresh();
+            form.refreshHeroPage();
             return AttributeAKT(attribute);
         }
         /// <summary>
@@ -142,7 +142,7 @@ namespace DSA_Project
             {
                 /*Dieser Wert Soll Aktuell noch nicht geändert werden*/
             }
-            form.refresh();
+            form.refreshHeroPage();
             return AttributeMOD(attribute);
         }
         /// <summary>
@@ -182,7 +182,7 @@ namespace DSA_Project
             {
                 Charakter.setAdvancedValueAKT(advancedValue, value_out);
             }
-            form.refresh();
+            form.refreshHeroPage();
             return AdvancedValueAKT(advancedValue);
         }
         public int AdvancedValueMOD(DSA_ADVANCEDVALUES advancedValue)
@@ -253,7 +253,7 @@ namespace DSA_Project
             Advantages.Remove(number);
             Advantages.Add(number, feature);
 
-            form.refresh();
+            form.refreshHeroPage();
 
             return feature;
         }
@@ -281,20 +281,20 @@ namespace DSA_Project
             return Moodifikator(number);
         }
 
-        public Talent getTalent(DSA_TALENTS type, int number)
+        public InterfaceTalent getTalent(DSA_TALENTS type, int number)
         {
             //-1 um die einfacheren Zahlen zu verwenden
-            Talent talent = Charakter.getTalent(type, number - 1);
+            InterfaceTalent talent = Charakter.getTalent(type, number - 1);
             return talent;
         }
-        public Talent getTalent(DSA_TALENTS type,  String number)
+        public InterfaceTalent getTalent(DSA_TALENTS type,  String number)
         {
             var isNumeric = int.TryParse(number, out var wert_int);
             if (isNumeric == true)
             {
                 return Charakter.getTalent(type, wert_int - 1);
             }
-            return new Talent("", new List<DSA_ATTRIBUTE> { }, 0, "", "");
+            return null;
         }
     }
 }

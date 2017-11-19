@@ -63,6 +63,16 @@ namespace DSA_Project.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap anj80eb_700b {
+            get {
+                object obj = ResourceManager.GetObject("anj80eb_700b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap aventurien_politisch {
             get {
                 object obj = ResourceManager.GetObject("aventurien politisch", resourceCulture);

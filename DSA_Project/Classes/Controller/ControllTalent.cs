@@ -6,44 +6,47 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    public enum DSA_TALENTS { PHYSICALLY, SOCIAL, NATURE, KNOWLDAGE }
+    public enum DSA_TALENTS { PHYSICALLY, SOCIAL, NATURE, KNOWLDAGE, CRAFTING, CRAFTING1, WEAPONLESS }
 
     class ControllTalent
     {
 
-        private Dictionary<DSA_TALENTS, List<Talent>> talente;
+        private Dictionary<DSA_TALENTS, List<InterfaceTalent>> talente;
 
         public ControllTalent()
         {
-            talente = new Dictionary<DSA_TALENTS, List<Talent>>();
+            talente = new Dictionary<DSA_TALENTS, List<InterfaceTalent>>();
 
-            createPhysicalTalents(DSA_TALENTS.PHYSICALLY);
-            createSocialTalents(DSA_TALENTS.SOCIAL);
-            createNatureTalents(DSA_TALENTS.NATURE);
-            createKnowldageTalents(DSA_TALENTS.KNOWLDAGE);
+            createPhysicalTalents();
+            createSocialTalents();
+            createNatureTalents();
+            createKnowldageTalents();
+            createCraftingTalents();
+            createCrafting1Talents();
+            createFightWeapenlessalents();
         }
-        private void createPhysicalTalents(DSA_TALENTS type)
+        private void createPhysicalTalents()
         {
-            List<Talent> list = new List<Talent>();
+            List<InterfaceTalent> list = new List<InterfaceTalent>();
 
-            Talent Atlethik             = new Talent("Atlethik",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KO, DSA_ATTRIBUTE.KK },2, "-",                        "Körperbeherschung(+5), Akrobatik");
-            Talent Klettern             = new Talent("Klettern",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KK },2, "-",                        "Athletik o. Akrobatik (+5), Körperbeherrschung");
-            Talent Körperbeherrschung   = new Talent("Körperbeherrschung",  new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.GE },2, "-",                        "Akrobatik (+5), Athletik");
-            Talent Schleichen           = new Talent("Schleichen",          new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.GE },1, "-",                        "Körperbeherrschung, Sich Verstecken");
-            Talent Schwimmen            = new Talent("Schwimmen",           new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KO, DSA_ATTRIBUTE.KK },2, "-",                        "Athletik (+15)");
-            Talent Selbstbeherrschung   = new Talent("Selbstbeherrschung",  new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.KO, DSA_ATTRIBUTE.KK },0, "-",                        "-");
-            Talent SichVerstecken       = new Talent("SichVerstecken",      new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.GE },2, "-",                        "Schleichen, Körperbeherrschung (+15)");
-            Talent Singen               = new Talent("Singen",              new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.CH },3, "-",                        "-");
-            Talent Sinnenschärfe        = new Talent("Sinnenschärfe",       new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.IN },0, "-",                        "KL/IN/FF (+-0)");
-            Talent Tanzen               = new Talent("Tanzen",              new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.GE },2, "-",                        "Körperbeherrschung (+5), Akrobatik (+5)");
-            Talent Zechen               = new Talent("Zechen",              new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.KO, DSA_ATTRIBUTE.KK },0, "-",                        "-");
-            Talent Akrobatik            = new Talent("Akrobatik",           new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KK },2, "Körperbeherrschung 4",     "Körperbeherrschung (+5), Athletik");
-            Talent Fliegen              = new Talent("Fliegen",             new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.GE },1, "-",                        "Akrobatik");
-            Talent Gaukeleien           = new Talent("Gaukeleien",          new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.FF },2, "-",                        "Taschendiebstahl, Falschspiel");
-            Talent Reiten               = new Talent("Reiten",              new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KK },2, "-",                        "Körperbeherrschung, Akrobatik (+15)");
-            Talent Skifahren            = new Talent("Skifahren",           new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KO },2, "-",                        "Athletik, Körperbeherrschung (+15)");
-            Talent StimmenImitieren     = new Talent("StimmenImitieren",    new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH },4, "Sinnenschärfe 4",          "Gaukeleien (Bauchreden) (+5)");
-            Talent Taschendiebstahl     = new Talent("Taschendiebstahl",    new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF },2, "10+: Menschenkenntnis 4",  "Gaukeleien (Taschenspielereien)");
+            GeneralTalent Atlethik             = new GeneralTalent("Atlethik",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KO, DSA_ATTRIBUTE.KK },"2", "-",                        "Körperbeherschung(+5), Akrobatik");
+            GeneralTalent Klettern             = new GeneralTalent("Klettern",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KK },"2", "-",                        "Athletik o. Akrobatik (+5), Körperbeherrschung");
+            GeneralTalent Körperbeherrschung   = new GeneralTalent("Körperbeherrschung",  new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.GE },"2", "-",                        "Akrobatik (+5), Athletik");
+            GeneralTalent Schleichen           = new GeneralTalent("Schleichen",          new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.GE },"1", "-",                        "Körperbeherrschung, Sich Verstecken");
+            GeneralTalent Schwimmen            = new GeneralTalent("Schwimmen",           new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KO, DSA_ATTRIBUTE.KK },"2", "-",                        "Athletik (+15)");
+            GeneralTalent Selbstbeherrschung   = new GeneralTalent("Selbstbeherrschung",  new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.KO, DSA_ATTRIBUTE.KK },"0", "-",                        "-");
+            GeneralTalent SichVerstecken       = new GeneralTalent("SichVerstecken",      new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.GE },"2", "-",                        "Schleichen, Körperbeherrschung (+15)");
+            GeneralTalent Singen               = new GeneralTalent("Singen",              new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.CH },"3", "-",                        "-");
+            GeneralTalent Sinnenschärfe        = new GeneralTalent("Sinnenschärfe",       new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.IN },"0", "-",                        "KL/IN/FF (+-0)");
+            GeneralTalent Tanzen               = new GeneralTalent("Tanzen",              new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.GE },"2", "-",                        "Körperbeherrschung (+5), Akrobatik (+5)");
+            GeneralTalent Zechen               = new GeneralTalent("Zechen",              new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.KO, DSA_ATTRIBUTE.KK },"0", "-",                        "-");
+            GeneralTalent Akrobatik            = new GeneralTalent("Akrobatik",           new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KK },"2", "Körperbeherrschung 4",     "Körperbeherrschung (+5), Athletik");
+            GeneralTalent Fliegen              = new GeneralTalent("Fliegen",             new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.GE },"1", "-",                        "Akrobatik");
+            GeneralTalent Gaukeleien           = new GeneralTalent("Gaukeleien",          new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.FF },"2", "-",                        "Taschendiebstahl, Falschspiel");
+            GeneralTalent Reiten               = new GeneralTalent("Reiten",              new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KK },"2", "-",                        "Körperbeherrschung, Akrobatik (+15)");
+            GeneralTalent Skifahren            = new GeneralTalent("Skifahren",           new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KO },"2", "-",                        "Athletik, Körperbeherrschung (+15)");
+            GeneralTalent StimmenImitieren     = new GeneralTalent("StimmenImitieren",    new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH },"4", "Sinnenschärfe 4",          "Gaukeleien (Bauchreden) (+5)");
+            GeneralTalent Taschendiebstahl     = new GeneralTalent("Taschendiebstahl",    new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF },"2", "10+: Menschenkenntnis 4",  "Gaukeleien (Taschenspielereien)");
 
             list.Add(Atlethik);
             list.Add(Klettern);
@@ -63,23 +66,25 @@ namespace DSA_Project
             list.Add(Skifahren);
             list.Add(StimmenImitieren);
             list.Add(Taschendiebstahl);
+            
+            talente.Add(DSA_TALENTS.PHYSICALLY, list);
 
-            talente.Add(type, list);
+            Console.WriteLine("Physical: " + list.Count);
         }
-        private void createSocialTalents(DSA_TALENTS type)
+        private void createSocialTalents()
         {
-            List<Talent> list = new List<Talent>();
+            List<InterfaceTalent> list = new List<InterfaceTalent>();
 
-            Talent Menschenkenntnis         = new Talent("Menschenkentniss",        new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "-", "Heilkunde Seele (+5)");
-            Talent Überreden                = new Talent("Überreden",               new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "-", "Überzeugen");
-            Talent Betören                  = new Talent("Betören",                 new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.CH }, "Menschenkenntnis 4", "Überreden, Überzeugen, Galanterie (+5)");
-            Talent Etikette                 = new Talent("Etikette",                new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "-", "Galanterie");
-            Talent Gassenwissen             = new Talent("Gassenwissen",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "-", "Menschenkenntnis");
-            Talent Lehren                   = new Talent("Lehren",                  new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "10+: Menschenkenntnis 4", "Überzeugen");
-            Talent Schauspielerei           = new Talent("Schauspielerei",          new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.CH }, "Etikette, Sich Verkleiden, Singen, Überreden, Überzeugen je 4", "Überreden");
-            Talent SchriftlicherAusdruck    = new Talent("SchriftlicherAusdruck",   new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.IN }, "Lesen/Schreiben (entsprechende Schrift) 6", "Lesen/Schreiben, Überzeugen (Rhetorik schriftlich) (+5)");
-            Talent SichVerkleiden           = new Talent("SichVerkleiden",          new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.GE }, "-", "Schauspielerei");
-            Talent Überzeugen               = new Talent("Überzeugen",              new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "Menschenkenntnis 4", "Überreden");
+            GeneralTalent Menschenkenntnis         = new GeneralTalent("Menschenkentniss",        new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "-", "Heilkunde Seele (+5)");
+            GeneralTalent Überreden                = new GeneralTalent("Überreden",               new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "-", "Überzeugen");
+            GeneralTalent Betören                  = new GeneralTalent("Betören",                 new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.CH }, "Menschenkenntnis 4", "Überreden, Überzeugen, Galanterie (+5)");
+            GeneralTalent Etikette                 = new GeneralTalent("Etikette",                new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "-", "Galanterie");
+            GeneralTalent Gassenwissen             = new GeneralTalent("Gassenwissen",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "-", "Menschenkenntnis");
+            GeneralTalent Lehren                   = new GeneralTalent("Lehren",                  new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "10+: Menschenkenntnis 4", "Überzeugen");
+            GeneralTalent Schauspielerei           = new GeneralTalent("Schauspielerei",          new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.CH }, "Etikette, Sich Verkleiden, Singen, Überreden, Überzeugen je 4", "Überreden");
+            GeneralTalent SchriftlicherAusdruck    = new GeneralTalent("SchriftlicherAusdruck",   new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.IN }, "Lesen/Schreiben (entsprechende Schrift) 6", "Lesen/Schreiben, Überzeugen (Rhetorik schriftlich) (+5)");
+            GeneralTalent SichVerkleiden           = new GeneralTalent("SichVerkleiden",          new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.GE }, "-", "Schauspielerei");
+            GeneralTalent Überzeugen               = new GeneralTalent("Überzeugen",              new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "Menschenkenntnis 4", "Überreden");
 
             list.Add(Menschenkenntnis);
             list.Add(Überreden);
@@ -92,19 +97,21 @@ namespace DSA_Project
             list.Add(SichVerkleiden);
             list.Add(Überzeugen);
 
-            talente.Add(type, list);
-        }
-        private void createNatureTalents(DSA_TALENTS type)
-        {
-            List<Talent> list = new List<Talent>();
+            talente.Add(DSA_TALENTS.SOCIAL, list);
 
-            Talent Fährtensuchen        = new Talent("Fährtensuchen",       new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.KO }, "-", "Sinnenschärfe");
-            Talent Orientierung         = new Talent("Orientierung",        new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.IN }, "-", "Sternkunde");
-            Talent Wildnisleben         = new Talent("Wildnisleben",        new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KO }, "-", "Tierkunde, Pflanzenkunde");
-            Talent Fallenstellen        = new Talent("Fallenstellen",       new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KK }, "10+: Wildnisleben 4", "Wildnisleben");
-            Talent FesselnEntfesseln    = new Talent("Fesseln-Entfesseln",  new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KK }, "-", "Seiler, Seefahrt, Entfesseln: Akrobatik (Winden) (+5), Ringen-PA (+10)");
-            Talent FischenAngeln        = new Talent("Fischen-Angeln",      new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KK }, "-", "Wildnisleben");
-            Talent Wettervorhersage     = new Talent("Wettervorhersage",    new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.IN }, "-", "Wildnisleben");
+            Console.WriteLine("Social: " + list.Count);
+        }
+        private void createNatureTalents()
+        {
+            List<InterfaceTalent> list = new List<InterfaceTalent>();
+
+            GeneralTalent Fährtensuchen        = new GeneralTalent("Fährtensuchen",       new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.KO }, "-", "Sinnenschärfe");
+            GeneralTalent Orientierung         = new GeneralTalent("Orientierung",        new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.IN }, "-", "Sternkunde");
+            GeneralTalent Wildnisleben         = new GeneralTalent("Wildnisleben",        new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KO }, "-", "Tierkunde, Pflanzenkunde");
+            GeneralTalent Fallenstellen        = new GeneralTalent("Fallenstellen",       new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KK }, "10+: Wildnisleben 4", "Wildnisleben");
+            GeneralTalent FesselnEntfesseln    = new GeneralTalent("Fesseln-Entfesseln",  new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KK }, "-", "Seiler, Seefahrt, Entfesseln: Akrobatik (Winden) (+5), Ringen-PA (+10)");
+            GeneralTalent FischenAngeln        = new GeneralTalent("Fischen-Angeln",      new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KK }, "-", "Wildnisleben");
+            GeneralTalent Wettervorhersage     = new GeneralTalent("Wettervorhersage",    new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.IN }, "-", "Wildnisleben");
 
             list.Add(Fährtensuchen);
             list.Add(Orientierung);
@@ -114,35 +121,37 @@ namespace DSA_Project
             list.Add(FischenAngeln);
             list.Add(Wettervorhersage);
 
-            talente.Add(type, list);
-        }
-        private void createKnowldageTalents(DSA_TALENTS type)
-        {
-            List<Talent> list = new List<Talent>();
+            talente.Add(DSA_TALENTS.NATURE, list);
 
-            Talent GötterKulte          = new Talent("Götter-Kulte",        new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "-", "Geschichtswissen, Sagen/Legenden");
-            Talent Rechnen              = new Talent("Rechnen",             new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "-", "-");
-            Talent SagenLegenden        = new Talent("Sagen-Legenden",      new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "-", "Geschichtswissen, Götter/Kulte");
-            Talent Anatomie             = new Talent("Anatomie",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF }, "Keine Totenangst", "Heilkunde Wunde (+5), Heilkunde Krankheiten");
-            Talent Baukunst             = new Talent("Baukunst",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF }, "Lesen/Schreiben 4, Malen/Zeichnen 4, Rechnen 5", "Zimmermann, Maurer, Steinmetz");
-            Talent BrettKartenspiel     = new Talent("Brett-Kartenspiel",   new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "-", "Kriegskunst (Strategie), Rechnen");
-            Talent Geographie           = new Talent("Geographie",          new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "-", "-");
-            Talent Geschichtswissen     = new Talent("Geschichtswissen",    new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "Lesen/Schreiben 4", "Sagen/Legenden (+5 o. +10)");
-            Talent Gesteinskunde        = new Talent("Gesteinskunde",       new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF }, "-", "Baukunst, Steinschneider, Bergbau, Hüttenkunde, Steinmetz (+5)");
-            Talent Heraldik             = new Talent("Heraldik",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF }, "-", "Etikette");
-            Talent Hüttenkunde          = new Talent("Hüttenkunde",         new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.KO }, "-", "Alchimie, Grobschmied (+15), Metallguss");
-            Talent Kriegskunst          = new Talent("Kriegskunst",         new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.CH }, "-", "Brettspiel");
-            Talent Kryptographie        = new Talent("Kryptographie",       new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "L/S und Rechnen je 6, Sprachenkunde 4. M/Z 4", "Sprachenkunde, Rechnen");
-            Talent Magiekunde           = new Talent("Magiekunde",          new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "10+: Lesen/Schreiben 6", "Sagen/Legenden, Götter/Kulte");
-            Talent Mechanik             = new Talent("Mechanik",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF }, "10+: L/S, M/Z, Rechnen je 6", "Feinmechanik");
-            Talent Pflanzenkunde        = new Talent("Pflanzenkunde",       new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF }, "-", "Wildnisleben");
-            Talent Philosophie          = new Talent("Philosophie",         new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "-", "Götter/Kulte, Magiekunde, Geschichtswissen (+15), Sagen/Legenden (+15)");
-            Talent Rechtskunde          = new Talent("Rechtskunde",         new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "-", "Etikette, Staatskunst");
-            Talent Schätzen             = new Talent("Schätzen",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.IN }, "-", "Handel o. Juwelier o. Feinm. (Goldschmied) (+5), Zimmermann");
-            Talent Sprachenkunde        = new Talent("Sprachenkunde",       new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "-", "-");
-            Talent Staatskunst          = new Talent("Staatskunst",         new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "-", "Hauswirtschaft, Rechtskunde (Staatsrecht)");
-            Talent Sternkunde           = new Talent("Sternkunde",          new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "10+: L/S 6, Rechnen 6, Sinnenschärfe 6", "Gabe Prophezeien (Astrologie) (+5)");
-            Talent Tierkunde            = new Talent("Tierkunde",           new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "-", "Viehzucht, Seefischerei, Reiten, Wildnisleben");
+            Console.WriteLine("Nature: " + list.Count);
+        }
+        private void createKnowldageTalents()
+        {
+            List<InterfaceTalent> list = new List<InterfaceTalent>();
+
+            GeneralTalent GötterKulte          = new GeneralTalent("Götter-Kulte",        new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "-", "Geschichtswissen, Sagen/Legenden");
+            GeneralTalent Rechnen              = new GeneralTalent("Rechnen",             new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "-", "-");
+            GeneralTalent SagenLegenden        = new GeneralTalent("Sagen-Legenden",      new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "-", "Geschichtswissen, Götter/Kulte");
+            GeneralTalent Anatomie             = new GeneralTalent("Anatomie",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF }, "Keine Totenangst", "Heilkunde Wunde (+5), Heilkunde Krankheiten");
+            GeneralTalent Baukunst             = new GeneralTalent("Baukunst",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF }, "Lesen/Schreiben 4, Malen/Zeichnen 4, Rechnen 5", "Zimmermann, Maurer, Steinmetz");
+            GeneralTalent BrettKartenspiel     = new GeneralTalent("Brett-Kartenspiel",   new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "-", "Kriegskunst (Strategie), Rechnen");
+            GeneralTalent Geographie           = new GeneralTalent("Geographie",          new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "-", "-");
+            GeneralTalent Geschichtswissen     = new GeneralTalent("Geschichtswissen",    new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "Lesen/Schreiben 4", "Sagen/Legenden (+5 o. +10)");
+            GeneralTalent Gesteinskunde        = new GeneralTalent("Gesteinskunde",       new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF }, "-", "Baukunst, Steinschneider, Bergbau, Hüttenkunde, Steinmetz (+5)");
+            GeneralTalent Heraldik             = new GeneralTalent("Heraldik",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF }, "-", "Etikette");
+            GeneralTalent Hüttenkunde          = new GeneralTalent("Hüttenkunde",         new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.KO }, "-", "Alchimie, Grobschmied (+15), Metallguss");
+            GeneralTalent Kriegskunst          = new GeneralTalent("Kriegskunst",         new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.CH }, "-", "Brettspiel");
+            GeneralTalent Kryptographie        = new GeneralTalent("Kryptographie",       new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "L/S und Rechnen je 6, Sprachenkunde 4. M/Z 4", "Sprachenkunde, Rechnen");
+            GeneralTalent Magiekunde           = new GeneralTalent("Magierkunde",         new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "10+: Lesen/Schreiben 6", "Sagen/Legenden, Götter/Kulte");
+            GeneralTalent Mechanik             = new GeneralTalent("Mechanik",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF }, "10+: L/S, M/Z, Rechnen je 6", "Feinmechanik");
+            GeneralTalent Pflanzenkunde        = new GeneralTalent("Pflanzenkunde",       new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF }, "-", "Wildnisleben");
+            GeneralTalent Philosophie          = new GeneralTalent("Philosophie",         new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "-", "Götter/Kulte, Magiekunde, Geschichtswissen (+15), Sagen/Legenden (+15)");
+            GeneralTalent Rechtskunde          = new GeneralTalent("Rechtskunde",         new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "-", "Etikette, Staatskunst");
+            GeneralTalent Schätzen             = new GeneralTalent("Schätzen",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.IN }, "-", "Handel o. Juwelier o. Feinm. (Goldschmied) (+5), Zimmermann");
+            GeneralTalent Sprachenkunde        = new GeneralTalent("Sprachenkunde",       new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "-", "-");
+            GeneralTalent Staatskunst          = new GeneralTalent("Staatskunst",         new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "-", "Hauswirtschaft, Rechtskunde (Staatsrecht)");
+            GeneralTalent Sternkunde           = new GeneralTalent("Sternkunde",          new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "10+: L/S 6, Rechnen 6, Sinnenschärfe 6", "Gabe Prophezeien (Astrologie) (+5)");
+            GeneralTalent Tierkunde            = new GeneralTalent("Tierkunde",           new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "-", "Viehzucht, Seefischerei, Reiten, Wildnisleben");
 
             list.Add(GötterKulte);
             list.Add(Rechnen);
@@ -154,6 +163,7 @@ namespace DSA_Project
             list.Add(Geschichtswissen);
             list.Add(Gesteinskunde);
             list.Add(Heraldik);
+            list.Add(Hüttenkunde);
             list.Add(Kriegskunst);
             list.Add(Kryptographie);
             list.Add(Magiekunde);
@@ -167,12 +177,140 @@ namespace DSA_Project
             list.Add(Sternkunde);
             list.Add(Tierkunde);
 
-            talente.Add(type, list);
-        }
+            talente.Add(DSA_TALENTS.KNOWLDAGE, list);
 
-        public List<Talent> getTalentList(DSA_TALENTS type)
+            Console.WriteLine("Knwoldage: " + list.Count);
+        }
+        private void createCraftingTalents()
         {
-            List<Talent> outList;
+            List<InterfaceTalent> list = new List<InterfaceTalent>();
+
+            GeneralTalent HeilkundeWunden          = new GeneralTalent("HeilkundeWunden",         new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.FF }, "-", "Anatomie");
+            GeneralTalent Holzbearbeitung          = new GeneralTalent("Holzbearbeitung",         new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KK }, "-", "Zimmermann (+5)");
+            GeneralTalent Kochen                   = new GeneralTalent("Kochen",                  new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF }, "-", "Fleischer, Fischen/Angeln, Wildnisleben, Alchimie");
+            GeneralTalent Lederarbeiten            = new GeneralTalent("Lederarbeiten",           new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.FF }, "-", "Gerber/Kürschner, Schneidern");
+            GeneralTalent MalenZeichnen            = new GeneralTalent("MalenZeichnen",           new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF }, "-", "Kartographie, Steinmetz (Bildhauer), Tätowieren (+5)");
+            GeneralTalent Schneidern               = new GeneralTalent("Schneidern",              new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.FF }, "-", "Webkunst, Lederarbeiten");
+            GeneralTalent Abrichten                = new GeneralTalent("Abrichten",               new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "10+: Tierkunde 4", "Viehzucht, Tierkunde, Reiten");
+            GeneralTalent Ackerbau                 = new GeneralTalent("Ackerbau",                new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KO }, "-", "Viehzucht, Pflanzenkunde");
+            GeneralTalent Alchimie                 = new GeneralTalent("Alchimie",                new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF }, "Lesen/Schreiben, Rechnen je 4", "Kochen (Tränke), Pflanzenkunde");
+            GeneralTalent Bergbau                  = new GeneralTalent("Bergbau",                 new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.KO, DSA_ATTRIBUTE.KK }, "10+: Gesteinskunde 4", "Steinmetz, Maurer, Baukunst, Gesteinskunde");
+            GeneralTalent Bogenbau                 = new GeneralTalent("Bogenbau",                new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF }, "Holzbearbeitung 4", "Holzbearbeitung, Feinmechanik, Grobschmied (+15)");
+            GeneralTalent BooteFahren              = new GeneralTalent("BooteFahren",             new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KO, DSA_ATTRIBUTE.KK }, "-", "Seefahrt (+5)");
+            GeneralTalent Brauer                   = new GeneralTalent("Brauer",                  new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.KK }, "-", "Alchimie");
+            GeneralTalent Drucker                  = new GeneralTalent("Drucker",                 new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KK }, "Lesen/Schreiben 6, Mechanik, Malen/Zeichnen je 4", "Mechanik");
+            GeneralTalent FahrzeugLenken           = new GeneralTalent("FahrzeugLenken",          new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.FF }, "-", "Hundeschlitten Fahren");
+            GeneralTalent Falschspiel              = new GeneralTalent("Falschspiel",             new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.FF }, "-", "Menschenkenntnis 4, Gaukeleien (Taschenspielereien)");
+            GeneralTalent Feinmechanik             = new GeneralTalent("Feinmechanik",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.FF }, "Malen/Zeichnen 4", "-");
+            GeneralTalent Feuersteinbearbeitung    = new GeneralTalent("Feuersteinbearbeitung",   new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.FF }, "-", "Steinmetz");
+            GeneralTalent Fleischer                = new GeneralTalent("Fleischer",               new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KK }, "-", "Viehzucht, Fischen/Angeln, Tierkunde, Kochen, Anatomie, Gerber / Kürschner(Trophäen)");
+            GeneralTalent GerberKürschner          = new GeneralTalent("GerberKürschner",         new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KO }, "-", "Alchimie, Fleischer");
+            GeneralTalent Glaskunst                = new GeneralTalent("Glaskunst",               new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KO }, "-", "Juwelier");
+            GeneralTalent Grobschmied              = new GeneralTalent("Grobschmied",             new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KK, DSA_ATTRIBUTE.KK }, "-", "Metallguss (+15)");
+            GeneralTalent Handel                   = new GeneralTalent("Handel",                  new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH }, "Rechnen 4", "Hauswirtschaft, Geographie (+15), Schätzen (+15)");
+            GeneralTalent Hauswirtschaft           = new GeneralTalent("Hauswirtschaft",          new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.FF }, "-", "Rechnen (Buchführung), Galanterie (Festegestaltung) (+15)");
+            GeneralTalent HeilkundeGift            = new GeneralTalent("Heilkunde Gift",          new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN }, "-", "Alchimie (Gifte) (+5), HK Krankheiten, Kochen (Tränke)");
+            GeneralTalent HeilkundeKrankheiten     = new GeneralTalent("Heilkunde Krankheiten",   new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.MU, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.CH }, "-", "Heilkunde Gift");
+            GeneralTalent HeilkundeSeele           = new GeneralTalent("Heilkunde Seele",         new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.CH }, "-", "Menschenkenntnis, Überzeugen");
+            GeneralTalent Instrumentenbauer        = new GeneralTalent("Instrumentenbauer",       new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF }, "Holzbearbeitung, Feinmechanik, Musizieren je 4", "Holzbearbeitung, Feinmechanik");
+            GeneralTalent Kartographie             = new GeneralTalent("Kartographie",            new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF }, "Malen/Zeichnen 4", "Orientierung, Sternenkunde");
+            GeneralTalent Kristallzucht            = new GeneralTalent("Kristallzucht",           new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF }, "-", "Alchimie (+15)");
+            
+            list.Add(HeilkundeWunden);
+            list.Add(Holzbearbeitung);
+            list.Add(Kochen);
+            list.Add(Lederarbeiten);
+            list.Add(MalenZeichnen);
+            list.Add(Schneidern);
+            list.Add(Abrichten);
+            list.Add(Ackerbau);
+            list.Add(Alchimie);
+            list.Add(Bergbau);
+            list.Add(Bogenbau);
+            list.Add(BooteFahren);
+            list.Add(Brauer);
+            list.Add(Drucker);
+            list.Add(FahrzeugLenken);
+            list.Add(Falschspiel);
+            list.Add(Feinmechanik);
+            list.Add(Feuersteinbearbeitung);
+            list.Add(Fleischer);
+            list.Add(GerberKürschner);
+            list.Add(Glaskunst);
+            list.Add(Grobschmied);
+            list.Add(Handel);
+            list.Add(Hauswirtschaft);
+            list.Add(HeilkundeGift);
+            list.Add(HeilkundeKrankheiten);
+            list.Add(HeilkundeSeele);
+            list.Add(Instrumentenbauer);
+            list.Add(Kartographie);
+            list.Add(Kristallzucht);
+
+            talente.Add(DSA_TALENTS.CRAFTING, list);
+
+            Console.WriteLine("Crafting: " + list.Count);
+        }
+        public void createCrafting1Talents()
+        {
+            List<InterfaceTalent> list = new List<InterfaceTalent>();
+
+            GeneralTalent Maurer = new GeneralTalent("Maurer", new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KK }, "-", "Baukunst");
+            GeneralTalent Metallguss = new GeneralTalent("Metallguss", new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KK }, "Hüttenkunde 4", "Hüttenkunde, Grobschmied");
+            GeneralTalent Musizieren = new GeneralTalent("Musizieren", new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.CH, DSA_ATTRIBUTE.FF }, "-", "-");
+            GeneralTalent SchlösserKnacken = new GeneralTalent("Schlösser Knacken", new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.FF }, "-", "Feinmechanik (+5)");
+            GeneralTalent SchnapsBrennen = new GeneralTalent("Schnaps Brennen", new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF }, "-", "Alchimie (+5), Brauer, Winzer");
+            GeneralTalent Seefahrt = new GeneralTalent("Seefahrt", new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.GE, DSA_ATTRIBUTE.KK }, "-", "Boote Fahren, Steuermann");
+            GeneralTalent Seiler = new GeneralTalent("Seiler", new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KK }, "-", "Fesseln (Taue spleißen)");
+            GeneralTalent Steinmetz = new GeneralTalent("Steinmetz", new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KK }, "Gesteinskunde 4", "Baukunst, Maurer, Bergbau");
+            GeneralTalent SteinschneiderJuwelier = new GeneralTalent("SteinschneiderJuwelier", new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.FF }, "10+: Gesteinskunde 4", "Feinmechanik, Kristallzüchter");
+            GeneralTalent Stellmacher = new GeneralTalent("Stellmacher", new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KK }, "Holzbearbeitung, Lederarbeiten, Grobschmied je 4", "Zimmermann, Schiffbau");
+            GeneralTalent StoffeFärben = new GeneralTalent("Stoffe Färben", new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KK }, "-", "Alchimie, eventuell Drucker für Stoffdruck");
+            GeneralTalent Tätowieren = new GeneralTalent("Tätowieren", new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.FF }, "Malen/Zeichnen 4", "Malen/Zeichnen");
+            GeneralTalent Töpfern = new GeneralTalent("Töpfern", new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.FF }, "-", "Maurer, Steinmetz");
+            GeneralTalent Viehzucht = new GeneralTalent("Viehzucht", new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN, DSA_ATTRIBUTE.KK }, "-", "Tierkunde");
+            GeneralTalent Webkunst = new GeneralTalent("Webkunst", new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KK }, "-", "Schneidern");
+            GeneralTalent Winzer = new GeneralTalent("Winzer", new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KK }, "-", "-");
+            GeneralTalent Zimmermann = new GeneralTalent("Zimmermann", new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF, DSA_ATTRIBUTE.KK }, "10+: Holzbearbeitung 4", "Holzbearbeitung, Schiffbau");
+
+            list.Add(Maurer);
+            list.Add(Metallguss);
+            list.Add(Musizieren);
+            list.Add(SchlösserKnacken);
+            list.Add(SchnapsBrennen);
+            list.Add(Seefahrt);
+            list.Add(Seiler);
+            list.Add(Steinmetz);
+            list.Add(SteinschneiderJuwelier);
+            list.Add(Stellmacher);
+            list.Add(StoffeFärben);
+            list.Add(Tätowieren);
+            list.Add(Töpfern);
+            list.Add(Viehzucht);
+            list.Add(Webkunst);
+            list.Add(Winzer);
+            list.Add(Zimmermann);
+
+            talente.Add(DSA_TALENTS.CRAFTING1, list);
+
+            Console.WriteLine("Crafting1: " + list.Count);
+        }
+        public void createFightWeapenlessalents()
+        {
+            List<InterfaceTalent> list = new List<InterfaceTalent>();
+
+            FightTalent Raufen = new FightTalent("Raufen", "BE", "", DSA_ADVANCEDVALUES.ATTACKE_BASIS, DSA_ADVANCEDVALUES.PARADE_BASIS);
+            FightTalent Ringen = new FightTalent("Ringen ", "BE", "", DSA_ADVANCEDVALUES.ATTACKE_BASIS, DSA_ADVANCEDVALUES.PARADE_BASIS);
+
+            list.Add(Raufen);
+            list.Add(Ringen);
+
+            talente.Add(DSA_TALENTS.WEAPONLESS, list);
+            Console.WriteLine("Weaponless: " + list.Count);
+        }
+        public List<InterfaceTalent> getTalentList(DSA_TALENTS type)
+        {
+            List<InterfaceTalent> outList;
 
             talente.TryGetValue(type, out outList);
             return outList;
