@@ -53,10 +53,28 @@
     <Compile Include="Classes\Data\Talente\GeneralTalent.cs" />
     <Compile Include="Classes\Data\Talente\InterfaceTalent.cs" />
     <Compile Include="Classes\Data\Talente\Talent.cs" />
+    <Compile Include="Classes\Data\Talente\TalentDiverate.cs" />
+    <Compile Include="Classes\Data\Talente\TalentRequirement.cs" />
     <Compile Include="Classes\Managment\ManagmentFeature.cs" />
-    <Compile Include="Classes\Managment\ManagmentSave.cs" />
-    <Compile Include="Classes\Util\LoadCharakterXML.cs" />
-    <Compile Include="Classes\Util\SaveCharakterXML.cs" />
+    <Compile Include="Classes\Managment\ManagmentLoadXML.cs" />
+    <Compile Include="Classes\Util\XMLSave\SaveXMLTalent.cs" />
+    <Compile Include="Classes\Util\XMLLoad\LoadCharakterXML.cs" />
+    <Compile Include="Classes\Util\XMLLoad\LoadXMLTalentFile.cs" />
+    <Compile Include="Classes\Util\XMLSave\SaveCharakterXML.cs" />
+    <Compile Include="Classes\View\Forms\CreateFightingTalent.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Classes\View\Forms\CreateFightingTalent.Designer.cs">
+      <DependentUpon>CreateFightingTalent.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Classes\View\Forms\CreateGeneralTalent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\View\Forms\CreateGeneralTalent.Designer.cs">
+      <DependentUpon>CreateGeneralTalent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\View\Forms\DSA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +91,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Classes\View\Forms\CreateFeature.resx">
       <DependentUpon>CreateFeature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\View\Forms\CreateFightingTalent.resx">
+      <DependentUpon>CreateFightingTalent.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\View\Forms\CreateGeneralTalent.resx">
+      <DependentUpon>CreateGeneralTalent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Classes\View\Forms\DSA.de-DE.resx">
       <DependentUpon>DSA.cs</DependentUpon>
@@ -104,6 +129,219 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\DSA\Talents\FightingTalents\close\Anderthalbhänder.xml" />
+    <Content Include="Resources\DSA\Talents\FightingTalents\close\Dolche.xml" />
+    <Content Include="Resources\DSA\Talents\FightingTalents\close\Fechtwaffen.xml" />
+    <Content Include="Resources\DSA\Talents\FightingTalents\close\Hiebwaffen.xml" />
+    <Content Include="Resources\DSA\Talents\FightingTalents\close\Infanteriewaffen.xml" />
+    <Content Include="Resources\DSA\Talents\FightingTalents\close\Kettenstäbe.xml" />
+    <Content Include="Resources\DSA\Talents\FightingTalents\close\Kettenwaffen.xml" />
+    <Content Include="Resources\DSA\Talents\FightingTalents\close\Lanzenreiten .xml" />
+    <Content Include="Resources\DSA\Talents\FightingTalents\close\Lanzenreiten.xml" />
+    <Content Include="Resources\DSA\Talents\FightingTalents\close\Peitsche.xml" />
+    <Content Include="Resources\DSA\Talents\FightingTalents\close\Schwerter.xml" />
+    <Content Include="Resources\DSA\Talents\FightingTalents\close\Speere.xml" />
+    <Content Include="Resources\DSA\Talents\FightingTalents\close\Stäbe.xml" />
+    <Content Include="Resources\DSA\Talents\FightingTalents\close\Säbel.xml" />
+    <Content Include="Resources\DSA\Talents\FightingTalents\close\Zweihand-Hiebwaffen.xml" />
+    <Content Include="Resources\DSA\Talents\FightingTalents\close\Zweihandflegel.xml" />
+    <Content Include="Resources\DSA\Talents\FightingTalents\close\Zweihandschwerter-säbel.xml" />
+    <Content Include="Resources\DSA\Talents\FightingTalents\weaponless\Ringen .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\FightingTalents\weaponless\Raufen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Abrichten.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Ackerbau.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Alchimie.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Bergbau.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Bogenbau.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Boote Fahren.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Brauer.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Drucker.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Fahrzeug Lenken.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Feinmechanik.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Feuersteinbearbeitung.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Fleischer.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\GerberKürschner.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Glaskunst.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Grobschmied.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Handel.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Hauswirtschaft.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Heilkunde Gift.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Heilkunde Krankheiten.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Heilkunde Seele.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Heilkunde Wunden.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Holzbearbeitung.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Kartographie.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Kochen.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Kristallzucht.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Lederarbeiten.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\MalenZeichnen.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Maurer.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Mechanik.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Metallguss.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Musizieren.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Schlösser Knacken.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Schnaps Brennen.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Schneidern.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Seefahrt.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Seiler.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Steinmetz.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\SteinschneiderJuwelier.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Stellmacher.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Stoffe Färben.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Tätowieren.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Töpfern.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Viehzucht.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Webkunst.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Winzer.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Zimmermann.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Anatomie.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Baukunst.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Brett-Kartenspiel.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Geographie.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Geschichtswissen.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Gesteinskunde.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\GötterKulte.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Heraldik.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Hüttenkunde.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Kriegskunst.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Kryptographie.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Magiekunde.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Mechanik.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Pflanzenkunde.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Philosophie.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Rechnen.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Rechtskunde.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\SagenLegenden.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Schätzen.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Staatskunst.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Sternkunde.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Tierkunde.xml" />
+    <Content Include="Resources\DSA\Talents\GeneralTalents\nature\Fischen-Angeln.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\nature\Fesseln-Entfesseln.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\nature\Fallenstellen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\nature\Wettervorhersage.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\nature\Wildnisleben.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\nature\Orientierung.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\nature\Fährtensuchen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Taschendiebstahl.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Stimmen Imitieren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Skifahren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Reiten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Gaukeleien.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Fliegen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Akrobatik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Zechen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Tanzen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Sinnenschärfe.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Singen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Sich Verstecken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Selbstbeherrschung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Schwimmen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Schleichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Körperbeherrschung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Klettern.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Athletik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\DSA\Talents\GeneralTalents\social\Überzeugen">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\social\Sich Verkleiden.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\social\Schriftlicher Ausdruck.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\social\Schauspielerei.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\social\Lehren.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\social\Gassenwissen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\social\Etikette.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\social\Betören.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\social\Überreden.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\social\Menschenkenntnis.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Resources\anj80eb_700b.jpg" />
     <Content Include="Resources\aventurien politisch.png" />
   </ItemGroup>

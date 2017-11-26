@@ -1,0 +1,43 @@
+<TalentLetter>
+  <Talent>
+    <Name>Fleischer</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>FF</Attribute>
+      <Attribute>KK</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Viehzucht</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Fischen/Angeln</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Tierkunde</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Kochen</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Anatomie</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Gerber/Kürschner (Trophäen)</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

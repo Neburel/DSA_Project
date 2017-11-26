@@ -15,13 +15,67 @@ namespace DSA_Project
 {
     public partial class DSA : Form
     {
+        int SUpportedTalentCOunt = 30;
+        List<Label> talentNameLabels;
+        List<TextBox> talentProbeTextBoxs;
+        List<TextBox> talentWürfeTextBoxs;
+        List<TextBox> talentTaWTextBoxes;
+        List<TextBox> talentBeTextBoxes;
+        List<TextBox> talentBilligerTextBoxes;
+        List<TextBox> talentSpezialisierungTextBoxes;
+        List<TextBox> talentAnforderungsTextBoxes;
+        List<TextBox> talentAbleitungTextBoxes;
+        List<TextBox> talentATTextBoxes;
+        List<TextBox> talentPATextBoxes;
+
+        List<RadioButton> RadioListTalents;
+        Dictionary<RadioButton, DSA_FIGHTINGTALENTS> fightTalentDiconary;
+        Dictionary<RadioButton, DSA_GENERALTALENTS> generalTalentDiconary;
+
         ControllClass controll;
-        DSA_TALENTS lastUsedTalentType;
 
         public DSA()
         {
             controll = new ControllClass(this);
             InitializeComponent();
+
+            talentNameLabels                = new List<Label>   { PTName1, PTName2, PTName3, PTName4, PTName5, PTName6, PTName7, PTName8, PTName9, PTName10, PTName11, PTName12, PTName13, PTName14, PTName15,
+                                                                    PTName16, PTName17, PTName18 , PTName19, PTName20 , PTName21, PTName22, PTName23, PTName24, PTName25, PTName26, PTName27, PTName28, PTName29, PTName30 };
+            talentProbeTextBoxs             = new List<TextBox> { PTProbe1, PTProbe2, PTProbe3, PTProbe4, PTProbe5, PTProbe6, PTProbe7, PTProbe8, PTProbe9, PTProbe10, PTProbe11, PTProbe12, PTProbe13, PTProbe14, PTProbe15,
+                                                                    PTProbe16, PTProbe17, PTProbe18 , PTProbe19, PTProbe20 , PTProbe21, PTProbe22, PTProbe23, PTProbe24, PTProbe25, PTProbe26, PTProbe27, PTProbe28, PTProbe29, PTProbe30 };
+            talentWürfeTextBoxs             = new List<TextBox> { PTWürfe1, PTWürfe2, PTWürfe3, PTWürfe4, PTWürfe5, PTWürfe6, PTWürfe7, PTWürfe8, PTWürfe9, PTWürfe10, PTWürfe11, PTWürfe12, PTWürfe13, PTWürfe14, PTWürfe15,
+                                                                    PTWürfe16, PTWürfe17, PTWürfe18 , PTWürfe19, PTWürfe20, PTWürfe21, PTWürfe22, PTWürfe23, PTWürfe24, PTWürfe25, PTWürfe26, PTWürfe27, PTWürfe28, PTWürfe29, PTWürfe30 };
+            talentTaWTextBoxes              = new List<TextBox>  { PTTaw1, PTTaw2, PTTaw3, PTTaw4, PTTaw5, PTTaw6, PTTaw7, PTTaw8, PTTaw9, PTTaw10, PTTaw11, PTTaw12, PTTaw13, PTTaw14, PTTaw15,
+                                                                    PTTaw16, PTTaw17, PTTaw18 , PTTaw19, PTTaw20, PTTaw21, PTTaw22, PTTaw23, PTTaw24, PTTaw25, PTTaw26, PTTaw27, PTTaw28, PTTaw29, PTTaw30 };
+            talentBeTextBoxes               = new List<TextBox> { PTBe1, PTBe2, PTBe3, PTBe4, PTBe5, PTBe6, PTBe7, PTBe8, PTBe9, PTBe10, PTBe11, PTBe12, PTBe13, PTBe14, PTBe15,
+                                                                    PTBe16, PTBe17, PTBe18 , PTBe19, PTBe20, PTBe21, PTBe22, PTBe23, PTBe24, PTBe25, PTBe26, PTBe27, PTBe28, PTBe29, PTBe30 };
+            talentBilligerTextBoxes         = new List<TextBox> { PTBilliger1, PTBilliger2, PTBilliger3, PTBilliger4, PTBilliger5, PTBilliger6, PTBilliger7, PTBilliger8, PTBilliger9, PTBilliger10, PTBilliger11, PTBilliger12, PTBilliger13, PTBilliger14, PTBilliger15,
+                                                                    PTBilliger16, PTBilliger17, PTBilliger18 , PTBilliger19, PTBilliger20, PTBilliger21, PTBilliger22, PTBilliger23, PTBilliger24, PTBilliger25, PTBilliger26, PTBilliger27, PTBilliger28, PTBilliger29, PTBilliger30 };
+            talentSpezialisierungTextBoxes  = new List<TextBox> { PTSpezialisierung1, PTSpezialisierung2, PTSpezialisierung3, PTSpezialisierung4, PTSpezialisierung5, PTSpezialisierung6, PTSpezialisierung7, PTSpezialisierung8, PTSpezialisierung9, PTSpezialisierung10, PTSpezialisierung11, PTSpezialisierung12, PTSpezialisierung13, PTSpezialisierung14, PTSpezialisierung15,
+                                                                    PTSpezialisierung16, PTSpezialisierung17, PTSpezialisierung18 , PTSpezialisierung19, PTSpezialisierung20, PTSpezialisierung21, PTSpezialisierung22, PTSpezialisierung23, PTSpezialisierung24, PTSpezialisierung25, PTSpezialisierung26, PTSpezialisierung27, PTSpezialisierung28, PTSpezialisierung29, PTSpezialisierung30 };
+            talentAnforderungsTextBoxes     = new List<TextBox> { PTAnforderungen1, PTAnforderungen2, PTAnforderungen3, PTAnforderungen4, PTAnforderungen5, PTAnforderungen6, PTAnforderungen7, PTAnforderungen8, PTAnforderungen9, PTAnforderungen10, PTAnforderungen11, PTAnforderungen12, PTAnforderungen13, PTAnforderungen14, PTAnforderungen15,
+                                                                    PTAnforderungen16, PTAnforderungen17, PTAnforderungen18 , PTAnforderungen19, PTAnforderungen20, PTAnforderungen21, PTAnforderungen22, PTAnforderungen23, PTAnforderungen24, PTAnforderungen25, PTAnforderungen26, PTAnforderungen27, PTAnforderungen28, PTAnforderungen29, PTAnforderungen30 };
+            talentAbleitungTextBoxes        = new List<TextBox> { PTAbleiten1, PTAbleiten2, PTAbleiten3, PTAbleiten4, PTAbleiten5, PTAbleiten6, PTAbleiten7, PTAbleiten8, PTAbleiten9, PTAbleiten10, PTAbleiten11, PTAbleiten12, PTAbleiten13, PTAbleiten14, PTAbleiten15,
+                                                                    PTAbleiten16, PTAbleiten17, PTAbleiten18 , PTAbleiten19, PTAbleiten20, PTAbleiten21, PTAbleiten22, PTAbleiten23, PTAbleiten24, PTAbleiten25, PTAbleiten26, PTAbleiten27, PTAbleiten28, PTAbleiten29, PTAbleiten30 };
+            talentATTextBoxes               = new List<TextBox> { PTAT1, PTAT2, PTAT3, PTAT4, PTAT5, PTAT6, PTAT7, PTAT8, PTAT9, PTAT10, PTAT11, PTAT12, PTAT13, PTAT14, PTAT15,
+                                                                    PTAT16, PTAT17, PTAT18 , PTAT19, PTAT20, PTAT21, PTAT22, PTAT23, PTAT24, PTAT25, PTAT26, PTAT27, PTAT28, PTAT29, PTAT30 };
+            talentPATextBoxes               = new List<TextBox> { PTPA1, PTPA2, PTPA3, PTPA4, PTPA5, PTPA6, PTPA7, PTPA8, PTPA9, PTPA10, PTPA11, PTPA12, PTPA13, PTPA14, PTPA15,
+                                                                    PTPA16, PTPA17, PTPA18 , PTPA19, PTPA20, PTPA21, PTPA22, PTPA23, PTPA24, PTPA25, PTPA26, PTPA27, PTPA28, PTPA29, PTPA30 };            
+
+
+            txtTalentLetterCurrentPage.Text = "1";
+            RadioListTalents = new List<RadioButton> { radioKörperlicheTalente, radioSozialTalente, radioNaturTalente, radioKnowldageTalente, radioCraftingTalent, radioButtonWeaponless, radioButtonWeaponless, radioButtonClose };
+
+            generalTalentDiconary = new Dictionary<RadioButton, DSA_GENERALTALENTS>();
+            generalTalentDiconary.Add(radioKörperlicheTalente, DSA_GENERALTALENTS.PHYSICAL);
+            generalTalentDiconary.Add(radioKnowldageTalente, DSA_GENERALTALENTS.KNOWLDAGE);
+            generalTalentDiconary.Add(radioNaturTalente, DSA_GENERALTALENTS.NATURE);
+            generalTalentDiconary.Add(radioCraftingTalent, DSA_GENERALTALENTS.CRAFTING);
+            generalTalentDiconary.Add(radioSozialTalente, DSA_GENERALTALENTS.SOCIAL);
+
+            fightTalentDiconary = new Dictionary<RadioButton, DSA_FIGHTINGTALENTS>();
+            fightTalentDiconary.Add(radioButtonWeaponless, DSA_FIGHTINGTALENTS.WEAPONLESS);
+            fightTalentDiconary.Add(radioButtonClose, DSA_FIGHTINGTALENTS.CLOSE);
 
             load();
             refreshHeroPage();
@@ -29,6 +83,9 @@ namespace DSA_Project
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             SetStyle(ControlStyles.UserPaint, true);
             SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+
+
+
 
             groupBoxTalentName.AutoSize = true;
             groupBoxTalentName.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -49,6 +106,7 @@ namespace DSA_Project
             groupBoxKampf.AutoSize = true;
             groupBoxKampf.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
+        /*
         private void setUPGeneralTalent(DSA_TALENTS type)
         {
             lastUsedTalentType = type;
@@ -205,7 +263,7 @@ namespace DSA_Project
             AT.Visible = visible;
             PA.Visible = visible;
         }
-
+        */
         public void load()
         {
             txtName.Text = (controll.BasicValue(DSA_BASICVALUES.NAME));
@@ -361,91 +419,7 @@ namespace DSA_Project
             txtKarmaenergieERG.Text = controll.EnergieMAX(DSA_ENERGIEN.KARMAENERGIE).ToString();
             txtMagieresistenzERG.Text = controll.EnergieMAX(DSA_ENERGIEN.MAGIERESISTENZ).ToString();            
         }
-        public void refreshTalentProbeBox(DSA_TALENTS type)
-        {
-            PTProbe1.Text = refreshTalentProbe(type, 1);
-            PTProbe2.Text = refreshTalentProbe(type, 2);
-            PTProbe3.Text = refreshTalentProbe(type, 3);
-            PTProbe4.Text = refreshTalentProbe(type, 4);
-            PTProbe5.Text = refreshTalentProbe(type, 5);
-            PTProbe6.Text = refreshTalentProbe(type, 6);
-            PTProbe7.Text = refreshTalentProbe(type, 7);
-            PTProbe8.Text = refreshTalentProbe(type, 8);
-            PTProbe9.Text = refreshTalentProbe(type, 9);
-            PTProbe10.Text = refreshTalentProbe(type, 10);
-            PTProbe11.Text = refreshTalentProbe(type, 11);
-            PTProbe12.Text = refreshTalentProbe(type, 12);
-            PTProbe13.Text = refreshTalentProbe(type, 13);
-            PTProbe14.Text = refreshTalentProbe(type, 14);
-            PTProbe15.Text = refreshTalentProbe(type, 15);
-            PTProbe16.Text = refreshTalentProbe(type, 16);
-            PTProbe17.Text = refreshTalentProbe(type, 17);
-            PTProbe18.Text = refreshTalentProbe(type, 18);
-            PTProbe19.Text = refreshTalentProbe(type, 19);
-            PTProbe20.Text = refreshTalentProbe(type, 20);
-            PTProbe21.Text = refreshTalentProbe(type, 21);
-            PTProbe22.Text = refreshTalentProbe(type, 22);
-            PTProbe23.Text = refreshTalentProbe(type, 23);
-            PTProbe24.Text = refreshTalentProbe(type, 24);
-            PTProbe25.Text = refreshTalentProbe(type, 25);
-            PTProbe26.Text = refreshTalentProbe(type, 26);
-            PTProbe27.Text = refreshTalentProbe(type, 27);
-            PTProbe28.Text = refreshTalentProbe(type, 28);
-            PTProbe29.Text = refreshTalentProbe(type, 29);
-            PTProbe30.Text = refreshTalentProbe(type, 30);
-        }
-        public void refreshTalentProbeWürfeText(DSA_TALENTS type)
-        {
-            PTWürfe1.Text = refreshTalentWürfe(type, 1);
-            PTWürfe2.Text = refreshTalentWürfe(type, 2);
-            PTWürfe3.Text = refreshTalentWürfe(type, 3);
-            PTWürfe4.Text = refreshTalentWürfe(type, 4);
-            PTWürfe5.Text = refreshTalentWürfe(type, 5);
-            PTWürfe6.Text = refreshTalentWürfe(type, 6);
-            PTWürfe7.Text = refreshTalentWürfe(type, 7);
-            PTWürfe8.Text = refreshTalentWürfe(type, 8);
-            PTWürfe9.Text = refreshTalentWürfe(type, 9);
-            PTWürfe10.Text = refreshTalentWürfe(type, 10);
-            PTWürfe11.Text = refreshTalentWürfe(type, 11);
-            PTWürfe12.Text = refreshTalentWürfe(type, 12);
-            PTWürfe13.Text = refreshTalentWürfe(type, 13);
-            PTWürfe14.Text = refreshTalentWürfe(type, 14);
-            PTWürfe15.Text = refreshTalentWürfe(type, 15);
-            PTWürfe16.Text = refreshTalentWürfe(type, 16);
-            PTWürfe17.Text = refreshTalentWürfe(type, 17);
-            PTWürfe18.Text = refreshTalentWürfe(type, 18);
-            PTWürfe19.Text = refreshTalentWürfe(type, 19);
-            PTWürfe20.Text = refreshTalentWürfe(type, 20);
-            PTWürfe21.Text = refreshTalentWürfe(type, 21);
-            PTWürfe22.Text = refreshTalentWürfe(type, 22);
-            PTWürfe23.Text = refreshTalentWürfe(type, 23);
-            PTWürfe24.Text = refreshTalentWürfe(type, 24);
-            PTWürfe25.Text = refreshTalentWürfe(type, 25);
-            PTWürfe26.Text = refreshTalentWürfe(type, 26);
-            PTWürfe27.Text = refreshTalentWürfe(type, 27);
-            PTWürfe28.Text = refreshTalentWürfe(type, 28);
-            PTWürfe29.Text = refreshTalentWürfe(type, 29);
-            PTWürfe30.Text = refreshTalentWürfe(type, 30);
-        }
-        private String refreshTalentProbe(DSA_TALENTS type, int number)
-        {
-            InterfaceTalent talent = controll.getTalent(type, number);
-            if (talent == null)
-            {
-                return "";
-            }
-            return talent.getProbeStringOne().ToString();
-        }
-        private String refreshTalentWürfe(DSA_TALENTS type, int number)
-        {
-            InterfaceTalent talent = controll.getTalent(type, number);
-            if (talent == null)
-            {
-                return "";
-            }
-            return talent.getProbeStringTwo();
-        }
-
+        
         private void LoadFeature(TextBox name, TextBox description, TextBox value, TextBox gp, DSA_FEATURES type, int number)
         {
             Feature feature = controll.FeatureExisting(number, type);
@@ -456,13 +430,6 @@ namespace DSA_Project
             description.Text = feature.getDescription();
             value.Text = feature.getValue();
             gp.Text = feature.getGP();
-        }
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-
         }
         private void btnLoadCharacter_Click(object sender, EventArgs e)
         {
@@ -1234,127 +1201,299 @@ namespace DSA_Project
         }
 
 
+        private void setUPTalentBoxesZero(int i)
+        {
+            for (; i < SUpportedTalentCOunt; i++)
+            {
+                talentNameLabels[i].Text = "";
+                talentProbeTextBoxs[i].Text = "";
+                talentWürfeTextBoxs[i].Text = "";
+                talentTaWTextBoxes[i].Text = "";
+                talentBeTextBoxes[i].Text = "";
+                talentBeTextBoxes[i].Text = "";
+                talentSpezialisierungTextBoxes[i].Text = "";
+                talentAbleitungTextBoxes[i].Text = "";
+                talentAnforderungsTextBoxes[i].Text = "";
+            }
+        }
+    
+        private int setUPGeneralTalents(DSA_GENERALTALENTS type)
+        {
+            String page = txtTalentLetterCurrentPage.Text;
+            int x;
+            Int32.TryParse(page, out x);
+
+            groupBoxAnforderungen.Visible = true;
+            groupBoxKampf.Visible = false;
+
+            for (int i=0; i< SUpportedTalentCOunt; i++)
+            {
+                GeneralTalent GeneralTalent = (GeneralTalent)controll.getTalent(type, (x-1)*SUpportedTalentCOunt + i);
+                if (GeneralTalent == null) { return i; } 
+                talentNameLabels[i].Text = GeneralTalent.getName();
+                talentProbeTextBoxs[i].Text = GeneralTalent.getProbeStringOne();
+                talentWürfeTextBoxs[i].Text = GeneralTalent.getProbeStringTwo();
+                talentTaWTextBoxes[i].Text  = GeneralTalent.getTaW().ToString();
+                talentBeTextBoxes[i].Text   = GeneralTalent.getBe().ToString();
+                talentSpezialisierungTextBoxes[i].Text = "";
+                talentAbleitungTextBoxes[i].Text = GeneralTalent.getAbleitenString();
+                talentAnforderungsTextBoxes[i].Text = GeneralTalent.getRequirementString();
+            }
+            return SUpportedTalentCOunt;
+        }
+        private int setUPFightingTalents(DSA_FIGHTINGTALENTS type)
+        {
+            String page = txtTalentLetterCurrentPage.Text;
+            int x;
+            Int32.TryParse(page, out x);
+
+            groupBoxAnforderungen.Visible = false;
+            groupBoxKampf.Visible = true;
+
+            for (int i = 0; i < SUpportedTalentCOunt; i++)
+            {
+                FightTalent FightingTalent = (FightTalent)controll.getTalent(type, (x - 1) * SUpportedTalentCOunt + i);
+                if (FightingTalent == null) { return i; }
+                talentNameLabels[i].Text = FightingTalent.getName();
+                talentProbeTextBoxs[i].Text = FightingTalent.getProbeStringOne();
+                talentWürfeTextBoxs[i].Text = FightingTalent.getProbeStringTwo();
+                talentTaWTextBoxes[i].Text = FightingTalent.getTaW().ToString();
+                talentBeTextBoxes[i].Text = FightingTalent.getBe().ToString();
+                talentSpezialisierungTextBoxes[i].Text = "";
+                talentAbleitungTextBoxes[i].Text = FightingTalent.getAbleitenString();
+                
+
+                talentATTextBoxes[i].Text = FightingTalent.getAT().ToString();
+                talentPATextBoxes[i].Text = FightingTalent.getPA().ToString();
+            }
+            return SUpportedTalentCOunt;
+        }
+
+        
+        private InterfaceTalent getTalent(int number, int type)
+        {
+            List<RadioButton> generalDictonaryListKeys = new List<RadioButton>(generalTalentDiconary.Keys);
+            List<RadioButton> fightDictonaryListKeys = new List<RadioButton>(fightTalentDiconary.Keys);
+
+            InterfaceTalent talent = null;
+
+            if (type == 0 || type == 1)
+            {
+                for (int i = 0; i < generalDictonaryListKeys.Count; i++)
+                {
+                    if (generalDictonaryListKeys[i].Checked)
+                    {
+                        DSA_GENERALTALENTS talenttype;
+                        generalTalentDiconary.TryGetValue(generalDictonaryListKeys[i], out talenttype);
+                        talent = controll.getTalent(talenttype, number);
+                    }
+                }
+            }
+            if(type == 0 || type == 2)
+            {
+                for(int i=0; i < fightDictonaryListKeys.Count; i++){
+                    if (fightDictonaryListKeys[i].Checked)
+                    {
+                        DSA_FIGHTINGTALENTS talenttype;
+                        fightTalentDiconary.TryGetValue(fightDictonaryListKeys[i], out talenttype);
+                        talent = controll.getTalent(talenttype, number);
+                    }
+                }
+            }
+
+            return talent;
+        }
+        private InterfaceTalent getTalent(int number)
+        {
+            return getTalent(number, 0);
+        }
+        private FightTalent getFightingTalent(int number)
+        {
+            return (FightTalent)getTalent(number, 2);
+        }
+
         private void TAWChange(object sender, EventArgs e)
         {
+            int BoxNumber;
             TextBox box = (TextBox)sender;
             String BasicString = "PTTaw";
             String NameString = box.Name;
             String number = NameString.Substring(BasicString.Length, NameString.Length - BasicString.Length);
+            Int32.TryParse(number, out BoxNumber);
 
-            InterfaceTalent talent = controll.getTalent(lastUsedTalentType, number);
+            InterfaceTalent talent =getTalent(BoxNumber-1);
+            
+            if (talent == null) return;
+            Console.WriteLine(talent.getName());
 
-            if (talent != null)
-            {
-                String Substring = box.Text;
-                if (String.Equals(Substring, "-"))
-                {
-                    return;
-                }
-
-                talent.setTaw(box.Text);
-                box.Text = talent.getTaW().ToString();
-            }
-            this.refreshTalentProbeBox(lastUsedTalentType);
+            talent.setTaw(box.Text);
+            box.Text = talent.getTaW().ToString();
         }
         private void ATChanged(object sender, EventArgs e)
-        {
+        {            
             TextBox box = (TextBox)sender;
             if (box.Visible == false) return;
 
+            int BoxNumber = 0;
             String BasicString = "PTAT";
             String NameString = box.Name;
-            String number = NameString.Substring(BasicString.Length, NameString.Length - BasicString.Length);
-            FightTalent talent = (FightTalent)controll.getTalent(lastUsedTalentType, number);
+            String Boxnumber = NameString.Substring(BasicString.Length, NameString.Length - BasicString.Length);
+            Int32.TryParse(Boxnumber, out BoxNumber);
 
-            if (talent != null)
-            {
-                String Substring = box.Text;
-                if (String.Equals(Substring, "-"))
-                {
-                    return;
-                }
-                int result;
-                Int32.TryParse(box.Text, out result);
+            FightTalent talent = getFightingTalent(BoxNumber-1);
+            if (talent == null) return;
 
-                talent.setAT(result);
-                box.Text = talent.getAT().ToString();
-            }
-            this.refreshTalentProbeBox(lastUsedTalentType);
+            int result;
+            Int32.TryParse(box.Text, out result);
+
+            talent.setAT(result);
+            box.Text = talent.getAT().ToString();
+
+            talentProbeTextBoxs[BoxNumber-1].Text = talent.getProbeStringOne();            
         }
         private void PAChanged(object sender, EventArgs e)
         {
             TextBox box = (TextBox)sender;
             if (box.Visible == false) return;
 
+            int BoxNumber = 0;
             String BasicString = "PTPA";
             String NameString = box.Name;
-            String number = NameString.Substring(BasicString.Length, NameString.Length - BasicString.Length);
-            FightTalent talent = (FightTalent)controll.getTalent(lastUsedTalentType, number);
+            String Boxnumber = NameString.Substring(BasicString.Length, NameString.Length - BasicString.Length);
+            Int32.TryParse(Boxnumber, out BoxNumber);
 
-            if (talent != null)
-            {
-                String Substring = box.Text;
-                if (String.Equals(Substring, "-"))
-                {
-                    return;
-                }
-                int result;
-                Int32.TryParse(box.Text, out result);
+            FightTalent talent = getFightingTalent(BoxNumber-1);
+            if (talent == null) return;
 
-                talent.setPA(result);
-                box.Text = talent.getPA().ToString();
-            }
-            this.refreshTalentProbeWürfeText(lastUsedTalentType);
+            int result;
+            Int32.TryParse(box.Text, out result);
+
+            talent.setPA(result);
+            box.Text = talent.getPA().ToString();
+
+            talentWürfeTextBoxs[BoxNumber-1].Text = talent.getProbeStringTwo();
         }
-
+        
         private void radioKörperlicheTalente_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton button = (RadioButton)sender;
             if (button.Checked == false) return;
-            
-            setUPGeneralTalent(DSA_TALENTS.PHYSICALLY);
+            int i = setUPGeneralTalents(DSA_GENERALTALENTS.PHYSICAL);
+            setUPTalentBoxesZero(i);
         }
         private void radioSozialTalente_CheckedChanged(object sender, EventArgs e)
-        {
+        {           
             RadioButton button = (RadioButton)sender;
             if (button.Checked == false) return;
-            
-            setUPGeneralTalent(DSA_TALENTS.SOCIAL);
+            int i = setUPGeneralTalents(DSA_GENERALTALENTS.SOCIAL);
+            setUPTalentBoxesZero(i);
+
         }
         private void radioNaturTalente_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton button = (RadioButton)sender;
             if (button.Checked == false) return;
-            
-            setUPGeneralTalent(DSA_TALENTS.NATURE);
+            int i = setUPGeneralTalents(DSA_GENERALTALENTS.NATURE);
+            setUPTalentBoxesZero(i);
+
         }
         private void radioKnowldageTalente_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton button = (RadioButton)sender;
             if (button.Checked == false) return;
-            
-            setUPGeneralTalent(DSA_TALENTS.KNOWLDAGE);
+            int i = setUPGeneralTalents(DSA_GENERALTALENTS.KNOWLDAGE);
+            setUPTalentBoxesZero(i);
+
         }
         private void radioCraftingTalent_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton button = (RadioButton)sender;
             if (button.Checked == false) return;
-            
-            setUPGeneralTalent(DSA_TALENTS.CRAFTING);
+            int i = setUPGeneralTalents(DSA_GENERALTALENTS.CRAFTING);
+            setUPTalentBoxesZero(i);
+
         }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton button = (RadioButton)sender;
             if (button.Checked == false) return;
             
-            setUPGeneralTalent(DSA_TALENTS.CRAFTING1);
         }
-        private void radioButtonFigtingTalent_ChecedChanged(object sender, EventArgs e)
+        private void radioButtonWeaponless_ChecedChanged(object sender, EventArgs e)
         {
             RadioButton button = (RadioButton)sender;
             if (button.Checked == false) return;
-            
-            setUPFightingTalent(DSA_TALENTS.WEAPONLESS);
+
+            int i = setUPFightingTalents(DSA_FIGHTINGTALENTS.WEAPONLESS);
+            setUPTalentBoxesZero(i);
         }
+        private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            RadioButton button = (RadioButton)sender;
+            if (button.Checked == false) return;
+
+            int i = setUPFightingTalents(DSA_FIGHTINGTALENTS.CLOSE);
+            setUPTalentBoxesZero(i);
+        }
+
+        private void TabControl_MouseClick(object sender, MouseEventArgs e)
+        {
+            TabControl control = (TabControl)sender;
+            TabPage page = control.SelectedTab;
+
+            if(0 == String.Compare(page.Name, "Talente"))
+            {
+
+            }
+        }
+        private void btnCreateTalent_Click(object sender, EventArgs e)
+        {
+            CreateTalent createTalent = new CreateTalent();
+            createTalent.ShowDialog();
+        }
+        private void btncreateFightingTalent_Click(object sender, EventArgs e)
+        {
+            CreateFightingTalent talent = new CreateFightingTalent();
+            talent.ShowDialog();
+        }
+        private void btnTalentLetterNext_Click(object sender, EventArgs e)
+        {
+            String page = txtTalentLetterCurrentPage.Text;
+            int x;
+            Int32.TryParse(page, out x);
+            x++;
+            txtTalentLetterCurrentPage.Text = x.ToString();
+
+            for(int i=0; i< RadioListTalents.Count; i++)
+            {
+                if(RadioListTalents[i].Checked == true)
+                {
+                    RadioListTalents[i].Checked = false;
+                    RadioListTalents[i].Checked = true;
+                    break;
+                }
+            }
+        }
+        private void btnTalentLetterLast_Click(object sender, EventArgs e)
+        {
+            String page = txtTalentLetterCurrentPage.Text;
+            int x;
+            Int32.TryParse(page, out x);
+            if ((x-1) > 0)
+            {
+                x--;
+            }
+            txtTalentLetterCurrentPage.Text = x.ToString();
+            for (int i = 0; i < RadioListTalents.Count; i++)
+            {
+                if (RadioListTalents[i].Checked == true)
+                {
+                    RadioListTalents[i].Checked = false;
+                    RadioListTalents[i].Checked = true;
+                    break;
+                }
+            }
+        }
+        
     }
 }

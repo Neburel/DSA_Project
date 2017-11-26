@@ -1,0 +1,23 @@
+<TalentLetter>
+  <Talent>
+    <Name>Töpfern</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>FF</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Maurer</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Steinmetz</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

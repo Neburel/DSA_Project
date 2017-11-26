@@ -1,0 +1,14 @@
+<TalentLetter>
+  <Talent>
+    <Name>Lanzenreiten </Name>
+    <BE>
+    </BE>
+    <Probe />
+    <Diverates />
+    <Requirements />
+    <FightingTalent>
+      <attack>ATTACKE_BASIS</attack>
+      <Parade>False</Parade>
+    </FightingTalent>
+  </Talent>
+</TalentLetter>

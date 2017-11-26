@@ -1,0 +1,23 @@
+<TalentLetter>
+  <Talent>
+    <Name>Staatskunst</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>CH</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Hauswirtschaft</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Rechtskunde (Staatsrecht)</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

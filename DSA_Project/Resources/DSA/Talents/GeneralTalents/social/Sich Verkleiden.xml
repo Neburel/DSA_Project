@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Sich Verkleiden</Name>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>CH</Attribute>
+      <Attribute>GE</Attribute>
+    </Probe>   
+    <Diverates>
+      <Diverate>
+        <Talent>Schauspielerei</Talent>
+        <Value>0</Value>
+      </Diverate>
+    </Diverates>
+  </Talent>
+</TalentLetter>

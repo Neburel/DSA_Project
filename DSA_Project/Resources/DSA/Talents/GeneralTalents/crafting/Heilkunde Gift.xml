@@ -1,0 +1,27 @@
+<TalentLetter>
+  <Talent>
+    <Name>Heilkunde Gift</Name>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Alchimie (Gifte)</Talent>
+        <Value>5</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>HK Krankheiten</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Kochen (Tränke)</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Überreden</Name>
+    <Probe>
+      <Attribute>IN</Attribute>
+      <Attribute>CH</Attribute>
+      <Attribute>CH</Attribute>
+    </Probe>
+    <Requirements>
+      <Requirement>
+        <Talent>Menschenkenntnis</Talent>
+        <Value>4</Value>
+      </Requirement>
+    </Requirements>
+    <Diverates>
+      <Diverate>
+        <Talent>Überreden</Talent>
+        <Value>0</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Überzeugen</Talent>
+        <Value>0</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Galanterie</Talent>
+        <Value>5</Value>
+      </Diverate>
+    </Diverates>
+  </Talent>
+</TalentLetter>

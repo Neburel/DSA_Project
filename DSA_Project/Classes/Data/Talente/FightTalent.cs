@@ -8,13 +8,16 @@ namespace DSA_Project
 {
     class FightTalent : Talent<DSA_ADVANCEDVALUES>
     {
+        bool parade = true;
         private int AT;
         private int PA;
 
-        public FightTalent(String name, String be, String ableiten, DSA_ADVANCEDVALUES at, DSA_ADVANCEDVALUES pa) : base(name, ableiten, new List<DSA_ADVANCEDVALUES> { at, pa }, be)
+        public FightTalent(String name, String be, List<TalentDiverate>diverates, DSA_ADVANCEDVALUES at, bool parade) :base (name, new List<DSA_ADVANCEDVALUES> { at, DSA_ADVANCEDVALUES.PARADE_BASIS }, be, diverates)
         {
             AT = 0;
             PA = 0;
+
+            this.parade = parade;
         }
 
         private int getATPA(int ownValue, int otherValue, int newValue)
@@ -35,6 +38,7 @@ namespace DSA_Project
         }
         public void setPA(int pa)
         {
+            if (parade == false) return;
             PA = getATPA(PA, AT, pa);
         }
 
@@ -46,9 +50,10 @@ namespace DSA_Project
         {
             return AT;
         }
-        public int getPA()
+        public String getPA()
         {
-            return PA;
+            if (parade == false) return "---";
+            return PA.ToString();
         }
         public int getProbeValueAT()
         {

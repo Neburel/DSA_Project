@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    static public class ManagmentSave
+    static public class ManagmentLoadXML
     {
         public const String CharacterBogenElement   = "CharacterBogen";
         public const String HeldenBriefElement      = "HeldenBrief";
@@ -36,6 +36,20 @@ namespace DSA_Project
         public const String Talente                 = "Talente";
         public const String PhysicalTalentElement   = "PhysicalTalent";
 
+        //Talente
+        public const String GeneralTalentFileSystemLocation     = "Resources/DSA/Talents/GeneralTalents";
+        public const String FightingTalentsFileSystemLocation   = "Resources/DSA/Talents/FightingTalents";
+        public const String TalentLetterElement     = "TalentLetter";
+        public const String TalentElement           = "Talent";
+        public const String Probe                   = "Probe";
+        public const String BE                      = "BE";
+        public const String Diverate                = "Diverate";
+        public const String Diverates               = "Diverates";
+        public const String Requirements            = "Requirements";
+        public const String NeedAT                  = "NeedAT";
+        public const String FightingTalent          = "FightingTalent";
+        public const String attack                  = "attack";
+        public const String Parade                  = "Parade";
     }
 
 }

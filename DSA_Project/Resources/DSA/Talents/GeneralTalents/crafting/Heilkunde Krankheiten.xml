@@ -1,0 +1,18 @@
+<TalentLetter>
+  <Talent>
+    <Name>Heilkunde Krankheiten</Name>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>KL</Attribute>
+      <Attribute>CH</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Heilkunde Gift</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

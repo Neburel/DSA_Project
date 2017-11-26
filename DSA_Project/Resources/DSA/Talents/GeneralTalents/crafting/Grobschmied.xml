@@ -1,0 +1,17 @@
+<TalentLetter>
+  <Talent>
+    <Name>Grobschmied</Name>
+    <Probe>
+      <Attribute>FF</Attribute>
+      <Attribute>KO</Attribute>
+      <Attribute>KK</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Metallguss</Talent>
+        <Value>15</Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

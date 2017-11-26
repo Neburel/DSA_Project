@@ -1,0 +1,18 @@
+<TalentLetter>
+  <Talent>
+    <Name>Glaskunst</Name>
+    <Probe>
+      <Attribute>FF</Attribute>
+      <Attribute>FF</Attribute>
+      <Attribute>KO</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Juwelier</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

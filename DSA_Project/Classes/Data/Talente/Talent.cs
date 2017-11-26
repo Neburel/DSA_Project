@@ -9,21 +9,22 @@ namespace DSA_Project
     abstract class Talent<T> : InterfaceTalent
     {
         protected Charakter Charakter;
+        List<TalentDiverate> Diverates;
+
         private String Name;
-        private String Ableiten;
+        
         private String Be;
         protected List<T> Probe;
-
-        private int Billiger;
+        
         private int TaW;                
 
-        public Talent(String name, String ableiten, List<T> probe, String be)
+        public Talent(String name, List<T> probe, String be, List<TalentDiverate> diverates)
         {
             this.Name = name;
-            this.Ableiten = ableiten;
             this.Probe = probe;
             this.Be = be;
 
+            Diverates = diverates;
         }
 
         public void setCharacter(Charakter charakter)
@@ -47,15 +48,37 @@ namespace DSA_Project
                 return Name;
             }
         public String getAbleitenString()
+        {
+            if (Diverates.Count == 0)
             {
-                return Ableiten;
+                return "-";
             }
+
+            String ret = "";
+            for(int i=0; i<Diverates.Count;i++)
+            {
+                if (i > 0)
+                {
+                    ret = ret + ", ";
+                }
+                TalentDiverate diverate = Diverates[i];
+                if (diverate.getRequiredTaW() == 0)
+                {
+                    ret = ret + diverate.getName();
+                } else
+                {
+                    ret = ret + diverate.getName() + "(" + diverate.getRequiredTaW().ToString() + ")";
+                }
+            }
+            return ret;
+        }
         public int getProbeCount()
             {
                 return Probe.Count;
             }
         public String getBe()
             {
+                if (Be == "") { return "-"; }
                 return Be;
             }
         public int getTaW()

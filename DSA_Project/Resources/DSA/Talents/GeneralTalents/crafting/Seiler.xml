@@ -1,0 +1,18 @@
+<TalentLetter>
+  <Talent>
+    <Name>Seiler</Name>
+    <Probe>
+      <Attribute>FF</Attribute>
+      <Attribute>FF</Attribute>
+      <Attribute>KK</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Fesseln(Taue spleißen)</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

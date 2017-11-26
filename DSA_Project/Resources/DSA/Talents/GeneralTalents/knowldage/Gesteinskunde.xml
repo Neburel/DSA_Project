@@ -1,0 +1,37 @@
+<TalentLetter>
+  <Talent>
+    <Name>Gesteinskunde</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Baukunst</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Steinschneider</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Bergbau</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Hüttenkunde</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Steinmetz </Talent>
+        <Value>5</Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

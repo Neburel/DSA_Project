@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Sich Verstecken</Name>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>GE</Attribute>
+    </Probe>
+    <BE>BE-2</BE>
+    <Diverates>
+      <Diverate>
+        <Talent>Schleichen </Talent>
+        <Value>0</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Körperbeherrschung  </Talent>
+        <Value>15</Value>
+      </Diverate>
+    </Diverates>
+  </Talent>
+</TalentLetter>
