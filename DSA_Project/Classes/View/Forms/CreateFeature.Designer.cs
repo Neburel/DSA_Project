@@ -60,7 +60,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btADD = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtBonusTaW = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cbTalente = new System.Windows.Forms.ComboBox();
             this.btnFertig = new System.Windows.Forms.Button();
@@ -386,7 +386,7 @@
             // 
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.btADD);
-            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Controls.Add(this.txtBonusTaW);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.cbTalente);
             this.groupBox3.Controls.Add(this.ListTalente);
@@ -405,6 +405,7 @@
             this.button1.TabIndex = 166;
             this.button1.Text = "REMOVE";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btADD
             // 
@@ -416,12 +417,13 @@
             this.btADD.UseVisualStyleBackColor = true;
             this.btADD.Click += new System.EventHandler(this.btADD_Click);
             // 
-            // textBox5
+            // txtBonusTaW
             // 
-            this.textBox5.Location = new System.Drawing.Point(136, 280);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(52, 20);
-            this.textBox5.TabIndex = 164;
+            this.txtBonusTaW.Location = new System.Drawing.Point(136, 280);
+            this.txtBonusTaW.Name = "txtBonusTaW";
+            this.txtBonusTaW.Size = new System.Drawing.Size(52, 20);
+            this.txtBonusTaW.TabIndex = 164;
+            this.txtBonusTaW.TextChanged += new System.EventHandler(this.txtBonusTaW_TextChanged);
             // 
             // label5
             // 
@@ -434,6 +436,8 @@
             // 
             // cbTalente
             // 
+            this.cbTalente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbTalente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbTalente.FormattingEnabled = true;
             this.cbTalente.Location = new System.Drawing.Point(21, 253);
             this.cbTalente.Name = "cbTalente";
@@ -761,7 +765,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CreateFeature";
             this.Text = "CreateFeature";
-            this.Load += new System.EventHandler(this.CreateFeature_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -809,7 +812,7 @@
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btADD;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtBonusTaW;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbTalente;
         private System.Windows.Forms.Button btnFertig;

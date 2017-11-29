@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    class Charakter
+    public class Charakter
     {
         ManagmentFeature featureManagment               = new ManagmentFeature();
 
@@ -19,11 +19,11 @@ namespace DSA_Project
 
         private Dictionary<DSA_GENERALTALENTS, List<InterfaceTalent>> generalTalents;
         private Dictionary<DSA_FIGHTINGTALENTS, List<InterfaceTalent>> fightingTalents;
-        
 
-        int Beherschungswert    = 0;
-        int Entrückung          = 0;
-        int Geschwindigkeit     = 0;
+        private int adventurePoints = 0;
+        private int Beherschungswert    = 0;
+        private int Entrückung          = 0;
+        private int Geschwindigkeit     = 0;
 
         
         public Charakter()
@@ -72,6 +72,11 @@ namespace DSA_Project
             {
                 fightingTalents.Add((DSA_FIGHTINGTALENTS)i, new List<InterfaceTalent>());
             }
+        }
+
+        public void setAdventurePoints(int points)
+        {
+            this.adventurePoints = points;
         }
 
         public void setMoney(DSA_MONEY type, int value)
@@ -281,6 +286,10 @@ namespace DSA_Project
                 fightingTalents[(DSA_FIGHTINGTALENTS)(Object)type].Add(talent);
             }
         }
+        public int getTaWBons(InterfaceTalent talent)
+        {
+            return featureManagment.getTalentTawBonus(talent);
+        }
         public InterfaceTalent getTalent<Tenum>(Tenum type, int number) where Tenum : struct, IComparable, IFormattable, IConvertible
         {
             if (typeof(Tenum) == typeof(DSA_GENERALTALENTS))
@@ -301,6 +310,46 @@ namespace DSA_Project
                 return fightingTalents[(DSA_FIGHTINGTALENTS)(Object)type][number];
             }
             return null;
+        }
+        public InterfaceTalent getTalent<Tenum>(Tenum type, String name) where Tenum : struct, IComparable, IFormattable, IConvertible
+        {
+            int i = 0;
+            InterfaceTalent talent = null;
+            while ((talent = this.getTalent(type, i)) != null)
+            {
+                if(String.Compare(name, talent.getName()) == 0)
+                {
+                    return talent;
+                }
+                i++;
+            }
+            return talent;
+        }
+        
+        private List<InterfaceTalent>getTalentList<Tenum>(Dictionary<Tenum, List<InterfaceTalent>> dictionary) where Tenum : struct, IComparable, IFormattable, IConvertible
+        {
+            List<InterfaceTalent> talentList = new List<InterfaceTalent>();
+            foreach(Tenum type in Enum.GetValues(typeof(Tenum))){
+                List<InterfaceTalent> currentList;
+                dictionary.TryGetValue(type, out currentList);
+                talentList.AddRange(currentList);
+            }
+            return talentList;
+        }
+
+        public List<InterfaceTalent> getAllTalentList()
+        {
+            List<InterfaceTalent> talentList = new List<InterfaceTalent>();
+
+            talentList.AddRange(getTalentList(generalTalents));
+            talentList.AddRange(getTalentList(fightingTalents));
+
+            return talentList;
+        }
+
+        public int getAdvanturePoints()
+        {
+            return this.adventurePoints;
         }
     }
 }

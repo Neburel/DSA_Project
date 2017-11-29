@@ -11,10 +11,10 @@ namespace DSA_Project
     public enum DSA_ATTRIBUTE { MU, KL, IN, CH, FF, GE, KO, KK, SO }
     public enum DSA_ENERGIEN { LEBENSENERGIE, AUSDAUER, ASTRALENERGIE, KARMAENERGIE, MAGIERESISTENZ }
     public enum DSA_ADVANCEDVALUES { ATTACKE_BASIS, PARADE_BASIS, FERNKAMPF_BASIS, INITATIVE_BASIS, BEHERSCHUNGSWERT, ARTEFAKTKONTROLLE, WUNDSCHWELLE, ENTRÜCKUNG, GESCHWINDIGKEIT }
-    enum DSA_BASICVALUES { NAME, ALTER, GESCHLECHT, GRÖSE, GEWICHT, AUGENFARBE, HAUTFARBE, HAARFARBE, FAMILIENSTAND, ANREDE, GOTTHEIT, RASSE, KULTUR, PROFESSION }
-    enum DSA_MONEY { D, S, H, K, BANK }
-    enum DSA_FEATURES { VORTEIL, NACHTEIL }
-    enum DSA_FEATUREBONUS { NONE, MUT, KLUGHEIT, INTUITION, CHARISMA, FINGERFERTIGKEIT, GEWANDHEIT, KONSTITUTION, KÖRPERKRAFT, SOZAILSTATUS, LEBENSENERGIE, AUSDAUER, ASTRALENERGIE, KARMAENERGIE, MAGIERESISTENZ }
+    public enum DSA_BASICVALUES { NAME, ALTER, GESCHLECHT, GRÖSE, GEWICHT, AUGENFARBE, HAUTFARBE, HAARFARBE, FAMILIENSTAND, ANREDE, GOTTHEIT, RASSE, KULTUR, PROFESSION }
+    public enum DSA_MONEY { D, S, H, K, BANK }
+    public enum DSA_FEATURES { VORTEIL, NACHTEIL }
+    public enum DSA_FEATUREBONUS { NONE, MUT, KLUGHEIT, INTUITION, CHARISMA, FINGERFERTIGKEIT, GEWANDHEIT, KONSTITUTION, KÖRPERKRAFT, SOZAILSTATUS, LEBENSENERGIE, AUSDAUER, ASTRALENERGIE, KARMAENERGIE, MAGIERESISTENZ }
     /// <summary>
     /// Die Kontroll Klasse dient als Zentrale Anlaufstelle für das Programm
     /// Sie bestimmt was bei Wereänderungen Passiert, wie und wohin sie geschrieben werden
@@ -67,6 +67,7 @@ namespace DSA_Project
 
             form.load();
             form.refreshHeroPage();
+            form.refreshTalentPage();
         }
 
         public Charakter createNewCharater()
@@ -231,21 +232,22 @@ namespace DSA_Project
 
             if (feature == null)
             {
-                createFeature = new CreateFeature();
+                createFeature = new CreateFeature(Charakter.getAllTalentList());
             }
             else
             {
-                createFeature = new CreateFeature(feature);
+                createFeature = new CreateFeature(feature, Charakter.getAllTalentList());
             }
             createFeature.ShowDialog();
             feature = createFeature.feature();
+
+            if (feature == null) return null;
 
             Charakter.addFeature(type, number, feature);
 
             Advantages.Remove(number);
             Advantages.Add(number, feature);
-
-            form.refreshHeroPage();
+            
 
             return feature;
         }
@@ -276,6 +278,16 @@ namespace DSA_Project
         public InterfaceTalent getTalent<Tenum>(Tenum type, int number) where Tenum : struct, IComparable, IFormattable, IConvertible
         {
             return Charakter.getTalent(type, number);
+        }
+
+        public int AdvanturePoints(int number)
+        {
+            Charakter.setAdventurePoints(number);
+            return Charakter.getAdvanturePoints();
+        }
+        public int AdvanturePoints()
+        {
+            return Charakter.getAdvanturePoints();
         }
 
     }

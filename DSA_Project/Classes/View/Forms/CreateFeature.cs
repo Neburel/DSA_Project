@@ -13,10 +13,11 @@ namespace DSA_Project
     public partial class CreateFeature : Form
     {
         Feature Feature;
+        Dictionary<InterfaceTalent, int> talente;
 
-        public CreateFeature()
+        public CreateFeature(List<InterfaceTalent> talentList)
         {
-            setUP();
+            setUP(talentList);
 
             txtName.Text            = "";
             txtDescription.Text     = "";
@@ -51,9 +52,9 @@ namespace DSA_Project
             txtEntrückung.Text          = zero;
             txtGeschwindigkeit.Text     = zero;            
         }
-        public CreateFeature(Feature feature)
+        public CreateFeature(Feature feature, List<InterfaceTalent> talentList)
         {
-            setUP();
+            setUP(talentList);
             Feature = feature;
 
             txtName.Text = feature.getName();
@@ -76,21 +77,34 @@ namespace DSA_Project
             txtKarmaenergie.Text    = feature.getEnergieBonus(DSA_ENERGIEN.KARMAENERGIE).ToString();
             txtLebensenergie.Text   = feature.getEnergieBonus(DSA_ENERGIEN.LEBENSENERGIE).ToString();
             txtMagieresistenz.Text  = feature.getEnergieBonus(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+
+            List<InterfaceTalent> talentWithBonuwTaw = feature.TalentListwithBonus();
+
+            foreach(InterfaceTalent talent in talentWithBonuwTaw)
+            {
+                int x = feature.getTaWBonus(talent);
+                talente.Add(talent, x);
+
+                ListViewItem lvi = new ListViewItem();
+                lvi.Text = talent.getName();
+                lvi.SubItems.Add(x.ToString());
+
+                ListTalente.Items.Add(lvi);
+
+            }
         }
-        private void setUP()
+        private void setUP(List<InterfaceTalent> talentList)
         {
             InitializeComponent();
-            
+            talente = new Dictionary<InterfaceTalent, int>();
+
             Feature = null;
+            cbTalente.DataSource = talentList;
 
-            List<String> talente = new List<string>();
-            talente.Add("A");
-            talente.Add("B");
-            talente.Add("C");
+            ListTalente.Clear();
 
-            ListTalente.Columns.Add("Name");
-            ListTalente.Columns.Add("Bonus");
-            ListTalente.Columns[0].Width = 120;
+            ListTalente.Columns.Add(new ColumnHeader().Text = "Name");
+            ListTalente.Columns.Add(new ColumnHeader().Text = "TaW");
         }
         public Feature feature()
         {
@@ -137,13 +151,64 @@ namespace DSA_Project
             newFeature.setAdvancedValues(DSA_ADVANCEDVALUES.PARADE_BASIS, convertToInt(txtParade.Text));
             newFeature.setAdvancedValues(DSA_ADVANCEDVALUES.WUNDSCHWELLE, convertToInt(txtWundschwelle.Text));
 
+            foreach (InterfaceTalent talent in talente.Keys)
+            {
+                int x;
+                talente.TryGetValue(talent, out x);
+                newFeature.addTalent(talent, x);
+            }
+
             return newFeature;
         }
         
         private void btADD_Click(object sender, EventArgs e)
         {
-            
+            for(int i=0; i<ListTalente.Items.Count; i++)
+            {
+                if(0 == String.Compare(ListTalente.Items[i].Text, cbTalente.SelectedValue.ToString()))
+                {
+                    foreach (InterfaceTalent talent in talente.Keys)
+                    {
+                        if (0 == String.Compare(ListTalente.Items[i].Text, talent.getName()))
+                        {
+                            talente.Remove(talent);
+                            break;
+                        }
+                    }
+                    ListTalente.Items[i].Remove();
+                    break;
+                }
+            }
 
+            ListViewItem lvi = new ListViewItem();
+            lvi.Text = cbTalente.SelectedValue.ToString();
+            lvi.SubItems.Add(txtBonusTaW.Text);
+
+            ListTalente.Items.Add(lvi);
+
+            int x;
+            Int32.TryParse(txtBonusTaW.Text, out x);
+
+            talente.Add((InterfaceTalent)cbTalente.SelectedItem, x);
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            for (int i = ListTalente.Items.Count - 1; i >= 0; i--)
+            {
+                if (ListTalente.Items[i].Selected)
+                {
+                    foreach(InterfaceTalent talent in talente.Keys)
+                    {
+                        if(0 == String.Compare(ListTalente.Items[i].Name, talent.getName()))
+                        {
+                            talente.Remove(talent);
+                            break;
+                        }
+                    }
+                    ListTalente.Items[i].Remove();
+                }
+                
+            }
         }
 
         private void btnFertig_Click(object sender, EventArgs e)
@@ -224,55 +289,49 @@ namespace DSA_Project
         {
             txtMagieresistenz.Text = convertToInt(txtMagieresistenz.Text).ToString();
         }
-
-        private void CreateFeature_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void txtAttacke_TextChanged(object sender, EventArgs e)
         {
-
+            txtAttacke.Text = convertToInt(txtAttacke.Text).ToString();
         }
-
         private void txtParade_TextChanged(object sender, EventArgs e)
         {
-
+            txtParade.Text = convertToInt(txtParade.Text).ToString();
         }
-
         private void txtFernkampf_TextChanged(object sender, EventArgs e)
         {
-
+            txtFernkampf.Text = convertToInt(txtFernkampf.Text).ToString();
         }
-
         private void txtInitiative_TextChanged(object sender, EventArgs e)
         {
-
+            txtInitiative.Text = convertToInt(txtInitiative.Text).ToString();
         }
-
         private void txtBeherschungswert_TextChanged(object sender, EventArgs e)
         {
-
+            txtBeherschungswert.Text = convertToInt(txtBeherschungswert.Text).ToString();
         }
-
         private void txtArtefaktKontrolle_TextChanged(object sender, EventArgs e)
         {
-
+            txtArtefaktKontrolle.Text = convertToInt(txtArtefaktKontrolle.Text).ToString();
         }
-
         private void Wundschwelle_TextChanged(object sender, EventArgs e)
         {
-
+            txtWundschwelle.Text = convertToInt(txtWundschwelle.Text).ToString();
         }
-
         private void txtEntrückung_TextChanged(object sender, EventArgs e)
         {
-
+            txtEntrückung.Text = convertToInt(txtEntrückung.Text).ToString();
         }
-
         private void txtGeschwindigkeit_TextChanged(object sender, EventArgs e)
         {
-
+            txtGeschwindigkeit.Text = convertToInt(txtGeschwindigkeit.Text).ToString();
         }
+
+        private void txtBonusTaW_TextChanged(object sender, EventArgs e)
+        {
+            txtBonusTaW.Text = convertToInt(txtBonusTaW.Text).ToString();
+        }
+        
     }
 }

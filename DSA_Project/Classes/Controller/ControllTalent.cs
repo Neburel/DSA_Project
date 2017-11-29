@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace DSA_Project
 {
     public enum DSA_GENERALTALENTS { PHYSICAL, SOCIAL, NATURE, KNOWLDAGE, CRAFTING }
-    public enum DSA_FIGHTINGTALENTS { WEAPONLESS, CLOSE }
+    public enum DSA_FIGHTINGTALENTS { WEAPONLESS, CLOSE, RANGE }
     
     class ControllTalent
     {

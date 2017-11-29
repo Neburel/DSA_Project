@@ -16,6 +16,7 @@ namespace DSA_Project
         public const String EnergienElement         = "Energie";
         public const String MoneyElement            = "Money";
         public const String FeatureElement          = "Features";
+        public const String AdvanturePoints         = "AdventurePoints";
 
         public const String Advantages             = "Advantages";
         public const String DisAdvantages          = "DisAdvantages";
@@ -39,17 +40,18 @@ namespace DSA_Project
         //Talente
         public const String GeneralTalentFileSystemLocation     = "Resources/DSA/Talents/GeneralTalents";
         public const String FightingTalentsFileSystemLocation   = "Resources/DSA/Talents/FightingTalents";
-        public const String TalentLetterElement     = "TalentLetter";
-        public const String TalentElement           = "Talent";
-        public const String Probe                   = "Probe";
-        public const String BE                      = "BE";
-        public const String Diverate                = "Diverate";
-        public const String Diverates               = "Diverates";
-        public const String Requirements            = "Requirements";
-        public const String NeedAT                  = "NeedAT";
-        public const String FightingTalent          = "FightingTalent";
-        public const String attack                  = "attack";
-        public const String Parade                  = "Parade";
+        public const String TalentLetterElement                 = "TalentLetter";
+        public const String TalentElement                       = "Talent";
+        public const String Probe                               = "Probe";
+        public const String BE                                  = "BE";
+        public const String Diverate                            = "Diverate";
+        public const String Diverates                           = "Diverates";
+        public const String Requirements                        = "Requirements";
+        public const String NeedAT                              = "NeedAT";
+        public const String GeneralTalent                       = "GeneralTalent";
+        public const String FightingTalent                      = "FightingTalent";
+        public const String attack                              = "attack";
+        public const String Parade                              = "Parade";
     }
 
 }

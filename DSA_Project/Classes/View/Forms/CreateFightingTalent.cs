@@ -40,7 +40,6 @@ namespace DSA_Project
             lvi.SubItems.Add(DiverateTaW);
 
             listViewDiverate.Items.Add(lvi);
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)

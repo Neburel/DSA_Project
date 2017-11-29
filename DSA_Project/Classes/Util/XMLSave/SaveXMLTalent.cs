@@ -38,6 +38,7 @@ namespace DSA_Project
 
             switch (talenttype)
             {
+                case DSA_FIGHTINGTALENTS.RANGE: value = DSA_ADVANCEDVALUES.FERNKAMPF_BASIS; break;
                 default: value = DSA_ADVANCEDVALUES.ATTACKE_BASIS; break;
             }
 

@@ -331,7 +331,7 @@
     <value>2</value>
   </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>873, 9</value>
+    <value>672, 9</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>252, 68</value>
@@ -350,6 +350,15 @@
   </data>
   <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="groupBoxKampf.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="groupBoxKampf.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="groupBoxKampf.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
   </data>
   <data name="PTPA29.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -1975,10 +1984,10 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="groupBoxKampf.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1200, 83</value>
+    <value>1353, 83</value>
   </data>
   <data name="groupBoxKampf.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 806</value>
+    <value>71, 812</value>
   </data>
   <data name="groupBoxKampf.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
@@ -1997,36 +2006,6 @@
   </data>
   <data name="&gt;&gt;groupBoxKampf.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="radioButton3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="radioButton3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="radioButton3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>754, 43</value>
-  </data>
-  <data name="radioButton3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 17</value>
-  </data>
-  <data name="radioButton3.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="radioButton3.Text" xml:space="preserve">
-    <value>Sprachen</value>
-  </data>
-  <data name="&gt;&gt;radioButton3.Name" xml:space="preserve">
-    <value>radioButton3</value>
-  </data>
-  <data name="&gt;&gt;radioButton3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButton3.Parent" xml:space="preserve">
-    <value>groupBoxTalentLetterTalente</value>
-  </data>
-  <data name="&gt;&gt;radioButton3.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="radioButtonRange.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2056,7 +2035,7 @@
     <value>groupBoxTalentLetterTalente</value>
   </data>
   <data name="&gt;&gt;radioButtonRange.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="radioButtonClose.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2086,7 +2065,7 @@
     <value>groupBoxTalentLetterTalente</value>
   </data>
   <data name="&gt;&gt;radioButtonClose.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="radioButtonWeaponless.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2116,7 +2095,7 @@
     <value>groupBoxTalentLetterTalente</value>
   </data>
   <data name="&gt;&gt;radioButtonWeaponless.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="radioCraftingTalent.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2146,7 +2125,7 @@
     <value>groupBoxTalentLetterTalente</value>
   </data>
   <data name="&gt;&gt;radioCraftingTalent.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="radioKnowldageTalente.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2176,7 +2155,7 @@
     <value>groupBoxTalentLetterTalente</value>
   </data>
   <data name="&gt;&gt;radioKnowldageTalente.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="radioNaturTalente.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2206,7 +2185,7 @@
     <value>groupBoxTalentLetterTalente</value>
   </data>
   <data name="&gt;&gt;radioNaturTalente.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="radioSozialTalente.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2236,7 +2215,7 @@
     <value>groupBoxTalentLetterTalente</value>
   </data>
   <data name="&gt;&gt;radioSozialTalente.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="radioKörperlicheTalente.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2266,13 +2245,13 @@
     <value>groupBoxTalentLetterTalente</value>
   </data>
   <data name="&gt;&gt;radioKörperlicheTalente.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="groupBoxTalentLetterTalente.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 7</value>
   </data>
   <data name="groupBoxTalentLetterTalente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>859, 70</value>
+    <value>658, 70</value>
   </data>
   <data name="groupBoxTalentLetterTalente.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -2292,6 +2271,15 @@
   <data name="&gt;&gt;groupBoxTalentLetterTalente.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="groupBoxAbleiten.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="groupBoxAbleiten.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="groupBoxAbleiten.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
   <data name="PTAbleiten30.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
@@ -2299,7 +2287,7 @@
     <value>6, 773</value>
   </data>
   <data name="PTAbleiten30.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten30.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
@@ -2323,7 +2311,7 @@
     <value>6, 747</value>
   </data>
   <data name="PTAbleiten29.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten29.TabIndex" type="System.Int32, mscorlib">
     <value>68</value>
@@ -2347,7 +2335,7 @@
     <value>6, 721</value>
   </data>
   <data name="PTAbleiten28.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten28.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
@@ -2371,7 +2359,7 @@
     <value>6, 695</value>
   </data>
   <data name="PTAbleiten27.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten27.TabIndex" type="System.Int32, mscorlib">
     <value>66</value>
@@ -2395,7 +2383,7 @@
     <value>6, 669</value>
   </data>
   <data name="PTAbleiten26.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten26.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
@@ -2419,7 +2407,7 @@
     <value>6, 643</value>
   </data>
   <data name="PTAbleiten25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten25.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
@@ -2443,7 +2431,7 @@
     <value>6, 617</value>
   </data>
   <data name="PTAbleiten24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten24.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
@@ -2467,7 +2455,7 @@
     <value>6, 591</value>
   </data>
   <data name="PTAbleiten23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten23.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -2491,7 +2479,7 @@
     <value>6, 565</value>
   </data>
   <data name="PTAbleiten22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten22.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
@@ -2515,7 +2503,7 @@
     <value>6, 539</value>
   </data>
   <data name="PTAbleiten21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten21.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
@@ -2539,7 +2527,7 @@
     <value>6, 513</value>
   </data>
   <data name="PTAbleiten20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten20.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
@@ -2563,7 +2551,7 @@
     <value>6, 487</value>
   </data>
   <data name="PTAbleiten19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten19.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
@@ -2587,7 +2575,7 @@
     <value>6, 19</value>
   </data>
   <data name="PTAbleiten1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2611,7 +2599,7 @@
     <value>6, 45</value>
   </data>
   <data name="PTAbleiten2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten2.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -2635,7 +2623,7 @@
     <value>6, 461</value>
   </data>
   <data name="PTAbleiten18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten18.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
@@ -2659,7 +2647,7 @@
     <value>6, 71</value>
   </data>
   <data name="PTAbleiten3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten3.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -2683,7 +2671,7 @@
     <value>6, 435</value>
   </data>
   <data name="PTAbleiten17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten17.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
@@ -2707,7 +2695,7 @@
     <value>6, 97</value>
   </data>
   <data name="PTAbleiten4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten4.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -2731,7 +2719,7 @@
     <value>6, 409</value>
   </data>
   <data name="PTAbleiten16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten16.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -2755,7 +2743,7 @@
     <value>6, 123</value>
   </data>
   <data name="PTAbleiten5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten5.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -2779,7 +2767,7 @@
     <value>6, 383</value>
   </data>
   <data name="PTAbleiten15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten15.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
@@ -2803,7 +2791,7 @@
     <value>6, 149</value>
   </data>
   <data name="PTAbleiten6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten6.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -2827,7 +2815,7 @@
     <value>6, 357</value>
   </data>
   <data name="PTAbleiten14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten14.TabIndex" type="System.Int32, mscorlib">
     <value>53</value>
@@ -2851,7 +2839,7 @@
     <value>6, 175</value>
   </data>
   <data name="PTAbleiten7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten7.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -2875,7 +2863,7 @@
     <value>6, 331</value>
   </data>
   <data name="PTAbleiten13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten13.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
@@ -2899,7 +2887,7 @@
     <value>6, 201</value>
   </data>
   <data name="PTAbleiten8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten8.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
@@ -2923,7 +2911,7 @@
     <value>6, 305</value>
   </data>
   <data name="PTAbleiten12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten12.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
@@ -2947,7 +2935,7 @@
     <value>6, 227</value>
   </data>
   <data name="PTAbleiten9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten9.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
@@ -2971,7 +2959,7 @@
     <value>6, 279</value>
   </data>
   <data name="PTAbleiten11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten11.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
@@ -2995,7 +2983,7 @@
     <value>6, 253</value>
   </data>
   <data name="PTAbleiten10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 20</value>
+    <value>330, 20</value>
   </data>
   <data name="PTAbleiten10.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
@@ -3016,10 +3004,10 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="groupBoxAbleiten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>873, 83</value>
+    <value>1005, 83</value>
   </data>
   <data name="groupBoxAbleiten.Size" type="System.Drawing.Size, System.Drawing">
-    <value>321, 806</value>
+    <value>342, 812</value>
   </data>
   <data name="groupBoxAbleiten.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -3039,6 +3027,12 @@
   <data name="&gt;&gt;groupBoxAbleiten.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="groupBoxAnforderungen.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="groupBoxAnforderungen.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
   <data name="PTAnforderungen30.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
@@ -3046,7 +3040,7 @@
     <value>9, 773</value>
   </data>
   <data name="PTAnforderungen30.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>309, 20</value>
   </data>
   <data name="PTAnforderungen30.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
@@ -3070,7 +3064,7 @@
     <value>9, 747</value>
   </data>
   <data name="PTAnforderungen29.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>309, 20</value>
   </data>
   <data name="PTAnforderungen29.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
@@ -3094,7 +3088,7 @@
     <value>9, 721</value>
   </data>
   <data name="PTAnforderungen28.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>309, 20</value>
   </data>
   <data name="PTAnforderungen28.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
@@ -3118,7 +3112,7 @@
     <value>9, 695</value>
   </data>
   <data name="PTAnforderungen27.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>309, 20</value>
   </data>
   <data name="PTAnforderungen27.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
@@ -3142,7 +3136,7 @@
     <value>9, 669</value>
   </data>
   <data name="PTAnforderungen26.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>309, 20</value>
   </data>
   <data name="PTAnforderungen26.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -3166,7 +3160,7 @@
     <value>9, 643</value>
   </data>
   <data name="PTAnforderungen25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>309, 20</value>
   </data>
   <data name="PTAnforderungen25.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -3190,7 +3184,7 @@
     <value>9, 617</value>
   </data>
   <data name="PTAnforderungen24.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>309, 20</value>
   </data>
   <data name="PTAnforderungen24.TabIndex" type="System.Int32, mscorlib">
     <value>44</value>
@@ -3214,7 +3208,7 @@
     <value>6, 591</value>
   </data>
   <data name="PTAnforderungen23.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen23.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
@@ -3238,7 +3232,7 @@
     <value>6, 565</value>
   </data>
   <data name="PTAnforderungen22.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen22.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -3262,7 +3256,7 @@
     <value>6, 539</value>
   </data>
   <data name="PTAnforderungen21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen21.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -3286,7 +3280,7 @@
     <value>6, 513</value>
   </data>
   <data name="PTAnforderungen20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen20.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
@@ -3310,7 +3304,7 @@
     <value>6, 487</value>
   </data>
   <data name="PTAnforderungen19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen19.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -3334,7 +3328,7 @@
     <value>6, 19</value>
   </data>
   <data name="PTAnforderungen1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -3358,7 +3352,7 @@
     <value>6, 45</value>
   </data>
   <data name="PTAnforderungen2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen2.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -3382,7 +3376,7 @@
     <value>6, 461</value>
   </data>
   <data name="PTAnforderungen18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen18.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -3406,7 +3400,7 @@
     <value>6, 71</value>
   </data>
   <data name="PTAnforderungen3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen3.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -3430,7 +3424,7 @@
     <value>6, 435</value>
   </data>
   <data name="PTAnforderungen17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen17.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -3454,7 +3448,7 @@
     <value>6, 97</value>
   </data>
   <data name="PTAnforderungen4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen4.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -3478,7 +3472,7 @@
     <value>6, 409</value>
   </data>
   <data name="PTAnforderungen16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen16.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -3502,7 +3496,7 @@
     <value>6, 123</value>
   </data>
   <data name="PTAnforderungen5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen5.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -3526,7 +3520,7 @@
     <value>6, 383</value>
   </data>
   <data name="PTAnforderungen15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen15.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -3550,7 +3544,7 @@
     <value>6, 149</value>
   </data>
   <data name="PTAnforderungen6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen6.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -3574,7 +3568,7 @@
     <value>6, 357</value>
   </data>
   <data name="PTAnforderungen14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen14.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
@@ -3598,7 +3592,7 @@
     <value>6, 175</value>
   </data>
   <data name="PTAnforderungen7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen7.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -3622,7 +3616,7 @@
     <value>6, 331</value>
   </data>
   <data name="PTAnforderungen13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen13.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
@@ -3646,7 +3640,7 @@
     <value>6, 201</value>
   </data>
   <data name="PTAnforderungen8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen8.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -3670,7 +3664,7 @@
     <value>6, 305</value>
   </data>
   <data name="PTAnforderungen12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen12.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
@@ -3694,7 +3688,7 @@
     <value>6, 227</value>
   </data>
   <data name="PTAnforderungen9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen9.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -3718,7 +3712,7 @@
     <value>6, 279</value>
   </data>
   <data name="PTAnforderungen11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen11.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -3742,7 +3736,7 @@
     <value>6, 253</value>
   </data>
   <data name="PTAnforderungen10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 20</value>
+    <value>312, 20</value>
   </data>
   <data name="PTAnforderungen10.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -3766,7 +3760,7 @@
     <value>675, 83</value>
   </data>
   <data name="groupBoxAnforderungen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 806</value>
+    <value>324, 812</value>
   </data>
   <data name="groupBoxAnforderungen.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -3785,6 +3779,15 @@
   </data>
   <data name="&gt;&gt;groupBoxAnforderungen.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="groupBoxSpezialisierung.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="groupBoxSpezialisierung.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="groupBoxSpezialisierung.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
   </data>
   <data name="PTSpezialisierung30.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -4513,7 +4516,7 @@
     <value>477, 83</value>
   </data>
   <data name="groupBoxSpezialisierung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 806</value>
+    <value>189, 812</value>
   </data>
   <data name="groupBoxSpezialisierung.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -4532,6 +4535,15 @@
   </data>
   <data name="&gt;&gt;groupBoxSpezialisierung.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="groupBoxBilliger.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="groupBoxBilliger.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="groupBoxBilliger.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
   </data>
   <data name="PTBilliger30.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -5350,7 +5362,7 @@
     <value>405, 83</value>
   </data>
   <data name="groupBoxBilliger.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 806</value>
+    <value>66, 812</value>
   </data>
   <data name="groupBoxBilliger.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -5369,6 +5381,15 @@
   </data>
   <data name="&gt;&gt;groupBoxBilliger.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="groupBoxBe.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="groupBoxBe.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="groupBoxBe.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
   </data>
   <data name="PTBe30.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -6187,7 +6208,7 @@
     <value>342, 83</value>
   </data>
   <data name="groupBoxBe.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 806</value>
+    <value>57, 812</value>
   </data>
   <data name="groupBoxBe.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -6206,6 +6227,15 @@
   </data>
   <data name="&gt;&gt;groupBoxBe.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="groupBoxTaW.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="groupBoxTaW.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="groupBoxTaW.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
   </data>
   <data name="PTTaw30.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -7024,7 +7054,7 @@
     <value>280, 83</value>
   </data>
   <data name="groupBoxTaW.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 806</value>
+    <value>57, 812</value>
   </data>
   <data name="groupBoxTaW.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -7043,6 +7073,15 @@
   </data>
   <data name="&gt;&gt;groupBoxTaW.ZOrder" xml:space="preserve">
     <value>8</value>
+  </data>
+  <data name="groupBoxProbe.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="groupBoxProbe.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="groupBoxProbe.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
   </data>
   <data name="PTWürfe29.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -8671,7 +8710,7 @@
     <value>173, 83</value>
   </data>
   <data name="groupBoxProbe.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 806</value>
+    <value>106, 812</value>
   </data>
   <data name="groupBoxProbe.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -8690,6 +8729,12 @@
   </data>
   <data name="&gt;&gt;groupBoxProbe.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="groupBoxTalentName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="groupBoxTalentName.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
   </data>
   <data name="PTName30.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9688,7 +9733,7 @@
     <value>8, 83</value>
   </data>
   <data name="groupBoxTalentName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 806</value>
+    <value>49, 805</value>
   </data>
   <data name="groupBoxTalentName.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>

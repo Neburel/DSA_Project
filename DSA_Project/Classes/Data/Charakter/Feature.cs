@@ -20,7 +20,8 @@ namespace DSA_Project
         Dictionary<DSA_ATTRIBUTE, int> attributeBonus;
         Dictionary<DSA_ENERGIEN, int> energieBonus;
         Dictionary<DSA_ADVANCEDVALUES, int> advancedBonus;
-
+        Dictionary<InterfaceTalent, int> talentBoni;
+        
         public Feature()
         {
             setUP();
@@ -45,9 +46,10 @@ namespace DSA_Project
         }
         private void setUP()
         {
-            attributeBonus = new Dictionary<DSA_ATTRIBUTE, int>();
-            energieBonus = new Dictionary<DSA_ENERGIEN, int>();
-            advancedBonus = new Dictionary<DSA_ADVANCEDVALUES, int>();
+            attributeBonus  = new Dictionary<DSA_ATTRIBUTE, int>();
+            energieBonus    = new Dictionary<DSA_ENERGIEN, int>();
+            advancedBonus   = new Dictionary<DSA_ADVANCEDVALUES, int>();
+            talentBoni      = new Dictionary<InterfaceTalent, int>();
         }
 
         public void setName(String Name)
@@ -101,6 +103,11 @@ namespace DSA_Project
             advancedBonus.Remove(values);
             advancedBonus.Add(values, value);
         }
+        public void addTalent(InterfaceTalent talent, int BonusTaw)
+        {
+            talentBoni.Add(talent, BonusTaw);
+        }
+
 
         public String getName(){
             return Name;
@@ -108,7 +115,7 @@ namespace DSA_Project
         public String getDescription()
         {
             String totalDescription = String.Copy(this.Description);
-            totalDescription = totalDescription + getAttributeString() + getEnergieString() + getAdvancedString();
+            totalDescription = totalDescription + getAttributeString() + getEnergieString() + getAdvancedString() + " " + getTalentString();
             
             return totalDescription;
         }
@@ -142,6 +149,22 @@ namespace DSA_Project
             advancedBonus.TryGetValue(value, out x);
             return x;
         }
+        
+
+        public List<InterfaceTalent> TalentListwithBonus()
+        {
+            return new List<InterfaceTalent>(this.talentBoni.Keys);
+        }
+        public int getTaWBonus(InterfaceTalent talent)
+        {
+            int x = 0;
+            if(talentBoni.TryGetValue(talent, out x)){
+                return x;
+            }
+            return 0;
+        }
+            
+
 
         private String getAttributeString()
         {
@@ -182,6 +205,17 @@ namespace DSA_Project
                 {
                     ret = ret + " " + x + advancedAcronyms[i];
                 }
+            }
+            return ret;
+        }
+        private String getTalentString()
+        {
+            String ret = "";
+            foreach(InterfaceTalent talent in talentBoni.Keys)
+            {
+                int x = 0;
+                talentBoni.TryGetValue(talent, out x);
+                ret = ret + talent.getName() + "(" + x +")";
             }
             return ret;
         }

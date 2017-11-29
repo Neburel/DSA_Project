@@ -26,6 +26,13 @@ namespace DSA_Project
             return charakter;
         }
 
+        private static void loadAdvanturePoints(XmlNode AdvanturePoints, Charakter charakter)
+        {
+            int x;
+            Int32.TryParse(AdvanturePoints.InnerText, out x);
+            charakter.setAdventurePoints(x);
+        }
+
         private static void loadHeldenbrief(XmlNode HeldenbriefNode, Charakter charakter)
         {
             foreach (XmlNode node in HeldenbriefNode)
@@ -34,8 +41,10 @@ namespace DSA_Project
                 {
                     case ManagmentLoadXML.BasisDatenElement: loadBasicData(node, charakter); break;
                     case ManagmentLoadXML.AttributeElement: loadAttribute(node, charakter); break;
+                    case ManagmentLoadXML.AdvancedElement: loadAdvanced(node, charakter); break;
                     case ManagmentLoadXML.MoneyElement: loadMoney(node, charakter); break;
                     case ManagmentLoadXML.FeatureElement: loadFeature(node, charakter); break;
+                    case ManagmentLoadXML.AdvanturePoints: loadAdvanturePoints(node, charakter); break;
                 }
             }
         }
@@ -100,6 +109,24 @@ namespace DSA_Project
                 }
             }
         }
+        private static void loadAdvanced(XmlNode advancedNode, Charakter charakter)
+        {
+            String[] name = Enum.GetNames(typeof(DSA_ADVANCEDVALUES));
+            int length = Enum.GetNames(typeof(DSA_ADVANCEDVALUES)).Length;
+
+            for (int i = 0; i < length; i++)
+            {
+                foreach (XmlNode node in advancedNode)
+                {
+                    if ((node.Name).ToUpper() == name[i].ToUpper())
+                    {
+                        int x;
+                        Int32.TryParse(node.InnerText, out x);
+                        charakter.setAdvancedValueAKT((DSA_ADVANCEDVALUES)i, x);
+                    }
+                }
+            }
+        }
         private static void loadMoney(XmlNode MoneyNode, Charakter charakter)
         {
             String[] name = Enum.GetNames(typeof(DSA_MONEY));
@@ -135,11 +162,11 @@ namespace DSA_Project
             foreach (XmlNode node in featureNode)
             {
                 i++;
-                Feature feature = loadFeature(node, i);
+                Feature feature = loadFeature(node, charakter, i);
                 charakter.addFeature(type, i, feature);
             }
         }
-        private static Feature loadFeature(XmlNode featureNode, int number)
+        private static Feature loadFeature(XmlNode featureNode, Charakter charakter, int number)
         {
             Feature feature = new Feature();
 
@@ -153,7 +180,8 @@ namespace DSA_Project
                     case ManagmentLoadXML.GP: feature.setGP(node.InnerText); break;
                     case ManagmentLoadXML.AttributeElement: LoadAttribute(node, feature); break;
                     case ManagmentLoadXML.EnergienElement: LoadEnergien(node, feature); break;
-                    case ManagmentLoadXML.AdvancedElement: LoadAdvanced(node, feature); break;
+                    case ManagmentLoadXML.AdvancedElement: LoadFeatureAdvanced(node, feature); break;
+                    case ManagmentLoadXML.Talente: LoadFeatureTalente(node, charakter, feature); break;
                 }
             }
 
@@ -196,7 +224,7 @@ namespace DSA_Project
                 }
             }
         }
-        private static void LoadAdvanced(XmlNode advancedNode, Feature feature)
+        private static void LoadFeatureAdvanced(XmlNode advancedNode, Feature feature)
         {
             String[] AdvancedNames = Enum.GetNames(typeof(DSA_ADVANCEDVALUES));
 
@@ -214,46 +242,109 @@ namespace DSA_Project
                 }
             }
         }
-        
-        private static void loadTalentbrief(XmlNode TalentNode, Charakter charakter)
+        private static void LoadFeatureTalente(XmlNode talentNode, Charakter charakter, Feature feature)
         {
-            /*
-            String[] s = Enum.GetNames(typeof(DSA_TALENTS));
-            foreach (XmlNode node in TalentNode)
+            List<InterfaceTalent> listTalente = charakter.getAllTalentList();
+
+            foreach(XmlNode innerTalent in talentNode)
             {
-                Console.WriteLine(node.Name + "--------------------------------------------------------------");
-                for(int i=0; i<s.Length; i++)
+                InterfaceTalent talent = null;
+                String name = "";
+                String TaWBonus = "";
+
+                foreach (XmlNode node in innerTalent)
                 {
-                    if(String.Equals(s[i], node.Name))
+                    switch (node.Name)
                     {
-                        loadTalentCatecorie(node, charakter, (DSA_TALENTS)i);
+                        case ManagmentLoadXML.Name: name = node.InnerText; break;
+                        case ManagmentLoadXML.TAW: TaWBonus = node.InnerText; break;
                     }
                 }
-            }
-            */
-        }
-        /*
-        private static void loadTalentCatecorie(XmlNode CatecorieNode, Charakter charakter, DSA_TALENTS type)
-        {
-            int TalentListLength = charakter.getCounttalent(type);   
-            for(int i=0; i < TalentListLength; i++)
-            {
-                InterfaceTalent talent = charakter.getTalent(type, i);
-                foreach(XmlNode node in CatecorieNode)
+                for(int i=0; i<listTalente.Count; i++)
                 {
-                    String name = node.Name.Replace(".", " ");
-                    if(String.Equals(name, talent.getName())){
-                        talent.setTaw(node.InnerText);
+                    if(0==String.Compare(listTalente[i].getName(), name))
+                    {
+                        talent = listTalente[i];
+                        break;
+                    }
+                }
+
+                int x;
+                Int32.TryParse(TaWBonus, out x);
+
+                feature.addTalent(talent, x);
+            }
+        }
+
+        private static void loadTalentbrief(XmlNode TalentNode, Charakter charakter) 
+        {
+            foreach (XmlNode TalentType in TalentNode)
+            {
+                foreach (XmlNode CatecorieNode in TalentType)
+                {
+                    DSA_GENERALTALENTS Gtype;
+                    DSA_FIGHTINGTALENTS FType;
+
+                    if (Enum.TryParse(CatecorieNode.Name, out Gtype))
+                    {
+                        foreach (XmlNode Talent in CatecorieNode)
+                        {
+                            loadTalent(Talent, Gtype, charakter);
+                        }
+                    }
+                    else
+                    if (Enum.TryParse(CatecorieNode.Name, out FType))
+                    {
+                        foreach (XmlNode Talent in CatecorieNode)
+                        {
+                            loadTalent(Talent, FType, charakter);
+                        }
+                    }
+                    else
+                    {
+                        throw new Exception();
                     }
                 }
             }
-
         }
-        */
-        private static void loadTalent()
+        private static void loadTalent<Tenum>(XmlNode TalentNode, Tenum type,  Charakter charakter) where Tenum : struct, IComparable, IFormattable, IConvertible
         {
+            String Name = null;
+            String Taw = null;
+            String AT = null;
+            String PA = null;
 
+            foreach(XmlNode node in TalentNode)
+            {
+                switch (node.Name)
+                {
+                    case ManagmentLoadXML.Name: Name = node.InnerText; break;
+                    case ManagmentLoadXML.TAW: Taw = node.InnerText; break;
+                    case ManagmentLoadXML.attack: AT = node.InnerText; break;
+                    case ManagmentLoadXML.Parade: PA = node.InnerText; break;
+                    default: throw new Exception();
+                }
+            }
+
+            Name = Name.Replace(".", " ");
+
+            InterfaceTalent talent = charakter.getTalent(type, Name);
+            if (talent == null) return;
+            talent.setTaw(Taw);            
+
+            if(AT!=null & PA != null)
+            {
+                FightTalent ftalent = (FightTalent)talent;
+
+                int x = 0;
+
+                Int32.TryParse(AT, out x);
+                ftalent.setAT(x);
+
+                Int32.TryParse(PA, out x);
+                ftalent.setPA(x);
+            }
+            
         }
-
     }
 }

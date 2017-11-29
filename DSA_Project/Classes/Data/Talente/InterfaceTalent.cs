@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    interface InterfaceTalent
+    public interface InterfaceTalent
     {
         void setCharacter(Charakter charakter);
         void setTaw(int taw);

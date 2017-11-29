@@ -101,7 +101,6 @@
             this.PTAT4 = new System.Windows.Forms.TextBox();
             this.PTAT1 = new System.Windows.Forms.TextBox();
             this.groupBoxTalentLetterTalente = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButtonRange = new System.Windows.Forms.RadioButton();
             this.radioButtonClose = new System.Windows.Forms.RadioButton();
             this.radioButtonWeaponless = new System.Windows.Forms.RadioButton();
@@ -756,6 +755,7 @@
             this.talents.Controls.Add(this.groupBoxProbe);
             this.talents.Controls.Add(this.groupBoxTalentName);
             this.talents.Name = "talents";
+            this.talents.Click += new System.EventHandler(this.talents_Click);
             // 
             // groupBox3
             // 
@@ -788,6 +788,7 @@
             // 
             // groupBoxKampf
             // 
+            resources.ApplyResources(this.groupBoxKampf, "groupBoxKampf");
             this.groupBoxKampf.Controls.Add(this.PTPA29);
             this.groupBoxKampf.Controls.Add(this.PTPA30);
             this.groupBoxKampf.Controls.Add(this.PTPA28);
@@ -848,7 +849,6 @@
             this.groupBoxKampf.Controls.Add(this.PTAT5);
             this.groupBoxKampf.Controls.Add(this.PTAT4);
             this.groupBoxKampf.Controls.Add(this.PTAT1);
-            resources.ApplyResources(this.groupBoxKampf, "groupBoxKampf");
             this.groupBoxKampf.Name = "groupBoxKampf";
             this.groupBoxKampf.TabStop = false;
             // 
@@ -1274,7 +1274,6 @@
             // 
             // groupBoxTalentLetterTalente
             // 
-            this.groupBoxTalentLetterTalente.Controls.Add(this.radioButton3);
             this.groupBoxTalentLetterTalente.Controls.Add(this.radioButtonRange);
             this.groupBoxTalentLetterTalente.Controls.Add(this.radioButtonClose);
             this.groupBoxTalentLetterTalente.Controls.Add(this.radioButtonWeaponless);
@@ -1287,17 +1286,12 @@
             this.groupBoxTalentLetterTalente.Name = "groupBoxTalentLetterTalente";
             this.groupBoxTalentLetterTalente.TabStop = false;
             // 
-            // radioButton3
-            // 
-            resources.ApplyResources(this.radioButton3, "radioButton3");
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
             // radioButtonRange
             // 
             resources.ApplyResources(this.radioButtonRange, "radioButtonRange");
             this.radioButtonRange.Name = "radioButtonRange";
             this.radioButtonRange.UseVisualStyleBackColor = true;
+            this.radioButtonRange.CheckedChanged += new System.EventHandler(this.radioButtonRange_CheckedChanged);
             // 
             // radioButtonClose
             // 
@@ -1352,6 +1346,7 @@
             // 
             // groupBoxAbleiten
             // 
+            resources.ApplyResources(this.groupBoxAbleiten, "groupBoxAbleiten");
             this.groupBoxAbleiten.Controls.Add(this.PTAbleiten30);
             this.groupBoxAbleiten.Controls.Add(this.PTAbleiten29);
             this.groupBoxAbleiten.Controls.Add(this.PTAbleiten28);
@@ -1382,7 +1377,6 @@
             this.groupBoxAbleiten.Controls.Add(this.PTAbleiten9);
             this.groupBoxAbleiten.Controls.Add(this.PTAbleiten11);
             this.groupBoxAbleiten.Controls.Add(this.PTAbleiten10);
-            resources.ApplyResources(this.groupBoxAbleiten, "groupBoxAbleiten");
             this.groupBoxAbleiten.Name = "groupBoxAbleiten";
             this.groupBoxAbleiten.TabStop = false;
             // 
@@ -1568,6 +1562,7 @@
             // 
             // groupBoxAnforderungen
             // 
+            resources.ApplyResources(this.groupBoxAnforderungen, "groupBoxAnforderungen");
             this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen30);
             this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen29);
             this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen28);
@@ -1598,7 +1593,6 @@
             this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen9);
             this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen11);
             this.groupBoxAnforderungen.Controls.Add(this.PTAnforderungen10);
-            resources.ApplyResources(this.groupBoxAnforderungen, "groupBoxAnforderungen");
             this.groupBoxAnforderungen.Name = "groupBoxAnforderungen";
             this.groupBoxAnforderungen.TabStop = false;
             // 
@@ -1784,6 +1778,7 @@
             // 
             // groupBoxSpezialisierung
             // 
+            resources.ApplyResources(this.groupBoxSpezialisierung, "groupBoxSpezialisierung");
             this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung30);
             this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung29);
             this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung28);
@@ -1814,7 +1809,6 @@
             this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung3);
             this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung2);
             this.groupBoxSpezialisierung.Controls.Add(this.PTSpezialisierung1);
-            resources.ApplyResources(this.groupBoxSpezialisierung, "groupBoxSpezialisierung");
             this.groupBoxSpezialisierung.Name = "groupBoxSpezialisierung";
             this.groupBoxSpezialisierung.TabStop = false;
             // 
@@ -2000,6 +1994,7 @@
             // 
             // groupBoxBilliger
             // 
+            resources.ApplyResources(this.groupBoxBilliger, "groupBoxBilliger");
             this.groupBoxBilliger.Controls.Add(this.PTBilliger30);
             this.groupBoxBilliger.Controls.Add(this.PTBilliger29);
             this.groupBoxBilliger.Controls.Add(this.PTBilliger27);
@@ -2030,7 +2025,6 @@
             this.groupBoxBilliger.Controls.Add(this.PTBilliger4);
             this.groupBoxBilliger.Controls.Add(this.PTBilliger5);
             this.groupBoxBilliger.Controls.Add(this.PTBilliger1);
-            resources.ApplyResources(this.groupBoxBilliger, "groupBoxBilliger");
             this.groupBoxBilliger.Name = "groupBoxBilliger";
             this.groupBoxBilliger.TabStop = false;
             // 
@@ -2216,6 +2210,7 @@
             // 
             // groupBoxBe
             // 
+            resources.ApplyResources(this.groupBoxBe, "groupBoxBe");
             this.groupBoxBe.Controls.Add(this.PTBe30);
             this.groupBoxBe.Controls.Add(this.PTBe29);
             this.groupBoxBe.Controls.Add(this.PTBe28);
@@ -2246,7 +2241,6 @@
             this.groupBoxBe.Controls.Add(this.PTBe4);
             this.groupBoxBe.Controls.Add(this.PTBe5);
             this.groupBoxBe.Controls.Add(this.PTBe1);
-            resources.ApplyResources(this.groupBoxBe, "groupBoxBe");
             this.groupBoxBe.Name = "groupBoxBe";
             this.groupBoxBe.TabStop = false;
             // 
@@ -2432,6 +2426,7 @@
             // 
             // groupBoxTaW
             // 
+            resources.ApplyResources(this.groupBoxTaW, "groupBoxTaW");
             this.groupBoxTaW.Controls.Add(this.PTTaw30);
             this.groupBoxTaW.Controls.Add(this.PTTaw29);
             this.groupBoxTaW.Controls.Add(this.PTTaw28);
@@ -2462,7 +2457,6 @@
             this.groupBoxTaW.Controls.Add(this.PTTaw3);
             this.groupBoxTaW.Controls.Add(this.PTTaw2);
             this.groupBoxTaW.Controls.Add(this.PTTaw1);
-            resources.ApplyResources(this.groupBoxTaW, "groupBoxTaW");
             this.groupBoxTaW.Name = "groupBoxTaW";
             this.groupBoxTaW.TabStop = false;
             // 
@@ -2674,6 +2668,7 @@
             // 
             // groupBoxProbe
             // 
+            resources.ApplyResources(this.groupBoxProbe, "groupBoxProbe");
             this.groupBoxProbe.Controls.Add(this.PTWürfe29);
             this.groupBoxProbe.Controls.Add(this.PTWürfe30);
             this.groupBoxProbe.Controls.Add(this.PTWürfe28);
@@ -2734,7 +2729,6 @@
             this.groupBoxProbe.Controls.Add(this.PTProbe5);
             this.groupBoxProbe.Controls.Add(this.PTProbe4);
             this.groupBoxProbe.Controls.Add(this.PTProbe1);
-            resources.ApplyResources(this.groupBoxProbe, "groupBoxProbe");
             this.groupBoxProbe.Name = "groupBoxProbe";
             this.groupBoxProbe.TabStop = false;
             // 
@@ -3100,6 +3094,7 @@
             // 
             // groupBoxTalentName
             // 
+            resources.ApplyResources(this.groupBoxTalentName, "groupBoxTalentName");
             this.groupBoxTalentName.Controls.Add(this.PTName30);
             this.groupBoxTalentName.Controls.Add(this.PTName29);
             this.groupBoxTalentName.Controls.Add(this.PTName28);
@@ -3130,7 +3125,6 @@
             this.groupBoxTalentName.Controls.Add(this.PTName3);
             this.groupBoxTalentName.Controls.Add(this.PTName2);
             this.groupBoxTalentName.Controls.Add(this.PTName1);
-            resources.ApplyResources(this.groupBoxTalentName, "groupBoxTalentName");
             this.groupBoxTalentName.Name = "groupBoxTalentName";
             this.groupBoxTalentName.TabStop = false;
             // 
@@ -5492,6 +5486,7 @@
             this.Name = "DSA";
             this.tabPage1.ResumeLayout(false);
             this.talents.ResumeLayout(false);
+            this.talents.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBoxKampf.ResumeLayout(false);
@@ -5591,7 +5586,6 @@
         private System.Windows.Forms.TextBox PTAT4;
         private System.Windows.Forms.TextBox PTAT1;
         private System.Windows.Forms.GroupBox groupBoxTalentLetterTalente;
-        private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButtonRange;
         private System.Windows.Forms.RadioButton radioButtonClose;
         private System.Windows.Forms.RadioButton radioButtonWeaponless;

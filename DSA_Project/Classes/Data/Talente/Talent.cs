@@ -16,7 +16,8 @@ namespace DSA_Project
         private String Be;
         protected List<T> Probe;
         
-        private int TaW;                
+        private int TaW;
+        private int TawBonus;
 
         public Talent(String name, List<T> probe, String be, List<TalentDiverate> diverates)
         {
@@ -26,6 +27,8 @@ namespace DSA_Project
 
             Diverates = diverates;
         }
+
+        public override string ToString() { return this.Name;  } 
 
         public void setCharacter(Charakter charakter)
         {
@@ -85,6 +88,10 @@ namespace DSA_Project
             {
                 return TaW;
             }
+        public int getTawWithBonus()
+        {
+            return getTaW() + Charakter.getTaWBons(this);
+        }
 
         public abstract String getProbeStringOne();
         public abstract String getProbeStringTwo();

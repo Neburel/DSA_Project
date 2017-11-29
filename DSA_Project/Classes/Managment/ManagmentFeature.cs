@@ -17,6 +17,8 @@ namespace DSA_Project
         Dictionary<DSA_ENERGIEN, int> energienBonus         = new Dictionary<DSA_ENERGIEN, int>();
         Dictionary<DSA_ENERGIEN, int> energienMali          = new Dictionary<DSA_ENERGIEN, int>();
 
+        Dictionary<InterfaceTalent, int> TalentTawBonus     = new Dictionary<InterfaceTalent, int>();
+
         int HighestNumber                                   = 0;
 
 
@@ -36,7 +38,10 @@ namespace DSA_Project
         }
         public void addFeature(DSA_FEATURES type,Feature feature, int number)
         {
-            HighestNumber = number;
+            if (HighestNumber < number)
+            {
+                HighestNumber = number;
+            }
 
             switch (type)
             {
@@ -88,6 +93,7 @@ namespace DSA_Project
             }
 
             CalculateAdvancedBonus(currentFeature, factor);
+            CalculateTalentBonus(currentFeature, factor);
         }
         private void CalculateAttributeBonus(Feature feature, int factor)
         {
@@ -153,7 +159,22 @@ namespace DSA_Project
                 energienMali.Add((DSA_ENERGIEN)i, currentBonus);
             }
         }
+        private void CalculateTalentBonus(Feature feature, int factor)
+        {
+            List<InterfaceTalent> tlist = feature.TalentListwithBonus();
+            foreach(InterfaceTalent talent in tlist)
+            {
+                int currentTaWBonus = 0;
+                if (TalentTawBonus.ContainsKey(talent))
+                {
+                    TalentTawBonus.TryGetValue(talent, out currentTaWBonus);
+                    TalentTawBonus.Remove(talent);
+                }
+                currentTaWBonus = currentTaWBonus + factor * feature.getTaWBonus(talent);
+                TalentTawBonus.Add(talent, currentTaWBonus);
+            }
 
+        }
 
         public Feature GetFeature(DSA_FEATURES type, int number)
         {
@@ -191,6 +212,15 @@ namespace DSA_Project
             return x;
         }
 
+        public int getTalentTawBonus(InterfaceTalent talent)
+        {
+            int x = 0;
+            if (TalentTawBonus.ContainsKey(talent))
+            {
+                TalentTawBonus.TryGetValue(talent, out x);
+            }
+            return x;
+        }
         
         public int getHighestNumber()
         {

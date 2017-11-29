@@ -22,7 +22,7 @@ namespace DSA_Project
 
         private int getATPA(int ownValue, int otherValue, int newValue)
         {
-            int freeTaW = getTaW() - otherValue;
+            int freeTaW = getTawWithBonus() - otherValue;
             if (newValue > freeTaW)
             {
                 ownValue = freeTaW;

@@ -32,7 +32,7 @@ namespace DSA_Project
             int ret = 0;
             for (int i = 0; i < getProbeCount(); i++)
             {
-                ret = ret + Charakter.getAttribute_Max(Probe[i]) + getTaW();
+                ret = ret + Charakter.getAttribute_Max(Probe[i]) + getTawWithBonus();
             }
             return ret.ToString();
         }

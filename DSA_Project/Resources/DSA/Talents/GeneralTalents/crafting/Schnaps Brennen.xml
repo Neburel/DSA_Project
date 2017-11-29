@@ -1,7 +1,11 @@
 <TalentLetter>
   <Talent>
     <Name>Schnaps Brennen</Name>
-    <Probe />
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
     <Diverates>
       <Diverate>
         <Talent>Alchimie</Talent>
