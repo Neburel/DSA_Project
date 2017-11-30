@@ -10,6 +10,8 @@ namespace DSA_Project
 
     public class Feature
     {
+        DSA_FEATURES type = DSA_FEATURES.VORTEIL;
+
         String[] attributeAcronyms  = Enum.GetNames(typeof(DSA_ATTRIBUTE));
         String[] energienAcronyms   = Enum.GetNames(typeof(DSA_ENERGIEN));
         String[] advancedAcronyms   = Enum.GetNames(typeof(DSA_ADVANCEDVALUES));
@@ -35,9 +37,6 @@ namespace DSA_Project
         }
         public Feature(String Name, String Description, String Value, String GP)
         {
-            attributeBonus = new Dictionary<DSA_ATTRIBUTE, int>();
-            energieBonus = new Dictionary<DSA_ENERGIEN, int>();
-
             setName(Name);
             setDescription(Description);
             setValue(Value);
@@ -45,6 +44,17 @@ namespace DSA_Project
 
             setUP();
 
+        }
+        public Feature(String Name, String Description, String Value, String GP, DSA_FEATURES type)
+        {
+            setName(Name);
+            setDescription(Description);
+            setValue(Value);
+            setGP(GP);
+
+            setUP();
+
+            setType(type);
         }
         private void setUP()
         {
@@ -105,6 +115,10 @@ namespace DSA_Project
             advancedBonus.Remove(values);
             advancedBonus.Add(values, value);
         }
+        public void setType(DSA_FEATURES type)
+        {
+            this.type = type;
+        }
         public void addTalent(InterfaceTalent talent, int BonusTaw)
         {
             talentBoni.Add(talent, BonusTaw);
@@ -114,6 +128,10 @@ namespace DSA_Project
         public String getName()
         {
             return Name;
+        }
+        public String getDescription()
+        {
+            return getDescription(this.type);
         }
         public String getDescription(DSA_FEATURES type)
         {

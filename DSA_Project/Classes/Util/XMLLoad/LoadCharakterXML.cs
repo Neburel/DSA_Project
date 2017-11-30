@@ -199,7 +199,7 @@ namespace DSA_Project
                     case ManagmentLoadXML.Talente: LoadFeatureTalente(node, charakter, feature); break;
                 }
             }
-
+            
             return feature;
         }
         private static void LoadAttribute(XmlNode attributenode, Feature feature)
