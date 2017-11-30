@@ -13,11 +13,12 @@ namespace DSA_Project
     public partial class CreateFeature : Form
     {
         Feature Feature;
+        DSA_FEATURES ftype;
         Dictionary<InterfaceTalent, int> talente;
 
-        public CreateFeature(List<InterfaceTalent> talentList)
+        public CreateFeature(List<InterfaceTalent> talentList, DSA_FEATURES ftype)
         {
-            setUP(talentList);
+            setUP(talentList, ftype);
 
             txtName.Text            = "";
             txtDescription.Text     = "";
@@ -52,9 +53,9 @@ namespace DSA_Project
             txtEntrückung.Text          = zero;
             txtGeschwindigkeit.Text     = zero;            
         }
-        public CreateFeature(Feature feature, List<InterfaceTalent> talentList)
+        public CreateFeature(Feature feature, List<InterfaceTalent> talentList, DSA_FEATURES ftype)
         {
-            setUP(talentList);
+            setUP(talentList, ftype);
             Feature = feature;
 
             txtName.Text = feature.getName();
@@ -104,7 +105,7 @@ namespace DSA_Project
 
             }
         }
-        private void setUP(List<InterfaceTalent> talentList)
+        private void setUP(List<InterfaceTalent> talentList, DSA_FEATURES ftype)
         {
             InitializeComponent();
             talente = new Dictionary<InterfaceTalent, int>();
@@ -116,6 +117,8 @@ namespace DSA_Project
 
             ListTalente.Columns.Add(new ColumnHeader().Text = "Name");
             ListTalente.Columns.Add(new ColumnHeader().Text = "TaW");
+
+            this.ftype = ftype;
         }
         public Feature feature()
         {
@@ -135,7 +138,7 @@ namespace DSA_Project
         private Feature createFeature()
         {
             Feature newFeature = new Feature(txtName.Text, txtDescription.Text, txtValue.Text, txtGP.Text);
-
+            
             newFeature.setAttributeBonus(DSA_ATTRIBUTE.MU, convertToInt(txtMut.Text));
             newFeature.setAttributeBonus(DSA_ATTRIBUTE.KL, convertToInt(txtKlugheit.Text));
             newFeature.setAttributeBonus(DSA_ATTRIBUTE.IN, convertToInt(txtIntuition.Text));
@@ -161,6 +164,8 @@ namespace DSA_Project
             newFeature.setAdvancedValues(DSA_ADVANCEDVALUES.INITATIVE_BASIS, convertToInt(txtInitiative.Text));
             newFeature.setAdvancedValues(DSA_ADVANCEDVALUES.PARADE_BASIS, convertToInt(txtParade.Text));
             newFeature.setAdvancedValues(DSA_ADVANCEDVALUES.WUNDSCHWELLE, convertToInt(txtWundschwelle.Text));
+
+            newFeature.setType(ftype);
 
             foreach (InterfaceTalent talent in talente.Keys)
             {

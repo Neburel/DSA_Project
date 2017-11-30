@@ -233,11 +233,11 @@ namespace DSA_Project
 
             if (feature == null)
             {
-                createFeature = new CreateFeature(Charakter.getAllTalentList());
+                createFeature = new CreateFeature(Charakter.getAllTalentList(), type);
             }
             else
             {
-                createFeature = new CreateFeature(feature, Charakter.getAllTalentList());
+                createFeature = new CreateFeature(feature, Charakter.getAllTalentList(), type);
             }
             createFeature.ShowDialog();
             feature = createFeature.feature();

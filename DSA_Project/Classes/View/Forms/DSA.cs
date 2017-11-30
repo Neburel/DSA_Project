@@ -330,7 +330,7 @@ namespace DSA_Project
             if (feature == null) { return; }
 
             name.Text = feature.getName();
-            description.Text = feature.getDescription(type);
+            description.Text = feature.getDescription();
             value.Text = feature.getValue();
             gp.Text = feature.getGP();
         }
@@ -812,13 +812,13 @@ namespace DSA_Project
             {
                 case DSA_FEATURES.VORTEIL: 
                     featureAdvantagesNameBox[number].Text = feature.getName();
-                    featureAdvantagesDescriptionBox[number].Text = feature.getDescription(type);
+                    featureAdvantagesDescriptionBox[number].Text = feature.getDescription();
                     featureAdvantagesGPBox[number].Text = feature.getGP();
                     featureAdvantagesValueBox[number].Text = feature.getValue();
                     break;
                 case DSA_FEATURES.NACHTEIL:
                     featureDisdvantagesNameBox[number].Text = feature.getName();
-                    featureDisAdvantagesDescriptionBox[number].Text = feature.getDescription(type);
+                    featureDisAdvantagesDescriptionBox[number].Text = feature.getDescription();
                     featureDisAdvantagesGPBox[number].Text = feature.getGP();
                     featureDisAdvantagesValueBox[number].Text = feature.getValue();
                     break;

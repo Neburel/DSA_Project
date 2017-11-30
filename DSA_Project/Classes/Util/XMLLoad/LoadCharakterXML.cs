@@ -178,7 +178,9 @@ namespace DSA_Project
             {
                 i++;
                 Feature feature = loadFeature(node, charakter, i);
+                feature.setType(type);
                 charakter.addFeature(type, i, feature);
+                
             }
         }
         private static Feature loadFeature(XmlNode featureNode, Charakter charakter, int number)

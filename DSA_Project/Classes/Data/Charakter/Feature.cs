@@ -133,7 +133,7 @@ namespace DSA_Project
         {
             return getDescription(this.type);
         }
-        public String getDescription(DSA_FEATURES type)
+        private String getDescription(DSA_FEATURES type)
         {
             Char[] trimSymbol = new Char[] { ' ', ','};
             String Symbol = "";
@@ -203,8 +203,7 @@ namespace DSA_Project
             }
             return 0;
         }
-
-
+        
 
         private String getAttributeString(String Symbol)
         {
