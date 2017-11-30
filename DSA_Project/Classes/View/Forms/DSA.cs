@@ -16,6 +16,8 @@ namespace DSA_Project
     public partial class DSA : Form
     {
         int SUpportedTalentCOunt = 30;
+        int supportedRewardBoxes = 25;
+
         List<GroupBox> talentGroupBoxes;
         List<Label> talentNameLabels;
         List<TextBox> talentProbeTextBoxs;
@@ -28,6 +30,9 @@ namespace DSA_Project
         List<TextBox> talentAbleitungTextBoxes;
         List<TextBox> talentATTextBoxes;
         List<TextBox> talentPATextBoxes;
+
+        List<TextBox> rewardNameBoxes;
+        List<TextBox> rewadDescriptionBoxes;
 
         List<RadioButton> RadioListTalents;
         Dictionary<RadioButton, DSA_FIGHTINGTALENTS> fightTalentDiconary;
@@ -89,6 +94,7 @@ namespace DSA_Project
             fightTalentDiconary.Add(radioButtonRange, DSA_FIGHTINGTALENTS.RANGE);
 
             setUPFeatureLists();
+            setUPRewards();
             load();
             refreshHeroPage();
             refreshTalentPage();
@@ -218,7 +224,7 @@ namespace DSA_Project
 
             txtAbenteuerpunkte.Text = controll.AdvanturePoints().ToString();
 
-            
+            loadRewards();
         }
         /// <summary> 
         /// Ist bei einer Werteänderung eine Neuberechnung nötig muss dies Ausgelöst werden
@@ -320,7 +326,18 @@ namespace DSA_Project
             featureAdvantagesValueBox           = new List<TextBox>{ txtVorteil1Wert, txtVorteil2Wert, txtVorteil3Wert, txtVorteil4Wert, txtVorteil5Wert, txtVorteil6Wert, txtVorteil7Wert, txtVorteil8Wert, txtVorteil9Wert, txtVorteil10Wert, txtVorteil11Wert, txtVorteil12Wert, txtVorteil13Wert, txtVorteil14Wert, txtVorteil15Wert };
             featureDisAdvantagesValueBox        = new List<TextBox>{ txtNachteil1Wert, txtNachteil2Wert, txtNachteil3Wert, txtNachteil4Wert, txtNachteil5Wert, txtNachteil6Wert, txtNachteil7Wert, txtNachteil8Wert, txtNachteil9Wert, txtNachteil10Wert, txtNachteil11Wert, txtNachteil12Wert, txtNachteil13Wert, txtNachteil14Wert, txtNachteil15Wert };
         }
+        private void setUPRewards()
+        {
+            rewardNameBoxes                     = new List<TextBox> { txtReward1, txtReward2, txtReward3, txtReward4, txtReward5, txtReward6, txtReward7, txtReward8, txtReward9, txtReward10, txtReward11, txtReward12, txtReward13, txtReward14, txtReward15, txtReward16, txtReward17, txtReward18, txtReward19, txtReward20, txtReward21, txtReward22, txtReward23, txtReward24, txtReward25 };
+            rewadDescriptionBoxes               = new List<TextBox> { txtRewardDescription1, txtRewardDescription2, txtRewardDescription3, txtRewardDescription4, txtRewardDescription5, txtRewardDescription6, txtRewardDescription7, txtRewardDescription8, txtRewardDescription9, txtRewardDescription10, txtRewardDescription11, txtRewardDescription12, txtRewardDescription13, txtRewardDescription14, txtRewardDescription15, txtRewardDescription16, txtRewardDescription17, txtRewardDescription18, txtRewardDescription19, txtRewardDescription20, txtRewardDescription21, txtRewardDescription22, txtRewardDescription23, txtRewardDescription24, txtRewardDescription25 };
 
+            for(int i=0; i < rewardNameBoxes.Count; i++)
+            {
+                rewardNameBoxes[i].Click += new EventHandler(setReward_DiscriptionBox);
+            }
+
+            txtRewardPage.Text = "1";
+        }
 
 
         private void LoadFeature(TextBox name, TextBox description, TextBox value, TextBox gp, DSA_FEATURES type, int number)
@@ -334,6 +351,25 @@ namespace DSA_Project
             value.Text = feature.getValue();
             gp.Text = feature.getGP();
         }
+        private void loadRewards()
+        {
+            int page = 0;
+            Int32.TryParse(txtRewardPage.Text, out page);
+
+            int number = (SUpportedTalentCOunt * page);
+
+            for (int i=0; i<supportedRewardBoxes; i++)
+            {
+                number = number + i;
+                Feature feature = controll.FeatureExisting(number, DSA_FEATURES.VORTEIL);
+                if (feature != null)
+                {
+                    rewardNameBoxes[i].Text = feature.getName();
+                    rewadDescriptionBoxes[i].Text = feature.getDescription();
+                }
+            }
+        }
+
         private void btnLoadCharacter_Click(object sender, EventArgs e)
         {
             controll.load();
@@ -1349,6 +1385,44 @@ namespace DSA_Project
         private void lblIntuition_Click(object sender, EventArgs e)
         {
             changeAttributMark(DSA_ATTRIBUTE.IN, lblIntuition, txtIntuitionAKT, txtIntuitionMOD, txtIntuitionMAX);
+        }
+
+        private int getBoxNumber(String BasicString, String NameString)
+        {
+            int BoxNumber = 0;
+            String number = NameString.Substring(BasicString.Length, NameString.Length - BasicString.Length);
+            Int32.TryParse(number, out BoxNumber);
+            return BoxNumber;
+        }
+
+        //Aktuell Kolidieren Reward und Advantages -> Rewards sind Advantages
+        private void CreateReward(int rewardNumber, int boxNumber, DSA_FEATURES type)
+        {
+            Feature feature = controll.Feature(rewardNumber, type);
+
+            if (feature == null) return;
+            
+            rewardNameBoxes[boxNumber].Text = feature.getName();
+            rewadDescriptionBoxes[boxNumber].Text = feature.getDescription();
+            
+            this.refreshHeroPage();
+             
+        }
+        private void setReward_DiscriptionBox(Object sender, EventArgs e)
+        {
+            TextBox box = (TextBox)sender;
+            int BoxNumber = getBoxNumber("txtReward", ((TextBox)sender).Name);
+            BoxNumber = BoxNumber - 1;
+
+            int number = 0;
+            int page = 0;
+            Int32.TryParse(txtRewardPage.Text, out page);
+
+            number = (SUpportedTalentCOunt * page) + BoxNumber;
+
+            CreateReward(number, BoxNumber, DSA_FEATURES.VORTEIL);
+
+            Console.WriteLine(BoxNumber);
         }
     }
 }

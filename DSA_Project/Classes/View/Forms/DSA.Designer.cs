@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DSA));
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPageTools = new System.Windows.Forms.TabPage();
             this.btncreateFightingTalent = new System.Windows.Forms.Button();
             this.btnCreateTalent = new System.Windows.Forms.Button();
             this.btnSaveCharacter = new System.Windows.Forms.Button();
@@ -682,7 +682,64 @@
             this.lblAugenfarbe = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.TabControl = new System.Windows.Forms.TabControl();
-            this.tabPage1.SuspendLayout();
+            this.Rewards = new System.Windows.Forms.TabPage();
+            this.txtRewardDescription25 = new System.Windows.Forms.TextBox();
+            this.txtReward25 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription24 = new System.Windows.Forms.TextBox();
+            this.txtReward24 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription23 = new System.Windows.Forms.TextBox();
+            this.txtReward23 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription22 = new System.Windows.Forms.TextBox();
+            this.txtReward22 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription21 = new System.Windows.Forms.TextBox();
+            this.txtReward21 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription20 = new System.Windows.Forms.TextBox();
+            this.txtReward20 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription19 = new System.Windows.Forms.TextBox();
+            this.txtReward19 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription18 = new System.Windows.Forms.TextBox();
+            this.txtReward18 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription17 = new System.Windows.Forms.TextBox();
+            this.txtReward17 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription16 = new System.Windows.Forms.TextBox();
+            this.txtReward16 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription15 = new System.Windows.Forms.TextBox();
+            this.txtReward15 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription14 = new System.Windows.Forms.TextBox();
+            this.txtReward14 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription13 = new System.Windows.Forms.TextBox();
+            this.txtReward13 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription12 = new System.Windows.Forms.TextBox();
+            this.txtReward12 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription11 = new System.Windows.Forms.TextBox();
+            this.txtReward11 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription10 = new System.Windows.Forms.TextBox();
+            this.txtReward10 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription9 = new System.Windows.Forms.TextBox();
+            this.txtReward9 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription8 = new System.Windows.Forms.TextBox();
+            this.txtReward8 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription7 = new System.Windows.Forms.TextBox();
+            this.txtReward7 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription6 = new System.Windows.Forms.TextBox();
+            this.txtReward6 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription5 = new System.Windows.Forms.TextBox();
+            this.txtReward5 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription4 = new System.Windows.Forms.TextBox();
+            this.txtReward4 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription3 = new System.Windows.Forms.TextBox();
+            this.txtReward3 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription2 = new System.Windows.Forms.TextBox();
+            this.txtReward2 = new System.Windows.Forms.TextBox();
+            this.txtRewardDescription1 = new System.Windows.Forms.TextBox();
+            this.txtReward1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtRewardPage = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tabPageTools.SuspendLayout();
             this.talents.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBoxKampf.SuspendLayout();
@@ -699,17 +756,19 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.TabControl.SuspendLayout();
+            this.Rewards.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabPage1
+            // tabPageTools
             // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage1.Controls.Add(this.btncreateFightingTalent);
-            this.tabPage1.Controls.Add(this.btnCreateTalent);
-            this.tabPage1.Controls.Add(this.btnSaveCharacter);
-            this.tabPage1.Controls.Add(this.btnLoadCharacter);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.Name = "tabPage1";
+            this.tabPageTools.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageTools.Controls.Add(this.btncreateFightingTalent);
+            this.tabPageTools.Controls.Add(this.btnCreateTalent);
+            this.tabPageTools.Controls.Add(this.btnSaveCharacter);
+            this.tabPageTools.Controls.Add(this.btnLoadCharacter);
+            resources.ApplyResources(this.tabPageTools, "tabPageTools");
+            this.tabPageTools.Name = "tabPageTools";
             // 
             // btncreateFightingTalent
             // 
@@ -5482,11 +5541,408 @@
             this.TabControl.Controls.Add(this.Heldenbrief);
             this.TabControl.Controls.Add(this.worldmap);
             this.TabControl.Controls.Add(this.talents);
-            this.TabControl.Controls.Add(this.tabPage1);
+            this.TabControl.Controls.Add(this.Rewards);
+            this.TabControl.Controls.Add(this.tabPageTools);
             resources.ApplyResources(this.TabControl, "TabControl");
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
             this.TabControl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabControl_MouseClick);
+            // 
+            // Rewards
+            // 
+            this.Rewards.BackColor = System.Drawing.SystemColors.Control;
+            this.Rewards.Controls.Add(this.txtRewardDescription25);
+            this.Rewards.Controls.Add(this.txtReward25);
+            this.Rewards.Controls.Add(this.txtRewardDescription24);
+            this.Rewards.Controls.Add(this.txtReward24);
+            this.Rewards.Controls.Add(this.txtRewardDescription23);
+            this.Rewards.Controls.Add(this.txtReward23);
+            this.Rewards.Controls.Add(this.txtRewardDescription22);
+            this.Rewards.Controls.Add(this.txtReward22);
+            this.Rewards.Controls.Add(this.txtRewardDescription21);
+            this.Rewards.Controls.Add(this.txtReward21);
+            this.Rewards.Controls.Add(this.txtRewardDescription20);
+            this.Rewards.Controls.Add(this.txtReward20);
+            this.Rewards.Controls.Add(this.txtRewardDescription19);
+            this.Rewards.Controls.Add(this.txtReward19);
+            this.Rewards.Controls.Add(this.txtRewardDescription18);
+            this.Rewards.Controls.Add(this.txtReward18);
+            this.Rewards.Controls.Add(this.txtRewardDescription17);
+            this.Rewards.Controls.Add(this.txtReward17);
+            this.Rewards.Controls.Add(this.txtRewardDescription16);
+            this.Rewards.Controls.Add(this.txtReward16);
+            this.Rewards.Controls.Add(this.txtRewardDescription15);
+            this.Rewards.Controls.Add(this.txtReward15);
+            this.Rewards.Controls.Add(this.txtRewardDescription14);
+            this.Rewards.Controls.Add(this.txtReward14);
+            this.Rewards.Controls.Add(this.txtRewardDescription13);
+            this.Rewards.Controls.Add(this.txtReward13);
+            this.Rewards.Controls.Add(this.txtRewardDescription12);
+            this.Rewards.Controls.Add(this.txtReward12);
+            this.Rewards.Controls.Add(this.txtRewardDescription11);
+            this.Rewards.Controls.Add(this.txtReward11);
+            this.Rewards.Controls.Add(this.txtRewardDescription10);
+            this.Rewards.Controls.Add(this.txtReward10);
+            this.Rewards.Controls.Add(this.txtRewardDescription9);
+            this.Rewards.Controls.Add(this.txtReward9);
+            this.Rewards.Controls.Add(this.txtRewardDescription8);
+            this.Rewards.Controls.Add(this.txtReward8);
+            this.Rewards.Controls.Add(this.txtRewardDescription7);
+            this.Rewards.Controls.Add(this.txtReward7);
+            this.Rewards.Controls.Add(this.txtRewardDescription6);
+            this.Rewards.Controls.Add(this.txtReward6);
+            this.Rewards.Controls.Add(this.txtRewardDescription5);
+            this.Rewards.Controls.Add(this.txtReward5);
+            this.Rewards.Controls.Add(this.txtRewardDescription4);
+            this.Rewards.Controls.Add(this.txtReward4);
+            this.Rewards.Controls.Add(this.txtRewardDescription3);
+            this.Rewards.Controls.Add(this.txtReward3);
+            this.Rewards.Controls.Add(this.txtRewardDescription2);
+            this.Rewards.Controls.Add(this.txtReward2);
+            this.Rewards.Controls.Add(this.txtRewardDescription1);
+            this.Rewards.Controls.Add(this.txtReward1);
+            this.Rewards.Controls.Add(this.label8);
+            this.Rewards.Controls.Add(this.label9);
+            this.Rewards.Controls.Add(this.groupBox4);
+            resources.ApplyResources(this.Rewards, "Rewards");
+            this.Rewards.Name = "Rewards";
+            // 
+            // txtRewardDescription25
+            // 
+            this.txtRewardDescription25.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription25, "txtRewardDescription25");
+            this.txtRewardDescription25.Name = "txtRewardDescription25";
+            // 
+            // txtReward25
+            // 
+            this.txtReward25.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward25, "txtReward25");
+            this.txtReward25.Name = "txtReward25";
+            // 
+            // txtRewardDescription24
+            // 
+            this.txtRewardDescription24.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription24, "txtRewardDescription24");
+            this.txtRewardDescription24.Name = "txtRewardDescription24";
+            // 
+            // txtReward24
+            // 
+            this.txtReward24.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward24, "txtReward24");
+            this.txtReward24.Name = "txtReward24";
+            // 
+            // txtRewardDescription23
+            // 
+            this.txtRewardDescription23.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription23, "txtRewardDescription23");
+            this.txtRewardDescription23.Name = "txtRewardDescription23";
+            // 
+            // txtReward23
+            // 
+            this.txtReward23.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward23, "txtReward23");
+            this.txtReward23.Name = "txtReward23";
+            // 
+            // txtRewardDescription22
+            // 
+            this.txtRewardDescription22.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription22, "txtRewardDescription22");
+            this.txtRewardDescription22.Name = "txtRewardDescription22";
+            // 
+            // txtReward22
+            // 
+            this.txtReward22.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward22, "txtReward22");
+            this.txtReward22.Name = "txtReward22";
+            // 
+            // txtRewardDescription21
+            // 
+            this.txtRewardDescription21.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription21, "txtRewardDescription21");
+            this.txtRewardDescription21.Name = "txtRewardDescription21";
+            // 
+            // txtReward21
+            // 
+            this.txtReward21.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward21, "txtReward21");
+            this.txtReward21.Name = "txtReward21";
+            // 
+            // txtRewardDescription20
+            // 
+            this.txtRewardDescription20.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription20, "txtRewardDescription20");
+            this.txtRewardDescription20.Name = "txtRewardDescription20";
+            // 
+            // txtReward20
+            // 
+            this.txtReward20.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward20, "txtReward20");
+            this.txtReward20.Name = "txtReward20";
+            // 
+            // txtRewardDescription19
+            // 
+            this.txtRewardDescription19.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription19, "txtRewardDescription19");
+            this.txtRewardDescription19.Name = "txtRewardDescription19";
+            // 
+            // txtReward19
+            // 
+            this.txtReward19.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward19, "txtReward19");
+            this.txtReward19.Name = "txtReward19";
+            // 
+            // txtRewardDescription18
+            // 
+            this.txtRewardDescription18.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription18, "txtRewardDescription18");
+            this.txtRewardDescription18.Name = "txtRewardDescription18";
+            // 
+            // txtReward18
+            // 
+            this.txtReward18.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward18, "txtReward18");
+            this.txtReward18.Name = "txtReward18";
+            // 
+            // txtRewardDescription17
+            // 
+            this.txtRewardDescription17.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription17, "txtRewardDescription17");
+            this.txtRewardDescription17.Name = "txtRewardDescription17";
+            // 
+            // txtReward17
+            // 
+            this.txtReward17.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward17, "txtReward17");
+            this.txtReward17.Name = "txtReward17";
+            // 
+            // txtRewardDescription16
+            // 
+            this.txtRewardDescription16.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription16, "txtRewardDescription16");
+            this.txtRewardDescription16.Name = "txtRewardDescription16";
+            // 
+            // txtReward16
+            // 
+            this.txtReward16.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward16, "txtReward16");
+            this.txtReward16.Name = "txtReward16";
+            // 
+            // txtRewardDescription15
+            // 
+            this.txtRewardDescription15.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription15, "txtRewardDescription15");
+            this.txtRewardDescription15.Name = "txtRewardDescription15";
+            // 
+            // txtReward15
+            // 
+            this.txtReward15.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward15, "txtReward15");
+            this.txtReward15.Name = "txtReward15";
+            // 
+            // txtRewardDescription14
+            // 
+            this.txtRewardDescription14.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription14, "txtRewardDescription14");
+            this.txtRewardDescription14.Name = "txtRewardDescription14";
+            // 
+            // txtReward14
+            // 
+            this.txtReward14.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward14, "txtReward14");
+            this.txtReward14.Name = "txtReward14";
+            // 
+            // txtRewardDescription13
+            // 
+            this.txtRewardDescription13.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription13, "txtRewardDescription13");
+            this.txtRewardDescription13.Name = "txtRewardDescription13";
+            // 
+            // txtReward13
+            // 
+            this.txtReward13.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward13, "txtReward13");
+            this.txtReward13.Name = "txtReward13";
+            // 
+            // txtRewardDescription12
+            // 
+            this.txtRewardDescription12.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription12, "txtRewardDescription12");
+            this.txtRewardDescription12.Name = "txtRewardDescription12";
+            // 
+            // txtReward12
+            // 
+            this.txtReward12.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward12, "txtReward12");
+            this.txtReward12.Name = "txtReward12";
+            // 
+            // txtRewardDescription11
+            // 
+            this.txtRewardDescription11.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription11, "txtRewardDescription11");
+            this.txtRewardDescription11.Name = "txtRewardDescription11";
+            // 
+            // txtReward11
+            // 
+            this.txtReward11.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward11, "txtReward11");
+            this.txtReward11.Name = "txtReward11";
+            // 
+            // txtRewardDescription10
+            // 
+            this.txtRewardDescription10.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription10, "txtRewardDescription10");
+            this.txtRewardDescription10.Name = "txtRewardDescription10";
+            // 
+            // txtReward10
+            // 
+            this.txtReward10.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward10, "txtReward10");
+            this.txtReward10.Name = "txtReward10";
+            // 
+            // txtRewardDescription9
+            // 
+            this.txtRewardDescription9.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription9, "txtRewardDescription9");
+            this.txtRewardDescription9.Name = "txtRewardDescription9";
+            // 
+            // txtReward9
+            // 
+            this.txtReward9.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward9, "txtReward9");
+            this.txtReward9.Name = "txtReward9";
+            // 
+            // txtRewardDescription8
+            // 
+            this.txtRewardDescription8.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription8, "txtRewardDescription8");
+            this.txtRewardDescription8.Name = "txtRewardDescription8";
+            // 
+            // txtReward8
+            // 
+            this.txtReward8.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward8, "txtReward8");
+            this.txtReward8.Name = "txtReward8";
+            // 
+            // txtRewardDescription7
+            // 
+            this.txtRewardDescription7.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription7, "txtRewardDescription7");
+            this.txtRewardDescription7.Name = "txtRewardDescription7";
+            // 
+            // txtReward7
+            // 
+            this.txtReward7.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward7, "txtReward7");
+            this.txtReward7.Name = "txtReward7";
+            // 
+            // txtRewardDescription6
+            // 
+            this.txtRewardDescription6.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription6, "txtRewardDescription6");
+            this.txtRewardDescription6.Name = "txtRewardDescription6";
+            // 
+            // txtReward6
+            // 
+            this.txtReward6.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward6, "txtReward6");
+            this.txtReward6.Name = "txtReward6";
+            // 
+            // txtRewardDescription5
+            // 
+            this.txtRewardDescription5.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription5, "txtRewardDescription5");
+            this.txtRewardDescription5.Name = "txtRewardDescription5";
+            // 
+            // txtReward5
+            // 
+            this.txtReward5.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward5, "txtReward5");
+            this.txtReward5.Name = "txtReward5";
+            // 
+            // txtRewardDescription4
+            // 
+            this.txtRewardDescription4.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription4, "txtRewardDescription4");
+            this.txtRewardDescription4.Name = "txtRewardDescription4";
+            // 
+            // txtReward4
+            // 
+            this.txtReward4.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward4, "txtReward4");
+            this.txtReward4.Name = "txtReward4";
+            // 
+            // txtRewardDescription3
+            // 
+            this.txtRewardDescription3.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription3, "txtRewardDescription3");
+            this.txtRewardDescription3.Name = "txtRewardDescription3";
+            // 
+            // txtReward3
+            // 
+            this.txtReward3.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward3, "txtReward3");
+            this.txtReward3.Name = "txtReward3";
+            // 
+            // txtRewardDescription2
+            // 
+            this.txtRewardDescription2.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription2, "txtRewardDescription2");
+            this.txtRewardDescription2.Name = "txtRewardDescription2";
+            // 
+            // txtReward2
+            // 
+            this.txtReward2.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward2, "txtReward2");
+            this.txtReward2.Name = "txtReward2";
+            // 
+            // txtRewardDescription1
+            // 
+            this.txtRewardDescription1.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtRewardDescription1, "txtRewardDescription1");
+            this.txtRewardDescription1.Name = "txtRewardDescription1";
+            // 
+            // txtReward1
+            // 
+            this.txtReward1.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.txtReward1, "txtReward1");
+            this.txtReward1.Name = "txtReward1";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.txtRewardPage);
+            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.button2);
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            // 
+            // txtRewardPage
+            // 
+            resources.ApplyResources(this.txtRewardPage, "txtRewardPage");
+            this.txtRewardPage.Name = "txtRewardPage";
+            this.txtRewardPage.ReadOnly = true;
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // DSA
             // 
@@ -5494,7 +5950,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.TabControl);
             this.Name = "DSA";
-            this.tabPage1.ResumeLayout(false);
+            this.tabPageTools.ResumeLayout(false);
             this.talents.ResumeLayout(false);
             this.talents.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -5526,13 +5982,17 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.TabControl.ResumeLayout(false);
+            this.Rewards.ResumeLayout(false);
+            this.Rewards.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPageTools;
         private System.Windows.Forms.TabPage talents;
         private System.Windows.Forms.GroupBox groupBoxKampf;
         private System.Windows.Forms.TextBox PTPA29;
@@ -6185,6 +6645,63 @@
         private System.Windows.Forms.TextBox txtTalentLetterCurrentPage;
         private System.Windows.Forms.Button btnTalentLetterLast;
         private System.Windows.Forms.Button btncreateFightingTalent;
+        private System.Windows.Forms.TabPage Rewards;
+        private System.Windows.Forms.TextBox txtRewardDescription25;
+        private System.Windows.Forms.TextBox txtReward25;
+        private System.Windows.Forms.TextBox txtRewardDescription24;
+        private System.Windows.Forms.TextBox txtReward24;
+        private System.Windows.Forms.TextBox txtRewardDescription23;
+        private System.Windows.Forms.TextBox txtReward23;
+        private System.Windows.Forms.TextBox txtRewardDescription22;
+        private System.Windows.Forms.TextBox txtReward22;
+        private System.Windows.Forms.TextBox txtRewardDescription21;
+        private System.Windows.Forms.TextBox txtReward21;
+        private System.Windows.Forms.TextBox txtRewardDescription20;
+        private System.Windows.Forms.TextBox txtReward20;
+        private System.Windows.Forms.TextBox txtRewardDescription19;
+        private System.Windows.Forms.TextBox txtReward19;
+        private System.Windows.Forms.TextBox txtRewardDescription18;
+        private System.Windows.Forms.TextBox txtReward18;
+        private System.Windows.Forms.TextBox txtRewardDescription17;
+        private System.Windows.Forms.TextBox txtReward17;
+        private System.Windows.Forms.TextBox txtRewardDescription16;
+        private System.Windows.Forms.TextBox txtReward16;
+        private System.Windows.Forms.TextBox txtRewardDescription15;
+        private System.Windows.Forms.TextBox txtReward15;
+        private System.Windows.Forms.TextBox txtRewardDescription14;
+        private System.Windows.Forms.TextBox txtReward14;
+        private System.Windows.Forms.TextBox txtRewardDescription13;
+        private System.Windows.Forms.TextBox txtReward13;
+        private System.Windows.Forms.TextBox txtRewardDescription12;
+        private System.Windows.Forms.TextBox txtReward12;
+        private System.Windows.Forms.TextBox txtRewardDescription11;
+        private System.Windows.Forms.TextBox txtReward11;
+        private System.Windows.Forms.TextBox txtRewardDescription10;
+        private System.Windows.Forms.TextBox txtReward10;
+        private System.Windows.Forms.TextBox txtRewardDescription9;
+        private System.Windows.Forms.TextBox txtReward9;
+        private System.Windows.Forms.TextBox txtRewardDescription8;
+        private System.Windows.Forms.TextBox txtReward8;
+        private System.Windows.Forms.TextBox txtRewardDescription7;
+        private System.Windows.Forms.TextBox txtReward7;
+        private System.Windows.Forms.TextBox txtRewardDescription6;
+        private System.Windows.Forms.TextBox txtReward6;
+        private System.Windows.Forms.TextBox txtRewardDescription5;
+        private System.Windows.Forms.TextBox txtReward5;
+        private System.Windows.Forms.TextBox txtRewardDescription4;
+        private System.Windows.Forms.TextBox txtReward4;
+        private System.Windows.Forms.TextBox txtRewardDescription3;
+        private System.Windows.Forms.TextBox txtReward3;
+        private System.Windows.Forms.TextBox txtRewardDescription2;
+        private System.Windows.Forms.TextBox txtReward2;
+        private System.Windows.Forms.TextBox txtRewardDescription1;
+        private System.Windows.Forms.TextBox txtReward1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox txtRewardPage;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

@@ -174,13 +174,22 @@ namespace DSA_Project
         private static void loadFeature(XmlNode featureNode, Charakter charakter, DSA_FEATURES type)
         {
             int i = 0;
+            String BasicString = "Number";
+
             foreach (XmlNode node in featureNode)
             {
                 i++;
                 Feature feature = loadFeature(node, charakter, i, type);
                 feature.setType(type);
-                charakter.addFeature(type, i, feature);
-                
+
+                int number = 0;
+                String Number = node.Name.Substring(BasicString.Length, node.Name.Length - BasicString.Length);
+
+                if(!Int32.TryParse(Number, out number))
+                {
+                    throw new Exception();
+                }
+                charakter.addFeature(type, number, feature);                
             }
         }
         private static Feature loadFeature(XmlNode featureNode, Charakter charakter, int number, DSA_FEATURES type)
