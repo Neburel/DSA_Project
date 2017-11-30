@@ -72,7 +72,7 @@ namespace DSA_Project
             switch (type)
             {
                 case DSA_FEATURES.VORTEIL: dictionary = AdvantageFeatures; break;
-                case DSA_FEATURES.NACHTEIL: dictionary = DisAdvantageFeatures; factor = -1; break;
+                case DSA_FEATURES.NACHTEIL: dictionary = DisAdvantageFeatures; break;
             }
             if(action == ACTION.REMOVE)
             {

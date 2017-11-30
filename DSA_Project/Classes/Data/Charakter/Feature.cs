@@ -26,24 +26,14 @@ namespace DSA_Project
         Dictionary<DSA_ADVANCEDVALUES, int> advancedBonus;
         Dictionary<InterfaceTalent, int> talentBoni;
         
-        public Feature()
+        public Feature(DSA_FEATURES type)
         {
-            setUP();
+            setUP(type);
 
             setName("");
             setDescription("");
             setValue("");
             setGP("");            
-        }
-        public Feature(String Name, String Description, String Value, String GP)
-        {
-            setName(Name);
-            setDescription(Description);
-            setValue(Value);
-            setGP(GP);
-
-            setUP();
-
         }
         public Feature(String Name, String Description, String Value, String GP, DSA_FEATURES type)
         {
@@ -52,16 +42,17 @@ namespace DSA_Project
             setValue(Value);
             setGP(GP);
 
-            setUP();
+            setUP(type);
 
-            setType(type);
         }
-        private void setUP()
+        
+        private void setUP(DSA_FEATURES type)
         {
             attributeBonus  = new Dictionary<DSA_ATTRIBUTE, int>();
             energieBonus    = new Dictionary<DSA_ENERGIEN, int>();
             advancedBonus   = new Dictionary<DSA_ADVANCEDVALUES, int>();
             talentBoni      = new Dictionary<InterfaceTalent, int>();
+            this.type = type;
         }
 
         public void setName(String Name)
@@ -100,18 +91,36 @@ namespace DSA_Project
                 this.GP = "";
             }
         }
+
+        private int checkValue(int value)
+        {
+            if (value < 0 && DSA_FEATURES.VORTEIL == type)
+            {
+                value = value * -1;
+            }
+
+            if (value > 0 && DSA_FEATURES.NACHTEIL == type)
+            {
+                value = value * -1;
+            }
+            return value;
+        }
+
         public void setAttributeBonus(DSA_ATTRIBUTE attribute, int value)
         {
+            value = checkValue(value);
             attributeBonus.Remove(attribute);
             attributeBonus.Add(attribute, value);
         }
         public void setEnergieBonus(DSA_ENERGIEN energie, int value)
         {
+            value = checkValue(value);
             energieBonus.Remove(energie);
             energieBonus.Add(energie, value);
         }
         public void setAdvancedValues(DSA_ADVANCEDVALUES values, int value)
         {
+            value = checkValue(value);
             advancedBonus.Remove(values);
             advancedBonus.Add(values, value);
         }
@@ -121,6 +130,7 @@ namespace DSA_Project
         }
         public void addTalent(InterfaceTalent talent, int BonusTaw)
         {
+            BonusTaw = checkValue(BonusTaw);
             talentBoni.Add(talent, BonusTaw);
         }
 
@@ -143,16 +153,16 @@ namespace DSA_Project
             }
 
             String totalDescription = String.Copy(this.Description);
-            totalDescription = totalDescription + ", " + getAttributeString(Symbol);
+            totalDescription = totalDescription + ", " + getAttributeString();
             totalDescription = totalDescription.TrimEnd(trimSymbol);
             totalDescription = totalDescription.TrimEnd(trimSymbol);
-            totalDescription = totalDescription + ", " + getEnergieString(Symbol);
+            totalDescription = totalDescription + ", " + getEnergieString();
             totalDescription = totalDescription.TrimEnd(trimSymbol);
             totalDescription = totalDescription.TrimEnd(trimSymbol);
-            totalDescription = totalDescription + ", " + getAdvancedString(Symbol);
+            totalDescription = totalDescription + ", " + getAdvancedString();
             totalDescription = totalDescription.TrimEnd(trimSymbol);
             totalDescription = totalDescription.TrimEnd(trimSymbol);
-            totalDescription = totalDescription + ", " + getTalentString(Symbol);
+            totalDescription = totalDescription + ", " + getTalentString();
             totalDescription = totalDescription.TrimStart(trimSymbol);
             totalDescription = totalDescription.TrimEnd(trimSymbol);
 
@@ -205,7 +215,7 @@ namespace DSA_Project
         }
         
 
-        private String getAttributeString(String Symbol)
+        private String getAttributeString()
         {
             String ret = "";
             int x = 0;
@@ -216,17 +226,17 @@ namespace DSA_Project
                 {
                     if (0 != String.Compare(ret, ""))
                     {
-                        ret = ret + ", " + Symbol + x + attributeAcronyms[i];
+                        ret = ret + ", " + x + attributeAcronyms[i];
                     }
                     else
                     {
-                        ret = Symbol + x + attributeAcronyms[i];
+                        ret = x + attributeAcronyms[i];
                     }
                 }
             }
             return ret;
         }
-        private String getEnergieString(String Symbol)
+        private String getEnergieString()
         {
             String ret = "";
             int x = 0;
@@ -237,17 +247,17 @@ namespace DSA_Project
                 {
                     if (0 != String.Compare(ret, ""))
                     {
-                        ret = ret + ", " + Symbol + x + energienAcronyms[i];
+                        ret = ret + ", " + x + energienAcronyms[i];
                     }
                     else
                     {
-                        ret = Symbol + x + energienAcronyms[i];
+                        ret = x + energienAcronyms[i];
                     }
                 }
             }
             return ret;
         }
-        private String getAdvancedString(String Symbol)
+        private String getAdvancedString()
         {
             String ret = "";
             int x = 0;
@@ -256,19 +266,19 @@ namespace DSA_Project
                 advancedBonus.TryGetValue((DSA_ADVANCEDVALUES)i, out x);
                 if (x != 0)
                 {
-                    ret = ret + " " + Symbol + x + advancedAcronyms[i];
+                    ret = ret + " " + x + advancedAcronyms[i];
                 }
             }
             return ret;
         }
-        private String getTalentString(String Symbol)
+        private String getTalentString()
         {
             String ret = "";
             foreach (InterfaceTalent talent in talentBoni.Keys)
             {
                 int x = 0;
                 talentBoni.TryGetValue(talent, out x);
-                ret = ret + talent.getName() + "(" + Symbol + x + ")";
+                ret = ret + talent.getName() + "(" + x + ")";
             }
             return ret;
         }

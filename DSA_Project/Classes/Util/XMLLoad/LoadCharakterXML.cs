@@ -177,15 +177,15 @@ namespace DSA_Project
             foreach (XmlNode node in featureNode)
             {
                 i++;
-                Feature feature = loadFeature(node, charakter, i);
+                Feature feature = loadFeature(node, charakter, i, type);
                 feature.setType(type);
                 charakter.addFeature(type, i, feature);
                 
             }
         }
-        private static Feature loadFeature(XmlNode featureNode, Charakter charakter, int number)
+        private static Feature loadFeature(XmlNode featureNode, Charakter charakter, int number, DSA_FEATURES type)
         {
-            Feature feature = new Feature();
+            Feature feature = new Feature(type);
 
             foreach (XmlNode node in featureNode)
             {

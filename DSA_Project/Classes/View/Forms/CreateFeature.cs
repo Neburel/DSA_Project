@@ -135,9 +135,9 @@ namespace DSA_Project
             return 0;
         }
 
-        private Feature createFeature()
+        private Feature createFeature(DSA_FEATURES type)
         {
-            Feature newFeature = new Feature(txtName.Text, txtDescription.Text, txtValue.Text, txtGP.Text);
+            Feature newFeature = new Feature(txtName.Text, txtDescription.Text, txtValue.Text, txtGP.Text, type);
             
             newFeature.setAttributeBonus(DSA_ATTRIBUTE.MU, convertToInt(txtMut.Text));
             newFeature.setAttributeBonus(DSA_ATTRIBUTE.KL, convertToInt(txtKlugheit.Text));
@@ -229,7 +229,7 @@ namespace DSA_Project
 
         private void btnFertig_Click(object sender, EventArgs e)
         {
-            Feature = createFeature();
+            Feature = createFeature(ftype);
             this.Close();
         }
 
