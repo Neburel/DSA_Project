@@ -61,7 +61,7 @@ namespace DSA_Project
             txtDescription.Text = feature.getSimpleDescription();
             txtGP.Text = feature.getGP();
             txtValue.Text = feature.getValue();
-                        
+                                    
             txtCharisma.Text = feature.getAttributeBonus(DSA_ATTRIBUTE.CH).ToString();
             txtFingerfertigkeit.Text = feature.getAttributeBonus(DSA_ATTRIBUTE.FF).ToString();
             txtGewandheit.Text      = feature.getAttributeBonus(DSA_ATTRIBUTE.GE).ToString();
@@ -77,6 +77,17 @@ namespace DSA_Project
             txtKarmaenergie.Text    = feature.getEnergieBonus(DSA_ENERGIEN.KARMAENERGIE).ToString();
             txtLebensenergie.Text   = feature.getEnergieBonus(DSA_ENERGIEN.LEBENSENERGIE).ToString();
             txtMagieresistenz.Text  = feature.getEnergieBonus(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+
+            txtAttacke.Text             = feature.getAdvancedValues(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
+            txtArtefaktKontrolle.Text   = feature.getAdvancedValues(DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE).ToString();
+            txtBeherschungswert.Text    = feature.getAdvancedValues(DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT).ToString();
+            txtEntrückung.Text          = feature.getAdvancedValues(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
+            txtFernkampf.Text           = feature.getAdvancedValues(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS).ToString();
+            txtGeschwindigkeit.Text     = feature.getAdvancedValues(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
+            txtInitiative.Text          = feature.getAdvancedValues(DSA_ADVANCEDVALUES.INITATIVE_BASIS).ToString();
+            txtParade.Text              = feature.getAdvancedValues(DSA_ADVANCEDVALUES.PARADE_BASIS).ToString();
+            txtWundschwelle.Text        = feature.getAdvancedValues(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
+
 
             List<InterfaceTalent> talentWithBonuwTaw = feature.TalentListwithBonus();
 

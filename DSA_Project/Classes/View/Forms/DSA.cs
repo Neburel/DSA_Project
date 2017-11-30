@@ -145,6 +145,29 @@ namespace DSA_Project
             txtKörperkraftMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.KK, txtKörperkraftMOD.Text).ToString();
             txtSozialstatusMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.SO, txtSozialstatusMOD.Text).ToString();
 
+            //Doppelter Aufruf != Ursprüngliches Ergebnis --->Schrot!!!
+            changeAttributMark(DSA_ATTRIBUTE.MU, lblMut, txtMutAKT, txtMutMOD, txtMutMAX);
+            changeAttributMark(DSA_ATTRIBUTE.KL, lblKlugheit, txtKlugheitAKT, txtKlugheitMOD, txtKlugheitMAX);
+            changeAttributMark(DSA_ATTRIBUTE.CH, lblCharisma, txtCharismaAKT, txtCharismaMOD, txtCharismaMAX);
+            changeAttributMark(DSA_ATTRIBUTE.FF, lblFingerfertigkeit, txtFingerfertigkeitAKT, txtFingerfertigkeitMOD, txtFingerfertigkeitMAX);
+            changeAttributMark(DSA_ATTRIBUTE.GE, lblGewandheit, textGewandheitAKT, textGewandheitMOD, textGewandheitMAX);
+            changeAttributMark(DSA_ATTRIBUTE.KO, lblKonstitution, txtKonstitutionAKT, txtKonstitutionMOD, txtKonstitutionMAX);
+            changeAttributMark(DSA_ATTRIBUTE.KK, lblKörperkraft, txtKörperkraftAKT, txtKörperkraftMOD, txtKörperkraftMAX);
+            changeAttributMark(DSA_ATTRIBUTE.SO, lblSozialstatus, txtSozialstatusAKT, txtSozialstatusMOD, txtSozialstatusMAX);
+            changeAttributMark(DSA_ATTRIBUTE.IN, lblIntuition, txtIntuitionAKT, txtIntuitionMOD, txtIntuitionMAX);
+
+            changeAttributMark(DSA_ATTRIBUTE.MU, lblMut, txtMutAKT, txtMutMOD, txtMutMAX);
+            changeAttributMark(DSA_ATTRIBUTE.KL, lblKlugheit, txtKlugheitAKT, txtKlugheitMOD, txtKlugheitMAX);
+            changeAttributMark(DSA_ATTRIBUTE.CH, lblCharisma, txtCharismaAKT, txtCharismaMOD, txtCharismaMAX);
+            changeAttributMark(DSA_ATTRIBUTE.FF, lblFingerfertigkeit, txtFingerfertigkeitAKT, txtFingerfertigkeitMOD, txtFingerfertigkeitMAX);
+            changeAttributMark(DSA_ATTRIBUTE.GE, lblGewandheit, textGewandheitAKT, textGewandheitMOD, textGewandheitMAX);
+            changeAttributMark(DSA_ATTRIBUTE.KO, lblKonstitution, txtKonstitutionAKT, txtKonstitutionMOD, txtKonstitutionMAX);
+            changeAttributMark(DSA_ATTRIBUTE.KK, lblKörperkraft, txtKörperkraftAKT, txtKörperkraftMOD, txtKörperkraftMAX);
+            changeAttributMark(DSA_ATTRIBUTE.SO, lblSozialstatus, txtSozialstatusAKT, txtSozialstatusMOD, txtSozialstatusMAX);
+            changeAttributMark(DSA_ATTRIBUTE.IN, lblIntuition, txtIntuitionAKT, txtIntuitionMOD, txtIntuitionMAX);
+            //Doppelter Aufruf != Ursprüngliches Ergebnis --->Schrot!!!
+
+
             txtAttackeBasisMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
             txtParadeBasisMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.PARADE_BASIS).ToString();
             txtFernkampfBasisMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS).ToString();
@@ -194,6 +217,8 @@ namespace DSA_Project
             LoadFeature(txtNachteil15Name, txtNachteil15Beschreibung, txtNachteil15Wert, txtNachteil15GP, DSA_FEATURES.NACHTEIL, 15);
 
             txtAbenteuerpunkte.Text = controll.AdvanturePoints().ToString();
+
+            
         }
         /// <summary> 
         /// Ist bei einer Werteänderung eine Neuberechnung nötig muss dies Ausgelöst werden
@@ -255,7 +280,28 @@ namespace DSA_Project
             txtAusdauerERG.Text = controll.EnergieMAX(DSA_ENERGIEN.AUSDAUER).ToString();
             txtAstralenergieERG.Text = controll.EnergieMAX(DSA_ENERGIEN.ASTRALENERGIE).ToString();
             txtKarmaenergieERG.Text = controll.EnergieMAX(DSA_ENERGIEN.KARMAENERGIE).ToString();
-            txtMagieresistenzERG.Text = controll.EnergieMAX(DSA_ENERGIEN.MAGIERESISTENZ).ToString();            
+            txtMagieresistenzERG.Text = controll.EnergieMAX(DSA_ENERGIEN.MAGIERESISTENZ).ToString();
+
+            txtMutMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.MU).ToString();
+            txtKlugheitMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.KL).ToString();
+            txtIntuitionMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.IN).ToString();
+            txtCharismaMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.CH).ToString();
+            txtFingerfertigkeitMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.FF).ToString();
+            textGewandheitMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.GE).ToString();
+            txtKonstitutionMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.KO).ToString();
+            txtKörperkraftMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.KK).ToString();
+            txtSozialstatusMOD.Text = controll.AttributeMOD(DSA_ATTRIBUTE.SO).ToString();
+
+            txtAttackeBasisMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
+            txtArtefaktkontrolleMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE).ToString();
+            txtBeherschungswertMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.BEHERSCHUNGSWERT).ToString();
+            txtEntrückungMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
+            txtFernkampfBasisMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS).ToString();
+            txtGeschwindigkeitMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
+            txtInitativeBasisMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.INITATIVE_BASIS).ToString();
+            txtParadeBasisMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.PARADE_BASIS).ToString();
+            txtWundschwelleMOD.Text = controll.AdvancedValueMOD(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
+
         }
         public void refreshTalentPage()
         {
@@ -1238,6 +1284,71 @@ namespace DSA_Project
         private void talents_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void changeAttributMark(DSA_ATTRIBUTE att, Label lblAttribut, TextBox txtAKT, TextBox txtMOD, TextBox txtMax)
+        {
+            bool x = controll.getMarkedAttribut(att);
+
+            if (x)
+            {
+                lblAttribut.ForeColor = Color.Black;
+                lblAttribut.Font = new Font(lblAttribut.Font, FontStyle.Regular);
+
+                txtAKT.BackColor = Color.White;
+                txtMOD.BackColor = SystemColors.InactiveCaption;
+                txtMax.BackColor = SystemColors.InactiveCaption;
+
+                x = false;
+            } else
+            {
+                lblAttribut.ForeColor    = Color.Red;
+
+                txtAKT.BackColor = Color.Yellow;
+                txtMOD.BackColor = Color.GreenYellow;
+                txtMax.BackColor = Color.GreenYellow;
+
+                x = true;
+            }
+            controll.setMarkedAttribut(att, x);
+        }
+
+        private void lblMut_Click(object sender, EventArgs e)
+        {
+            changeAttributMark(DSA_ATTRIBUTE.MU, lblMut, txtMutAKT, txtMutMOD, txtMutMAX);
+        }
+        private void lblKlugheit_Click(object sender, EventArgs e)
+        {
+            changeAttributMark(DSA_ATTRIBUTE.KL, lblKlugheit, txtKlugheitAKT, txtKlugheitMOD, txtKlugheitMAX);
+        }
+        private void lblCharisma_Click(object sender, EventArgs e)
+        {
+            changeAttributMark(DSA_ATTRIBUTE.CH, lblCharisma, txtCharismaAKT, txtCharismaMOD, txtCharismaMAX);
+        }
+        private void lblFingerfertigkeit_Click(object sender, EventArgs e)
+        {
+            changeAttributMark(DSA_ATTRIBUTE.FF, lblFingerfertigkeit, txtFingerfertigkeitAKT, txtFingerfertigkeitMOD, txtFingerfertigkeitMAX);
+        }
+        private void lblGewandheit_Click(object sender, EventArgs e)
+        {
+            changeAttributMark(DSA_ATTRIBUTE.GE, lblGewandheit, textGewandheitAKT, textGewandheitMOD, textGewandheitMAX);
+        }
+        private void lblKonstitution_Click(object sender, EventArgs e)
+        {
+            changeAttributMark(DSA_ATTRIBUTE.KO, lblKonstitution, txtKonstitutionAKT, txtKonstitutionMOD, txtKonstitutionMAX);
+        }
+        private void lblKörperkraft_Click(object sender, EventArgs e)
+        {
+            changeAttributMark(DSA_ATTRIBUTE.KK, lblKörperkraft, txtKörperkraftAKT, txtKörperkraftMOD, txtKörperkraftMAX);
+        }
+        private void lblSozialstatus_Click(object sender, EventArgs e)
+        {
+            changeAttributMark(DSA_ATTRIBUTE.SO, lblSozialstatus, txtSozialstatusAKT, txtSozialstatusMOD, txtSozialstatusMAX);
+        }
+        private void lblIntuition_Click(object sender, EventArgs e)
+        {
+            changeAttributMark(DSA_ATTRIBUTE.IN, lblIntuition, txtIntuitionAKT, txtIntuitionMOD, txtIntuitionMAX);
         }
     }
 }

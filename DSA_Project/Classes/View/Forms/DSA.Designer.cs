@@ -656,15 +656,15 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.lblSozialstatus = new System.Windows.Forms.Label();
+            this.lblKörperkraft = new System.Windows.Forms.Label();
+            this.lblKonstitution = new System.Windows.Forms.Label();
+            this.lblGewandheit = new System.Windows.Forms.Label();
+            this.lblFingerfertigkeit = new System.Windows.Forms.Label();
+            this.lblCharisma = new System.Windows.Forms.Label();
+            this.lblIntuition = new System.Windows.Forms.Label();
+            this.lblKlugheit = new System.Windows.Forms.Label();
+            this.lblMut = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -3427,15 +3427,15 @@
             this.Heldenbrief.Controls.Add(this.label29);
             this.Heldenbrief.Controls.Add(this.label28);
             this.Heldenbrief.Controls.Add(this.label27);
-            this.Heldenbrief.Controls.Add(this.label26);
-            this.Heldenbrief.Controls.Add(this.label25);
-            this.Heldenbrief.Controls.Add(this.label24);
-            this.Heldenbrief.Controls.Add(this.label18);
-            this.Heldenbrief.Controls.Add(this.label19);
-            this.Heldenbrief.Controls.Add(this.label20);
-            this.Heldenbrief.Controls.Add(this.label21);
-            this.Heldenbrief.Controls.Add(this.label22);
-            this.Heldenbrief.Controls.Add(this.label23);
+            this.Heldenbrief.Controls.Add(this.lblSozialstatus);
+            this.Heldenbrief.Controls.Add(this.lblKörperkraft);
+            this.Heldenbrief.Controls.Add(this.lblKonstitution);
+            this.Heldenbrief.Controls.Add(this.lblGewandheit);
+            this.Heldenbrief.Controls.Add(this.lblFingerfertigkeit);
+            this.Heldenbrief.Controls.Add(this.lblCharisma);
+            this.Heldenbrief.Controls.Add(this.lblIntuition);
+            this.Heldenbrief.Controls.Add(this.lblKlugheit);
+            this.Heldenbrief.Controls.Add(this.lblMut);
             this.Heldenbrief.Controls.Add(this.label16);
             this.Heldenbrief.Controls.Add(this.label17);
             this.Heldenbrief.Controls.Add(this.label15);
@@ -5342,50 +5342,60 @@
             resources.ApplyResources(this.label27, "label27");
             this.label27.Name = "label27";
             // 
-            // label26
+            // lblSozialstatus
             // 
-            resources.ApplyResources(this.label26, "label26");
-            this.label26.Name = "label26";
+            resources.ApplyResources(this.lblSozialstatus, "lblSozialstatus");
+            this.lblSozialstatus.Name = "lblSozialstatus";
+            this.lblSozialstatus.Click += new System.EventHandler(this.lblSozialstatus_Click);
             // 
-            // label25
+            // lblKörperkraft
             // 
-            resources.ApplyResources(this.label25, "label25");
-            this.label25.Name = "label25";
+            resources.ApplyResources(this.lblKörperkraft, "lblKörperkraft");
+            this.lblKörperkraft.Name = "lblKörperkraft";
+            this.lblKörperkraft.Click += new System.EventHandler(this.lblKörperkraft_Click);
             // 
-            // label24
+            // lblKonstitution
             // 
-            resources.ApplyResources(this.label24, "label24");
-            this.label24.Name = "label24";
+            resources.ApplyResources(this.lblKonstitution, "lblKonstitution");
+            this.lblKonstitution.Name = "lblKonstitution";
+            this.lblKonstitution.Click += new System.EventHandler(this.lblKonstitution_Click);
             // 
-            // label18
+            // lblGewandheit
             // 
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.Name = "label18";
+            resources.ApplyResources(this.lblGewandheit, "lblGewandheit");
+            this.lblGewandheit.Name = "lblGewandheit";
+            this.lblGewandheit.Click += new System.EventHandler(this.lblGewandheit_Click);
             // 
-            // label19
+            // lblFingerfertigkeit
             // 
-            resources.ApplyResources(this.label19, "label19");
-            this.label19.Name = "label19";
+            resources.ApplyResources(this.lblFingerfertigkeit, "lblFingerfertigkeit");
+            this.lblFingerfertigkeit.Name = "lblFingerfertigkeit";
+            this.lblFingerfertigkeit.Click += new System.EventHandler(this.lblFingerfertigkeit_Click);
             // 
-            // label20
+            // lblCharisma
             // 
-            resources.ApplyResources(this.label20, "label20");
-            this.label20.Name = "label20";
+            resources.ApplyResources(this.lblCharisma, "lblCharisma");
+            this.lblCharisma.Name = "lblCharisma";
+            this.lblCharisma.Click += new System.EventHandler(this.lblCharisma_Click);
             // 
-            // label21
+            // lblIntuition
             // 
-            resources.ApplyResources(this.label21, "label21");
-            this.label21.Name = "label21";
+            resources.ApplyResources(this.lblIntuition, "lblIntuition");
+            this.lblIntuition.Name = "lblIntuition";
+            this.lblIntuition.Click += new System.EventHandler(this.lblIntuition_Click);
             // 
-            // label22
+            // lblKlugheit
             // 
-            resources.ApplyResources(this.label22, "label22");
-            this.label22.Name = "label22";
+            resources.ApplyResources(this.lblKlugheit, "lblKlugheit");
+            this.lblKlugheit.Name = "lblKlugheit";
+            this.lblKlugheit.Click += new System.EventHandler(this.lblKlugheit_Click);
             // 
-            // label23
+            // lblMut
             // 
-            resources.ApplyResources(this.label23, "label23");
-            this.label23.Name = "label23";
+            resources.ApplyResources(this.lblMut, "lblMut");
+            this.lblMut.BackColor = System.Drawing.SystemColors.Control;
+            this.lblMut.Name = "lblMut";
+            this.lblMut.Click += new System.EventHandler(this.lblMut_Click);
             // 
             // label16
             // 
@@ -6141,15 +6151,15 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lblSozialstatus;
+        private System.Windows.Forms.Label lblKörperkraft;
+        private System.Windows.Forms.Label lblKonstitution;
+        private System.Windows.Forms.Label lblGewandheit;
+        private System.Windows.Forms.Label lblFingerfertigkeit;
+        private System.Windows.Forms.Label lblCharisma;
+        private System.Windows.Forms.Label lblIntuition;
+        private System.Windows.Forms.Label lblKlugheit;
+        private System.Windows.Forms.Label lblMut;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label15;

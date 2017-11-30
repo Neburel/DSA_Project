@@ -96,15 +96,30 @@ namespace DSA_Project
             String[] name = Enum.GetNames(typeof(DSA_ATTRIBUTE));
             int length = Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length;
 
-            for (int i = 0; i < length; i++)
+            foreach(XmlNode typeNode in AttributeNode)
             {
-                foreach (XmlNode node in AttributeNode)
+                for(int i=0; i<length; i++)
                 {
-                    if ((node.Name).ToUpper() == name[i].ToUpper())
+                    if(String.Compare(typeNode.Name, name[i]) == 0)
                     {
-                        int x;
-                        Int32.TryParse(node.InnerText, out x);
-                        charakter.setAttribute((DSA_ATTRIBUTE)i, x);
+                        foreach(XmlNode node in typeNode)
+                        {
+                            switch (node.Name)
+                            {
+                                case ManagmentLoadXML.Value:
+                                    int x;
+                                    Int32.TryParse(node.InnerText, out x);
+                                    charakter.setAttribute((DSA_ATTRIBUTE)i, x);
+                                    break;
+                                case ManagmentLoadXML.Marked:
+                                    if(0 == String.Compare(true.ToString(), node.InnerText))
+                                    {
+                                        charakter.setMarkedAttribut((DSA_ATTRIBUTE)i, true);
+                                    }
+                                    break;
+                            }
+                        }
+                        break;
                     }
                 }
             }

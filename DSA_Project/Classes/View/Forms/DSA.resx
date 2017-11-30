@@ -16713,274 +16713,274 @@
   <data name="&gt;&gt;label27.ZOrder" xml:space="preserve">
     <value>138</value>
   </data>
-  <data name="label26.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblSozialstatus.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label26.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblSozialstatus.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label26.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblSozialstatus.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 358</value>
   </data>
-  <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblSozialstatus.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 13</value>
   </data>
-  <data name="label26.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblSozialstatus.TabIndex" type="System.Int32, mscorlib">
     <value>140</value>
   </data>
-  <data name="label26.Text" xml:space="preserve">
+  <data name="lblSozialstatus.Text" xml:space="preserve">
     <value>Sozialstatus</value>
   </data>
-  <data name="&gt;&gt;label26.Name" xml:space="preserve">
-    <value>label26</value>
+  <data name="&gt;&gt;lblSozialstatus.Name" xml:space="preserve">
+    <value>lblSozialstatus</value>
   </data>
-  <data name="&gt;&gt;label26.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblSozialstatus.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label26.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblSozialstatus.Parent" xml:space="preserve">
     <value>Heldenbrief</value>
   </data>
-  <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblSozialstatus.ZOrder" xml:space="preserve">
     <value>139</value>
   </data>
-  <data name="label25.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblKörperkraft.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label25.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblKörperkraft.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label25.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblKörperkraft.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 332</value>
   </data>
-  <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblKörperkraft.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
   </data>
-  <data name="label25.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblKörperkraft.TabIndex" type="System.Int32, mscorlib">
     <value>138</value>
   </data>
-  <data name="label25.Text" xml:space="preserve">
+  <data name="lblKörperkraft.Text" xml:space="preserve">
     <value>Körperkraft</value>
   </data>
-  <data name="&gt;&gt;label25.Name" xml:space="preserve">
-    <value>label25</value>
+  <data name="&gt;&gt;lblKörperkraft.Name" xml:space="preserve">
+    <value>lblKörperkraft</value>
   </data>
-  <data name="&gt;&gt;label25.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblKörperkraft.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label25.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblKörperkraft.Parent" xml:space="preserve">
     <value>Heldenbrief</value>
   </data>
-  <data name="&gt;&gt;label25.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblKörperkraft.ZOrder" xml:space="preserve">
     <value>140</value>
   </data>
-  <data name="label24.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblKonstitution.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label24.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblKonstitution.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label24.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblKonstitution.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 306</value>
   </data>
-  <data name="label24.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblKonstitution.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 13</value>
   </data>
-  <data name="label24.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblKonstitution.TabIndex" type="System.Int32, mscorlib">
     <value>136</value>
   </data>
-  <data name="label24.Text" xml:space="preserve">
+  <data name="lblKonstitution.Text" xml:space="preserve">
     <value>Konstitution</value>
   </data>
-  <data name="&gt;&gt;label24.Name" xml:space="preserve">
-    <value>label24</value>
+  <data name="&gt;&gt;lblKonstitution.Name" xml:space="preserve">
+    <value>lblKonstitution</value>
   </data>
-  <data name="&gt;&gt;label24.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblKonstitution.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblKonstitution.Parent" xml:space="preserve">
     <value>Heldenbrief</value>
   </data>
-  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblKonstitution.ZOrder" xml:space="preserve">
     <value>141</value>
   </data>
-  <data name="label18.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblGewandheit.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblGewandheit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblGewandheit.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 280</value>
   </data>
-  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblGewandheit.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 13</value>
   </data>
-  <data name="label18.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblGewandheit.TabIndex" type="System.Int32, mscorlib">
     <value>129</value>
   </data>
-  <data name="label18.Text" xml:space="preserve">
+  <data name="lblGewandheit.Text" xml:space="preserve">
     <value>Gewandheit</value>
   </data>
-  <data name="&gt;&gt;label18.Name" xml:space="preserve">
-    <value>label18</value>
+  <data name="&gt;&gt;lblGewandheit.Name" xml:space="preserve">
+    <value>lblGewandheit</value>
   </data>
-  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblGewandheit.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblGewandheit.Parent" xml:space="preserve">
     <value>Heldenbrief</value>
   </data>
-  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblGewandheit.ZOrder" xml:space="preserve">
     <value>142</value>
   </data>
-  <data name="label19.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblFingerfertigkeit.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label19.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblFingerfertigkeit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblFingerfertigkeit.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 254</value>
   </data>
-  <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblFingerfertigkeit.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 13</value>
   </data>
-  <data name="label19.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblFingerfertigkeit.TabIndex" type="System.Int32, mscorlib">
     <value>128</value>
   </data>
-  <data name="label19.Text" xml:space="preserve">
+  <data name="lblFingerfertigkeit.Text" xml:space="preserve">
     <value>Fingerfertigkeit</value>
   </data>
-  <data name="&gt;&gt;label19.Name" xml:space="preserve">
-    <value>label19</value>
+  <data name="&gt;&gt;lblFingerfertigkeit.Name" xml:space="preserve">
+    <value>lblFingerfertigkeit</value>
   </data>
-  <data name="&gt;&gt;label19.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblFingerfertigkeit.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblFingerfertigkeit.Parent" xml:space="preserve">
     <value>Heldenbrief</value>
   </data>
-  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblFingerfertigkeit.ZOrder" xml:space="preserve">
     <value>143</value>
   </data>
-  <data name="label20.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblCharisma.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label20.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblCharisma.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblCharisma.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 228</value>
   </data>
-  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblCharisma.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 13</value>
   </data>
-  <data name="label20.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblCharisma.TabIndex" type="System.Int32, mscorlib">
     <value>127</value>
   </data>
-  <data name="label20.Text" xml:space="preserve">
+  <data name="lblCharisma.Text" xml:space="preserve">
     <value>Charisma</value>
   </data>
-  <data name="&gt;&gt;label20.Name" xml:space="preserve">
-    <value>label20</value>
+  <data name="&gt;&gt;lblCharisma.Name" xml:space="preserve">
+    <value>lblCharisma</value>
   </data>
-  <data name="&gt;&gt;label20.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblCharisma.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblCharisma.Parent" xml:space="preserve">
     <value>Heldenbrief</value>
   </data>
-  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblCharisma.ZOrder" xml:space="preserve">
     <value>144</value>
   </data>
-  <data name="label21.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblIntuition.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label21.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblIntuition.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblIntuition.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 202</value>
   </data>
-  <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblIntuition.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 13</value>
   </data>
-  <data name="label21.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblIntuition.TabIndex" type="System.Int32, mscorlib">
     <value>126</value>
   </data>
-  <data name="label21.Text" xml:space="preserve">
+  <data name="lblIntuition.Text" xml:space="preserve">
     <value>Intuition</value>
   </data>
-  <data name="&gt;&gt;label21.Name" xml:space="preserve">
-    <value>label21</value>
+  <data name="&gt;&gt;lblIntuition.Name" xml:space="preserve">
+    <value>lblIntuition</value>
   </data>
-  <data name="&gt;&gt;label21.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblIntuition.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblIntuition.Parent" xml:space="preserve">
     <value>Heldenbrief</value>
   </data>
-  <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblIntuition.ZOrder" xml:space="preserve">
     <value>145</value>
   </data>
-  <data name="label22.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblKlugheit.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label22.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblKlugheit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label22.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblKlugheit.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 176</value>
   </data>
-  <data name="label22.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblKlugheit.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 13</value>
   </data>
-  <data name="label22.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblKlugheit.TabIndex" type="System.Int32, mscorlib">
     <value>125</value>
   </data>
-  <data name="label22.Text" xml:space="preserve">
+  <data name="lblKlugheit.Text" xml:space="preserve">
     <value>Klugheit</value>
   </data>
-  <data name="&gt;&gt;label22.Name" xml:space="preserve">
-    <value>label22</value>
+  <data name="&gt;&gt;lblKlugheit.Name" xml:space="preserve">
+    <value>lblKlugheit</value>
   </data>
-  <data name="&gt;&gt;label22.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblKlugheit.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label22.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblKlugheit.Parent" xml:space="preserve">
     <value>Heldenbrief</value>
   </data>
-  <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblKlugheit.ZOrder" xml:space="preserve">
     <value>146</value>
   </data>
-  <data name="label23.AutoSize" type="System.Boolean, mscorlib">
+  <data name="lblMut.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label23.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="lblMut.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label23.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="lblMut.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 150</value>
   </data>
-  <data name="label23.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lblMut.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 13</value>
   </data>
-  <data name="label23.TabIndex" type="System.Int32, mscorlib">
+  <data name="lblMut.TabIndex" type="System.Int32, mscorlib">
     <value>124</value>
   </data>
-  <data name="label23.Text" xml:space="preserve">
+  <data name="lblMut.Text" xml:space="preserve">
     <value>Mut</value>
   </data>
-  <data name="&gt;&gt;label23.Name" xml:space="preserve">
-    <value>label23</value>
+  <data name="&gt;&gt;lblMut.Name" xml:space="preserve">
+    <value>lblMut</value>
   </data>
-  <data name="&gt;&gt;label23.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblMut.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label23.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblMut.Parent" xml:space="preserve">
     <value>Heldenbrief</value>
   </data>
-  <data name="&gt;&gt;label23.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblMut.ZOrder" xml:space="preserve">
     <value>147</value>
   </data>
   <data name="label16.AutoSize" type="System.Boolean, mscorlib">

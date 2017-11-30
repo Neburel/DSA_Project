@@ -38,8 +38,10 @@ namespace DSA_Project
         public void save()
         {
             String directoryPath = Directory.GetCurrentDirectory();
-            String destinationPath = @"Ressources"; ;
+            String destinationPath = @ManagmentLoadXML.saveLocation; 
             String completePath = Path.Combine(directoryPath, destinationPath);
+
+            Console.WriteLine(completePath);
 
             SaveFileDialog savefileDialog = new SaveFileDialog();
             savefileDialog.InitialDirectory = completePath;
@@ -53,7 +55,7 @@ namespace DSA_Project
         public void load()
         {
             String directoryPath = Directory.GetCurrentDirectory();
-            String destinationPath = @"Ressources"; ;
+            String destinationPath = @ManagmentLoadXML.saveLocation;
             String completePath = Path.Combine(directoryPath, destinationPath);
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -288,6 +290,15 @@ namespace DSA_Project
         public int AdvanturePoints()
         {
             return Charakter.getAdvanturePoints();
+        }
+
+        public void setMarkedAttribut(DSA_ATTRIBUTE att, bool b)
+        {
+            Charakter.setMarkedAttribut(att, b);
+        }
+        public bool getMarkedAttribut(DSA_ATTRIBUTE att)
+        {
+            return Charakter.getMarkedAttribut(att);
         }
 
     }

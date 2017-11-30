@@ -8,6 +8,8 @@ namespace DSA_Project
 {
     static public class ManagmentLoadXML
     {
+        public const String saveLocation = "Resources\\DSA\\SaveGame\\";
+
         public const String CharacterBogenElement   = "CharacterBogen";
         public const String HeldenBriefElement      = "HeldenBrief";
         public const String BasisDatenElement       = "BasisDaten";
@@ -17,9 +19,10 @@ namespace DSA_Project
         public const String MoneyElement            = "Money";
         public const String FeatureElement          = "Features";
         public const String AdvanturePoints         = "AdventurePoints";
+        public const String Marked                  = "Marked";
 
-        public const String Advantages             = "Advantages";
-        public const String DisAdvantages          = "DisAdvantages";
+        public const String Advantages              = "Advantages";
+        public const String DisAdvantages           = "DisAdvantages";
 
         public const String Number                  = "Number";
 

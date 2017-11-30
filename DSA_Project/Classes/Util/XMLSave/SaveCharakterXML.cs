@@ -101,7 +101,19 @@ namespace DSA_Project
 
             for (int i = 0; i < length; i++)
             {
-                element.AppendChild(characterFile.CreateElement(names[i])).InnerText = charakter.getAttributeAKT((DSA_ATTRIBUTE) i).ToString();
+                XmlElement type = characterFile.CreateElement(names[i]);
+                XmlElement value = characterFile.CreateElement(ManagmentLoadXML.Value);
+                XmlElement marked = characterFile.CreateElement(ManagmentLoadXML.Marked);
+
+                value.InnerText = charakter.getAttributeAKT((DSA_ATTRIBUTE)i).ToString();
+                
+                if (charakter.getMarkedAttribut((DSA_ATTRIBUTE)i))
+                {
+                    marked.InnerText = true.ToString();
+                    type.AppendChild(marked);
+                }
+                type.AppendChild(value);
+                element.AppendChild(type);
             }
         }
         public static void saveAdvancedValues(Charakter charakter, XmlDocument characterFile, XmlElement element)

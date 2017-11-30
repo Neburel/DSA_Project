@@ -17,6 +17,8 @@ namespace DSA_Project
         private Dictionary<int, String> göttergerschenke;
         private Dictionary<int, String> modifikatoren;
 
+        private Dictionary<DSA_ATTRIBUTE, bool> markedAttributs;
+
         private Dictionary<DSA_GENERALTALENTS, List<InterfaceTalent>> generalTalents;
         private Dictionary<DSA_FIGHTINGTALENTS, List<InterfaceTalent>> fightingTalents;
 
@@ -34,7 +36,6 @@ namespace DSA_Project
             int enumBasicValueLength        = Enum.GetNames(typeof(DSA_BASICVALUES)).Length;
             int enumAdvatageValuesLength    = Enum.GetNames(typeof(DSA_BASICVALUES)).Length;
             int enumEnergienLength          = Enum.GetNames(typeof(DSA_ENERGIEN)).Length;
-            //int enumTalentLentgh            = Enum.GetNames(typeof(DSA_TALENTS)).Length;
 
             attributeAKT                    = new Dictionary<DSA_ATTRIBUTE, int>();
             money                           = new Dictionary<DSA_MONEY, int>();
@@ -42,6 +43,7 @@ namespace DSA_Project
             advancedValues                  = new Dictionary<DSA_ADVANCEDVALUES, int>();
             göttergerschenke                = new Dictionary<int, string>();
             modifikatoren                   = new Dictionary<int, string>();
+            markedAttributs                 = new Dictionary<DSA_ATTRIBUTE, bool>();
 
 
             generalTalents = new Dictionary<DSA_GENERALTALENTS, List<InterfaceTalent>>();
@@ -71,6 +73,10 @@ namespace DSA_Project
             for (int i = 0; i < Enum.GetNames(typeof(DSA_FIGHTINGTALENTS)).Length; i++)
             {
                 fightingTalents.Add((DSA_FIGHTINGTALENTS)i, new List<InterfaceTalent>());
+            }
+            for(int i =0; i<Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length; i++)
+            {
+                markedAttributs.Add((DSA_ATTRIBUTE)i, false);
             }
         }
 
@@ -350,6 +356,18 @@ namespace DSA_Project
         public int getAdvanturePoints()
         {
             return this.adventurePoints;
+        }
+
+        public void setMarkedAttribut(DSA_ATTRIBUTE att, bool b)
+        {
+            markedAttributs.Remove(att);
+            markedAttributs.Add(att, b);
+        }
+        public bool getMarkedAttribut(DSA_ATTRIBUTE att)
+        {
+            bool b;
+            markedAttributs.TryGetValue(att, out b);
+            return b;
         }
     }
 }
