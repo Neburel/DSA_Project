@@ -739,6 +739,22 @@
             this.txtRewardPage = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.HPcompoBoxTalent1 = new System.Windows.Forms.ComboBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.HPcompoBoxTalentProbeB1 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalentProbeA1 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalentProbeB2 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalentProbeA2 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalent2 = new System.Windows.Forms.ComboBox();
+            this.HPcompoBoxTalentProbeB3 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalentProbeA3 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalent3 = new System.Windows.Forms.ComboBox();
+            this.HPcompoBoxTalentProbeB4 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalentProbeA4 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalent4 = new System.Windows.Forms.ComboBox();
+            this.HPcompoBoxTalentProbeB5 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalentProbeA5 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalent5 = new System.Windows.Forms.ComboBox();
             this.tabPageTools.SuspendLayout();
             this.talents.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -758,6 +774,7 @@
             this.TabControl.SuspendLayout();
             this.Rewards.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPageTools
@@ -3347,6 +3364,7 @@
             // Heldenbrief
             // 
             this.Heldenbrief.BackColor = System.Drawing.SystemColors.Control;
+            this.Heldenbrief.Controls.Add(this.groupBox5);
             this.Heldenbrief.Controls.Add(this.groupBox2);
             this.Heldenbrief.Controls.Add(this.groupBox1);
             this.Heldenbrief.Controls.Add(this.txtStufe);
@@ -5944,6 +5962,117 @@
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // HPcompoBoxTalent1
+            // 
+            this.HPcompoBoxTalent1.FormattingEnabled = true;
+            resources.ApplyResources(this.HPcompoBoxTalent1, "HPcompoBoxTalent1");
+            this.HPcompoBoxTalent1.Name = "HPcompoBoxTalent1";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeB5);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeA5);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalent5);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeB4);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeA4);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalent4);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeB3);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeA3);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalent3);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeB2);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeA2);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalent2);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeB1);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeA1);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalent1);
+            resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.TabStop = false;
+            // 
+            // HPcompoBoxTalentProbeB1
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeB1, "HPcompoBoxTalentProbeB1");
+            this.HPcompoBoxTalentProbeB1.Name = "HPcompoBoxTalentProbeB1";
+            this.HPcompoBoxTalentProbeB1.ReadOnly = true;
+            // 
+            // HPcompoBoxTalentProbeA1
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeA1, "HPcompoBoxTalentProbeA1");
+            this.HPcompoBoxTalentProbeA1.Name = "HPcompoBoxTalentProbeA1";
+            this.HPcompoBoxTalentProbeA1.ReadOnly = true;
+            // 
+            // HPcompoBoxTalentProbeB2
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeB2, "HPcompoBoxTalentProbeB2");
+            this.HPcompoBoxTalentProbeB2.Name = "HPcompoBoxTalentProbeB2";
+            this.HPcompoBoxTalentProbeB2.ReadOnly = true;
+            // 
+            // HPcompoBoxTalentProbeA2
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeA2, "HPcompoBoxTalentProbeA2");
+            this.HPcompoBoxTalentProbeA2.Name = "HPcompoBoxTalentProbeA2";
+            this.HPcompoBoxTalentProbeA2.ReadOnly = true;
+            // 
+            // HPcompoBoxTalent2
+            // 
+            this.HPcompoBoxTalent2.FormattingEnabled = true;
+            resources.ApplyResources(this.HPcompoBoxTalent2, "HPcompoBoxTalent2");
+            this.HPcompoBoxTalent2.Name = "HPcompoBoxTalent2";
+            // 
+            // HPcompoBoxTalentProbeB3
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeB3, "HPcompoBoxTalentProbeB3");
+            this.HPcompoBoxTalentProbeB3.Name = "HPcompoBoxTalentProbeB3";
+            this.HPcompoBoxTalentProbeB3.ReadOnly = true;
+            // 
+            // HPcompoBoxTalentProbeA3
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeA3, "HPcompoBoxTalentProbeA3");
+            this.HPcompoBoxTalentProbeA3.Name = "HPcompoBoxTalentProbeA3";
+            this.HPcompoBoxTalentProbeA3.ReadOnly = true;
+            // 
+            // HPcompoBoxTalent3
+            // 
+            this.HPcompoBoxTalent3.FormattingEnabled = true;
+            resources.ApplyResources(this.HPcompoBoxTalent3, "HPcompoBoxTalent3");
+            this.HPcompoBoxTalent3.Name = "HPcompoBoxTalent3";
+            // 
+            // HPcompoBoxTalentProbeB4
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeB4, "HPcompoBoxTalentProbeB4");
+            this.HPcompoBoxTalentProbeB4.Name = "HPcompoBoxTalentProbeB4";
+            this.HPcompoBoxTalentProbeB4.ReadOnly = true;
+            // 
+            // HPcompoBoxTalentProbeA4
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeA4, "HPcompoBoxTalentProbeA4");
+            this.HPcompoBoxTalentProbeA4.Name = "HPcompoBoxTalentProbeA4";
+            this.HPcompoBoxTalentProbeA4.ReadOnly = true;
+            // 
+            // HPcompoBoxTalent4
+            // 
+            this.HPcompoBoxTalent4.FormattingEnabled = true;
+            resources.ApplyResources(this.HPcompoBoxTalent4, "HPcompoBoxTalent4");
+            this.HPcompoBoxTalent4.Name = "HPcompoBoxTalent4";
+            // 
+            // HPcompoBoxTalentProbeB5
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeB5, "HPcompoBoxTalentProbeB5");
+            this.HPcompoBoxTalentProbeB5.Name = "HPcompoBoxTalentProbeB5";
+            this.HPcompoBoxTalentProbeB5.ReadOnly = true;
+            // 
+            // HPcompoBoxTalentProbeA5
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeA5, "HPcompoBoxTalentProbeA5");
+            this.HPcompoBoxTalentProbeA5.Name = "HPcompoBoxTalentProbeA5";
+            this.HPcompoBoxTalentProbeA5.ReadOnly = true;
+            // 
+            // HPcompoBoxTalent5
+            // 
+            this.HPcompoBoxTalent5.FormattingEnabled = true;
+            resources.ApplyResources(this.HPcompoBoxTalent5, "HPcompoBoxTalent5");
+            this.HPcompoBoxTalent5.Name = "HPcompoBoxTalent5";
+            // 
             // DSA
             // 
             resources.ApplyResources(this, "$this");
@@ -5986,6 +6115,8 @@
             this.Rewards.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -6702,6 +6833,22 @@
         private System.Windows.Forms.TextBox txtRewardPage;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ComboBox HPcompoBoxTalent1;
+        private System.Windows.Forms.TextBox HPcompoBoxTalentProbeB5;
+        private System.Windows.Forms.TextBox HPcompoBoxTalentProbeA5;
+        private System.Windows.Forms.ComboBox HPcompoBoxTalent5;
+        private System.Windows.Forms.TextBox HPcompoBoxTalentProbeB4;
+        private System.Windows.Forms.TextBox HPcompoBoxTalentProbeA4;
+        private System.Windows.Forms.ComboBox HPcompoBoxTalent4;
+        private System.Windows.Forms.TextBox HPcompoBoxTalentProbeB3;
+        private System.Windows.Forms.TextBox HPcompoBoxTalentProbeA3;
+        private System.Windows.Forms.ComboBox HPcompoBoxTalent3;
+        private System.Windows.Forms.TextBox HPcompoBoxTalentProbeB2;
+        private System.Windows.Forms.TextBox HPcompoBoxTalentProbeA2;
+        private System.Windows.Forms.ComboBox HPcompoBoxTalent2;
+        private System.Windows.Forms.TextBox HPcompoBoxTalentProbeB1;
+        private System.Windows.Forms.TextBox HPcompoBoxTalentProbeA1;
     }
 }
 

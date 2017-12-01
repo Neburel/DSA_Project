@@ -47,6 +47,10 @@ namespace DSA_Project
         List<TextBox> featureAdvantagesValueBox;
         List<TextBox> featureDisAdvantagesValueBox;
 
+        List<ComboBox> talentBoxComboBoxChose;
+        List<TextBox> talentBoxComboBoxChoseProbeA;
+        List<TextBox> talentBoxComboBoxChoseProbeB;
+
         ControllClass controll;
 
         public DSA()
@@ -95,6 +99,7 @@ namespace DSA_Project
 
             setUPFeatureLists();
             setUPRewards();
+            setUPTalentBox();
             load();
             refreshHeroPage();
             refreshTalentPage();
@@ -225,6 +230,7 @@ namespace DSA_Project
             txtAbenteuerpunkte.Text = controll.AdvanturePoints().ToString();
 
             loadRewards();
+            setUPTalentBox();
         }
         /// <summary> 
         /// Ist bei einer Werteänderung eine Neuberechnung nötig muss dies Ausgelöst werden
@@ -338,7 +344,20 @@ namespace DSA_Project
 
             txtRewardPage.Text = "1";
         }
+        private void setUPTalentBox()
+        {
+            talentBoxComboBoxChose = new List<ComboBox> { HPcompoBoxTalent1, HPcompoBoxTalent2, HPcompoBoxTalent3, HPcompoBoxTalent4, HPcompoBoxTalent5 };
+            talentBoxComboBoxChoseProbeA = new List<TextBox> { HPcompoBoxTalentProbeA1, HPcompoBoxTalentProbeA2, HPcompoBoxTalentProbeA3, HPcompoBoxTalentProbeA4, HPcompoBoxTalentProbeA5};
+            talentBoxComboBoxChoseProbeB = new List<TextBox> { HPcompoBoxTalentProbeB1, HPcompoBoxTalentProbeB2, HPcompoBoxTalentProbeB3, HPcompoBoxTalentProbeB4, HPcompoBoxTalentProbeB5};
 
+            for(int i=0; i<talentBoxComboBoxChose.Count; i++)
+            {
+                talentBoxComboBoxChose[i].DataSource = controll.getTalent();
+                talentBoxComboBoxChose[i].AutoCompleteMode = AutoCompleteMode.Suggest;
+                talentBoxComboBoxChose[i].TextChanged += new EventHandler(setTalentBoxChose);
+            }
+            
+        }
 
         private void LoadFeature(TextBox name, TextBox description, TextBox value, TextBox gp, DSA_FEATURES type, int number)
         {
@@ -1423,6 +1442,22 @@ namespace DSA_Project
             CreateReward(number, BoxNumber, DSA_FEATURES.VORTEIL);
 
             Console.WriteLine(BoxNumber);
+        }
+
+        private void setTalentBoxChose(Object sender, EventArgs e)
+        {
+            ComboBox box = (ComboBox)sender;
+            int boxNumber = getBoxNumber("HPcompoBoxTalent", box.Name);
+
+            InterfaceTalent talent = (InterfaceTalent)box.SelectedValue;
+
+            if (talent == null)
+            {
+                return;
+            }
+
+            talentBoxComboBoxChoseProbeA[boxNumber - 1].Text = talent.getProbeStringOne();
+            talentBoxComboBoxChoseProbeB[boxNumber - 1].Text = talent.getProbeStringTwo();            
         }
     }
 }

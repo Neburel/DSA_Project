@@ -114,7 +114,10 @@ namespace DSA_Project
         }
         public void setEnergieBonus(DSA_ENERGIEN energie, int value)
         {
-            value = checkValue(value);
+            if(energie != DSA_ENERGIEN.KARMAENERGIE)
+            {
+                value = checkValue(value);
+            }
             energieBonus.Remove(energie);
             energieBonus.Add(energie, value);
         }

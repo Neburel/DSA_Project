@@ -276,6 +276,10 @@ namespace DSA_Project
             return Moodifikator(number);
         }
 
+        public List<InterfaceTalent> getTalent()
+        {
+            return Charakter.getAllTalentList();
+        }
         public InterfaceTalent getTalent<Tenum>(Tenum type, int number) where Tenum : struct, IComparable, IFormattable, IConvertible
         {
             return Charakter.getTalent(type, number);
