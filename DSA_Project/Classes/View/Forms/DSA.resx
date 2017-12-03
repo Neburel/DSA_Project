@@ -118,17 +118,44 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btncreateFightingTalent.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnToolChangeDSA_PNP.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnToolChangeDSA_PNP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>726, 6</value>
+  </data>
+  <data name="btnToolChangeDSA_PNP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnToolChangeDSA_PNP.TabIndex" type="System.Int32, mscorlib">
+    <value>212</value>
+  </data>
+  <data name="btnToolChangeDSA_PNP.Text" xml:space="preserve">
+    <value>Change DSA/PNP</value>
+  </data>
+  <data name="&gt;&gt;btnToolChangeDSA_PNP.Name" xml:space="preserve">
+    <value>btnToolChangeDSA_PNP</value>
+  </data>
+  <data name="&gt;&gt;btnToolChangeDSA_PNP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnToolChangeDSA_PNP.Parent" xml:space="preserve">
+    <value>tabPageTools</value>
+  </data>
+  <data name="&gt;&gt;btnToolChangeDSA_PNP.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btncreateFightingTalent.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btncreateFightingTalent.Location" type="System.Drawing.Point, System.Drawing">
     <value>323, 6</value>
   </data>
   <data name="btncreateFightingTalent.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 23</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btncreateFightingTalent.TabIndex" type="System.Int32, mscorlib">
     <value>211</value>
   </data>
@@ -145,7 +172,7 @@
     <value>tabPageTools</value>
   </data>
   <data name="&gt;&gt;btncreateFightingTalent.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btnCreateTalent.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -172,7 +199,7 @@
     <value>tabPageTools</value>
   </data>
   <data name="&gt;&gt;btnCreateTalent.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnSaveCharacter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -199,7 +226,7 @@
     <value>tabPageTools</value>
   </data>
   <data name="&gt;&gt;btnSaveCharacter.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnLoadCharacter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -226,7 +253,7 @@
     <value>tabPageTools</value>
   </data>
   <data name="&gt;&gt;btnLoadCharacter.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="tabPageTools.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>

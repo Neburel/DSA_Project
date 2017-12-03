@@ -389,6 +389,22 @@
             this.PTName1 = new System.Windows.Forms.Label();
             this.worldmap = new System.Windows.Forms.TabPage();
             this.Heldenbrief = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.HPcompoBoxTalentProbeB5 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalentProbeA5 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalent5 = new System.Windows.Forms.ComboBox();
+            this.HPcompoBoxTalentProbeB4 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalentProbeA4 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalent4 = new System.Windows.Forms.ComboBox();
+            this.HPcompoBoxTalentProbeB3 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalentProbeA3 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalent3 = new System.Windows.Forms.ComboBox();
+            this.HPcompoBoxTalentProbeB2 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalentProbeA2 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalent2 = new System.Windows.Forms.ComboBox();
+            this.HPcompoBoxTalentProbeB1 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalentProbeA1 = new System.Windows.Forms.TextBox();
+            this.HPcompoBoxTalent1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtNachteil15Beschreibung = new System.Windows.Forms.TextBox();
             this.txtNachteil15GP = new System.Windows.Forms.TextBox();
@@ -739,22 +755,7 @@
             this.txtRewardPage = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.HPcompoBoxTalent1 = new System.Windows.Forms.ComboBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.HPcompoBoxTalentProbeB1 = new System.Windows.Forms.TextBox();
-            this.HPcompoBoxTalentProbeA1 = new System.Windows.Forms.TextBox();
-            this.HPcompoBoxTalentProbeB2 = new System.Windows.Forms.TextBox();
-            this.HPcompoBoxTalentProbeA2 = new System.Windows.Forms.TextBox();
-            this.HPcompoBoxTalent2 = new System.Windows.Forms.ComboBox();
-            this.HPcompoBoxTalentProbeB3 = new System.Windows.Forms.TextBox();
-            this.HPcompoBoxTalentProbeA3 = new System.Windows.Forms.TextBox();
-            this.HPcompoBoxTalent3 = new System.Windows.Forms.ComboBox();
-            this.HPcompoBoxTalentProbeB4 = new System.Windows.Forms.TextBox();
-            this.HPcompoBoxTalentProbeA4 = new System.Windows.Forms.TextBox();
-            this.HPcompoBoxTalent4 = new System.Windows.Forms.ComboBox();
-            this.HPcompoBoxTalentProbeB5 = new System.Windows.Forms.TextBox();
-            this.HPcompoBoxTalentProbeA5 = new System.Windows.Forms.TextBox();
-            this.HPcompoBoxTalent5 = new System.Windows.Forms.ComboBox();
+            this.btnToolChangeDSA_PNP = new System.Windows.Forms.Button();
             this.tabPageTools.SuspendLayout();
             this.talents.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -769,17 +770,18 @@
             this.groupBoxProbe.SuspendLayout();
             this.groupBoxTalentName.SuspendLayout();
             this.Heldenbrief.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.Rewards.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPageTools
             // 
             this.tabPageTools.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageTools.Controls.Add(this.btnToolChangeDSA_PNP);
             this.tabPageTools.Controls.Add(this.btncreateFightingTalent);
             this.tabPageTools.Controls.Add(this.btnCreateTalent);
             this.tabPageTools.Controls.Add(this.btnSaveCharacter);
@@ -831,7 +833,6 @@
             this.talents.Controls.Add(this.groupBoxProbe);
             this.talents.Controls.Add(this.groupBoxTalentName);
             this.talents.Name = "talents";
-            this.talents.Click += new System.EventHandler(this.talents_Click);
             // 
             // groupBox3
             // 
@@ -853,14 +854,12 @@
             resources.ApplyResources(this.btnTalentLetterLast, "btnTalentLetterLast");
             this.btnTalentLetterLast.Name = "btnTalentLetterLast";
             this.btnTalentLetterLast.UseVisualStyleBackColor = true;
-            this.btnTalentLetterLast.Click += new System.EventHandler(this.btnTalentLetterLast_Click);
             // 
             // btnTalentLetterNext
             // 
             resources.ApplyResources(this.btnTalentLetterNext, "btnTalentLetterNext");
             this.btnTalentLetterNext.Name = "btnTalentLetterNext";
             this.btnTalentLetterNext.UseVisualStyleBackColor = true;
-            this.btnTalentLetterNext.Click += new System.EventHandler(this.btnTalentLetterNext_Click);
             // 
             // groupBoxKampf
             // 
@@ -1367,49 +1366,42 @@
             resources.ApplyResources(this.radioButtonRange, "radioButtonRange");
             this.radioButtonRange.Name = "radioButtonRange";
             this.radioButtonRange.UseVisualStyleBackColor = true;
-            this.radioButtonRange.CheckedChanged += new System.EventHandler(this.radioButtonRange_CheckedChanged);
             // 
             // radioButtonClose
             // 
             resources.ApplyResources(this.radioButtonClose, "radioButtonClose");
             this.radioButtonClose.Name = "radioButtonClose";
             this.radioButtonClose.UseVisualStyleBackColor = true;
-            this.radioButtonClose.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
             // 
             // radioButtonWeaponless
             // 
             resources.ApplyResources(this.radioButtonWeaponless, "radioButtonWeaponless");
             this.radioButtonWeaponless.Name = "radioButtonWeaponless";
             this.radioButtonWeaponless.UseVisualStyleBackColor = true;
-            this.radioButtonWeaponless.CheckedChanged += new System.EventHandler(this.radioButtonWeaponless_ChecedChanged);
             // 
             // radioCraftingTalent
             // 
             resources.ApplyResources(this.radioCraftingTalent, "radioCraftingTalent");
             this.radioCraftingTalent.Name = "radioCraftingTalent";
             this.radioCraftingTalent.UseVisualStyleBackColor = true;
-            this.radioCraftingTalent.CheckedChanged += new System.EventHandler(this.radioCraftingTalent_CheckedChanged);
             // 
             // radioKnowldageTalente
             // 
             resources.ApplyResources(this.radioKnowldageTalente, "radioKnowldageTalente");
             this.radioKnowldageTalente.Name = "radioKnowldageTalente";
             this.radioKnowldageTalente.UseVisualStyleBackColor = true;
-            this.radioKnowldageTalente.CheckedChanged += new System.EventHandler(this.radioKnowldageTalente_CheckedChanged);
             // 
             // radioNaturTalente
             // 
             resources.ApplyResources(this.radioNaturTalente, "radioNaturTalente");
             this.radioNaturTalente.Name = "radioNaturTalente";
             this.radioNaturTalente.UseVisualStyleBackColor = true;
-            this.radioNaturTalente.CheckedChanged += new System.EventHandler(this.radioNaturTalente_CheckedChanged);
             // 
             // radioSozialTalente
             // 
             resources.ApplyResources(this.radioSozialTalente, "radioSozialTalente");
             this.radioSozialTalente.Name = "radioSozialTalente";
             this.radioSozialTalente.UseVisualStyleBackColor = true;
-            this.radioSozialTalente.CheckedChanged += new System.EventHandler(this.radioSozialTalente_CheckedChanged);
             // 
             // radioKörperlicheTalente
             // 
@@ -1418,7 +1410,6 @@
             this.radioKörperlicheTalente.Name = "radioKörperlicheTalente";
             this.radioKörperlicheTalente.TabStop = true;
             this.radioKörperlicheTalente.UseVisualStyleBackColor = true;
-            this.radioKörperlicheTalente.CheckedChanged += new System.EventHandler(this.radioKörperlicheTalente_CheckedChanged);
             // 
             // groupBoxAbleiten
             // 
@@ -3532,6 +3523,117 @@
             resources.ApplyResources(this.Heldenbrief, "Heldenbrief");
             this.Heldenbrief.Name = "Heldenbrief";
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeB5);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeA5);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalent5);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeB4);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeA4);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalent4);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeB3);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeA3);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalent3);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeB2);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeA2);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalent2);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeB1);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeA1);
+            this.groupBox5.Controls.Add(this.HPcompoBoxTalent1);
+            resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.TabStop = false;
+            // 
+            // HPcompoBoxTalentProbeB5
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeB5, "HPcompoBoxTalentProbeB5");
+            this.HPcompoBoxTalentProbeB5.Name = "HPcompoBoxTalentProbeB5";
+            this.HPcompoBoxTalentProbeB5.ReadOnly = true;
+            // 
+            // HPcompoBoxTalentProbeA5
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeA5, "HPcompoBoxTalentProbeA5");
+            this.HPcompoBoxTalentProbeA5.Name = "HPcompoBoxTalentProbeA5";
+            this.HPcompoBoxTalentProbeA5.ReadOnly = true;
+            // 
+            // HPcompoBoxTalent5
+            // 
+            this.HPcompoBoxTalent5.FormattingEnabled = true;
+            resources.ApplyResources(this.HPcompoBoxTalent5, "HPcompoBoxTalent5");
+            this.HPcompoBoxTalent5.Name = "HPcompoBoxTalent5";
+            // 
+            // HPcompoBoxTalentProbeB4
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeB4, "HPcompoBoxTalentProbeB4");
+            this.HPcompoBoxTalentProbeB4.Name = "HPcompoBoxTalentProbeB4";
+            this.HPcompoBoxTalentProbeB4.ReadOnly = true;
+            // 
+            // HPcompoBoxTalentProbeA4
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeA4, "HPcompoBoxTalentProbeA4");
+            this.HPcompoBoxTalentProbeA4.Name = "HPcompoBoxTalentProbeA4";
+            this.HPcompoBoxTalentProbeA4.ReadOnly = true;
+            // 
+            // HPcompoBoxTalent4
+            // 
+            this.HPcompoBoxTalent4.FormattingEnabled = true;
+            resources.ApplyResources(this.HPcompoBoxTalent4, "HPcompoBoxTalent4");
+            this.HPcompoBoxTalent4.Name = "HPcompoBoxTalent4";
+            // 
+            // HPcompoBoxTalentProbeB3
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeB3, "HPcompoBoxTalentProbeB3");
+            this.HPcompoBoxTalentProbeB3.Name = "HPcompoBoxTalentProbeB3";
+            this.HPcompoBoxTalentProbeB3.ReadOnly = true;
+            // 
+            // HPcompoBoxTalentProbeA3
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeA3, "HPcompoBoxTalentProbeA3");
+            this.HPcompoBoxTalentProbeA3.Name = "HPcompoBoxTalentProbeA3";
+            this.HPcompoBoxTalentProbeA3.ReadOnly = true;
+            // 
+            // HPcompoBoxTalent3
+            // 
+            this.HPcompoBoxTalent3.FormattingEnabled = true;
+            resources.ApplyResources(this.HPcompoBoxTalent3, "HPcompoBoxTalent3");
+            this.HPcompoBoxTalent3.Name = "HPcompoBoxTalent3";
+            // 
+            // HPcompoBoxTalentProbeB2
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeB2, "HPcompoBoxTalentProbeB2");
+            this.HPcompoBoxTalentProbeB2.Name = "HPcompoBoxTalentProbeB2";
+            this.HPcompoBoxTalentProbeB2.ReadOnly = true;
+            // 
+            // HPcompoBoxTalentProbeA2
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeA2, "HPcompoBoxTalentProbeA2");
+            this.HPcompoBoxTalentProbeA2.Name = "HPcompoBoxTalentProbeA2";
+            this.HPcompoBoxTalentProbeA2.ReadOnly = true;
+            // 
+            // HPcompoBoxTalent2
+            // 
+            this.HPcompoBoxTalent2.FormattingEnabled = true;
+            resources.ApplyResources(this.HPcompoBoxTalent2, "HPcompoBoxTalent2");
+            this.HPcompoBoxTalent2.Name = "HPcompoBoxTalent2";
+            // 
+            // HPcompoBoxTalentProbeB1
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeB1, "HPcompoBoxTalentProbeB1");
+            this.HPcompoBoxTalentProbeB1.Name = "HPcompoBoxTalentProbeB1";
+            this.HPcompoBoxTalentProbeB1.ReadOnly = true;
+            // 
+            // HPcompoBoxTalentProbeA1
+            // 
+            resources.ApplyResources(this.HPcompoBoxTalentProbeA1, "HPcompoBoxTalentProbeA1");
+            this.HPcompoBoxTalentProbeA1.Name = "HPcompoBoxTalentProbeA1";
+            this.HPcompoBoxTalentProbeA1.ReadOnly = true;
+            // 
+            // HPcompoBoxTalent1
+            // 
+            this.HPcompoBoxTalent1.FormattingEnabled = true;
+            resources.ApplyResources(this.HPcompoBoxTalent1, "HPcompoBoxTalent1");
+            this.HPcompoBoxTalent1.Name = "HPcompoBoxTalent1";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtNachteil15Beschreibung);
@@ -3607,420 +3709,360 @@
             this.txtNachteil15Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil15Beschreibung, "txtNachteil15Beschreibung");
             this.txtNachteil15Beschreibung.Name = "txtNachteil15Beschreibung";
-            this.txtNachteil15Beschreibung.Click += new System.EventHandler(this.txtNachteil15_ValueChanged);
             // 
             // txtNachteil15GP
             // 
             this.txtNachteil15GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil15GP, "txtNachteil15GP");
             this.txtNachteil15GP.Name = "txtNachteil15GP";
-            this.txtNachteil15GP.Click += new System.EventHandler(this.txtNachteil15_ValueChanged);
             // 
             // txtNachteil15Wert
             // 
             this.txtNachteil15Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil15Wert, "txtNachteil15Wert");
             this.txtNachteil15Wert.Name = "txtNachteil15Wert";
-            this.txtNachteil15Wert.Click += new System.EventHandler(this.txtNachteil15_ValueChanged);
             // 
             // txtNachteil15Name
             // 
             this.txtNachteil15Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil15Name, "txtNachteil15Name");
             this.txtNachteil15Name.Name = "txtNachteil15Name";
-            this.txtNachteil15Name.Click += new System.EventHandler(this.txtNachteil15_ValueChanged);
             // 
             // txtNachteil14Beschreibung
             // 
             this.txtNachteil14Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil14Beschreibung, "txtNachteil14Beschreibung");
             this.txtNachteil14Beschreibung.Name = "txtNachteil14Beschreibung";
-            this.txtNachteil14Beschreibung.Click += new System.EventHandler(this.txtNachteil14_ValueChanged);
             // 
             // txtNachteil14GP
             // 
             this.txtNachteil14GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil14GP, "txtNachteil14GP");
             this.txtNachteil14GP.Name = "txtNachteil14GP";
-            this.txtNachteil14GP.Click += new System.EventHandler(this.txtNachteil14_ValueChanged);
             // 
             // txtNachteil14Wert
             // 
             this.txtNachteil14Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil14Wert, "txtNachteil14Wert");
             this.txtNachteil14Wert.Name = "txtNachteil14Wert";
-            this.txtNachteil14Wert.Click += new System.EventHandler(this.txtNachteil14_ValueChanged);
             // 
             // txtNachteil14Name
             // 
             this.txtNachteil14Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil14Name, "txtNachteil14Name");
             this.txtNachteil14Name.Name = "txtNachteil14Name";
-            this.txtNachteil14Name.Click += new System.EventHandler(this.txtNachteil14_ValueChanged);
             // 
             // txtNachteil13Beschreibung
             // 
             this.txtNachteil13Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil13Beschreibung, "txtNachteil13Beschreibung");
             this.txtNachteil13Beschreibung.Name = "txtNachteil13Beschreibung";
-            this.txtNachteil13Beschreibung.Click += new System.EventHandler(this.txtNachteil13_ValueChanged);
             // 
             // txtNachteil13GP
             // 
             this.txtNachteil13GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil13GP, "txtNachteil13GP");
             this.txtNachteil13GP.Name = "txtNachteil13GP";
-            this.txtNachteil13GP.Click += new System.EventHandler(this.txtNachteil13_ValueChanged);
             // 
             // txtNachteil13Wert
             // 
             this.txtNachteil13Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil13Wert, "txtNachteil13Wert");
             this.txtNachteil13Wert.Name = "txtNachteil13Wert";
-            this.txtNachteil13Wert.Click += new System.EventHandler(this.txtNachteil13_ValueChanged);
             // 
             // txtNachteil13Name
             // 
             this.txtNachteil13Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil13Name, "txtNachteil13Name");
             this.txtNachteil13Name.Name = "txtNachteil13Name";
-            this.txtNachteil13Name.Click += new System.EventHandler(this.txtNachteil13_ValueChanged);
             // 
             // txtNachteil12Beschreibung
             // 
             this.txtNachteil12Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil12Beschreibung, "txtNachteil12Beschreibung");
             this.txtNachteil12Beschreibung.Name = "txtNachteil12Beschreibung";
-            this.txtNachteil12Beschreibung.Click += new System.EventHandler(this.txtNachteil12_ValueChanged);
             // 
             // txtNachteil12GP
             // 
             this.txtNachteil12GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil12GP, "txtNachteil12GP");
             this.txtNachteil12GP.Name = "txtNachteil12GP";
-            this.txtNachteil12GP.Click += new System.EventHandler(this.txtNachteil12_ValueChanged);
             // 
             // txtNachteil12Wert
             // 
             this.txtNachteil12Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil12Wert, "txtNachteil12Wert");
             this.txtNachteil12Wert.Name = "txtNachteil12Wert";
-            this.txtNachteil12Wert.Click += new System.EventHandler(this.txtNachteil12_ValueChanged);
             // 
             // txtNachteil12Name
             // 
             this.txtNachteil12Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil12Name, "txtNachteil12Name");
             this.txtNachteil12Name.Name = "txtNachteil12Name";
-            this.txtNachteil12Name.Click += new System.EventHandler(this.txtNachteil12_ValueChanged);
             // 
             // txtNachteil11Beschreibung
             // 
             this.txtNachteil11Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil11Beschreibung, "txtNachteil11Beschreibung");
             this.txtNachteil11Beschreibung.Name = "txtNachteil11Beschreibung";
-            this.txtNachteil11Beschreibung.Click += new System.EventHandler(this.txtNachteil11_ValueChanged);
             // 
             // txtNachteil11GP
             // 
             this.txtNachteil11GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil11GP, "txtNachteil11GP");
             this.txtNachteil11GP.Name = "txtNachteil11GP";
-            this.txtNachteil11GP.Click += new System.EventHandler(this.txtNachteil11_ValueChanged);
             // 
             // txtNachteil11Wert
             // 
             this.txtNachteil11Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil11Wert, "txtNachteil11Wert");
             this.txtNachteil11Wert.Name = "txtNachteil11Wert";
-            this.txtNachteil11Wert.Click += new System.EventHandler(this.txtNachteil11_ValueChanged);
             // 
             // txtNachteil11Name
             // 
             this.txtNachteil11Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil11Name, "txtNachteil11Name");
             this.txtNachteil11Name.Name = "txtNachteil11Name";
-            this.txtNachteil11Name.Click += new System.EventHandler(this.txtNachteil11_ValueChanged);
             // 
             // txtNachteil10Beschreibung
             // 
             this.txtNachteil10Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil10Beschreibung, "txtNachteil10Beschreibung");
             this.txtNachteil10Beschreibung.Name = "txtNachteil10Beschreibung";
-            this.txtNachteil10Beschreibung.Click += new System.EventHandler(this.txtNachteil10_ValueChanged);
             // 
             // txtNachteil10GP
             // 
             this.txtNachteil10GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil10GP, "txtNachteil10GP");
             this.txtNachteil10GP.Name = "txtNachteil10GP";
-            this.txtNachteil10GP.Click += new System.EventHandler(this.txtNachteil10_ValueChanged);
             // 
             // txtNachteil10Wert
             // 
             this.txtNachteil10Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil10Wert, "txtNachteil10Wert");
             this.txtNachteil10Wert.Name = "txtNachteil10Wert";
-            this.txtNachteil10Wert.Click += new System.EventHandler(this.txtNachteil10_ValueChanged);
             // 
             // txtNachteil10Name
             // 
             this.txtNachteil10Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil10Name, "txtNachteil10Name");
             this.txtNachteil10Name.Name = "txtNachteil10Name";
-            this.txtNachteil10Name.Click += new System.EventHandler(this.txtNachteil10_ValueChanged);
             // 
             // txtNachteil9Beschreibung
             // 
             this.txtNachteil9Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil9Beschreibung, "txtNachteil9Beschreibung");
             this.txtNachteil9Beschreibung.Name = "txtNachteil9Beschreibung";
-            this.txtNachteil9Beschreibung.Click += new System.EventHandler(this.txtNachteil9_ValueChanged);
             // 
             // txtNachteil9GP
             // 
             this.txtNachteil9GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil9GP, "txtNachteil9GP");
             this.txtNachteil9GP.Name = "txtNachteil9GP";
-            this.txtNachteil9GP.Click += new System.EventHandler(this.txtNachteil9_ValueChanged);
             // 
             // txtNachteil9Wert
             // 
             this.txtNachteil9Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil9Wert, "txtNachteil9Wert");
             this.txtNachteil9Wert.Name = "txtNachteil9Wert";
-            this.txtNachteil9Wert.Click += new System.EventHandler(this.txtNachteil9_ValueChanged);
             // 
             // txtNachteil9Name
             // 
             this.txtNachteil9Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil9Name, "txtNachteil9Name");
             this.txtNachteil9Name.Name = "txtNachteil9Name";
-            this.txtNachteil9Name.Click += new System.EventHandler(this.txtNachteil9_ValueChanged);
             // 
             // txtNachteil8Beschreibung
             // 
             this.txtNachteil8Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil8Beschreibung, "txtNachteil8Beschreibung");
             this.txtNachteil8Beschreibung.Name = "txtNachteil8Beschreibung";
-            this.txtNachteil8Beschreibung.Click += new System.EventHandler(this.txtNachteil8_ValueChanged);
             // 
             // txtNachteil8GP
             // 
             this.txtNachteil8GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil8GP, "txtNachteil8GP");
             this.txtNachteil8GP.Name = "txtNachteil8GP";
-            this.txtNachteil8GP.Click += new System.EventHandler(this.txtNachteil8_ValueChanged);
             // 
             // txtNachteil8Wert
             // 
             this.txtNachteil8Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil8Wert, "txtNachteil8Wert");
             this.txtNachteil8Wert.Name = "txtNachteil8Wert";
-            this.txtNachteil8Wert.Click += new System.EventHandler(this.txtNachteil8_ValueChanged);
             // 
             // txtNachteil8Name
             // 
             this.txtNachteil8Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil8Name, "txtNachteil8Name");
             this.txtNachteil8Name.Name = "txtNachteil8Name";
-            this.txtNachteil8Name.Click += new System.EventHandler(this.txtNachteil8_ValueChanged);
             // 
             // txtNachteil7Beschreibung
             // 
             this.txtNachteil7Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil7Beschreibung, "txtNachteil7Beschreibung");
             this.txtNachteil7Beschreibung.Name = "txtNachteil7Beschreibung";
-            this.txtNachteil7Beschreibung.Click += new System.EventHandler(this.txtNachteil7_ValueChanged);
             // 
             // txtNachteil7GP
             // 
             this.txtNachteil7GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil7GP, "txtNachteil7GP");
             this.txtNachteil7GP.Name = "txtNachteil7GP";
-            this.txtNachteil7GP.Click += new System.EventHandler(this.txtNachteil7_ValueChanged);
             // 
             // txtNachteil7Wert
             // 
             this.txtNachteil7Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil7Wert, "txtNachteil7Wert");
             this.txtNachteil7Wert.Name = "txtNachteil7Wert";
-            this.txtNachteil7Wert.Click += new System.EventHandler(this.txtNachteil7_ValueChanged);
             // 
             // txtNachteil7Name
             // 
             this.txtNachteil7Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil7Name, "txtNachteil7Name");
             this.txtNachteil7Name.Name = "txtNachteil7Name";
-            this.txtNachteil7Name.Click += new System.EventHandler(this.txtNachteil7_ValueChanged);
             // 
             // txtNachteil6Beschreibung
             // 
             this.txtNachteil6Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil6Beschreibung, "txtNachteil6Beschreibung");
             this.txtNachteil6Beschreibung.Name = "txtNachteil6Beschreibung";
-            this.txtNachteil6Beschreibung.Click += new System.EventHandler(this.txtNachteil6_ValueChanged);
             // 
             // txtNachteil6GP
             // 
             this.txtNachteil6GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil6GP, "txtNachteil6GP");
             this.txtNachteil6GP.Name = "txtNachteil6GP";
-            this.txtNachteil6GP.Click += new System.EventHandler(this.txtNachteil6_ValueChanged);
             // 
             // txtNachteil6Wert
             // 
             this.txtNachteil6Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil6Wert, "txtNachteil6Wert");
             this.txtNachteil6Wert.Name = "txtNachteil6Wert";
-            this.txtNachteil6Wert.Click += new System.EventHandler(this.txtNachteil6_ValueChanged);
             // 
             // txtNachteil6Name
             // 
             this.txtNachteil6Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil6Name, "txtNachteil6Name");
             this.txtNachteil6Name.Name = "txtNachteil6Name";
-            this.txtNachteil6Name.Click += new System.EventHandler(this.txtNachteil6_ValueChanged);
             // 
             // txtNachteil5Beschreibung
             // 
             this.txtNachteil5Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil5Beschreibung, "txtNachteil5Beschreibung");
             this.txtNachteil5Beschreibung.Name = "txtNachteil5Beschreibung";
-            this.txtNachteil5Beschreibung.Click += new System.EventHandler(this.txtNachteil5_ValueChanged);
             // 
             // txtNachteil5GP
             // 
             this.txtNachteil5GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil5GP, "txtNachteil5GP");
             this.txtNachteil5GP.Name = "txtNachteil5GP";
-            this.txtNachteil5GP.Click += new System.EventHandler(this.txtNachteil5_ValueChanged);
             // 
             // txtNachteil5Wert
             // 
             this.txtNachteil5Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil5Wert, "txtNachteil5Wert");
             this.txtNachteil5Wert.Name = "txtNachteil5Wert";
-            this.txtNachteil5Wert.Click += new System.EventHandler(this.txtNachteil5_ValueChanged);
             // 
             // txtNachteil5Name
             // 
             this.txtNachteil5Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil5Name, "txtNachteil5Name");
             this.txtNachteil5Name.Name = "txtNachteil5Name";
-            this.txtNachteil5Name.Click += new System.EventHandler(this.txtNachteil5_ValueChanged);
             // 
             // txtNachteil4Beschreibung
             // 
             this.txtNachteil4Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil4Beschreibung, "txtNachteil4Beschreibung");
             this.txtNachteil4Beschreibung.Name = "txtNachteil4Beschreibung";
-            this.txtNachteil4Beschreibung.Click += new System.EventHandler(this.txtNachteil4_ValueChanged);
             // 
             // txtNachteil4GP
             // 
             this.txtNachteil4GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil4GP, "txtNachteil4GP");
             this.txtNachteil4GP.Name = "txtNachteil4GP";
-            this.txtNachteil4GP.Click += new System.EventHandler(this.txtNachteil4_ValueChanged);
             // 
             // txtNachteil4Wert
             // 
             this.txtNachteil4Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil4Wert, "txtNachteil4Wert");
             this.txtNachteil4Wert.Name = "txtNachteil4Wert";
-            this.txtNachteil4Wert.Click += new System.EventHandler(this.txtNachteil4_ValueChanged);
             // 
             // txtNachteil4Name
             // 
             this.txtNachteil4Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil4Name, "txtNachteil4Name");
             this.txtNachteil4Name.Name = "txtNachteil4Name";
-            this.txtNachteil4Name.Click += new System.EventHandler(this.txtNachteil4_ValueChanged);
             // 
             // txtNachteil3Beschreibung
             // 
             this.txtNachteil3Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil3Beschreibung, "txtNachteil3Beschreibung");
             this.txtNachteil3Beschreibung.Name = "txtNachteil3Beschreibung";
-            this.txtNachteil3Beschreibung.Click += new System.EventHandler(this.txtNachteil3_ValueChanged);
             // 
             // txtNachteil3GP
             // 
             this.txtNachteil3GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil3GP, "txtNachteil3GP");
             this.txtNachteil3GP.Name = "txtNachteil3GP";
-            this.txtNachteil3GP.Click += new System.EventHandler(this.txtNachteil3_ValueChanged);
             // 
             // txtNachteil3Wert
             // 
             this.txtNachteil3Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil3Wert, "txtNachteil3Wert");
             this.txtNachteil3Wert.Name = "txtNachteil3Wert";
-            this.txtNachteil3Wert.Click += new System.EventHandler(this.txtNachteil3_ValueChanged);
             // 
             // txtNachteil3Name
             // 
             this.txtNachteil3Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil3Name, "txtNachteil3Name");
             this.txtNachteil3Name.Name = "txtNachteil3Name";
-            this.txtNachteil3Name.Click += new System.EventHandler(this.txtNachteil3_ValueChanged);
             // 
             // txtNachteil2Beschreibung
             // 
             this.txtNachteil2Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil2Beschreibung, "txtNachteil2Beschreibung");
             this.txtNachteil2Beschreibung.Name = "txtNachteil2Beschreibung";
-            this.txtNachteil2Beschreibung.Click += new System.EventHandler(this.txtNachteil2_ValueChanged);
             // 
             // txtNachteil2GP
             // 
             this.txtNachteil2GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil2GP, "txtNachteil2GP");
             this.txtNachteil2GP.Name = "txtNachteil2GP";
-            this.txtNachteil2GP.Click += new System.EventHandler(this.txtNachteil2_ValueChanged);
             // 
             // txtNachteil2Wert
             // 
             this.txtNachteil2Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil2Wert, "txtNachteil2Wert");
             this.txtNachteil2Wert.Name = "txtNachteil2Wert";
-            this.txtNachteil2Wert.Click += new System.EventHandler(this.txtNachteil2_ValueChanged);
             // 
             // txtNachteil2Name
             // 
             this.txtNachteil2Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil2Name, "txtNachteil2Name");
             this.txtNachteil2Name.Name = "txtNachteil2Name";
-            this.txtNachteil2Name.Click += new System.EventHandler(this.txtNachteil2_ValueChanged);
             // 
             // txtNachteil1Beschreibung
             // 
             this.txtNachteil1Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil1Beschreibung, "txtNachteil1Beschreibung");
             this.txtNachteil1Beschreibung.Name = "txtNachteil1Beschreibung";
-            this.txtNachteil1Beschreibung.Click += new System.EventHandler(this.txtNachteil1_ValueChanged);
             // 
             // txtNachteil1GP
             // 
             this.txtNachteil1GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil1GP, "txtNachteil1GP");
             this.txtNachteil1GP.Name = "txtNachteil1GP";
-            this.txtNachteil1GP.Click += new System.EventHandler(this.txtNachteil1_ValueChanged);
             // 
             // txtNachteil1Wert
             // 
             this.txtNachteil1Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil1Wert, "txtNachteil1Wert");
             this.txtNachteil1Wert.Name = "txtNachteil1Wert";
-            this.txtNachteil1Wert.Click += new System.EventHandler(this.txtNachteil1_ValueChanged);
             // 
             // txtNachteil1Name
             // 
             this.txtNachteil1Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtNachteil1Name, "txtNachteil1Name");
             this.txtNachteil1Name.Name = "txtNachteil1Name";
-            this.txtNachteil1Name.Click += new System.EventHandler(this.txtNachteil1_ValueChanged);
             // 
             // label61
             // 
@@ -4117,420 +4159,360 @@
             this.txtVorteil15Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil15Beschreibung, "txtVorteil15Beschreibung");
             this.txtVorteil15Beschreibung.Name = "txtVorteil15Beschreibung";
-            this.txtVorteil15Beschreibung.Click += new System.EventHandler(this.txtVorteil15_ValueChanged);
             // 
             // txtVorteil15GP
             // 
             this.txtVorteil15GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil15GP, "txtVorteil15GP");
             this.txtVorteil15GP.Name = "txtVorteil15GP";
-            this.txtVorteil15GP.Click += new System.EventHandler(this.txtVorteil15_ValueChanged);
             // 
             // txtVorteil15Wert
             // 
             this.txtVorteil15Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil15Wert, "txtVorteil15Wert");
             this.txtVorteil15Wert.Name = "txtVorteil15Wert";
-            this.txtVorteil15Wert.Click += new System.EventHandler(this.txtVorteil15_ValueChanged);
             // 
             // txtVorteil15Name
             // 
             this.txtVorteil15Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil15Name, "txtVorteil15Name");
             this.txtVorteil15Name.Name = "txtVorteil15Name";
-            this.txtVorteil15Name.Click += new System.EventHandler(this.txtVorteil15_ValueChanged);
             // 
             // txtVorteil14Beschreibung
             // 
             this.txtVorteil14Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil14Beschreibung, "txtVorteil14Beschreibung");
             this.txtVorteil14Beschreibung.Name = "txtVorteil14Beschreibung";
-            this.txtVorteil14Beschreibung.Click += new System.EventHandler(this.txtVortei14_ValueChanged);
             // 
             // txtVorteil14GP
             // 
             this.txtVorteil14GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil14GP, "txtVorteil14GP");
             this.txtVorteil14GP.Name = "txtVorteil14GP";
-            this.txtVorteil14GP.Click += new System.EventHandler(this.txtVortei14_ValueChanged);
             // 
             // txtVorteil14Wert
             // 
             this.txtVorteil14Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil14Wert, "txtVorteil14Wert");
             this.txtVorteil14Wert.Name = "txtVorteil14Wert";
-            this.txtVorteil14Wert.Click += new System.EventHandler(this.txtVortei14_ValueChanged);
             // 
             // txtVorteil14Name
             // 
             this.txtVorteil14Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil14Name, "txtVorteil14Name");
             this.txtVorteil14Name.Name = "txtVorteil14Name";
-            this.txtVorteil14Name.Click += new System.EventHandler(this.txtVortei14_ValueChanged);
             // 
             // txtVorteil13Beschreibung
             // 
             this.txtVorteil13Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil13Beschreibung, "txtVorteil13Beschreibung");
             this.txtVorteil13Beschreibung.Name = "txtVorteil13Beschreibung";
-            this.txtVorteil13Beschreibung.Click += new System.EventHandler(this.txtVorteil13_ValueChanged);
             // 
             // txtVorteil13GP
             // 
             this.txtVorteil13GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil13GP, "txtVorteil13GP");
             this.txtVorteil13GP.Name = "txtVorteil13GP";
-            this.txtVorteil13GP.Click += new System.EventHandler(this.txtVorteil13_ValueChanged);
             // 
             // txtVorteil13Wert
             // 
             this.txtVorteil13Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil13Wert, "txtVorteil13Wert");
             this.txtVorteil13Wert.Name = "txtVorteil13Wert";
-            this.txtVorteil13Wert.Click += new System.EventHandler(this.txtVorteil13_ValueChanged);
             // 
             // txtVorteil13Name
             // 
             this.txtVorteil13Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil13Name, "txtVorteil13Name");
             this.txtVorteil13Name.Name = "txtVorteil13Name";
-            this.txtVorteil13Name.Click += new System.EventHandler(this.txtVorteil13_ValueChanged);
             // 
             // txtVorteil12Beschreibung
             // 
             this.txtVorteil12Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil12Beschreibung, "txtVorteil12Beschreibung");
             this.txtVorteil12Beschreibung.Name = "txtVorteil12Beschreibung";
-            this.txtVorteil12Beschreibung.Click += new System.EventHandler(this.txtVorteil12_ValueChanged);
             // 
             // txtVorteil12GP
             // 
             this.txtVorteil12GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil12GP, "txtVorteil12GP");
             this.txtVorteil12GP.Name = "txtVorteil12GP";
-            this.txtVorteil12GP.Click += new System.EventHandler(this.txtVorteil12_ValueChanged);
             // 
             // txtVorteil12Wert
             // 
             this.txtVorteil12Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil12Wert, "txtVorteil12Wert");
             this.txtVorteil12Wert.Name = "txtVorteil12Wert";
-            this.txtVorteil12Wert.Click += new System.EventHandler(this.txtVorteil12_ValueChanged);
             // 
             // txtVorteil12Name
             // 
             this.txtVorteil12Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil12Name, "txtVorteil12Name");
             this.txtVorteil12Name.Name = "txtVorteil12Name";
-            this.txtVorteil12Name.Click += new System.EventHandler(this.txtVorteil12_ValueChanged);
             // 
             // txtVorteil11Beschreibung
             // 
             this.txtVorteil11Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil11Beschreibung, "txtVorteil11Beschreibung");
             this.txtVorteil11Beschreibung.Name = "txtVorteil11Beschreibung";
-            this.txtVorteil11Beschreibung.Click += new System.EventHandler(this.txtVorteil11_ValueChanged);
             // 
             // txtVorteil11GP
             // 
             this.txtVorteil11GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil11GP, "txtVorteil11GP");
             this.txtVorteil11GP.Name = "txtVorteil11GP";
-            this.txtVorteil11GP.Click += new System.EventHandler(this.txtVorteil11_ValueChanged);
             // 
             // txtVorteil11Wert
             // 
             this.txtVorteil11Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil11Wert, "txtVorteil11Wert");
             this.txtVorteil11Wert.Name = "txtVorteil11Wert";
-            this.txtVorteil11Wert.Click += new System.EventHandler(this.txtVorteil11_ValueChanged);
             // 
             // txtVorteil11Name
             // 
             this.txtVorteil11Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil11Name, "txtVorteil11Name");
             this.txtVorteil11Name.Name = "txtVorteil11Name";
-            this.txtVorteil11Name.Click += new System.EventHandler(this.txtVorteil11_ValueChanged);
             // 
             // txtVorteil10Beschreibung
             // 
             this.txtVorteil10Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil10Beschreibung, "txtVorteil10Beschreibung");
             this.txtVorteil10Beschreibung.Name = "txtVorteil10Beschreibung";
-            this.txtVorteil10Beschreibung.Click += new System.EventHandler(this.txtVorteil10_ValueChanged);
             // 
             // txtVorteil10GP
             // 
             this.txtVorteil10GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil10GP, "txtVorteil10GP");
             this.txtVorteil10GP.Name = "txtVorteil10GP";
-            this.txtVorteil10GP.Click += new System.EventHandler(this.txtVorteil10_ValueChanged);
             // 
             // txtVorteil10Wert
             // 
             this.txtVorteil10Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil10Wert, "txtVorteil10Wert");
             this.txtVorteil10Wert.Name = "txtVorteil10Wert";
-            this.txtVorteil10Wert.Click += new System.EventHandler(this.txtVorteil10_ValueChanged);
             // 
             // txtVorteil10Name
             // 
             this.txtVorteil10Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil10Name, "txtVorteil10Name");
             this.txtVorteil10Name.Name = "txtVorteil10Name";
-            this.txtVorteil10Name.Click += new System.EventHandler(this.txtVorteil10_ValueChanged);
             // 
             // txtVorteil9Beschreibung
             // 
             this.txtVorteil9Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil9Beschreibung, "txtVorteil9Beschreibung");
             this.txtVorteil9Beschreibung.Name = "txtVorteil9Beschreibung";
-            this.txtVorteil9Beschreibung.Click += new System.EventHandler(this.txtVorteil9_ValueChanged);
             // 
             // txtVorteil9GP
             // 
             this.txtVorteil9GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil9GP, "txtVorteil9GP");
             this.txtVorteil9GP.Name = "txtVorteil9GP";
-            this.txtVorteil9GP.Click += new System.EventHandler(this.txtVorteil9_ValueChanged);
             // 
             // txtVorteil9Wert
             // 
             this.txtVorteil9Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil9Wert, "txtVorteil9Wert");
             this.txtVorteil9Wert.Name = "txtVorteil9Wert";
-            this.txtVorteil9Wert.Click += new System.EventHandler(this.txtVorteil9_ValueChanged);
             // 
             // txtVorteil9Name
             // 
             this.txtVorteil9Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil9Name, "txtVorteil9Name");
             this.txtVorteil9Name.Name = "txtVorteil9Name";
-            this.txtVorteil9Name.Click += new System.EventHandler(this.txtVorteil9_ValueChanged);
             // 
             // txtVorteil8Beschreibung
             // 
             this.txtVorteil8Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil8Beschreibung, "txtVorteil8Beschreibung");
             this.txtVorteil8Beschreibung.Name = "txtVorteil8Beschreibung";
-            this.txtVorteil8Beschreibung.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
             // 
             // txtVorteil8GP
             // 
             this.txtVorteil8GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil8GP, "txtVorteil8GP");
             this.txtVorteil8GP.Name = "txtVorteil8GP";
-            this.txtVorteil8GP.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
             // 
             // txtVorteil8Wert
             // 
             this.txtVorteil8Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil8Wert, "txtVorteil8Wert");
             this.txtVorteil8Wert.Name = "txtVorteil8Wert";
-            this.txtVorteil8Wert.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
             // 
             // txtVorteil8Name
             // 
             this.txtVorteil8Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil8Name, "txtVorteil8Name");
             this.txtVorteil8Name.Name = "txtVorteil8Name";
-            this.txtVorteil8Name.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
             // 
             // txtVorteil7Beschreibung
             // 
             this.txtVorteil7Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil7Beschreibung, "txtVorteil7Beschreibung");
             this.txtVorteil7Beschreibung.Name = "txtVorteil7Beschreibung";
-            this.txtVorteil7Beschreibung.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
             // 
             // txtVorteil7GP
             // 
             this.txtVorteil7GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil7GP, "txtVorteil7GP");
             this.txtVorteil7GP.Name = "txtVorteil7GP";
-            this.txtVorteil7GP.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
             // 
             // txtVorteil7Wert
             // 
             this.txtVorteil7Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil7Wert, "txtVorteil7Wert");
             this.txtVorteil7Wert.Name = "txtVorteil7Wert";
-            this.txtVorteil7Wert.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
             // 
             // txtVorteil7Name
             // 
             this.txtVorteil7Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil7Name, "txtVorteil7Name");
             this.txtVorteil7Name.Name = "txtVorteil7Name";
-            this.txtVorteil7Name.Click += new System.EventHandler(this.txtVorteil8_ValueChanged);
             // 
             // txtVorteil6Beschreibung
             // 
             this.txtVorteil6Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil6Beschreibung, "txtVorteil6Beschreibung");
             this.txtVorteil6Beschreibung.Name = "txtVorteil6Beschreibung";
-            this.txtVorteil6Beschreibung.Click += new System.EventHandler(this.txtVorteil7_ValueChanged);
             // 
             // txtVorteil6GP
             // 
             this.txtVorteil6GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil6GP, "txtVorteil6GP");
             this.txtVorteil6GP.Name = "txtVorteil6GP";
-            this.txtVorteil6GP.Click += new System.EventHandler(this.txtVorteil7_ValueChanged);
             // 
             // txtVorteil6Wert
             // 
             this.txtVorteil6Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil6Wert, "txtVorteil6Wert");
             this.txtVorteil6Wert.Name = "txtVorteil6Wert";
-            this.txtVorteil6Wert.Click += new System.EventHandler(this.txtVorteil7_ValueChanged);
             // 
             // txtVorteil6Name
             // 
             this.txtVorteil6Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil6Name, "txtVorteil6Name");
             this.txtVorteil6Name.Name = "txtVorteil6Name";
-            this.txtVorteil6Name.Click += new System.EventHandler(this.txtVorteil7_ValueChanged);
             // 
             // txtVorteil5Beschreibung
             // 
             this.txtVorteil5Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil5Beschreibung, "txtVorteil5Beschreibung");
             this.txtVorteil5Beschreibung.Name = "txtVorteil5Beschreibung";
-            this.txtVorteil5Beschreibung.Click += new System.EventHandler(this.txtVorteil5_ValueChanged);
             // 
             // txtVorteil5GP
             // 
             this.txtVorteil5GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil5GP, "txtVorteil5GP");
             this.txtVorteil5GP.Name = "txtVorteil5GP";
-            this.txtVorteil5GP.Click += new System.EventHandler(this.txtVorteil5_ValueChanged);
             // 
             // txtVorteil5Wert
             // 
             this.txtVorteil5Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil5Wert, "txtVorteil5Wert");
             this.txtVorteil5Wert.Name = "txtVorteil5Wert";
-            this.txtVorteil5Wert.Click += new System.EventHandler(this.txtVorteil5_ValueChanged);
             // 
             // txtVorteil5Name
             // 
             this.txtVorteil5Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil5Name, "txtVorteil5Name");
             this.txtVorteil5Name.Name = "txtVorteil5Name";
-            this.txtVorteil5Name.Click += new System.EventHandler(this.txtVorteil5_ValueChanged);
             // 
             // txtVorteil4Beschreibung
             // 
             this.txtVorteil4Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil4Beschreibung, "txtVorteil4Beschreibung");
             this.txtVorteil4Beschreibung.Name = "txtVorteil4Beschreibung";
-            this.txtVorteil4Beschreibung.Click += new System.EventHandler(this.txtVorteil4_ValueChanged);
             // 
             // txtVorteil4GP
             // 
             this.txtVorteil4GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil4GP, "txtVorteil4GP");
             this.txtVorteil4GP.Name = "txtVorteil4GP";
-            this.txtVorteil4GP.Click += new System.EventHandler(this.txtVorteil4_ValueChanged);
             // 
             // txtVorteil4Wert
             // 
             this.txtVorteil4Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil4Wert, "txtVorteil4Wert");
             this.txtVorteil4Wert.Name = "txtVorteil4Wert";
-            this.txtVorteil4Wert.Click += new System.EventHandler(this.txtVorteil4_ValueChanged);
             // 
             // txtVorteil4Name
             // 
             this.txtVorteil4Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil4Name, "txtVorteil4Name");
             this.txtVorteil4Name.Name = "txtVorteil4Name";
-            this.txtVorteil4Name.Click += new System.EventHandler(this.txtVorteil4_ValueChanged);
             // 
             // txtVorteil3Beschreibung
             // 
             this.txtVorteil3Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil3Beschreibung, "txtVorteil3Beschreibung");
             this.txtVorteil3Beschreibung.Name = "txtVorteil3Beschreibung";
-            this.txtVorteil3Beschreibung.Click += new System.EventHandler(this.txtVorteil3_ValueChanged);
             // 
             // txtVorteil3GP
             // 
             this.txtVorteil3GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil3GP, "txtVorteil3GP");
             this.txtVorteil3GP.Name = "txtVorteil3GP";
-            this.txtVorteil3GP.Click += new System.EventHandler(this.txtVorteil3_ValueChanged);
             // 
             // txtVorteil3Wert
             // 
             this.txtVorteil3Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil3Wert, "txtVorteil3Wert");
             this.txtVorteil3Wert.Name = "txtVorteil3Wert";
-            this.txtVorteil3Wert.Click += new System.EventHandler(this.txtVorteil3_ValueChanged);
             // 
             // txtVorteil3Name
             // 
             this.txtVorteil3Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil3Name, "txtVorteil3Name");
             this.txtVorteil3Name.Name = "txtVorteil3Name";
-            this.txtVorteil3Name.Click += new System.EventHandler(this.txtVorteil3_ValueChanged);
             // 
             // txtVorteil2Beschreibung
             // 
             this.txtVorteil2Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil2Beschreibung, "txtVorteil2Beschreibung");
             this.txtVorteil2Beschreibung.Name = "txtVorteil2Beschreibung";
-            this.txtVorteil2Beschreibung.Click += new System.EventHandler(this.txtVorteil2_ValueChanged);
             // 
             // txtVorteil2GP
             // 
             this.txtVorteil2GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil2GP, "txtVorteil2GP");
             this.txtVorteil2GP.Name = "txtVorteil2GP";
-            this.txtVorteil2GP.Click += new System.EventHandler(this.txtVorteil2_ValueChanged);
             // 
             // txtVorteil2Wert
             // 
             this.txtVorteil2Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil2Wert, "txtVorteil2Wert");
             this.txtVorteil2Wert.Name = "txtVorteil2Wert";
-            this.txtVorteil2Wert.Click += new System.EventHandler(this.txtVorteil2_ValueChanged);
             // 
             // txtVorteil2Name
             // 
             this.txtVorteil2Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil2Name, "txtVorteil2Name");
             this.txtVorteil2Name.Name = "txtVorteil2Name";
-            this.txtVorteil2Name.Click += new System.EventHandler(this.txtVorteil2_ValueChanged);
             // 
             // txtVorteil1Beschreibung
             // 
             this.txtVorteil1Beschreibung.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil1Beschreibung, "txtVorteil1Beschreibung");
             this.txtVorteil1Beschreibung.Name = "txtVorteil1Beschreibung";
-            this.txtVorteil1Beschreibung.Click += new System.EventHandler(this.txtVorteil1_ValueChanged);
             // 
             // txtVorteil1GP
             // 
             this.txtVorteil1GP.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil1GP, "txtVorteil1GP");
             this.txtVorteil1GP.Name = "txtVorteil1GP";
-            this.txtVorteil1GP.Click += new System.EventHandler(this.txtVorteil1_ValueChanged);
             // 
             // txtVorteil1Wert
             // 
             this.txtVorteil1Wert.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil1Wert, "txtVorteil1Wert");
             this.txtVorteil1Wert.Name = "txtVorteil1Wert";
-            this.txtVorteil1Wert.Click += new System.EventHandler(this.txtVorteil1_ValueChanged);
             // 
             // txtVorteil1Name
             // 
             this.txtVorteil1Name.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtVorteil1Name, "txtVorteil1Name");
             this.txtVorteil1Name.Name = "txtVorteil1Name";
-            this.txtVorteil1Name.Click += new System.EventHandler(this.txtVorteil1_ValueChanged);
             // 
             // label60
             // 
@@ -4585,558 +4567,477 @@
             this.txtGeldK.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtGeldK, "txtGeldK");
             this.txtGeldK.Name = "txtGeldK";
-            this.txtGeldK.TextChanged += new System.EventHandler(this.txtGeldK_TextChanged);
             // 
             // txtGeldH
             // 
             this.txtGeldH.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtGeldH, "txtGeldH");
             this.txtGeldH.Name = "txtGeldH";
-            this.txtGeldH.TextChanged += new System.EventHandler(this.txtGeldH_TextChanged);
             // 
             // txtGeldS
             // 
             this.txtGeldS.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtGeldS, "txtGeldS");
             this.txtGeldS.Name = "txtGeldS";
-            this.txtGeldS.TextChanged += new System.EventHandler(this.txtGeldS_TextChanged);
             // 
             // txtBank
             // 
             this.txtBank.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtBank, "txtBank");
             this.txtBank.Name = "txtBank";
-            this.txtBank.TextChanged += new System.EventHandler(this.txtBank_TextChanged);
             // 
             // txtGeldD
             // 
             this.txtGeldD.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtGeldD, "txtGeldD");
             this.txtGeldD.Name = "txtGeldD";
-            this.txtGeldD.TextChanged += new System.EventHandler(this.txtGeldD_TextChanged);
             // 
             // txtMagieresistenzERG
             // 
             this.txtMagieresistenzERG.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtMagieresistenzERG, "txtMagieresistenzERG");
             this.txtMagieresistenzERG.Name = "txtMagieresistenzERG";
-            this.txtMagieresistenzERG.TextChanged += new System.EventHandler(this.txtMagieresistenzERG_TextChanged);
             // 
             // txtMagieresistenzMALI
             // 
             this.txtMagieresistenzMALI.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtMagieresistenzMALI, "txtMagieresistenzMALI");
             this.txtMagieresistenzMALI.Name = "txtMagieresistenzMALI";
-            this.txtMagieresistenzMALI.TextChanged += new System.EventHandler(this.txtMagieresistenzMALI_TextChanged);
             // 
             // txtMagieresistenzPERM
             // 
             this.txtMagieresistenzPERM.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtMagieresistenzPERM, "txtMagieresistenzPERM");
             this.txtMagieresistenzPERM.Name = "txtMagieresistenzPERM";
-            this.txtMagieresistenzPERM.TextChanged += new System.EventHandler(this.txtMagieresistenzPERM_TextChanged);
             // 
             // txtMagieresistenzVOR
             // 
             this.txtMagieresistenzVOR.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtMagieresistenzVOR, "txtMagieresistenzVOR");
             this.txtMagieresistenzVOR.Name = "txtMagieresistenzVOR";
-            this.txtMagieresistenzVOR.TextChanged += new System.EventHandler(this.txtMagieresistenzVOR_TextChanged);
             // 
             // txtKarmaenergieERG
             // 
             this.txtKarmaenergieERG.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtKarmaenergieERG, "txtKarmaenergieERG");
             this.txtKarmaenergieERG.Name = "txtKarmaenergieERG";
-            this.txtKarmaenergieERG.TextChanged += new System.EventHandler(this.txtKarmaenergieERG_TextChanged);
             // 
             // txtKarmaenergieMALI
             // 
             this.txtKarmaenergieMALI.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtKarmaenergieMALI, "txtKarmaenergieMALI");
             this.txtKarmaenergieMALI.Name = "txtKarmaenergieMALI";
-            this.txtKarmaenergieMALI.TextChanged += new System.EventHandler(this.txtKarmaenergieMALI_TextChanged);
             // 
             // txtKarmaenergiePERM
             // 
             this.txtKarmaenergiePERM.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtKarmaenergiePERM, "txtKarmaenergiePERM");
             this.txtKarmaenergiePERM.Name = "txtKarmaenergiePERM";
-            this.txtKarmaenergiePERM.TextChanged += new System.EventHandler(this.txtKarmaenergiePERM_TextChanged);
             // 
             // txtKarmaenergieVOR
             // 
             this.txtKarmaenergieVOR.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtKarmaenergieVOR, "txtKarmaenergieVOR");
             this.txtKarmaenergieVOR.Name = "txtKarmaenergieVOR";
-            this.txtKarmaenergieVOR.TextChanged += new System.EventHandler(this.txtKarmaenergieVOR_TextChanged);
             // 
             // txtAstralenergieERG
             // 
             this.txtAstralenergieERG.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtAstralenergieERG, "txtAstralenergieERG");
             this.txtAstralenergieERG.Name = "txtAstralenergieERG";
-            this.txtAstralenergieERG.TextChanged += new System.EventHandler(this.txtAstralenergieERG_TextChanged);
             // 
             // txtAstralenergieMALI
             // 
             this.txtAstralenergieMALI.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtAstralenergieMALI, "txtAstralenergieMALI");
             this.txtAstralenergieMALI.Name = "txtAstralenergieMALI";
-            this.txtAstralenergieMALI.TextChanged += new System.EventHandler(this.txtAstralenergieMALI_TextChanged);
             // 
             // txtAstralenergiePERM
             // 
             this.txtAstralenergiePERM.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtAstralenergiePERM, "txtAstralenergiePERM");
             this.txtAstralenergiePERM.Name = "txtAstralenergiePERM";
-            this.txtAstralenergiePERM.TextChanged += new System.EventHandler(this.txtAstralenergiePERM_TextChanged);
             // 
             // txtAstralenergieVOR
             // 
             this.txtAstralenergieVOR.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtAstralenergieVOR, "txtAstralenergieVOR");
             this.txtAstralenergieVOR.Name = "txtAstralenergieVOR";
-            this.txtAstralenergieVOR.TextChanged += new System.EventHandler(this.txtAstralenergieVOR_TextChanged);
             // 
             // txtAusdauerERG
             // 
             this.txtAusdauerERG.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtAusdauerERG, "txtAusdauerERG");
             this.txtAusdauerERG.Name = "txtAusdauerERG";
-            this.txtAusdauerERG.TextChanged += new System.EventHandler(this.txtAusdauerERG_TextChanged);
             // 
             // txtAusdauerMALI
             // 
             this.txtAusdauerMALI.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtAusdauerMALI, "txtAusdauerMALI");
             this.txtAusdauerMALI.Name = "txtAusdauerMALI";
-            this.txtAusdauerMALI.TextChanged += new System.EventHandler(this.txtAusdauerMALI_TextChanged);
             // 
             // txtAusdauerPERM
             // 
             this.txtAusdauerPERM.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtAusdauerPERM, "txtAusdauerPERM");
             this.txtAusdauerPERM.Name = "txtAusdauerPERM";
-            this.txtAusdauerPERM.TextChanged += new System.EventHandler(this.txtAusdauerPERM_TextChanged);
             // 
             // txtAusdauerVOR
             // 
             this.txtAusdauerVOR.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtAusdauerVOR, "txtAusdauerVOR");
             this.txtAusdauerVOR.Name = "txtAusdauerVOR";
-            this.txtAusdauerVOR.TextChanged += new System.EventHandler(this.txtAusdauerVOR_TextChanged);
             // 
             // txtLebensenergieERG
             // 
             this.txtLebensenergieERG.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtLebensenergieERG, "txtLebensenergieERG");
             this.txtLebensenergieERG.Name = "txtLebensenergieERG";
-            this.txtLebensenergieERG.TextChanged += new System.EventHandler(this.txtLebensenergieERG_TextChanged);
             // 
             // txtLebensenergieMALI
             // 
             this.txtLebensenergieMALI.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtLebensenergieMALI, "txtLebensenergieMALI");
             this.txtLebensenergieMALI.Name = "txtLebensenergieMALI";
-            this.txtLebensenergieMALI.TextChanged += new System.EventHandler(this.txtLebensenergieMALI_TextChanged);
             // 
             // txtLebensenergiePERM
             // 
             this.txtLebensenergiePERM.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtLebensenergiePERM, "txtLebensenergiePERM");
             this.txtLebensenergiePERM.Name = "txtLebensenergiePERM";
-            this.txtLebensenergiePERM.TextChanged += new System.EventHandler(this.txtLebensenergiePERM_TextChanged);
             // 
             // txtLebensenergieVOR
             // 
             this.txtLebensenergieVOR.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtLebensenergieVOR, "txtLebensenergieVOR");
             this.txtLebensenergieVOR.Name = "txtLebensenergieVOR";
-            this.txtLebensenergieVOR.TextChanged += new System.EventHandler(this.txtLebensenergieVOR_TextChanged);
             // 
             // txtGeschwindigkeitMAX
             // 
             this.txtGeschwindigkeitMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtGeschwindigkeitMAX, "txtGeschwindigkeitMAX");
             this.txtGeschwindigkeitMAX.Name = "txtGeschwindigkeitMAX";
-            this.txtGeschwindigkeitMAX.TextChanged += new System.EventHandler(this.txtGeschwindigkeitMAX_TextChanged);
             // 
             // txtEntrückungMAX
             // 
             this.txtEntrückungMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtEntrückungMAX, "txtEntrückungMAX");
             this.txtEntrückungMAX.Name = "txtEntrückungMAX";
-            this.txtEntrückungMAX.TextChanged += new System.EventHandler(this.txtEntrückungMAX_TextChanged);
             // 
             // txtWundschwelleMAX
             // 
             this.txtWundschwelleMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtWundschwelleMAX, "txtWundschwelleMAX");
             this.txtWundschwelleMAX.Name = "txtWundschwelleMAX";
-            this.txtWundschwelleMAX.TextChanged += new System.EventHandler(this.txtWundschwelleMAX_TextChanged);
             // 
             // txtArtefaktkontrolleMAX
             // 
             this.txtArtefaktkontrolleMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtArtefaktkontrolleMAX, "txtArtefaktkontrolleMAX");
             this.txtArtefaktkontrolleMAX.Name = "txtArtefaktkontrolleMAX";
-            this.txtArtefaktkontrolleMAX.TextChanged += new System.EventHandler(this.txtArtefaktkontrolleMAX_TextChanged);
             // 
             // txtBeherschungswertMAX
             // 
             this.txtBeherschungswertMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtBeherschungswertMAX, "txtBeherschungswertMAX");
             this.txtBeherschungswertMAX.Name = "txtBeherschungswertMAX";
-            this.txtBeherschungswertMAX.TextChanged += new System.EventHandler(this.txtBeherschungswertMAX_TextChanged);
             // 
             // txtInitativeBasisMAX
             // 
             this.txtInitativeBasisMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtInitativeBasisMAX, "txtInitativeBasisMAX");
             this.txtInitativeBasisMAX.Name = "txtInitativeBasisMAX";
-            this.txtInitativeBasisMAX.TextChanged += new System.EventHandler(this.txtInitativeBasisMAX_TextChanged);
             // 
             // txtFernkampfBasisMAX
             // 
             this.txtFernkampfBasisMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtFernkampfBasisMAX, "txtFernkampfBasisMAX");
             this.txtFernkampfBasisMAX.Name = "txtFernkampfBasisMAX";
-            this.txtFernkampfBasisMAX.TextChanged += new System.EventHandler(this.txtFernkampfBasisMAX_TextChanged);
             // 
             // txtParadeBasisMAX
             // 
             this.txtParadeBasisMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtParadeBasisMAX, "txtParadeBasisMAX");
             this.txtParadeBasisMAX.Name = "txtParadeBasisMAX";
-            this.txtParadeBasisMAX.TextChanged += new System.EventHandler(this.txtParadeBasisMAX_TextChanged);
             // 
             // txtAttackeBaisMAX
             // 
             this.txtAttackeBaisMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtAttackeBaisMAX, "txtAttackeBaisMAX");
             this.txtAttackeBaisMAX.Name = "txtAttackeBaisMAX";
-            this.txtAttackeBaisMAX.TextChanged += new System.EventHandler(this.txtAttackeBaisMAX_TextChanged);
             // 
             // txtGeschwindigkeitMOD
             // 
             this.txtGeschwindigkeitMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtGeschwindigkeitMOD, "txtGeschwindigkeitMOD");
             this.txtGeschwindigkeitMOD.Name = "txtGeschwindigkeitMOD";
-            this.txtGeschwindigkeitMOD.TextChanged += new System.EventHandler(this.txtGeschwindigkeitMOD_TextChanged);
             // 
             // txtEntrückungMOD
             // 
             this.txtEntrückungMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtEntrückungMOD, "txtEntrückungMOD");
             this.txtEntrückungMOD.Name = "txtEntrückungMOD";
-            this.txtEntrückungMOD.TextChanged += new System.EventHandler(this.txtEntrückungMOD_TextChanged);
             // 
             // txtWundschwelleMOD
             // 
             this.txtWundschwelleMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtWundschwelleMOD, "txtWundschwelleMOD");
             this.txtWundschwelleMOD.Name = "txtWundschwelleMOD";
-            this.txtWundschwelleMOD.TextChanged += new System.EventHandler(this.txtWundschwelleMOD_TextChanged);
             // 
             // txtArtefaktkontrolleMOD
             // 
             this.txtArtefaktkontrolleMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtArtefaktkontrolleMOD, "txtArtefaktkontrolleMOD");
             this.txtArtefaktkontrolleMOD.Name = "txtArtefaktkontrolleMOD";
-            this.txtArtefaktkontrolleMOD.TextChanged += new System.EventHandler(this.txtArtefaktkontrolleMOD_TextChanged);
             // 
             // txtBeherschungswertMOD
             // 
             this.txtBeherschungswertMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtBeherschungswertMOD, "txtBeherschungswertMOD");
             this.txtBeherschungswertMOD.Name = "txtBeherschungswertMOD";
-            this.txtBeherschungswertMOD.TextChanged += new System.EventHandler(this.txtBeherschungswertMOD_TextChanged);
             // 
             // txtInitativeBasisMOD
             // 
             this.txtInitativeBasisMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtInitativeBasisMOD, "txtInitativeBasisMOD");
             this.txtInitativeBasisMOD.Name = "txtInitativeBasisMOD";
-            this.txtInitativeBasisMOD.TextChanged += new System.EventHandler(this.txtInitativeBasisMOD_TextChanged);
             // 
             // txtFernkampfBasisMOD
             // 
             this.txtFernkampfBasisMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtFernkampfBasisMOD, "txtFernkampfBasisMOD");
             this.txtFernkampfBasisMOD.Name = "txtFernkampfBasisMOD";
-            this.txtFernkampfBasisMOD.TextChanged += new System.EventHandler(this.txtFernkampfBasisMOD_TextChanged);
             // 
             // txtParadeBasisMOD
             // 
             this.txtParadeBasisMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtParadeBasisMOD, "txtParadeBasisMOD");
             this.txtParadeBasisMOD.Name = "txtParadeBasisMOD";
-            this.txtParadeBasisMOD.TextChanged += new System.EventHandler(this.txtParadeBasisMOD_TextChanged);
             // 
             // txtAttackeBasisMOD
             // 
             this.txtAttackeBasisMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtAttackeBasisMOD, "txtAttackeBasisMOD");
             this.txtAttackeBasisMOD.Name = "txtAttackeBasisMOD";
-            this.txtAttackeBasisMOD.TextChanged += new System.EventHandler(this.txtAttackeBasisMOD_TextChanged);
             // 
             // txtGeschwindigkeitAKT
             // 
             this.txtGeschwindigkeitAKT.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtGeschwindigkeitAKT, "txtGeschwindigkeitAKT");
             this.txtGeschwindigkeitAKT.Name = "txtGeschwindigkeitAKT";
-            this.txtGeschwindigkeitAKT.TextChanged += new System.EventHandler(this.txtGeschwindigkeitAKT_TextChanged);
             // 
             // txtEntrückungAKT
             // 
             this.txtEntrückungAKT.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtEntrückungAKT, "txtEntrückungAKT");
             this.txtEntrückungAKT.Name = "txtEntrückungAKT";
-            this.txtEntrückungAKT.TextChanged += new System.EventHandler(this.txtEntrückungAKT_TextChanged);
             // 
             // txtWundschwelleAKT
             // 
             this.txtWundschwelleAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtWundschwelleAKT, "txtWundschwelleAKT");
             this.txtWundschwelleAKT.Name = "txtWundschwelleAKT";
-            this.txtWundschwelleAKT.TextChanged += new System.EventHandler(this.txtWundschwelleAKT_TextChanged);
             // 
             // txtArtefaktkontrolleAKT
             // 
             this.txtArtefaktkontrolleAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtArtefaktkontrolleAKT, "txtArtefaktkontrolleAKT");
             this.txtArtefaktkontrolleAKT.Name = "txtArtefaktkontrolleAKT";
-            this.txtArtefaktkontrolleAKT.TextChanged += new System.EventHandler(this.txtArtefaktkontrolleAKT_TextChanged);
             // 
             // txtBeherschungswertAKT
             // 
             this.txtBeherschungswertAKT.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtBeherschungswertAKT, "txtBeherschungswertAKT");
             this.txtBeherschungswertAKT.Name = "txtBeherschungswertAKT";
-            this.txtBeherschungswertAKT.TextChanged += new System.EventHandler(this.txtBeherschungswertAKT_TextChanged);
             // 
             // txtInitativeBasisAKT
             // 
             this.txtInitativeBasisAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtInitativeBasisAKT, "txtInitativeBasisAKT");
             this.txtInitativeBasisAKT.Name = "txtInitativeBasisAKT";
-            this.txtInitativeBasisAKT.TextChanged += new System.EventHandler(this.txtInitativeBasisAKT_TextChanged);
             // 
             // txtFernkampfBasisAKT
             // 
             this.txtFernkampfBasisAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtFernkampfBasisAKT, "txtFernkampfBasisAKT");
             this.txtFernkampfBasisAKT.Name = "txtFernkampfBasisAKT";
-            this.txtFernkampfBasisAKT.TextChanged += new System.EventHandler(this.txtFernkampfBasisAKT_TextChanged);
             // 
             // txtParadeBasisAKT
             // 
             this.txtParadeBasisAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtParadeBasisAKT, "txtParadeBasisAKT");
             this.txtParadeBasisAKT.Name = "txtParadeBasisAKT";
-            this.txtParadeBasisAKT.TextChanged += new System.EventHandler(this.txtParadeBasisAKT_TextChanged);
             // 
             // txtAttackeBaisAKT
             // 
             this.txtAttackeBaisAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtAttackeBaisAKT, "txtAttackeBaisAKT");
             this.txtAttackeBaisAKT.Name = "txtAttackeBaisAKT";
-            this.txtAttackeBaisAKT.TextChanged += new System.EventHandler(this.txtAttackeBaisAKT_TextChanged);
             // 
             // txtGesamtMAX
             // 
             this.txtGesamtMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtGesamtMAX, "txtGesamtMAX");
             this.txtGesamtMAX.Name = "txtGesamtMAX";
-            this.txtGesamtMAX.TextChanged += new System.EventHandler(this.txtGesamtMAX_TextChanged);
             // 
             // txtGesamtAKT
             // 
             this.txtGesamtAKT.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtGesamtAKT, "txtGesamtAKT");
             this.txtGesamtAKT.Name = "txtGesamtAKT";
-            this.txtGesamtAKT.TextChanged += new System.EventHandler(this.txtGesamtAKT_TextChanged);
             // 
             // txtSozialstatusMAX
             // 
             this.txtSozialstatusMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtSozialstatusMAX, "txtSozialstatusMAX");
             this.txtSozialstatusMAX.Name = "txtSozialstatusMAX";
-            this.txtSozialstatusMAX.TextChanged += new System.EventHandler(this.txtSozialstatusMAX_TextChanged);
             // 
             // txtKörperkraftMAX
             // 
             this.txtKörperkraftMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtKörperkraftMAX, "txtKörperkraftMAX");
             this.txtKörperkraftMAX.Name = "txtKörperkraftMAX";
-            this.txtKörperkraftMAX.TextChanged += new System.EventHandler(this.txtKörperkraftMAX_TextChanged);
             // 
             // txtKonstitutionMAX
             // 
             this.txtKonstitutionMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtKonstitutionMAX, "txtKonstitutionMAX");
             this.txtKonstitutionMAX.Name = "txtKonstitutionMAX";
-            this.txtKonstitutionMAX.TextChanged += new System.EventHandler(this.TxtKonstitutionMAX_TextChanged);
             // 
             // textGewandheitMAX
             // 
             this.textGewandheitMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.textGewandheitMAX, "textGewandheitMAX");
             this.textGewandheitMAX.Name = "textGewandheitMAX";
-            this.textGewandheitMAX.TextChanged += new System.EventHandler(this.textGewandheitMAX_TextChanged);
             // 
             // txtFingerfertigkeitMAX
             // 
             this.txtFingerfertigkeitMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtFingerfertigkeitMAX, "txtFingerfertigkeitMAX");
             this.txtFingerfertigkeitMAX.Name = "txtFingerfertigkeitMAX";
-            this.txtFingerfertigkeitMAX.TextChanged += new System.EventHandler(this.txtFingerfertigkeitMAX_TextChanged);
             // 
             // txtCharismaMAX
             // 
             this.txtCharismaMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtCharismaMAX, "txtCharismaMAX");
             this.txtCharismaMAX.Name = "txtCharismaMAX";
-            this.txtCharismaMAX.TextChanged += new System.EventHandler(this.txtCharismaMAX_TextChanged);
             // 
             // txtIntuitionMAX
             // 
             this.txtIntuitionMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtIntuitionMAX, "txtIntuitionMAX");
             this.txtIntuitionMAX.Name = "txtIntuitionMAX";
-            this.txtIntuitionMAX.TextChanged += new System.EventHandler(this.txtIntuitionMAX_TextChanged);
             // 
             // txtKlugheitMAX
             // 
             this.txtKlugheitMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtKlugheitMAX, "txtKlugheitMAX");
             this.txtKlugheitMAX.Name = "txtKlugheitMAX";
-            this.txtKlugheitMAX.TextChanged += new System.EventHandler(this.txtKlugheitMAX_TextChanged);
             // 
             // txtMutMAX
             // 
             this.txtMutMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtMutMAX, "txtMutMAX");
             this.txtMutMAX.Name = "txtMutMAX";
-            this.txtMutMAX.TextChanged += new System.EventHandler(this.txtMutMAX_TextChanged);
             // 
             // txtSozialstatusMOD
             // 
             this.txtSozialstatusMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtSozialstatusMOD, "txtSozialstatusMOD");
             this.txtSozialstatusMOD.Name = "txtSozialstatusMOD";
-            this.txtSozialstatusMOD.TextChanged += new System.EventHandler(this.txtSozialstatusMOD_TextChanged);
             // 
             // txtKörperkraftMOD
             // 
             this.txtKörperkraftMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtKörperkraftMOD, "txtKörperkraftMOD");
             this.txtKörperkraftMOD.Name = "txtKörperkraftMOD";
-            this.txtKörperkraftMOD.TextChanged += new System.EventHandler(this.txtKörperkraftMOD_TextChanged);
             // 
             // txtKonstitutionMOD
             // 
             this.txtKonstitutionMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtKonstitutionMOD, "txtKonstitutionMOD");
             this.txtKonstitutionMOD.Name = "txtKonstitutionMOD";
-            this.txtKonstitutionMOD.TextChanged += new System.EventHandler(this.txtKonstitutionMOD_TextChanged);
             // 
             // textGewandheitMOD
             // 
             this.textGewandheitMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.textGewandheitMOD, "textGewandheitMOD");
             this.textGewandheitMOD.Name = "textGewandheitMOD";
-            this.textGewandheitMOD.TextChanged += new System.EventHandler(this.textGewandheitMOD_TextChanged);
             // 
             // txtFingerfertigkeitMOD
             // 
             this.txtFingerfertigkeitMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtFingerfertigkeitMOD, "txtFingerfertigkeitMOD");
             this.txtFingerfertigkeitMOD.Name = "txtFingerfertigkeitMOD";
-            this.txtFingerfertigkeitMOD.TextChanged += new System.EventHandler(this.txtFingerfertigkeitMOD_TextChanged);
             // 
             // txtCharismaMOD
             // 
             this.txtCharismaMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtCharismaMOD, "txtCharismaMOD");
             this.txtCharismaMOD.Name = "txtCharismaMOD";
-            this.txtCharismaMOD.TextChanged += new System.EventHandler(this.txtCharismaMOD_TextChanged);
             // 
             // txtIntuitionMOD
             // 
             this.txtIntuitionMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtIntuitionMOD, "txtIntuitionMOD");
             this.txtIntuitionMOD.Name = "txtIntuitionMOD";
-            this.txtIntuitionMOD.TextChanged += new System.EventHandler(this.txtIntuitionMOD_TextChanged);
             // 
             // txtKlugheitMOD
             // 
             this.txtKlugheitMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtKlugheitMOD, "txtKlugheitMOD");
             this.txtKlugheitMOD.Name = "txtKlugheitMOD";
-            this.txtKlugheitMOD.TextChanged += new System.EventHandler(this.txtKlugheitMOD_TextChanged);
             // 
             // txtMutMOD
             // 
             this.txtMutMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.txtMutMOD, "txtMutMOD");
             this.txtMutMOD.Name = "txtMutMOD";
-            this.txtMutMOD.TextChanged += new System.EventHandler(this.txtMutMOD_TextChanged);
             // 
             // txtSozialstatusAKT
             // 
             resources.ApplyResources(this.txtSozialstatusAKT, "txtSozialstatusAKT");
             this.txtSozialstatusAKT.Name = "txtSozialstatusAKT";
-            this.txtSozialstatusAKT.TextChanged += new System.EventHandler(this.txtSozialstatusAKT_TextChanged);
             // 
             // txtKörperkraftAKT
             // 
             resources.ApplyResources(this.txtKörperkraftAKT, "txtKörperkraftAKT");
             this.txtKörperkraftAKT.Name = "txtKörperkraftAKT";
-            this.txtKörperkraftAKT.TextChanged += new System.EventHandler(this.txtKörperkraftAKT_TextChanged);
             // 
             // txtKonstitutionAKT
             // 
             resources.ApplyResources(this.txtKonstitutionAKT, "txtKonstitutionAKT");
             this.txtKonstitutionAKT.Name = "txtKonstitutionAKT";
-            this.txtKonstitutionAKT.TextChanged += new System.EventHandler(this.txtKonstitutionAKT_TextChanged);
             // 
             // textGewandheitAKT
             // 
             resources.ApplyResources(this.textGewandheitAKT, "textGewandheitAKT");
             this.textGewandheitAKT.Name = "textGewandheitAKT";
-            this.textGewandheitAKT.TextChanged += new System.EventHandler(this.textGewandheitAKT_TextChanged);
             // 
             // txtFingerfertigkeitAKT
             // 
             resources.ApplyResources(this.txtFingerfertigkeitAKT, "txtFingerfertigkeitAKT");
             this.txtFingerfertigkeitAKT.Name = "txtFingerfertigkeitAKT";
-            this.txtFingerfertigkeitAKT.TextChanged += new System.EventHandler(this.txtFingerfertigkeitAKT_TextChanged);
             // 
             // txtCharismaAKT
             // 
             resources.ApplyResources(this.txtCharismaAKT, "txtCharismaAKT");
             this.txtCharismaAKT.Name = "txtCharismaAKT";
-            this.txtCharismaAKT.TextChanged += new System.EventHandler(this.txtCharismaAKT_TextChanged);
             // 
             // txtIntuitionAKT
             // 
             resources.ApplyResources(this.txtIntuitionAKT, "txtIntuitionAKT");
             this.txtIntuitionAKT.Name = "txtIntuitionAKT";
-            this.txtIntuitionAKT.TextChanged += new System.EventHandler(this.txtIntuitionAKT_TextChanged);
             // 
             // txtKlugheitAKT
             // 
             resources.ApplyResources(this.txtKlugheitAKT, "txtKlugheitAKT");
             this.txtKlugheitAKT.Name = "txtKlugheitAKT";
-            this.txtKlugheitAKT.TextChanged += new System.EventHandler(this.txtKlugheitAKT_TextChanged);
             // 
             // txtMutAKT
             // 
             resources.ApplyResources(this.txtMutAKT, "txtMutAKT");
             this.txtMutAKT.Name = "txtMutAKT";
-            this.txtMutAKT.TextChanged += new System.EventHandler(this.txtMutAKT_TextChanged);
             // 
             // txtGöttergeschenke4
             // 
@@ -5166,31 +5067,26 @@
             // 
             resources.ApplyResources(this.txtFamulienstand, "txtFamulienstand");
             this.txtFamulienstand.Name = "txtFamulienstand";
-            this.txtFamulienstand.TextChanged += new System.EventHandler(this.txtFamulienstand_TextChanged);
             // 
             // txtGewicht
             // 
             resources.ApplyResources(this.txtGewicht, "txtGewicht");
             this.txtGewicht.Name = "txtGewicht";
-            this.txtGewicht.TextChanged += new System.EventHandler(this.txtGewicht_TextChanged);
             // 
             // txtGröße
             // 
             resources.ApplyResources(this.txtGröße, "txtGröße");
             this.txtGröße.Name = "txtGröße";
-            this.txtGröße.TextChanged += new System.EventHandler(this.txtGröße_TextChanged);
             // 
             // txtHautfarbe
             // 
             resources.ApplyResources(this.txtHautfarbe, "txtHautfarbe");
             this.txtHautfarbe.Name = "txtHautfarbe";
-            this.txtHautfarbe.TextChanged += new System.EventHandler(this.txtHautfarbe_TextChanged);
             // 
             // txtGeschlecht
             // 
             resources.ApplyResources(this.txtGeschlecht, "txtGeschlecht");
             this.txtGeschlecht.Name = "txtGeschlecht";
-            this.txtGeschlecht.TextChanged += new System.EventHandler(this.txtGeschlecht_TextChanged);
             // 
             // txtModifikation3
             // 
@@ -5214,55 +5110,46 @@
             // 
             resources.ApplyResources(this.txtGottheit, "txtGottheit");
             this.txtGottheit.Name = "txtGottheit";
-            this.txtGottheit.TextChanged += new System.EventHandler(this.txtGottheit_TextChanged);
             // 
             // txtHaarfarbe
             // 
             resources.ApplyResources(this.txtHaarfarbe, "txtHaarfarbe");
             this.txtHaarfarbe.Name = "txtHaarfarbe";
-            this.txtHaarfarbe.TextChanged += new System.EventHandler(this.txtHaarfarbe_TextChanged);
             // 
             // txtAlter
             // 
             resources.ApplyResources(this.txtAlter, "txtAlter");
             this.txtAlter.Name = "txtAlter";
-            this.txtAlter.TextChanged += new System.EventHandler(this.txtAlter_TextChanged);
             // 
             // txtProfession
             // 
             resources.ApplyResources(this.txtProfession, "txtProfession");
             this.txtProfession.Name = "txtProfession";
-            this.txtProfession.TextChanged += new System.EventHandler(this.txtProfession_TextChanged);
             // 
             // txtKultur
             // 
             resources.ApplyResources(this.txtKultur, "txtKultur");
             this.txtKultur.Name = "txtKultur";
-            this.txtKultur.TextChanged += new System.EventHandler(this.txtKultur_TextChanged);
             // 
             // txtRasse
             // 
             resources.ApplyResources(this.txtRasse, "txtRasse");
             this.txtRasse.Name = "txtRasse";
-            this.txtRasse.TextChanged += new System.EventHandler(this.txtRasse_TextChanged);
             // 
             // txtAnrede
             // 
             resources.ApplyResources(this.txtAnrede, "txtAnrede");
             this.txtAnrede.Name = "txtAnrede";
-            this.txtAnrede.TextChanged += new System.EventHandler(this.txtAnrede_TextChanged);
             // 
             // txtAugenfarbe
             // 
             resources.ApplyResources(this.txtAugenfarbe, "txtAugenfarbe");
             this.txtAugenfarbe.Name = "txtAugenfarbe";
-            this.txtAugenfarbe.TextChanged += new System.EventHandler(this.txtAugenfarbe_TextChanged);
             // 
             // txtName
             // 
             resources.ApplyResources(this.txtName, "txtName");
             this.txtName.Name = "txtName";
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label56
             // 
@@ -5423,56 +5310,47 @@
             // 
             resources.ApplyResources(this.lblSozialstatus, "lblSozialstatus");
             this.lblSozialstatus.Name = "lblSozialstatus";
-            this.lblSozialstatus.Click += new System.EventHandler(this.lblSozialstatus_Click);
             // 
             // lblKörperkraft
             // 
             resources.ApplyResources(this.lblKörperkraft, "lblKörperkraft");
             this.lblKörperkraft.Name = "lblKörperkraft";
-            this.lblKörperkraft.Click += new System.EventHandler(this.lblKörperkraft_Click);
             // 
             // lblKonstitution
             // 
             resources.ApplyResources(this.lblKonstitution, "lblKonstitution");
             this.lblKonstitution.Name = "lblKonstitution";
-            this.lblKonstitution.Click += new System.EventHandler(this.lblKonstitution_Click);
             // 
             // lblGewandheit
             // 
             resources.ApplyResources(this.lblGewandheit, "lblGewandheit");
             this.lblGewandheit.Name = "lblGewandheit";
-            this.lblGewandheit.Click += new System.EventHandler(this.lblGewandheit_Click);
             // 
             // lblFingerfertigkeit
             // 
             resources.ApplyResources(this.lblFingerfertigkeit, "lblFingerfertigkeit");
             this.lblFingerfertigkeit.Name = "lblFingerfertigkeit";
-            this.lblFingerfertigkeit.Click += new System.EventHandler(this.lblFingerfertigkeit_Click);
             // 
             // lblCharisma
             // 
             resources.ApplyResources(this.lblCharisma, "lblCharisma");
             this.lblCharisma.Name = "lblCharisma";
-            this.lblCharisma.Click += new System.EventHandler(this.lblCharisma_Click);
             // 
             // lblIntuition
             // 
             resources.ApplyResources(this.lblIntuition, "lblIntuition");
             this.lblIntuition.Name = "lblIntuition";
-            this.lblIntuition.Click += new System.EventHandler(this.lblIntuition_Click);
             // 
             // lblKlugheit
             // 
             resources.ApplyResources(this.lblKlugheit, "lblKlugheit");
             this.lblKlugheit.Name = "lblKlugheit";
-            this.lblKlugheit.Click += new System.EventHandler(this.lblKlugheit_Click);
             // 
             // lblMut
             // 
             resources.ApplyResources(this.lblMut, "lblMut");
             this.lblMut.BackColor = System.Drawing.SystemColors.Control;
             this.lblMut.Name = "lblMut";
-            this.lblMut.Click += new System.EventHandler(this.lblMut_Click);
             // 
             // label16
             // 
@@ -5962,116 +5840,12 @@
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // HPcompoBoxTalent1
+            // btnToolChangeDSA_PNP
             // 
-            this.HPcompoBoxTalent1.FormattingEnabled = true;
-            resources.ApplyResources(this.HPcompoBoxTalent1, "HPcompoBoxTalent1");
-            this.HPcompoBoxTalent1.Name = "HPcompoBoxTalent1";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeB5);
-            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeA5);
-            this.groupBox5.Controls.Add(this.HPcompoBoxTalent5);
-            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeB4);
-            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeA4);
-            this.groupBox5.Controls.Add(this.HPcompoBoxTalent4);
-            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeB3);
-            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeA3);
-            this.groupBox5.Controls.Add(this.HPcompoBoxTalent3);
-            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeB2);
-            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeA2);
-            this.groupBox5.Controls.Add(this.HPcompoBoxTalent2);
-            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeB1);
-            this.groupBox5.Controls.Add(this.HPcompoBoxTalentProbeA1);
-            this.groupBox5.Controls.Add(this.HPcompoBoxTalent1);
-            resources.ApplyResources(this.groupBox5, "groupBox5");
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.TabStop = false;
-            // 
-            // HPcompoBoxTalentProbeB1
-            // 
-            resources.ApplyResources(this.HPcompoBoxTalentProbeB1, "HPcompoBoxTalentProbeB1");
-            this.HPcompoBoxTalentProbeB1.Name = "HPcompoBoxTalentProbeB1";
-            this.HPcompoBoxTalentProbeB1.ReadOnly = true;
-            // 
-            // HPcompoBoxTalentProbeA1
-            // 
-            resources.ApplyResources(this.HPcompoBoxTalentProbeA1, "HPcompoBoxTalentProbeA1");
-            this.HPcompoBoxTalentProbeA1.Name = "HPcompoBoxTalentProbeA1";
-            this.HPcompoBoxTalentProbeA1.ReadOnly = true;
-            // 
-            // HPcompoBoxTalentProbeB2
-            // 
-            resources.ApplyResources(this.HPcompoBoxTalentProbeB2, "HPcompoBoxTalentProbeB2");
-            this.HPcompoBoxTalentProbeB2.Name = "HPcompoBoxTalentProbeB2";
-            this.HPcompoBoxTalentProbeB2.ReadOnly = true;
-            // 
-            // HPcompoBoxTalentProbeA2
-            // 
-            resources.ApplyResources(this.HPcompoBoxTalentProbeA2, "HPcompoBoxTalentProbeA2");
-            this.HPcompoBoxTalentProbeA2.Name = "HPcompoBoxTalentProbeA2";
-            this.HPcompoBoxTalentProbeA2.ReadOnly = true;
-            // 
-            // HPcompoBoxTalent2
-            // 
-            this.HPcompoBoxTalent2.FormattingEnabled = true;
-            resources.ApplyResources(this.HPcompoBoxTalent2, "HPcompoBoxTalent2");
-            this.HPcompoBoxTalent2.Name = "HPcompoBoxTalent2";
-            // 
-            // HPcompoBoxTalentProbeB3
-            // 
-            resources.ApplyResources(this.HPcompoBoxTalentProbeB3, "HPcompoBoxTalentProbeB3");
-            this.HPcompoBoxTalentProbeB3.Name = "HPcompoBoxTalentProbeB3";
-            this.HPcompoBoxTalentProbeB3.ReadOnly = true;
-            // 
-            // HPcompoBoxTalentProbeA3
-            // 
-            resources.ApplyResources(this.HPcompoBoxTalentProbeA3, "HPcompoBoxTalentProbeA3");
-            this.HPcompoBoxTalentProbeA3.Name = "HPcompoBoxTalentProbeA3";
-            this.HPcompoBoxTalentProbeA3.ReadOnly = true;
-            // 
-            // HPcompoBoxTalent3
-            // 
-            this.HPcompoBoxTalent3.FormattingEnabled = true;
-            resources.ApplyResources(this.HPcompoBoxTalent3, "HPcompoBoxTalent3");
-            this.HPcompoBoxTalent3.Name = "HPcompoBoxTalent3";
-            // 
-            // HPcompoBoxTalentProbeB4
-            // 
-            resources.ApplyResources(this.HPcompoBoxTalentProbeB4, "HPcompoBoxTalentProbeB4");
-            this.HPcompoBoxTalentProbeB4.Name = "HPcompoBoxTalentProbeB4";
-            this.HPcompoBoxTalentProbeB4.ReadOnly = true;
-            // 
-            // HPcompoBoxTalentProbeA4
-            // 
-            resources.ApplyResources(this.HPcompoBoxTalentProbeA4, "HPcompoBoxTalentProbeA4");
-            this.HPcompoBoxTalentProbeA4.Name = "HPcompoBoxTalentProbeA4";
-            this.HPcompoBoxTalentProbeA4.ReadOnly = true;
-            // 
-            // HPcompoBoxTalent4
-            // 
-            this.HPcompoBoxTalent4.FormattingEnabled = true;
-            resources.ApplyResources(this.HPcompoBoxTalent4, "HPcompoBoxTalent4");
-            this.HPcompoBoxTalent4.Name = "HPcompoBoxTalent4";
-            // 
-            // HPcompoBoxTalentProbeB5
-            // 
-            resources.ApplyResources(this.HPcompoBoxTalentProbeB5, "HPcompoBoxTalentProbeB5");
-            this.HPcompoBoxTalentProbeB5.Name = "HPcompoBoxTalentProbeB5";
-            this.HPcompoBoxTalentProbeB5.ReadOnly = true;
-            // 
-            // HPcompoBoxTalentProbeA5
-            // 
-            resources.ApplyResources(this.HPcompoBoxTalentProbeA5, "HPcompoBoxTalentProbeA5");
-            this.HPcompoBoxTalentProbeA5.Name = "HPcompoBoxTalentProbeA5";
-            this.HPcompoBoxTalentProbeA5.ReadOnly = true;
-            // 
-            // HPcompoBoxTalent5
-            // 
-            this.HPcompoBoxTalent5.FormattingEnabled = true;
-            resources.ApplyResources(this.HPcompoBoxTalent5, "HPcompoBoxTalent5");
-            this.HPcompoBoxTalent5.Name = "HPcompoBoxTalent5";
+            resources.ApplyResources(this.btnToolChangeDSA_PNP, "btnToolChangeDSA_PNP");
+            this.btnToolChangeDSA_PNP.Name = "btnToolChangeDSA_PNP";
+            this.btnToolChangeDSA_PNP.UseVisualStyleBackColor = true;
+            this.btnToolChangeDSA_PNP.Click += new System.EventHandler(this.btnToolChangeDSA_PNP_Click);
             // 
             // DSA
             // 
@@ -6106,6 +5880,8 @@
             this.groupBoxTalentName.PerformLayout();
             this.Heldenbrief.ResumeLayout(false);
             this.Heldenbrief.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -6115,8 +5891,6 @@
             this.Rewards.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -6849,6 +6623,7 @@
         private System.Windows.Forms.ComboBox HPcompoBoxTalent2;
         private System.Windows.Forms.TextBox HPcompoBoxTalentProbeB1;
         private System.Windows.Forms.TextBox HPcompoBoxTalentProbeA1;
+        private System.Windows.Forms.Button btnToolChangeDSA_PNP;
     }
 }
 

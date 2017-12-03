@@ -81,7 +81,7 @@
     <Compile Include="Classes\View\Forms\DSA.Designer.cs">
       <DependentUpon>DSA.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Util\Program.cs" />
+    <Compile Include="Classes\Util\program\Program.cs" />
     <Compile Include="Classes\View\Forms\CreateFeature.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +118,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Resources\PNP\Talents\FightingTalents\close\merker">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\PNP\Talents\FightingTalents\range\merker">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\PNP\Talents\FightingTalents\weaponless\merker">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\PNP\Talents\GeneralTalents\crafting\merker">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\PNP\Talents\GeneralTalents\knowldage\merker">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\PNP\Talents\GeneralTalents\nature\merker">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\PNP\Talents\GeneralTalents\physical\merker">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\PNP\Talents\GeneralTalents\social\merker">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\DSA\SaveGame\Kazarik_2.xml" />
@@ -140,9 +164,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\DSA\Talents\FightingTalents\close\Kettenwaffen.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\DSA\Talents\FightingTalents\close\Lanzenreiten .xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\DSA\Talents\FightingTalents\close\Lanzenreiten.xml">
@@ -488,6 +509,9 @@
     <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Athletik.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\PNP\SaveGame\merker">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\DSA\Talents\GeneralTalents\social\Überzeugen">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -528,8 +552,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Resources\anj80eb_700b.jpg" />
-    <Content Include="Resources\aventurien politisch.png" />
+    <None Include="Resources\PicturesDiv\anj80eb_700b.jpg" />
+    <Content Include="Resources\PicturesDiv\aventurien politisch.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
