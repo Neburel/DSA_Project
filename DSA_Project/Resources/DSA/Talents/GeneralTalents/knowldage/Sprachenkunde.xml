@@ -1,0 +1,11 @@
+<TalentLetter>
+  <Talent>
+    <Name>Sprachenkunde</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+    </Probe>
+    <Requirements />
+  </Talent>
+</TalentLetter>

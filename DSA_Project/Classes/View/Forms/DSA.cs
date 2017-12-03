@@ -1044,6 +1044,7 @@ namespace DSA_Project
 
             for (i = 0; i < SUpportedTalentCOunt; i++)
             {
+                int x = 0;
                 FightTalent FightingTalent = (FightTalent)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
                 if (FightingTalent == null) { break; }
                 talentNameLabels[i].Text = FightingTalent.getName();
@@ -1053,10 +1054,14 @@ namespace DSA_Project
                 talentBeTextBoxes[i].Text = FightingTalent.getBe().ToString();
                 talentSpezialisierungTextBoxes[i].Text = "";
                 talentAbleitungTextBoxes[i].Text = FightingTalent.getAbleitenString();
-
-
                 talentATTextBoxes[i].Text = FightingTalent.getAT().ToString();
                 talentPATextBoxes[i].Text = FightingTalent.getPA().ToString();
+
+                if (!Int32.TryParse(FightingTalent.getPA(), out x))
+                {
+                    talentWürfeTextBoxs[i].Text = FightingTalent.getPA();
+                }
+
             }
             groupBoxProbe.Left = groupBoxTalentName.Right + 5;
             groupBoxTaW.Left = groupBoxProbe.Right + 5;

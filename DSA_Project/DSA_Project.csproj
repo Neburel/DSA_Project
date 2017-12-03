@@ -412,6 +412,9 @@
     <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Rechtskunde.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\Sprachenkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\DSA\Talents\GeneralTalents\knowldage\SagenLegenden.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

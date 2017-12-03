@@ -3,7 +3,18 @@
     <Name>Wurfbeile</Name>
     <BE>BE-2</BE>
     <Probe />
-    <Diverates />
+    <Diverates>
+      <Diverate>
+        <Talent>Wurfspeere</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Wurfmesser</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
     <Requirements />
     <FightingTalent>
       <attack>FERNKAMPF_BASIS</attack>
