@@ -12,17 +12,17 @@ namespace DSA_Project
         public static void saveCharakter(Charakter charakter, string fileName)
         {
             XmlDocument characterFile               = new XmlDocument();
-            XmlElement CharakterBogenElement        = characterFile.CreateElement(ManagmentLoadXML.CharacterBogenElement);  
-            XmlElement HeldenBriefElement           = characterFile.CreateElement(ManagmentLoadXML.HeldenBriefElement);
-            XmlElement BasisDatenElement            = characterFile.CreateElement(ManagmentLoadXML.BasisDatenElement);
-            XmlElement AttributeElement             = characterFile.CreateElement(ManagmentLoadXML.AttributeElement);
-            XmlElement AdvancedValue                = characterFile.CreateElement(ManagmentLoadXML.AdvancedElement);
-            XmlElement MoneyElement                 = characterFile.CreateElement(ManagmentLoadXML.MoneyElement);
-            XmlElement FeatureElement               = characterFile.CreateElement(ManagmentLoadXML.FeatureElement);
-            XmlElement AdvantageElement             = characterFile.CreateElement(ManagmentLoadXML.Advantages);
-            XmlElement DisAdvantageElement          = characterFile.CreateElement(ManagmentLoadXML.DisAdvantages);
-            XmlElement TalentBriefElement           = characterFile.CreateElement(ManagmentLoadXML.TalentBriefElement);
-            XmlElement AdvanturePoints              = characterFile.CreateElement(ManagmentLoadXML.AdvanturePoints);
+            XmlElement CharakterBogenElement        = characterFile.CreateElement(ManagmentXMLStrings.CharacterBogenElement);  
+            XmlElement HeldenBriefElement           = characterFile.CreateElement(ManagmentXMLStrings.HeldenBriefElement);
+            XmlElement BasisDatenElement            = characterFile.CreateElement(ManagmentXMLStrings.BasisDatenElement);
+            XmlElement AttributeElement             = characterFile.CreateElement(ManagmentXMLStrings.AttributeElement);
+            XmlElement AdvancedValue                = characterFile.CreateElement(ManagmentXMLStrings.AdvancedElement);
+            XmlElement MoneyElement                 = characterFile.CreateElement(ManagmentXMLStrings.MoneyElement);
+            XmlElement FeatureElement               = characterFile.CreateElement(ManagmentXMLStrings.FeatureElement);
+            XmlElement AdvantageElement             = characterFile.CreateElement(ManagmentXMLStrings.Advantages);
+            XmlElement DisAdvantageElement          = characterFile.CreateElement(ManagmentXMLStrings.DisAdvantages);
+            XmlElement TalentBriefElement           = characterFile.CreateElement(ManagmentXMLStrings.TalentBriefElement);
+            XmlElement AdvanturePoints              = characterFile.CreateElement(ManagmentXMLStrings.AdvanturePoints);
 
 
             saveBasisDaten(charakter, characterFile, BasisDatenElement);
@@ -78,7 +78,7 @@ namespace DSA_Project
 
                 if(innerTextMod != null && innerTextMod != "")
                 {
-                    element.AppendChild(characterFile.CreateElement(ManagmentLoadXML.Modification + j)).InnerText = innerTextMod;
+                    element.AppendChild(characterFile.CreateElement(ManagmentXMLStrings.Modification + j)).InnerText = innerTextMod;
                     j++;
                 }
             }
@@ -88,7 +88,7 @@ namespace DSA_Project
 
                 if (innerTextGötter != null && innerTextGötter != "")
                 {
-                    element.AppendChild(characterFile.CreateElement(ManagmentLoadXML.Göttergeschenke + j)).InnerText = innerTextGötter;
+                    element.AppendChild(characterFile.CreateElement(ManagmentXMLStrings.Göttergeschenke + j)).InnerText = innerTextGötter;
                     j++;
                 }
             }
@@ -102,8 +102,8 @@ namespace DSA_Project
             for (int i = 0; i < length; i++)
             {
                 XmlElement type = characterFile.CreateElement(names[i]);
-                XmlElement value = characterFile.CreateElement(ManagmentLoadXML.Value);
-                XmlElement marked = characterFile.CreateElement(ManagmentLoadXML.Marked);
+                XmlElement value = characterFile.CreateElement(ManagmentXMLStrings.Value);
+                XmlElement marked = characterFile.CreateElement(ManagmentXMLStrings.Marked);
 
                 value.InnerText = charakter.getAttributeAKT((DSA_ATTRIBUTE)i).ToString();
                 
@@ -147,7 +147,7 @@ namespace DSA_Project
                 Feature feature = charakter.getFeature(type, i);
                 if(feature != null)
                 {
-                    XmlElement newFeature = characterFile.CreateElement(ManagmentLoadXML.Number + i.ToString());
+                    XmlElement newFeature = characterFile.CreateElement(ManagmentXMLStrings.Number + i.ToString());
                     saveFeature(feature, characterFile, newFeature);
                     element.AppendChild(newFeature);
                 }
@@ -159,15 +159,15 @@ namespace DSA_Project
             String[] EnergienNames  = Enum.GetNames(typeof(DSA_ENERGIEN));
             String[] AdvanedNames   = Enum.GetNames(typeof(DSA_ADVANCEDVALUES));
 
-            XmlElement AttributeElement = characterFile.CreateElement(ManagmentLoadXML.AttributeElement);
-            XmlElement EnergienElement = characterFile.CreateElement(ManagmentLoadXML.EnergienElement);
-            XmlElement AdvancedElement = characterFile.CreateElement(ManagmentLoadXML.AdvancedElement);
-            XmlElement TalentElement = characterFile.CreateElement(ManagmentLoadXML.Talente);
+            XmlElement AttributeElement = characterFile.CreateElement(ManagmentXMLStrings.AttributeElement);
+            XmlElement EnergienElement = characterFile.CreateElement(ManagmentXMLStrings.EnergienElement);
+            XmlElement AdvancedElement = characterFile.CreateElement(ManagmentXMLStrings.AdvancedElement);
+            XmlElement TalentElement = characterFile.CreateElement(ManagmentXMLStrings.Talente);
 
-            element.AppendChild(characterFile.CreateElement(ManagmentLoadXML.Name)).InnerText          = feature.getName();
-            element.AppendChild(characterFile.CreateElement(ManagmentLoadXML.Description)).InnerText   = feature.getSimpleDescription();
-            element.AppendChild(characterFile.CreateElement(ManagmentLoadXML.Value)).InnerText         = feature.getValue();
-            element.AppendChild(characterFile.CreateElement(ManagmentLoadXML.GP)).InnerText            = feature.getGP();
+            element.AppendChild(characterFile.CreateElement(ManagmentXMLStrings.Name)).InnerText          = feature.getName();
+            element.AppendChild(characterFile.CreateElement(ManagmentXMLStrings.Description)).InnerText   = feature.getSimpleDescription();
+            element.AppendChild(characterFile.CreateElement(ManagmentXMLStrings.Value)).InnerText         = feature.getValue();
+            element.AppendChild(characterFile.CreateElement(ManagmentXMLStrings.GP)).InnerText            = feature.getGP();
             element.AppendChild(AttributeElement);
             element.AppendChild(EnergienElement);
             element.AppendChild(AdvancedElement);
@@ -199,9 +199,9 @@ namespace DSA_Project
             }
             foreach (InterfaceTalent talent in feature.TalentListwithBonus())
             {
-                XmlElement talentinnerElement = characterFile.CreateElement(ManagmentLoadXML.TalentElement);
-                XmlElement nameElement = characterFile.CreateElement(ManagmentLoadXML.Name);
-                XmlElement tawBonus = characterFile.CreateElement(ManagmentLoadXML.TAW);
+                XmlElement talentinnerElement = characterFile.CreateElement(ManagmentXMLStrings.TalentElement);
+                XmlElement nameElement = characterFile.CreateElement(ManagmentXMLStrings.Name);
+                XmlElement tawBonus = characterFile.CreateElement(ManagmentXMLStrings.TAW);
 
                 nameElement.InnerText = talent.getName();
                 tawBonus.InnerText = feature.getTaWBonus(talent).ToString();
@@ -213,8 +213,8 @@ namespace DSA_Project
         }
         private static void saveTalents(Charakter charakter, XmlDocument characterFile, XmlElement element)
         {
-            XmlElement GeneralElement   = characterFile.CreateElement(ManagmentLoadXML.GeneralTalent);
-            XmlElement FightingElement  = characterFile.CreateElement(ManagmentLoadXML.FightingTalent);
+            XmlElement GeneralElement   = characterFile.CreateElement(ManagmentXMLStrings.GeneralTalent);
+            XmlElement FightingElement  = characterFile.CreateElement(ManagmentXMLStrings.FightingTalent);
 
             int i = 0;
             foreach (string s in Enum.GetNames(typeof(DSA_GENERALTALENTS)))
@@ -244,8 +244,8 @@ namespace DSA_Project
                     String pa = ((FightTalent)talent).getPA();
                     String at = ((FightTalent)talent).getAT().ToString();
 
-                    XmlElement atElement = characterFile.CreateElement(ManagmentLoadXML.attack);
-                    XmlElement paElement = characterFile.CreateElement(ManagmentLoadXML.Parade);
+                    XmlElement atElement = characterFile.CreateElement(ManagmentXMLStrings.attack);
+                    XmlElement paElement = characterFile.CreateElement(ManagmentXMLStrings.Parade);
 
                     TElement.AppendChild(atElement).InnerText = at;
                     TElement.AppendChild(paElement).InnerText = pa;
@@ -267,9 +267,9 @@ namespace DSA_Project
 
             name = nameRplacements(name);
 
-            XmlElement TalentElement = characterFile.CreateElement(ManagmentLoadXML.TalentElement);
-            XmlElement NameElement = characterFile.CreateElement(ManagmentLoadXML.Name);            
-            XmlElement TawElement  = characterFile.CreateElement(ManagmentLoadXML.TAW);
+            XmlElement TalentElement = characterFile.CreateElement(ManagmentXMLStrings.TalentElement);
+            XmlElement NameElement = characterFile.CreateElement(ManagmentXMLStrings.Name);            
+            XmlElement TawElement  = characterFile.CreateElement(ManagmentXMLStrings.TAW);
             
             TalentElement.AppendChild(NameElement).InnerText = name;
             TalentElement.AppendChild(TawElement).InnerText = taw;

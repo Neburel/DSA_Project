@@ -1,0 +1,23 @@
+<TalentLetter>
+  <Talent>
+    <Name>Mechanzug steuern</Name>
+    <BE>BE-2</BE>
+    <Probe>
+      <Attribute>GE</Attribute>
+      <Attribute>FF</Attribute>
+      <Attribute>KO</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Athletik</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Körperbeherrschung</Talent>
+        <Value>15</Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

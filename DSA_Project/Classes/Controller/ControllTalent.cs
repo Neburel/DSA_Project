@@ -17,12 +17,12 @@ namespace DSA_Project
 
         String currentdirectoryPath = Directory.GetCurrentDirectory();
         
-        public ControllTalent(Charakter charakter)
+        public ControllTalent(Charakter charakter, String GeneralTalentFileSystemLocation, String FightingTalentsFileSystemLocation)
         {
             List<ICollection<Enum>> listofallTalents = new List<ICollection<Enum>>();
 
-            Dictionary<DSA_GENERALTALENTS, List<InterfaceTalent>> GeneralTalentFiles    = loadGeneralTalents(ManagmentLoadXML.GeneralTalentFileSystemLocation, (DSA_GENERALTALENTS)0);
-            Dictionary<DSA_FIGHTINGTALENTS, List<InterfaceTalent>> FightingTalentFiles  = loadGeneralTalents(ManagmentLoadXML.FightingTalentsFileSystemLocation, (DSA_FIGHTINGTALENTS)0);
+            Dictionary<DSA_GENERALTALENTS, List<InterfaceTalent>> GeneralTalentFiles    = loadGeneralTalents(GeneralTalentFileSystemLocation, (DSA_GENERALTALENTS)0);
+            Dictionary<DSA_FIGHTINGTALENTS, List<InterfaceTalent>> FightingTalentFiles  = loadGeneralTalents(FightingTalentsFileSystemLocation, (DSA_FIGHTINGTALENTS)0);
             
             for(int i=0; i<GeneralTalentFiles.Count; i++)
             {
@@ -45,8 +45,7 @@ namespace DSA_Project
         private Dictionary<Tenum, List<InterfaceTalent>> loadGeneralTalents<Tenum>(String FileSystemLocation, Tenum xenum) where Tenum: struct, IComparable, IFormattable, IConvertible
         {   
             Dictionary<Tenum, List<InterfaceTalent>> Talents = new Dictionary<Tenum, List<InterfaceTalent>>();
-            String completePath = Path.Combine(currentdirectoryPath, FileSystemLocation);
-            List<String> dirs = new List<String>(Directory.EnumerateDirectories(completePath));
+            List<String> dirs = new List<String>(Directory.EnumerateDirectories(FileSystemLocation));
 
             String[] names = Enum.GetNames(typeof(Tenum));
 
@@ -60,7 +59,7 @@ namespace DSA_Project
                     if (0 == String.Compare(names[j], folder.ToUpper()))
                     {
                         List<InterfaceTalent> talentFiles = new List<InterfaceTalent>();
-                        String deepFolder = Path.Combine(completePath, dirs[i]);
+                        String deepFolder = Path.Combine(FileSystemLocation, dirs[i]);
                         String[] files = Directory.GetFiles(deepFolder);
 
                         foreach (String file in files)

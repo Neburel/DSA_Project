@@ -15144,31 +15144,31 @@
   <data name="&gt;&gt;txtKonstitutionMAX.ZOrder" xml:space="preserve">
     <value>63</value>
   </data>
-  <data name="textGewandheitMAX.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="txtGewandheitMAX.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
-  <data name="textGewandheitMAX.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtGewandheitMAX.Location" type="System.Drawing.Point, System.Drawing">
     <value>132, 277</value>
   </data>
-  <data name="textGewandheitMAX.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtGewandheitMAX.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 20</value>
   </data>
-  <data name="textGewandheitMAX.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtGewandheitMAX.TabIndex" type="System.Int32, mscorlib">
     <value>156</value>
   </data>
-  <data name="textGewandheitMAX.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="txtGewandheitMAX.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;textGewandheitMAX.Name" xml:space="preserve">
-    <value>textGewandheitMAX</value>
+  <data name="&gt;&gt;txtGewandheitMAX.Name" xml:space="preserve">
+    <value>txtGewandheitMAX</value>
   </data>
-  <data name="&gt;&gt;textGewandheitMAX.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtGewandheitMAX.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textGewandheitMAX.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtGewandheitMAX.Parent" xml:space="preserve">
     <value>Heldenbrief</value>
   </data>
-  <data name="&gt;&gt;textGewandheitMAX.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtGewandheitMAX.ZOrder" xml:space="preserve">
     <value>64</value>
   </data>
   <data name="txtFingerfertigkeitMAX.Font" type="System.Drawing.Font, System.Drawing">
@@ -15378,28 +15378,28 @@
   <data name="&gt;&gt;txtKonstitutionMOD.ZOrder" xml:space="preserve">
     <value>72</value>
   </data>
-  <data name="textGewandheitMOD.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtGewandheitMOD.Location" type="System.Drawing.Point, System.Drawing">
     <value>111, 277</value>
   </data>
-  <data name="textGewandheitMOD.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtGewandheitMOD.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 20</value>
   </data>
-  <data name="textGewandheitMOD.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtGewandheitMOD.TabIndex" type="System.Int32, mscorlib">
     <value>147</value>
   </data>
-  <data name="textGewandheitMOD.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="txtGewandheitMOD.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;textGewandheitMOD.Name" xml:space="preserve">
-    <value>textGewandheitMOD</value>
+  <data name="&gt;&gt;txtGewandheitMOD.Name" xml:space="preserve">
+    <value>txtGewandheitMOD</value>
   </data>
-  <data name="&gt;&gt;textGewandheitMOD.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtGewandheitMOD.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textGewandheitMOD.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtGewandheitMOD.Parent" xml:space="preserve">
     <value>Heldenbrief</value>
   </data>
-  <data name="&gt;&gt;textGewandheitMOD.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtGewandheitMOD.ZOrder" xml:space="preserve">
     <value>73</value>
   </data>
   <data name="txtFingerfertigkeitMOD.Location" type="System.Drawing.Point, System.Drawing">
@@ -15594,28 +15594,28 @@
   <data name="&gt;&gt;txtKonstitutionAKT.ZOrder" xml:space="preserve">
     <value>81</value>
   </data>
-  <data name="textGewandheitAKT.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtGewandheitAKT.Location" type="System.Drawing.Point, System.Drawing">
     <value>90, 277</value>
   </data>
-  <data name="textGewandheitAKT.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtGewandheitAKT.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 20</value>
   </data>
-  <data name="textGewandheitAKT.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtGewandheitAKT.TabIndex" type="System.Int32, mscorlib">
     <value>135</value>
   </data>
-  <data name="textGewandheitAKT.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+  <data name="txtGewandheitAKT.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Center</value>
   </data>
-  <data name="&gt;&gt;textGewandheitAKT.Name" xml:space="preserve">
-    <value>textGewandheitAKT</value>
+  <data name="&gt;&gt;txtGewandheitAKT.Name" xml:space="preserve">
+    <value>txtGewandheitAKT</value>
   </data>
-  <data name="&gt;&gt;textGewandheitAKT.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtGewandheitAKT.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textGewandheitAKT.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtGewandheitAKT.Parent" xml:space="preserve">
     <value>Heldenbrief</value>
   </data>
-  <data name="&gt;&gt;textGewandheitAKT.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtGewandheitAKT.ZOrder" xml:space="preserve">
     <value>82</value>
   </data>
   <data name="txtFingerfertigkeitAKT.Location" type="System.Drawing.Point, System.Drawing">

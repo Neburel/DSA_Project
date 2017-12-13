@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Schriftlicher Ausdruck</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>IN</Attribute>
+    </Probe>
+    <Requirements>
+      <Requirement>
+        <Talent>Lesen/Schreiben (entsprechende Schrift)</Talent>
+        <Value>6</Value>
+      </Requirement>
+    </Requirements>
+    <Diverates>
+      <Diverate>
+        <Talent>Lesen/Schreiben</Talent>
+        <Value>0</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Überzeugen (Rhetorik schriftlich)</Talent>
+        <Value>5</Value>
+      </Diverate>
+    </Diverates>
+  </Talent>
+</TalentLetter>

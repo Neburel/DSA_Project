@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Selbstbeherrschung</Name>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>KO</Attribute>
+      <Attribute>KK</Attribute>
+    </Probe>
+  </Talent>
+</TalentLetter>

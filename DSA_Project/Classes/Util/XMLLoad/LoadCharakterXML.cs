@@ -16,9 +16,9 @@ namespace DSA_Project
             XmlDocument characterFile = new XmlDocument();
             characterFile.Load(fileName);
 
-            XmlNode characterNode       = characterFile.SelectSingleNode("/" + ManagmentLoadXML.CharacterBogenElement);
-            XmlNode heldenbriefNode     = characterNode.SelectSingleNode(ManagmentLoadXML.HeldenBriefElement);
-            XmlNode talentbriefNode     = characterNode.SelectSingleNode(ManagmentLoadXML.TalentBriefElement);
+            XmlNode characterNode       = characterFile.SelectSingleNode("/" + ManagmentXMLStrings.CharacterBogenElement);
+            XmlNode heldenbriefNode     = characterNode.SelectSingleNode(ManagmentXMLStrings.HeldenBriefElement);
+            XmlNode talentbriefNode     = characterNode.SelectSingleNode(ManagmentXMLStrings.TalentBriefElement);
 
             loadHeldenbrief(heldenbriefNode, charakter);
             loadTalentbrief(talentbriefNode, charakter);
@@ -39,12 +39,12 @@ namespace DSA_Project
             {
                 switch (node.Name)
                 {
-                    case ManagmentLoadXML.BasisDatenElement: loadBasicData(node, charakter); break;
-                    case ManagmentLoadXML.AttributeElement: loadAttribute(node, charakter); break;
-                    case ManagmentLoadXML.AdvancedElement: loadAdvanced(node, charakter); break;
-                    case ManagmentLoadXML.MoneyElement: loadMoney(node, charakter); break;
-                    case ManagmentLoadXML.FeatureElement: loadFeature(node, charakter); break;
-                    case ManagmentLoadXML.AdvanturePoints: loadAdvanturePoints(node, charakter); break;
+                    case ManagmentXMLStrings.BasisDatenElement: loadBasicData(node, charakter); break;
+                    case ManagmentXMLStrings.AttributeElement: loadAttribute(node, charakter); break;
+                    case ManagmentXMLStrings.AdvancedElement: loadAdvanced(node, charakter); break;
+                    case ManagmentXMLStrings.MoneyElement: loadMoney(node, charakter); break;
+                    case ManagmentXMLStrings.FeatureElement: loadFeature(node, charakter); break;
+                    case ManagmentXMLStrings.AdvanturePoints: loadAdvanturePoints(node, charakter); break;
                 }
             }
         }
@@ -66,23 +66,23 @@ namespace DSA_Project
 
             foreach (XmlNode node in BasicDataNode)
             {
-                if (ManagmentLoadXML.Modification.Length < node.Name.Length)
+                if (ManagmentXMLStrings.Modification.Length < node.Name.Length)
                 {
-                    if (String.Compare(node.Name.Substring(0, ManagmentLoadXML.Modification.Length), ManagmentLoadXML.Modification, true) == 0)
+                    if (String.Compare(node.Name.Substring(0, ManagmentXMLStrings.Modification.Length), ManagmentXMLStrings.Modification, true) == 0)
                     {
                         int number = 0;
-                        String numberString = node.Name.Substring(ManagmentLoadXML.Modification.Length, node.Name.Length - ManagmentLoadXML.Modification.Length);
+                        String numberString = node.Name.Substring(ManagmentXMLStrings.Modification.Length, node.Name.Length - ManagmentXMLStrings.Modification.Length);
                         Int32.TryParse(numberString, out number);
 
                         charakter.setModifikatoren(number, node.InnerText);
                     }
                 }
-                if (ManagmentLoadXML.Göttergeschenke.Length < node.Name.Length)
+                if (ManagmentXMLStrings.Göttergeschenke.Length < node.Name.Length)
                 {
-                    if (String.Compare(node.Name.Substring(0, ManagmentLoadXML.Göttergeschenke.Length), ManagmentLoadXML.Göttergeschenke, true) == 0)
+                    if (String.Compare(node.Name.Substring(0, ManagmentXMLStrings.Göttergeschenke.Length), ManagmentXMLStrings.Göttergeschenke, true) == 0)
                     {
                         int number = 0;
-                        String numberString = node.Name.Substring(ManagmentLoadXML.Göttergeschenke.Length, node.Name.Length - ManagmentLoadXML.Göttergeschenke.Length);
+                        String numberString = node.Name.Substring(ManagmentXMLStrings.Göttergeschenke.Length, node.Name.Length - ManagmentXMLStrings.Göttergeschenke.Length);
                         Int32.TryParse(numberString, out number);
 
                         charakter.setGöttergeschenk(number, node.InnerText);
@@ -106,12 +106,12 @@ namespace DSA_Project
                         {
                             switch (node.Name)
                             {
-                                case ManagmentLoadXML.Value:
+                                case ManagmentXMLStrings.Value:
                                     int x;
                                     Int32.TryParse(node.InnerText, out x);
                                     charakter.setAttribute((DSA_ATTRIBUTE)i, x);
                                     break;
-                                case ManagmentLoadXML.Marked:
+                                case ManagmentXMLStrings.Marked:
                                     if(0 == String.Compare(true.ToString(), node.InnerText))
                                     {
                                         charakter.setMarkedAttribut((DSA_ATTRIBUTE)i, true);
@@ -166,8 +166,8 @@ namespace DSA_Project
             {
                 switch (node.Name)
                 {
-                    case ManagmentLoadXML.Advantages: loadFeature(node, charakter, DSA_FEATURES.VORTEIL); break;
-                    case ManagmentLoadXML.DisAdvantages: loadFeature(node, charakter, DSA_FEATURES.NACHTEIL); break;
+                    case ManagmentXMLStrings.Advantages: loadFeature(node, charakter, DSA_FEATURES.VORTEIL); break;
+                    case ManagmentXMLStrings.DisAdvantages: loadFeature(node, charakter, DSA_FEATURES.NACHTEIL); break;
                 }
             }
         }
@@ -200,14 +200,14 @@ namespace DSA_Project
             {
                 switch (node.Name)
                 {
-                    case ManagmentLoadXML.Name: feature.setName(node.InnerText); break;
-                    case ManagmentLoadXML.Description: feature.setDescription(node.InnerText); break;
-                    case ManagmentLoadXML.Value: feature.setValue(node.InnerText); break;
-                    case ManagmentLoadXML.GP: feature.setGP(node.InnerText); break;
-                    case ManagmentLoadXML.AttributeElement: LoadAttribute(node, feature); break;
-                    case ManagmentLoadXML.EnergienElement: LoadEnergien(node, feature); break;
-                    case ManagmentLoadXML.AdvancedElement: LoadFeatureAdvanced(node, feature); break;
-                    case ManagmentLoadXML.Talente: LoadFeatureTalente(node, charakter, feature); break;
+                    case ManagmentXMLStrings.Name: feature.setName(node.InnerText); break;
+                    case ManagmentXMLStrings.Description: feature.setDescription(node.InnerText); break;
+                    case ManagmentXMLStrings.Value: feature.setValue(node.InnerText); break;
+                    case ManagmentXMLStrings.GP: feature.setGP(node.InnerText); break;
+                    case ManagmentXMLStrings.AttributeElement: LoadAttribute(node, feature); break;
+                    case ManagmentXMLStrings.EnergienElement: LoadEnergien(node, feature); break;
+                    case ManagmentXMLStrings.AdvancedElement: LoadFeatureAdvanced(node, feature); break;
+                    case ManagmentXMLStrings.Talente: LoadFeatureTalente(node, charakter, feature); break;
                 }
             }
             
@@ -282,8 +282,8 @@ namespace DSA_Project
                 {
                     switch (node.Name)
                     {
-                        case ManagmentLoadXML.Name: name = node.InnerText; break;
-                        case ManagmentLoadXML.TAW: TaWBonus = node.InnerText; break;
+                        case ManagmentXMLStrings.Name: name = node.InnerText; break;
+                        case ManagmentXMLStrings.TAW: TaWBonus = node.InnerText; break;
                     }
                 }
                 for(int i=0; i<listTalente.Count; i++)
@@ -344,10 +344,10 @@ namespace DSA_Project
             {
                 switch (node.Name)
                 {
-                    case ManagmentLoadXML.Name: Name = node.InnerText; break;
-                    case ManagmentLoadXML.TAW: Taw = node.InnerText; break;
-                    case ManagmentLoadXML.attack: AT = node.InnerText; break;
-                    case ManagmentLoadXML.Parade: PA = node.InnerText; break;
+                    case ManagmentXMLStrings.Name: Name = node.InnerText; break;
+                    case ManagmentXMLStrings.TAW: Taw = node.InnerText; break;
+                    case ManagmentXMLStrings.attack: AT = node.InnerText; break;
+                    case ManagmentXMLStrings.Parade: PA = node.InnerText; break;
                     default: throw new Exception();
                 }
             }

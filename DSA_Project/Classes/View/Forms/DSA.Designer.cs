@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DSA));
             this.tabPageTools = new System.Windows.Forms.TabPage();
+            this.btnToolChangeDSA_PNP = new System.Windows.Forms.Button();
             this.btncreateFightingTalent = new System.Windows.Forms.Button();
             this.btnCreateTalent = new System.Windows.Forms.Button();
             this.btnSaveCharacter = new System.Windows.Forms.Button();
@@ -596,7 +597,7 @@
             this.txtSozialstatusMAX = new System.Windows.Forms.TextBox();
             this.txtKörperkraftMAX = new System.Windows.Forms.TextBox();
             this.txtKonstitutionMAX = new System.Windows.Forms.TextBox();
-            this.textGewandheitMAX = new System.Windows.Forms.TextBox();
+            this.txtGewandheitMAX = new System.Windows.Forms.TextBox();
             this.txtFingerfertigkeitMAX = new System.Windows.Forms.TextBox();
             this.txtCharismaMAX = new System.Windows.Forms.TextBox();
             this.txtIntuitionMAX = new System.Windows.Forms.TextBox();
@@ -605,7 +606,7 @@
             this.txtSozialstatusMOD = new System.Windows.Forms.TextBox();
             this.txtKörperkraftMOD = new System.Windows.Forms.TextBox();
             this.txtKonstitutionMOD = new System.Windows.Forms.TextBox();
-            this.textGewandheitMOD = new System.Windows.Forms.TextBox();
+            this.txtGewandheitMOD = new System.Windows.Forms.TextBox();
             this.txtFingerfertigkeitMOD = new System.Windows.Forms.TextBox();
             this.txtCharismaMOD = new System.Windows.Forms.TextBox();
             this.txtIntuitionMOD = new System.Windows.Forms.TextBox();
@@ -614,7 +615,7 @@
             this.txtSozialstatusAKT = new System.Windows.Forms.TextBox();
             this.txtKörperkraftAKT = new System.Windows.Forms.TextBox();
             this.txtKonstitutionAKT = new System.Windows.Forms.TextBox();
-            this.textGewandheitAKT = new System.Windows.Forms.TextBox();
+            this.txtGewandheitAKT = new System.Windows.Forms.TextBox();
             this.txtFingerfertigkeitAKT = new System.Windows.Forms.TextBox();
             this.txtCharismaAKT = new System.Windows.Forms.TextBox();
             this.txtIntuitionAKT = new System.Windows.Forms.TextBox();
@@ -755,7 +756,6 @@
             this.txtRewardPage = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnToolChangeDSA_PNP = new System.Windows.Forms.Button();
             this.tabPageTools.SuspendLayout();
             this.talents.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -789,6 +789,12 @@
             resources.ApplyResources(this.tabPageTools, "tabPageTools");
             this.tabPageTools.Name = "tabPageTools";
             // 
+            // btnToolChangeDSA_PNP
+            // 
+            resources.ApplyResources(this.btnToolChangeDSA_PNP, "btnToolChangeDSA_PNP");
+            this.btnToolChangeDSA_PNP.Name = "btnToolChangeDSA_PNP";
+            this.btnToolChangeDSA_PNP.UseVisualStyleBackColor = true;
+            // 
             // btncreateFightingTalent
             // 
             resources.ApplyResources(this.btncreateFightingTalent, "btncreateFightingTalent");
@@ -815,7 +821,6 @@
             resources.ApplyResources(this.btnLoadCharacter, "btnLoadCharacter");
             this.btnLoadCharacter.Name = "btnLoadCharacter";
             this.btnLoadCharacter.UseVisualStyleBackColor = true;
-            this.btnLoadCharacter.Click += new System.EventHandler(this.btnLoadCharacter_Click);
             // 
             // talents
             // 
@@ -3419,7 +3424,7 @@
             this.Heldenbrief.Controls.Add(this.txtSozialstatusMAX);
             this.Heldenbrief.Controls.Add(this.txtKörperkraftMAX);
             this.Heldenbrief.Controls.Add(this.txtKonstitutionMAX);
-            this.Heldenbrief.Controls.Add(this.textGewandheitMAX);
+            this.Heldenbrief.Controls.Add(this.txtGewandheitMAX);
             this.Heldenbrief.Controls.Add(this.txtFingerfertigkeitMAX);
             this.Heldenbrief.Controls.Add(this.txtCharismaMAX);
             this.Heldenbrief.Controls.Add(this.txtIntuitionMAX);
@@ -3428,7 +3433,7 @@
             this.Heldenbrief.Controls.Add(this.txtSozialstatusMOD);
             this.Heldenbrief.Controls.Add(this.txtKörperkraftMOD);
             this.Heldenbrief.Controls.Add(this.txtKonstitutionMOD);
-            this.Heldenbrief.Controls.Add(this.textGewandheitMOD);
+            this.Heldenbrief.Controls.Add(this.txtGewandheitMOD);
             this.Heldenbrief.Controls.Add(this.txtFingerfertigkeitMOD);
             this.Heldenbrief.Controls.Add(this.txtCharismaMOD);
             this.Heldenbrief.Controls.Add(this.txtIntuitionMOD);
@@ -3437,7 +3442,7 @@
             this.Heldenbrief.Controls.Add(this.txtSozialstatusAKT);
             this.Heldenbrief.Controls.Add(this.txtKörperkraftAKT);
             this.Heldenbrief.Controls.Add(this.txtKonstitutionAKT);
-            this.Heldenbrief.Controls.Add(this.textGewandheitAKT);
+            this.Heldenbrief.Controls.Add(this.txtGewandheitAKT);
             this.Heldenbrief.Controls.Add(this.txtFingerfertigkeitAKT);
             this.Heldenbrief.Controls.Add(this.txtCharismaAKT);
             this.Heldenbrief.Controls.Add(this.txtIntuitionAKT);
@@ -4904,11 +4909,11 @@
             resources.ApplyResources(this.txtKonstitutionMAX, "txtKonstitutionMAX");
             this.txtKonstitutionMAX.Name = "txtKonstitutionMAX";
             // 
-            // textGewandheitMAX
+            // txtGewandheitMAX
             // 
-            this.textGewandheitMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            resources.ApplyResources(this.textGewandheitMAX, "textGewandheitMAX");
-            this.textGewandheitMAX.Name = "textGewandheitMAX";
+            this.txtGewandheitMAX.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            resources.ApplyResources(this.txtGewandheitMAX, "txtGewandheitMAX");
+            this.txtGewandheitMAX.Name = "txtGewandheitMAX";
             // 
             // txtFingerfertigkeitMAX
             // 
@@ -4958,11 +4963,11 @@
             resources.ApplyResources(this.txtKonstitutionMOD, "txtKonstitutionMOD");
             this.txtKonstitutionMOD.Name = "txtKonstitutionMOD";
             // 
-            // textGewandheitMOD
+            // txtGewandheitMOD
             // 
-            this.textGewandheitMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            resources.ApplyResources(this.textGewandheitMOD, "textGewandheitMOD");
-            this.textGewandheitMOD.Name = "textGewandheitMOD";
+            this.txtGewandheitMOD.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            resources.ApplyResources(this.txtGewandheitMOD, "txtGewandheitMOD");
+            this.txtGewandheitMOD.Name = "txtGewandheitMOD";
             // 
             // txtFingerfertigkeitMOD
             // 
@@ -5009,10 +5014,10 @@
             resources.ApplyResources(this.txtKonstitutionAKT, "txtKonstitutionAKT");
             this.txtKonstitutionAKT.Name = "txtKonstitutionAKT";
             // 
-            // textGewandheitAKT
+            // txtGewandheitAKT
             // 
-            resources.ApplyResources(this.textGewandheitAKT, "textGewandheitAKT");
-            this.textGewandheitAKT.Name = "textGewandheitAKT";
+            resources.ApplyResources(this.txtGewandheitAKT, "txtGewandheitAKT");
+            this.txtGewandheitAKT.Name = "txtGewandheitAKT";
             // 
             // txtFingerfertigkeitAKT
             // 
@@ -5036,6 +5041,7 @@
             // 
             // txtMutAKT
             // 
+            this.txtMutAKT.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.txtMutAKT, "txtMutAKT");
             this.txtMutAKT.Name = "txtMutAKT";
             // 
@@ -5442,7 +5448,6 @@
             resources.ApplyResources(this.TabControl, "TabControl");
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TabControl_MouseClick);
             // 
             // Rewards
             // 
@@ -5839,13 +5844,6 @@
             resources.ApplyResources(this.button2, "button2");
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btnToolChangeDSA_PNP
-            // 
-            resources.ApplyResources(this.btnToolChangeDSA_PNP, "btnToolChangeDSA_PNP");
-            this.btnToolChangeDSA_PNP.Name = "btnToolChangeDSA_PNP";
-            this.btnToolChangeDSA_PNP.UseVisualStyleBackColor = true;
-            this.btnToolChangeDSA_PNP.Click += new System.EventHandler(this.btnToolChangeDSA_PNP_Click);
             // 
             // DSA
             // 
@@ -6440,7 +6438,7 @@
         private System.Windows.Forms.TextBox txtSozialstatusMAX;
         private System.Windows.Forms.TextBox txtKörperkraftMAX;
         private System.Windows.Forms.TextBox txtKonstitutionMAX;
-        private System.Windows.Forms.TextBox textGewandheitMAX;
+        private System.Windows.Forms.TextBox txtGewandheitMAX;
         private System.Windows.Forms.TextBox txtFingerfertigkeitMAX;
         private System.Windows.Forms.TextBox txtCharismaMAX;
         private System.Windows.Forms.TextBox txtIntuitionMAX;
@@ -6449,7 +6447,7 @@
         private System.Windows.Forms.TextBox txtSozialstatusMOD;
         private System.Windows.Forms.TextBox txtKörperkraftMOD;
         private System.Windows.Forms.TextBox txtKonstitutionMOD;
-        private System.Windows.Forms.TextBox textGewandheitMOD;
+        private System.Windows.Forms.TextBox txtGewandheitMOD;
         private System.Windows.Forms.TextBox txtFingerfertigkeitMOD;
         private System.Windows.Forms.TextBox txtCharismaMOD;
         private System.Windows.Forms.TextBox txtIntuitionMOD;
@@ -6458,7 +6456,7 @@
         private System.Windows.Forms.TextBox txtSozialstatusAKT;
         private System.Windows.Forms.TextBox txtKörperkraftAKT;
         private System.Windows.Forms.TextBox txtKonstitutionAKT;
-        private System.Windows.Forms.TextBox textGewandheitAKT;
+        private System.Windows.Forms.TextBox txtGewandheitAKT;
         private System.Windows.Forms.TextBox txtFingerfertigkeitAKT;
         private System.Windows.Forms.TextBox txtCharismaAKT;
         private System.Windows.Forms.TextBox txtIntuitionAKT;

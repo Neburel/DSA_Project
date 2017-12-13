@@ -1,0 +1,23 @@
+<TalentLetter>
+  <Talent>
+    <Name>Sich Verstecken</Name>
+    <BE>BE-2</BE>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>GE</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Schleichen</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Körperbeherrschung</Talent>
+        <Value>15</Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

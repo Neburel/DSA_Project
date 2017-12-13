@@ -6,39 +6,11 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    static public class ManagmentLoadXML
+    static public class ManagmentXMLStrings
     {
-        public static String DSA = "DSA";
-        public static String PNP = "PNP";
-        private static String Status = DSA;
+        //public static String FightingTalentsFileSystemLocation      = "Resources/DSA/Talents/FightingTalents";
 
-        public static void change()
-        {
-            if(String.Compare(PNP, Status) == 0)
-            {
-                changetoDSA();
-                return;
-            }
-            if (String.Compare(DSA, Status) == 0)
-            {
-                changetoPNP();
-                return;
-            }
-        }
-        static void changetoDSA()
-        {
-            saveLocation = saveLocation.Replace(PNP, DSA);
-            Status = DSA;
-        }
-        static void changetoPNP()
-        {
-            saveLocation = saveLocation.Replace(DSA, PNP);
-            Status = PNP;
-        }
-
-        public static String saveLocation                       = "Resources\\DSA\\SaveGame\\";
-        public static String GeneralTalentFileSystemLocation     = "Resources/DSA/Talents/GeneralTalents";
-        public static String FightingTalentsFileSystemLocation   = "Resources/DSA/Talents/FightingTalents";
+        public static String XML                    = "xml";
 
         public const String CharacterBogenElement   = "CharacterBogen";
         public const String HeldenBriefElement      = "HeldenBrief";

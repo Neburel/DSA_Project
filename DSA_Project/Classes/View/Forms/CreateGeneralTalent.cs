@@ -12,8 +12,12 @@ namespace DSA_Project
 {
     public partial class CreateTalent : Form
     {
-        public CreateTalent()
+        private String GeneralTalentFileSystemLocation;
+
+        public CreateTalent(String GeneralTalentFileSystemLocation)
         {
+            this.GeneralTalentFileSystemLocation = GeneralTalentFileSystemLocation;
+
             InitializeComponent();
             comboBoxType.DataSource = Enum.GetValues(typeof(DSA_GENERALTALENTS));
             comboBoxProbe.DataSource = Enum.GetValues(typeof(DSA_ATTRIBUTE));
@@ -35,17 +39,6 @@ namespace DSA_Project
             listViewDiverate.Columns.Add(new ColumnHeader().Text = "Name");
             listViewDiverate.Columns.Add(new ColumnHeader().Text = "TaW");
         }
-
-
-        private void CreateTalent_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void addProbe_Click(object sender, EventArgs e)
         {
             DSA_ATTRIBUTE attribute;
@@ -83,11 +76,6 @@ namespace DSA_Project
             listViewDiverate.Items.Add(lvi);
         }
 
-        private void listProbeView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             List<ListViewItem> probe = new List<ListViewItem>();
@@ -111,7 +99,7 @@ namespace DSA_Project
             }
 
 
-            SaveXMLTalent.saveXMLTalent(txtTalentName.Text, type, probe, requirement, diverate, txtBE.Text);
+            SaveXMLTalent.saveXMLTalent(GeneralTalentFileSystemLocation, txtTalentName.Text, type, probe, requirement, diverate, txtBE.Text);
         }
 
         private void btnClear_Click(object sender, EventArgs e)

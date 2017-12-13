@@ -20,16 +20,16 @@ namespace DSA_Project
         private static XmlElement Requirements;
         private static XmlElement BE;
 
-        public static void saveXMLTalent(String Talentname, DSA_GENERALTALENTS talenttype, List<ListViewItem> probe, List<ListViewItem> requirements, List<ListViewItem> diverates, String BE)
+        public static void saveXMLTalent(String GeneralTalentFileSystemLocation, String Talentname, DSA_GENERALTALENTS talenttype, List<ListViewItem> probe, List<ListViewItem> requirements, List<ListViewItem> diverates, String BE)
         {
             constructGeneralStrukture(Talentname, BE);
             createProbeAttribute(ProbeElement, probe);
             createRequirements(Requirements, requirements);
             createDiverates(Diverates, diverates);
 
-            SaveGeneralTalent(talenttype.ToString(), Talentname,ManagmentLoadXML.GeneralTalentFileSystemLocation);
+            SaveGeneralTalent(talenttype.ToString(), Talentname, GeneralTalentFileSystemLocation);
         }
-        public static void saveXMLTalent(String Talentname, DSA_FIGHTINGTALENTS talenttype, List<ListViewItem> diverates, String BE, Boolean parade)
+        public static void saveXMLTalent(String FightingTalentsFileSystemLocation, String Talentname, DSA_FIGHTINGTALENTS talenttype, List<ListViewItem> diverates, String BE, Boolean parade)
         {
             constructGeneralStrukture(Talentname, BE);
             createDiverates(Diverates, diverates);
@@ -44,19 +44,19 @@ namespace DSA_Project
 
             CreateFightingTalent(TalentElement, value, parade);
 
-            SaveGeneralTalent(talenttype.ToString(), Talentname, ManagmentLoadXML.FightingTalentsFileSystemLocation);
+            SaveGeneralTalent(talenttype.ToString(), Talentname, FightingTalentsFileSystemLocation);
         }
         private static void constructGeneralStrukture(String TalentName, String be)
         {
             TalentFile = new XmlDocument();
 
-            LetterElement   = TalentFile.CreateElement(ManagmentLoadXML.TalentLetterElement);
-            TalentElement   = TalentFile.CreateElement(ManagmentLoadXML.TalentElement);
-            NameElement     = TalentFile.CreateElement(ManagmentLoadXML.Name);
-            ProbeElement    = TalentFile.CreateElement(ManagmentLoadXML.Probe);
-            Diverates       = TalentFile.CreateElement(ManagmentLoadXML.Diverates);
-            Requirements    = TalentFile.CreateElement(ManagmentLoadXML.Requirements);
-            BE              = TalentFile.CreateElement(ManagmentLoadXML.BE);
+            LetterElement   = TalentFile.CreateElement(ManagmentXMLStrings.TalentLetterElement);
+            TalentElement   = TalentFile.CreateElement(ManagmentXMLStrings.TalentElement);
+            NameElement     = TalentFile.CreateElement(ManagmentXMLStrings.Name);
+            ProbeElement    = TalentFile.CreateElement(ManagmentXMLStrings.Probe);
+            Diverates       = TalentFile.CreateElement(ManagmentXMLStrings.Diverates);
+            Requirements    = TalentFile.CreateElement(ManagmentXMLStrings.Requirements);
+            BE              = TalentFile.CreateElement(ManagmentXMLStrings.BE);
 
             NameElement.InnerText = TalentName;
             BE.InnerText = be;
@@ -75,7 +75,7 @@ namespace DSA_Project
             foreach(ListViewItem item in probe)
             {
                 String attribute = item.Text;
-                XmlElement attributeElement = TalentFile.CreateElement(ManagmentLoadXML.AttributeElement);
+                XmlElement attributeElement = TalentFile.CreateElement(ManagmentXMLStrings.AttributeElement);
                 attributeElement.InnerText = attribute;
                 probeElement.AppendChild(attributeElement);
             }
@@ -84,10 +84,10 @@ namespace DSA_Project
         {
             foreach (ListViewItem item in requirements)
             {
-                XmlElement RequirementElement   = TalentFile.CreateElement(ManagmentLoadXML.Requirements);
-                XmlElement TalentElement        = TalentFile.CreateElement(ManagmentLoadXML.TalentElement);
-                XmlElement ValueElement         = TalentFile.CreateElement(ManagmentLoadXML.Value);
-                XmlElement nededATElement       = TalentFile.CreateElement(ManagmentLoadXML.NeedAT);
+                XmlElement RequirementElement   = TalentFile.CreateElement(ManagmentXMLStrings.Requirements);
+                XmlElement TalentElement        = TalentFile.CreateElement(ManagmentXMLStrings.TalentElement);
+                XmlElement ValueElement         = TalentFile.CreateElement(ManagmentXMLStrings.Value);
+                XmlElement nededATElement       = TalentFile.CreateElement(ManagmentXMLStrings.NeedAT);
 
                 TalentElement.InnerText         = item.SubItems[0].Text;
                 ValueElement.InnerText          = item.SubItems[1].Text;
@@ -103,9 +103,9 @@ namespace DSA_Project
         {
             foreach (ListViewItem item in divarates)
             {
-                XmlElement DiverateElement      = TalentFile.CreateElement(ManagmentLoadXML.Diverate);
-                XmlElement TalentElement        = TalentFile.CreateElement(ManagmentLoadXML.TalentElement);
-                XmlElement ValueElement         = TalentFile.CreateElement(ManagmentLoadXML.Value);
+                XmlElement DiverateElement      = TalentFile.CreateElement(ManagmentXMLStrings.Diverate);
+                XmlElement TalentElement        = TalentFile.CreateElement(ManagmentXMLStrings.TalentElement);
+                XmlElement ValueElement         = TalentFile.CreateElement(ManagmentXMLStrings.Value);
 
                 TalentElement.InnerText         = item.SubItems[0].Text;
                 ValueElement.InnerText          = item.SubItems[1].Text;
@@ -118,9 +118,9 @@ namespace DSA_Project
 
         private static void CreateFightingTalent(XmlElement TalentElement, DSA_ADVANCEDVALUES value, Boolean parade)
         {
-            XmlElement FightigElement = TalentFile.CreateElement(ManagmentLoadXML.FightingTalent);
-            XmlElement attacElement = TalentFile.CreateElement(ManagmentLoadXML.attack);
-            XmlElement paradeElement = TalentFile.CreateElement(ManagmentLoadXML.Parade);
+            XmlElement FightigElement = TalentFile.CreateElement(ManagmentXMLStrings.FightingTalent);
+            XmlElement attacElement = TalentFile.CreateElement(ManagmentXMLStrings.attack);
+            XmlElement paradeElement = TalentFile.CreateElement(ManagmentXMLStrings.Parade);
 
             attacElement.InnerText = value.ToString();
             paradeElement.InnerText = parade.ToString();

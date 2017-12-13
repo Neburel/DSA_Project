@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Fliegen</Name>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>GE</Attribute>
+    </Probe>
+    <BE>BE</BE>
+    <Diverates>
+      <Diverate>
+        <Talent>Akrobatik</Talent>
+        <Value>0</Value>
+      </Diverate>
+    </Diverates>
+    <Requirements>
+      <Requirement>
+        <Talent>Klugheit</Talent>
+        <Value>7</Value>
+      </Requirement>
+    </Requirements>
+  </Talent>
+</TalentLetter>

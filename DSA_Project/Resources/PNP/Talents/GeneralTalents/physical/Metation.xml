@@ -1,0 +1,13 @@
+<TalentLetter>
+  <Talent>
+    <Name>Metation</Name>
+    <BE>BEx2</BE>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>CH</Attribute>
+      <Attribute>KO</Attribute>
+    </Probe>
+    <Diverates />
+    <Requirements />
+  </Talent>
+</TalentLetter>

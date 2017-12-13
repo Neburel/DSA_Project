@@ -33,20 +33,20 @@ namespace DSA_Project
             XmlDocument talentFile = new XmlDocument();
             talentFile.Load(fileName);
 
-            XmlNode TalentLetterElement = talentFile.SelectSingleNode("/" + ManagmentLoadXML.TalentLetterElement);
-            XmlNode TalentElement = TalentLetterElement.SelectSingleNode(ManagmentLoadXML.TalentElement);
+            XmlNode TalentLetterElement = talentFile.SelectSingleNode("/" + ManagmentXMLStrings.TalentLetterElement);
+            XmlNode TalentElement = TalentLetterElement.SelectSingleNode(ManagmentXMLStrings.TalentElement);
 
 
             foreach (XmlNode node in TalentElement)
             {
                 switch (node.Name)
                 {
-                    case ManagmentLoadXML.Name: TalentName = node.InnerText; break;
-                    case ManagmentLoadXML.Probe: loadProbe(node); break;
-                    case ManagmentLoadXML.BE: BE = node.InnerText; break;
-                    case ManagmentLoadXML.Diverates: loadDiverates(node); break;
-                    case ManagmentLoadXML.Requirements: loadRequirements(node); break;
-                    case ManagmentLoadXML.FightingTalent: loadFightingTalent(node); break;
+                    case ManagmentXMLStrings.Name: TalentName = node.InnerText; break;
+                    case ManagmentXMLStrings.Probe: loadProbe(node); break;
+                    case ManagmentXMLStrings.BE: BE = node.InnerText; break;
+                    case ManagmentXMLStrings.Diverates: loadDiverates(node); break;
+                    case ManagmentXMLStrings.Requirements: loadRequirements(node); break;
+                    case ManagmentXMLStrings.FightingTalent: loadFightingTalent(node); break;
                     default: throw new Exception("No such case");
                 }
             }
@@ -85,8 +85,8 @@ namespace DSA_Project
                 {
                     switch (node.Name)
                     {
-                        case ManagmentLoadXML.TalentElement:    TalentName = node.InnerText; break;
-                        case ManagmentLoadXML.Value:            int x; Int32.TryParse(node.InnerText, out x); Value = x; ; break;
+                        case ManagmentXMLStrings.TalentElement:    TalentName = node.InnerText; break;
+                        case ManagmentXMLStrings.Value:            int x; Int32.TryParse(node.InnerText, out x); Value = x; ; break;
                     }
                 }
                 diverate = new TalentDiverate(TalentName, Value);
@@ -107,9 +107,9 @@ namespace DSA_Project
                 {
                     switch (node.Name)
                     {
-                        case ManagmentLoadXML.TalentElement:    TalentName = node.InnerText; break;
-                        case ManagmentLoadXML.Value:            Int32.TryParse(node.InnerText, out x); Value = x;   break;
-                        case ManagmentLoadXML.NeedAT:           Int32.TryParse(node.InnerText, out x); NeedAt = x;  break;
+                        case ManagmentXMLStrings.TalentElement:    TalentName = node.InnerText; break;
+                        case ManagmentXMLStrings.Value:            Int32.TryParse(node.InnerText, out x); Value = x;   break;
+                        case ManagmentXMLStrings.NeedAT:           Int32.TryParse(node.InnerText, out x); NeedAt = x;  break;
                     }
                 }
                 requirement = new TalentRequirement(TalentName, Value, NeedAt);
@@ -125,7 +125,7 @@ namespace DSA_Project
 
                 switch (node.Name)
                 {
-                    case ManagmentLoadXML.attack:
+                    case ManagmentXMLStrings.attack:
                         for(int i=0; i<NamesOFAdvantageElements.Length; i++)
                         {
                             if(0 == String.Compare(NamesOFAdvantageElements[i], node.InnerText))
@@ -134,7 +134,7 @@ namespace DSA_Project
                             }
                         }
                         break;
-                    case ManagmentLoadXML.Parade:
+                    case ManagmentXMLStrings.Parade:
                         parade = Convert.ToBoolean(node.InnerText);
                         break;
 

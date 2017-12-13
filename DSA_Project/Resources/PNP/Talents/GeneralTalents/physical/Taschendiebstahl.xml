@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Taschendiebstahl</Name>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <BE>BEx2</BE>
+    <Requirements>
+      <Requirement>
+        <Talent>Menschenkenntnis</Talent>
+        <NeedAT>10</NeedAT>
+        <Value>4</Value>
+      </Requirement>
+    </Requirements>
+    <Diverates>
+      <Diverate>
+        <Talent>Gaukeleien (Taschenspielereien)</Talent>
+        <Value>0</Value>
+      </Diverate>
+    </Diverates>
+  </Talent>
+</TalentLetter>

@@ -12,8 +12,11 @@ namespace DSA_Project
 {
     public partial class CreateFightingTalent : Form
     {
-        public CreateFightingTalent()
+        String FightingTalentsFileSystemLocation;
+        public CreateFightingTalent(String FightingTalentsFileSystemLocation)
         {
+            this.FightingTalentsFileSystemLocation = FightingTalentsFileSystemLocation;
+
             InitializeComponent();
 
             comboBoxType.DataSource = Enum.GetValues(typeof(DSA_FIGHTINGTALENTS));
@@ -56,7 +59,7 @@ namespace DSA_Project
 
             Boolean boolean = (Boolean)comboBoxParade.SelectedValue;
 
-            SaveXMLTalent.saveXMLTalent(txtTalentName.Text, type, diverate, txtBE.Text, boolean);
+            SaveXMLTalent.saveXMLTalent(FightingTalentsFileSystemLocation, txtTalentName.Text, type, diverate, txtBE.Text, boolean);
         }
 
         private void btnClear_Click(object sender, EventArgs e)

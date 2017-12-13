@@ -140,7 +140,14 @@ namespace DSA_Project
             int attributeCount = Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length;
             for (int i = 0; i < attributeCount; i++)
             {
-                summe = summe + getAttributeAKT((DSA_ATTRIBUTE)i);
+                if((DSA_ATTRIBUTE)i == DSA_ATTRIBUTE.HT || (DSA_ATTRIBUTE)i == DSA_ATTRIBUTE.LT)
+                {
+                    //Deinitiv beschissen.... Anders Planen! 
+                } else
+                {
+                    summe = summe + getAttributeAKT((DSA_ATTRIBUTE)i);
+                }
+
             }
             return summe;
         }
@@ -150,7 +157,14 @@ namespace DSA_Project
             int attributeCount = Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length;
             for (int i = 0; i < attributeCount; i++)
             {
-                summe = summe + getAttribute_Max((DSA_ATTRIBUTE)i);
+                if ((DSA_ATTRIBUTE)i == DSA_ATTRIBUTE.HT || (DSA_ATTRIBUTE)i == DSA_ATTRIBUTE.LT)
+                {
+                    //Deinitiv beschissen.... Anders Planen! 
+                }
+                else
+                {
+                    summe = summe + getAttributeAKT((DSA_ATTRIBUTE)i);
+                }
             }
             return summe;
         }

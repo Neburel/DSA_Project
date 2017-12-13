@@ -1,0 +1,23 @@
+<TalentLetter>
+  <Talent>
+    <Name>Fahren</Name>
+    <BE>BE-2</BE>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>GE</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Körperbeherrschung</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Akrobatik</Talent>
+        <Value>15</Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

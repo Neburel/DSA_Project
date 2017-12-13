@@ -5,45 +5,66 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
+using System.ComponentModel;
+using System.Drawing;
 
 namespace DSA_Project
 {
-    public enum DSA_ATTRIBUTE { MU, KL, IN, CH, FF, GE, KO, KK, SO }
+    //###################################################################################################################################################################################
+    //Structs
+    public struct HeroPageFeatureTag
+    {
+        public DSA_FEATURES type;
+        public int number;
+
+        public HeroPageFeatureTag(DSA_FEATURES t, int n)
+        {
+            type = t;
+            number = n;
+        }
+    }
+    //###################################################################################################################################################################################
+    //Enums
+    public enum DSA_ATTRIBUTE { MU, KL, IN, CH, FF, GE, KO, KK, SO, LT, HT }
     public enum DSA_ENERGIEN { LEBENSENERGIE, AUSDAUER, ASTRALENERGIE, KARMAENERGIE, MAGIERESISTENZ }
     public enum DSA_ADVANCEDVALUES { ATTACKE_BASIS, PARADE_BASIS, FERNKAMPF_BASIS, INITATIVE_BASIS, BEHERSCHUNGSWERT, ARTEFAKTKONTROLLE, WUNDSCHWELLE, ENTRÜCKUNG, GESCHWINDIGKEIT }
     public enum DSA_BASICVALUES { NAME, ALTER, GESCHLECHT, GRÖSE, GEWICHT, AUGENFARBE, HAUTFARBE, HAARFARBE, FAMILIENSTAND, ANREDE, GOTTHEIT, RASSE, KULTUR, PROFESSION }
     public enum DSA_MONEY { D, S, H, K, BANK }
-  
-    /// <summary>
-    /// Die Kontroll Klasse dient als Zentrale Anlaufstelle für das Programm
-    /// Sie bestimmt was bei Wereänderungen Passiert, wie und wohin sie geschrieben werden
-    /// Sie bestimmt welche Werte bei Anfragen zurückgegeben weden
-    /// Wie wird gespeichert, geladen
-    /// etc....
-    /// <summary>
-    class ControllClass
+    //###################################################################################################################################################################################
+    public abstract class ControllClass
     {
-        DSA form;
-        Charakter Charakter;
-        Dictionary<int, Feature> Advantages = new Dictionary<int, Feature>();
+        private DSA form;
+        private Charakter Charakter;
+        private Dictionary<int, Feature> Advantages = new Dictionary<int, Feature>();
+
+        private String GeneralTalentFileSystemLocation;
+        private String FightingTalentFileSystemLocation;
 
 
         public ControllClass(DSA form)
         {
             this.form = form;
+            setUP();
             Charakter = createNewCharater();
         }
-
+        //###################################################################################################################################
+        //Tools
+        //###################################################################################################################################
+        //Laden und Speichern von Daten 
+        protected abstract String getRootPath();
+        private String getResourcePath()
+        {
+            String path = Path.Combine(ManagmentSaveStrings.currentDirectory, ManagmentSaveStrings.Recources);
+            path        = Path.Combine(path, getRootPath());
+            return path;
+        }
         public void save()
         {
-            String directoryPath = Directory.GetCurrentDirectory();
-            String destinationPath = @ManagmentLoadXML.saveLocation; 
-            String completePath = Path.Combine(directoryPath, destinationPath);
-
-            Console.WriteLine(completePath);
+            String path = Path.Combine(getResourcePath(), ManagmentSaveStrings.SaveLocation);
 
             SaveFileDialog savefileDialog = new SaveFileDialog();
-            savefileDialog.InitialDirectory = completePath;
+            savefileDialog.InitialDirectory = path;
             savefileDialog.Filter = "xmlFiles |*xml";
 
             if (savefileDialog.ShowDialog() == DialogResult.OK)
@@ -53,56 +74,43 @@ namespace DSA_Project
         }
         public void load()
         {
-            String directoryPath = Directory.GetCurrentDirectory();
-            String destinationPath = @ManagmentLoadXML.saveLocation;
-            String completePath = Path.Combine(directoryPath, destinationPath);
-
+            String path = Path.Combine(getResourcePath(), ManagmentSaveStrings.SaveLocation);
+            
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = completePath;
+            openFileDialog.InitialDirectory = path;
             openFileDialog.Filter = "xmlFiles |*xml";
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Charakter = LoadCharakterXML.loadCharakter(openFileDialog.FileName, createNewCharater());
             }
-
             form.load();
-            form.refreshHeroPage();
-            form.refreshTalentPage();
         }
-
         public Charakter createNewCharater()
         {
             Charakter charakter = new Charakter();
-            new ControllTalent(charakter);
+            new ControllTalent(charakter, GeneralTalentFileSystemLocation, FightingTalentFileSystemLocation);              //Rüstet den Charakter mit den der Form zugehörigen Talenten aus
 
 
             return charakter;
         }
-        /// <summary>
-        /// Gibt ein Basic Value in Form eines Array Zurück
-        /// mit Ausnahme von Modifikatoren und Göttergeschenke ist dieser Wert stets im 0 vorhanden
-        /// Bessere Lösung Möglich?
-        /// </summary>
-        public String BasicValue(DSA_BASICVALUES value)
+        //###################################################################################################################################
+        //###################################################################################################################################
+        //Einrichtung der Form
+        private void setUP()
         {
-            return Charakter.getBasicValue(value);
-        }
-        public String BasicValue(DSA_BASICVALUES value, String wert)
-        {
-            Charakter.setBasicValues(value, wert);
-            return BasicValue(value);
-        }
+            String path;
+            path = Path.Combine(ManagmentSaveStrings.currentDirectory, getRootPath());
+            path = Path.Combine(path, ManagmentSaveStrings.SaveLocation);
 
-
-        /// <summary>
-        /// Funktion die bei einer Eingabe in eienem AKT Attribute Feld feststellt ob diese Korrekt ist,
-        /// und gibt den Neuen Wert(wenn dieser Korrekt ist) oder den Alten zurück
-        /// </summary>
-        /// <param name="attribute">Das Attribute welches geändert werden soll</param>
-        /// <param name="wert">Der Wert in den das Attribute gewändert wird (Nummerisch, Integer).</param>
-        /// <param name="form">Die Form die nach der Änderung Refresht werden soll.</param>
-        /// <returns></returns>
+            GeneralTalentFileSystemLocation = Path.Combine(getResourcePath(), ManagmentSaveStrings.GeneralTalentFilesSystemLocation);
+            FightingTalentFileSystemLocation = Path.Combine(getResourcePath(), ManagmentSaveStrings.FightTalentFilesSystemLocation);
+            
+            setUPAttribute();
+        }
+        //###################################################################################################################################
+        //Einrichtung der Attribute
+        protected abstract void setUPAttribute();
         public int AttributeAKT(DSA_ATTRIBUTE attribute)
         {
             return Charakter.getAttributeAKT(attribute);
@@ -117,14 +125,6 @@ namespace DSA_Project
             form.refreshHeroPage();
             return AttributeAKT(attribute);
         }
-        /// <summary>
-        /// Funktion die bei einer Eingabe in eienem MOD Attribute Feld feststellt ob diese Korrekt ist,
-        /// und gibt den Neuen Wert(wenn dieser Korrekt ist) oder den Alten zurück
-        /// </summary>
-        /// <param name="attribute">Das Attribute welches geändert werden soll</param>
-        /// <param name="wert">Der Wert in den das Attribute gewändert wird (Nummerisch, Integer).</param>
-        /// <param name="form">Die Form die nach der Änderung Refresht werden soll.</param>
-        /// <returns></returns>
         public int AttributeMOD(DSA_ATTRIBUTE attribute)
         {
             return Charakter.getAttribute_Mod(attribute);
@@ -139,21 +139,12 @@ namespace DSA_Project
             form.refreshHeroPage();
             return AttributeMOD(attribute);
         }
-        /// <summary>
-        /// Funktion die bei einer Eingabe in eienem MAX Attribute Feld feststellt ob diese Korrekt ist,
-        /// und gibt den Neuen Wert(wenn dieser Korrekt ist) oder den Alten zurück
-        /// </summary>
-        /// <param name="attribute">Das Attribute welches geändert werden soll</param>
-        /// <param name="wert">Der Wert in den das Attribute gewändert wird (Nummerisch, Integer).</param>
-        /// <param name="form">Die Form die nach der Änderung Refresht werden soll.</param>
-        /// <returns></returns>
         public int AttributeMAX(DSA_ATTRIBUTE attribute)
         {
             return Charakter.getAttribute_Max(attribute);
         }
         public int AttributeMAX(DSA_ATTRIBUTE attribute, String Wert)
         {
-            /*Dieser Wert soll nicht verändert werden*/
             return AttributeMAX(attribute);
         }
         public int getAttributeAKTSumme()
@@ -164,7 +155,61 @@ namespace DSA_Project
         {
             return Charakter.getSummeAttributeMAX();
         }
+        public void changeAttributMark(DSA_ATTRIBUTE att, Label lblAttribut, TextBox txtAKT, TextBox txtMOD, TextBox txtMax)
+        {
+            bool x = !Charakter.getMarkedAttribut(att);
+            Charakter.setMarkedAttribut(att, x);
 
+            if (!x)
+            {
+                lblAttribut.ForeColor = Color.Black;
+                lblAttribut.Font = new Font(lblAttribut.Font, FontStyle.Regular);
+
+                txtAKT.BackColor = ManagmentForm.activeColor;
+                txtMOD.BackColor = ManagmentForm.inactiveColor;
+                txtMax.BackColor = ManagmentForm.inactiveColor;
+            }
+            else
+            {
+                lblAttribut.ForeColor = Color.Red;
+
+                txtAKT.BackColor = Color.Yellow;
+                txtMOD.BackColor = Color.GreenYellow;
+                txtMax.BackColor = Color.GreenYellow;
+            }
+            Charakter.setMarkedAttribut(att, x);
+        }
+        //###################################################################################################################################
+        //Einrichtung der BasicValues
+        public String BasicValue(DSA_BASICVALUES value)
+        {
+            return Charakter.getBasicValue(value);
+        }
+        public String BasicValue(DSA_BASICVALUES value, String wert)
+        {
+            Charakter.setBasicValues(value, wert);
+            return BasicValue(value);
+        }
+        public String Göttergeschenk(int number)
+        {
+            return Charakter.getGöttergeschenk(number);
+        }
+        public String Göttergeschenk(int number, String description)
+        {
+            Charakter.setGöttergeschenk(number, description);
+            return Göttergeschenk(number);
+        }
+        public String Moodifikator(int number)
+        {
+            return Charakter.getModifikatoren(number);
+        }
+        public String Moodifikator(int number, String description)
+        {
+            Charakter.setModifikatoren(number, description);
+            return Moodifikator(number);
+        }
+        //###################################################################################################################################
+        //Einrichtung der AdvancecValues
         public int AdvancedValueAKT(DSA_ADVANCEDVALUES advancedValue)
         {
             return Charakter.getAdvancedValueAKT(advancedValue);
@@ -187,8 +232,8 @@ namespace DSA_Project
         {
             return Charakter.getAdvancedValueMAX(advancedValue);
         }
-
-
+        //###################################################################################################################################
+        //Einrichtung der Energie
         public int EnergieVOR(DSA_ENERGIEN energie)
         {
             return Charakter.getEnergieVOR(energie);
@@ -209,8 +254,8 @@ namespace DSA_Project
         {
             return Charakter.getEnergieMAX(energie);
         }
-
-
+        //###################################################################################################################################
+        //Einrichtung der Anderen
         public int Money(DSA_MONEY type)
         {
             return Charakter.getMoney(type);
@@ -224,8 +269,17 @@ namespace DSA_Project
             }
             return Money(type);
         }
-
-
+        public int AdvanturePoints(int number)
+        {
+            Charakter.setAdventurePoints(number);
+            return Charakter.getAdvanturePoints();
+        }
+        public int AdvanturePoints()
+        {
+            return Charakter.getAdvanturePoints();
+        }
+        //###################################################################################################################################
+        //Einrichtung der Feature
         public Feature Feature(int number, DSA_FEATURES type)
         {
             CreateFeature createFeature;
@@ -256,26 +310,8 @@ namespace DSA_Project
         {
             return Charakter.getFeature(type, number);
         }
-
-        public String Göttergeschenk(int number)
-        {
-            return Charakter.getGöttergeschenk(number);
-        }
-        public String Göttergeschenk(int number, String description)
-        {
-            Charakter.setGöttergeschenk(number, description);
-            return Göttergeschenk(number);
-        }
-        public String Moodifikator(int number)
-        {
-            return Charakter.getModifikatoren(number);
-        }
-        public String Moodifikator(int number, String description)
-        {
-            Charakter.setModifikatoren(number, description);
-            return Moodifikator(number);
-        }
-
+        //###################################################################################################################################
+        //Einrichtung der Talente
         public List<InterfaceTalent> getTalent()
         {
             return Charakter.getAllTalentList();
@@ -284,25 +320,6 @@ namespace DSA_Project
         {
             return Charakter.getTalent(type, number);
         }
-
-        public int AdvanturePoints(int number)
-        {
-            Charakter.setAdventurePoints(number);
-            return Charakter.getAdvanturePoints();
-        }
-        public int AdvanturePoints()
-        {
-            return Charakter.getAdvanturePoints();
-        }
-
-        public void setMarkedAttribut(DSA_ATTRIBUTE att, bool b)
-        {
-            Charakter.setMarkedAttribut(att, b);
-        }
-        public bool getMarkedAttribut(DSA_ATTRIBUTE att)
-        {
-            return Charakter.getMarkedAttribut(att);
-        }
-
+        //###################################################################################################################################
     }
 }

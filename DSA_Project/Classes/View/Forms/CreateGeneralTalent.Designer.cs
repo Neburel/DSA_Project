@@ -77,7 +77,6 @@
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "TalentName";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // comboBoxType
             // 
@@ -133,7 +132,6 @@
             this.listProbeView.TabIndex = 7;
             this.listProbeView.UseCompatibleStateImageBehavior = false;
             this.listProbeView.View = System.Windows.Forms.View.Details;
-            this.listProbeView.SelectedIndexChanged += new System.EventHandler(this.listProbeView_SelectedIndexChanged);
             // 
             // listProbeAttribut
             // 
@@ -353,7 +351,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTalentName);
             this.Text = "CreateTalent";
-            this.Load += new System.EventHandler(this.CreateTalent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

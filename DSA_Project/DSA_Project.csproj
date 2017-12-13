@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Controller\ControllClassPNP.cs" />
+    <Compile Include="Classes\Controller\ControllClassDSA.cs" />
     <Compile Include="Classes\Controller\ControllTalent.cs" />
     <Compile Include="Classes\Data\Charakter\Charakter.cs" />
     <Compile Include="Classes\Controller\ControllClass.cs" />
@@ -56,7 +58,9 @@
     <Compile Include="Classes\Data\Talente\TalentDiverate.cs" />
     <Compile Include="Classes\Data\Talente\TalentRequirement.cs" />
     <Compile Include="Classes\Managment\ManagmentFeature.cs" />
-    <Compile Include="Classes\Managment\ManagmentLoadXML.cs" />
+    <Compile Include="Classes\Managment\ManagmentForm.cs" />
+    <Compile Include="Classes\Managment\ManagmentXMLStrings.cs" />
+    <Compile Include="Classes\Managment\ManagmentSaveStrings.cs" />
     <Compile Include="Classes\Util\XMLSave\SaveXMLTalent.cs" />
     <Compile Include="Classes\Util\XMLLoad\LoadCharakterXML.cs" />
     <Compile Include="Classes\Util\XMLLoad\LoadXMLTalentFile.cs" />
@@ -118,30 +122,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Resources\PNP\Talents\FightingTalents\close\merker">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\PNP\Talents\FightingTalents\range\merker">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\PNP\Talents\FightingTalents\weaponless\merker">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\PNP\Talents\GeneralTalents\crafting\merker">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\PNP\Talents\GeneralTalents\knowldage\merker">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\PNP\Talents\GeneralTalents\nature\merker">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\PNP\Talents\GeneralTalents\physical\merker">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\PNP\Talents\GeneralTalents\social\merker">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\DSA\SaveGame\Kazarik_2.xml" />
@@ -512,11 +492,129 @@
     <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Athletik.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\PNP\SaveGame\merker">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\DSA\Talents\GeneralTalents\social\Überzeugen">
+    <Content Include="Resources\DSA\Talents\GeneralTalents\social\Überzeugen.xml">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\nature\Fallenstellen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\nature\Fesseln-Entfesseln.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\nature\Fischen-Angeln.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\nature\Fährtensuchen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\nature\Orientierung.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\nature\Wettervorhersage.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\nature\Wildnisleben.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Akrobatik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Athletik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Fahren.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Fliegen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Klettern.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Körperbeherrschung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Mechanzug steuern.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Metation.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Schleichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Schwimmen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Selbstbeherrschung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Sich Verstecken.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Singen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Sinnenschärfe.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Stimmen Imitieren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Tanzen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Taschendiebstahl.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Zechen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\social\Untergrundwissen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\social\Betören.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\social\Etikette.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\social\Lehren.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\social\Rassenkentnis.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\social\Schauspielerei.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\social\Schriftlicher Ausdruck.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\social\Sich Verkleiden.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\social\Überzeugen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\social\Überreden.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\PNP\SaveGame\merker">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Content Include="Resources\DSA\Talents\GeneralTalents\social\Sich Verkleiden.xml">
@@ -558,6 +656,12 @@
     <None Include="Resources\PicturesDiv\anj80eb_700b.jpg" />
     <Content Include="Resources\PicturesDiv\aventurien politisch.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\PNP\Talents\FightingTalents\close\" />
+    <Folder Include="Resources\PNP\Talents\FightingTalents\range\" />
+    <Folder Include="Resources\PNP\Talents\FightingTalents\weaponless\" />
+    <Folder Include="Resources\PNP\Talents\GeneralTalents\crafting\" />
+    <Folder Include="Resources\PNP\Talents\GeneralTalents\knowldage\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
