@@ -1,0 +1,20 @@
+<TalentLetter>
+  <Talent>
+    <Name>Drohnen Lenken</Name>
+    <BE>
+    </BE>
+    <Probe>
+      <Attribute>IN</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Hundeschlitten Fahren</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

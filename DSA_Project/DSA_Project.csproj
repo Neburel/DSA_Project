@@ -496,6 +496,193 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Abrichten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Ackerbau.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Bergbau.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Chemiker.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Drogenherstellung.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Drohnen Lenken.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Falschspiel.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Hacken.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Holzbearbeitung.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Ingeneurskunst.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Maler.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Navigation.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Prothesenherstellung.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Recyling.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Reperatur.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Synthetiker.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Systemadminstration.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Waffenbau.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Boote Fahren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Brauer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Fleischer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\GerberKürschner.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Schmiedekunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Handel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Hauswirtschaft.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Heilkunde Gift.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Heilkunde Krankheiten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Heilkunde Seele.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Heilkunde Wunden.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Kochen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Lederarbeiten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\MalenZeichnen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Maurer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Metallguss.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Musizieren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Schlösser Knacken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Schneidern.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Seiler.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Steinmetz.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\SteinschneiderJuwelier.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Stellmacher.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Tätowieren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Töpfern.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Viehzucht.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Webkunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Zimmermann.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Anatomie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Antimateriekunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Antriebstechnik.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Baukunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Brett-Kartenspiel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Elektrizität.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Energiekunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Geographie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Geschichtswissen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Gravitationskunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\GötterKulte.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Ionenkunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Kommunikation.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Kriegskunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Kryptographie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Laserkunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Materialkunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Mechanik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Metallkunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Mutationskunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Nanotechnologie.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Pflanzenkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Phasenkunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Philosophie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Plasmakunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Psyionikkunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Rechnen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Rechtskunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Robotik.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\SagenLegenden.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Schiffskunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Schildtechnologie.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Schätzen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Sprachenkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Staatskunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Sternkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Tierkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Wellenkunde.xml" />
     <Content Include="Resources\PNP\Talents\GeneralTalents\nature\Fallenstellen.xml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -660,8 +847,6 @@
     <Folder Include="Resources\PNP\Talents\FightingTalents\close\" />
     <Folder Include="Resources\PNP\Talents\FightingTalents\range\" />
     <Folder Include="Resources\PNP\Talents\FightingTalents\weaponless\" />
-    <Folder Include="Resources\PNP\Talents\GeneralTalents\crafting\" />
-    <Folder Include="Resources\PNP\Talents\GeneralTalents\knowldage\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

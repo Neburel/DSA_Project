@@ -1,0 +1,18 @@
+<TalentLetter>
+  <Talent>
+    <Name>Webkunst</Name>
+    <Probe>
+      <Attribute>FF</Attribute>
+      <Attribute>FF</Attribute>
+      <Attribute>KK</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Schneidern</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

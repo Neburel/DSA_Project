@@ -1,0 +1,29 @@
+<TalentLetter>
+  <Talent>
+    <Name>Drogenherstellung</Name>
+    <BE>
+    </BE>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Alchimie</Talent>
+        <Value>5</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Brauer</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Winzer</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

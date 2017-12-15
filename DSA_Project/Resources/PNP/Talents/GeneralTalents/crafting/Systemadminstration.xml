@@ -1,0 +1,20 @@
+<TalentLetter>
+  <Talent>
+    <Name>Systemadminstration</Name>
+    <BE>
+    </BE>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>FF</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Steinmetz</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

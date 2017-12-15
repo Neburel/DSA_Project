@@ -390,6 +390,11 @@
             this.PTName1 = new System.Windows.Forms.Label();
             this.worldmap = new System.Windows.Forms.TabPage();
             this.Heldenbrief = new System.Windows.Forms.TabPage();
+            this.lblFreeValue7 = new System.Windows.Forms.Label();
+            this.lblFreeValue6 = new System.Windows.Forms.Label();
+            this.lblFreeValue5 = new System.Windows.Forms.Label();
+            this.lblFreeValue3 = new System.Windows.Forms.Label();
+            this.lblFreeValue2 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.HPcompoBoxTalentProbeB5 = new System.Windows.Forms.TextBox();
             this.HPcompoBoxTalentProbeA5 = new System.Windows.Forms.TextBox();
@@ -621,18 +626,18 @@
             this.txtIntuitionAKT = new System.Windows.Forms.TextBox();
             this.txtKlugheitAKT = new System.Windows.Forms.TextBox();
             this.txtMutAKT = new System.Windows.Forms.TextBox();
-            this.txtGöttergeschenke4 = new System.Windows.Forms.TextBox();
-            this.txtGöttergeschenke3 = new System.Windows.Forms.TextBox();
-            this.txtGöttergeschenke2 = new System.Windows.Forms.TextBox();
-            this.txtGöttergeschenke1 = new System.Windows.Forms.TextBox();
+            this.txtFreeValue7 = new System.Windows.Forms.TextBox();
+            this.txtFreeValue6 = new System.Windows.Forms.TextBox();
+            this.txtFreeValue5 = new System.Windows.Forms.TextBox();
+            this.txtFreeValue4 = new System.Windows.Forms.TextBox();
             this.txtFamulienstand = new System.Windows.Forms.TextBox();
             this.txtGewicht = new System.Windows.Forms.TextBox();
             this.txtGröße = new System.Windows.Forms.TextBox();
             this.txtHautfarbe = new System.Windows.Forms.TextBox();
             this.txtGeschlecht = new System.Windows.Forms.TextBox();
-            this.txtModifikation3 = new System.Windows.Forms.TextBox();
-            this.txtModifikation2 = new System.Windows.Forms.TextBox();
-            this.txtModifikation1 = new System.Windows.Forms.TextBox();
+            this.txtFreeValue3 = new System.Windows.Forms.TextBox();
+            this.txtFreeValue2 = new System.Windows.Forms.TextBox();
+            this.txtFreeValue1 = new System.Windows.Forms.TextBox();
             this.txtGottheit = new System.Windows.Forms.TextBox();
             this.txtHaarfarbe = new System.Windows.Forms.TextBox();
             this.txtAlter = new System.Windows.Forms.TextBox();
@@ -646,8 +651,8 @@
             this.label55 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.Stufe = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
+            this.lblBank = new System.Windows.Forms.Label();
+            this.lblGeld = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
@@ -682,20 +687,20 @@
             this.lblIntuition = new System.Windows.Forms.Label();
             this.lblKlugheit = new System.Windows.Forms.Label();
             this.lblMut = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblFreeValue4 = new System.Windows.Forms.Label();
+            this.lblFamilienstand = new System.Windows.Forms.Label();
+            this.lblGewicht = new System.Windows.Forms.Label();
+            this.lblGröße = new System.Windows.Forms.Label();
+            this.lblHautfarbe = new System.Windows.Forms.Label();
+            this.lblGeschlecht = new System.Windows.Forms.Label();
+            this.lblFreeValue1 = new System.Windows.Forms.Label();
+            this.lblGottheit = new System.Windows.Forms.Label();
+            this.lblHaarfarbe = new System.Windows.Forms.Label();
+            this.lblAlter = new System.Windows.Forms.Label();
+            this.lblProfession = new System.Windows.Forms.Label();
+            this.lblKultur = new System.Windows.Forms.Label();
+            this.lblRasse = new System.Windows.Forms.Label();
+            this.lblAnrede = new System.Windows.Forms.Label();
             this.lblAugenfarbe = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.TabControl = new System.Windows.Forms.TabControl();
@@ -3360,6 +3365,11 @@
             // Heldenbrief
             // 
             this.Heldenbrief.BackColor = System.Drawing.SystemColors.Control;
+            this.Heldenbrief.Controls.Add(this.lblFreeValue7);
+            this.Heldenbrief.Controls.Add(this.lblFreeValue6);
+            this.Heldenbrief.Controls.Add(this.lblFreeValue5);
+            this.Heldenbrief.Controls.Add(this.lblFreeValue3);
+            this.Heldenbrief.Controls.Add(this.lblFreeValue2);
             this.Heldenbrief.Controls.Add(this.groupBox5);
             this.Heldenbrief.Controls.Add(this.groupBox2);
             this.Heldenbrief.Controls.Add(this.groupBox1);
@@ -3448,18 +3458,18 @@
             this.Heldenbrief.Controls.Add(this.txtIntuitionAKT);
             this.Heldenbrief.Controls.Add(this.txtKlugheitAKT);
             this.Heldenbrief.Controls.Add(this.txtMutAKT);
-            this.Heldenbrief.Controls.Add(this.txtGöttergeschenke4);
-            this.Heldenbrief.Controls.Add(this.txtGöttergeschenke3);
-            this.Heldenbrief.Controls.Add(this.txtGöttergeschenke2);
-            this.Heldenbrief.Controls.Add(this.txtGöttergeschenke1);
+            this.Heldenbrief.Controls.Add(this.txtFreeValue7);
+            this.Heldenbrief.Controls.Add(this.txtFreeValue6);
+            this.Heldenbrief.Controls.Add(this.txtFreeValue5);
+            this.Heldenbrief.Controls.Add(this.txtFreeValue4);
             this.Heldenbrief.Controls.Add(this.txtFamulienstand);
             this.Heldenbrief.Controls.Add(this.txtGewicht);
             this.Heldenbrief.Controls.Add(this.txtGröße);
             this.Heldenbrief.Controls.Add(this.txtHautfarbe);
             this.Heldenbrief.Controls.Add(this.txtGeschlecht);
-            this.Heldenbrief.Controls.Add(this.txtModifikation3);
-            this.Heldenbrief.Controls.Add(this.txtModifikation2);
-            this.Heldenbrief.Controls.Add(this.txtModifikation1);
+            this.Heldenbrief.Controls.Add(this.txtFreeValue3);
+            this.Heldenbrief.Controls.Add(this.txtFreeValue2);
+            this.Heldenbrief.Controls.Add(this.txtFreeValue1);
             this.Heldenbrief.Controls.Add(this.txtGottheit);
             this.Heldenbrief.Controls.Add(this.txtHaarfarbe);
             this.Heldenbrief.Controls.Add(this.txtAlter);
@@ -3473,8 +3483,8 @@
             this.Heldenbrief.Controls.Add(this.label55);
             this.Heldenbrief.Controls.Add(this.label54);
             this.Heldenbrief.Controls.Add(this.Stufe);
-            this.Heldenbrief.Controls.Add(this.label53);
-            this.Heldenbrief.Controls.Add(this.label52);
+            this.Heldenbrief.Controls.Add(this.lblBank);
+            this.Heldenbrief.Controls.Add(this.lblGeld);
             this.Heldenbrief.Controls.Add(this.label51);
             this.Heldenbrief.Controls.Add(this.label50);
             this.Heldenbrief.Controls.Add(this.label49);
@@ -3509,24 +3519,49 @@
             this.Heldenbrief.Controls.Add(this.lblIntuition);
             this.Heldenbrief.Controls.Add(this.lblKlugheit);
             this.Heldenbrief.Controls.Add(this.lblMut);
-            this.Heldenbrief.Controls.Add(this.label16);
-            this.Heldenbrief.Controls.Add(this.label17);
-            this.Heldenbrief.Controls.Add(this.label15);
-            this.Heldenbrief.Controls.Add(this.label14);
-            this.Heldenbrief.Controls.Add(this.label12);
-            this.Heldenbrief.Controls.Add(this.label13);
-            this.Heldenbrief.Controls.Add(this.label10);
-            this.Heldenbrief.Controls.Add(this.label7);
-            this.Heldenbrief.Controls.Add(this.label6);
-            this.Heldenbrief.Controls.Add(this.label5);
-            this.Heldenbrief.Controls.Add(this.label4);
-            this.Heldenbrief.Controls.Add(this.label3);
-            this.Heldenbrief.Controls.Add(this.label2);
-            this.Heldenbrief.Controls.Add(this.label1);
+            this.Heldenbrief.Controls.Add(this.lblFreeValue4);
+            this.Heldenbrief.Controls.Add(this.lblFamilienstand);
+            this.Heldenbrief.Controls.Add(this.lblGewicht);
+            this.Heldenbrief.Controls.Add(this.lblGröße);
+            this.Heldenbrief.Controls.Add(this.lblHautfarbe);
+            this.Heldenbrief.Controls.Add(this.lblGeschlecht);
+            this.Heldenbrief.Controls.Add(this.lblFreeValue1);
+            this.Heldenbrief.Controls.Add(this.lblGottheit);
+            this.Heldenbrief.Controls.Add(this.lblHaarfarbe);
+            this.Heldenbrief.Controls.Add(this.lblAlter);
+            this.Heldenbrief.Controls.Add(this.lblProfession);
+            this.Heldenbrief.Controls.Add(this.lblKultur);
+            this.Heldenbrief.Controls.Add(this.lblRasse);
+            this.Heldenbrief.Controls.Add(this.lblAnrede);
             this.Heldenbrief.Controls.Add(this.lblAugenfarbe);
             this.Heldenbrief.Controls.Add(this.lblName);
             resources.ApplyResources(this.Heldenbrief, "Heldenbrief");
             this.Heldenbrief.Name = "Heldenbrief";
+            // 
+            // lblFreeValue7
+            // 
+            resources.ApplyResources(this.lblFreeValue7, "lblFreeValue7");
+            this.lblFreeValue7.Name = "lblFreeValue7";
+            // 
+            // lblFreeValue6
+            // 
+            resources.ApplyResources(this.lblFreeValue6, "lblFreeValue6");
+            this.lblFreeValue6.Name = "lblFreeValue6";
+            // 
+            // lblFreeValue5
+            // 
+            resources.ApplyResources(this.lblFreeValue5, "lblFreeValue5");
+            this.lblFreeValue5.Name = "lblFreeValue5";
+            // 
+            // lblFreeValue3
+            // 
+            resources.ApplyResources(this.lblFreeValue3, "lblFreeValue3");
+            this.lblFreeValue3.Name = "lblFreeValue3";
+            // 
+            // lblFreeValue2
+            // 
+            resources.ApplyResources(this.lblFreeValue2, "lblFreeValue2");
+            this.lblFreeValue2.Name = "lblFreeValue2";
             // 
             // groupBox5
             // 
@@ -5045,29 +5080,25 @@
             resources.ApplyResources(this.txtMutAKT, "txtMutAKT");
             this.txtMutAKT.Name = "txtMutAKT";
             // 
-            // txtGöttergeschenke4
+            // txtFreeValue7
             // 
-            resources.ApplyResources(this.txtGöttergeschenke4, "txtGöttergeschenke4");
-            this.txtGöttergeschenke4.Name = "txtGöttergeschenke4";
-            this.txtGöttergeschenke4.TextChanged += new System.EventHandler(this.txtGöttergeschenke4_TextChanged);
+            resources.ApplyResources(this.txtFreeValue7, "txtFreeValue7");
+            this.txtFreeValue7.Name = "txtFreeValue7";
             // 
-            // txtGöttergeschenke3
+            // txtFreeValue6
             // 
-            resources.ApplyResources(this.txtGöttergeschenke3, "txtGöttergeschenke3");
-            this.txtGöttergeschenke3.Name = "txtGöttergeschenke3";
-            this.txtGöttergeschenke3.TextChanged += new System.EventHandler(this.txtGöttergeschenke3_TextChanged);
+            resources.ApplyResources(this.txtFreeValue6, "txtFreeValue6");
+            this.txtFreeValue6.Name = "txtFreeValue6";
             // 
-            // txtGöttergeschenke2
+            // txtFreeValue5
             // 
-            resources.ApplyResources(this.txtGöttergeschenke2, "txtGöttergeschenke2");
-            this.txtGöttergeschenke2.Name = "txtGöttergeschenke2";
-            this.txtGöttergeschenke2.TextChanged += new System.EventHandler(this.txtGöttergeschenke2_TextChanged);
+            resources.ApplyResources(this.txtFreeValue5, "txtFreeValue5");
+            this.txtFreeValue5.Name = "txtFreeValue5";
             // 
-            // txtGöttergeschenke1
+            // txtFreeValue4
             // 
-            resources.ApplyResources(this.txtGöttergeschenke1, "txtGöttergeschenke1");
-            this.txtGöttergeschenke1.Name = "txtGöttergeschenke1";
-            this.txtGöttergeschenke1.TextChanged += new System.EventHandler(this.txtGöttergeschenke1_TextChanged);
+            resources.ApplyResources(this.txtFreeValue4, "txtFreeValue4");
+            this.txtFreeValue4.Name = "txtFreeValue4";
             // 
             // txtFamulienstand
             // 
@@ -5094,23 +5125,20 @@
             resources.ApplyResources(this.txtGeschlecht, "txtGeschlecht");
             this.txtGeschlecht.Name = "txtGeschlecht";
             // 
-            // txtModifikation3
+            // txtFreeValue3
             // 
-            resources.ApplyResources(this.txtModifikation3, "txtModifikation3");
-            this.txtModifikation3.Name = "txtModifikation3";
-            this.txtModifikation3.TextChanged += new System.EventHandler(this.txtModifikation3_TextChanged);
+            resources.ApplyResources(this.txtFreeValue3, "txtFreeValue3");
+            this.txtFreeValue3.Name = "txtFreeValue3";
             // 
-            // txtModifikation2
+            // txtFreeValue2
             // 
-            resources.ApplyResources(this.txtModifikation2, "txtModifikation2");
-            this.txtModifikation2.Name = "txtModifikation2";
-            this.txtModifikation2.TextChanged += new System.EventHandler(this.txtModifikation2_TextChanged);
+            resources.ApplyResources(this.txtFreeValue2, "txtFreeValue2");
+            this.txtFreeValue2.Name = "txtFreeValue2";
             // 
-            // txtModifikation1
+            // txtFreeValue1
             // 
-            resources.ApplyResources(this.txtModifikation1, "txtModifikation1");
-            this.txtModifikation1.Name = "txtModifikation1";
-            this.txtModifikation1.TextChanged += new System.EventHandler(this.txtModifikation1_TextChanged);
+            resources.ApplyResources(this.txtFreeValue1, "txtFreeValue1");
+            this.txtFreeValue1.Name = "txtFreeValue1";
             // 
             // txtGottheit
             // 
@@ -5177,15 +5205,15 @@
             resources.ApplyResources(this.Stufe, "Stufe");
             this.Stufe.Name = "Stufe";
             // 
-            // label53
+            // lblBank
             // 
-            resources.ApplyResources(this.label53, "label53");
-            this.label53.Name = "label53";
+            resources.ApplyResources(this.lblBank, "lblBank");
+            this.lblBank.Name = "lblBank";
             // 
-            // label52
+            // lblGeld
             // 
-            resources.ApplyResources(this.label52, "label52");
-            this.label52.Name = "label52";
+            resources.ApplyResources(this.lblGeld, "lblGeld");
+            this.lblGeld.Name = "lblGeld";
             // 
             // label51
             // 
@@ -5358,75 +5386,75 @@
             this.lblMut.BackColor = System.Drawing.SystemColors.Control;
             this.lblMut.Name = "lblMut";
             // 
-            // label16
+            // lblFreeValue4
             // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.Name = "label16";
+            resources.ApplyResources(this.lblFreeValue4, "lblFreeValue4");
+            this.lblFreeValue4.Name = "lblFreeValue4";
             // 
-            // label17
+            // lblFamilienstand
             // 
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.Name = "label17";
+            resources.ApplyResources(this.lblFamilienstand, "lblFamilienstand");
+            this.lblFamilienstand.Name = "lblFamilienstand";
             // 
-            // label15
+            // lblGewicht
             // 
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.Name = "label15";
+            resources.ApplyResources(this.lblGewicht, "lblGewicht");
+            this.lblGewicht.Name = "lblGewicht";
             // 
-            // label14
+            // lblGröße
             // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
+            resources.ApplyResources(this.lblGröße, "lblGröße");
+            this.lblGröße.Name = "lblGröße";
             // 
-            // label12
+            // lblHautfarbe
             // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
+            resources.ApplyResources(this.lblHautfarbe, "lblHautfarbe");
+            this.lblHautfarbe.Name = "lblHautfarbe";
             // 
-            // label13
+            // lblGeschlecht
             // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
+            resources.ApplyResources(this.lblGeschlecht, "lblGeschlecht");
+            this.lblGeschlecht.Name = "lblGeschlecht";
             // 
-            // label10
+            // lblFreeValue1
             // 
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.Name = "label10";
+            resources.ApplyResources(this.lblFreeValue1, "lblFreeValue1");
+            this.lblFreeValue1.Name = "lblFreeValue1";
             // 
-            // label7
+            // lblGottheit
             // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
+            resources.ApplyResources(this.lblGottheit, "lblGottheit");
+            this.lblGottheit.Name = "lblGottheit";
             // 
-            // label6
+            // lblHaarfarbe
             // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
+            resources.ApplyResources(this.lblHaarfarbe, "lblHaarfarbe");
+            this.lblHaarfarbe.Name = "lblHaarfarbe";
             // 
-            // label5
+            // lblAlter
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
+            resources.ApplyResources(this.lblAlter, "lblAlter");
+            this.lblAlter.Name = "lblAlter";
             // 
-            // label4
+            // lblProfession
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
+            resources.ApplyResources(this.lblProfession, "lblProfession");
+            this.lblProfession.Name = "lblProfession";
             // 
-            // label3
+            // lblKultur
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.lblKultur, "lblKultur");
+            this.lblKultur.Name = "lblKultur";
             // 
-            // label2
+            // lblRasse
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.lblRasse, "lblRasse");
+            this.lblRasse.Name = "lblRasse";
             // 
-            // label1
+            // lblAnrede
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.lblAnrede, "lblAnrede");
+            this.lblAnrede.Name = "lblAnrede";
             // 
             // lblAugenfarbe
             // 
@@ -6462,18 +6490,18 @@
         private System.Windows.Forms.TextBox txtIntuitionAKT;
         private System.Windows.Forms.TextBox txtKlugheitAKT;
         private System.Windows.Forms.TextBox txtMutAKT;
-        private System.Windows.Forms.TextBox txtGöttergeschenke4;
-        private System.Windows.Forms.TextBox txtGöttergeschenke3;
-        private System.Windows.Forms.TextBox txtGöttergeschenke2;
-        private System.Windows.Forms.TextBox txtGöttergeschenke1;
+        private System.Windows.Forms.TextBox txtFreeValue7;
+        private System.Windows.Forms.TextBox txtFreeValue6;
+        private System.Windows.Forms.TextBox txtFreeValue5;
+        private System.Windows.Forms.TextBox txtFreeValue4;
         private System.Windows.Forms.TextBox txtFamulienstand;
         private System.Windows.Forms.TextBox txtGewicht;
         private System.Windows.Forms.TextBox txtGröße;
         private System.Windows.Forms.TextBox txtHautfarbe;
         private System.Windows.Forms.TextBox txtGeschlecht;
-        private System.Windows.Forms.TextBox txtModifikation3;
-        private System.Windows.Forms.TextBox txtModifikation2;
-        private System.Windows.Forms.TextBox txtModifikation1;
+        private System.Windows.Forms.TextBox txtFreeValue3;
+        private System.Windows.Forms.TextBox txtFreeValue2;
+        private System.Windows.Forms.TextBox txtFreeValue1;
         private System.Windows.Forms.TextBox txtGottheit;
         private System.Windows.Forms.TextBox txtHaarfarbe;
         private System.Windows.Forms.TextBox txtAlter;
@@ -6487,8 +6515,8 @@
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label Stufe;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label lblBank;
+        private System.Windows.Forms.Label lblGeld;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label49;
@@ -6523,20 +6551,20 @@
         private System.Windows.Forms.Label lblIntuition;
         private System.Windows.Forms.Label lblKlugheit;
         private System.Windows.Forms.Label lblMut;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblFreeValue4;
+        private System.Windows.Forms.Label lblFamilienstand;
+        private System.Windows.Forms.Label lblGewicht;
+        private System.Windows.Forms.Label lblGröße;
+        private System.Windows.Forms.Label lblHautfarbe;
+        private System.Windows.Forms.Label lblGeschlecht;
+        private System.Windows.Forms.Label lblFreeValue1;
+        private System.Windows.Forms.Label lblGottheit;
+        private System.Windows.Forms.Label lblHaarfarbe;
+        private System.Windows.Forms.Label lblAlter;
+        private System.Windows.Forms.Label lblProfession;
+        private System.Windows.Forms.Label lblKultur;
+        private System.Windows.Forms.Label lblRasse;
+        private System.Windows.Forms.Label lblAnrede;
         private System.Windows.Forms.Label lblAugenfarbe;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TabControl TabControl;
@@ -6622,6 +6650,11 @@
         private System.Windows.Forms.TextBox HPcompoBoxTalentProbeB1;
         private System.Windows.Forms.TextBox HPcompoBoxTalentProbeA1;
         private System.Windows.Forms.Button btnToolChangeDSA_PNP;
+        private System.Windows.Forms.Label lblFreeValue7;
+        private System.Windows.Forms.Label lblFreeValue6;
+        private System.Windows.Forms.Label lblFreeValue5;
+        private System.Windows.Forms.Label lblFreeValue3;
+        private System.Windows.Forms.Label lblFreeValue2;
     }
 }
 

@@ -1,0 +1,29 @@
+<TalentLetter>
+  <Talent>
+    <Name>Sternkunde</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+    </Probe>
+    <Requirements>
+      <Requirements>
+        <Talent>Lesen/Schreiben</Talent>
+        <Value>6</Value>
+        <NeedAT>10</NeedAT>
+      </Requirements>
+      <Requirements>
+        <Talent>Rechnen</Talent>
+        <Value>6</Value>
+        <NeedAT>
+        </NeedAT>
+      </Requirements>
+      <Requirements>
+        <Talent>Sinnenschärfe</Talent>
+        <Value>6</Value>
+        <NeedAT>
+        </NeedAT>
+      </Requirements>
+    </Requirements>
+  </Talent>
+</TalentLetter>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 //toDO:     Zeitverlust durch Aufruf change wenn Projekt diesen Change (nicht von Außen) vornimmt
@@ -36,13 +37,13 @@ namespace DSA_Project
             setUPHeroPageAdvanced();
             setUPHeroPageMoney();
             setUPHeroPageEnergien();
-            setUPFeatureLists();
+            setUPHeroPageFeatureLists();
 
             controll = (ControllClass)new ControllClassDSA(this);
 
             setUPTalentBox();
             setUPTalentPage();
-            setUPRewards();
+            setUPRewardPageRewards();
         }
         public void load()
         {
@@ -53,8 +54,8 @@ namespace DSA_Project
             loadHeroPageBasicValues();
             loadHeroPageAttributMark();
             loadHeroPageMoney();
-            loadFeature();
-            loadRewards();
+            loadHeroPageFeature();
+            loadRewardPageRewards();
 
             refreshHeroPageAdvancedValues();
         }
@@ -70,6 +71,62 @@ namespace DSA_Project
             String number = NameString.Substring(BasicString.Length, NameString.Length - BasicString.Length);
             Int32.TryParse(number, out BoxNumber);
             return BoxNumber;
+        }
+        public void setBOXVisible<Tenum>(Tenum stat, bool visible) where Tenum: struct, IComparable, IFormattable, IConvertible
+        {
+            if (typeof(Tenum) == typeof(DSA_BASICVALUES))
+            {
+                DSA_BASICVALUES atr = (DSA_BASICVALUES)(object)stat;
+                setboxVisible(atr, visible);
+            } else 
+            if (typeof(Tenum) == typeof(DSA_ATTRIBUTE))
+            {
+                DSA_ATTRIBUTE atr = (DSA_ATTRIBUTE)(object)stat;
+                setboxVisible(atr, visible);
+            }
+            else
+            if (typeof(Tenum) == typeof(DSA_ADVANCEDVALUES))
+            {
+                DSA_ADVANCEDVALUES atr = (DSA_ADVANCEDVALUES)(object)stat;
+                setboxVisible(atr, visible);
+            }
+            else
+            if (typeof(Tenum) == typeof(DSA_MONEY))
+            {
+                DSA_MONEY atr = (DSA_MONEY)(object)stat;
+                setboxVisible(atr, visible);
+            }
+        }
+        public void setLBLVisible<Tenum>(Tenum stat, bool visible)
+        {
+            setLBLVisible(stat, visible, null);
+        }
+        public void setLBLVisible<Tenum>(Tenum stat, bool visible, String name)
+        {
+            if (typeof(Tenum) == typeof(DSA_BASICVALUES))
+            {
+                DSA_BASICVALUES atr = (DSA_BASICVALUES)(object)stat;
+                setlblVisible(atr, visible);
+            }else
+            if(typeof(Tenum) == typeof(DSA_MONEY))
+            {
+                DSA_MONEY atr = (DSA_MONEY)(object)stat;
+                setlblVisible(atr, visible);
+            }
+
+            if (name == null) return;
+
+            if (typeof(Tenum) == typeof(DSA_BASICVALUES))
+            {
+                DSA_BASICVALUES atr = (DSA_BASICVALUES)(object)stat;
+                setlblName(atr, name);
+            }
+            else
+            if (typeof(Tenum) == typeof(DSA_MONEY))
+            {
+                DSA_MONEY atr = (DSA_MONEY)(object)stat;
+                setlblName(atr, name);
+            }
         }
         //#########################################################################################################################################################################
         //ToolPage
@@ -110,13 +167,15 @@ namespace DSA_Project
         }
         private void btnCreateTalent_Click(object sender, EventArgs e)
         {
-            //CreateTalent createTalent = new CreateTalent();
-            //createTalent.ShowDialog();
+            String st = Path.Combine(controll.getResourcePath(), ManagmentSaveStrings.GeneralTalentFilesSystemLocation);
+            CreateTalent createTalent = new CreateTalent(st);
+            createTalent.ShowDialog();
         }
         private void btncreateFightingTalent_Click(object sender, EventArgs e)
         {
-            //CreateFightingTalent talent = new CreateFightingTalent();
-            //talent.ShowDialog();
+            String st = Path.Combine(controll.getResourcePath(), ManagmentSaveStrings.FightTalentFilesSystemLocation);
+            CreateTalent createTalent = new CreateTalent(st);
+            createTalent.ShowDialog();
         }
         //#########################################################################################################################################################################
         //HeroPage Attribute
@@ -189,6 +248,23 @@ namespace DSA_Project
             controll.changeAttributMark(DSA_ATTRIBUTE.SO, lblSozialstatus, txtSozialstatusAKT, txtSozialstatusMOD, txtSozialstatusMAX);
             controll.changeAttributMark(DSA_ATTRIBUTE.IN, lblIntuition, txtIntuitionAKT, txtIntuitionMOD, txtIntuitionMAX);
             //Doppelter Aufruf != Ursprüngliches Ergebnis --->Schrot!!!
+        }
+        private void setboxVisible(DSA_ATTRIBUTE atr, bool vis)
+        {
+            setlblVisible(atr, vis);
+        }
+        private void setlblVisible(DSA_ATTRIBUTE atr, bool vis)
+        {
+            for(int i=0; i< HeroPageAttributLabels.Count; i++)
+            {
+                if(atr == (DSA_ATTRIBUTE)HeroPageAttributLabels[i].Tag)
+                {
+                    HeroPageAttributLabels[i].Visible = vis;
+                    HeroPageAttributAKTBoxes[i].Visible = vis;
+                    HeroPageAttributMODBoxes[i].Visible = vis;
+                    HeroPageAttributMAXBoxes[i].Visible = vis;
+                }
+            }
         }
         private void AttributAKT_KeyUp(object sender, EventArgs e)
         {
@@ -270,6 +346,14 @@ namespace DSA_Project
             txtWundschwelleMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.WUNDSCHWELLE).ToString();
             txtEntrückungMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.ENTRÜCKUNG).ToString();
             txtGeschwindigkeitMAX.Text = controll.AdvancedValueMAX(DSA_ADVANCEDVALUES.GESCHWINDIGKEIT).ToString();
+        }
+        private void setboxVisible(DSA_ADVANCEDVALUES atr, bool vis)
+        {
+            Console.WriteLine("Needs to be Implemented");
+        }
+        private void setlblVisible(DSA_ADVANCEDVALUES atr, bool vis)
+        {
+            Console.WriteLine("Needs to be Implemented");
         }
         private void txtAdvancedValueAKT_TextChanged(object sender, EventArgs e)
         {
@@ -362,25 +446,36 @@ namespace DSA_Project
         }
         //#########################################################################################################################################################################
         //HeroPage BasicValues
+        private List<Label> HeroPageBasicValueLabels;
         private List<TextBox> HeroPageBasicValueBoxes;
         private void setUPHeroPageBasicValues()
         {
-            HeroPageBasicValueBoxes = new List<TextBox> { txtName, txtAugenfarbe, txtRasse, txtKultur, txtProfession, txtAlter, txtHaarfarbe, txtGottheit, txtGewicht, txtFamulienstand, txtGeschlecht, txtGröße, txtHautfarbe };
+            HeroPageBasicValueLabels = new List<Label> { lblName, lblAugenfarbe, lblRasse, lblKultur, lblProfession, lblAlter, lblHaarfarbe, lblGottheit, lblGewicht, lblFamilienstand,
+                                                            lblGeschlecht, lblGröße, lblHautfarbe, lblFreeValue1, lblFreeValue2, lblFreeValue3, lblFreeValue4, lblFreeValue5, lblFreeValue6, lblFreeValue7};
+            HeroPageBasicValueBoxes = new List<TextBox> { txtName, txtAugenfarbe, txtRasse, txtKultur, txtProfession, txtAlter, txtHaarfarbe, txtGottheit, txtGewicht, txtFamulienstand,
+                                                            txtGeschlecht, txtGröße, txtHautfarbe, txtFreeValue1, txtFreeValue2, txtFreeValue3, txtFreeValue4, txtFreeValue5, txtFreeValue6, txtFreeValue7 };
 
-            txtName.Tag = DSA_BASICVALUES.NAME;
-            txtAugenfarbe.Tag = DSA_BASICVALUES.AUGENFARBE;
-            txtAnrede.Tag = DSA_BASICVALUES.ANREDE;
-            txtRasse.Tag = DSA_BASICVALUES.RASSE;
-            txtKultur.Tag = DSA_BASICVALUES.KULTUR;
-            txtProfession.Tag = DSA_BASICVALUES.PROFESSION;
-            txtAlter.Tag = DSA_BASICVALUES.ALTER;
-            txtGottheit.Tag = DSA_BASICVALUES.GOTTHEIT;
-            txtGewicht.Tag = DSA_BASICVALUES.GEWICHT;
-            txtFamulienstand.Tag = DSA_BASICVALUES.FAMILIENSTAND;
-            txtGeschlecht.Tag = DSA_BASICVALUES.GESCHLECHT;
-            txtGröße.Tag = DSA_BASICVALUES.GRÖSE;
-            txtHautfarbe.Tag = DSA_BASICVALUES.HAUTFARBE;
-            txtHaarfarbe.Tag = DSA_BASICVALUES.HAARFARBE;
+            lblName.Tag             = txtName.Tag             = DSA_BASICVALUES.NAME;
+            lblAugenfarbe.Tag       = txtAugenfarbe.Tag       = DSA_BASICVALUES.AUGENFARBE;
+            lblAnrede.Tag           = txtAnrede.Tag           = DSA_BASICVALUES.ANREDE;
+            lblRasse.Tag            = txtRasse.Tag            = DSA_BASICVALUES.RASSE;
+            lblKultur.Tag           = txtKultur.Tag           = DSA_BASICVALUES.KULTUR;
+            lblProfession.Tag       = txtProfession.Tag       = DSA_BASICVALUES.PROFESSION;
+            lblAlter.Tag            = txtAlter.Tag            = DSA_BASICVALUES.ALTER;
+            lblGottheit.Tag         = txtGottheit.Tag         = DSA_BASICVALUES.GOTTHEIT;
+            lblGewicht.Tag          = txtGewicht.Tag          = DSA_BASICVALUES.GEWICHT;
+            lblFamilienstand.Tag    = txtFamulienstand.Tag    = DSA_BASICVALUES.FAMILIENSTAND;
+            lblGeschlecht.Tag       = txtGeschlecht.Tag       = DSA_BASICVALUES.GESCHLECHT;
+            lblGröße.Tag            = txtGröße.Tag            = DSA_BASICVALUES.GRÖSE;
+            lblHautfarbe.Tag        = txtHautfarbe.Tag        = DSA_BASICVALUES.HAUTFARBE;
+            lblHaarfarbe.Tag        = txtHaarfarbe.Tag        = DSA_BASICVALUES.HAARFARBE;
+            lblFreeValue1.Tag       = txtFreeValue1.Tag       = DSA_BASICVALUES.FREEVALUE1;
+            lblFreeValue2.Tag       = txtFreeValue2.Tag       = DSA_BASICVALUES.FREEVALUE2;
+            lblFreeValue3.Tag       = txtFreeValue3.Tag       = DSA_BASICVALUES.FREEVALUE3;
+            lblFreeValue4.Tag       = txtFreeValue4.Tag       = DSA_BASICVALUES.FREEVALUE4;
+            lblFreeValue5.Tag       = txtFreeValue5.Tag       = DSA_BASICVALUES.FREEVALUE5;
+            lblFreeValue6.Tag       = txtFreeValue6.Tag       = DSA_BASICVALUES.FREEVALUE6;
+            lblFreeValue7.Tag       = txtFreeValue7.Tag       = DSA_BASICVALUES.FREEVALUE7;
 
             for (int i = 0; i < HeroPageBasicValueBoxes.Count; i++)
             {
@@ -389,93 +484,85 @@ namespace DSA_Project
         }
         public void loadHeroPageBasicValues()
         {
-            txtName.Text = (controll.BasicValue(DSA_BASICVALUES.NAME));
-            txtAlter.Text = (controll.BasicValue(DSA_BASICVALUES.ALTER));
-            txtGeschlecht.Text = (controll.BasicValue(DSA_BASICVALUES.GESCHLECHT));
-            txtGröße.Text = (controll.BasicValue(DSA_BASICVALUES.GRÖSE));
-            txtGewicht.Text = (controll.BasicValue(DSA_BASICVALUES.GEWICHT));
-            txtAugenfarbe.Text = (controll.BasicValue(DSA_BASICVALUES.AUGENFARBE));
-            txtHaarfarbe.Text = (controll.BasicValue(DSA_BASICVALUES.HAARFARBE));
-            txtHautfarbe.Text = (controll.BasicValue(DSA_BASICVALUES.HAUTFARBE));
-            txtFamulienstand.Text = (controll.BasicValue(DSA_BASICVALUES.FAMILIENSTAND));
-            txtAnrede.Text = (controll.BasicValue(DSA_BASICVALUES.ANREDE));
-            txtGottheit.Text = (controll.BasicValue(DSA_BASICVALUES.GOTTHEIT));
-            txtRasse.Text = (controll.BasicValue(DSA_BASICVALUES.RASSE));
-            txtKultur.Text = (controll.BasicValue(DSA_BASICVALUES.KULTUR));
-            txtProfession.Text = (controll.BasicValue(DSA_BASICVALUES.PROFESSION));
-            txtModifikation1.Text = controll.Moodifikator(1);
-            txtModifikation2.Text = controll.Moodifikator(2);
-            txtModifikation3.Text = controll.Moodifikator(3);
-            txtGöttergeschenke1.Text = controll.Göttergeschenk(1);
-            txtGöttergeschenke2.Text = controll.Göttergeschenk(2);
-            txtGöttergeschenke3.Text = controll.Göttergeschenk(3);
-            txtGöttergeschenke4.Text = controll.Göttergeschenk(4);
+            for(int i=0; i<HeroPageBasicValueBoxes.Count; i++)
+            {
+                HeroPageBasicValueBoxes[i].Text = (controll.BasicValue((DSA_BASICVALUES)HeroPageBasicValueBoxes[i].Tag));
+            }
+        }
+        private void setlblName(DSA_BASICVALUES value, String name)
+        {
+            for (int i = 0; i < HeroPageBasicValueLabels.Count; i++)
+            {
+                if ((DSA_BASICVALUES)HeroPageBasicValueLabels[i].Tag == value)
+                {
+                    HeroPageBasicValueLabels[i].Text = name;
+                    break;
+                }
+            }
+        }
+        private void setboxVisible(DSA_BASICVALUES value, bool vis)
+        {
+            for(int i=0; i< HeroPageBasicValueBoxes.Count; i++)
+            {
+                if ((DSA_BASICVALUES)HeroPageBasicValueBoxes[i].Tag == value)
+                {
+                    HeroPageBasicValueBoxes[i].Visible = vis;
+                    break;
+                }
+            }
+        }
+        private void setlblVisible(DSA_BASICVALUES value, bool vis)
+        {
+            for (int i = 0; i < HeroPageBasicValueLabels.Count; i++)
+            {
+                if ((DSA_BASICVALUES)HeroPageBasicValueLabels[i].Tag == value)
+                {
+                    HeroPageBasicValueLabels[i].Visible = vis;
+                    break;
+                }
+            }
         }
         private void txtBasicValues_TextChanged(object sender, EventArgs e)
         {
             TextBox box = (TextBox)sender;
             box.Text = controll.BasicValue((DSA_BASICVALUES)box.Tag, box.Text).ToString();
         }
-        private void txtModifikation1_TextChanged(object sender, EventArgs e)
-        {
-            txtModifikation1.Text = controll.Moodifikator(1, txtModifikation1.Text);
-        }
-        private void txtModifikation2_TextChanged(object sender, EventArgs e)
-        {
-            txtModifikation2.Text = controll.Moodifikator(2, txtModifikation2.Text);
-        }
-        private void txtModifikation3_TextChanged(object sender, EventArgs e)
-        {
-            txtModifikation3.Text = controll.Moodifikator(3, txtModifikation3.Text);
-        }
-        private void txtGöttergeschenke1_TextChanged(object sender, EventArgs e)
-        {
-            txtGöttergeschenke1.Text = controll.Göttergeschenk(1, txtGöttergeschenke1.Text);
-        }
-        private void txtGöttergeschenke2_TextChanged(object sender, EventArgs e)
-        {
-            txtGöttergeschenke2.Text = controll.Göttergeschenk(2, txtGöttergeschenke2.Text);
-        }
-        private void txtGöttergeschenke3_TextChanged(object sender, EventArgs e)
-        {
-            txtGöttergeschenke3.Text = controll.Göttergeschenk(3, txtGöttergeschenke3.Text);
-        }
-        private void txtGöttergeschenke4_TextChanged(object sender, EventArgs e)
-        {
-            txtGöttergeschenke4.Text = controll.Göttergeschenk(4, txtGöttergeschenke4.Text);
-        }
         //#########################################################################################################################################################################
         //HeroPage Andere
-        private List<TextBox> HeroPageMoneyBoxes;
-        private List<ComboBox> talentBoxComboBoxChose;
-        private List<TextBox> talentBoxComboBoxChoseProbeA;
-        private List<TextBox> talentBoxComboBoxChoseProbeB;
+        private List<Label>     HeroPageMoneyLabels;
+        private List<TextBox>   HeroPageMoneyBoxes;
+        private List<ComboBox>  HeroPagetalentBoxComboBoxChose;
+        private List<TextBox>   HeroPagetalentBoxComboBoxChoseProbeA;
+        private List<TextBox>   HeroPagetalentBoxComboBoxChoseProbeB;
         private void setUPHeroPageMoney()
         {
-            HeroPageMoneyBoxes = new List<TextBox> { txtGeldD, txtGeldH, txtGeldK, txtGeldS, txtBank };
+            HeroPageMoneyLabels = new List<Label>   { lblGeld, lblBank};
+            HeroPageMoneyBoxes  = new List<TextBox> { txtGeldD, txtGeldH, txtGeldK, txtGeldS, txtBank };
             txtGeldD.Tag = DSA_MONEY.D;
             txtGeldH.Tag = DSA_MONEY.H;
             txtGeldK.Tag = DSA_MONEY.K;
-            txtGeldS.Tag = DSA_MONEY.S;
             txtBank.Tag = DSA_MONEY.BANK;
+            lblGeld.Tag = txtGeldS.Tag = DSA_MONEY.S;
+            lblBank.Tag = txtBank.Tag = DSA_MONEY.BANK;
 
             for (int i = 0; i < HeroPageMoneyBoxes.Count; i++)
             {
-                HeroPageMoneyBoxes[i].TextChanged += new EventHandler(txtMoney_TextChanged);
+                HeroPageMoneyBoxes[i].KeyUp += new KeyEventHandler(txtMoney_TextChanged);
             }
+
 
         }
         private void setUPTalentBox()
         {
-            talentBoxComboBoxChose = new List<ComboBox> { HPcompoBoxTalent1, HPcompoBoxTalent2, HPcompoBoxTalent3, HPcompoBoxTalent4, HPcompoBoxTalent5 };
-            talentBoxComboBoxChoseProbeA = new List<TextBox> { HPcompoBoxTalentProbeA1, HPcompoBoxTalentProbeA2, HPcompoBoxTalentProbeA3, HPcompoBoxTalentProbeA4, HPcompoBoxTalentProbeA5 };
-            talentBoxComboBoxChoseProbeB = new List<TextBox> { HPcompoBoxTalentProbeB1, HPcompoBoxTalentProbeB2, HPcompoBoxTalentProbeB3, HPcompoBoxTalentProbeB4, HPcompoBoxTalentProbeB5 };
+            HeroPagetalentBoxComboBoxChose = new List<ComboBox> { HPcompoBoxTalent1, HPcompoBoxTalent2, HPcompoBoxTalent3, HPcompoBoxTalent4, HPcompoBoxTalent5 };
+            HeroPagetalentBoxComboBoxChoseProbeA = new List<TextBox> { HPcompoBoxTalentProbeA1, HPcompoBoxTalentProbeA2, HPcompoBoxTalentProbeA3, HPcompoBoxTalentProbeA4, HPcompoBoxTalentProbeA5 };
+            HeroPagetalentBoxComboBoxChoseProbeB = new List<TextBox> { HPcompoBoxTalentProbeB1, HPcompoBoxTalentProbeB2, HPcompoBoxTalentProbeB3, HPcompoBoxTalentProbeB4, HPcompoBoxTalentProbeB5 };
 
-            for (int i = 0; i < talentBoxComboBoxChose.Count; i++)
+            for (int i = 0; i < HeroPagetalentBoxComboBoxChose.Count; i++)
             {
-                talentBoxComboBoxChose[i].DataSource = controll.getTalent();
-                talentBoxComboBoxChose[i].AutoCompleteMode = AutoCompleteMode.Suggest;
-                talentBoxComboBoxChose[i].TextChanged += new EventHandler(setTalentBoxChose);
+                HeroPagetalentBoxComboBoxChose[i].DataSource = controll.getTalent();
+                HeroPagetalentBoxComboBoxChose[i].AutoCompleteMode = AutoCompleteMode.Suggest;
+                HeroPagetalentBoxComboBoxChose[i].TextChanged += new EventHandler(setTalentBoxChose);
             }
 
         }
@@ -486,6 +573,50 @@ namespace DSA_Project
             txtGeldS.Text = controll.Money(DSA_MONEY.S).ToString() + DSA_MONEY.S.ToString(); ;
             txtGeldK.Text = controll.Money(DSA_MONEY.K).ToString() + DSA_MONEY.K.ToString(); ;
             txtBank.Text = controll.Money(DSA_MONEY.BANK).ToString();
+
+            txtGeldD.Tag = DSA_MONEY.D;
+            txtGeldH.Tag = DSA_MONEY.H;
+            txtGeldS.Tag = DSA_MONEY.S;
+            txtGeldK.Tag = DSA_MONEY.K;
+            txtBank.Tag = DSA_MONEY.BANK;
+        }
+        private void setlblName(DSA_MONEY type, String name)
+        {
+            for(int i=0; i< HeroPageMoneyLabels.Count; i++)
+            {
+                if (type == (DSA_MONEY)HeroPageMoneyLabels[i].Tag)
+                {
+                    HeroPageMoneyLabels[i].Text = name;
+                } else 
+                if(type != DSA_MONEY.BANK)
+                {
+                    HeroPageMoneyLabels[i].Text = name;
+                }
+            }
+        }
+        private void setboxVisible(DSA_MONEY atr, bool vis)
+        {
+            for (int i = 0; i < HeroPageMoneyBoxes.Count; i++)
+            {
+                if (atr == (DSA_MONEY)HeroPageMoneyBoxes[i].Tag)
+                {
+                    HeroPageMoneyBoxes[i].Visible = vis;
+                }
+            }
+        }
+        private void setlblVisible(DSA_MONEY atr, bool vis)
+        {
+            for (int i = 0; i < HeroPageMoneyLabels.Count; i++)
+            {
+                if (atr == (DSA_MONEY)HeroPageMoneyLabels[i].Tag)
+                {
+                    HeroPageMoneyLabels[i].Visible = vis;
+                }
+                else if (atr != DSA_MONEY.BANK)
+                {
+                    HeroPageMoneyLabels[i].Visible = vis;
+                }
+            }
         }
         private void txtMoney_TextChanged(object sender, EventArgs e)
         {
@@ -497,11 +628,15 @@ namespace DSA_Project
 
             if (Char.TryParse(trim, out t))
             {
-                box.Text = controll.Money(type, txtGeldD.Text.TrimEnd(t)).ToString() + t;
+                box.Text = controll.Money(type, box.Text.TrimEnd(t)).ToString() + t;
+                return;
+            } else 
+            if(type == DSA_MONEY.BANK)
+            {
+                box.Text = controll.Money(type, box.Text).ToString();
                 return;
             }
             box.Text = controll.Money(type).ToString();
-
         }
         private void txtStufe_TextChanged(object sender, EventArgs e)
         {
@@ -531,8 +666,8 @@ namespace DSA_Project
             {
                 return;
             }
-            talentBoxComboBoxChoseProbeA[boxNumber - 1].Text = talent.getProbeStringOne();
-            talentBoxComboBoxChoseProbeB[boxNumber - 1].Text = talent.getProbeStringTwo();
+            HeroPagetalentBoxComboBoxChoseProbeA[boxNumber - 1].Text = talent.getProbeStringOne();
+            HeroPagetalentBoxComboBoxChoseProbeB[boxNumber - 1].Text = talent.getProbeStringTwo();
 
             try
             {
@@ -541,7 +676,7 @@ namespace DSA_Project
 
                 if (!Int32.TryParse(ftalent.getPA(), out x))
                 {
-                    talentBoxComboBoxChoseProbeB[boxNumber - 1].Text = ftalent.getPA();
+                    HeroPagetalentBoxComboBoxChoseProbeB[boxNumber - 1].Text = ftalent.getPA();
                 }
             }
             catch (Exception) { }
@@ -557,7 +692,7 @@ namespace DSA_Project
         private List<TextBox> featureDisAdvantagesGPBox;
         private List<TextBox> featureAdvantagesValueBox;
         private List<TextBox> featureDisAdvantagesValueBox;
-        private void setUPFeatureLists()
+        private void setUPHeroPageFeatureLists()
         {
             featureAdvantagesNameBox = new List<TextBox> { txtVorteil1Name, txtVorteil2Name, txtVorteil3Name, txtVorteil4Name, txtVorteil5Name, txtVorteil6Name, txtVorteil7Name, txtVorteil8Name, txtVorteil9Name, txtVorteil10Name, txtVorteil11Name, txtVorteil12Name, txtVorteil13Name, txtVorteil14Name, txtVorteil15Name };
             featureDisdvantagesNameBox = new List<TextBox> { txtNachteil1Name, txtNachteil2Name, txtNachteil3Name, txtNachteil4Name, txtNachteil5Name, txtNachteil6Name, txtNachteil7Name, txtNachteil8Name, txtNachteil9Name, txtNachteil10Name, txtNachteil11Name, txtNachteil12Name, txtNachteil13Name, txtNachteil14Name, txtNachteil15Name };
@@ -582,6 +717,32 @@ namespace DSA_Project
                 featureDisAdvantagesDescriptionBox[i].Click += new EventHandler(txtFeatureBox_Clicked);
                 featureDisAdvantagesGPBox[i].Click += new EventHandler(txtFeatureBox_Clicked);
                 featureDisAdvantagesValueBox[i].Click += new EventHandler(txtFeatureBox_Clicked);
+            }
+        }
+        private void loadHeroPageFeature()
+        {
+            for (int i = 0; i < HeroPageSupportedAdvantagesDisadvantagesBoxes; i++)
+            {
+                loadHeroPageFeature(featureAdvantagesNameBox[i], featureAdvantagesDescriptionBox[i], featureAdvantagesValueBox[i], featureAdvantagesGPBox[i], DSA_FEATURES.VORTEIL, i + 1);
+                loadHeroPageFeature(featureDisdvantagesNameBox[i], featureDisAdvantagesDescriptionBox[i], featureDisAdvantagesValueBox[i], featureDisAdvantagesGPBox[i], DSA_FEATURES.NACHTEIL, i + 1);
+            }
+        }
+        private void loadHeroPageFeature(TextBox name, TextBox description, TextBox value, TextBox gp, DSA_FEATURES type, int number)
+        {
+            Feature feature = controll.FeatureExisting(number, type);
+
+            if (feature == null)
+            {
+                name.Text = "";
+                description.Text = "";
+                value.Text = "";
+                gp.Text = "";
+            } else
+            {
+                name.Text = feature.getName();
+                description.Text = feature.getDescription();
+                value.Text = feature.getValue();
+                gp.Text = feature.getGP();
             }
         }
         private void txtFeatureBox_Clicked(object sender, EventArgs e)
@@ -615,25 +776,7 @@ namespace DSA_Project
             }
             this.refreshHeroPage();
         }
-        private void loadFeature()
-        {
-            for (int i = 0; i < HeroPageSupportedAdvantagesDisadvantagesBoxes; i++)
-            {
-                LoadFeature(featureAdvantagesNameBox[i], featureAdvantagesDescriptionBox[i], featureAdvantagesValueBox[i], featureAdvantagesGPBox[i], DSA_FEATURES.VORTEIL, i + 1);
-                LoadFeature(featureDisdvantagesNameBox[i], featureDisAdvantagesDescriptionBox[i], featureDisAdvantagesValueBox[i], featureDisAdvantagesGPBox[i], DSA_FEATURES.NACHTEIL, i + 1);
-            }
-        }
-        private void LoadFeature(TextBox name, TextBox description, TextBox value, TextBox gp, DSA_FEATURES type, int number)
-        {
-            Feature feature = controll.FeatureExisting(number, type);
-
-            if (feature == null) { return; }
-
-            name.Text = feature.getName();
-            description.Text = feature.getDescription();
-            value.Text = feature.getValue();
-            gp.Text = feature.getGP();
-        }
+        
         //#########################################################################################################################################################################
         //TalentPage 
         private int SUpportedTalentCOunt = 30;
@@ -932,31 +1075,19 @@ namespace DSA_Project
         private int supportedRewardBoxes = 25;
         private List<TextBox> rewardNameBoxes;
         private List<TextBox> rewadDescriptionBoxes;
-        private void setUPRewards()
+        private void setUPRewardPageRewards()
         {
             rewardNameBoxes = new List<TextBox> { txtReward1, txtReward2, txtReward3, txtReward4, txtReward5, txtReward6, txtReward7, txtReward8, txtReward9, txtReward10, txtReward11, txtReward12, txtReward13, txtReward14, txtReward15, txtReward16, txtReward17, txtReward18, txtReward19, txtReward20, txtReward21, txtReward22, txtReward23, txtReward24, txtReward25 };
             rewadDescriptionBoxes = new List<TextBox> { txtRewardDescription1, txtRewardDescription2, txtRewardDescription3, txtRewardDescription4, txtRewardDescription5, txtRewardDescription6, txtRewardDescription7, txtRewardDescription8, txtRewardDescription9, txtRewardDescription10, txtRewardDescription11, txtRewardDescription12, txtRewardDescription13, txtRewardDescription14, txtRewardDescription15, txtRewardDescription16, txtRewardDescription17, txtRewardDescription18, txtRewardDescription19, txtRewardDescription20, txtRewardDescription21, txtRewardDescription22, txtRewardDescription23, txtRewardDescription24, txtRewardDescription25 };
 
             for (int i = 0; i < rewardNameBoxes.Count; i++)
             {
-                rewardNameBoxes[i].Click += new EventHandler(setReward_DiscriptionBox);
+                rewardNameBoxes[i].Click += new EventHandler(setRewardPageReward_DiscriptionBox);
             }
 
             txtRewardPage.Text = "1";
         }
-        private void CreateReward(int rewardNumber, int boxNumber, DSA_FEATURES type)
-        {
-            Feature feature = controll.Feature(rewardNumber, type);
-
-            if (feature == null) return;
-
-            rewardNameBoxes[boxNumber].Text = feature.getName();
-            rewadDescriptionBoxes[boxNumber].Text = feature.getDescription();
-
-            this.refreshHeroPage();
-
-        }
-        private void loadRewards()
+        private void loadRewardPageRewards()
         {
             int page = 0;
             Int32.TryParse(txtRewardPage.Text, out page);
@@ -972,9 +1103,26 @@ namespace DSA_Project
                     rewardNameBoxes[i].Text = feature.getName();
                     rewadDescriptionBoxes[i].Text = feature.getDescription();
                 }
+                else
+                {
+                    rewardNameBoxes[i].Text = "";
+                    rewadDescriptionBoxes[i].Text = "";
+                }
             }
         }
-        private void setReward_DiscriptionBox(Object sender, EventArgs e)
+        private void CreateReward(int rewardNumber, int boxNumber, DSA_FEATURES type)
+        {
+            Feature feature = controll.Feature(rewardNumber, type);
+
+            if (feature == null) return;
+
+            rewardNameBoxes[boxNumber].Text = feature.getName();
+            rewadDescriptionBoxes[boxNumber].Text = feature.getDescription();
+
+            this.refreshHeroPage();
+
+        }
+        private void setRewardPageReward_DiscriptionBox(Object sender, EventArgs e)
         {
             TextBox box = (TextBox)sender;
             int BoxNumber = getBoxNumber("txtReward", ((TextBox)sender).Name);

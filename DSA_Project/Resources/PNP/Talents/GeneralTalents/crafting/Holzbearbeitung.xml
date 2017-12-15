@@ -1,0 +1,19 @@
+<TalentLetter>
+  <Talent>
+    <Name>Holzbearbeitung</Name>
+    <BE>
+    </BE>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>FF</Attribute>
+      <Attribute>KK</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Zimmermann</Talent>
+        <Value>5</Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

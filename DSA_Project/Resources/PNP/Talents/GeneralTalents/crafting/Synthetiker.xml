@@ -1,0 +1,20 @@
+<TalentLetter>
+  <Talent>
+    <Name>Synthetiker</Name>
+    <BE>
+    </BE>
+    <Probe>
+      <Attribute>FF</Attribute>
+      <Attribute>FF</Attribute>
+      <Attribute>KL</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Juwelier</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

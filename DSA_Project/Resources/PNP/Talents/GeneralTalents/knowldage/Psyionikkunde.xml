@@ -1,0 +1,31 @@
+<TalentLetter>
+  <Talent>
+    <Name>Psyionikkunde</Name>
+    <BE>
+    </BE>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>CH</Attribute>
+      <Attribute>IN</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Sagen/Legenden</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Götter/Kulte</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements>
+      <Requirements>
+        <Talent>Lesen/Schreiben</Talent>
+        <Value>6</Value>
+        <NeedAT>10</NeedAT>
+      </Requirements>
+    </Requirements>
+  </Talent>
+</TalentLetter>

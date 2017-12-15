@@ -63,33 +63,6 @@ namespace DSA_Project
                     }
                 }
             }
-
-            foreach (XmlNode node in BasicDataNode)
-            {
-                if (ManagmentXMLStrings.Modification.Length < node.Name.Length)
-                {
-                    if (String.Compare(node.Name.Substring(0, ManagmentXMLStrings.Modification.Length), ManagmentXMLStrings.Modification, true) == 0)
-                    {
-                        int number = 0;
-                        String numberString = node.Name.Substring(ManagmentXMLStrings.Modification.Length, node.Name.Length - ManagmentXMLStrings.Modification.Length);
-                        Int32.TryParse(numberString, out number);
-
-                        charakter.setModifikatoren(number, node.InnerText);
-                    }
-                }
-                if (ManagmentXMLStrings.Göttergeschenke.Length < node.Name.Length)
-                {
-                    if (String.Compare(node.Name.Substring(0, ManagmentXMLStrings.Göttergeschenke.Length), ManagmentXMLStrings.Göttergeschenke, true) == 0)
-                    {
-                        int number = 0;
-                        String numberString = node.Name.Substring(ManagmentXMLStrings.Göttergeschenke.Length, node.Name.Length - ManagmentXMLStrings.Göttergeschenke.Length);
-                        Int32.TryParse(numberString, out number);
-
-                        charakter.setGöttergeschenk(number, node.InnerText);
-                    }
-                }
-            }
-
         }
         private static void loadAttribute(XmlNode AttributeNode, Charakter charakter)
         {

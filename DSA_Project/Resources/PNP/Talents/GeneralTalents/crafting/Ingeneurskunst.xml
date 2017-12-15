@@ -1,0 +1,39 @@
+<TalentLetter>
+  <Talent>
+    <Name>Ingeneurskunst</Name>
+    <BE>
+    </BE>
+    <Probe>
+      <Attribute>IN</Attribute>
+      <Attribute>KL</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Kochen (Tränke)</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Pflanzenkunde</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements>
+      <Requirements>
+        <Talent>Lesen/Schreiben</Talent>
+        <Value>
+        </Value>
+        <NeedAT>
+        </NeedAT>
+      </Requirements>
+      <Requirements>
+        <Talent>Rechnen</Talent>
+        <Value>4</Value>
+        <NeedAT>
+        </NeedAT>
+      </Requirements>
+    </Requirements>
+  </Talent>
+</TalentLetter>

@@ -1,0 +1,15 @@
+<TalentLetter>
+  <Talent>
+    <Name>Prothesenherstellung</Name>
+    <BE>
+    </BE>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>FF</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>IN</Attribute>
+    </Probe>
+    <Diverates />
+    <Requirements />
+  </Talent>
+</TalentLetter>

@@ -11,7 +11,7 @@ using System.Drawing;
 
 namespace DSA_Project
 {
-    //###################################################################################################################################################################################
+    //##########################################################################################################################################################################################################################################################
     //Structs
     public struct HeroPageFeatureTag
     {
@@ -24,24 +24,19 @@ namespace DSA_Project
             number = n;
         }
     }
-    //###################################################################################################################################################################################
+    //##########################################################################################################################################################################################################################################################
     //Enums
     public enum DSA_ATTRIBUTE { MU, KL, IN, CH, FF, GE, KO, KK, SO, LT, HT }
     public enum DSA_ENERGIEN { LEBENSENERGIE, AUSDAUER, ASTRALENERGIE, KARMAENERGIE, MAGIERESISTENZ }
     public enum DSA_ADVANCEDVALUES { ATTACKE_BASIS, PARADE_BASIS, FERNKAMPF_BASIS, INITATIVE_BASIS, BEHERSCHUNGSWERT, ARTEFAKTKONTROLLE, WUNDSCHWELLE, ENTRÜCKUNG, GESCHWINDIGKEIT }
-    public enum DSA_BASICVALUES { NAME, ALTER, GESCHLECHT, GRÖSE, GEWICHT, AUGENFARBE, HAUTFARBE, HAARFARBE, FAMILIENSTAND, ANREDE, GOTTHEIT, RASSE, KULTUR, PROFESSION }
+    public enum DSA_BASICVALUES { NAME, ALTER, GESCHLECHT, GRÖSE, GEWICHT, AUGENFARBE, HAUTFARBE, HAARFARBE, FAMILIENSTAND, ANREDE, GOTTHEIT, RASSE, KULTUR, PROFESSION, FREEVALUE1, FREEVALUE2, FREEVALUE3, FREEVALUE4, FREEVALUE5, FREEVALUE6, FREEVALUE7 }
     public enum DSA_MONEY { D, S, H, K, BANK }
-    //###################################################################################################################################################################################
+    //###########################################################################################################################################################################################################################################################
     public abstract class ControllClass
     {
-        private DSA form;
+        protected DSA form;
         private Charakter Charakter;
-        private Dictionary<int, Feature> Advantages = new Dictionary<int, Feature>();
-
-        private String GeneralTalentFileSystemLocation;
-        private String FightingTalentFileSystemLocation;
-
-
+        
         public ControllClass(DSA form)
         {
             this.form = form;
@@ -53,7 +48,7 @@ namespace DSA_Project
         //###################################################################################################################################
         //Laden und Speichern von Daten 
         protected abstract String getRootPath();
-        private String getResourcePath()
+        public String getResourcePath()
         {
             String path = Path.Combine(ManagmentSaveStrings.currentDirectory, ManagmentSaveStrings.Recources);
             path        = Path.Combine(path, getRootPath());
@@ -89,9 +84,15 @@ namespace DSA_Project
         public Charakter createNewCharater()
         {
             Charakter charakter = new Charakter();
+
+            String path;
+            path = Path.Combine(ManagmentSaveStrings.currentDirectory, getRootPath());
+            path = Path.Combine(path, ManagmentSaveStrings.SaveLocation);
+            String GeneralTalentFileSystemLocation = Path.Combine(getResourcePath(), ManagmentSaveStrings.GeneralTalentFilesSystemLocation);
+            String FightingTalentFileSystemLocation = Path.Combine(getResourcePath(), ManagmentSaveStrings.FightTalentFilesSystemLocation);
+
             new ControllTalent(charakter, GeneralTalentFileSystemLocation, FightingTalentFileSystemLocation);              //Rüstet den Charakter mit den der Form zugehörigen Talenten aus
-
-
+            
             return charakter;
         }
         //###################################################################################################################################
@@ -99,13 +100,8 @@ namespace DSA_Project
         //Einrichtung der Form
         private void setUP()
         {
-            String path;
-            path = Path.Combine(ManagmentSaveStrings.currentDirectory, getRootPath());
-            path = Path.Combine(path, ManagmentSaveStrings.SaveLocation);
-
-            GeneralTalentFileSystemLocation = Path.Combine(getResourcePath(), ManagmentSaveStrings.GeneralTalentFilesSystemLocation);
-            FightingTalentFileSystemLocation = Path.Combine(getResourcePath(), ManagmentSaveStrings.FightTalentFilesSystemLocation);
-            
+            setUPBasicValues();
+            setUPMoney();
             setUPAttribute();
         }
         //###################################################################################################################################
@@ -181,6 +177,7 @@ namespace DSA_Project
         }
         //###################################################################################################################################
         //Einrichtung der BasicValues
+        protected abstract void setUPBasicValues();
         public String BasicValue(DSA_BASICVALUES value)
         {
             return Charakter.getBasicValue(value);
@@ -189,24 +186,6 @@ namespace DSA_Project
         {
             Charakter.setBasicValues(value, wert);
             return BasicValue(value);
-        }
-        public String Göttergeschenk(int number)
-        {
-            return Charakter.getGöttergeschenk(number);
-        }
-        public String Göttergeschenk(int number, String description)
-        {
-            Charakter.setGöttergeschenk(number, description);
-            return Göttergeschenk(number);
-        }
-        public String Moodifikator(int number)
-        {
-            return Charakter.getModifikatoren(number);
-        }
-        public String Moodifikator(int number, String description)
-        {
-            Charakter.setModifikatoren(number, description);
-            return Moodifikator(number);
         }
         //###################################################################################################################################
         //Einrichtung der AdvancecValues
@@ -256,6 +235,7 @@ namespace DSA_Project
         }
         //###################################################################################################################################
         //Einrichtung der Anderen
+        protected abstract void setUPMoney();
         public int Money(DSA_MONEY type)
         {
             return Charakter.getMoney(type);
@@ -299,10 +279,6 @@ namespace DSA_Project
             if (feature == null) return null;
 
             Charakter.addFeature(type, number, feature);
-
-            Advantages.Remove(number);
-            Advantages.Add(number, feature);
-            
 
             return feature;
         }

@@ -1,0 +1,14 @@
+<TalentLetter>
+  <Talent>
+    <Name>Antimateriekunde</Name>
+    <BE>
+    </BE>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+    </Probe>
+    <Diverates />
+    <Requirements />
+  </Talent>
+</TalentLetter>

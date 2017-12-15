@@ -1,0 +1,25 @@
+<TalentLetter>
+  <Talent>
+    <Name>Reperatur</Name>
+    <BE>
+    </BE>
+    <Probe>
+      <Attribute>FF</Attribute>
+      <Attribute>GE</Attribute>
+      <Attribute>KL</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Boote Fahren</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Steuermann</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

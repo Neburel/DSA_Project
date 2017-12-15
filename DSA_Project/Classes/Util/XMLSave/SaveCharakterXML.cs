@@ -71,28 +71,6 @@ namespace DSA_Project
                     element.AppendChild(characterFile.CreateElement(names[i])).InnerText = innerText;
                 }
             }
-            
-            for (int i=1, j=1; i <= 4; i++)
-            {
-                String innerTextMod = charakter.getModifikatoren(i);
-
-                if(innerTextMod != null && innerTextMod != "")
-                {
-                    element.AppendChild(characterFile.CreateElement(ManagmentXMLStrings.Modification + j)).InnerText = innerTextMod;
-                    j++;
-                }
-            }
-            for (int i = 1, j = 1; i <= 4; i++)
-            {
-                String innerTextGötter = charakter.getGöttergeschenk(i);
-
-                if (innerTextGötter != null && innerTextGötter != "")
-                {
-                    element.AppendChild(characterFile.CreateElement(ManagmentXMLStrings.Göttergeschenke + j)).InnerText = innerTextGötter;
-                    j++;
-                }
-            }
-
         }
         public static void saveAttribute(Charakter charakter, XmlDocument characterFile, XmlElement element)
         {

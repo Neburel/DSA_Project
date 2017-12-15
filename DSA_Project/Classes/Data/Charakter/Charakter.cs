@@ -14,8 +14,6 @@ namespace DSA_Project
         private Dictionary<DSA_MONEY, int> money;
         private Dictionary<DSA_BASICVALUES, String> basicValues;
         private Dictionary<DSA_ADVANCEDVALUES, int> advancedValues;
-        private Dictionary<int, String> göttergerschenke;
-        private Dictionary<int, String> modifikatoren;
 
         private Dictionary<DSA_ATTRIBUTE, bool> markedAttributs;
 
@@ -41,8 +39,6 @@ namespace DSA_Project
             money                           = new Dictionary<DSA_MONEY, int>();
             basicValues                     = new Dictionary<DSA_BASICVALUES, string>();
             advancedValues                  = new Dictionary<DSA_ADVANCEDVALUES, int>();
-            göttergerschenke                = new Dictionary<int, string>();
-            modifikatoren                   = new Dictionary<int, string>();
             markedAttributs                 = new Dictionary<DSA_ATTRIBUTE, bool>();
 
 
@@ -157,14 +153,7 @@ namespace DSA_Project
             int attributeCount = Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length;
             for (int i = 0; i < attributeCount; i++)
             {
-                if ((DSA_ATTRIBUTE)i == DSA_ATTRIBUTE.HT || (DSA_ATTRIBUTE)i == DSA_ATTRIBUTE.LT)
-                {
-                    //Deinitiv beschissen.... Anders Planen! 
-                }
-                else
-                {
-                    summe = summe + getAttributeAKT((DSA_ATTRIBUTE)i);
-                }
+                summe = summe + getAttribute_Max((DSA_ATTRIBUTE)i);
             }
             return summe;
         }
@@ -270,30 +259,6 @@ namespace DSA_Project
             return featureManagment.getHighestNumber();
         }
         
-        public void setGöttergeschenk(int number, String description)
-        {
-            göttergerschenke.Remove(number);
-            göttergerschenke.Add(number, description); 
-        }
-        public void setModifikatoren(int number, String description)
-        {
-            modifikatoren.Remove(number);
-            modifikatoren.Add(number, description);
-        }
-        public string getGöttergeschenk(int number)
-        {
-            String x;
-            göttergerschenke.TryGetValue(number, out x);
-            return x;
-        }
-        public string getModifikatoren(int number)
-        {
-            String x;
-            modifikatoren.TryGetValue(number, out x);
-            return x;
-        }
-        
-
         public void addTalent<Tenum>(Tenum type, InterfaceTalent talent) where Tenum: struct, IComparable, IFormattable, IConvertible
         {
             talent.setCharacter(this);

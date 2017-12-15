@@ -1,0 +1,19 @@
+<TalentLetter>
+  <Talent>
+    <Name>Schätzen</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>IN</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Handel</Talent>
+        <Value>5</Value>
+      </Diverate>
+      <Diverate>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

@@ -1,0 +1,20 @@
+<TalentLetter>
+  <Talent>
+    <Name>Kriegskunst</Name>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>KL</Attribute>
+      <Attribute>CH</Attribute>
+    </Probe>
+    <Diverates />
+    <Requirements>
+      <Requirements>
+        <Talent>Brettspiel</Talent>
+        <Value>
+        </Value>
+        <NeedAT>
+        </NeedAT>
+      </Requirements>
+    </Requirements>
+  </Talent>
+</TalentLetter>
