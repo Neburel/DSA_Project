@@ -29,6 +29,12 @@ namespace DSA_Project
 
         public override string getProbeStringOne()
         {
+            if(learned == false)
+            {
+                return "-";
+            }
+
+
             int ret = 0;
             for (int i = 0; i < getProbeCount(); i++)
             {

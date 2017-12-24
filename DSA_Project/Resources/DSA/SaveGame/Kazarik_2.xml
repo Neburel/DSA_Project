@@ -16,15 +16,33 @@
       <PROFESSION>Jäger</PROFESSION>
     </BasisDaten>
     <Attribute>
-      <MU>8</MU>
-      <KL>9</KL>
-      <IN>10</IN>
-      <CH>7</CH>
-      <FF>10</FF>
-      <GE>12</GE>
-      <KO>8</KO>
-      <KK>12</KK>
-      <SO>5</SO>
+      <MU>
+        <Value>8</Value>
+      </MU>
+      <KL>
+        <Value>9</Value>
+      </KL>
+      <IN>
+        <Value>10</Value>
+      </IN>
+      <CH>
+        <Value>7</Value>
+      </CH>
+      <FF>
+        <Value>10</Value>
+      </FF>
+      <GE>
+        <Value>12</Value>
+      </GE>
+      <KO>
+        <Value>8</Value>
+      </KO>
+      <KK>
+        <Value>12</Value>
+      </KK>
+      <SO>
+        <Value>5</Value>
+      </SO>
     </Attribute>
     <Advanced>
       <ATTACKE_BASIS>7</ATTACKE_BASIS>
@@ -38,11 +56,11 @@
       <GESCHWINDIGKEIT>10</GESCHWINDIGKEIT>
     </Advanced>
     <Money>
-      <D>1</D>
+      <D>100</D>
       <S>4</S>
       <H>6</H>
       <K>5</K>
-      <BANK>7</BANK>
+      <BANK>39</BANK>
     </Money>
     <Features>
       <Advantages>
@@ -101,11 +119,59 @@
           <Advanced />
           <Talente />
         </Number4>
+        <Number5>
+          <Name>Leichte Krankheitsresistenz</Name>
+          <Description>10%</Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number5>
+        <Number30>
+          <Name>Belohnung Gewinnspiel</Name>
+          <Description>1 Freies Talent (Noch zu Verteilen)</Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number30>
+        <Number31>
+          <Name>Abenteuer Gefängnis</Name>
+          <Description>1 Freier Talentpunkt(Noch zu Verteilen)</Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie>
+            <AUSDAUER>5</AUSDAUER>
+            <KARMAENERGIE>10</KARMAENERGIE>
+          </Energie>
+          <Advanced />
+          <Talente>
+            <Talent>
+              <Name>Überzeugen</Name>
+              <TAW>1</TAW>
+            </Talent>
+            <Talent>
+              <Name>Überreden</Name>
+              <TAW>1</TAW>
+            </Talent>
+          </Talente>
+        </Number31>
       </Advantages>
       <DisAdvantages>
         <Number1>
           <Name>Tiefling(Sonnenanbeter)</Name>
-          <Description>Intuition (-2) + Überhitzung bei Helligkeit</Description>
+          <Description>Intuition (-1) + Überhitzung bei Helligkeit</Description>
           <Value>X</Value>
           <GP>
           </GP>
@@ -122,14 +188,14 @@
           <GP>
           </GP>
           <Attribute>
-            <CH>1</CH>
+            <CH>-1</CH>
           </Attribute>
           <Energie />
           <Advanced />
           <Talente>
             <Talent>
               <Name>Betören</Name>
-              <TAW>2</TAW>
+              <TAW>-2</TAW>
             </Talent>
           </Talente>
         </Number2>
@@ -155,10 +221,24 @@
           <Attribute />
           <Energie />
           <Advanced>
-            <ENTRÜCKUNG>1</ENTRÜCKUNG>
+            <ENTRÜCKUNG>-1</ENTRÜCKUNG>
           </Advanced>
           <Talente />
         </Number4>
+        <Number5>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number5>
       </DisAdvantages>
     </Features>
     <AdventurePoints>0</AdventurePoints>
@@ -296,7 +376,7 @@
         </Talent>
         <Talent>
           <Name>Fährtensuchen</Name>
-          <TAW>3</TAW>
+          <TAW>4</TAW>
         </Talent>
         <Talent>
           <Name>Orientierung</Name>
@@ -365,6 +445,10 @@
           <TAW>1</TAW>
         </Talent>
         <Talent>
+          <Name>Metallkunde</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
           <Name>Pflanzenkunde</Name>
           <TAW>3</TAW>
         </Talent>
@@ -387,6 +471,10 @@
         <Talent>
           <Name>Schätzen</Name>
           <TAW>2</TAW>
+        </Talent>
+        <Talent>
+          <Name>Sprachenkunde</Name>
+          <TAW>0</TAW>
         </Talent>
         <Talent>
           <Name>Staatskunst</Name>
@@ -641,12 +729,6 @@
           <TAW>0</TAW>
           <attack>0</attack>
           <Parade>0</Parade>
-        </Talent>
-        <Talent>
-          <Name>Lanzenreiten.</Name>
-          <TAW>0</TAW>
-          <attack>0</attack>
-          <Parade>---</Parade>
         </Talent>
         <Talent>
           <Name>Lanzenreiten</Name>

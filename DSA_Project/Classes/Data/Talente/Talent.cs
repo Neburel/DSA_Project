@@ -8,7 +8,8 @@ namespace DSA_Project
 {
     public abstract class Talent<T> : InterfaceTalent
     {
-        protected Charakter Charakter;
+        internal bool learned = false;
+        internal Charakter Charakter;
         List<TalentDiverate> Diverates;
 
         private String Name;
@@ -17,7 +18,6 @@ namespace DSA_Project
         protected List<T> Probe;
         
         private int TaW;
-        private int TawBonus;
 
         public Talent(String name, List<T> probe, String be, List<TalentDiverate> diverates)
         {
@@ -34,12 +34,18 @@ namespace DSA_Project
         {
             this.Charakter = charakter;
         }
-        public void setTaw(int taw)
+        private void setTaw(int taw)
         {
+            learned = true;
             TaW = taw;
         }
         public void setTaw(String taw)
         {
+            if(String.Compare(taw, "-") == 0)
+            {
+                learned = false;
+            }
+
             Boolean numeric = Int32.TryParse(taw, out int value);
             if (numeric)
             {
@@ -84,13 +90,15 @@ namespace DSA_Project
                 if (Be == "") { return "-"; }
                 return Be;
             }
-        public int getTaW()
+        public String getTaW()
         {
-            return TaW;
+            if (learned == false) { return "-"; }
+
+            return TaW.ToString();
         }
-        public int getTawWithBonus()
+        internal int getTawWithBonus()
         {
-            return getTaW() + Charakter.getTaWBons(this);
+            return TaW + Charakter.getTaWBons(this);
         }
 
         public abstract String getProbeStringOne();

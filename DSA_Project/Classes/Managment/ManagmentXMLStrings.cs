@@ -62,10 +62,13 @@ namespace DSA_Project
         public const String Language                = "Language";
         public const String SpeakingName            = "SpeakingName";
         public const String SpeakingComplex         = "SpeakingComplex";
+        public const String SpeakingMother          = "SpeakingMother";
         public const String SpeakingComplexSecond   = "SpeakingComplexSecond";
         public const String FontName                = "FontName";
         public const String FontComplex             = "FontComplex";
         public const String FontComplexSecond       = "FontComplexSecond";
+        public const String SpeakingTaW             = "SpeakingTaW";
+        public const String FontTaW                 = "FontTaW";
         //################################################################################################################
     }
 

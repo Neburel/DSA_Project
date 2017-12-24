@@ -23,6 +23,10 @@ namespace DSA_Project
         {
             Name = name;
         }
+        public String getName()
+        {
+            return this.Name;
+        }
 
         public void add(LanguageTalent languageTalent, FontTalent fontTalent)
         {

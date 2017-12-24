@@ -279,30 +279,11 @@ namespace DSA_Project
         {
             foreach (XmlNode TalentType in TalentNode)
             {
-                foreach (XmlNode CatecorieNode in TalentType)
+                switch (TalentType.Name)
                 {
-                    DSA_GENERALTALENTS Gtype;
-                    DSA_FIGHTINGTALENTS FType;
-
-                    if (Enum.TryParse(CatecorieNode.Name, out Gtype))
-                    {
-                        foreach (XmlNode Talent in CatecorieNode)
-                        {
-                            loadTalent(Talent, Gtype, charakter);
-                        }
-                    }
-                    else
-                    if (Enum.TryParse(CatecorieNode.Name, out FType))
-                    {
-                        foreach (XmlNode Talent in CatecorieNode)
-                        {
-                            loadTalent(Talent, FType, charakter);
-                        }
-                    }
-                    else
-                    {
-                        throw new Exception();
-                    }
+                    case (ManagmentXMLStrings.GeneralTalent): loadTalent(TalentType, charakter); break;
+                    case (ManagmentXMLStrings.FightingTalent): loadTalent(TalentType, charakter); break;
+                    case (ManagmentXMLStrings.Language): loadTalentLanguage(TalentType, charakter); break;
                 }
             }
         }
@@ -344,6 +325,103 @@ namespace DSA_Project
                 ftalent.setPA(x);
             }
             
+        }
+        private static void loadTalent(XmlNode TalentNode, Charakter charakter)
+        {
+            foreach (XmlNode CatecorieNode in TalentNode)
+            {
+                DSA_GENERALTALENTS Gtype;
+                DSA_FIGHTINGTALENTS FType;
+
+                if (Enum.TryParse(CatecorieNode.Name, out Gtype))
+                {
+                    foreach (XmlNode Talent in CatecorieNode)
+                    {
+                        loadTalent(Talent, Gtype, charakter);
+                    }
+                }
+                else
+                if (Enum.TryParse(CatecorieNode.Name, out FType))
+                {
+                    foreach (XmlNode Talent in CatecorieNode)
+                    {
+                        loadTalent(Talent, FType, charakter);
+                    }
+                }
+            }
+        }
+        private static void loadTalentLanguage(XmlNode TalentNode, Charakter charakter)
+        {
+            foreach(XmlNode LanguageFamily in TalentNode)
+            {
+                String familyName = "";
+                XmlNode innerNode = null;
+
+                foreach (XmlNode Node in LanguageFamily)
+                {
+                    switch (Node.Name)
+                    {
+                        case (ManagmentXMLStrings.FamilyName): familyName = Node.InnerText; break;
+                        case (ManagmentXMLStrings.Language): innerNode = Node; break;
+                    }
+
+                    if (String.Compare(familyName, "") != 0 && innerNode != null)
+                    {
+                        if (String.Compare(familyName, "Zwergisch-Familie") == 0)
+                        {
+                            Console.WriteLine("Test");
+                        }
+
+
+                        int x = charakter.getFamilyCount();
+                        LanguageFamily family = null;
+
+                        for (int i = 0; i < x; i++)
+                        {
+                            LanguageFamily fam = charakter.getFamily(i);
+                            if (String.Compare(fam.getName(), familyName) == 0)
+                            {
+                                family = fam;
+                                break;
+                            }
+                        }
+                        if (family != null)
+                        {
+                            String Speakingname = "";
+                            String SpeakingTaW = "";
+                            String SpeakingMother = "";
+                            String FontName = "";
+                            String FontTaW = "";
+
+                            foreach (XmlNode node in innerNode)
+                            {
+                                switch (node.Name)
+                                {
+                                    case (ManagmentXMLStrings.SpeakingName): Speakingname = node.InnerText; break;
+                                    case (ManagmentXMLStrings.SpeakingTaW): SpeakingTaW = node.InnerText; break;
+                                    case (ManagmentXMLStrings.SpeakingMother): SpeakingMother = node.InnerText; break;
+                                    case (ManagmentXMLStrings.FontName): FontName = node.InnerText; break;
+                                    case (ManagmentXMLStrings.FontTaW): FontTaW = node.InnerText; break;
+                                }
+                            }
+
+                            for (int i = 0; i < family.count(); i++)
+                            {
+                                LanguageTalent lt = family.getlanguageTalent(i);
+                                FontTalent ft = family.getFontTalent(i);
+
+                                if (String.Compare(Speakingname, lt.getName()) == 0 && String.Compare(FontName, ft.getName()) == 0)
+                                {
+                                    lt.setTaw(SpeakingTaW);
+                                    lt.setMotherMark(SpeakingMother);
+                                    ft.setTaw(FontTaW);
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
         }
     }
 }

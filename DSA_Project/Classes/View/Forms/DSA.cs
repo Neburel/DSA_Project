@@ -1111,21 +1111,21 @@ namespace DSA_Project
             {
                 LanguagePageLanguageNameTextBoxes[i].TextAlign = HorizontalAlignment.Left;
                 LanguagePageFontNameTextBoxes[i].TextAlign = HorizontalAlignment.Left;
+                LanguagePageLanguageTaWTextBoxes[i].Tag = i;
+                LanguagePageFontTaWTextBoxes[i].Tag = i;
+                LanguagePageLanguageMotherTextBoxes[i].Tag = i;
+
+                LanguagePageLanguageTaWTextBoxes[i].KeyUp += setLanguagePageTaWLanguage;
+                LanguagePageFontTaWTextBoxes[i].KeyUp += setLanguagePageTaWFont;
+                LanguagePageLanguageMotherTextBoxes[i].KeyUp += setMotherMark;
             }
 
-
             comboBoxLanguagePageSelection.DataSource = controll.getLanguageFamilyList();
-
             comboBoxLanguagePageSelection.SelectedValueChanged += setLanguagePageComboBox;
         }
         private void loadLanguagePage()
         {
             comboBoxLanguagePageSelection.DataSource = controll.getLanguageFamilyList();
-        }
-        private void setLanguagePageComboBox(Object sender, EventArgs e)
-        {
-            LanguageFamily family = (LanguageFamily)comboBoxLanguagePageSelection.SelectedValue;
-            setBoxes(family);
         }
         private void setBoxes(LanguageFamily family)
         {
@@ -1180,6 +1180,52 @@ namespace DSA_Project
                 LanguagePageFontProbeTextBoxes[i].Text = "";
             }
 
+        }
+        private void setLanguagePageComboBox(Object sender, EventArgs e)
+        {
+            LanguageFamily family = (LanguageFamily)comboBoxLanguagePageSelection.SelectedValue;
+            setBoxes(family);
+        }
+        private void setLanguagePageTaWLanguage(Object sender, EventArgs e)
+        {
+            TextBox box = (TextBox)sender;
+            int i = (int)box.Tag;
+
+            LanguageFamily family = (LanguageFamily)comboBoxLanguagePageSelection.SelectedValue;
+            LanguageTalent lt = family.getlanguageTalent(i);
+
+            lt.setTaw(box.Text);
+
+            LanguagePageLanguageNameTextBoxes[i].Text = lt.getName();
+            LanguagePageLanguageComplexTextBoxes[i].Text = lt.getBe();
+            LanguagePageLanguageTaWTextBoxes[i].Text = lt.getTaW().ToString();
+            LanguagePageLanguageProbeTextBoxes[i].Text = lt.getProbeStringOne();
+        }
+        private void setLanguagePageTaWFont(Object sender, EventArgs e)
+        {
+            TextBox box = (TextBox)sender;
+            int i = (int)box.Tag;
+
+            LanguageFamily family = (LanguageFamily)comboBoxLanguagePageSelection.SelectedValue;
+            FontTalent ft = family.getFontTalent(i);
+
+            ft.setTaw(box.Text);
+
+            LanguagePageFontNameTextBoxes[i].Text = ft.getName();
+            LanguagePageFontComplexTextBoxes[i].Text = ft.getBe();
+            LanguagePageFontTaWTextBoxes[i].Text = ft.getTaW().ToString();
+            LanguagePageFontProbeTextBoxes[i].Text = ft.getProbeStringOne();
+        }
+        private void setMotherMark(Object sender, EventArgs e)
+        {
+            TextBox box = (TextBox)sender;
+            int i = (int)box.Tag;
+
+            LanguageFamily family = (LanguageFamily)comboBoxLanguagePageSelection.SelectedValue;
+            LanguageTalent lt = family.getlanguageTalent(i);
+
+            lt.setMotherMark(LanguagePageLanguageMotherTextBoxes[i].Text);
+            LanguagePageLanguageMotherTextBoxes[i].Text = lt.getMotherMark();
         }
         //#########################################################################################################################################################################
         //RewardPage 
