@@ -26,7 +26,7 @@ namespace DSA_Project
     }
     //##########################################################################################################################################################################################################################################################
     //Enums
-    public enum DSA_ATTRIBUTE { MU, KL, IN, CH, FF, GE, KO, KK, SO, LT, HT }
+    public enum DSA_ATTRIBUTE { MU, KL, IN, CH, FF, GE, KO, KK, SO }
     public enum DSA_ENERGIEN { LEBENSENERGIE, AUSDAUER, ASTRALENERGIE, KARMAENERGIE, MAGIERESISTENZ }
     public enum DSA_ADVANCEDVALUES { ATTACKE_BASIS, PARADE_BASIS, FERNKAMPF_BASIS, INITATIVE_BASIS, BEHERSCHUNGSWERT, ARTEFAKTKONTROLLE, WUNDSCHWELLE, ENTRÜCKUNG, GESCHWINDIGKEIT }
     public enum DSA_BASICVALUES { NAME, ALTER, GESCHLECHT, GRÖSE, GEWICHT, AUGENFARBE, HAUTFARBE, HAARFARBE, FAMILIENSTAND, ANREDE, GOTTHEIT, RASSE, KULTUR, PROFESSION, FREEVALUE1, FREEVALUE2, FREEVALUE3, FREEVALUE4, FREEVALUE5, FREEVALUE6, FREEVALUE7 }
@@ -90,12 +90,13 @@ namespace DSA_Project
             path = Path.Combine(path, ManagmentSaveStrings.SaveLocation);
             String GeneralTalentFileSystemLocation = Path.Combine(getResourcePath(), ManagmentSaveStrings.GeneralTalentFilesSystemLocation);
             String FightingTalentFileSystemLocation = Path.Combine(getResourcePath(), ManagmentSaveStrings.FightTalentFilesSystemLocation);
+            String LanguageTalentFileSystemLocation = Path.Combine(getResourcePath(), ManagmentSaveStrings.LanguageTalentFileSystemLocation);
 
-            new ControllTalent(charakter, GeneralTalentFileSystemLocation, FightingTalentFileSystemLocation);              //Rüstet den Charakter mit den der Form zugehörigen Talenten aus
+            new ControllTalent(charakter, GeneralTalentFileSystemLocation, FightingTalentFileSystemLocation, LanguageTalentFileSystemLocation);
+            //Rüstet den Charakter mit den der Form zugehörigen Talenten aus
             
             return charakter;
         }
-        //###################################################################################################################################
         //###################################################################################################################################
         //Einrichtung der Form
         private void setUP()
@@ -295,6 +296,19 @@ namespace DSA_Project
         public InterfaceTalent getTalent<Tenum>(Tenum type, int number) where Tenum : struct, IComparable, IFormattable, IConvertible
         {
             return Charakter.getTalent(type, number);
+        }
+        //###################################################################################################################################
+        //LanguagePage
+        public List<LanguageFamily> getLanguageFamilyList()
+        {
+            List<LanguageFamily> flist = new List<LanguageFamily>();
+            int count = Charakter.getFamilyCount();
+            
+            for(int i=0; i<count; i++)
+            {
+                flist.Add(Charakter.getFamily(i));
+            }
+            return flist;
         }
         //###################################################################################################################################
     }

@@ -16,10 +16,7 @@ namespace DSA_Project
         private Dictionary<DSA_ADVANCEDVALUES, int> advancedValues;
 
         private Dictionary<DSA_ATTRIBUTE, bool> markedAttributs;
-
-        private Dictionary<DSA_GENERALTALENTS, List<InterfaceTalent>> generalTalents;
-        private Dictionary<DSA_FIGHTINGTALENTS, List<InterfaceTalent>> fightingTalents;
-
+        
         private int adventurePoints = 0;
         private int Beherschungswert    = 0;
         private int Entrückung          = 0;
@@ -41,9 +38,7 @@ namespace DSA_Project
             advancedValues                  = new Dictionary<DSA_ADVANCEDVALUES, int>();
             markedAttributs                 = new Dictionary<DSA_ATTRIBUTE, bool>();
 
-
-            generalTalents = new Dictionary<DSA_GENERALTALENTS, List<InterfaceTalent>>();
-            fightingTalents = new Dictionary<DSA_FIGHTINGTALENTS, List<InterfaceTalent>>();
+            setUPTalente();
 
             for (int i=0; i<enumAttributLength; i++)
             {
@@ -62,18 +57,7 @@ namespace DSA_Project
                 advancedValues.Add((DSA_ADVANCEDVALUES)i, 0);
             }
             
-            for(int i=0; i<Enum.GetNames(typeof(DSA_GENERALTALENTS)).Length; i++)
-            {
-                generalTalents.Add((DSA_GENERALTALENTS)i, new List<InterfaceTalent>());
-            }
-            for (int i = 0; i < Enum.GetNames(typeof(DSA_FIGHTINGTALENTS)).Length; i++)
-            {
-                fightingTalents.Add((DSA_FIGHTINGTALENTS)i, new List<InterfaceTalent>());
-            }
-            for(int i =0; i<Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length; i++)
-            {
-                markedAttributs.Add((DSA_ATTRIBUTE)i, false);
-            }
+            
         }
 
         public void setAdventurePoints(int points)
@@ -136,14 +120,7 @@ namespace DSA_Project
             int attributeCount = Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length;
             for (int i = 0; i < attributeCount; i++)
             {
-                if((DSA_ATTRIBUTE)i == DSA_ATTRIBUTE.HT || (DSA_ATTRIBUTE)i == DSA_ATTRIBUTE.LT)
-                {
-                    //Deinitiv beschissen.... Anders Planen! 
-                } else
-                {
-                    summe = summe + getAttributeAKT((DSA_ATTRIBUTE)i);
-                }
-
+                summe = summe + getAttributeAKT((DSA_ATTRIBUTE)i);
             }
             return summe;
         }
@@ -259,68 +236,12 @@ namespace DSA_Project
             return featureManagment.getHighestNumber();
         }
         
-        public void addTalent<Tenum>(Tenum type, InterfaceTalent talent) where Tenum: struct, IComparable, IFormattable, IConvertible
-        {
-            talent.setCharacter(this);
-            if (typeof(Tenum) == typeof(DSA_GENERALTALENTS))
-            {
-                generalTalents[(DSA_GENERALTALENTS)(Object)type].Add(talent);
-            } else 
-            if(typeof(Tenum) == typeof(DSA_FIGHTINGTALENTS))
-            {
-                fightingTalents[(DSA_FIGHTINGTALENTS)(Object)type].Add(talent);
-            }
-        }
+        
         public int getTaWBons(InterfaceTalent talent)
         {
             return featureManagment.getTalentTawBonus(talent);
         }
-        public InterfaceTalent getTalent<Tenum>(Tenum type, int number) where Tenum : struct, IComparable, IFormattable, IConvertible
-        {
-            if (typeof(Tenum) == typeof(DSA_GENERALTALENTS))
-            {
-                if (generalTalents[(DSA_GENERALTALENTS)(Object)type].Count < number+1)
-                {
-                    return null;
-                }
-                return generalTalents[(DSA_GENERALTALENTS)(Object)type][number];
-            }
-            else
-            if (typeof(Tenum) == typeof(DSA_FIGHTINGTALENTS))
-            {
-                if (fightingTalents[(DSA_FIGHTINGTALENTS)(Object)type].Count < number+1)
-                {
-                    return null;
-                }
-                return fightingTalents[(DSA_FIGHTINGTALENTS)(Object)type][number];
-            }
-            return null;
-        }
-        public InterfaceTalent getTalent<Tenum>(Tenum type, String name) where Tenum : struct, IComparable, IFormattable, IConvertible
-        {
-            int i = 0;
-            InterfaceTalent talent = null;
-            while ((talent = this.getTalent(type, i)) != null)
-            {
-                if(String.Compare(name, talent.getName()) == 0)
-                {
-                    return talent;
-                }
-                i++;
-            }
-            return talent;
-        }
         
-        private List<InterfaceTalent>getTalentList<Tenum>(Dictionary<Tenum, List<InterfaceTalent>> dictionary) where Tenum : struct, IComparable, IFormattable, IConvertible
-        {
-            List<InterfaceTalent> talentList = new List<InterfaceTalent>();
-            foreach(Tenum type in Enum.GetValues(typeof(Tenum))){
-                List<InterfaceTalent> currentList;
-                dictionary.TryGetValue(type, out currentList);
-                talentList.AddRange(currentList);
-            }
-            return talentList;
-        }
 
         public List<InterfaceTalent> getAllTalentList()
         {
@@ -348,5 +269,109 @@ namespace DSA_Project
             markedAttributs.TryGetValue(att, out b);
             return b;
         }
+
+
+        //Rework ab hir
+        //###############################################################################################################################################
+        //Talente
+        private Dictionary<DSA_GENERALTALENTS, List<InterfaceTalent>> generalTalents;
+        private Dictionary<DSA_FIGHTINGTALENTS, List<InterfaceTalent>> fightingTalents;
+        private List<LanguageFamily> languageTalents;
+        private void setUPTalente()
+        {
+            generalTalents = new Dictionary<DSA_GENERALTALENTS, List<InterfaceTalent>>();
+            fightingTalents = new Dictionary<DSA_FIGHTINGTALENTS, List<InterfaceTalent>>();
+            languageTalents = new List<LanguageFamily>(0);
+
+            for (int i = 0; i < Enum.GetNames(typeof(DSA_GENERALTALENTS)).Length; i++)
+            {
+                generalTalents.Add((DSA_GENERALTALENTS)i, new List<InterfaceTalent>());
+            }
+            for (int i = 0; i < Enum.GetNames(typeof(DSA_FIGHTINGTALENTS)).Length; i++)
+            {
+                fightingTalents.Add((DSA_FIGHTINGTALENTS)i, new List<InterfaceTalent>());
+            }
+            for (int i = 0; i < Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length; i++)
+            {
+                markedAttributs.Add((DSA_ATTRIBUTE)i, false);
+            }
+        }
+        public void addTalent<Tenum>(Tenum type, InterfaceTalent talent) where Tenum : struct, IComparable, IFormattable, IConvertible
+        {
+            talent.setCharacter(this);
+            if (typeof(Tenum) == typeof(DSA_GENERALTALENTS))
+            {
+                generalTalents[(DSA_GENERALTALENTS)(Object)type].Add(talent);
+            }
+            else
+            if (typeof(Tenum) == typeof(DSA_FIGHTINGTALENTS))
+            {
+                fightingTalents[(DSA_FIGHTINGTALENTS)(Object)type].Add(talent);
+            }
+        }
+        public void addTalent(LanguageFamily family)
+        {
+            languageTalents.Add(family);
+            for(int i=0; i<family.count(); i++)
+            {
+                family.getlanguageTalent(i).setCharacter(this);
+                family.getFontTalent(i).setCharacter(this);
+            }
+        }
+        private List<InterfaceTalent> getTalentList<Tenum>(Dictionary<Tenum, List<InterfaceTalent>> dictionary) where Tenum : struct, IComparable, IFormattable, IConvertible
+        {
+            List<InterfaceTalent> talentList = new List<InterfaceTalent>();
+            foreach (Tenum type in Enum.GetValues(typeof(Tenum)))
+            {
+                List<InterfaceTalent> currentList;
+                dictionary.TryGetValue(type, out currentList);
+                talentList.AddRange(currentList);
+            }
+            return talentList;
+        }
+        public InterfaceTalent getTalent<Tenum>(Tenum type, int number) where Tenum : struct, IComparable, IFormattable, IConvertible
+        {
+            if (typeof(Tenum) == typeof(DSA_GENERALTALENTS))
+            {
+                if (generalTalents[(DSA_GENERALTALENTS)(Object)type].Count < number + 1)
+                {
+                    return null;
+                }
+                return generalTalents[(DSA_GENERALTALENTS)(Object)type][number];
+            }
+            else
+            if (typeof(Tenum) == typeof(DSA_FIGHTINGTALENTS))
+            {
+                if (fightingTalents[(DSA_FIGHTINGTALENTS)(Object)type].Count < number + 1)
+                {
+                    return null;
+                }
+                return fightingTalents[(DSA_FIGHTINGTALENTS)(Object)type][number];
+            }
+            return null;
+        }
+        public InterfaceTalent getTalent<Tenum>(Tenum type, String name) where Tenum : struct, IComparable, IFormattable, IConvertible
+        {
+            int i = 0;
+            InterfaceTalent talent = null;
+            while ((talent = this.getTalent(type, i)) != null)
+            {
+                if (String.Compare(name, talent.getName()) == 0)
+                {
+                    return talent;
+                }
+                i++;
+            }
+            return talent;
+        }
+        public LanguageFamily getFamily(int number)
+        {
+            return languageTalents[number];
+        }
+        public int getFamilyCount()
+        {
+            return languageTalents.Count;
+        }
+        //###############################################################################################################################################
     }
 }

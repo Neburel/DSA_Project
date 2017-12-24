@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    abstract class Talent<T> : InterfaceTalent
+    public abstract class Talent<T> : InterfaceTalent
     {
         protected Charakter Charakter;
         List<TalentDiverate> Diverates;
@@ -85,9 +85,9 @@ namespace DSA_Project
                 return Be;
             }
         public int getTaW()
-            {
-                return TaW;
-            }
+        {
+            return TaW;
+        }
         public int getTawWithBonus()
         {
             return getTaW() + Charakter.getTaWBons(this);

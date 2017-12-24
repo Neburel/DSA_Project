@@ -17,6 +17,7 @@ namespace DSA_Project
         public static String SaveLocation                       = "SaveGame";
         public static String GeneralTalentFilesSystemLocation   = "Talents/GeneralTalents";
         public static String FightTalentFilesSystemLocation     = "Talents/FightingTalents";
-        
+        public static String LanguageTalentFileSystemLocation   = "Talents/Language";
+        public static String PictureFileSystemLocation          = "PicturesDiv";
     }
 }

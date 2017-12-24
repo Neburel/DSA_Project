@@ -54,6 +54,10 @@
     <Compile Include="Classes\Data\Talente\FightTalent.cs" />
     <Compile Include="Classes\Data\Talente\GeneralTalent.cs" />
     <Compile Include="Classes\Data\Talente\InterfaceTalent.cs" />
+    <Compile Include="Classes\Data\Talente\LanguageAbstractTalent.cs" />
+    <Compile Include="Classes\Data\Talente\FontTalent.cs" />
+    <Compile Include="Classes\Data\Talente\LanguageFamily.cs" />
+    <Compile Include="Classes\Data\Talente\LanguageTalent.cs" />
     <Compile Include="Classes\Data\Talente\Talent.cs" />
     <Compile Include="Classes\Data\Talente\TalentDiverate.cs" />
     <Compile Include="Classes\Data\Talente\TalentRequirement.cs" />
@@ -61,6 +65,7 @@
     <Compile Include="Classes\Managment\ManagmentForm.cs" />
     <Compile Include="Classes\Managment\ManagmentXMLStrings.cs" />
     <Compile Include="Classes\Managment\ManagmentSaveStrings.cs" />
+    <Compile Include="Classes\Util\XMLLoad\LoadXMLLanguage.cs" />
     <Compile Include="Classes\Util\XMLSave\SaveXMLTalent.cs" />
     <Compile Include="Classes\Util\XMLLoad\LoadCharakterXML.cs" />
     <Compile Include="Classes\Util\XMLLoad\LoadXMLTalentFile.cs" />
@@ -93,6 +98,11 @@
       <DependentUpon>CreateFeature.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Classes\View\Forms\CreateFeature.resx">
       <DependentUpon>CreateFeature.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,14 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -496,6 +501,37 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\DSA\Talents\Language\EinzelneSprachen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\Geheimschriften.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\Geheimsprachen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\Rissoal.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\Orkisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\Zwergisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\Elfisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\Thorwalsch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\Tulamidya.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\Garethi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PicturesDiv\Old-Parchment-Wallpaper-15.jpg" />
     <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Abrichten.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

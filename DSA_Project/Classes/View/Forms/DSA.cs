@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.IO;
+using System.Reflection;
+using System.Resources;
 using System.Windows.Forms;
 
 //toDO:     Zeitverlust durch Aufruf change wenn Projekt diesen Change (nicht von Außen) vornimmt
@@ -12,6 +14,8 @@ namespace DSA_Project
     public partial class DSA : Form
     {
         private ControllClass controll;
+
+        System.Drawing.Image backround = (System.Drawing.Image) DSA_Project.Properties.Resources.Old_Parchment_Wallpaper_15;
 
         public DSA()
         {
@@ -44,6 +48,13 @@ namespace DSA_Project
             setUPTalentBox();
             setUPTalentPage();
             setUPRewardPageRewards();
+            setUPLanguagePage();
+            
+            DoubleBuffered = true;
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.UserPaint | ControlStyles.AllPaintingInWmPaint | ControlStyles.ResizeRedraw | ControlStyles.ContainerControl | ControlStyles.OptimizedDoubleBuffer | ControlStyles.SupportsTransparentBackColor
+              , true);
+
         }
         public void load()
         {
@@ -56,6 +67,7 @@ namespace DSA_Project
             loadHeroPageMoney();
             loadHeroPageFeature();
             loadRewardPageRewards();
+            loadLanguagePage();
 
             refreshHeroPageAdvancedValues();
         }
@@ -1071,6 +1083,105 @@ namespace DSA_Project
             talentWürfeTextBoxs[BoxNumber - 1].Text = talent.getProbeStringTwo();
         }
         //#########################################################################################################################################################################
+        //LanguagePage
+        private int LanguagePageSupportedBoxes = 30;
+        private List<TextBox> LanguagePageLanguageNameTextBoxes;
+        private List<TextBox> LanguagePageLanguageMotherTextBoxes;
+        private List<TextBox> LanguagePageLanguageComplexTextBoxes;
+        private List<TextBox> LanguagePageLanguageTaWTextBoxes;
+        private List<TextBox> LanguagePageLanguageProbeTextBoxes;
+        private List<TextBox> LanguagePageFontNameTextBoxes;
+        private List<TextBox> LanguagePageFontComplexTextBoxes;
+        private List<TextBox> LanguagePageFontTaWTextBoxes;
+        private List<TextBox> LanguagePageFontProbeTextBoxes;
+        private void setUPLanguagePage()
+        {
+            LanguagePageLanguageNameTextBoxes       = new List<TextBox> { txtLanguagePageLanguageName1, txtLanguagePageLanguageName2, txtLanguagePageLanguageName3, txtLanguagePageLanguageName4, txtLanguagePageLanguageName5, txtLanguagePageLanguageName6, txtLanguagePageLanguageName7, txtLanguagePageLanguageName8, txtLanguagePageLanguageName9, txtLanguagePageLanguageName10, txtLanguagePageLanguageName11, txtLanguagePageLanguageName12, txtLanguagePageLanguageName13, txtLanguagePageLanguageName14, txtLanguagePageLanguageName15, txtLanguagePageLanguageName16, txtLanguagePageLanguageName17, txtLanguagePageLanguageName18, txtLanguagePageLanguageName19, txtLanguagePageLanguageName20, txtLanguagePageLanguageName21, txtLanguagePageLanguageName22, txtLanguagePageLanguageName23, txtLanguagePageLanguageName24, txtLanguagePageLanguageName25, txtLanguagePageLanguageName26, txtLanguagePageLanguageName27, txtLanguagePageLanguageName28, txtLanguagePageLanguageName29, txtLanguagePageLanguageName30 };
+            LanguagePageLanguageMotherTextBoxes     = new List<TextBox> { txtLanguagePageLanguageMother1, txtLanguagePageLanguageMother2, txtLanguagePageLanguageMother3, txtLanguagePageLanguageMother4, txtLanguagePageLanguageMother5, txtLanguagePageLanguageMother6, txtLanguagePageLanguageMother7, txtLanguagePageLanguageMother8, txtLanguagePageLanguageMother9, txtLanguagePageLanguageMother10, txtLanguagePageLanguageMother11, txtLanguagePageLanguageMother12, txtLanguagePageLanguageMother13, txtLanguagePageLanguageMother14, txtLanguagePageLanguageMother15, txtLanguagePageLanguageMother16, txtLanguagePageLanguageMother17, txtLanguagePageLanguageMother18, txtLanguagePageLanguageMother19, txtLanguagePageLanguageMother20, txtLanguagePageLanguageMother21, txtLanguagePageLanguageMother22, txtLanguagePageLanguageMother23, txtLanguagePageLanguageMother24, txtLanguagePageLanguageMother25, txtLanguagePageLanguageMother26, txtLanguagePageLanguageMother27, txtLanguagePageLanguageMother28, txtLanguagePageLanguageMother29, txtLanguagePageLanguageMother30 };
+            LanguagePageLanguageComplexTextBoxes    = new List<TextBox> { txtLanguagePageLanguageComplex1, txtLanguagePageLanguageComplex2, txtLanguagePageLanguageComplex3, txtLanguagePageLanguageComplex4, txtLanguagePageLanguageComplex5, txtLanguagePageLanguageComplex6, txtLanguagePageLanguageComplex7, txtLanguagePageLanguageComplex8, txtLanguagePageLanguageComplex9, txtLanguagePageLanguageComplex10, txtLanguagePageLanguageComplex11, txtLanguagePageLanguageComplex12, txtLanguagePageLanguageComplex13, txtLanguagePageLanguageComplex14, txtLanguagePageLanguageComplex15, txtLanguagePageLanguageComplex16, txtLanguagePageLanguageComplex17, txtLanguagePageLanguageComplex18, txtLanguagePageLanguageComplex19, txtLanguagePageLanguageComplex20, txtLanguagePageLanguageComplex21, txtLanguagePageLanguageComplex22, txtLanguagePageLanguageComplex23, txtLanguagePageLanguageComplex24, txtLanguagePageLanguageComplex25, txtLanguagePageLanguageComplex26, txtLanguagePageLanguageComplex27, txtLanguagePageLanguageComplex28, txtLanguagePageLanguageComplex29, txtLanguagePageLanguageComplex30 };
+            LanguagePageLanguageTaWTextBoxes        = new List<TextBox> { txtLanguagePageLanguageTaW1, txtLanguagePageLanguageTaW2, txtLanguagePageLanguageTaW3, txtLanguagePageLanguageTaW4, txtLanguagePageLanguageTaW5, txtLanguagePageLanguageTaW6, txtLanguagePageLanguageTaW7, txtLanguagePageLanguageTaW8, txtLanguagePageLanguageTaW9, txtLanguagePageLanguageTaW10, txtLanguagePageLanguageTaW11, txtLanguagePageLanguageTaW12, txtLanguagePageLanguageTaW13, txtLanguagePageLanguageTaW14, txtLanguagePageLanguageTaW15, txtLanguagePageLanguageTaW16, txtLanguagePageLanguageTaW17, txtLanguagePageLanguageTaW18, txtLanguagePageLanguageTaW19, txtLanguagePageLanguageTaW20, txtLanguagePageLanguageTaW21, txtLanguagePageLanguageTaW22, txtLanguagePageLanguageTaW23, txtLanguagePageLanguageTaW24, txtLanguagePageLanguageTaW25, txtLanguagePageLanguageTaW26, txtLanguagePageLanguageTaW27, txtLanguagePageLanguageTaW28, txtLanguagePageLanguageTaW29, txtLanguagePageLanguageTaW30 };
+            LanguagePageLanguageProbeTextBoxes      = new List<TextBox> { txtLanguagePageLanguageProbe1, txtLanguagePageLanguageProbe2, txtLanguagePageLanguageProbe3, txtLanguagePageLanguageProbe4, txtLanguagePageLanguageProbe5, txtLanguagePageLanguageProbe6, txtLanguagePageLanguageProbe7, txtLanguagePageLanguageProbe8, txtLanguagePageLanguageProbe9, txtLanguagePageLanguageProbe10, txtLanguagePageLanguageProbe11, txtLanguagePageLanguageProbe12, txtLanguagePageLanguageProbe13, txtLanguagePageLanguageProbe14, txtLanguagePageLanguageProbe15, txtLanguagePageLanguageProbe16, txtLanguagePageLanguageProbe17, txtLanguagePageLanguageProbe18, txtLanguagePageLanguageProbe19, txtLanguagePageLanguageProbe20, txtLanguagePageLanguageProbe21, txtLanguagePageLanguageProbe22, txtLanguagePageLanguageProbe23, txtLanguagePageLanguageProbe24, txtLanguagePageLanguageProbe25, txtLanguagePageLanguageProbe26, txtLanguagePageLanguageProbe27, txtLanguagePageLanguageProbe28, txtLanguagePageLanguageProbe29, txtLanguagePageLanguageProbe30 };
+
+            LanguagePageFontNameTextBoxes           = new List<TextBox> { txtLanguagePageFontName1, txtLanguagePageFontName2, txtLanguagePageFontName3, txtLanguagePageFontName4, txtLanguagePageFontName5, txtLanguagePageFontName6, txtLanguagePageFontName7, txtLanguagePageFontName8, txtLanguagePageFontName9, txtLanguagePageFontName10, txtLanguagePageFontName11, txtLanguagePageFontName12, txtLanguagePageFontName13, txtLanguagePageFontName14, txtLanguagePageFontName15, txtLanguagePageFontName16, txtLanguagePageFontName17, txtLanguagePageFontName18, txtLanguagePageFontName19, txtLanguagePageFontName20, txtLanguagePageFontName21, txtLanguagePageFontName22, txtLanguagePageFontName23, txtLanguagePageFontName24, txtLanguagePageFontName25, txtLanguagePageFontName26, txtLanguagePageFontName27, txtLanguagePageFontName28, txtLanguagePageFontName29, txtLanguagePageFontName30 };
+            LanguagePageFontComplexTextBoxes        = new List<TextBox> { txtLanguagePageFontComplex1, txtLanguagePageFontComplex2, txtLanguagePageFontComplex3, txtLanguagePageFontComplex4, txtLanguagePageFontComplex5, txtLanguagePageFontComplex6, txtLanguagePageFontComplex7, txtLanguagePageFontComplex8, txtLanguagePageFontComplex9, txtLanguagePageFontComplex10, txtLanguagePageFontComplex11, txtLanguagePageFontComplex12, txtLanguagePageFontComplex13, txtLanguagePageFontComplex14, txtLanguagePageFontComplex15, txtLanguagePageFontComplex16, txtLanguagePageFontComplex17, txtLanguagePageFontComplex18, txtLanguagePageFontComplex19, txtLanguagePageFontComplex20, txtLanguagePageFontComplex21, txtLanguagePageFontComplex22, txtLanguagePageFontComplex23, txtLanguagePageFontComplex24, txtLanguagePageFontComplex25, txtLanguagePageFontComplex26, txtLanguagePageFontComplex27, txtLanguagePageFontComplex28, txtLanguagePageFontComplex29, txtLanguagePageFontComplex30 };
+            LanguagePageFontTaWTextBoxes            = new List<TextBox> { txtLanguagePageFontTaW1, txtLanguagePageFontTaW2, txtLanguagePageFontTaW3, txtLanguagePageFontTaW4, txtLanguagePageFontTaW5, txtLanguagePageFontTaW6, txtLanguagePageFontTaW7, txtLanguagePageFontTaW8, txtLanguagePageFontTaW9, txtLanguagePageFontTaW10, txtLanguagePageFontTaW11, txtLanguagePageFontTaW12, txtLanguagePageFontTaW13, txtLanguagePageFontTaW14, txtLanguagePageFontTaW15, txtLanguagePageFontTaW16, txtLanguagePageFontTaW17, txtLanguagePageFontTaW18, txtLanguagePageFontTaW19, txtLanguagePageFontTaW20, txtLanguagePageFontTaW21, txtLanguagePageFontTaW22, txtLanguagePageFontTaW23, txtLanguagePageFontTaW24, txtLanguagePageFontTaW25, txtLanguagePageFontTaW26, txtLanguagePageFontTaW27, txtLanguagePageFontTaW28, txtLanguagePageFontTaW29, txtLanguagePageFontTaW30 };
+            LanguagePageFontProbeTextBoxes          = new List<TextBox> { txtLanguagePageFontProbe1, txtLanguagePageFontProbe2, txtLanguagePageFontProbe3, txtLanguagePageFontProbe4, txtLanguagePageFontProbe5, txtLanguagePageFontProbe6, txtLanguagePageFontProbe7, txtLanguagePageFontProbe8, txtLanguagePageFontProbe9, txtLanguagePageFontProbe10, txtLanguagePageFontProbe11, txtLanguagePageFontProbe12, txtLanguagePageFontProbe13, txtLanguagePageFontProbe14, txtLanguagePageFontProbe15, txtLanguagePageFontProbe16, txtLanguagePageFontProbe17, txtLanguagePageFontProbe18, txtLanguagePageFontProbe19, txtLanguagePageFontProbe20, txtLanguagePageFontProbe21, txtLanguagePageFontProbe22, txtLanguagePageFontProbe23, txtLanguagePageFontProbe24, txtLanguagePageFontProbe25, txtLanguagePageFontProbe26, txtLanguagePageFontProbe27, txtLanguagePageFontProbe28, txtLanguagePageFontProbe29, txtLanguagePageFontProbe30 };
+
+            for (int i=0; i<LanguagePageSupportedBoxes; i++)
+            {
+                LanguagePageLanguageNameTextBoxes[i].TextAlign = HorizontalAlignment.Left;
+                LanguagePageFontNameTextBoxes[i].TextAlign = HorizontalAlignment.Left;
+            }
+
+
+            comboBoxLanguagePageSelection.DataSource = controll.getLanguageFamilyList();
+
+            comboBoxLanguagePageSelection.SelectedValueChanged += setLanguagePageComboBox;
+        }
+        private void loadLanguagePage()
+        {
+            comboBoxLanguagePageSelection.DataSource = controll.getLanguageFamilyList();
+        }
+        private void setLanguagePageComboBox(Object sender, EventArgs e)
+        {
+            LanguageFamily family = (LanguageFamily)comboBoxLanguagePageSelection.SelectedValue;
+            setBoxes(family);
+        }
+        private void setBoxes(LanguageFamily family)
+        {
+            int i = 0;
+            for (i = 0; i < family.count(); i++)
+            {
+                LanguageTalent lt = family.getlanguageTalent(i);
+                FontTalent ft = family.getFontTalent(i);
+
+                txtLanguagePageLanguageProbe.Text = lt.getProbeStringTwo();
+                txtLanguagePageFontProbe.Text = ft.getProbeStringTwo();
+
+                if (String.Compare(lt.getName(), "") != 0)
+                {
+                    LanguagePageLanguageNameTextBoxes[i].Text = lt.getName();
+                    LanguagePageLanguageComplexTextBoxes[i].Text = lt.getBe();
+                    LanguagePageLanguageTaWTextBoxes[i].Text = lt.getTaW().ToString();
+                    LanguagePageLanguageProbeTextBoxes[i].Text = lt.getProbeStringOne();
+                }
+                else
+                {
+                    LanguagePageLanguageNameTextBoxes[i].Text = "";
+                    LanguagePageLanguageComplexTextBoxes[i].Text = "";
+                    LanguagePageLanguageTaWTextBoxes[i].Text = "";
+                    LanguagePageLanguageProbeTextBoxes[i].Text = "";
+                }
+                if (String.Compare(ft.getName(), "") != 0)
+                {
+                    LanguagePageFontNameTextBoxes[i].Text = ft.getName();
+                    LanguagePageFontComplexTextBoxes[i].Text = ft.getBe();
+                    LanguagePageFontTaWTextBoxes[i].Text = ft.getTaW().ToString();
+                    LanguagePageFontProbeTextBoxes[i].Text = ft.getProbeStringOne();
+                }
+                else
+                {
+                    LanguagePageFontNameTextBoxes[i].Text = "";
+                    LanguagePageFontComplexTextBoxes[i].Text = "";
+                    LanguagePageFontTaWTextBoxes[i].Text = "";
+                    LanguagePageFontProbeTextBoxes[i].Text = "";
+                }
+            }
+            for(;i<LanguagePageSupportedBoxes; i++)
+            {
+                LanguagePageLanguageNameTextBoxes[i].Text = "";
+                LanguagePageLanguageComplexTextBoxes[i].Text = "";
+                LanguagePageLanguageTaWTextBoxes[i].Text = "";
+                LanguagePageLanguageProbeTextBoxes[i].Text = "";
+
+                LanguagePageFontNameTextBoxes[i].Text = "";
+                LanguagePageFontComplexTextBoxes[i].Text = "";
+                LanguagePageFontTaWTextBoxes[i].Text = "";
+                LanguagePageFontProbeTextBoxes[i].Text = "";
+            }
+
+        }
+        //#########################################################################################################################################################################
         //RewardPage 
         private int supportedRewardBoxes = 25;
         private List<TextBox> rewardNameBoxes;
@@ -1139,5 +1250,42 @@ namespace DSA_Project
             Console.WriteLine(BoxNumber);
         }
         //#########################################################################################################################################################################
+
+
+
+        private void Language_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Heldenbrief_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TAWChange(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void groupBox6_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox7_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox30_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

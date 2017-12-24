@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DSA_Project
-{   
-    class TalentRequirement
+{
+    public class TalentRequirement
     {
         InterfaceTalent talent = null;
         String TalentName;

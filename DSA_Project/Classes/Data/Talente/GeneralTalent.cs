@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    class GeneralTalent : Talent<DSA_ATTRIBUTE>
+    public class GeneralTalent : Talent<DSA_ATTRIBUTE>
     {
         List<TalentRequirement> requirement;
 

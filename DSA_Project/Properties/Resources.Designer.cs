@@ -79,5 +79,15 @@ namespace DSA_Project.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Parchment_Wallpaper_15 {
+            get {
+                object obj = ResourceManager.GetObject("Old_Parchment_Wallpaper_15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

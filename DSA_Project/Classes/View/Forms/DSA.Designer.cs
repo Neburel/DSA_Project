@@ -704,6 +704,295 @@
             this.lblAugenfarbe = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.TabControl = new System.Windows.Forms.TabControl();
+            this.Language = new System.Windows.Forms.TabPage();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.txtLanguagePageFontProbe30 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe29 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe28 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe27 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe26 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe25 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe24 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe23 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe22 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe21 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe20 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe19 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe18 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe17 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe16 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe15 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe14 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe13 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe12 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe11 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe10 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe9 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe8 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe7 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe6 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe5 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe4 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe3 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe2 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe1 = new System.Windows.Forms.TextBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.txtLanguagePageFontTaW30 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW29 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW28 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW27 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW26 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW25 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW24 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW23 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW22 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW21 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW20 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW19 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW18 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW17 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW16 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW15 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW14 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW13 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW12 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW11 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW10 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW9 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW8 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW7 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW6 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW5 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW4 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW3 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW2 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontTaW1 = new System.Windows.Forms.TextBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.txtLanguagePageFontComplex30 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex29 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex28 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex27 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex26 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex25 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex24 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex23 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex22 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex21 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex20 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex19 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex18 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex17 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex16 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex15 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex14 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex13 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex12 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex11 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex10 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex9 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex8 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex7 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex6 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex5 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex4 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex3 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex2 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontComplex1 = new System.Windows.Forms.TextBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.txtLanguagePageFontName30 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName29 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName28 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName27 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName26 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName25 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName24 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName23 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName22 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName21 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName20 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName19 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName18 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName17 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName16 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName15 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName14 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName13 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName12 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName11 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName10 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName9 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName8 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName7 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName6 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName5 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName4 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName3 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName2 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontName1 = new System.Windows.Forms.TextBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.txtLanguagePageLanguageProbe30 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe29 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe28 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe27 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe26 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe25 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe24 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe23 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe22 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe21 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe20 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe19 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe18 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe17 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe16 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe15 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe14 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe13 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe12 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe11 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe10 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe9 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe8 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe7 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe6 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe5 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe4 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe3 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe2 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageProbe1 = new System.Windows.Forms.TextBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.txtLanguagePageLanguageTaW30 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW29 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW28 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW27 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW26 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW25 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW24 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW23 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW22 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW21 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW20 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW19 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW18 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW17 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW16 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW15 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW14 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW13 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW12 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW11 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW10 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW9 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW8 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW7 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW6 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW5 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW4 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW3 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW2 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageTaW1 = new System.Windows.Forms.TextBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.txtLanguagePageLanguageComplex30 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex29 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex28 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex27 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex26 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex25 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex24 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex23 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex22 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex21 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex20 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex19 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex18 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex17 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex16 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex15 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex14 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex13 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex12 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex11 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex10 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex9 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex8 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex7 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex6 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex5 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex4 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex3 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex2 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageComplex1 = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.txtLanguagePageLanguageMother30 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother29 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother28 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother27 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother26 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother25 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother24 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother23 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother22 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother21 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother20 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother19 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother18 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother17 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother16 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother15 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother14 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother13 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother12 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother11 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother10 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother9 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother8 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother7 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother6 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother5 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother4 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother3 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother2 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageMother1 = new System.Windows.Forms.TextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.txtLanguagePageLanguageName30 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName29 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName28 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName27 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName26 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName25 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName24 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName23 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName22 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName21 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName20 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName19 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName18 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName17 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName16 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName15 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName14 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName13 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName12 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName11 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName10 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName9 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName8 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName7 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName6 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName5 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName4 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName3 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName2 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageLanguageName1 = new System.Windows.Forms.TextBox();
+            this.txtLanguagePageFontProbe = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtLanguagePageLanguageProbe = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comboBoxLanguagePageSelection = new System.Windows.Forms.ComboBox();
             this.Rewards = new System.Windows.Forms.TabPage();
             this.txtRewardDescription25 = new System.Windows.Forms.TextBox();
             this.txtReward25 = new System.Windows.Forms.TextBox();
@@ -779,6 +1068,17 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.TabControl.SuspendLayout();
+            this.Language.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.Rewards.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
@@ -786,6 +1086,7 @@
             // tabPageTools
             // 
             this.tabPageTools.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageTools.BackgroundImage = global::DSA_Project.Properties.Resources.Old_Parchment_Wallpaper_15;
             this.tabPageTools.Controls.Add(this.btnToolChangeDSA_PNP);
             this.tabPageTools.Controls.Add(this.btncreateFightingTalent);
             this.tabPageTools.Controls.Add(this.btnCreateTalent);
@@ -819,7 +1120,6 @@
             resources.ApplyResources(this.btnSaveCharacter, "btnSaveCharacter");
             this.btnSaveCharacter.Name = "btnSaveCharacter";
             this.btnSaveCharacter.UseVisualStyleBackColor = true;
-            this.btnSaveCharacter.Click += new System.EventHandler(this.btnSaveCharacter_Click);
             // 
             // btnLoadCharacter
             // 
@@ -3365,6 +3665,7 @@
             // Heldenbrief
             // 
             this.Heldenbrief.BackColor = System.Drawing.SystemColors.Control;
+            this.Heldenbrief.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Heldenbrief.Controls.Add(this.lblFreeValue7);
             this.Heldenbrief.Controls.Add(this.lblFreeValue6);
             this.Heldenbrief.Controls.Add(this.lblFreeValue5);
@@ -3537,6 +3838,7 @@
             this.Heldenbrief.Controls.Add(this.lblName);
             resources.ApplyResources(this.Heldenbrief, "Heldenbrief");
             this.Heldenbrief.Name = "Heldenbrief";
+            this.Heldenbrief.Click += new System.EventHandler(this.Heldenbrief_Click);
             // 
             // lblFreeValue7
             // 
@@ -5471,11 +5773,1765 @@
             this.TabControl.Controls.Add(this.Heldenbrief);
             this.TabControl.Controls.Add(this.worldmap);
             this.TabControl.Controls.Add(this.talents);
+            this.TabControl.Controls.Add(this.Language);
             this.TabControl.Controls.Add(this.Rewards);
             this.TabControl.Controls.Add(this.tabPageTools);
             resources.ApplyResources(this.TabControl, "TabControl");
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
+            // 
+            // Language
+            // 
+            this.Language.BackColor = System.Drawing.SystemColors.Control;
+            this.Language.Controls.Add(this.groupBox15);
+            this.Language.Controls.Add(this.groupBox14);
+            this.Language.Controls.Add(this.groupBox13);
+            this.Language.Controls.Add(this.groupBox12);
+            this.Language.Controls.Add(this.groupBox11);
+            this.Language.Controls.Add(this.groupBox10);
+            this.Language.Controls.Add(this.groupBox9);
+            this.Language.Controls.Add(this.groupBox8);
+            this.Language.Controls.Add(this.groupBox7);
+            this.Language.Controls.Add(this.groupBox6);
+            this.Language.Controls.Add(this.txtLanguagePageFontProbe);
+            this.Language.Controls.Add(this.label1);
+            this.Language.Controls.Add(this.txtLanguagePageLanguageProbe);
+            this.Language.Controls.Add(this.label13);
+            this.Language.Controls.Add(this.comboBoxLanguagePageSelection);
+            this.Language.ForeColor = System.Drawing.SystemColors.ControlText;
+            resources.ApplyResources(this.Language, "Language");
+            this.Language.Name = "Language";
+            this.Language.Click += new System.EventHandler(this.Language_Click);
+            // 
+            // groupBox15
+            // 
+            resources.ApplyResources(this.groupBox15, "groupBox15");
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe30);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe29);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe28);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe27);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe26);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe25);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe24);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe23);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe22);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe21);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe20);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe19);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe18);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe17);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe16);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe15);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe14);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe13);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe12);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe11);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe10);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe9);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe8);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe7);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe6);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe5);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe4);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe3);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe2);
+            this.groupBox15.Controls.Add(this.txtLanguagePageFontProbe1);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.TabStop = false;
+            // 
+            // txtLanguagePageFontProbe30
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe30, "txtLanguagePageFontProbe30");
+            this.txtLanguagePageFontProbe30.Name = "txtLanguagePageFontProbe30";
+            // 
+            // txtLanguagePageFontProbe29
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe29, "txtLanguagePageFontProbe29");
+            this.txtLanguagePageFontProbe29.Name = "txtLanguagePageFontProbe29";
+            // 
+            // txtLanguagePageFontProbe28
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe28, "txtLanguagePageFontProbe28");
+            this.txtLanguagePageFontProbe28.Name = "txtLanguagePageFontProbe28";
+            // 
+            // txtLanguagePageFontProbe27
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe27, "txtLanguagePageFontProbe27");
+            this.txtLanguagePageFontProbe27.Name = "txtLanguagePageFontProbe27";
+            // 
+            // txtLanguagePageFontProbe26
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe26, "txtLanguagePageFontProbe26");
+            this.txtLanguagePageFontProbe26.Name = "txtLanguagePageFontProbe26";
+            // 
+            // txtLanguagePageFontProbe25
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe25, "txtLanguagePageFontProbe25");
+            this.txtLanguagePageFontProbe25.Name = "txtLanguagePageFontProbe25";
+            // 
+            // txtLanguagePageFontProbe24
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe24, "txtLanguagePageFontProbe24");
+            this.txtLanguagePageFontProbe24.Name = "txtLanguagePageFontProbe24";
+            // 
+            // txtLanguagePageFontProbe23
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe23, "txtLanguagePageFontProbe23");
+            this.txtLanguagePageFontProbe23.Name = "txtLanguagePageFontProbe23";
+            // 
+            // txtLanguagePageFontProbe22
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe22, "txtLanguagePageFontProbe22");
+            this.txtLanguagePageFontProbe22.Name = "txtLanguagePageFontProbe22";
+            // 
+            // txtLanguagePageFontProbe21
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe21, "txtLanguagePageFontProbe21");
+            this.txtLanguagePageFontProbe21.Name = "txtLanguagePageFontProbe21";
+            // 
+            // txtLanguagePageFontProbe20
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe20, "txtLanguagePageFontProbe20");
+            this.txtLanguagePageFontProbe20.Name = "txtLanguagePageFontProbe20";
+            // 
+            // txtLanguagePageFontProbe19
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe19, "txtLanguagePageFontProbe19");
+            this.txtLanguagePageFontProbe19.Name = "txtLanguagePageFontProbe19";
+            // 
+            // txtLanguagePageFontProbe18
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe18, "txtLanguagePageFontProbe18");
+            this.txtLanguagePageFontProbe18.Name = "txtLanguagePageFontProbe18";
+            // 
+            // txtLanguagePageFontProbe17
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe17, "txtLanguagePageFontProbe17");
+            this.txtLanguagePageFontProbe17.Name = "txtLanguagePageFontProbe17";
+            // 
+            // txtLanguagePageFontProbe16
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe16, "txtLanguagePageFontProbe16");
+            this.txtLanguagePageFontProbe16.Name = "txtLanguagePageFontProbe16";
+            // 
+            // txtLanguagePageFontProbe15
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe15, "txtLanguagePageFontProbe15");
+            this.txtLanguagePageFontProbe15.Name = "txtLanguagePageFontProbe15";
+            // 
+            // txtLanguagePageFontProbe14
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe14, "txtLanguagePageFontProbe14");
+            this.txtLanguagePageFontProbe14.Name = "txtLanguagePageFontProbe14";
+            // 
+            // txtLanguagePageFontProbe13
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe13, "txtLanguagePageFontProbe13");
+            this.txtLanguagePageFontProbe13.Name = "txtLanguagePageFontProbe13";
+            // 
+            // txtLanguagePageFontProbe12
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe12, "txtLanguagePageFontProbe12");
+            this.txtLanguagePageFontProbe12.Name = "txtLanguagePageFontProbe12";
+            // 
+            // txtLanguagePageFontProbe11
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe11, "txtLanguagePageFontProbe11");
+            this.txtLanguagePageFontProbe11.Name = "txtLanguagePageFontProbe11";
+            // 
+            // txtLanguagePageFontProbe10
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe10, "txtLanguagePageFontProbe10");
+            this.txtLanguagePageFontProbe10.Name = "txtLanguagePageFontProbe10";
+            // 
+            // txtLanguagePageFontProbe9
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe9, "txtLanguagePageFontProbe9");
+            this.txtLanguagePageFontProbe9.Name = "txtLanguagePageFontProbe9";
+            // 
+            // txtLanguagePageFontProbe8
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe8, "txtLanguagePageFontProbe8");
+            this.txtLanguagePageFontProbe8.Name = "txtLanguagePageFontProbe8";
+            // 
+            // txtLanguagePageFontProbe7
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe7, "txtLanguagePageFontProbe7");
+            this.txtLanguagePageFontProbe7.Name = "txtLanguagePageFontProbe7";
+            // 
+            // txtLanguagePageFontProbe6
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe6, "txtLanguagePageFontProbe6");
+            this.txtLanguagePageFontProbe6.Name = "txtLanguagePageFontProbe6";
+            // 
+            // txtLanguagePageFontProbe5
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe5, "txtLanguagePageFontProbe5");
+            this.txtLanguagePageFontProbe5.Name = "txtLanguagePageFontProbe5";
+            // 
+            // txtLanguagePageFontProbe4
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe4, "txtLanguagePageFontProbe4");
+            this.txtLanguagePageFontProbe4.Name = "txtLanguagePageFontProbe4";
+            // 
+            // txtLanguagePageFontProbe3
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe3, "txtLanguagePageFontProbe3");
+            this.txtLanguagePageFontProbe3.Name = "txtLanguagePageFontProbe3";
+            // 
+            // txtLanguagePageFontProbe2
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe2, "txtLanguagePageFontProbe2");
+            this.txtLanguagePageFontProbe2.Name = "txtLanguagePageFontProbe2";
+            // 
+            // txtLanguagePageFontProbe1
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe1, "txtLanguagePageFontProbe1");
+            this.txtLanguagePageFontProbe1.Name = "txtLanguagePageFontProbe1";
+            // 
+            // groupBox14
+            // 
+            resources.ApplyResources(this.groupBox14, "groupBox14");
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW30);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW29);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW28);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW27);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW26);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW25);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW24);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW23);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW22);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW21);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW20);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW19);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW18);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW17);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW16);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW15);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW14);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW13);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW12);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW11);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW10);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW9);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW8);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW7);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW6);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW5);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW4);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW3);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW2);
+            this.groupBox14.Controls.Add(this.txtLanguagePageFontTaW1);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.TabStop = false;
+            // 
+            // txtLanguagePageFontTaW30
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW30, "txtLanguagePageFontTaW30");
+            this.txtLanguagePageFontTaW30.Name = "txtLanguagePageFontTaW30";
+            // 
+            // txtLanguagePageFontTaW29
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW29, "txtLanguagePageFontTaW29");
+            this.txtLanguagePageFontTaW29.Name = "txtLanguagePageFontTaW29";
+            // 
+            // txtLanguagePageFontTaW28
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW28, "txtLanguagePageFontTaW28");
+            this.txtLanguagePageFontTaW28.Name = "txtLanguagePageFontTaW28";
+            // 
+            // txtLanguagePageFontTaW27
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW27, "txtLanguagePageFontTaW27");
+            this.txtLanguagePageFontTaW27.Name = "txtLanguagePageFontTaW27";
+            // 
+            // txtLanguagePageFontTaW26
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW26, "txtLanguagePageFontTaW26");
+            this.txtLanguagePageFontTaW26.Name = "txtLanguagePageFontTaW26";
+            // 
+            // txtLanguagePageFontTaW25
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW25, "txtLanguagePageFontTaW25");
+            this.txtLanguagePageFontTaW25.Name = "txtLanguagePageFontTaW25";
+            // 
+            // txtLanguagePageFontTaW24
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW24, "txtLanguagePageFontTaW24");
+            this.txtLanguagePageFontTaW24.Name = "txtLanguagePageFontTaW24";
+            // 
+            // txtLanguagePageFontTaW23
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW23, "txtLanguagePageFontTaW23");
+            this.txtLanguagePageFontTaW23.Name = "txtLanguagePageFontTaW23";
+            // 
+            // txtLanguagePageFontTaW22
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW22, "txtLanguagePageFontTaW22");
+            this.txtLanguagePageFontTaW22.Name = "txtLanguagePageFontTaW22";
+            // 
+            // txtLanguagePageFontTaW21
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW21, "txtLanguagePageFontTaW21");
+            this.txtLanguagePageFontTaW21.Name = "txtLanguagePageFontTaW21";
+            // 
+            // txtLanguagePageFontTaW20
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW20, "txtLanguagePageFontTaW20");
+            this.txtLanguagePageFontTaW20.Name = "txtLanguagePageFontTaW20";
+            // 
+            // txtLanguagePageFontTaW19
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW19, "txtLanguagePageFontTaW19");
+            this.txtLanguagePageFontTaW19.Name = "txtLanguagePageFontTaW19";
+            // 
+            // txtLanguagePageFontTaW18
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW18, "txtLanguagePageFontTaW18");
+            this.txtLanguagePageFontTaW18.Name = "txtLanguagePageFontTaW18";
+            // 
+            // txtLanguagePageFontTaW17
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW17, "txtLanguagePageFontTaW17");
+            this.txtLanguagePageFontTaW17.Name = "txtLanguagePageFontTaW17";
+            // 
+            // txtLanguagePageFontTaW16
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW16, "txtLanguagePageFontTaW16");
+            this.txtLanguagePageFontTaW16.Name = "txtLanguagePageFontTaW16";
+            // 
+            // txtLanguagePageFontTaW15
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW15, "txtLanguagePageFontTaW15");
+            this.txtLanguagePageFontTaW15.Name = "txtLanguagePageFontTaW15";
+            // 
+            // txtLanguagePageFontTaW14
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW14, "txtLanguagePageFontTaW14");
+            this.txtLanguagePageFontTaW14.Name = "txtLanguagePageFontTaW14";
+            // 
+            // txtLanguagePageFontTaW13
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW13, "txtLanguagePageFontTaW13");
+            this.txtLanguagePageFontTaW13.Name = "txtLanguagePageFontTaW13";
+            // 
+            // txtLanguagePageFontTaW12
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW12, "txtLanguagePageFontTaW12");
+            this.txtLanguagePageFontTaW12.Name = "txtLanguagePageFontTaW12";
+            // 
+            // txtLanguagePageFontTaW11
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW11, "txtLanguagePageFontTaW11");
+            this.txtLanguagePageFontTaW11.Name = "txtLanguagePageFontTaW11";
+            // 
+            // txtLanguagePageFontTaW10
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW10, "txtLanguagePageFontTaW10");
+            this.txtLanguagePageFontTaW10.Name = "txtLanguagePageFontTaW10";
+            // 
+            // txtLanguagePageFontTaW9
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW9, "txtLanguagePageFontTaW9");
+            this.txtLanguagePageFontTaW9.Name = "txtLanguagePageFontTaW9";
+            // 
+            // txtLanguagePageFontTaW8
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW8, "txtLanguagePageFontTaW8");
+            this.txtLanguagePageFontTaW8.Name = "txtLanguagePageFontTaW8";
+            // 
+            // txtLanguagePageFontTaW7
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW7, "txtLanguagePageFontTaW7");
+            this.txtLanguagePageFontTaW7.Name = "txtLanguagePageFontTaW7";
+            // 
+            // txtLanguagePageFontTaW6
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW6, "txtLanguagePageFontTaW6");
+            this.txtLanguagePageFontTaW6.Name = "txtLanguagePageFontTaW6";
+            // 
+            // txtLanguagePageFontTaW5
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW5, "txtLanguagePageFontTaW5");
+            this.txtLanguagePageFontTaW5.Name = "txtLanguagePageFontTaW5";
+            // 
+            // txtLanguagePageFontTaW4
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW4, "txtLanguagePageFontTaW4");
+            this.txtLanguagePageFontTaW4.Name = "txtLanguagePageFontTaW4";
+            // 
+            // txtLanguagePageFontTaW3
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW3, "txtLanguagePageFontTaW3");
+            this.txtLanguagePageFontTaW3.Name = "txtLanguagePageFontTaW3";
+            // 
+            // txtLanguagePageFontTaW2
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW2, "txtLanguagePageFontTaW2");
+            this.txtLanguagePageFontTaW2.Name = "txtLanguagePageFontTaW2";
+            // 
+            // txtLanguagePageFontTaW1
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontTaW1, "txtLanguagePageFontTaW1");
+            this.txtLanguagePageFontTaW1.Name = "txtLanguagePageFontTaW1";
+            // 
+            // groupBox13
+            // 
+            resources.ApplyResources(this.groupBox13, "groupBox13");
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex30);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex29);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex28);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex27);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex26);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex25);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex24);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex23);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex22);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex21);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex20);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex19);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex18);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex17);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex16);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex15);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex14);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex13);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex12);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex11);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex10);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex9);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex8);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex7);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex6);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex5);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex4);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex3);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex2);
+            this.groupBox13.Controls.Add(this.txtLanguagePageFontComplex1);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.TabStop = false;
+            // 
+            // txtLanguagePageFontComplex30
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex30, "txtLanguagePageFontComplex30");
+            this.txtLanguagePageFontComplex30.Name = "txtLanguagePageFontComplex30";
+            // 
+            // txtLanguagePageFontComplex29
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex29, "txtLanguagePageFontComplex29");
+            this.txtLanguagePageFontComplex29.Name = "txtLanguagePageFontComplex29";
+            // 
+            // txtLanguagePageFontComplex28
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex28, "txtLanguagePageFontComplex28");
+            this.txtLanguagePageFontComplex28.Name = "txtLanguagePageFontComplex28";
+            // 
+            // txtLanguagePageFontComplex27
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex27, "txtLanguagePageFontComplex27");
+            this.txtLanguagePageFontComplex27.Name = "txtLanguagePageFontComplex27";
+            // 
+            // txtLanguagePageFontComplex26
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex26, "txtLanguagePageFontComplex26");
+            this.txtLanguagePageFontComplex26.Name = "txtLanguagePageFontComplex26";
+            // 
+            // txtLanguagePageFontComplex25
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex25, "txtLanguagePageFontComplex25");
+            this.txtLanguagePageFontComplex25.Name = "txtLanguagePageFontComplex25";
+            // 
+            // txtLanguagePageFontComplex24
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex24, "txtLanguagePageFontComplex24");
+            this.txtLanguagePageFontComplex24.Name = "txtLanguagePageFontComplex24";
+            // 
+            // txtLanguagePageFontComplex23
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex23, "txtLanguagePageFontComplex23");
+            this.txtLanguagePageFontComplex23.Name = "txtLanguagePageFontComplex23";
+            // 
+            // txtLanguagePageFontComplex22
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex22, "txtLanguagePageFontComplex22");
+            this.txtLanguagePageFontComplex22.Name = "txtLanguagePageFontComplex22";
+            // 
+            // txtLanguagePageFontComplex21
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex21, "txtLanguagePageFontComplex21");
+            this.txtLanguagePageFontComplex21.Name = "txtLanguagePageFontComplex21";
+            // 
+            // txtLanguagePageFontComplex20
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex20, "txtLanguagePageFontComplex20");
+            this.txtLanguagePageFontComplex20.Name = "txtLanguagePageFontComplex20";
+            // 
+            // txtLanguagePageFontComplex19
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex19, "txtLanguagePageFontComplex19");
+            this.txtLanguagePageFontComplex19.Name = "txtLanguagePageFontComplex19";
+            // 
+            // txtLanguagePageFontComplex18
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex18, "txtLanguagePageFontComplex18");
+            this.txtLanguagePageFontComplex18.Name = "txtLanguagePageFontComplex18";
+            // 
+            // txtLanguagePageFontComplex17
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex17, "txtLanguagePageFontComplex17");
+            this.txtLanguagePageFontComplex17.Name = "txtLanguagePageFontComplex17";
+            // 
+            // txtLanguagePageFontComplex16
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex16, "txtLanguagePageFontComplex16");
+            this.txtLanguagePageFontComplex16.Name = "txtLanguagePageFontComplex16";
+            // 
+            // txtLanguagePageFontComplex15
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex15, "txtLanguagePageFontComplex15");
+            this.txtLanguagePageFontComplex15.Name = "txtLanguagePageFontComplex15";
+            // 
+            // txtLanguagePageFontComplex14
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex14, "txtLanguagePageFontComplex14");
+            this.txtLanguagePageFontComplex14.Name = "txtLanguagePageFontComplex14";
+            // 
+            // txtLanguagePageFontComplex13
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex13, "txtLanguagePageFontComplex13");
+            this.txtLanguagePageFontComplex13.Name = "txtLanguagePageFontComplex13";
+            // 
+            // txtLanguagePageFontComplex12
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex12, "txtLanguagePageFontComplex12");
+            this.txtLanguagePageFontComplex12.Name = "txtLanguagePageFontComplex12";
+            // 
+            // txtLanguagePageFontComplex11
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex11, "txtLanguagePageFontComplex11");
+            this.txtLanguagePageFontComplex11.Name = "txtLanguagePageFontComplex11";
+            // 
+            // txtLanguagePageFontComplex10
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex10, "txtLanguagePageFontComplex10");
+            this.txtLanguagePageFontComplex10.Name = "txtLanguagePageFontComplex10";
+            // 
+            // txtLanguagePageFontComplex9
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex9, "txtLanguagePageFontComplex9");
+            this.txtLanguagePageFontComplex9.Name = "txtLanguagePageFontComplex9";
+            // 
+            // txtLanguagePageFontComplex8
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex8, "txtLanguagePageFontComplex8");
+            this.txtLanguagePageFontComplex8.Name = "txtLanguagePageFontComplex8";
+            // 
+            // txtLanguagePageFontComplex7
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex7, "txtLanguagePageFontComplex7");
+            this.txtLanguagePageFontComplex7.Name = "txtLanguagePageFontComplex7";
+            // 
+            // txtLanguagePageFontComplex6
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex6, "txtLanguagePageFontComplex6");
+            this.txtLanguagePageFontComplex6.Name = "txtLanguagePageFontComplex6";
+            // 
+            // txtLanguagePageFontComplex5
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex5, "txtLanguagePageFontComplex5");
+            this.txtLanguagePageFontComplex5.Name = "txtLanguagePageFontComplex5";
+            // 
+            // txtLanguagePageFontComplex4
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex4, "txtLanguagePageFontComplex4");
+            this.txtLanguagePageFontComplex4.Name = "txtLanguagePageFontComplex4";
+            // 
+            // txtLanguagePageFontComplex3
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex3, "txtLanguagePageFontComplex3");
+            this.txtLanguagePageFontComplex3.Name = "txtLanguagePageFontComplex3";
+            // 
+            // txtLanguagePageFontComplex2
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex2, "txtLanguagePageFontComplex2");
+            this.txtLanguagePageFontComplex2.Name = "txtLanguagePageFontComplex2";
+            // 
+            // txtLanguagePageFontComplex1
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontComplex1, "txtLanguagePageFontComplex1");
+            this.txtLanguagePageFontComplex1.Name = "txtLanguagePageFontComplex1";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.textBox2);
+            this.groupBox12.Controls.Add(this.button3);
+            this.groupBox12.Controls.Add(this.button4);
+            resources.ApplyResources(this.groupBox12, "groupBox12");
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.TabStop = false;
+            // 
+            // textBox2
+            // 
+            resources.ApplyResources(this.textBox2, "textBox2");
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            // 
+            // button3
+            // 
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.Name = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.Name = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // groupBox11
+            // 
+            resources.ApplyResources(this.groupBox11, "groupBox11");
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName30);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName29);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName28);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName27);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName26);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName25);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName24);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName23);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName22);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName21);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName20);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName19);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName18);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName17);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName16);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName15);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName14);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName13);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName12);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName11);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName10);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName9);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName8);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName7);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName6);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName5);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName4);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName3);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName2);
+            this.groupBox11.Controls.Add(this.txtLanguagePageFontName1);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.TabStop = false;
+            // 
+            // txtLanguagePageFontName30
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName30, "txtLanguagePageFontName30");
+            this.txtLanguagePageFontName30.Name = "txtLanguagePageFontName30";
+            // 
+            // txtLanguagePageFontName29
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName29, "txtLanguagePageFontName29");
+            this.txtLanguagePageFontName29.Name = "txtLanguagePageFontName29";
+            // 
+            // txtLanguagePageFontName28
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName28, "txtLanguagePageFontName28");
+            this.txtLanguagePageFontName28.Name = "txtLanguagePageFontName28";
+            // 
+            // txtLanguagePageFontName27
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName27, "txtLanguagePageFontName27");
+            this.txtLanguagePageFontName27.Name = "txtLanguagePageFontName27";
+            // 
+            // txtLanguagePageFontName26
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName26, "txtLanguagePageFontName26");
+            this.txtLanguagePageFontName26.Name = "txtLanguagePageFontName26";
+            // 
+            // txtLanguagePageFontName25
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName25, "txtLanguagePageFontName25");
+            this.txtLanguagePageFontName25.Name = "txtLanguagePageFontName25";
+            // 
+            // txtLanguagePageFontName24
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName24, "txtLanguagePageFontName24");
+            this.txtLanguagePageFontName24.Name = "txtLanguagePageFontName24";
+            // 
+            // txtLanguagePageFontName23
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName23, "txtLanguagePageFontName23");
+            this.txtLanguagePageFontName23.Name = "txtLanguagePageFontName23";
+            // 
+            // txtLanguagePageFontName22
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName22, "txtLanguagePageFontName22");
+            this.txtLanguagePageFontName22.Name = "txtLanguagePageFontName22";
+            // 
+            // txtLanguagePageFontName21
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName21, "txtLanguagePageFontName21");
+            this.txtLanguagePageFontName21.Name = "txtLanguagePageFontName21";
+            // 
+            // txtLanguagePageFontName20
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName20, "txtLanguagePageFontName20");
+            this.txtLanguagePageFontName20.Name = "txtLanguagePageFontName20";
+            // 
+            // txtLanguagePageFontName19
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName19, "txtLanguagePageFontName19");
+            this.txtLanguagePageFontName19.Name = "txtLanguagePageFontName19";
+            // 
+            // txtLanguagePageFontName18
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName18, "txtLanguagePageFontName18");
+            this.txtLanguagePageFontName18.Name = "txtLanguagePageFontName18";
+            // 
+            // txtLanguagePageFontName17
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName17, "txtLanguagePageFontName17");
+            this.txtLanguagePageFontName17.Name = "txtLanguagePageFontName17";
+            // 
+            // txtLanguagePageFontName16
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName16, "txtLanguagePageFontName16");
+            this.txtLanguagePageFontName16.Name = "txtLanguagePageFontName16";
+            // 
+            // txtLanguagePageFontName15
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName15, "txtLanguagePageFontName15");
+            this.txtLanguagePageFontName15.Name = "txtLanguagePageFontName15";
+            // 
+            // txtLanguagePageFontName14
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName14, "txtLanguagePageFontName14");
+            this.txtLanguagePageFontName14.Name = "txtLanguagePageFontName14";
+            // 
+            // txtLanguagePageFontName13
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName13, "txtLanguagePageFontName13");
+            this.txtLanguagePageFontName13.Name = "txtLanguagePageFontName13";
+            // 
+            // txtLanguagePageFontName12
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName12, "txtLanguagePageFontName12");
+            this.txtLanguagePageFontName12.Name = "txtLanguagePageFontName12";
+            // 
+            // txtLanguagePageFontName11
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName11, "txtLanguagePageFontName11");
+            this.txtLanguagePageFontName11.Name = "txtLanguagePageFontName11";
+            // 
+            // txtLanguagePageFontName10
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName10, "txtLanguagePageFontName10");
+            this.txtLanguagePageFontName10.Name = "txtLanguagePageFontName10";
+            // 
+            // txtLanguagePageFontName9
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName9, "txtLanguagePageFontName9");
+            this.txtLanguagePageFontName9.Name = "txtLanguagePageFontName9";
+            // 
+            // txtLanguagePageFontName8
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName8, "txtLanguagePageFontName8");
+            this.txtLanguagePageFontName8.Name = "txtLanguagePageFontName8";
+            // 
+            // txtLanguagePageFontName7
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName7, "txtLanguagePageFontName7");
+            this.txtLanguagePageFontName7.Name = "txtLanguagePageFontName7";
+            // 
+            // txtLanguagePageFontName6
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName6, "txtLanguagePageFontName6");
+            this.txtLanguagePageFontName6.Name = "txtLanguagePageFontName6";
+            // 
+            // txtLanguagePageFontName5
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName5, "txtLanguagePageFontName5");
+            this.txtLanguagePageFontName5.Name = "txtLanguagePageFontName5";
+            // 
+            // txtLanguagePageFontName4
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName4, "txtLanguagePageFontName4");
+            this.txtLanguagePageFontName4.Name = "txtLanguagePageFontName4";
+            // 
+            // txtLanguagePageFontName3
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName3, "txtLanguagePageFontName3");
+            this.txtLanguagePageFontName3.Name = "txtLanguagePageFontName3";
+            // 
+            // txtLanguagePageFontName2
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName2, "txtLanguagePageFontName2");
+            this.txtLanguagePageFontName2.Name = "txtLanguagePageFontName2";
+            // 
+            // txtLanguagePageFontName1
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontName1, "txtLanguagePageFontName1");
+            this.txtLanguagePageFontName1.Name = "txtLanguagePageFontName1";
+            // 
+            // groupBox10
+            // 
+            resources.ApplyResources(this.groupBox10, "groupBox10");
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe30);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe29);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe28);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe27);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe26);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe25);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe24);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe23);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe22);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe21);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe20);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe19);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe18);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe17);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe16);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe15);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe14);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe13);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe12);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe11);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe10);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe9);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe8);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe7);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe6);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe5);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe4);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe3);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe2);
+            this.groupBox10.Controls.Add(this.txtLanguagePageLanguageProbe1);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.TabStop = false;
+            // 
+            // txtLanguagePageLanguageProbe30
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe30, "txtLanguagePageLanguageProbe30");
+            this.txtLanguagePageLanguageProbe30.Name = "txtLanguagePageLanguageProbe30";
+            // 
+            // txtLanguagePageLanguageProbe29
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe29, "txtLanguagePageLanguageProbe29");
+            this.txtLanguagePageLanguageProbe29.Name = "txtLanguagePageLanguageProbe29";
+            // 
+            // txtLanguagePageLanguageProbe28
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe28, "txtLanguagePageLanguageProbe28");
+            this.txtLanguagePageLanguageProbe28.Name = "txtLanguagePageLanguageProbe28";
+            // 
+            // txtLanguagePageLanguageProbe27
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe27, "txtLanguagePageLanguageProbe27");
+            this.txtLanguagePageLanguageProbe27.Name = "txtLanguagePageLanguageProbe27";
+            // 
+            // txtLanguagePageLanguageProbe26
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe26, "txtLanguagePageLanguageProbe26");
+            this.txtLanguagePageLanguageProbe26.Name = "txtLanguagePageLanguageProbe26";
+            // 
+            // txtLanguagePageLanguageProbe25
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe25, "txtLanguagePageLanguageProbe25");
+            this.txtLanguagePageLanguageProbe25.Name = "txtLanguagePageLanguageProbe25";
+            // 
+            // txtLanguagePageLanguageProbe24
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe24, "txtLanguagePageLanguageProbe24");
+            this.txtLanguagePageLanguageProbe24.Name = "txtLanguagePageLanguageProbe24";
+            // 
+            // txtLanguagePageLanguageProbe23
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe23, "txtLanguagePageLanguageProbe23");
+            this.txtLanguagePageLanguageProbe23.Name = "txtLanguagePageLanguageProbe23";
+            // 
+            // txtLanguagePageLanguageProbe22
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe22, "txtLanguagePageLanguageProbe22");
+            this.txtLanguagePageLanguageProbe22.Name = "txtLanguagePageLanguageProbe22";
+            // 
+            // txtLanguagePageLanguageProbe21
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe21, "txtLanguagePageLanguageProbe21");
+            this.txtLanguagePageLanguageProbe21.Name = "txtLanguagePageLanguageProbe21";
+            // 
+            // txtLanguagePageLanguageProbe20
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe20, "txtLanguagePageLanguageProbe20");
+            this.txtLanguagePageLanguageProbe20.Name = "txtLanguagePageLanguageProbe20";
+            // 
+            // txtLanguagePageLanguageProbe19
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe19, "txtLanguagePageLanguageProbe19");
+            this.txtLanguagePageLanguageProbe19.Name = "txtLanguagePageLanguageProbe19";
+            // 
+            // txtLanguagePageLanguageProbe18
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe18, "txtLanguagePageLanguageProbe18");
+            this.txtLanguagePageLanguageProbe18.Name = "txtLanguagePageLanguageProbe18";
+            // 
+            // txtLanguagePageLanguageProbe17
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe17, "txtLanguagePageLanguageProbe17");
+            this.txtLanguagePageLanguageProbe17.Name = "txtLanguagePageLanguageProbe17";
+            // 
+            // txtLanguagePageLanguageProbe16
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe16, "txtLanguagePageLanguageProbe16");
+            this.txtLanguagePageLanguageProbe16.Name = "txtLanguagePageLanguageProbe16";
+            // 
+            // txtLanguagePageLanguageProbe15
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe15, "txtLanguagePageLanguageProbe15");
+            this.txtLanguagePageLanguageProbe15.Name = "txtLanguagePageLanguageProbe15";
+            // 
+            // txtLanguagePageLanguageProbe14
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe14, "txtLanguagePageLanguageProbe14");
+            this.txtLanguagePageLanguageProbe14.Name = "txtLanguagePageLanguageProbe14";
+            // 
+            // txtLanguagePageLanguageProbe13
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe13, "txtLanguagePageLanguageProbe13");
+            this.txtLanguagePageLanguageProbe13.Name = "txtLanguagePageLanguageProbe13";
+            // 
+            // txtLanguagePageLanguageProbe12
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe12, "txtLanguagePageLanguageProbe12");
+            this.txtLanguagePageLanguageProbe12.Name = "txtLanguagePageLanguageProbe12";
+            // 
+            // txtLanguagePageLanguageProbe11
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe11, "txtLanguagePageLanguageProbe11");
+            this.txtLanguagePageLanguageProbe11.Name = "txtLanguagePageLanguageProbe11";
+            // 
+            // txtLanguagePageLanguageProbe10
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe10, "txtLanguagePageLanguageProbe10");
+            this.txtLanguagePageLanguageProbe10.Name = "txtLanguagePageLanguageProbe10";
+            // 
+            // txtLanguagePageLanguageProbe9
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe9, "txtLanguagePageLanguageProbe9");
+            this.txtLanguagePageLanguageProbe9.Name = "txtLanguagePageLanguageProbe9";
+            // 
+            // txtLanguagePageLanguageProbe8
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe8, "txtLanguagePageLanguageProbe8");
+            this.txtLanguagePageLanguageProbe8.Name = "txtLanguagePageLanguageProbe8";
+            // 
+            // txtLanguagePageLanguageProbe7
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe7, "txtLanguagePageLanguageProbe7");
+            this.txtLanguagePageLanguageProbe7.Name = "txtLanguagePageLanguageProbe7";
+            // 
+            // txtLanguagePageLanguageProbe6
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe6, "txtLanguagePageLanguageProbe6");
+            this.txtLanguagePageLanguageProbe6.Name = "txtLanguagePageLanguageProbe6";
+            // 
+            // txtLanguagePageLanguageProbe5
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe5, "txtLanguagePageLanguageProbe5");
+            this.txtLanguagePageLanguageProbe5.Name = "txtLanguagePageLanguageProbe5";
+            // 
+            // txtLanguagePageLanguageProbe4
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe4, "txtLanguagePageLanguageProbe4");
+            this.txtLanguagePageLanguageProbe4.Name = "txtLanguagePageLanguageProbe4";
+            // 
+            // txtLanguagePageLanguageProbe3
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe3, "txtLanguagePageLanguageProbe3");
+            this.txtLanguagePageLanguageProbe3.Name = "txtLanguagePageLanguageProbe3";
+            this.txtLanguagePageLanguageProbe3.TextChanged += new System.EventHandler(this.textBox30_TextChanged);
+            // 
+            // txtLanguagePageLanguageProbe2
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe2, "txtLanguagePageLanguageProbe2");
+            this.txtLanguagePageLanguageProbe2.Name = "txtLanguagePageLanguageProbe2";
+            // 
+            // txtLanguagePageLanguageProbe1
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe1, "txtLanguagePageLanguageProbe1");
+            this.txtLanguagePageLanguageProbe1.Name = "txtLanguagePageLanguageProbe1";
+            // 
+            // groupBox9
+            // 
+            resources.ApplyResources(this.groupBox9, "groupBox9");
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW30);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW29);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW28);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW27);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW26);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW25);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW24);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW23);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW22);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW21);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW20);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW19);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW18);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW17);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW16);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW15);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW14);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW13);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW12);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW11);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW10);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW9);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW8);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW7);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW6);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW5);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW4);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW3);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW2);
+            this.groupBox9.Controls.Add(this.txtLanguagePageLanguageTaW1);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.TabStop = false;
+            // 
+            // txtLanguagePageLanguageTaW30
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW30, "txtLanguagePageLanguageTaW30");
+            this.txtLanguagePageLanguageTaW30.Name = "txtLanguagePageLanguageTaW30";
+            // 
+            // txtLanguagePageLanguageTaW29
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW29, "txtLanguagePageLanguageTaW29");
+            this.txtLanguagePageLanguageTaW29.Name = "txtLanguagePageLanguageTaW29";
+            // 
+            // txtLanguagePageLanguageTaW28
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW28, "txtLanguagePageLanguageTaW28");
+            this.txtLanguagePageLanguageTaW28.Name = "txtLanguagePageLanguageTaW28";
+            // 
+            // txtLanguagePageLanguageTaW27
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW27, "txtLanguagePageLanguageTaW27");
+            this.txtLanguagePageLanguageTaW27.Name = "txtLanguagePageLanguageTaW27";
+            // 
+            // txtLanguagePageLanguageTaW26
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW26, "txtLanguagePageLanguageTaW26");
+            this.txtLanguagePageLanguageTaW26.Name = "txtLanguagePageLanguageTaW26";
+            // 
+            // txtLanguagePageLanguageTaW25
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW25, "txtLanguagePageLanguageTaW25");
+            this.txtLanguagePageLanguageTaW25.Name = "txtLanguagePageLanguageTaW25";
+            // 
+            // txtLanguagePageLanguageTaW24
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW24, "txtLanguagePageLanguageTaW24");
+            this.txtLanguagePageLanguageTaW24.Name = "txtLanguagePageLanguageTaW24";
+            // 
+            // txtLanguagePageLanguageTaW23
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW23, "txtLanguagePageLanguageTaW23");
+            this.txtLanguagePageLanguageTaW23.Name = "txtLanguagePageLanguageTaW23";
+            // 
+            // txtLanguagePageLanguageTaW22
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW22, "txtLanguagePageLanguageTaW22");
+            this.txtLanguagePageLanguageTaW22.Name = "txtLanguagePageLanguageTaW22";
+            // 
+            // txtLanguagePageLanguageTaW21
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW21, "txtLanguagePageLanguageTaW21");
+            this.txtLanguagePageLanguageTaW21.Name = "txtLanguagePageLanguageTaW21";
+            // 
+            // txtLanguagePageLanguageTaW20
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW20, "txtLanguagePageLanguageTaW20");
+            this.txtLanguagePageLanguageTaW20.Name = "txtLanguagePageLanguageTaW20";
+            // 
+            // txtLanguagePageLanguageTaW19
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW19, "txtLanguagePageLanguageTaW19");
+            this.txtLanguagePageLanguageTaW19.Name = "txtLanguagePageLanguageTaW19";
+            // 
+            // txtLanguagePageLanguageTaW18
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW18, "txtLanguagePageLanguageTaW18");
+            this.txtLanguagePageLanguageTaW18.Name = "txtLanguagePageLanguageTaW18";
+            // 
+            // txtLanguagePageLanguageTaW17
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW17, "txtLanguagePageLanguageTaW17");
+            this.txtLanguagePageLanguageTaW17.Name = "txtLanguagePageLanguageTaW17";
+            // 
+            // txtLanguagePageLanguageTaW16
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW16, "txtLanguagePageLanguageTaW16");
+            this.txtLanguagePageLanguageTaW16.Name = "txtLanguagePageLanguageTaW16";
+            // 
+            // txtLanguagePageLanguageTaW15
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW15, "txtLanguagePageLanguageTaW15");
+            this.txtLanguagePageLanguageTaW15.Name = "txtLanguagePageLanguageTaW15";
+            // 
+            // txtLanguagePageLanguageTaW14
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW14, "txtLanguagePageLanguageTaW14");
+            this.txtLanguagePageLanguageTaW14.Name = "txtLanguagePageLanguageTaW14";
+            // 
+            // txtLanguagePageLanguageTaW13
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW13, "txtLanguagePageLanguageTaW13");
+            this.txtLanguagePageLanguageTaW13.Name = "txtLanguagePageLanguageTaW13";
+            // 
+            // txtLanguagePageLanguageTaW12
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW12, "txtLanguagePageLanguageTaW12");
+            this.txtLanguagePageLanguageTaW12.Name = "txtLanguagePageLanguageTaW12";
+            // 
+            // txtLanguagePageLanguageTaW11
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW11, "txtLanguagePageLanguageTaW11");
+            this.txtLanguagePageLanguageTaW11.Name = "txtLanguagePageLanguageTaW11";
+            // 
+            // txtLanguagePageLanguageTaW10
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW10, "txtLanguagePageLanguageTaW10");
+            this.txtLanguagePageLanguageTaW10.Name = "txtLanguagePageLanguageTaW10";
+            // 
+            // txtLanguagePageLanguageTaW9
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW9, "txtLanguagePageLanguageTaW9");
+            this.txtLanguagePageLanguageTaW9.Name = "txtLanguagePageLanguageTaW9";
+            // 
+            // txtLanguagePageLanguageTaW8
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW8, "txtLanguagePageLanguageTaW8");
+            this.txtLanguagePageLanguageTaW8.Name = "txtLanguagePageLanguageTaW8";
+            // 
+            // txtLanguagePageLanguageTaW7
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW7, "txtLanguagePageLanguageTaW7");
+            this.txtLanguagePageLanguageTaW7.Name = "txtLanguagePageLanguageTaW7";
+            // 
+            // txtLanguagePageLanguageTaW6
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW6, "txtLanguagePageLanguageTaW6");
+            this.txtLanguagePageLanguageTaW6.Name = "txtLanguagePageLanguageTaW6";
+            // 
+            // txtLanguagePageLanguageTaW5
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW5, "txtLanguagePageLanguageTaW5");
+            this.txtLanguagePageLanguageTaW5.Name = "txtLanguagePageLanguageTaW5";
+            // 
+            // txtLanguagePageLanguageTaW4
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW4, "txtLanguagePageLanguageTaW4");
+            this.txtLanguagePageLanguageTaW4.Name = "txtLanguagePageLanguageTaW4";
+            // 
+            // txtLanguagePageLanguageTaW3
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW3, "txtLanguagePageLanguageTaW3");
+            this.txtLanguagePageLanguageTaW3.Name = "txtLanguagePageLanguageTaW3";
+            // 
+            // txtLanguagePageLanguageTaW2
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW2, "txtLanguagePageLanguageTaW2");
+            this.txtLanguagePageLanguageTaW2.Name = "txtLanguagePageLanguageTaW2";
+            // 
+            // txtLanguagePageLanguageTaW1
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageTaW1, "txtLanguagePageLanguageTaW1");
+            this.txtLanguagePageLanguageTaW1.Name = "txtLanguagePageLanguageTaW1";
+            // 
+            // groupBox8
+            // 
+            resources.ApplyResources(this.groupBox8, "groupBox8");
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex30);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex29);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex28);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex27);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex26);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex25);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex24);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex23);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex22);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex21);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex20);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex19);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex18);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex17);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex16);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex15);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex14);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex13);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex12);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex11);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex10);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex9);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex8);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex7);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex6);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex5);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex4);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex3);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex2);
+            this.groupBox8.Controls.Add(this.txtLanguagePageLanguageComplex1);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.TabStop = false;
+            // 
+            // txtLanguagePageLanguageComplex30
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex30, "txtLanguagePageLanguageComplex30");
+            this.txtLanguagePageLanguageComplex30.Name = "txtLanguagePageLanguageComplex30";
+            // 
+            // txtLanguagePageLanguageComplex29
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex29, "txtLanguagePageLanguageComplex29");
+            this.txtLanguagePageLanguageComplex29.Name = "txtLanguagePageLanguageComplex29";
+            // 
+            // txtLanguagePageLanguageComplex28
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex28, "txtLanguagePageLanguageComplex28");
+            this.txtLanguagePageLanguageComplex28.Name = "txtLanguagePageLanguageComplex28";
+            // 
+            // txtLanguagePageLanguageComplex27
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex27, "txtLanguagePageLanguageComplex27");
+            this.txtLanguagePageLanguageComplex27.Name = "txtLanguagePageLanguageComplex27";
+            // 
+            // txtLanguagePageLanguageComplex26
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex26, "txtLanguagePageLanguageComplex26");
+            this.txtLanguagePageLanguageComplex26.Name = "txtLanguagePageLanguageComplex26";
+            // 
+            // txtLanguagePageLanguageComplex25
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex25, "txtLanguagePageLanguageComplex25");
+            this.txtLanguagePageLanguageComplex25.Name = "txtLanguagePageLanguageComplex25";
+            // 
+            // txtLanguagePageLanguageComplex24
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex24, "txtLanguagePageLanguageComplex24");
+            this.txtLanguagePageLanguageComplex24.Name = "txtLanguagePageLanguageComplex24";
+            // 
+            // txtLanguagePageLanguageComplex23
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex23, "txtLanguagePageLanguageComplex23");
+            this.txtLanguagePageLanguageComplex23.Name = "txtLanguagePageLanguageComplex23";
+            // 
+            // txtLanguagePageLanguageComplex22
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex22, "txtLanguagePageLanguageComplex22");
+            this.txtLanguagePageLanguageComplex22.Name = "txtLanguagePageLanguageComplex22";
+            // 
+            // txtLanguagePageLanguageComplex21
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex21, "txtLanguagePageLanguageComplex21");
+            this.txtLanguagePageLanguageComplex21.Name = "txtLanguagePageLanguageComplex21";
+            // 
+            // txtLanguagePageLanguageComplex20
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex20, "txtLanguagePageLanguageComplex20");
+            this.txtLanguagePageLanguageComplex20.Name = "txtLanguagePageLanguageComplex20";
+            // 
+            // txtLanguagePageLanguageComplex19
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex19, "txtLanguagePageLanguageComplex19");
+            this.txtLanguagePageLanguageComplex19.Name = "txtLanguagePageLanguageComplex19";
+            // 
+            // txtLanguagePageLanguageComplex18
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex18, "txtLanguagePageLanguageComplex18");
+            this.txtLanguagePageLanguageComplex18.Name = "txtLanguagePageLanguageComplex18";
+            // 
+            // txtLanguagePageLanguageComplex17
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex17, "txtLanguagePageLanguageComplex17");
+            this.txtLanguagePageLanguageComplex17.Name = "txtLanguagePageLanguageComplex17";
+            // 
+            // txtLanguagePageLanguageComplex16
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex16, "txtLanguagePageLanguageComplex16");
+            this.txtLanguagePageLanguageComplex16.Name = "txtLanguagePageLanguageComplex16";
+            // 
+            // txtLanguagePageLanguageComplex15
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex15, "txtLanguagePageLanguageComplex15");
+            this.txtLanguagePageLanguageComplex15.Name = "txtLanguagePageLanguageComplex15";
+            // 
+            // txtLanguagePageLanguageComplex14
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex14, "txtLanguagePageLanguageComplex14");
+            this.txtLanguagePageLanguageComplex14.Name = "txtLanguagePageLanguageComplex14";
+            // 
+            // txtLanguagePageLanguageComplex13
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex13, "txtLanguagePageLanguageComplex13");
+            this.txtLanguagePageLanguageComplex13.Name = "txtLanguagePageLanguageComplex13";
+            // 
+            // txtLanguagePageLanguageComplex12
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex12, "txtLanguagePageLanguageComplex12");
+            this.txtLanguagePageLanguageComplex12.Name = "txtLanguagePageLanguageComplex12";
+            // 
+            // txtLanguagePageLanguageComplex11
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex11, "txtLanguagePageLanguageComplex11");
+            this.txtLanguagePageLanguageComplex11.Name = "txtLanguagePageLanguageComplex11";
+            // 
+            // txtLanguagePageLanguageComplex10
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex10, "txtLanguagePageLanguageComplex10");
+            this.txtLanguagePageLanguageComplex10.Name = "txtLanguagePageLanguageComplex10";
+            // 
+            // txtLanguagePageLanguageComplex9
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex9, "txtLanguagePageLanguageComplex9");
+            this.txtLanguagePageLanguageComplex9.Name = "txtLanguagePageLanguageComplex9";
+            // 
+            // txtLanguagePageLanguageComplex8
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex8, "txtLanguagePageLanguageComplex8");
+            this.txtLanguagePageLanguageComplex8.Name = "txtLanguagePageLanguageComplex8";
+            // 
+            // txtLanguagePageLanguageComplex7
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex7, "txtLanguagePageLanguageComplex7");
+            this.txtLanguagePageLanguageComplex7.Name = "txtLanguagePageLanguageComplex7";
+            // 
+            // txtLanguagePageLanguageComplex6
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex6, "txtLanguagePageLanguageComplex6");
+            this.txtLanguagePageLanguageComplex6.Name = "txtLanguagePageLanguageComplex6";
+            // 
+            // txtLanguagePageLanguageComplex5
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex5, "txtLanguagePageLanguageComplex5");
+            this.txtLanguagePageLanguageComplex5.Name = "txtLanguagePageLanguageComplex5";
+            // 
+            // txtLanguagePageLanguageComplex4
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex4, "txtLanguagePageLanguageComplex4");
+            this.txtLanguagePageLanguageComplex4.Name = "txtLanguagePageLanguageComplex4";
+            // 
+            // txtLanguagePageLanguageComplex3
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex3, "txtLanguagePageLanguageComplex3");
+            this.txtLanguagePageLanguageComplex3.Name = "txtLanguagePageLanguageComplex3";
+            // 
+            // txtLanguagePageLanguageComplex2
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex2, "txtLanguagePageLanguageComplex2");
+            this.txtLanguagePageLanguageComplex2.Name = "txtLanguagePageLanguageComplex2";
+            // 
+            // txtLanguagePageLanguageComplex1
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageComplex1, "txtLanguagePageLanguageComplex1");
+            this.txtLanguagePageLanguageComplex1.Name = "txtLanguagePageLanguageComplex1";
+            // 
+            // groupBox7
+            // 
+            resources.ApplyResources(this.groupBox7, "groupBox7");
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother30);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother29);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother28);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother27);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother26);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother25);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother24);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother23);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother22);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother21);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother20);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother19);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother18);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother17);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother16);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother15);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother14);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother13);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother12);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother11);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother10);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother9);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother8);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother7);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother6);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother5);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother4);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother3);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother2);
+            this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother1);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Enter += new System.EventHandler(this.groupBox7_Enter);
+            // 
+            // txtLanguagePageLanguageMother30
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother30, "txtLanguagePageLanguageMother30");
+            this.txtLanguagePageLanguageMother30.Name = "txtLanguagePageLanguageMother30";
+            // 
+            // txtLanguagePageLanguageMother29
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother29, "txtLanguagePageLanguageMother29");
+            this.txtLanguagePageLanguageMother29.Name = "txtLanguagePageLanguageMother29";
+            // 
+            // txtLanguagePageLanguageMother28
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother28, "txtLanguagePageLanguageMother28");
+            this.txtLanguagePageLanguageMother28.Name = "txtLanguagePageLanguageMother28";
+            // 
+            // txtLanguagePageLanguageMother27
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother27, "txtLanguagePageLanguageMother27");
+            this.txtLanguagePageLanguageMother27.Name = "txtLanguagePageLanguageMother27";
+            // 
+            // txtLanguagePageLanguageMother26
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother26, "txtLanguagePageLanguageMother26");
+            this.txtLanguagePageLanguageMother26.Name = "txtLanguagePageLanguageMother26";
+            // 
+            // txtLanguagePageLanguageMother25
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother25, "txtLanguagePageLanguageMother25");
+            this.txtLanguagePageLanguageMother25.Name = "txtLanguagePageLanguageMother25";
+            // 
+            // txtLanguagePageLanguageMother24
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother24, "txtLanguagePageLanguageMother24");
+            this.txtLanguagePageLanguageMother24.Name = "txtLanguagePageLanguageMother24";
+            // 
+            // txtLanguagePageLanguageMother23
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother23, "txtLanguagePageLanguageMother23");
+            this.txtLanguagePageLanguageMother23.Name = "txtLanguagePageLanguageMother23";
+            // 
+            // txtLanguagePageLanguageMother22
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother22, "txtLanguagePageLanguageMother22");
+            this.txtLanguagePageLanguageMother22.Name = "txtLanguagePageLanguageMother22";
+            // 
+            // txtLanguagePageLanguageMother21
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother21, "txtLanguagePageLanguageMother21");
+            this.txtLanguagePageLanguageMother21.Name = "txtLanguagePageLanguageMother21";
+            // 
+            // txtLanguagePageLanguageMother20
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother20, "txtLanguagePageLanguageMother20");
+            this.txtLanguagePageLanguageMother20.Name = "txtLanguagePageLanguageMother20";
+            // 
+            // txtLanguagePageLanguageMother19
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother19, "txtLanguagePageLanguageMother19");
+            this.txtLanguagePageLanguageMother19.Name = "txtLanguagePageLanguageMother19";
+            // 
+            // txtLanguagePageLanguageMother18
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother18, "txtLanguagePageLanguageMother18");
+            this.txtLanguagePageLanguageMother18.Name = "txtLanguagePageLanguageMother18";
+            // 
+            // txtLanguagePageLanguageMother17
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother17, "txtLanguagePageLanguageMother17");
+            this.txtLanguagePageLanguageMother17.Name = "txtLanguagePageLanguageMother17";
+            // 
+            // txtLanguagePageLanguageMother16
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother16, "txtLanguagePageLanguageMother16");
+            this.txtLanguagePageLanguageMother16.Name = "txtLanguagePageLanguageMother16";
+            // 
+            // txtLanguagePageLanguageMother15
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother15, "txtLanguagePageLanguageMother15");
+            this.txtLanguagePageLanguageMother15.Name = "txtLanguagePageLanguageMother15";
+            // 
+            // txtLanguagePageLanguageMother14
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother14, "txtLanguagePageLanguageMother14");
+            this.txtLanguagePageLanguageMother14.Name = "txtLanguagePageLanguageMother14";
+            // 
+            // txtLanguagePageLanguageMother13
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother13, "txtLanguagePageLanguageMother13");
+            this.txtLanguagePageLanguageMother13.Name = "txtLanguagePageLanguageMother13";
+            // 
+            // txtLanguagePageLanguageMother12
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother12, "txtLanguagePageLanguageMother12");
+            this.txtLanguagePageLanguageMother12.Name = "txtLanguagePageLanguageMother12";
+            // 
+            // txtLanguagePageLanguageMother11
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother11, "txtLanguagePageLanguageMother11");
+            this.txtLanguagePageLanguageMother11.Name = "txtLanguagePageLanguageMother11";
+            // 
+            // txtLanguagePageLanguageMother10
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother10, "txtLanguagePageLanguageMother10");
+            this.txtLanguagePageLanguageMother10.Name = "txtLanguagePageLanguageMother10";
+            // 
+            // txtLanguagePageLanguageMother9
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother9, "txtLanguagePageLanguageMother9");
+            this.txtLanguagePageLanguageMother9.Name = "txtLanguagePageLanguageMother9";
+            // 
+            // txtLanguagePageLanguageMother8
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother8, "txtLanguagePageLanguageMother8");
+            this.txtLanguagePageLanguageMother8.Name = "txtLanguagePageLanguageMother8";
+            // 
+            // txtLanguagePageLanguageMother7
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother7, "txtLanguagePageLanguageMother7");
+            this.txtLanguagePageLanguageMother7.Name = "txtLanguagePageLanguageMother7";
+            // 
+            // txtLanguagePageLanguageMother6
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother6, "txtLanguagePageLanguageMother6");
+            this.txtLanguagePageLanguageMother6.Name = "txtLanguagePageLanguageMother6";
+            // 
+            // txtLanguagePageLanguageMother5
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother5, "txtLanguagePageLanguageMother5");
+            this.txtLanguagePageLanguageMother5.Name = "txtLanguagePageLanguageMother5";
+            // 
+            // txtLanguagePageLanguageMother4
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother4, "txtLanguagePageLanguageMother4");
+            this.txtLanguagePageLanguageMother4.Name = "txtLanguagePageLanguageMother4";
+            // 
+            // txtLanguagePageLanguageMother3
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother3, "txtLanguagePageLanguageMother3");
+            this.txtLanguagePageLanguageMother3.Name = "txtLanguagePageLanguageMother3";
+            // 
+            // txtLanguagePageLanguageMother2
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother2, "txtLanguagePageLanguageMother2");
+            this.txtLanguagePageLanguageMother2.Name = "txtLanguagePageLanguageMother2";
+            // 
+            // txtLanguagePageLanguageMother1
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageMother1, "txtLanguagePageLanguageMother1");
+            this.txtLanguagePageLanguageMother1.Name = "txtLanguagePageLanguageMother1";
+            // 
+            // groupBox6
+            // 
+            resources.ApplyResources(this.groupBox6, "groupBox6");
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName30);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName29);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName28);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName27);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName26);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName25);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName24);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName23);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName22);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName21);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName20);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName19);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName18);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName17);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName16);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName15);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName14);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName13);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName12);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName11);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName10);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName9);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName8);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName7);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName6);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName5);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName4);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName3);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName2);
+            this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName1);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
+            // 
+            // txtLanguagePageLanguageName30
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName30, "txtLanguagePageLanguageName30");
+            this.txtLanguagePageLanguageName30.Name = "txtLanguagePageLanguageName30";
+            // 
+            // txtLanguagePageLanguageName29
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName29, "txtLanguagePageLanguageName29");
+            this.txtLanguagePageLanguageName29.Name = "txtLanguagePageLanguageName29";
+            // 
+            // txtLanguagePageLanguageName28
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName28, "txtLanguagePageLanguageName28");
+            this.txtLanguagePageLanguageName28.Name = "txtLanguagePageLanguageName28";
+            // 
+            // txtLanguagePageLanguageName27
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName27, "txtLanguagePageLanguageName27");
+            this.txtLanguagePageLanguageName27.Name = "txtLanguagePageLanguageName27";
+            // 
+            // txtLanguagePageLanguageName26
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName26, "txtLanguagePageLanguageName26");
+            this.txtLanguagePageLanguageName26.Name = "txtLanguagePageLanguageName26";
+            // 
+            // txtLanguagePageLanguageName25
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName25, "txtLanguagePageLanguageName25");
+            this.txtLanguagePageLanguageName25.Name = "txtLanguagePageLanguageName25";
+            // 
+            // txtLanguagePageLanguageName24
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName24, "txtLanguagePageLanguageName24");
+            this.txtLanguagePageLanguageName24.Name = "txtLanguagePageLanguageName24";
+            // 
+            // txtLanguagePageLanguageName23
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName23, "txtLanguagePageLanguageName23");
+            this.txtLanguagePageLanguageName23.Name = "txtLanguagePageLanguageName23";
+            // 
+            // txtLanguagePageLanguageName22
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName22, "txtLanguagePageLanguageName22");
+            this.txtLanguagePageLanguageName22.Name = "txtLanguagePageLanguageName22";
+            // 
+            // txtLanguagePageLanguageName21
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName21, "txtLanguagePageLanguageName21");
+            this.txtLanguagePageLanguageName21.Name = "txtLanguagePageLanguageName21";
+            // 
+            // txtLanguagePageLanguageName20
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName20, "txtLanguagePageLanguageName20");
+            this.txtLanguagePageLanguageName20.Name = "txtLanguagePageLanguageName20";
+            // 
+            // txtLanguagePageLanguageName19
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName19, "txtLanguagePageLanguageName19");
+            this.txtLanguagePageLanguageName19.Name = "txtLanguagePageLanguageName19";
+            // 
+            // txtLanguagePageLanguageName18
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName18, "txtLanguagePageLanguageName18");
+            this.txtLanguagePageLanguageName18.Name = "txtLanguagePageLanguageName18";
+            // 
+            // txtLanguagePageLanguageName17
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName17, "txtLanguagePageLanguageName17");
+            this.txtLanguagePageLanguageName17.Name = "txtLanguagePageLanguageName17";
+            // 
+            // txtLanguagePageLanguageName16
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName16, "txtLanguagePageLanguageName16");
+            this.txtLanguagePageLanguageName16.Name = "txtLanguagePageLanguageName16";
+            // 
+            // txtLanguagePageLanguageName15
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName15, "txtLanguagePageLanguageName15");
+            this.txtLanguagePageLanguageName15.Name = "txtLanguagePageLanguageName15";
+            // 
+            // txtLanguagePageLanguageName14
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName14, "txtLanguagePageLanguageName14");
+            this.txtLanguagePageLanguageName14.Name = "txtLanguagePageLanguageName14";
+            // 
+            // txtLanguagePageLanguageName13
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName13, "txtLanguagePageLanguageName13");
+            this.txtLanguagePageLanguageName13.Name = "txtLanguagePageLanguageName13";
+            // 
+            // txtLanguagePageLanguageName12
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName12, "txtLanguagePageLanguageName12");
+            this.txtLanguagePageLanguageName12.Name = "txtLanguagePageLanguageName12";
+            // 
+            // txtLanguagePageLanguageName11
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName11, "txtLanguagePageLanguageName11");
+            this.txtLanguagePageLanguageName11.Name = "txtLanguagePageLanguageName11";
+            // 
+            // txtLanguagePageLanguageName10
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName10, "txtLanguagePageLanguageName10");
+            this.txtLanguagePageLanguageName10.Name = "txtLanguagePageLanguageName10";
+            // 
+            // txtLanguagePageLanguageName9
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName9, "txtLanguagePageLanguageName9");
+            this.txtLanguagePageLanguageName9.Name = "txtLanguagePageLanguageName9";
+            // 
+            // txtLanguagePageLanguageName8
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName8, "txtLanguagePageLanguageName8");
+            this.txtLanguagePageLanguageName8.Name = "txtLanguagePageLanguageName8";
+            // 
+            // txtLanguagePageLanguageName7
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName7, "txtLanguagePageLanguageName7");
+            this.txtLanguagePageLanguageName7.Name = "txtLanguagePageLanguageName7";
+            // 
+            // txtLanguagePageLanguageName6
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName6, "txtLanguagePageLanguageName6");
+            this.txtLanguagePageLanguageName6.Name = "txtLanguagePageLanguageName6";
+            // 
+            // txtLanguagePageLanguageName5
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName5, "txtLanguagePageLanguageName5");
+            this.txtLanguagePageLanguageName5.Name = "txtLanguagePageLanguageName5";
+            // 
+            // txtLanguagePageLanguageName4
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName4, "txtLanguagePageLanguageName4");
+            this.txtLanguagePageLanguageName4.Name = "txtLanguagePageLanguageName4";
+            // 
+            // txtLanguagePageLanguageName3
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName3, "txtLanguagePageLanguageName3");
+            this.txtLanguagePageLanguageName3.Name = "txtLanguagePageLanguageName3";
+            // 
+            // txtLanguagePageLanguageName2
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName2, "txtLanguagePageLanguageName2");
+            this.txtLanguagePageLanguageName2.Name = "txtLanguagePageLanguageName2";
+            // 
+            // txtLanguagePageLanguageName1
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageName1, "txtLanguagePageLanguageName1");
+            this.txtLanguagePageLanguageName1.Name = "txtLanguagePageLanguageName1";
+            // 
+            // txtLanguagePageFontProbe
+            // 
+            resources.ApplyResources(this.txtLanguagePageFontProbe, "txtLanguagePageFontProbe");
+            this.txtLanguagePageFontProbe.Name = "txtLanguagePageFontProbe";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // txtLanguagePageLanguageProbe
+            // 
+            resources.ApplyResources(this.txtLanguagePageLanguageProbe, "txtLanguagePageLanguageProbe");
+            this.txtLanguagePageLanguageProbe.Name = "txtLanguagePageLanguageProbe";
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
+            // 
+            // comboBoxLanguagePageSelection
+            // 
+            this.comboBoxLanguagePageSelection.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBoxLanguagePageSelection, "comboBoxLanguagePageSelection");
+            this.comboBoxLanguagePageSelection.Name = "comboBoxLanguagePageSelection";
             // 
             // Rewards
             // 
@@ -5913,6 +7969,28 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.TabControl.ResumeLayout(false);
+            this.Language.ResumeLayout(false);
+            this.Language.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.Rewards.ResumeLayout(false);
             this.Rewards.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -6655,6 +8733,295 @@
         private System.Windows.Forms.Label lblFreeValue5;
         private System.Windows.Forms.Label lblFreeValue3;
         private System.Windows.Forms.Label lblFreeValue2;
+        private System.Windows.Forms.TabPage Language;
+        private System.Windows.Forms.ComboBox comboBoxLanguagePageSelection;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName30;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName29;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName28;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName27;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName26;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName25;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName24;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName23;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName22;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName21;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName20;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName19;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName18;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName17;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName16;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName15;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName14;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName13;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName12;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName11;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName10;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName9;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName8;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName7;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName6;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName5;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName4;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName3;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName2;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageName1;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother30;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother29;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother28;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother27;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother26;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother25;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother24;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother23;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother22;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother21;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother20;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother19;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother18;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother17;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother16;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother15;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother14;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother13;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother12;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother11;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother10;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother9;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother8;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother7;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother6;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother5;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother4;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother3;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother2;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageMother1;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex30;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex29;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex28;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex27;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex26;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex25;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex24;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex23;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex22;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex21;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex20;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex19;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex18;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex17;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex16;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex15;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex14;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex13;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex12;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex11;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex10;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex9;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex8;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex7;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex6;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex5;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex4;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex3;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex2;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageComplex1;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe30;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe29;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe28;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe27;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe26;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe25;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe24;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe23;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe22;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe21;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe20;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe19;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe18;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe17;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe16;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe15;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe14;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe13;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe12;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe11;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe10;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe9;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe8;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe7;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe6;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe5;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe4;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe3;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe2;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageProbe1;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW30;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW29;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW28;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW27;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW26;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW25;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW24;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW23;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW22;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW21;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW20;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW19;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW18;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW17;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW16;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW15;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW14;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW13;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW12;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW11;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW10;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW9;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW8;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW7;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW6;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW5;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW4;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW3;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW2;
+        private System.Windows.Forms.TextBox txtLanguagePageLanguageTaW1;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe30;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe29;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe28;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe27;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe26;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe25;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe24;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe23;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe22;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe21;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe20;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe19;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe18;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe17;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe16;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe15;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe14;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe13;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe12;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe11;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe10;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe9;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe8;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe7;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe6;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe5;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe4;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe3;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe2;
+        private System.Windows.Forms.TextBox txtLanguagePageFontProbe1;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW30;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW29;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW28;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW27;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW26;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW25;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW24;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW23;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW22;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW21;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW20;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW19;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW18;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW17;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW16;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW15;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW14;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW13;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW12;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW11;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW10;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW9;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW8;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW7;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW6;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW5;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW4;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW3;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW2;
+        private System.Windows.Forms.TextBox txtLanguagePageFontTaW1;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex30;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex29;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex28;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex27;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex26;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex25;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex24;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex23;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex22;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex21;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex20;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex19;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex18;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex17;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex16;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex15;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex14;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex13;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex12;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex11;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex10;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex9;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex8;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex7;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex6;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex5;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex4;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex3;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex2;
+        private System.Windows.Forms.TextBox txtLanguagePageFontComplex1;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName30;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName29;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName28;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName27;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName26;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName25;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName24;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName23;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName22;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName21;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName20;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName19;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName18;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName17;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName16;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName15;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName14;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName13;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName12;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName11;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName10;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName9;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName8;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName7;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName6;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName5;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName4;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName3;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName2;
+        private System.Windows.Forms.TextBox txtLanguagePageFontName1;
     }
 }
 

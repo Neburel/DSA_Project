@@ -8,8 +8,6 @@ namespace DSA_Project
 {
     static public class ManagmentXMLStrings
     {
-        //public static String FightingTalentsFileSystemLocation      = "Resources/DSA/Talents/FightingTalents";
-
         public static String XML                    = "xml";
 
         public const String CharacterBogenElement   = "CharacterBogen";
@@ -54,7 +52,21 @@ namespace DSA_Project
         public const String GeneralTalent                       = "GeneralTalent";
         public const String FightingTalent                      = "FightingTalent";
         public const String attack                              = "attack";
-        public const String Parade                              = "Parade";
+        public const String Parade = "Parade";
+
+
+        //################################################################################################################
+        //Language File
+        public const String LanguageFamily          = "Language-Family";
+        public const String FamilyName              = "FamilyName";
+        public const String Language                = "Language";
+        public const String SpeakingName            = "SpeakingName";
+        public const String SpeakingComplex         = "SpeakingComplex";
+        public const String SpeakingComplexSecond   = "SpeakingComplexSecond";
+        public const String FontName                = "FontName";
+        public const String FontComplex             = "FontComplex";
+        public const String FontComplexSecond       = "FontComplexSecond";
+        //################################################################################################################
     }
 
 }

@@ -17,13 +17,15 @@ namespace DSA_Project
 
         String currentdirectoryPath = Directory.GetCurrentDirectory();
         
-        public ControllTalent(Charakter charakter, String GeneralTalentFileSystemLocation, String FightingTalentsFileSystemLocation)
+        public ControllTalent(Charakter charakter, String GeneralTalentFileSystemLocation, String FightingTalentsFileSystemLocation, String LanguageFileSystemLocation)
         {
             List<ICollection<Enum>> listofallTalents = new List<ICollection<Enum>>();
 
             Dictionary<DSA_GENERALTALENTS, List<InterfaceTalent>> GeneralTalentFiles    = loadGeneralTalents(GeneralTalentFileSystemLocation, (DSA_GENERALTALENTS)0);
             Dictionary<DSA_FIGHTINGTALENTS, List<InterfaceTalent>> FightingTalentFiles  = loadGeneralTalents(FightingTalentsFileSystemLocation, (DSA_FIGHTINGTALENTS)0);
-            
+            List<LanguageFamily> LanguageFamiles = loadLanguageFamily(LanguageFileSystemLocation);
+
+
             for(int i=0; i<GeneralTalentFiles.Count; i++)
             {
                 List<InterfaceTalent> talentList = GeneralTalentFiles[(DSA_GENERALTALENTS)i];
@@ -39,6 +41,10 @@ namespace DSA_Project
                 {
                     charakter.addTalent((DSA_FIGHTINGTALENTS)i, talentList[j]);
                 }
+            }
+            for(int i=0; i< LanguageFamiles.Count; i++)
+            {
+                charakter.addTalent(LanguageFamiles[i]);
             }
             return;
         }
@@ -74,6 +80,17 @@ namespace DSA_Project
             }
             return Talents;
         }
-       
+        private List<LanguageFamily> loadLanguageFamily(String FileSystemLocation)
+        {
+            List<LanguageFamily> llist = new List<LanguageFamily>();
+            String[] files = Directory.GetFiles(FileSystemLocation);
+            LoadXMLLanguage loadXMLTalentFile = new LoadXMLLanguage();
+
+            foreach (String file in files)
+            {
+                llist.Add(loadXMLTalentFile.loadFile(file));
+            }
+            return llist;
+        }
     }
 }

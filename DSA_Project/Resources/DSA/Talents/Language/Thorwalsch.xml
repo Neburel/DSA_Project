@@ -1,0 +1,29 @@
+﻿<TalentLetter>
+  <Language-Family>
+    <FamilyName>Thorwalsch-Familie</FamilyName>
+    <Language>
+      <SpeakingName>Hjaldingsch</SpeakingName>
+      <SpeakingComplex>18</SpeakingComplex>
+      <FontName>Hjaldingsche Runen</FontName>
+      <FontComplex>10</FontComplex>
+    </Language>
+    <Language>
+      <SpeakingName>Thorwalsch</SpeakingName>
+      <SpeakingComplex>18</SpeakingComplex>
+      <FontName>Kurlisker Zeichen</FontName>
+      <FontComplex>10</FontComplex>
+    </Language>
+    <Language>
+      <SpeakingName>Gjalskisch</SpeakingName>
+      <SpeakingComplex>18</SpeakingComplex>
+      <FontName>Gjalskisch</FontName>
+      <FontComplex>14</FontComplex>
+    </Language>
+    <Language>
+      <SpeakingName>Fjarnisch</SpeakingName>
+      <SpeakingComplex>18</SpeakingComplex>
+      <FontName></FontName>
+      <FontComplex></FontComplex>
+    </Language>
+  </Language-Family>
+</TalentLetter>

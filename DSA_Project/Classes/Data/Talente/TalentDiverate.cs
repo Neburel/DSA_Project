@@ -12,7 +12,6 @@ namespace DSA_Project
      * 
      * */
     public class TalentDiverate
-
     {
         private InterfaceTalent Talent;
         private String Talentname;

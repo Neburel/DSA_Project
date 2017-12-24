@@ -1,0 +1,29 @@
+﻿<TalentLetter>
+  <Language-Family>
+    <FamilyName>Garethi-Famlie</FamilyName>
+    <Language>
+      <SpeakingName>Garethi</SpeakingName>
+      <SpeakingComplex>18</SpeakingComplex>
+      <FontName>Kurlisker Zeichen</FontName>
+      <FontComplex>10</FontComplex>
+    </Language>
+    <Language>
+      <SpeakingName>Bosparano</SpeakingName>
+      <SpeakingComplex>21</SpeakingComplex>
+      <FontName>Kurlisker Zeichen</FontName>
+      <FontComplex>10</FontComplex>
+    </Language>
+    <Language>
+      <SpeakingName>Aureliani</SpeakingName>
+      <SpeakingComplex>21</SpeakingComplex>
+      <FontName>Kurlisker Zeichen</FontName>
+      <FontComplex>10</FontComplex>
+    </Language>
+    <Language>
+      <SpeakingName></SpeakingName>
+      <SpeakingComplex></SpeakingComplex>
+      <FontName>Imperiale Schriftzeichen</FontName>
+      <FontComplex>12</FontComplex>
+    </Language>
+  </Language-Family>
+</TalentLetter>
