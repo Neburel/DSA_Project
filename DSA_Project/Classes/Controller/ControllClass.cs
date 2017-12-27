@@ -36,6 +36,7 @@ namespace DSA_Project
     {
         protected DSA form;
         private Charakter Charakter;
+        private ControllTalent controllTalent;
         
         public ControllClass(DSA form)
         {
@@ -88,11 +89,9 @@ namespace DSA_Project
             String path;
             path = Path.Combine(ManagmentSaveStrings.currentDirectory, getRootPath());
             path = Path.Combine(path, ManagmentSaveStrings.SaveLocation);
-            String GeneralTalentFileSystemLocation = Path.Combine(getResourcePath(), ManagmentSaveStrings.GeneralTalentFilesSystemLocation);
-            String FightingTalentFileSystemLocation = Path.Combine(getResourcePath(), ManagmentSaveStrings.FightTalentFilesSystemLocation);
-            String LanguageTalentFileSystemLocation = Path.Combine(getResourcePath(), ManagmentSaveStrings.LanguageTalentFileSystemLocation);
 
-            new ControllTalent(charakter, GeneralTalentFileSystemLocation, FightingTalentFileSystemLocation, LanguageTalentFileSystemLocation);
+
+            controllTalent = new ControllTalent(charakter, getResourcePath());
             //Rüstet den Charakter mit den der Form zugehörigen Talenten aus
             
             return charakter;
@@ -288,7 +287,7 @@ namespace DSA_Project
             return Charakter.getFeature(type, number);
         }
         //###################################################################################################################################
-        //Einrichtung der Talente
+        //Talente
         public List<InterfaceTalent> getTalent()
         {
             return Charakter.getAllTalentList();

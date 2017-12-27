@@ -9,27 +9,34 @@ namespace DSA_Project
 {
     public enum DSA_GENERALTALENTS { PHYSICAL, SOCIAL, NATURE, KNOWLDAGE, CRAFTING }
     public enum DSA_FIGHTINGTALENTS { WEAPONLESS, CLOSE, RANGE }
+
+
     
     class ControllTalent
     {
-        String[] NamesGeneralTalents = Enum.GetNames(typeof(DSA_GENERALTALENTS));
-        String[] NamesFightingTalents = Enum.GetNames(typeof(DSA_FIGHTINGTALENTS));
-
+        Dictionary<Type, List<InterfaceTalent>> TalentDictonary = new Dictionary<Type, List<InterfaceTalent>>();
+       
         String currentdirectoryPath = Directory.GetCurrentDirectory();
-        
-        public ControllTalent(Charakter charakter, String GeneralTalentFileSystemLocation, String FightingTalentsFileSystemLocation, String LanguageFileSystemLocation)
+
+        public ControllTalent(Charakter charakter, String ResourcePath)
         {
             List<ICollection<Enum>> listofallTalents = new List<ICollection<Enum>>();
 
-            Dictionary<DSA_GENERALTALENTS, List<InterfaceTalent>> GeneralTalentFiles    = loadGeneralTalents(GeneralTalentFileSystemLocation, (DSA_GENERALTALENTS)0);
-            Dictionary<DSA_FIGHTINGTALENTS, List<InterfaceTalent>> FightingTalentFiles  = loadGeneralTalents(FightingTalentsFileSystemLocation, (DSA_FIGHTINGTALENTS)0);
-            List<LanguageFamily> LanguageFamiles = loadLanguageFamily(LanguageFileSystemLocation);
+            String GeneralTalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.GeneralTalentFilesSystemLocation);
+            String FightingTalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.FightTalentFilesSystemLocation);
+            String LanguageTalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.LanguageTalentFileSystemLocation);
+            String GiftTalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.GiftTalentFileSystemLocation);
 
 
-            for(int i=0; i<GeneralTalentFiles.Count; i++)
+            Dictionary<DSA_GENERALTALENTS, List<InterfaceTalent>> GeneralTalentFiles = loadGeneralTalents(GeneralTalentFileSystemLocation, (DSA_GENERALTALENTS)0);
+            Dictionary<DSA_FIGHTINGTALENTS, List<InterfaceTalent>> FightingTalentFiles = loadGeneralTalents(FightingTalentFileSystemLocation, (DSA_FIGHTINGTALENTS)0);
+
+            List<LanguageFamily> LanguageFamiles = loadLanguageFamily(LanguageTalentFileSystemLocation);
+            
+            for (int i = 0; i < GeneralTalentFiles.Count; i++)
             {
                 List<InterfaceTalent> talentList = GeneralTalentFiles[(DSA_GENERALTALENTS)i];
-                for(int j=0; j< talentList.Count; j++)
+                for (int j = 0; j < talentList.Count; j++)
                 {
                     charakter.addTalent((DSA_GENERALTALENTS)i, talentList[j]);
                 }
@@ -42,14 +49,73 @@ namespace DSA_Project
                     charakter.addTalent((DSA_FIGHTINGTALENTS)i, talentList[j]);
                 }
             }
-            for(int i=0; i< LanguageFamiles.Count; i++)
+            for (int i = 0; i < LanguageFamiles.Count; i++)
             {
                 charakter.addTalent(LanguageFamiles[i]);
             }
+
+            GiftTalent x = new GiftTalent("tmp", null);
+            TalentGeneral t = new TalentGeneral("tmp", null, null, null, null);
+            InterfaceTalent y = (InterfaceTalent)x;
+            this.getTalent(y);
+            this.getTalent(t);
+
+            loadTalents(ResourcePath);
+
             return;
         }
-        private Dictionary<Tenum, List<InterfaceTalent>> loadGeneralTalents<Tenum>(String FileSystemLocation, Tenum xenum) where Tenum: struct, IComparable, IFormattable, IConvertible
-        {   
+        private void loadTalents(String ResourcePath)
+        {
+            loadGeneralTalents(ResourcePath);
+        }
+        private void loadGeneralTalents(String ResourcePath)
+        {
+            LoadXMLTalentFile_ loader = new LoadXMLTalentFile_();
+            String GeneralTalentFileSystemLocation  = Path.Combine(ResourcePath, ManagmentSaveStrings.GeneralTalentFilesSystemLocation);
+            List<String> dirs                       = new List<String>(Directory.EnumerateDirectories(GeneralTalentFileSystemLocation));
+
+            for (int i = 0; i < dirs.Count; i++)
+            {
+                String folder       = dirs[i].Substring(dirs[i].LastIndexOf('\\') + 1);
+                String deepFolder   = Path.Combine(GeneralTalentFileSystemLocation, dirs[i]);
+                String[] files      = Directory.GetFiles(deepFolder);
+                
+                if (0 == String.Compare(folder, ManagmentSaveStrings.TalentSocial))
+                {
+                    loadTalent<TalentSocial>(loader, files);  
+                } else
+                if(0 == String.Compare(folder, ManagmentSaveStrings.TalentCrafting))
+                {
+                    loadTalent<TalentCrafting>(loader, files);
+                } else 
+                if(0 == String.Compare(folder, ManagmentSaveStrings.TalentKnowldage))
+                {
+                    loadTalent<TalentKnwoldage>(loader, files);
+                } else
+                if (0 == String.Compare(folder, ManagmentSaveStrings.TalentNature))
+                {
+                    loadTalent<TalentNature>(loader, files);
+                } else 
+                if (0 == String.Compare(folder, ManagmentSaveStrings.TalentPhysical))
+                {
+                    loadTalent<TalentPhysical>(loader, files);
+                }
+            }
+        }
+        public void loadTalent<T>(LoadXMLTalentFile_ loader, String[] files) where T: TalentGeneral
+        {
+            List<InterfaceTalent> list = new List<InterfaceTalent>();
+            Type type = typeof(T);
+            for (int j = 0; j < files.Count(); j++)
+            {
+                T talent = loader.loadFile<T>(files[j]);
+                list.Add(talent);
+            }
+            TalentDictonary.Add(type, list);
+        }
+
+        private Dictionary<Tenum, List<InterfaceTalent>> loadGeneralTalents<Tenum>(String FileSystemLocation, Tenum xenum) where Tenum : struct, IComparable, IFormattable, IConvertible
+        {
             Dictionary<Tenum, List<InterfaceTalent>> Talents = new Dictionary<Tenum, List<InterfaceTalent>>();
             List<String> dirs = new List<String>(Directory.EnumerateDirectories(FileSystemLocation));
 
@@ -92,5 +158,26 @@ namespace DSA_Project
             }
             return llist;
         }
+        private List<InterfaceTalent> loadGiftTalent(String FileSystemLocation)
+        {
+            List<InterfaceTalent> llist = new List<InterfaceTalent>();
+            String[] files = Directory.GetFiles(FileSystemLocation);
+            LoadXMLGiftTalentFile LoadXMLGiftTalentFile = new LoadXMLGiftTalentFile();
+
+            foreach (String file in files)
+            {
+                llist.Add(LoadXMLGiftTalentFile.loadFile(file));
+            }
+            return llist;
+        }
+
+        public void getTalent<X>(X type) where X: InterfaceTalent
+        {
+            List<InterfaceTalent> y;
+            //test.TryGetValue(type.GetType(), out y);
+            
+        }
     }
+    
+
 }

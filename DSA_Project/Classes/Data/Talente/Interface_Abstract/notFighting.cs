@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    public class GeneralTalent : Talent<DSA_ATTRIBUTE>
+    abstract public class notFighting : Talent<DSA_ATTRIBUTE>
     {
-        List<TalentRequirement> requirement;
-
-        public GeneralTalent(String name, List<DSA_ATTRIBUTE> probe, String be, List<TalentDiverate>diverates, List<TalentRequirement>requirements) : base(name, probe, be, diverates)
+        public notFighting(String name, List<DSA_ATTRIBUTE> probe, String be, List<TalentDeviate>diverates, List<TalentRequirement>requirements) : base(name, probe, be, diverates)
         {
             requirement = requirements;
         }

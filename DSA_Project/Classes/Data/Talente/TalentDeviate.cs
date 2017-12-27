@@ -11,14 +11,14 @@ namespace DSA_Project
      * Das talent Selbst wird später Nachgeladen
      * 
      * */
-    public class TalentDiverate
+    public class TalentDeviate
     {
         private InterfaceTalent Talent;
         private String Talentname;
         private int RequirementTaW;
       
 
-        public TalentDiverate(String TalentName, int requirementTaW)
+        public TalentDeviate(String TalentName, int requirementTaW)
         {
             this.Talentname         = TalentName;
             this.RequirementTaW     = requirementTaW;

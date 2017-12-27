@@ -219,8 +219,8 @@ namespace DSA_Project
                 while ((talent = charakter.getTalent((DSA_FIGHTINGTALENTS)i, j)) != null)
                 {
                     XmlElement TElement = saveTalent(talent, characterFile, TalentElement);
-                    String pa = ((FightTalent)talent).getPA();
-                    String at = ((FightTalent)talent).getAT().ToString();
+                    String pa = ((FightingTalent)talent).getPA();
+                    String at = ((FightingTalent)talent).getAT().ToString();
 
                     XmlElement atElement = characterFile.CreateElement(ManagmentXMLStrings.attack);
                     XmlElement paElement = characterFile.CreateElement(ManagmentXMLStrings.Parade);

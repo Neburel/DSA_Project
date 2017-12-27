@@ -15,12 +15,17 @@ namespace DSA_Project
         static void Main()
         {
 
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new DSA());
             
             //Application.Run(new CreateFeature());
+        }
+
+        static void createFileStructure()
+        {
+            CreateFileStructure.createFileStructure("DSA");
+            CreateFileStructure.createFileStructure("PNP");
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    public abstract class LanguageAbstractTalent : GeneralTalent
+    public abstract class LanguageAbstractTalent : TalentGeneral
     {
         String motherMark;
 

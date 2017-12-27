@@ -277,6 +277,8 @@ namespace DSA_Project
         private Dictionary<DSA_GENERALTALENTS, List<InterfaceTalent>> generalTalents;
         private Dictionary<DSA_FIGHTINGTALENTS, List<InterfaceTalent>> fightingTalents;
         private List<LanguageFamily> languageTalents;
+        private List<InterfaceTalent> gitTalents;
+        
         private void setUPTalente()
         {
             generalTalents = new Dictionary<DSA_GENERALTALENTS, List<InterfaceTalent>>();

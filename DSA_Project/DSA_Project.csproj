@@ -51,21 +51,31 @@
     <Compile Include="Classes\Data\Charakter\Charakter.cs" />
     <Compile Include="Classes\Controller\ControllClass.cs" />
     <Compile Include="Classes\Data\Charakter\Feature.cs" />
-    <Compile Include="Classes\Data\Talente\FightTalent.cs" />
-    <Compile Include="Classes\Data\Talente\GeneralTalent.cs" />
-    <Compile Include="Classes\Data\Talente\InterfaceTalent.cs" />
+    <Compile Include="Classes\Data\Talente\Fighting\FightingTalent.cs" />
+    <Compile Include="Classes\Data\Talente\Interface_Abstract\notFighting.cs" />
+    <Compile Include="Classes\Data\Talente\notFighting\General\TalentPhysical.cs" />
+    <Compile Include="Classes\Data\Talente\notFighting\General\TalentNature.cs" />
+    <Compile Include="Classes\Data\Talente\notFighting\General\TalentKnowldage.cs" />
+    <Compile Include="Classes\Data\Talente\notFighting\General\TalentCrafting.cs" />
+    <Compile Include="Classes\Data\Talente\notFighting\General\TalentSocial.cs" />
+    <Compile Include="Classes\Data\Talente\notFighting\General\TalentGeneral.cs" />
+    <Compile Include="Classes\Data\Talente\GiftTalent.cs" />
+    <Compile Include="Classes\Data\Talente\Interface_Abstract\InterfaceTalent.cs" />
     <Compile Include="Classes\Data\Talente\LanguageAbstractTalent.cs" />
     <Compile Include="Classes\Data\Talente\FontTalent.cs" />
     <Compile Include="Classes\Data\Talente\LanguageFamily.cs" />
     <Compile Include="Classes\Data\Talente\LanguageTalent.cs" />
-    <Compile Include="Classes\Data\Talente\Talent.cs" />
-    <Compile Include="Classes\Data\Talente\TalentDiverate.cs" />
+    <Compile Include="Classes\Data\Talente\Interface_Abstract\Talent.cs" />
+    <Compile Include="Classes\Data\Talente\TalentDeviate.cs" />
     <Compile Include="Classes\Data\Talente\TalentRequirement.cs" />
     <Compile Include="Classes\Managment\ManagmentFeature.cs" />
     <Compile Include="Classes\Managment\ManagmentForm.cs" />
     <Compile Include="Classes\Managment\ManagmentXMLStrings.cs" />
     <Compile Include="Classes\Managment\ManagmentSaveStrings.cs" />
+    <Compile Include="Classes\Util\program\CreateFileStructure.cs" />
     <Compile Include="Classes\Util\XMLLoad\LoadXMLLanguage.cs" />
+    <Compile Include="Classes\Util\XMLLoad\LoadXMLGiftTalentFile.cs" />
+    <Compile Include="Classes\Util\XMLLoad\LoadXMLTalentFile_.cs" />
     <Compile Include="Classes\Util\XMLSave\SaveXMLTalent.cs" />
     <Compile Include="Classes\Util\XMLLoad\LoadCharakterXML.cs" />
     <Compile Include="Classes\Util\XMLLoad\LoadXMLTalentFile.cs" />
@@ -211,31 +221,31 @@
     <Content Include="Resources\DSA\Talents\FightingTalents\weaponless\Raufen.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Gaben\Zwergennase .xml">
+    <Content Include="Resources\DSA\Talents\Gifts\Zwergennase .xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Gaben\Tierempathie.xml">
+    <Content Include="Resources\DSA\Talents\Gifts\Tierempathie.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Gaben\Talentschub.xml">
+    <Content Include="Resources\DSA\Talents\Gifts\Talentschub.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Gaben\Prophezeien.xml">
+    <Content Include="Resources\DSA\Talents\Gifts\Prophezeien.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Gaben\Magiegespür.xml">
+    <Content Include="Resources\DSA\Talents\Gifts\Magiegespür.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Gaben\Kräfteschub.xml">
+    <Content Include="Resources\DSA\Talents\Gifts\Kräfteschub.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Gaben\Geräuschhexerei.xml">
+    <Content Include="Resources\DSA\Talents\Gifts\Geräuschhexerei.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Gaben\Gefahreninstinkt.xml">
+    <Content Include="Resources\DSA\Talents\Gifts\Gefahreninstinkt.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Gaben\Empathie.xml">
+    <Content Include="Resources\DSA\Talents\Gifts\Empathie.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Abrichten.xml">

@@ -10,16 +10,15 @@ namespace DSA_Project
     {
         internal bool learned = false;
         internal Charakter Charakter;
-        List<TalentDiverate> Diverates;
+        internal List<T> Probe;
+        internal List<TalentDeviate> Diverates;
+        internal List<TalentRequirement> requirement;
 
-        private String Name;
-        
-        private String Be;
-        protected List<T> Probe;
-        
         private int TaW;
-
-        public Talent(String name, List<T> probe, String be, List<TalentDiverate> diverates)
+        private String Name;
+        private String Be;
+        
+        public Talent(String name, List<T> probe, String be, List<TalentDeviate> diverates)
         {
             this.Name = name;
             this.Probe = probe;
@@ -28,8 +27,9 @@ namespace DSA_Project
             Diverates = diverates;
         }
 
-        public override string ToString() { return this.Name;  } 
-
+        public abstract String getProbeStringOne();
+        public abstract String getProbeStringTwo();
+        
         public void setCharacter(Charakter charakter)
         {
             this.Charakter = charakter;
@@ -56,7 +56,7 @@ namespace DSA_Project
             {
                 return Name;
             }
-        public String getAbleitenString()
+        public String getDeviateString()
         {
             if (Diverates.Count == 0)
             {
@@ -70,7 +70,7 @@ namespace DSA_Project
                 {
                     ret = ret + ", ";
                 }
-                TalentDiverate diverate = Diverates[i];
+                TalentDeviate diverate = Diverates[i];
                 if (diverate.getRequiredTaW() == 0)
                 {
                     ret = ret + diverate.getName();
@@ -101,7 +101,7 @@ namespace DSA_Project
             return TaW + Charakter.getTaWBons(this);
         }
 
-        public abstract String getProbeStringOne();
-        public abstract String getProbeStringTwo();
+        public override string ToString() { return this.Name; }
+
     }
 }

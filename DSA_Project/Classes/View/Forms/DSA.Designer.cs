@@ -1050,6 +1050,11 @@
             this.txtRewardPage = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ToolPageLearningGiftChose = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ADD = new System.Windows.Forms.Button();
             this.tabPageTools.SuspendLayout();
             this.talents.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -1081,12 +1086,14 @@
             this.groupBox6.SuspendLayout();
             this.Rewards.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox16.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPageTools
             // 
             this.tabPageTools.BackColor = System.Drawing.SystemColors.Control;
             this.tabPageTools.BackgroundImage = global::DSA_Project.Properties.Resources.Old_Parchment_Wallpaper_15;
+            this.tabPageTools.Controls.Add(this.groupBox16);
             this.tabPageTools.Controls.Add(this.btnToolChangeDSA_PNP);
             this.tabPageTools.Controls.Add(this.btncreateFightingTalent);
             this.tabPageTools.Controls.Add(this.btnCreateTalent);
@@ -7929,6 +7936,38 @@
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.ADD);
+            this.groupBox16.Controls.Add(this.textBox1);
+            this.groupBox16.Controls.Add(this.ToolPageLearningGiftChose);
+            this.groupBox16.Controls.Add(this.label2);
+            resources.ApplyResources(this.groupBox16, "groupBox16");
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.TabStop = false;
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // ToolPageLearningGiftChose
+            // 
+            this.ToolPageLearningGiftChose.FormattingEnabled = true;
+            resources.ApplyResources(this.ToolPageLearningGiftChose, "ToolPageLearningGiftChose");
+            this.ToolPageLearningGiftChose.Name = "ToolPageLearningGiftChose";
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
+            // 
+            // ADD
+            // 
+            resources.ApplyResources(this.ADD, "ADD");
+            this.ADD.Name = "ADD";
+            this.ADD.UseVisualStyleBackColor = true;
+            // 
             // DSA
             // 
             resources.ApplyResources(this, "$this");
@@ -7995,6 +8034,8 @@
             this.Rewards.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -9022,6 +9063,11 @@
         private System.Windows.Forms.TextBox txtLanguagePageFontName3;
         private System.Windows.Forms.TextBox txtLanguagePageFontName2;
         private System.Windows.Forms.TextBox txtLanguagePageFontName1;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.Button ADD;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox ToolPageLearningGiftChose;
+        private System.Windows.Forms.Label label2;
     }
 }
 

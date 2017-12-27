@@ -15,6 +15,17 @@ namespace DSA_Project
     {
         private ControllClass controll;
 
+        public struct TestTag<T> where T : InterfaceTalent
+        {
+            public T type;
+
+            public TestTag(T type)
+            {
+                this.type = type;
+            }
+        }
+
+
         System.Drawing.Image backround = (System.Drawing.Image) DSA_Project.Properties.Resources.Old_Parchment_Wallpaper_15;
 
         public DSA()
@@ -24,6 +35,9 @@ namespace DSA_Project
             SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             
             InitializeComponent();
+            
+
+
 
             SetUPForm();
             
@@ -684,7 +698,7 @@ namespace DSA_Project
             try
             {
                 int x;
-                FightTalent ftalent = (FightTalent)box.SelectedValue;
+                FightingTalent ftalent = (FightingTalent)box.SelectedValue;
 
                 if (!Int32.TryParse(ftalent.getPA(), out x))
                 {
@@ -955,7 +969,7 @@ namespace DSA_Project
 
             for (i = 0; i < SUpportedTalentCOunt; i++)
             {
-                GeneralTalent GeneralTalent = (GeneralTalent)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
+                TalentGeneral GeneralTalent = (TalentGeneral)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
                 if (GeneralTalent == null) { break; }
                 talentNameLabels[i].Text = GeneralTalent.getName();
                 talentProbeTextBoxs[i].Text = GeneralTalent.getProbeStringOne();
@@ -963,7 +977,7 @@ namespace DSA_Project
                 talentTaWTextBoxes[i].Text = GeneralTalent.getTaW().ToString();
                 talentBeTextBoxes[i].Text = GeneralTalent.getBe().ToString();
                 talentSpezialisierungTextBoxes[i].Text = "";
-                talentAbleitungTextBoxes[i].Text = GeneralTalent.getAbleitenString();
+                talentAbleitungTextBoxes[i].Text = GeneralTalent.getDeviateString();
                 talentAnforderungsTextBoxes[i].Text = GeneralTalent.getRequirementString();
             }
 
@@ -992,7 +1006,7 @@ namespace DSA_Project
             for (i = 0; i < SUpportedTalentCOunt; i++)
             {
                 int x = 0;
-                FightTalent FightingTalent = (FightTalent)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
+                FightingTalent FightingTalent = (FightingTalent)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
                 if (FightingTalent == null) { break; }
                 talentNameLabels[i].Text = FightingTalent.getName();
                 talentProbeTextBoxs[i].Text = FightingTalent.getProbeStringOne();
@@ -1000,7 +1014,7 @@ namespace DSA_Project
                 talentTaWTextBoxes[i].Text = FightingTalent.getTaW().ToString();
                 talentBeTextBoxes[i].Text = FightingTalent.getBe().ToString();
                 talentSpezialisierungTextBoxes[i].Text = "";
-                talentAbleitungTextBoxes[i].Text = FightingTalent.getAbleitenString();
+                talentAbleitungTextBoxes[i].Text = FightingTalent.getDeviateString();
                 talentATTextBoxes[i].Text = FightingTalent.getAT().ToString();
                 talentPATextBoxes[i].Text = FightingTalent.getPA().ToString();
 
@@ -1049,7 +1063,7 @@ namespace DSA_Project
             String Boxnumber = NameString.Substring(BasicString.Length, NameString.Length - BasicString.Length);
             Int32.TryParse(Boxnumber, out BoxNumber);
 
-            FightTalent talent = (FightTalent)getTalent(TalentPagegetTalentNumberForBox(BoxNumber));
+            FightingTalent talent = (FightingTalent)getTalent(TalentPagegetTalentNumberForBox(BoxNumber));
             if (talent == null) return;
 
             int result;
@@ -1071,7 +1085,7 @@ namespace DSA_Project
             String Boxnumber = NameString.Substring(BasicString.Length, NameString.Length - BasicString.Length);
             Int32.TryParse(Boxnumber, out BoxNumber);
 
-            FightTalent talent = (FightTalent)getTalent(TalentPagegetTalentNumberForBox(BoxNumber));
+            FightingTalent talent = (FightingTalent)getTalent(TalentPagegetTalentNumberForBox(BoxNumber));
             if (talent == null) return;
 
             int result;

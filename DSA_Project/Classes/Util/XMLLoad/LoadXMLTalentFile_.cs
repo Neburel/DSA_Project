@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
 namespace DSA_Project
 {
-    class LoadXMLTalentFile
+    class LoadXMLTalentFile_
     {
-        private bool fightingTalent = false;
-        
-
         private String[] AttributeNames = Enum.GetNames(typeof(DSA_ATTRIBUTE));
 
         private string TalentName;
@@ -21,13 +19,8 @@ namespace DSA_Project
         private string BE = "";
         private bool parade = false;
         private DSA_ADVANCEDVALUES attace;
-
-
-        public LoadXMLTalentFile()
-        {   
-            return;
-        }
-        public InterfaceTalent loadFile(String fileName)
+        
+        public T loadFile<T>(String fileName) where T: TalentGeneral
         {
             XmlDocument talentFile = new XmlDocument();
             talentFile.Load(fileName);
@@ -45,19 +38,17 @@ namespace DSA_Project
                     case ManagmentXMLStrings.BE: BE = node.InnerText; break;
                     case ManagmentXMLStrings.Diverates: loadDiverates(node); break;
                     case ManagmentXMLStrings.Requirements: loadRequirements(node); break;
-                    case ManagmentXMLStrings.FightingTalent: loadFightingTalent(node); break;
                     default: throw new Exception("No such case");
                 }
             }
 
-            if (fightingTalent == true)
-            {
-                return new FightingTalent(TalentName, BE, diverates, attace, parade);
-            }
-            return new TalentGeneral(TalentName, probe, BE, diverates, requirements);
+            Type type = typeof(T);
+            Type[] typeArray = new Type[]{ typeof(String), typeof(List<DSA_ATTRIBUTE>), typeof(String), typeof(List<TalentDeviate>), typeof(List<TalentRequirement>) };
 
+            ConstructorInfo constructor = type.GetConstructor(typeArray);
+            object magicClassObject = constructor.Invoke(new object[] { TalentName, probe, BE, diverates, requirements });
+            return (T)magicClassObject;
         }
-        
         private void loadProbe(XmlNode ProbeNode)
         {
             foreach(XmlNode node in ProbeNode)
@@ -113,32 +104,6 @@ namespace DSA_Project
                 }
                 requirement = new TalentRequirement(TalentName, Value, NeedAt);
                 requirements.Add(requirement);
-            }
-        }
-        private void loadFightingTalent(XmlNode FightingNode)
-        {
-            fightingTalent = true;
-            foreach(XmlNode node in FightingNode)
-            {
-                String[] NamesOFAdvantageElements = Enum.GetNames(typeof(DSA_ADVANCEDVALUES));
-
-                switch (node.Name)
-                {
-                    case ManagmentXMLStrings.attack:
-                        for(int i=0; i<NamesOFAdvantageElements.Length; i++)
-                        {
-                            if(0 == String.Compare(NamesOFAdvantageElements[i], node.InnerText))
-                            {
-                                attace = (DSA_ADVANCEDVALUES)i;
-                            }
-                        }
-                        break;
-                    case ManagmentXMLStrings.Parade:
-                        parade = Convert.ToBoolean(node.InnerText);
-                        break;
-
-                }
-
             }
         }
     }
