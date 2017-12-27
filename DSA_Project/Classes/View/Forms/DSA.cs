@@ -840,15 +840,16 @@ namespace DSA_Project
             TalentPageRadioButtonsGeneralTalents = new List<RadioButton> { radioKörperlicheTalente, radioSozialTalente, radioNaturTalente, radioKnowldageTalente, radioCraftingTalent };
             TalentPageRadioButtonsFightingTalents = new List<RadioButton> { radioButtonWeaponless, radioButtonClose, radioButtonRange };
 
-            radioKörperlicheTalente.Tag = DSA_GENERALTALENTS.PHYSICAL;
-            radioSozialTalente.Tag = DSA_GENERALTALENTS.SOCIAL;
-            radioNaturTalente.Tag = DSA_GENERALTALENTS.NATURE;
-            radioKnowldageTalente.Tag = DSA_GENERALTALENTS.KNOWLDAGE;
-            radioCraftingTalent.Tag = DSA_GENERALTALENTS.CRAFTING;
 
-            radioButtonWeaponless.Tag = DSA_FIGHTINGTALENTS.WEAPONLESS;
-            radioButtonClose.Tag = DSA_FIGHTINGTALENTS.CLOSE;
-            radioButtonRange.Tag = DSA_FIGHTINGTALENTS.RANGE;
+            radioKörperlicheTalente.Tag     = new TalentPhysical(null, null, null, null, null);
+            radioSozialTalente.Tag          = new TalentSocial(null, null, null, null, null);
+            radioNaturTalente.Tag           = new TalentNature(null, null, null, null, null);
+            radioKnowldageTalente.Tag       = new TalentKnwoldage(null, null, null, null, null);
+            radioCraftingTalent.Tag         = new TalentCrafting(null, null, null, null, null);
+
+            radioButtonWeaponless.Tag       = new TalentWeaponless(null, null, null, DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, false);
+            radioButtonClose.Tag            = new TalentClose(null, null, null, DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, false);
+            radioButtonRange.Tag            = new TalentRange(null, null, null, DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, false);
 
             btnTalentLetterNext.Tag = "+";
             btnTalentLetterLast.Tag = "-";
@@ -903,7 +904,7 @@ namespace DSA_Project
             {
                 if (TalentPageRadioButtonsGeneralTalents[i].Checked)
                 {
-                    DSA_GENERALTALENTS talenttype = (DSA_GENERALTALENTS)TalentPageRadioButtonsGeneralTalents[i].Tag;
+                    TalentGeneral talenttype = (TalentGeneral)TalentPageRadioButtonsGeneralTalents[i].Tag;
                     talent = controll.getTalent(talenttype, number);
                     return talent;
                 }
@@ -961,7 +962,7 @@ namespace DSA_Project
             RadioButton button = (RadioButton)sender;
             if (button.Checked == false) return;
 
-            DSA_GENERALTALENTS type = (DSA_GENERALTALENTS)button.Tag;
+            InterfaceTalent type = (InterfaceTalent)button.Tag;
 
             int i = 0;
             groupBoxAnforderungen.Visible = true;
@@ -969,16 +970,16 @@ namespace DSA_Project
 
             for (i = 0; i < SUpportedTalentCOunt; i++)
             {
-                TalentGeneral GeneralTalent = (TalentGeneral)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
-                if (GeneralTalent == null) { break; }
-                talentNameLabels[i].Text = GeneralTalent.getName();
-                talentProbeTextBoxs[i].Text = GeneralTalent.getProbeStringOne();
-                talentWürfeTextBoxs[i].Text = GeneralTalent.getProbeStringTwo();
-                talentTaWTextBoxes[i].Text = GeneralTalent.getTaW().ToString();
-                talentBeTextBoxes[i].Text = GeneralTalent.getBe().ToString();
+                TalentGeneral talent = (TalentGeneral)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
+                if (talent == null) { break; }
+                talentNameLabels[i].Text = talent.getName();
+                talentProbeTextBoxs[i].Text = talent.getProbeStringOne();
+                talentWürfeTextBoxs[i].Text = talent.getProbeStringTwo();
+                talentTaWTextBoxes[i].Text = talent.getTaW().ToString();
+                talentBeTextBoxes[i].Text = talent.getBe().ToString();
                 talentSpezialisierungTextBoxes[i].Text = "";
-                talentAbleitungTextBoxes[i].Text = GeneralTalent.getDeviateString();
-                talentAnforderungsTextBoxes[i].Text = GeneralTalent.getRequirementString();
+                talentAbleitungTextBoxes[i].Text = talent.getDeviateString();
+                talentAnforderungsTextBoxes[i].Text = talent.getRequirementString();
             }
 
             groupBoxProbe.Left = groupBoxTalentName.Right + 5;

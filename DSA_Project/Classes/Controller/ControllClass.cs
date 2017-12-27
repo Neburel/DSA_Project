@@ -92,8 +92,16 @@ namespace DSA_Project
 
 
             controllTalent = new ControllTalent(charakter, getResourcePath());
-            //Rüstet den Charakter mit den der Form zugehörigen Talenten aus
-            
+            charakter.addTalent<TalentClose>(controllTalent.getTalentList<TalentClose>());
+            charakter.addTalent<TalentRange>(controllTalent.getTalentList<TalentRange>());
+            charakter.addTalent<TalentWeaponless>(controllTalent.getTalentList<TalentWeaponless>());
+
+            charakter.addTalent<TalentCrafting>(controllTalent.getTalentList<TalentCrafting>());
+            charakter.addTalent<TalentKnwoldage>(controllTalent.getTalentList<TalentKnwoldage>());
+            charakter.addTalent<TalentNature>(controllTalent.getTalentList<TalentNature>());
+            charakter.addTalent<TalentPhysical>(controllTalent.getTalentList<TalentPhysical>());
+            charakter.addTalent<TalentSocial>(controllTalent.getTalentList<TalentSocial>());
+
             return charakter;
         }
         //###################################################################################################################################
@@ -288,6 +296,11 @@ namespace DSA_Project
         }
         //###################################################################################################################################
         //Talente
+        public InterfaceTalent getTalent(InterfaceTalent type, int number)
+        {
+            return Charakter.getTalent(type, number);
+        }
+
         public List<InterfaceTalent> getTalent()
         {
             return Charakter.getAllTalentList();

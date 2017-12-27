@@ -54,11 +54,6 @@ namespace DSA_Project
                 charakter.addTalent(LanguageFamiles[i]);
             }
 
-            GiftTalent x = new GiftTalent("tmp", null);
-            TalentGeneral t = new TalentGeneral("tmp", null, null, null, null);
-            InterfaceTalent y = (InterfaceTalent)x;
-            this.getTalent(y);
-            this.getTalent(t);
 
             loadTalents(ResourcePath);
 
@@ -143,7 +138,12 @@ namespace DSA_Project
             TalentDictonary.Add(type, list);
         }
 
-
+        public List<InterfaceTalent> getTalentList<T>() where T: InterfaceTalent
+        {
+            List<InterfaceTalent> list = null;
+            TalentDictonary.TryGetValue(typeof(T), out list);
+            return list;
+        }
 
         private Dictionary<Tenum, List<InterfaceTalent>> loadGeneralTalents<Tenum>(String FileSystemLocation, Tenum xenum) where Tenum : struct, IComparable, IFormattable, IConvertible
         {
@@ -200,14 +200,7 @@ namespace DSA_Project
                 llist.Add(LoadXMLGiftTalentFile.loadFile(file));
             }
             return llist;
-        }
-
-        public void getTalent<X>(X type) where X: InterfaceTalent
-        {
-            List<InterfaceTalent> y;
-            //test.TryGetValue(type.GetType(), out y);
-            
-        }
+        }        
     }
     
 

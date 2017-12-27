@@ -274,6 +274,8 @@ namespace DSA_Project
         //Rework ab hir
         //###############################################################################################################################################
         //Talente
+        private Dictionary<Type, List<InterfaceTalent>> TalentDictionary;
+
         private Dictionary<DSA_GENERALTALENTS, List<InterfaceTalent>> generalTalents;
         private Dictionary<DSA_FIGHTINGTALENTS, List<InterfaceTalent>> fightingTalents;
         private List<LanguageFamily> languageTalents;
@@ -281,6 +283,7 @@ namespace DSA_Project
         
         private void setUPTalente()
         {
+            TalentDictionary = new Dictionary<Type, List<InterfaceTalent>>();
             generalTalents = new Dictionary<DSA_GENERALTALENTS, List<InterfaceTalent>>();
             fightingTalents = new Dictionary<DSA_FIGHTINGTALENTS, List<InterfaceTalent>>();
             languageTalents = new List<LanguageFamily>(0);
@@ -298,6 +301,65 @@ namespace DSA_Project
                 markedAttributs.Add((DSA_ATTRIBUTE)i, false);
             }
         }
+        public void addTalent<T>(InterfaceTalent talent) where T: InterfaceTalent
+        {
+            List<InterfaceTalent> list = null;
+            if(TalentDictionary.TryGetValue(typeof(T), out list)){
+                list.Add(talent);
+            } else
+            {
+                list = new List<InterfaceTalent>(0);
+                TalentDictionary.Add(typeof(T), list);
+                this.addTalent<T>(talent);
+            }
+        }
+        public void addTalent<T>(List<InterfaceTalent> talent) where T: InterfaceTalent
+        {
+            List<InterfaceTalent> list = null;
+            if(TalentDictionary.TryGetValue(typeof(T), out list))
+            {
+                list.AddRange(talent);
+            } else
+            {
+                list = new List<InterfaceTalent>(0);
+                TalentDictionary.Add(typeof(T), list);
+                this.addTalent<T>(talent);
+            }
+        }
+        public InterfaceTalent getTalent<T>(int number)
+        {
+            List<InterfaceTalent> list = null;
+            if(TalentDictionary.TryGetValue(typeof(T), out list)){
+                if(number > list.Count)
+                {
+                    return null;
+                } 
+                return list[number];
+            } else
+            {
+                list = new List<InterfaceTalent>(0);
+                TalentDictionary.Add(typeof(T), list);
+            }
+            return null;
+        }
+        public InterfaceTalent getTalent(InterfaceTalent talent, int number) 
+        {
+            List<InterfaceTalent> list = null;
+            if (TalentDictionary.TryGetValue(talent.GetType(), out list)){
+                if (number > list.Count)
+                {
+                    return null;
+                }
+                return list[number];
+            }
+            else
+            {
+                list = new List<InterfaceTalent>(0);
+                TalentDictionary.Add(talent.GetType(), list);
+            }
+            return null;
+        }
+
         public void addTalent<Tenum>(Tenum type, InterfaceTalent talent) where Tenum : struct, IComparable, IFormattable, IConvertible
         {
             talent.setCharacter(this);

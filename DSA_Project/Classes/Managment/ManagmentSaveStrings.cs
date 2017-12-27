@@ -31,7 +31,7 @@ namespace DSA_Project
         public static String TalentSocial       = "social";
         //Mögliche Talente Fighting
         public static String TalentClose        = "close";
-        public static String TalentWeaponless = "weaponless";
-        public static String TalentRange = "range;";
+        public static String TalentWeaponless   = "weaponless";
+        public static String TalentRange        = "range";
     }
 }
