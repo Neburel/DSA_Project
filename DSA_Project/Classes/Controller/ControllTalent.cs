@@ -67,6 +67,7 @@ namespace DSA_Project
         private void loadTalents(String ResourcePath)
         {
             loadGeneralTalents(ResourcePath);
+            loadFightingTalent(ResourcePath);
         }
         private void loadGeneralTalents(String ResourcePath)
         {
@@ -102,7 +103,35 @@ namespace DSA_Project
                 }
             }
         }
-        public void loadTalent<T>(LoadXMLTalentFile_ loader, String[] files) where T: TalentGeneral
+        private void loadFightingTalent(String ResourcePath)
+        {
+            LoadXMLTalentFile_ loader = new LoadXMLTalentFile_();
+            String TalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.FightTalentFilesSystemLocation);
+            List<String> dirs = new List<String>(Directory.EnumerateDirectories(TalentFileSystemLocation));
+
+            for (int i = 0; i < dirs.Count; i++)
+            {
+                String folder = dirs[i].Substring(dirs[i].LastIndexOf('\\') + 1);
+                String deepFolder = Path.Combine(TalentFileSystemLocation, dirs[i]);
+                String[] files = Directory.GetFiles(deepFolder);
+
+                if (0 == String.Compare(folder, ManagmentSaveStrings.TalentRange))
+                {
+                    loadTalent<TalentRange>(loader, files);
+                }
+                else
+                if (0 == String.Compare(folder, ManagmentSaveStrings.TalentWeaponless))
+                {
+                    loadTalent<TalentWeaponless>(loader, files);
+                }
+                else
+                if (0 == String.Compare(folder, ManagmentSaveStrings.TalentClose))
+                {
+                    loadTalent<TalentClose>(loader, files);
+                }
+            }
+        }
+        public void loadTalent<T>(LoadXMLTalentFile_ loader, String[] files) where T: InterfaceTalent
         {
             List<InterfaceTalent> list = new List<InterfaceTalent>();
             Type type = typeof(T);
@@ -113,6 +142,8 @@ namespace DSA_Project
             }
             TalentDictonary.Add(type, list);
         }
+
+
 
         private Dictionary<Tenum, List<InterfaceTalent>> loadGeneralTalents<Tenum>(String FileSystemLocation, Tenum xenum) where Tenum : struct, IComparable, IFormattable, IConvertible
         {

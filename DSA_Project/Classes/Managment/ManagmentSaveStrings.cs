@@ -23,11 +23,15 @@ namespace DSA_Project
         public static String PictureFileSystemLocation          = "PicturesDiv";
 
         //###############################################################################################
-        //Mögliche Talente
+        //Mögliche Talente General
         public static String TalentCrafting     = "crafting";
         public static String TalentKnowldage    = "knowldage";
         public static String TalentNature       = "nature";
         public static String TalentPhysical     = "physical";
         public static String TalentSocial       = "social";
+        //Mögliche Talente Fighting
+        public static String TalentClose        = "close";
+        public static String TalentWeaponless = "weaponless";
+        public static String TalentRange = "range;";
     }
 }

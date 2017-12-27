@@ -314,7 +314,7 @@ namespace DSA_Project
 
             if(AT!=null & PA != null)
             {
-                FightingTalent ftalent = (FightingTalent)talent;
+                TalentFighting ftalent = (TalentFighting)talent;
 
                 int x = 0;
 

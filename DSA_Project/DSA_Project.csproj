@@ -51,7 +51,10 @@
     <Compile Include="Classes\Data\Charakter\Charakter.cs" />
     <Compile Include="Classes\Controller\ControllClass.cs" />
     <Compile Include="Classes\Data\Charakter\Feature.cs" />
-    <Compile Include="Classes\Data\Talente\Fighting\FightingTalent.cs" />
+    <Compile Include="Classes\Data\Talente\Fighting\TalentFighting.cs" />
+    <Compile Include="Classes\Data\Talente\Fighting\TalentRange.cs" />
+    <Compile Include="Classes\Data\Talente\Fighting\TalentWeaponless.cs" />
+    <Compile Include="Classes\Data\Talente\Fighting\TalentClose.cs" />
     <Compile Include="Classes\Data\Talente\Interface_Abstract\notFighting.cs" />
     <Compile Include="Classes\Data\Talente\notFighting\General\TalentPhysical.cs" />
     <Compile Include="Classes\Data\Talente\notFighting\General\TalentNature.cs" />

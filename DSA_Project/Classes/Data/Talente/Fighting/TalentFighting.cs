@@ -6,13 +6,13 @@ using System.Text;
 
 namespace DSA_Project
 {
-    class FightingTalent : Talent<DSA_ADVANCEDVALUES>
+    public class TalentFighting : Talent<DSA_ADVANCEDVALUES>
     {
         bool parade = true;
         private int AT;
         private int PA;
 
-        public FightingTalent(String name, String be, List<TalentDeviate>diverates, DSA_ADVANCEDVALUES at, bool parade) :base (name, new List<DSA_ADVANCEDVALUES> { at, DSA_ADVANCEDVALUES.PARADE_BASIS }, be, diverates)
+        public TalentFighting(String name, String be, List<TalentDeviate>diverates, DSA_ADVANCEDVALUES at, bool parade) :base (name, new List<DSA_ADVANCEDVALUES> { at, DSA_ADVANCEDVALUES.PARADE_BASIS }, be, diverates)
         {
             AT = 0;
             PA = 0;

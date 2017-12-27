@@ -20,14 +20,55 @@ namespace DSA_Project
         private bool parade = false;
         private DSA_ADVANCEDVALUES attace;
         
-        public T loadFile<T>(String fileName) where T: TalentGeneral
+        private void clear()
+        {
+            TalentName      = "";
+            BE              = "";
+            parade          = false;
+            probe           = new List<DSA_ATTRIBUTE>();
+            diverates       = new List<TalentDeviate>();
+            requirements    = new List<TalentRequirement>();
+
+        }
+
+        public T loadFile<T>(String fileName) where T: InterfaceTalent
+        {
+            clear();
+
+            ConstructorInfo constructor = null;
+            object magicClassObject     = null;
+
+            Type type = typeof(T);
+            Type[] typeArray = null;
+            
+
+            if (typeof(TalentGeneral).IsAssignableFrom(type))
+            {
+                load(fileName);
+                typeArray = new Type[] { typeof(String), typeof(List<DSA_ATTRIBUTE>), typeof(String), typeof(List<TalentDeviate>), typeof(List<TalentRequirement>) };
+                constructor = type.GetConstructor(typeArray);
+                magicClassObject = constructor.Invoke(new object[] { TalentName, probe, BE, diverates, requirements });
+            } else
+            if (typeof(TalentFighting).IsAssignableFrom(type))
+            {
+                load(fileName);
+                typeArray = new Type[] { typeof(String), typeof(String), typeof(List<TalentDeviate>), typeof(DSA_ADVANCEDVALUES), typeof(bool) };
+                constructor = type.GetConstructor(typeArray);
+                magicClassObject = constructor.Invoke(new object[] { TalentName, BE, diverates, attace, parade });
+            }
+            else
+            {
+                throw new Exception("Hierfür nicht Configuriert");
+            }
+            return (T)magicClassObject;
+        }
+        private void load(String fileName)
         {
             XmlDocument talentFile = new XmlDocument();
             talentFile.Load(fileName);
 
             XmlNode TalentLetterElement = talentFile.SelectSingleNode("/" + ManagmentXMLStrings.TalentLetterElement);
             XmlNode TalentElement = TalentLetterElement.SelectSingleNode(ManagmentXMLStrings.TalentElement);
-
 
             foreach (XmlNode node in TalentElement)
             {
@@ -38,16 +79,10 @@ namespace DSA_Project
                     case ManagmentXMLStrings.BE: BE = node.InnerText; break;
                     case ManagmentXMLStrings.Diverates: loadDiverates(node); break;
                     case ManagmentXMLStrings.Requirements: loadRequirements(node); break;
-                    default: throw new Exception("No such case");
+                    case ManagmentXMLStrings.FightingTalent: loadFightingTalent(node); break;
+                    default: throw new Exception("CorrupT File Detected");
                 }
             }
-
-            Type type = typeof(T);
-            Type[] typeArray = new Type[]{ typeof(String), typeof(List<DSA_ATTRIBUTE>), typeof(String), typeof(List<TalentDeviate>), typeof(List<TalentRequirement>) };
-
-            ConstructorInfo constructor = type.GetConstructor(typeArray);
-            object magicClassObject = constructor.Invoke(new object[] { TalentName, probe, BE, diverates, requirements });
-            return (T)magicClassObject;
         }
         private void loadProbe(XmlNode ProbeNode)
         {
@@ -106,5 +141,31 @@ namespace DSA_Project
                 requirements.Add(requirement);
             }
         }
+        private void loadFightingTalent(XmlNode FightingNode)
+        {
+            foreach (XmlNode node in FightingNode)
+            {
+                String[] NamesOFAdvantageElements = Enum.GetNames(typeof(DSA_ADVANCEDVALUES));
+
+                switch (node.Name)
+                {
+                    case ManagmentXMLStrings.attack:
+                        for (int i = 0; i < NamesOFAdvantageElements.Length; i++)
+                        {
+                            if (0 == String.Compare(NamesOFAdvantageElements[i], node.InnerText))
+                            {
+                                attace = (DSA_ADVANCEDVALUES)i;
+                            }
+                        }
+                        break;
+                    case ManagmentXMLStrings.Parade:
+                        parade = Convert.ToBoolean(node.InnerText);
+                        break;
+
+                }
+
+            }
+        }
+
     }
 }

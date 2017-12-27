@@ -698,7 +698,7 @@ namespace DSA_Project
             try
             {
                 int x;
-                FightingTalent ftalent = (FightingTalent)box.SelectedValue;
+                TalentFighting ftalent = (TalentFighting)box.SelectedValue;
 
                 if (!Int32.TryParse(ftalent.getPA(), out x))
                 {
@@ -1006,7 +1006,7 @@ namespace DSA_Project
             for (i = 0; i < SUpportedTalentCOunt; i++)
             {
                 int x = 0;
-                FightingTalent FightingTalent = (FightingTalent)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
+                TalentFighting FightingTalent = (TalentFighting)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
                 if (FightingTalent == null) { break; }
                 talentNameLabels[i].Text = FightingTalent.getName();
                 talentProbeTextBoxs[i].Text = FightingTalent.getProbeStringOne();
@@ -1063,7 +1063,7 @@ namespace DSA_Project
             String Boxnumber = NameString.Substring(BasicString.Length, NameString.Length - BasicString.Length);
             Int32.TryParse(Boxnumber, out BoxNumber);
 
-            FightingTalent talent = (FightingTalent)getTalent(TalentPagegetTalentNumberForBox(BoxNumber));
+            TalentFighting talent = (TalentFighting)getTalent(TalentPagegetTalentNumberForBox(BoxNumber));
             if (talent == null) return;
 
             int result;
@@ -1085,7 +1085,7 @@ namespace DSA_Project
             String Boxnumber = NameString.Substring(BasicString.Length, NameString.Length - BasicString.Length);
             Int32.TryParse(Boxnumber, out BoxNumber);
 
-            FightingTalent talent = (FightingTalent)getTalent(TalentPagegetTalentNumberForBox(BoxNumber));
+            TalentFighting talent = (TalentFighting)getTalent(TalentPagegetTalentNumberForBox(BoxNumber));
             if (talent == null) return;
 
             int result;

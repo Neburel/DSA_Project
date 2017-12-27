@@ -52,7 +52,7 @@ namespace DSA_Project
 
             if (fightingTalent == true)
             {
-                return new FightingTalent(TalentName, BE, diverates, attace, parade);
+                return new TalentFighting(TalentName, BE, diverates, attace, parade);
             }
             return new TalentGeneral(TalentName, probe, BE, diverates, requirements);
 
