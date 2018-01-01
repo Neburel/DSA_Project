@@ -64,13 +64,13 @@
     <Compile Include="Classes\Data\Talente\notFighting\General\TalentGeneral.cs" />
     <Compile Include="Classes\Data\Talente\GiftTalent.cs" />
     <Compile Include="Classes\Data\Talente\Interface_Abstract\InterfaceTalent.cs" />
-    <Compile Include="Classes\Data\Talente\LanguageAbstractTalent.cs" />
-    <Compile Include="Classes\Data\Talente\FontTalent.cs" />
-    <Compile Include="Classes\Data\Talente\LanguageFamily.cs" />
-    <Compile Include="Classes\Data\Talente\LanguageTalent.cs" />
+    <Compile Include="Classes\Data\Talente\Interface_Abstract\LanguageAbstractTalent.cs" />
+    <Compile Include="Classes\Data\Talente\Language\FontTalent.cs" />
+    <Compile Include="Classes\Data\Talente\Language\LanguageFamily.cs" />
+    <Compile Include="Classes\Data\Talente\Language\LanguageTalent.cs" />
     <Compile Include="Classes\Data\Talente\Interface_Abstract\Talent.cs" />
-    <Compile Include="Classes\Data\Talente\TalentDeviate.cs" />
-    <Compile Include="Classes\Data\Talente\TalentRequirement.cs" />
+    <Compile Include="Classes\Data\Talente\01_TalentElemente\TalentDeviate.cs" />
+    <Compile Include="Classes\Data\Talente\01_TalentElemente\TalentRequirement.cs" />
     <Compile Include="Classes\Managment\ManagmentFeature.cs" />
     <Compile Include="Classes\Managment\ManagmentForm.cs" />
     <Compile Include="Classes\Managment\ManagmentXMLStrings.cs" />
@@ -581,20 +581,48 @@
     <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Bergbau.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Chemiker.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Drogenherstellung.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Drohnen Lenken.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Falschspiel.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Hacken.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Holzbearbeitung.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Ingeneurskunst.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Maler.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Navigation.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Prothesenherstellung.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Recyling.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Reperatur.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Synthetiker.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Systemadminstration.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Chemiker.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Drogenherstellung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Drohnen Lenken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Falschspiel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Hacken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Holzbearbeitung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Ingeneurskunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Maler.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Navigation.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Prothesenherstellung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Recyling.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Reperatur.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Synthetiker.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Systemadminstration.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\crafting\Waffenbau.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -875,6 +903,63 @@
     </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\social\Überreden.xml">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Gifts\Empathie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Gifts\Gefahreninstinkt.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Gifts\Geräuschhexerei.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Gifts\Kräfteschub.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Gifts\Magiegespür.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Gifts\Prophezeien.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Gifts\Talentschub.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Gifts\Tierempathie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Gifts\Zwergennase .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Language\EinzelneSprachen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Language\Elfisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Language\Garethi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Language\Geheimschriften.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Language\Geheimsprachen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Language\Orkisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Language\Rissoal.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Language\Thorwalsch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Language\Tulamidya.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\Language\Zwergisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\PNP\SaveGame\merker">

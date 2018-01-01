@@ -1,0 +1,17 @@
+﻿<TalentLetter>
+  <Language-Family>
+    <FamilyName>Rissoal-Familie</FamilyName>
+    <Language>
+      <SpeakingName>Mahrisch</SpeakingName>
+      <SpeakingComplex>20</SpeakingComplex>
+      <FontName>Mahrische Glyphen</FontName>
+      <FontComplex>15</FontComplex>
+    </Language>
+    <Language>
+      <SpeakingName>Rissoal</SpeakingName>
+      <SpeakingComplex>20</SpeakingComplex>
+      <FontName></FontName>
+      <FontComplex></FontComplex>
+    </Language>
+  </Language-Family>
+</TalentLetter>

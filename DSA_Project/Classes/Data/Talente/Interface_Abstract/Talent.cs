@@ -103,5 +103,9 @@ namespace DSA_Project
 
         public override string ToString() { return this.Name; }
 
+        public string getTAWBonus()
+        {
+            return Charakter.getTaWBons(this).ToString();
+        }
     }
 }

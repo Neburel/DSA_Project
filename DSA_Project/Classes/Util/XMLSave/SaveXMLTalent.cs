@@ -19,7 +19,8 @@ namespace DSA_Project
         private static XmlElement Diverates;
         private static XmlElement Requirements;
         private static XmlElement BE;
-
+        
+        /*
         public static void saveXMLTalent(String GeneralTalentFileSystemLocation, String Talentname, DSA_GENERALTALENTS talenttype, List<ListViewItem> probe, List<ListViewItem> requirements, List<ListViewItem> diverates, String BE)
         {
             constructGeneralStrukture(Talentname, BE);
@@ -144,5 +145,6 @@ namespace DSA_Project
         {
             TalentFile.Save(fileName);
         }
+        */
     }
 }

@@ -1,0 +1,19 @@
+﻿<TalentLetter>
+  <Language-Family>
+    <FamilyName>Elfisch-Familie</FamilyName>
+    <Language>
+      <SpeakingName>Isdira</SpeakingName>
+      <SpeakingComplex>15</SpeakingComplex>
+      <SpeakingComplexSecond>21</SpeakingComplexSecond>
+      <FontName>Isdira</FontName>
+      <FontComplex>15</FontComplex>
+    </Language>
+    <Language>
+      <SpeakingName>Asdharia</SpeakingName>
+      <SpeakingComplex>15</SpeakingComplex>
+      <SpeakingComplexSecond>24</SpeakingComplexSecond>
+      <FontName>Asdharia</FontName>
+      <FontComplex>18</FontComplex>
+    </Language>
+  </Language-Family>
+</TalentLetter>

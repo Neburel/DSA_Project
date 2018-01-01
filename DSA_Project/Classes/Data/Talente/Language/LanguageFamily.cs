@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    public class LanguageFamily
+    public class LanguageFamily : InterfaceTalent
     {
-        private String Name; 
+        private Charakter charakter;
+        private String Name;
         private List<LanguageTalent> langageTalentlist;
         private List<FontTalent> fontTalentList;
 
@@ -49,6 +50,51 @@ namespace DSA_Project
         public override string ToString()
         {
             return this.Name;
+        }
+
+        public void setCharacter(Charakter charakter)
+        {
+            this.charakter = charakter;
+        }
+
+        public void setTaw(string taw)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int getProbeCount()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string getBe()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string getTaW()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string getProbeStringOne()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string getProbeStringTwo()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string getDeviateString()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string getTAWBonus()
+        {
+            throw new NotImplementedException();
         }
     }
 }

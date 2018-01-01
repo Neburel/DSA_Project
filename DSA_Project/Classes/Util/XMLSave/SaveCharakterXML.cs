@@ -194,50 +194,37 @@ namespace DSA_Project
             XmlElement GeneralElement = characterFile.CreateElement(ManagmentXMLStrings.GeneralTalent);
             XmlElement FightingElement = characterFile.CreateElement(ManagmentXMLStrings.FightingTalent);
 
-            int i = 0;
-            foreach (string s in Enum.GetNames(typeof(DSA_GENERALTALENTS)))
-            {
-                InterfaceTalent talent = null;
-                XmlElement TalentElement = characterFile.CreateElement(s);
+            List<InterfaceTalent> talentList = charakter.getallTalentList();
+                       
 
-                int j = 0;
-                while ((talent = charakter.getTalent((DSA_GENERALTALENTS)i, j)) != null)
-                {
-                    saveTalent(talent, characterFile, TalentElement);
-                    j++;
-                }
-                i++;
-                GeneralElement.AppendChild(TalentElement);
-            }
-            i = 0;
-            foreach (string s in Enum.GetNames(typeof(DSA_FIGHTINGTALENTS)))
+            for(int i=0; i<talentList.Count; i++)
             {
-                InterfaceTalent talent = null;
-                XmlElement TalentElement = characterFile.CreateElement(s);
-
-                int j = 0;
-                while ((talent = charakter.getTalent((DSA_FIGHTINGTALENTS)i, j)) != null)
+                if(talentList[i] as TalentGeneral != null)
                 {
-                    XmlElement TElement = saveTalent(talent, characterFile, TalentElement);
-                    String pa = ((TalentFighting)talent).getPA();
-                    String at = ((TalentFighting)talent).getAT().ToString();
+                    saveTalent(talentList[i], characterFile, GeneralElement);
+                } else 
+                if(talentList[i] as TalentFighting != null)
+                {
+                    TalentFighting fighting = (TalentFighting)talentList[i];
+                    XmlElement TElement =  saveTalent(talentList[i], characterFile, FightingElement);
+
+                    String pa = fighting.getPA();
+                    String at = fighting.getAT().ToString();
 
                     XmlElement atElement = characterFile.CreateElement(ManagmentXMLStrings.attack);
                     XmlElement paElement = characterFile.CreateElement(ManagmentXMLStrings.Parade);
 
                     TElement.AppendChild(atElement).InnerText = at;
                     TElement.AppendChild(paElement).InnerText = pa;
-
-                    j++;
                 }
-                i++;
-                FightingElement.AppendChild(TalentElement);
+                
             }
+            
 
             //Language
             XmlElement LanguageElement = characterFile.CreateElement(ManagmentXMLStrings.Language);
             int x = charakter.getFamilyCount();
-            for (i = 0; i < x; i++)
+            for (int i = 0; i < x; i++)
             {
                 XmlElement FamilyElement = characterFile.CreateElement(ManagmentXMLStrings.LanguageFamily);
                 LanguageElement.AppendChild(FamilyElement);

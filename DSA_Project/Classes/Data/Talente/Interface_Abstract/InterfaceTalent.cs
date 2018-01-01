@@ -14,6 +14,7 @@ namespace DSA_Project
         String getName();
         String getBe();
         String getTaW();
+        String getTAWBonus();
         String getProbeStringOne();
         String getProbeStringTwo();
         String getDeviateString();

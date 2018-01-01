@@ -19,7 +19,6 @@ namespace DSA_Project
             this.GeneralTalentFileSystemLocation = GeneralTalentFileSystemLocation;
 
             InitializeComponent();
-            comboBoxType.DataSource = Enum.GetValues(typeof(DSA_GENERALTALENTS));
             comboBoxProbe.DataSource = Enum.GetValues(typeof(DSA_ATTRIBUTE));
 
             constructViewBoxes();
@@ -81,9 +80,7 @@ namespace DSA_Project
             List<ListViewItem> probe = new List<ListViewItem>();
             List<ListViewItem> diverate = new List<ListViewItem>();
             List<ListViewItem> requirement = new List<ListViewItem>();
-
-            DSA_GENERALTALENTS type;
-            Enum.TryParse<DSA_GENERALTALENTS>(comboBoxType.Text, out type);
+            
                 
             foreach(ListViewItem item in listProbeView.Items)
             {
@@ -99,7 +96,7 @@ namespace DSA_Project
             }
 
 
-            SaveXMLTalent.saveXMLTalent(GeneralTalentFileSystemLocation, txtTalentName.Text, type, probe, requirement, diverate, txtBE.Text);
+            //SaveXMLTalent.saveXMLTalent(GeneralTalentFileSystemLocation, txtTalentName.Text, type, probe, requirement, diverate, txtBE.Text);
         }
 
         private void btnClear_Click(object sender, EventArgs e)

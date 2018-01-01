@@ -402,6 +402,852 @@
   <data name="talents.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="groupBoxTaWB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="groupBoxTaWB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="groupBoxTaWB.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="talentpageTaWBonus30.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 773</value>
+  </data>
+  <data name="talentpageTaWBonus30.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus30.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="talentpageTaWBonus30.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus30.Name" xml:space="preserve">
+    <value>talentpageTaWBonus30</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus30.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus30.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus30.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="talentpageTaWBonus29.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus29.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 747</value>
+  </data>
+  <data name="talentpageTaWBonus29.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus29.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="talentpageTaWBonus29.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus29.Name" xml:space="preserve">
+    <value>talentpageTaWBonus29</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus29.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus29.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus29.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="talentpageTaWBonus28.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 721</value>
+  </data>
+  <data name="talentpageTaWBonus28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus28.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="talentpageTaWBonus28.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus28.Name" xml:space="preserve">
+    <value>talentpageTaWBonus28</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus28.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus28.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="talentpageTaWBonus27.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 695</value>
+  </data>
+  <data name="talentpageTaWBonus27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus27.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="talentpageTaWBonus27.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus27.Name" xml:space="preserve">
+    <value>talentpageTaWBonus27</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus27.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus27.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="talentpageTaWBonus26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 669</value>
+  </data>
+  <data name="talentpageTaWBonus26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus26.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="talentpageTaWBonus26.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus26.Name" xml:space="preserve">
+    <value>talentpageTaWBonus26</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus26.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus26.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="talentpageTaWBonus25.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 643</value>
+  </data>
+  <data name="talentpageTaWBonus25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus25.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="talentpageTaWBonus25.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus25.Name" xml:space="preserve">
+    <value>talentpageTaWBonus25</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus25.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus25.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="talentpageTaWBonus24.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 617</value>
+  </data>
+  <data name="talentpageTaWBonus24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus24.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="talentpageTaWBonus24.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus24.Name" xml:space="preserve">
+    <value>talentpageTaWBonus24</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus24.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus24.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="talentpageTaWBonus23.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 591</value>
+  </data>
+  <data name="talentpageTaWBonus23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus23.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="talentpageTaWBonus23.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus23.Name" xml:space="preserve">
+    <value>talentpageTaWBonus23</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus23.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus23.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="talentpageTaWBonus22.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 565</value>
+  </data>
+  <data name="talentpageTaWBonus22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus22.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="talentpageTaWBonus22.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus22.Name" xml:space="preserve">
+    <value>talentpageTaWBonus22</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus22.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus22.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="talentpageTaWBonus21.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 539</value>
+  </data>
+  <data name="talentpageTaWBonus21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus21.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="talentpageTaWBonus21.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus21.Name" xml:space="preserve">
+    <value>talentpageTaWBonus21</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus21.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus21.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="talentpageTaWBonus20.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 513</value>
+  </data>
+  <data name="talentpageTaWBonus20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus20.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="talentpageTaWBonus20.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus20.Name" xml:space="preserve">
+    <value>talentpageTaWBonus20</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus20.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus20.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="talentpageTaWBonus19.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 487</value>
+  </data>
+  <data name="talentpageTaWBonus19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus19.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="talentpageTaWBonus19.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus19.Name" xml:space="preserve">
+    <value>talentpageTaWBonus19</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus19.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus19.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="talentpageTaWBonus18.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 461</value>
+  </data>
+  <data name="talentpageTaWBonus18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus18.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="talentpageTaWBonus18.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus18.Name" xml:space="preserve">
+    <value>talentpageTaWBonus18</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus18.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus18.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="talentpageTaWBonus17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 435</value>
+  </data>
+  <data name="talentpageTaWBonus17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus17.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="talentpageTaWBonus17.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus17.Name" xml:space="preserve">
+    <value>talentpageTaWBonus17</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus17.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus17.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="talentpageTaWBonus16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 409</value>
+  </data>
+  <data name="talentpageTaWBonus16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus16.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="talentpageTaWBonus16.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus16.Name" xml:space="preserve">
+    <value>talentpageTaWBonus16</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus16.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus16.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="talentpageTaWBonus15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 383</value>
+  </data>
+  <data name="talentpageTaWBonus15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus15.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="talentpageTaWBonus15.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus15.Name" xml:space="preserve">
+    <value>talentpageTaWBonus15</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus15.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus15.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="talentpageTaWBonus14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 357</value>
+  </data>
+  <data name="talentpageTaWBonus14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus14.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="talentpageTaWBonus14.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus14.Name" xml:space="preserve">
+    <value>talentpageTaWBonus14</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus14.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus14.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="talentpageTaWBonus13.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 331</value>
+  </data>
+  <data name="talentpageTaWBonus13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus13.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="talentpageTaWBonus13.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus13.Name" xml:space="preserve">
+    <value>talentpageTaWBonus13</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus13.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus13.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="talentpageTaWBonus12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 305</value>
+  </data>
+  <data name="talentpageTaWBonus12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus12.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="talentpageTaWBonus12.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus12.Name" xml:space="preserve">
+    <value>talentpageTaWBonus12</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus12.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus12.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="talentpageTaWBonus11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 279</value>
+  </data>
+  <data name="talentpageTaWBonus11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus11.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="talentpageTaWBonus11.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus11.Name" xml:space="preserve">
+    <value>talentpageTaWBonus11</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus11.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus11.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="talentpageTaWBonus10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 253</value>
+  </data>
+  <data name="talentpageTaWBonus10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus10.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="talentpageTaWBonus10.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus10.Name" xml:space="preserve">
+    <value>talentpageTaWBonus10</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus10.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus10.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="talentpageTaWBonus9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 227</value>
+  </data>
+  <data name="talentpageTaWBonus9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus9.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="talentpageTaWBonus9.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus9.Name" xml:space="preserve">
+    <value>talentpageTaWBonus9</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus9.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus9.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="talentpageTaWBonus8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 201</value>
+  </data>
+  <data name="talentpageTaWBonus8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus8.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="talentpageTaWBonus8.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus8.Name" xml:space="preserve">
+    <value>talentpageTaWBonus8</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus8.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus8.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="talentpageTaWBonus7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 175</value>
+  </data>
+  <data name="talentpageTaWBonus7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus7.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="talentpageTaWBonus7.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus7.Name" xml:space="preserve">
+    <value>talentpageTaWBonus7</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus7.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus7.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="talentpageTaWBonus6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 149</value>
+  </data>
+  <data name="talentpageTaWBonus6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus6.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="talentpageTaWBonus6.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus6.Name" xml:space="preserve">
+    <value>talentpageTaWBonus6</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus6.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus6.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="talentpageTaWBonus5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 123</value>
+  </data>
+  <data name="talentpageTaWBonus5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus5.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="talentpageTaWBonus5.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus5.Name" xml:space="preserve">
+    <value>talentpageTaWBonus5</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus5.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus5.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="talentpageTaWBonus4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 97</value>
+  </data>
+  <data name="talentpageTaWBonus4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus4.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="talentpageTaWBonus4.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus4.Name" xml:space="preserve">
+    <value>talentpageTaWBonus4</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus4.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus4.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="talentpageTaWBonus3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 71</value>
+  </data>
+  <data name="talentpageTaWBonus3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="talentpageTaWBonus3.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus3.Name" xml:space="preserve">
+    <value>talentpageTaWBonus3</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus3.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus3.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="talentpageTaWBonus2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 45</value>
+  </data>
+  <data name="talentpageTaWBonus2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="talentpageTaWBonus2.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus2.Name" xml:space="preserve">
+    <value>talentpageTaWBonus2</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus2.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus2.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="talentpageTaWBonus1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="talentpageTaWBonus1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="talentpageTaWBonus1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="talentpageTaWBonus1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="talentpageTaWBonus1.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus1.Name" xml:space="preserve">
+    <value>talentpageTaWBonus1</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus1.Parent" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;talentpageTaWBonus1.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="groupBoxTaWB.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="groupBoxTaWB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>273, 83</value>
+  </data>
+  <data name="groupBoxTaWB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 812</value>
+  </data>
+  <data name="groupBoxTaWB.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="groupBoxTaWB.Text" xml:space="preserve">
+    <value>TaWB</value>
+  </data>
+  <data name="&gt;&gt;groupBoxTaWB.Name" xml:space="preserve">
+    <value>groupBoxTaWB</value>
+  </data>
+  <data name="&gt;&gt;groupBoxTaWB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxTaWB.Parent" xml:space="preserve">
+    <value>talents</value>
+  </data>
+  <data name="&gt;&gt;groupBoxTaWB.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="txtTalentLetterCurrentPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>106, 30</value>
   </data>
@@ -493,7 +1339,7 @@
     <value>talents</value>
   </data>
   <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="groupBoxKampf.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
@@ -2128,7 +2974,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="groupBoxKampf.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1353, 83</value>
+    <value>1371, 83</value>
   </data>
   <data name="groupBoxKampf.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 812</value>
@@ -2149,7 +2995,7 @@
     <value>talents</value>
   </data>
   <data name="&gt;&gt;groupBoxKampf.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="radioButtonRange.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2413,7 +3259,7 @@
     <value>talents</value>
   </data>
   <data name="&gt;&gt;groupBoxTalentLetterTalente.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="groupBoxAbleiten.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
@@ -3148,7 +3994,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="groupBoxAbleiten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1005, 83</value>
+    <value>1023, 83</value>
   </data>
   <data name="groupBoxAbleiten.Size" type="System.Drawing.Size, System.Drawing">
     <value>342, 812</value>
@@ -3169,7 +4015,7 @@
     <value>talents</value>
   </data>
   <data name="&gt;&gt;groupBoxAbleiten.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="groupBoxAnforderungen.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
@@ -3901,7 +4747,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="groupBoxAnforderungen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>675, 83</value>
+    <value>693, 83</value>
   </data>
   <data name="groupBoxAnforderungen.Size" type="System.Drawing.Size, System.Drawing">
     <value>324, 812</value>
@@ -3922,7 +4768,7 @@
     <value>talents</value>
   </data>
   <data name="&gt;&gt;groupBoxAnforderungen.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="groupBoxSpezialisierung.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
@@ -4657,7 +5503,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="groupBoxSpezialisierung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>477, 83</value>
+    <value>495, 83</value>
   </data>
   <data name="groupBoxSpezialisierung.Size" type="System.Drawing.Size, System.Drawing">
     <value>189, 812</value>
@@ -4678,7 +5524,7 @@
     <value>talents</value>
   </data>
   <data name="&gt;&gt;groupBoxSpezialisierung.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="groupBoxBilliger.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
@@ -5503,7 +6349,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="groupBoxBilliger.Location" type="System.Drawing.Point, System.Drawing">
-    <value>405, 83</value>
+    <value>423, 83</value>
   </data>
   <data name="groupBoxBilliger.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 812</value>
@@ -5524,7 +6370,7 @@
     <value>talents</value>
   </data>
   <data name="&gt;&gt;groupBoxBilliger.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="groupBoxBe.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
@@ -6349,7 +7195,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="groupBoxBe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 83</value>
+    <value>360, 83</value>
   </data>
   <data name="groupBoxBe.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 812</value>
@@ -6370,7 +7216,7 @@
     <value>talents</value>
   </data>
   <data name="&gt;&gt;groupBoxBe.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="groupBoxTaW.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
@@ -6439,7 +7285,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw28.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 721</value>
+    <value>6, 721</value>
   </data>
   <data name="PTTaw28.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -6466,7 +7312,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw27.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 695</value>
+    <value>6, 695</value>
   </data>
   <data name="PTTaw27.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -6493,7 +7339,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 669</value>
+    <value>6, 669</value>
   </data>
   <data name="PTTaw26.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -6547,7 +7393,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw24.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 617</value>
+    <value>6, 617</value>
   </data>
   <data name="PTTaw24.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -6628,7 +7474,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 539</value>
+    <value>6, 539</value>
   </data>
   <data name="PTTaw21.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -6655,7 +7501,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 513</value>
+    <value>6, 513</value>
   </data>
   <data name="PTTaw20.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -6682,7 +7528,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 487</value>
+    <value>6, 487</value>
   </data>
   <data name="PTTaw19.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -6736,7 +7582,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 435</value>
+    <value>6, 435</value>
   </data>
   <data name="PTTaw17.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -6763,7 +7609,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 409</value>
+    <value>6, 409</value>
   </data>
   <data name="PTTaw16.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -6790,7 +7636,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 383</value>
+    <value>6, 383</value>
   </data>
   <data name="PTTaw15.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -6817,7 +7663,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 357</value>
+    <value>6, 357</value>
   </data>
   <data name="PTTaw14.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -6844,7 +7690,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 331</value>
+    <value>6, 331</value>
   </data>
   <data name="PTTaw13.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -6871,7 +7717,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 305</value>
+    <value>6, 305</value>
   </data>
   <data name="PTTaw12.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -7006,7 +7852,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 175</value>
+    <value>6, 175</value>
   </data>
   <data name="PTTaw7.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -7033,7 +7879,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 149</value>
+    <value>6, 149</value>
   </data>
   <data name="PTTaw6.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -7060,7 +7906,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 123</value>
+    <value>6, 123</value>
   </data>
   <data name="PTTaw5.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -7087,7 +7933,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 97</value>
+    <value>6, 97</value>
   </data>
   <data name="PTTaw4.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -7114,7 +7960,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 71</value>
+    <value>6, 71</value>
   </data>
   <data name="PTTaw3.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -7141,7 +7987,7 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="PTTaw2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 45</value>
+    <value>6, 45</value>
   </data>
   <data name="PTTaw2.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 20</value>
@@ -7195,7 +8041,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="groupBoxTaW.Location" type="System.Drawing.Point, System.Drawing">
-    <value>280, 83</value>
+    <value>210, 83</value>
   </data>
   <data name="groupBoxTaW.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 812</value>
@@ -7216,7 +8062,7 @@
     <value>talents</value>
   </data>
   <data name="&gt;&gt;groupBoxTaW.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="groupBoxProbe.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
@@ -8851,7 +9697,7 @@
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
   <data name="groupBoxProbe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 83</value>
+    <value>103, 83</value>
   </data>
   <data name="groupBoxProbe.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 812</value>
@@ -8872,7 +9718,7 @@
     <value>talents</value>
   </data>
   <data name="&gt;&gt;groupBoxProbe.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="groupBoxTalentName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9895,7 +10741,7 @@
     <value>talents</value>
   </data>
   <data name="&gt;&gt;groupBoxTalentName.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="talents.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>

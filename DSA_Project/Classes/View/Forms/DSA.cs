@@ -811,6 +811,7 @@ namespace DSA_Project
         private List<TextBox> talentProbeTextBoxs;
         private List<TextBox> talentWürfeTextBoxs;
         private List<TextBox> talentTaWTextBoxes;
+        private List<TextBox> talentpageTaWBonusTextBoxes;
         private List<TextBox> talentBeTextBoxes;
         private List<TextBox> talentBilligerTextBoxes;
         private List<TextBox> talentSpezialisierungTextBoxes;
@@ -818,6 +819,7 @@ namespace DSA_Project
         private List<TextBox> talentAbleitungTextBoxes;
         private List<TextBox> talentATTextBoxes;
         private List<TextBox> talentPATextBoxes;
+        private List<RadioButton> TalentPageRadioButtons;
         private List<RadioButton> TalentPageRadioButtonsGeneralTalents;
         private List<RadioButton> TalentPageRadioButtonsFightingTalents;
         private void setUPTalentPage()
@@ -828,6 +830,7 @@ namespace DSA_Project
             talentProbeTextBoxs = new List<TextBox> { PTProbe1, PTProbe2, PTProbe3, PTProbe4, PTProbe5, PTProbe6, PTProbe7, PTProbe8, PTProbe9, PTProbe10, PTProbe11, PTProbe12, PTProbe13, PTProbe14, PTProbe15, PTProbe16, PTProbe17, PTProbe18, PTProbe19, PTProbe20, PTProbe21, PTProbe22, PTProbe23, PTProbe24, PTProbe25, PTProbe26, PTProbe27, PTProbe28, PTProbe29, PTProbe30 };
             talentWürfeTextBoxs = new List<TextBox> { PTWürfe1, PTWürfe2, PTWürfe3, PTWürfe4, PTWürfe5, PTWürfe6, PTWürfe7, PTWürfe8, PTWürfe9, PTWürfe10, PTWürfe11, PTWürfe12, PTWürfe13, PTWürfe14, PTWürfe15, PTWürfe16, PTWürfe17, PTWürfe18, PTWürfe19, PTWürfe20, PTWürfe21, PTWürfe22, PTWürfe23, PTWürfe24, PTWürfe25, PTWürfe26, PTWürfe27, PTWürfe28, PTWürfe29, PTWürfe30 };
             talentTaWTextBoxes = new List<TextBox> { PTTaw1, PTTaw2, PTTaw3, PTTaw4, PTTaw5, PTTaw6, PTTaw7, PTTaw8, PTTaw9, PTTaw10, PTTaw11, PTTaw12, PTTaw13, PTTaw14, PTTaw15, PTTaw16, PTTaw17, PTTaw18, PTTaw19, PTTaw20, PTTaw21, PTTaw22, PTTaw23, PTTaw24, PTTaw25, PTTaw26, PTTaw27, PTTaw28, PTTaw29, PTTaw30 };
+            talentpageTaWBonusTextBoxes = new List<TextBox> { talentpageTaWBonus1, talentpageTaWBonus2, talentpageTaWBonus3, talentpageTaWBonus4, talentpageTaWBonus5, talentpageTaWBonus6, talentpageTaWBonus7, talentpageTaWBonus8, talentpageTaWBonus9, talentpageTaWBonus10, talentpageTaWBonus11, talentpageTaWBonus12, talentpageTaWBonus13, talentpageTaWBonus14, talentpageTaWBonus15, talentpageTaWBonus16, talentpageTaWBonus17, talentpageTaWBonus18, talentpageTaWBonus19, talentpageTaWBonus20, talentpageTaWBonus21, talentpageTaWBonus22, talentpageTaWBonus23, talentpageTaWBonus24, talentpageTaWBonus25, talentpageTaWBonus26, talentpageTaWBonus27, talentpageTaWBonus28, talentpageTaWBonus29, talentpageTaWBonus30 };
             talentBeTextBoxes = new List<TextBox> { PTBe1, PTBe2, PTBe3, PTBe4, PTBe5, PTBe6, PTBe7, PTBe8, PTBe9, PTBe10, PTBe11, PTBe12, PTBe13, PTBe14, PTBe15, PTBe16, PTBe17, PTBe18, PTBe19, PTBe20, PTBe21, PTBe22, PTBe23, PTBe24, PTBe25, PTBe26, PTBe27, PTBe28, PTBe29, PTBe30 };
             talentBilligerTextBoxes = new List<TextBox> { PTBilliger1, PTBilliger2, PTBilliger3, PTBilliger4, PTBilliger5, PTBilliger6, PTBilliger7, PTBilliger8, PTBilliger9, PTBilliger10, PTBilliger11, PTBilliger12, PTBilliger13, PTBilliger14, PTBilliger15, PTBilliger16, PTBilliger17, PTBilliger18, PTBilliger19, PTBilliger20, PTBilliger21, PTBilliger22, PTBilliger23, PTBilliger24, PTBilliger25, PTBilliger26, PTBilliger27, PTBilliger28, PTBilliger29, PTBilliger30 };
             talentSpezialisierungTextBoxes = new List<TextBox> { PTSpezialisierung1, PTSpezialisierung2, PTSpezialisierung3, PTSpezialisierung4, PTSpezialisierung5, PTSpezialisierung6, PTSpezialisierung7, PTSpezialisierung8, PTSpezialisierung9, PTSpezialisierung10, PTSpezialisierung11, PTSpezialisierung12, PTSpezialisierung13, PTSpezialisierung14, PTSpezialisierung15, PTSpezialisierung16, PTSpezialisierung17, PTSpezialisierung18, PTSpezialisierung19, PTSpezialisierung20, PTSpezialisierung21, PTSpezialisierung22, PTSpezialisierung23, PTSpezialisierung24, PTSpezialisierung25, PTSpezialisierung26, PTSpezialisierung27, PTSpezialisierung28, PTSpezialisierung29, PTSpezialisierung30 };
@@ -840,6 +843,7 @@ namespace DSA_Project
             TalentPageRadioButtonsGeneralTalents = new List<RadioButton> { radioKörperlicheTalente, radioSozialTalente, radioNaturTalente, radioKnowldageTalente, radioCraftingTalent };
             TalentPageRadioButtonsFightingTalents = new List<RadioButton> { radioButtonWeaponless, radioButtonClose, radioButtonRange };
 
+            TalentPageRadioButtons = new List<RadioButton> { radioKörperlicheTalente, radioSozialTalente, radioNaturTalente, radioKnowldageTalente, radioCraftingTalent, radioButtonWeaponless, radioButtonClose, radioButtonRange };
 
             radioKörperlicheTalente.Tag     = new TalentPhysical(null, null, null, null, null);
             radioSozialTalente.Tag          = new TalentSocial(null, null, null, null, null);
@@ -850,7 +854,7 @@ namespace DSA_Project
             radioButtonWeaponless.Tag       = new TalentWeaponless(null, null, null, DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, false);
             radioButtonClose.Tag            = new TalentClose(null, null, null, DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, false);
             radioButtonRange.Tag            = new TalentRange(null, null, null, DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, false);
-
+            
             btnTalentLetterNext.Tag = "+";
             btnTalentLetterLast.Tag = "-";
 
@@ -886,6 +890,7 @@ namespace DSA_Project
                 talentAnforderungsTextBoxes[i].Text = "";
                 talentATTextBoxes[i].Text = "";
                 talentPATextBoxes[i].Text = "";
+                talentpageTaWBonusTextBoxes[i].Text = "";
             }
         }
         private int TalentPagegetTalentNumberForBox(int boxnumber)
@@ -899,12 +904,21 @@ namespace DSA_Project
         private InterfaceTalent getTalent(int number)
         {
             InterfaceTalent talent = null;
+            for(int i=0;  i<TalentPageRadioButtons.Count; i++)
+            {
+                if (TalentPageRadioButtons[i].Checked)
+                {
+                    InterfaceTalent type = (InterfaceTalent)TalentPageRadioButtons[i].Tag;
+                    talent = controll.getTalent_(type, number);
+                }
+            }
 
+            /*
             for (int i = 0; i < TalentPageRadioButtonsGeneralTalents.Count; i++)
             {
                 if (TalentPageRadioButtonsGeneralTalents[i].Checked)
                 {
-                    TalentGeneral talenttype = (TalentGeneral)TalentPageRadioButtonsGeneralTalents[i].Tag;
+                    DSA_GENERALTALENTS talenttype = (DSA_GENERALTALENTS)TalentPageRadioButtonsGeneralTalents[i].Tag;
                     talent = controll.getTalent(talenttype, number);
                     return talent;
                 }
@@ -919,6 +933,7 @@ namespace DSA_Project
                     return talent;
                 }
             }
+            */
             return talent;
         }
         private void btnTalentLetterPage_Click(object sender, EventArgs e)
@@ -970,12 +985,13 @@ namespace DSA_Project
 
             for (i = 0; i < SUpportedTalentCOunt; i++)
             {
-                TalentGeneral talent = (TalentGeneral)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
+                TalentGeneral talent = (TalentGeneral)controll.getTalent_(type, TalentPagegetTalentNumberForBox(i + 1));
                 if (talent == null) { break; }
                 talentNameLabels[i].Text = talent.getName();
                 talentProbeTextBoxs[i].Text = talent.getProbeStringOne();
                 talentWürfeTextBoxs[i].Text = talent.getProbeStringTwo();
                 talentTaWTextBoxes[i].Text = talent.getTaW().ToString();
+                talentpageTaWBonusTextBoxes[i].Text = talent.getTAWBonus();
                 talentBeTextBoxes[i].Text = talent.getBe().ToString();
                 talentSpezialisierungTextBoxes[i].Text = "";
                 talentAbleitungTextBoxes[i].Text = talent.getDeviateString();
@@ -984,7 +1000,8 @@ namespace DSA_Project
 
             groupBoxProbe.Left = groupBoxTalentName.Right + 5;
             groupBoxTaW.Left = groupBoxProbe.Right + 5;
-            groupBoxBe.Left = groupBoxTaW.Right + 5;
+            groupBoxTaWB.Left = groupBoxTaW.Right + 5;
+            groupBoxBe.Left = groupBoxTaWB.Right + 5;
             groupBoxBilliger.Left = groupBoxBe.Right + 5;
             groupBoxSpezialisierung.Left = groupBoxBilliger.Right + 5;
             groupBoxAnforderungen.Left = groupBoxSpezialisierung.Right + 5;
@@ -999,7 +1016,7 @@ namespace DSA_Project
             RadioButton button = (RadioButton)sender;
             if (button.Checked == false) return;
 
-            DSA_FIGHTINGTALENTS type = (DSA_FIGHTINGTALENTS)button.Tag;
+            InterfaceTalent type = (InterfaceTalent)button.Tag;
 
             groupBoxAnforderungen.Visible = false;
             groupBoxKampf.Visible = true;
@@ -1007,12 +1024,13 @@ namespace DSA_Project
             for (i = 0; i < SUpportedTalentCOunt; i++)
             {
                 int x = 0;
-                TalentFighting FightingTalent = (TalentFighting)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
+                TalentFighting FightingTalent = (TalentFighting)controll.getTalent_(type, TalentPagegetTalentNumberForBox(i + 1));
                 if (FightingTalent == null) { break; }
                 talentNameLabels[i].Text = FightingTalent.getName();
                 talentProbeTextBoxs[i].Text = FightingTalent.getProbeStringOne();
                 talentWürfeTextBoxs[i].Text = FightingTalent.getProbeStringTwo();
                 talentTaWTextBoxes[i].Text = FightingTalent.getTaW().ToString();
+                talentpageTaWBonusTextBoxes[i].Text = FightingTalent.getTAWBonus();
                 talentBeTextBoxes[i].Text = FightingTalent.getBe().ToString();
                 talentSpezialisierungTextBoxes[i].Text = "";
                 talentAbleitungTextBoxes[i].Text = FightingTalent.getDeviateString();
@@ -1027,7 +1045,8 @@ namespace DSA_Project
             }
             groupBoxProbe.Left = groupBoxTalentName.Right + 5;
             groupBoxTaW.Left = groupBoxProbe.Right + 5;
-            groupBoxKampf.Left = groupBoxTaW.Right + 5;
+            groupBoxTaWB.Left = groupBoxTaW.Right + 5;
+            groupBoxKampf.Left = groupBoxTaWB.Right + 5;
             groupBoxBe.Left = groupBoxKampf.Right + 5;
             groupBoxBilliger.Left = groupBoxBe.Right + 5;
             groupBoxSpezialisierung.Left = groupBoxBilliger.Right + 5;
@@ -1109,6 +1128,7 @@ namespace DSA_Project
         private List<TextBox> LanguagePageFontComplexTextBoxes;
         private List<TextBox> LanguagePageFontTaWTextBoxes;
         private List<TextBox> LanguagePageFontProbeTextBoxes;
+
         private void setUPLanguagePage()
         {
             LanguagePageLanguageNameTextBoxes       = new List<TextBox> { txtLanguagePageLanguageName1, txtLanguagePageLanguageName2, txtLanguagePageLanguageName3, txtLanguagePageLanguageName4, txtLanguagePageLanguageName5, txtLanguagePageLanguageName6, txtLanguagePageLanguageName7, txtLanguagePageLanguageName8, txtLanguagePageLanguageName9, txtLanguagePageLanguageName10, txtLanguagePageLanguageName11, txtLanguagePageLanguageName12, txtLanguagePageLanguageName13, txtLanguagePageLanguageName14, txtLanguagePageLanguageName15, txtLanguagePageLanguageName16, txtLanguagePageLanguageName17, txtLanguagePageLanguageName18, txtLanguagePageLanguageName19, txtLanguagePageLanguageName20, txtLanguagePageLanguageName21, txtLanguagePageLanguageName22, txtLanguagePageLanguageName23, txtLanguagePageLanguageName24, txtLanguagePageLanguageName25, txtLanguagePageLanguageName26, txtLanguagePageLanguageName27, txtLanguagePageLanguageName28, txtLanguagePageLanguageName29, txtLanguagePageLanguageName30 };
@@ -1268,8 +1288,7 @@ namespace DSA_Project
 
             for (int i = 0; i < supportedRewardBoxes; i++)
             {
-                number = number + i;
-                Feature feature = controll.FeatureExisting(number, DSA_FEATURES.VORTEIL);
+                Feature feature = controll.FeatureExisting(number+i, DSA_FEATURES.VORTEIL);
                 if (feature != null)
                 {
                     rewardNameBoxes[i].Text = feature.getName();
@@ -1345,6 +1364,16 @@ namespace DSA_Project
         }
 
         private void textBox30_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBoxTaW_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBoxProbe_Enter(object sender, EventArgs e)
         {
 
         }

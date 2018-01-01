@@ -259,17 +259,16 @@ namespace DSA_Project
                         case ManagmentXMLStrings.TAW: TaWBonus = node.InnerText; break;
                     }
                 }
-                for(int i=0; i<listTalente.Count; i++)
-                {
-                    if(0==String.Compare(listTalente[i].getName(), name))
-                    {
-                        talent = listTalente[i];
-                        break;
-                    }
-                }
+                talent = charakter.getTalent(name);
 
-                int x;
+                
+                int x = 0;
                 Int32.TryParse(TaWBonus, out x);
+
+                if(talent == null)
+                {
+                    throw new Exception("Talent darf nicht null sein");
+                }
 
                 feature.addTalent(talent, x);
             }
@@ -281,13 +280,13 @@ namespace DSA_Project
             {
                 switch (TalentType.Name)
                 {
-                    case (ManagmentXMLStrings.GeneralTalent): loadTalent(TalentType, charakter); break;
-                    case (ManagmentXMLStrings.FightingTalent): loadTalent(TalentType, charakter); break;
+                    case (ManagmentXMLStrings.GeneralTalent): loadTalent_(TalentType, charakter); break;
+                    case (ManagmentXMLStrings.FightingTalent): loadTalent_(TalentType, charakter); break;
                     case (ManagmentXMLStrings.Language): loadTalentLanguage(TalentType, charakter); break;
                 }
             }
         }
-        private static void loadTalent<Tenum>(XmlNode TalentNode, Tenum type,  Charakter charakter) where Tenum : struct, IComparable, IFormattable, IConvertible
+        private static void loadTalent(XmlNode TalentNode, Charakter charakter)
         {
             String Name = null;
             String Taw = null;
@@ -308,7 +307,7 @@ namespace DSA_Project
 
             Name = Name.Replace(".", " ");
 
-            InterfaceTalent talent = charakter.getTalent(type, Name);
+            InterfaceTalent talent = charakter.getTalent(Name);
             if (talent == null) return;
             talent.setTaw(Taw);            
 
@@ -326,27 +325,13 @@ namespace DSA_Project
             }
             
         }
-        private static void loadTalent(XmlNode TalentNode, Charakter charakter)
+        private static void loadTalent_(XmlNode TalentNode, Charakter charakter)
         {
             foreach (XmlNode CatecorieNode in TalentNode)
             {
-                DSA_GENERALTALENTS Gtype;
-                DSA_FIGHTINGTALENTS FType;
-
-                if (Enum.TryParse(CatecorieNode.Name, out Gtype))
+                foreach (XmlNode Talent in CatecorieNode)
                 {
-                    foreach (XmlNode Talent in CatecorieNode)
-                    {
-                        loadTalent(Talent, Gtype, charakter);
-                    }
-                }
-                else
-                if (Enum.TryParse(CatecorieNode.Name, out FType))
-                {
-                    foreach (XmlNode Talent in CatecorieNode)
-                    {
-                        loadTalent(Talent, FType, charakter);
-                    }
+                    loadTalent(Talent, charakter);
                 }
             }
         }

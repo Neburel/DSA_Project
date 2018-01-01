@@ -19,7 +19,8 @@ namespace DSA_Project
 
             InitializeComponent();
 
-            comboBoxType.DataSource = Enum.GetValues(typeof(DSA_FIGHTINGTALENTS));
+
+            //comboBoxType.DataSource = Enum.GetValues(typeof(DSA_FIGHTINGTALENTS));
             comboBoxParade.DataSource = new List<Boolean> { true, false };
 
             createViews();
@@ -48,9 +49,7 @@ namespace DSA_Project
         private void btnSave_Click(object sender, EventArgs e)
         {
             List<ListViewItem> diverate = new List<ListViewItem>();
-
-            DSA_FIGHTINGTALENTS type;
-            Enum.TryParse<DSA_FIGHTINGTALENTS>(comboBoxType.Text, out type);
+            
            
             foreach (ListViewItem item in listViewDiverate.Items)
             {
@@ -59,7 +58,7 @@ namespace DSA_Project
 
             Boolean boolean = (Boolean)comboBoxParade.SelectedValue;
 
-            SaveXMLTalent.saveXMLTalent(FightingTalentsFileSystemLocation, txtTalentName.Text, type, diverate, txtBE.Text, boolean);
+            //SaveXMLTalent.saveXMLTalent(FightingTalentsFileSystemLocation, txtTalentName.Text, type, diverate, txtBE.Text, boolean);
         }
 
         private void btnClear_Click(object sender, EventArgs e)

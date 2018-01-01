@@ -296,18 +296,17 @@ namespace DSA_Project
         }
         //###################################################################################################################################
         //Talente
-        public InterfaceTalent getTalent(InterfaceTalent type, int number)
+        public InterfaceTalent getTalent_(InterfaceTalent type, int number)
         {
             return Charakter.getTalent(type, number);
         }
-
         public List<InterfaceTalent> getTalent()
         {
             return Charakter.getAllTalentList();
         }
-        public InterfaceTalent getTalent<Tenum>(Tenum type, int number) where Tenum : struct, IComparable, IFormattable, IConvertible
+        public List<InterfaceTalent> getallTalentList()
         {
-            return Charakter.getTalent(type, number);
+            return Charakter.getallTalentList();
         }
         //###################################################################################################################################
         //LanguagePage
