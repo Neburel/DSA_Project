@@ -296,13 +296,9 @@ namespace DSA_Project
         }
         //###################################################################################################################################
         //Talente
-        public InterfaceTalent getTalent_(InterfaceTalent type, int number)
+        public InterfaceTalent getTalent(InterfaceTalent type, int number)
         {
             return Charakter.getTalent(type, number);
-        }
-        public List<InterfaceTalent> getTalent()
-        {
-            return Charakter.getAllTalentList();
         }
         public List<InterfaceTalent> getallTalentList()
         {

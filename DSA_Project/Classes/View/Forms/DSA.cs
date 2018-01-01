@@ -586,7 +586,7 @@ namespace DSA_Project
 
             for (int i = 0; i < HeroPagetalentBoxComboBoxChose.Count; i++)
             {
-                HeroPagetalentBoxComboBoxChose[i].DataSource = controll.getTalent();
+                HeroPagetalentBoxComboBoxChose[i].DataSource = controll.getallTalentList();
                 HeroPagetalentBoxComboBoxChose[i].AutoCompleteMode = AutoCompleteMode.Suggest;
                 HeroPagetalentBoxComboBoxChose[i].TextChanged += new EventHandler(setTalentBoxChose);
             }
@@ -861,6 +861,11 @@ namespace DSA_Project
             btnTalentLetterNext.Click += new EventHandler(btnTalentLetterPage_Click);
             btnTalentLetterLast.Click += new EventHandler(btnTalentLetterPage_Click);
 
+            for(int i=0; i<SUpportedTalentCOunt; i++)
+            {
+                talentpageTaWBonusTextBoxes[i].BackColor = SystemColors.InactiveBorder;
+                talentpageTaWBonusTextBoxes[i].ReadOnly = true;
+            }
             for (int i = 0; i < TalentPageRadioButtonsGeneralTalents.Count; i++)
             {
                 TalentPageRadioButtonsGeneralTalents[i].CheckedChanged += new EventHandler(TalentPageGeneralTalentRadioButtonChanged);
@@ -909,7 +914,7 @@ namespace DSA_Project
                 if (TalentPageRadioButtons[i].Checked)
                 {
                     InterfaceTalent type = (InterfaceTalent)TalentPageRadioButtons[i].Tag;
-                    talent = controll.getTalent_(type, number);
+                    talent = controll.getTalent(type, number);
                 }
             }
 
@@ -985,7 +990,7 @@ namespace DSA_Project
 
             for (i = 0; i < SUpportedTalentCOunt; i++)
             {
-                TalentGeneral talent = (TalentGeneral)controll.getTalent_(type, TalentPagegetTalentNumberForBox(i + 1));
+                TalentGeneral talent = (TalentGeneral)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
                 if (talent == null) { break; }
                 talentNameLabels[i].Text = talent.getName();
                 talentProbeTextBoxs[i].Text = talent.getProbeStringOne();
@@ -1024,7 +1029,7 @@ namespace DSA_Project
             for (i = 0; i < SUpportedTalentCOunt; i++)
             {
                 int x = 0;
-                TalentFighting FightingTalent = (TalentFighting)controll.getTalent_(type, TalentPagegetTalentNumberForBox(i + 1));
+                TalentFighting FightingTalent = (TalentFighting)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
                 if (FightingTalent == null) { break; }
                 talentNameLabels[i].Text = FightingTalent.getName();
                 talentProbeTextBoxs[i].Text = FightingTalent.getProbeStringOne();
@@ -1071,6 +1076,14 @@ namespace DSA_Project
             talent.setTaw(box.Text);
             box.Text = talent.getTaW().ToString();
             talentProbeTextBoxs[BoxNumber - 1].Text = talent.getProbeStringOne();
+        }
+        private void TAWBChange(object sender, EventArgs e)
+        {
+            TextBox box = (TextBox)sender;
+            int number = getBoxNumber("talentpageTaWBonus", box.Name);
+            InterfaceTalent talent = getTalent(TalentPagegetTalentNumberForBox(number));
+            if (talent == null) return;
+            box.Text = talent.getTAWBonus();
         }
         private void ATChanged(object sender, EventArgs e)
         {
@@ -1347,12 +1360,7 @@ namespace DSA_Project
         {
 
         }
-
-        private void TAWChange(object sender, KeyEventArgs e)
-        {
-
-        }
-
+        
         private void groupBox6_Enter(object sender, EventArgs e)
         {
 
