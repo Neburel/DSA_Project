@@ -1333,47 +1333,5 @@ namespace DSA_Project
             Console.WriteLine(BoxNumber);
         }
         //#########################################################################################################################################################################
-
-
-
-        private void Language_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Heldenbrief_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        
-        private void groupBox6_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox7_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox30_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBoxTaW_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBoxProbe_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -2908,7 +2908,6 @@
             this.groupBoxTaW.Controls.Add(this.PTTaw1);
             this.groupBoxTaW.Name = "groupBoxTaW";
             this.groupBoxTaW.TabStop = false;
-            this.groupBoxTaW.Enter += new System.EventHandler(this.groupBoxTaW_Enter);
             // 
             // PTTaw30
             // 
@@ -3181,7 +3180,6 @@
             this.groupBoxProbe.Controls.Add(this.PTProbe1);
             this.groupBoxProbe.Name = "groupBoxProbe";
             this.groupBoxProbe.TabStop = false;
-            this.groupBoxProbe.Enter += new System.EventHandler(this.groupBoxProbe_Enter);
             // 
             // PTWürfe29
             // 
@@ -3912,7 +3910,6 @@
             this.Heldenbrief.Controls.Add(this.lblName);
             resources.ApplyResources(this.Heldenbrief, "Heldenbrief");
             this.Heldenbrief.Name = "Heldenbrief";
-            this.Heldenbrief.Click += new System.EventHandler(this.Heldenbrief_Click);
             // 
             // lblFreeValue7
             // 
@@ -5875,7 +5872,6 @@
             this.Language.ForeColor = System.Drawing.SystemColors.ControlText;
             resources.ApplyResources(this.Language, "Language");
             this.Language.Name = "Language";
-            this.Language.Click += new System.EventHandler(this.Language_Click);
             // 
             // groupBox15
             // 
@@ -6823,7 +6819,6 @@
             // 
             resources.ApplyResources(this.txtLanguagePageLanguageProbe3, "txtLanguagePageLanguageProbe3");
             this.txtLanguagePageLanguageProbe3.Name = "txtLanguagePageLanguageProbe3";
-            this.txtLanguagePageLanguageProbe3.TextChanged += new System.EventHandler(this.textBox30_TextChanged);
             // 
             // txtLanguagePageLanguageProbe2
             // 
@@ -7242,7 +7237,6 @@
             this.groupBox7.Controls.Add(this.txtLanguagePageLanguageMother1);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.TabStop = false;
-            this.groupBox7.Enter += new System.EventHandler(this.groupBox7_Enter);
             // 
             // txtLanguagePageLanguageMother30
             // 
@@ -7429,7 +7423,6 @@
             this.groupBox6.Controls.Add(this.txtLanguagePageLanguageName1);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.TabStop = false;
-            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
             // 
             // txtLanguagePageLanguageName30
             // 
