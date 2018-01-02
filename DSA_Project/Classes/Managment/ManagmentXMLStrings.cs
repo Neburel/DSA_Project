@@ -9,6 +9,9 @@ namespace DSA_Project
     static public class ManagmentXMLStrings
     {
         public static String XML                    = "xml";
+        public const String SaveFile                = "SaveFile";
+        public const String Version                 = "Version";
+        public const String VersionsNumber          = "2.0";
 
         public const String CharacterBogenElement   = "CharacterBogen";
         public const String HeldenBriefElement      = "HeldenBrief";

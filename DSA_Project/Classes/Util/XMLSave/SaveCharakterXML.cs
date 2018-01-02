@@ -12,6 +12,8 @@ namespace DSA_Project
         public static void saveCharakter(Charakter charakter, string fileName)
         {
             XmlDocument characterFile = new XmlDocument();
+            XmlElement SaveFile = characterFile.CreateElement(ManagmentXMLStrings.SaveFile);
+            XmlElement Version = characterFile.CreateElement(ManagmentXMLStrings.Version);
             XmlElement CharakterBogenElement = characterFile.CreateElement(ManagmentXMLStrings.CharacterBogenElement);
             XmlElement HeldenBriefElement = characterFile.CreateElement(ManagmentXMLStrings.HeldenBriefElement);
             XmlElement BasisDatenElement = characterFile.CreateElement(ManagmentXMLStrings.BasisDatenElement);
@@ -34,7 +36,9 @@ namespace DSA_Project
             saveTalents(charakter, characterFile, TalentBriefElement);
             saveAdventurePoints(charakter, AdvanturePoints);
 
-            characterFile.AppendChild(CharakterBogenElement);
+            characterFile.AppendChild(SaveFile);
+            SaveFile.AppendChild(Version).InnerText = ManagmentXMLStrings.VersionsNumber;
+            SaveFile.AppendChild(CharakterBogenElement);
             CharakterBogenElement.AppendChild(HeldenBriefElement);
             HeldenBriefElement.AppendChild(BasisDatenElement);
             HeldenBriefElement.AppendChild(AttributeElement);
