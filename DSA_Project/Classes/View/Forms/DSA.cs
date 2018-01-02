@@ -14,18 +14,7 @@ namespace DSA_Project
     public partial class DSA : Form
     {
         private ControllClass controll;
-
-        public struct TestTag<T> where T : InterfaceTalent
-        {
-            public T type;
-
-            public TestTag(T type)
-            {
-                this.type = type;
-            }
-        }
-
-
+        
         System.Drawing.Image backround = (System.Drawing.Image) DSA_Project.Properties.Resources.Old_Parchment_Wallpaper_15;
 
         public DSA()
@@ -83,6 +72,7 @@ namespace DSA_Project
             loadRewardPageRewards();
             loadLanguagePage();
 
+            refreshTalentPage();
             refreshHeroPageAdvancedValues();
         }
         public void refreshHeroPage()
