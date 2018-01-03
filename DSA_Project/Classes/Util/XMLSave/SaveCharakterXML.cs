@@ -226,6 +226,7 @@ namespace DSA_Project
             
 
             //Language
+            /*
             XmlElement LanguageElement = characterFile.CreateElement(ManagmentXMLStrings.Language);
             int x = charakter.getFamilyCount();
             for (int i = 0; i < x; i++)
@@ -265,13 +266,12 @@ namespace DSA_Project
                     underLanguage.AppendChild(FTName);
                     underLanguage.AppendChild(TaWElement2);
                 }
-
-
             }
+            */
 
             element.AppendChild(GeneralElement);
             element.AppendChild(FightingElement);
-            element.AppendChild(LanguageElement);
+            //element.AppendChild(LanguageElement);
         }
         private static XmlElement saveTalent(InterfaceTalent talent, XmlDocument characterFile, XmlElement element)
         {

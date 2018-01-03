@@ -1158,20 +1158,78 @@ namespace DSA_Project
                 LanguagePageLanguageMotherTextBoxes[i].KeyUp += setMotherMark;
             }
 
-            comboBoxLanguagePageSelection.DataSource = controll.getLanguageFamilyList();
-            comboBoxLanguagePageSelection.SelectedValueChanged += setLanguagePageComboBox;
+            loadLanguagePage();
         }
         private void loadLanguagePage()
         {
-            comboBoxLanguagePageSelection.DataSource = controll.getLanguageFamilyList();
+            LanguageTalent Typelanguage = new LanguageTalent("Type", "", 0, 0);
+
+            List<InterfaceTalent> InterfaceTalentList = controll.getTalentList(Typelanguage);
+            List<LanguageTalent> languageTalentList = new List<LanguageTalent>();
+            for(int i=0; i<InterfaceTalentList.Count; i++)
+            {
+                languageTalentList.Add((LanguageTalent)InterfaceTalentList[i]);
+            }
+
+            Dictionary<String, List<LanguageTalent>> dictonary = new Dictionary<String, List<LanguageTalent>>();
+            
+            if (languageTalentList == null) return;
+
+            for (int i = 0; i < languageTalentList.Count; i++)
+            {
+                List<LanguageTalent> talentList = null;
+                String FamilyName = ((LanguageTalent)languageTalentList[i]).getFamilyName();
+                if (!dictonary.TryGetValue(FamilyName, out talentList))
+                {
+                    talentList = new List<LanguageTalent>();
+                    dictonary.Add(FamilyName, talentList);
+                }
+                talentList.Add((LanguageTalent)languageTalentList[i]);
+            }
+            //Sort Dictonary
+            foreach (List<LanguageTalent> list in dictonary.Values)
+            {
+                bool hit = true;
+                while (hit == true)
+                {
+                    hit = false;
+                    for (int i = 0; i < list.Count; i++)
+                    {
+                        LanguageTalent talent = (LanguageTalent)list[i];
+                        int pos = talent.getPOS() - 1;
+                        LanguageTalent talent2 = (LanguageTalent)list[pos];
+                        int poscurrent = ((LanguageTalent)list[pos]).getPOS() - 1;
+                        if (pos != -1 && pos != poscurrent && talent != talent2)
+                        {
+
+                            if (talent != talent2)
+                            {
+                                list[pos] = talent;
+                                list[i] = talent2;
+                                hit = true;
+                            }
+                        }
+                        else
+                        if (pos == poscurrent && pos != -1 && i != pos)
+                        {
+                            throw new Exception("Language Files Currupted, Talent1:" + talent.getName() + " Talent2:" + talent2.getName());
+                        }
+                    }
+                }
+            }
+            
+
+            comboBoxLanguagePageSelection.DataSource = new BindingSource(dictonary, null);
+            comboBoxLanguagePageSelection.DisplayMember = "Key";
+            comboBoxLanguagePageSelection.SelectedValueChanged += setLanguagePageComboBox;
         }
-        private void setBoxes(LanguageFamily family)
+        private void setBoxes(List<LanguageTalent> list)
         {
             int i = 0;
-            for (i = 0; i < family.count(); i++)
+            for (i = 0; i < list.Count; i++)
             {
-                LanguageTalent lt = family.getlanguageTalent(i);
-                FontTalent ft = family.getFontTalent(i);
+                LanguageTalent lt = list[i];
+                LanguageAbstractTalent ft = lt.getLanguagePartnerTalent(); 
 
                 txtLanguagePageLanguageProbe.Text = lt.getProbeStringTwo();
                 txtLanguagePageFontProbe.Text = ft.getProbeStringTwo();
@@ -1221,16 +1279,18 @@ namespace DSA_Project
         }
         private void setLanguagePageComboBox(Object sender, EventArgs e)
         {
-            LanguageFamily family = (LanguageFamily)comboBoxLanguagePageSelection.SelectedValue;
-            setBoxes(family);
+            KeyValuePair<String, List<LanguageTalent>> dictonary = (KeyValuePair<String, List<LanguageTalent>> )comboBoxLanguagePageSelection.SelectedValue;
+            List<LanguageTalent> list = dictonary.Value;
+            setBoxes(list);
         }
         private void setLanguagePageTaWLanguage(Object sender, EventArgs e)
         {
             TextBox box = (TextBox)sender;
             int i = (int)box.Tag;
 
-            LanguageFamily family = (LanguageFamily)comboBoxLanguagePageSelection.SelectedValue;
-            LanguageTalent lt = family.getlanguageTalent(i);
+            KeyValuePair<String, List<LanguageTalent>> dictonary = (KeyValuePair<String, List<LanguageTalent>>)comboBoxLanguagePageSelection.SelectedValue;
+            List<LanguageTalent> list = dictonary.Value;
+            LanguageTalent lt = list[i];
 
             lt.setTaw(box.Text);
 
@@ -1244,8 +1304,9 @@ namespace DSA_Project
             TextBox box = (TextBox)sender;
             int i = (int)box.Tag;
 
-            LanguageFamily family = (LanguageFamily)comboBoxLanguagePageSelection.SelectedValue;
-            FontTalent ft = family.getFontTalent(i);
+            KeyValuePair<String, List<LanguageTalent>> dictonary = (KeyValuePair<String, List<LanguageTalent>>)comboBoxLanguagePageSelection.SelectedValue;
+            List<LanguageTalent> list = dictonary.Value;
+            FontTalent ft = (FontTalent)list[i].getLanguagePartnerTalent();
 
             ft.setTaw(box.Text);
 
@@ -1259,8 +1320,9 @@ namespace DSA_Project
             TextBox box = (TextBox)sender;
             int i = (int)box.Tag;
 
-            LanguageFamily family = (LanguageFamily)comboBoxLanguagePageSelection.SelectedValue;
-            LanguageTalent lt = family.getlanguageTalent(i);
+            KeyValuePair<String, List<LanguageTalent>> dictonary = (KeyValuePair<String, List<LanguageTalent>>)comboBoxLanguagePageSelection.SelectedValue;
+            List<LanguageTalent> list = dictonary.Value;
+            LanguageTalent lt = list[i];
 
             lt.setMotherMark(LanguagePageLanguageMotherTextBoxes[i].Text);
             LanguagePageLanguageMotherTextBoxes[i].Text = lt.getMotherMark();

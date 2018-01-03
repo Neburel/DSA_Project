@@ -12,6 +12,8 @@ namespace DSA_Project
     {
         private String[] AttributeNames = Enum.GetNames(typeof(DSA_ATTRIBUTE));
 
+        int pos = 0;
+        //Einfache Talente
         private string TalentName;
         private List<DSA_ATTRIBUTE> probe               = new List<DSA_ATTRIBUTE>();
         private List<TalentDeviate> diverates           = new List<TalentDeviate>();
@@ -19,9 +21,20 @@ namespace DSA_Project
         private string BE = "";
         private bool parade = false;
         private DSA_ADVANCEDVALUES attace;
-        
+
+        //Language
+        String FamilyName = "";
+        String speakingName = "";
+        String fontName = "";
+        int speakingComplex = 0;
+        int speakingComplex2 = 0;
+        int fontComplex = 0;
+        int fontComplex2 = 0;
+
         private void clear()
         {
+            pos = 0;
+
             TalentName      = "";
             BE              = "";
             parade          = false;
@@ -29,6 +42,13 @@ namespace DSA_Project
             diverates       = new List<TalentDeviate>();
             requirements    = new List<TalentRequirement>();
 
+            FamilyName = "";
+            speakingName = "";
+            fontName = "";
+            speakingComplex = 0;
+            speakingComplex2 = 0;
+            fontComplex = 0;
+            fontComplex2 = 0;
         }
 
         public T loadFile<T>(String fileName) where T: InterfaceTalent
@@ -40,21 +60,51 @@ namespace DSA_Project
 
             Type type = typeof(T);
             Type[] typeArray = null;
-            
+            load(fileName);
 
             if (typeof(TalentGeneral).IsAssignableFrom(type))
             {
-                load(fileName);
                 typeArray = new Type[] { typeof(String), typeof(List<DSA_ATTRIBUTE>), typeof(String), typeof(List<TalentDeviate>), typeof(List<TalentRequirement>) };
                 constructor = type.GetConstructor(typeArray);
                 magicClassObject = constructor.Invoke(new object[] { TalentName, probe, BE, diverates, requirements });
             } else
             if (typeof(TalentFighting).IsAssignableFrom(type))
             {
-                load(fileName);
                 typeArray = new Type[] { typeof(String), typeof(String), typeof(List<TalentDeviate>), typeof(DSA_ADVANCEDVALUES), typeof(bool) };
                 constructor = type.GetConstructor(typeArray);
                 magicClassObject = constructor.Invoke(new object[] { TalentName, BE, diverates, attace, parade });
+            } else
+            if (typeof(LanguageTalent).IsAssignableFrom(type) || typeof(FontTalent).IsAssignableFrom(type))
+            {
+                LanguageTalent lt;
+                FontTalent ft;
+
+                if (speakingComplex2 == 0)
+                {
+                    lt = new LanguageTalent(FamilyName, speakingName, speakingComplex);
+                } else
+                {
+                    lt = new LanguageTalent(FamilyName, speakingName, speakingComplex, speakingComplex2);
+                }
+                if(fontComplex2 == 0)
+                {
+                    ft = new FontTalent(FamilyName, fontName, fontComplex);
+                } else
+                {
+                    ft = new FontTalent(FamilyName, fontName, fontComplex, fontComplex2);
+                }
+
+                lt.setPOS(pos);
+                lt.setLanguagePartnerTalent(ft);
+
+                if (typeof(LanguageTalent).IsAssignableFrom(type))
+                {
+                    magicClassObject = lt;
+                } else
+                if (typeof(FontTalent).IsAssignableFrom(type))
+                {
+                    magicClassObject = ft;
+                }
             }
             else
             {
@@ -69,7 +119,21 @@ namespace DSA_Project
 
             XmlNode TalentLetterElement = talentFile.SelectSingleNode("/" + ManagmentXMLStrings.TalentLetterElement);
             XmlNode TalentElement = TalentLetterElement.SelectSingleNode(ManagmentXMLStrings.TalentElement);
+            XmlNode LanguageElement = TalentLetterElement.SelectSingleNode(ManagmentXMLStrings.Language);
 
+            if (TalentElement != null)
+            {
+                loadGeneralTalent(TalentElement);
+            }
+            if(LanguageElement != null)
+            {
+                loadLanguageTalent(LanguageElement);
+            }
+            
+        }
+        //################################################################################################
+        private void loadGeneralTalent(XmlNode TalentElement)
+        {
             foreach (XmlNode node in TalentElement)
             {
                 switch (node.Name)
@@ -164,6 +228,25 @@ namespace DSA_Project
 
                 }
 
+            }
+        }
+        //################################################################################################
+        private void loadLanguageTalent(XmlNode LanguageElement)
+        {
+            foreach (XmlNode node in LanguageElement)
+            {
+                switch (node.Name)
+                {
+                    case ManagmentXMLStrings.FamilyName: FamilyName = node.InnerText; break;
+                    case ManagmentXMLStrings.pos: Int32.TryParse(node.InnerText, out pos); break;
+                    case ManagmentXMLStrings.SpeakingName: speakingName = node.InnerText; break;
+                    case ManagmentXMLStrings.SpeakingComplex: Int32.TryParse(node.InnerText, out speakingComplex); break;
+                    case ManagmentXMLStrings.SpeakingComplexSecond: Int32.TryParse(node.InnerText, out speakingComplex2); break;
+                    case ManagmentXMLStrings.FontName: fontName = node.InnerText; break;
+                    case ManagmentXMLStrings.FontComplex: Int32.TryParse(node.InnerText, out fontComplex); break;
+                    case ManagmentXMLStrings.FontComplexSecond: Int32.TryParse(node.InnerText, out fontComplex2); break;
+                    default: throw new Exception("No such Case");
+                }
             }
         }
 

@@ -72,6 +72,7 @@ namespace DSA_Project
         public const String FontComplexSecond       = "FontComplexSecond";
         public const String SpeakingTaW             = "SpeakingTaW";
         public const String FontTaW                 = "FontTaW";
+        public const String pos                     = "POS";
         //################################################################################################################
     }
 

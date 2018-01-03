@@ -16,7 +16,6 @@ namespace DSA_Project
 
         public ControllTalent(Charakter charakter, String ResourcePath)
         {
-            List<ICollection<Enum>> listofallTalents = new List<ICollection<Enum>>();
             loadTalents(ResourcePath);
             
             return;
@@ -25,6 +24,7 @@ namespace DSA_Project
         {
             loadGeneralTalents(ResourcePath);
             loadFightingTalent(ResourcePath);
+            loadLanguageTalent(ResourcePath);
         }
         private void loadGeneralTalents(String ResourcePath)
         {
@@ -88,6 +88,26 @@ namespace DSA_Project
                 }
             }
         }
+        private void loadLanguageTalent(String ResourcePath)
+        {
+            LoadXMLTalentFile_ loader = new LoadXMLTalentFile_();
+            String TalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.LanguageTalentFileSystemLocation);
+            String[] files = Directory.GetFiles(TalentFileSystemLocation);
+
+            loadTalent<LanguageTalent>(loader, files);
+
+            List<InterfaceTalent> list = null;
+            List<FontTalent> flist = new List<FontTalent>();
+            TalentDictonary.TryGetValue(typeof(LanguageTalent), out list);
+            
+            //Add Partners
+            for(int i=0; i<list.Count; i++)
+            {
+                flist.Add((FontTalent)(((LanguageTalent)list[i]).getLanguagePartnerTalent()));
+            }
+
+            TalentDictonary.Add(typeof(FontTalent), list);
+        }
         public void loadTalent<T>(LoadXMLTalentFile_ loader, String[] files) where T: InterfaceTalent
         {
             List<InterfaceTalent> list = new List<InterfaceTalent>();
@@ -100,6 +120,8 @@ namespace DSA_Project
             TalentDictonary.Add(type, list);
         }
 
+
+
         public List<InterfaceTalent> getTalentList<T>() where T: InterfaceTalent
         {
             List<InterfaceTalent> list = null;
@@ -108,19 +130,7 @@ namespace DSA_Project
         }
 
 
-
-        private List<LanguageFamily> loadLanguageFamily(String FileSystemLocation)
-        {
-            List<LanguageFamily> llist = new List<LanguageFamily>();
-            String[] files = Directory.GetFiles(FileSystemLocation);
-            LoadXMLLanguage loadXMLTalentFile = new LoadXMLLanguage();
-
-            foreach (String file in files)
-            {
-                llist.Add(loadXMLTalentFile.loadFile(file));
-            }
-            return llist;
-        }
+        
         private List<InterfaceTalent> loadGiftTalent(String FileSystemLocation)
         {
             List<InterfaceTalent> llist = new List<InterfaceTalent>();

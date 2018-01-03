@@ -375,6 +375,7 @@ namespace DSA_Project
         }
         private static void loadTalentLanguage(XmlNode TalentNode, Charakter charakter)
         {
+            /*
             foreach(XmlNode LanguageFamily in TalentNode)
             {
                 String familyName = "";
@@ -444,7 +445,8 @@ namespace DSA_Project
                         }
                     }
                 }
-            }
+             }
+            */
         }
         
     }

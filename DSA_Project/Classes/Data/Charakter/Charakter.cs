@@ -277,13 +277,9 @@ namespace DSA_Project
         //###############################################################################################################################################
         //Talente
         private Dictionary<Type, List<InterfaceTalent>> TalentDictionary;
-        
-        private List<LanguageFamily> languageTalents;
-        
         private void setUPTalente()
         {
             TalentDictionary = new Dictionary<Type, List<InterfaceTalent>>();
-            languageTalents = new List<LanguageFamily>(0);
         }
         public void addTalent<T>(InterfaceTalent talent) where T: InterfaceTalent
         {
@@ -368,6 +364,24 @@ namespace DSA_Project
             }
             return getTalentList<T>();
         }
+        public List<InterfaceTalent> getTalentList(InterfaceTalent talent)
+        {
+            List<InterfaceTalent> list = null;
+            if (TalentDictionary.TryGetValue(talent.GetType(), out list))
+            {
+                if (list !=null)
+                {
+                    return list;
+                }
+                return null;
+            }
+            else
+            {
+                list = new List<InterfaceTalent>(0);
+                TalentDictionary.Add(talent.GetType(), list);
+            }
+            return null;
+        }
         public List<InterfaceTalent>getallTalentList()
         {
             List<InterfaceTalent> allTalents = new List<InterfaceTalent>();
@@ -380,27 +394,6 @@ namespace DSA_Project
                 }
             }
             return allTalents;
-        }
-       
-        
-
-        public void addTalent(LanguageFamily family)
-        {
-            languageTalents.Add(family);
-            for(int i=0; i<family.count(); i++)
-            {
-                family.getlanguageTalent(i).setCharacter(this);
-                family.getFontTalent(i).setCharacter(this);
-            }
-        }
-        
-        public LanguageFamily getFamily(int number)
-        {
-            return languageTalents[number];
-        }
-        public int getFamilyCount()
-        {
-            return languageTalents.Count;
         }
         //###############################################################################################################################################
     }

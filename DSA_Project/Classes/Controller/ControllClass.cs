@@ -102,6 +102,9 @@ namespace DSA_Project
             charakter.addTalent<TalentPhysical>(controllTalent.getTalentList<TalentPhysical>());
             charakter.addTalent<TalentSocial>(controllTalent.getTalentList<TalentSocial>());
 
+            charakter.addTalent<LanguageTalent>(controllTalent.getTalentList<LanguageTalent>());
+            charakter.addTalent<FontTalent>(controllTalent.getTalentList<FontTalent>());
+
             return charakter;
         }
         //###################################################################################################################################
@@ -300,23 +303,13 @@ namespace DSA_Project
         {
             return Charakter.getTalent(type, number);
         }
+        public List<InterfaceTalent>getTalentList(InterfaceTalent type)
+        {
+            return Charakter.getTalentList(type); 
+        }
         public List<InterfaceTalent> getallTalentList()
         {
             return Charakter.getallTalentList();
         }
-        //###################################################################################################################################
-        //LanguagePage
-        public List<LanguageFamily> getLanguageFamilyList()
-        {
-            List<LanguageFamily> flist = new List<LanguageFamily>();
-            int count = Charakter.getFamilyCount();
-            
-            for(int i=0; i<count; i++)
-            {
-                flist.Add(Charakter.getFamily(i));
-            }
-            return flist;
-        }
-        //###################################################################################################################################
     }
 }
