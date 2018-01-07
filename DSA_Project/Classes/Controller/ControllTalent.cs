@@ -9,16 +9,34 @@ namespace DSA_Project
 {
     class ControllTalent
     {
-
         private Dictionary<Type, List<InterfaceTalent>> TalentDictonary = new Dictionary<Type, List<InterfaceTalent>>();
-        
         String currentdirectoryPath = Directory.GetCurrentDirectory();
 
         public ControllTalent(Charakter charakter, String ResourcePath)
         {
             loadTalents(ResourcePath);
-            
-            return;
+            checkforDoppelTalents();
+        }
+        private void checkforDoppelTalents()
+        {
+            List<InterfaceTalent> talentlist    = new List<InterfaceTalent>(0);
+
+            foreach (List<InterfaceTalent> list in TalentDictonary.Values)
+            {
+                talentlist.AddRange(list);
+            }
+            for(int i=0; i<talentlist.Count; i++)
+            {
+                InterfaceTalent checkTalent = talentlist[i];
+                for(int j = i+1; j<talentlist.Count; j++)
+                {
+                    InterfaceTalent currentTalent = talentlist[j];
+                    if(String.Compare(checkTalent.getComplexName(), currentTalent.getComplexName()) == 0)
+                    {
+                        throw new Exception("Doppeltes Talent Entdeckt: " + checkTalent + " mit dem Coomplexen Namen:" + checkTalent.getComplexName() + " mit dem Typ:" + checkTalent.GetType() + " und " + currentTalent + " mit dem Complexen Namen:" + currentTalent.getComplexName() + " " + currentTalent.GetType());
+                    }
+                }
+            }
         }
         private void loadTalents(String ResourcePath)
         {
@@ -122,9 +140,6 @@ namespace DSA_Project
             }
             TalentDictonary.Add(type, list);
         }
-
-
-
         public List<InterfaceTalent> getTalentList<T>() where T: InterfaceTalent
         {
             List<InterfaceTalent> list = null;
@@ -134,6 +149,8 @@ namespace DSA_Project
 
 
         
+
+        //ALT, neu zu Implementieren
         private List<InterfaceTalent> loadGiftTalent(String FileSystemLocation)
         {
             List<InterfaceTalent> llist = new List<InterfaceTalent>();
