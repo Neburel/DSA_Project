@@ -342,7 +342,7 @@ namespace DSA_Project
                 for(int i=0; i<list.Count; i++)
                 {
                     InterfaceTalent talent = list[i];
-                    if(String.Compare(talent.getName(), name) == 0)
+                    if(String.Compare(talent.getComplexName(), name) == 0)
                     {
                         return talent;
                     }

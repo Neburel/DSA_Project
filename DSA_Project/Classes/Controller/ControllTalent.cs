@@ -92,21 +92,24 @@ namespace DSA_Project
         {
             LoadXMLTalentFile_ loader = new LoadXMLTalentFile_();
             String TalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.LanguageTalentFileSystemLocation);
-            String[] files = Directory.GetFiles(TalentFileSystemLocation);
+            List<String> dirs = new List<String>(Directory.EnumerateDirectories(TalentFileSystemLocation));
 
-            loadTalent<LanguageTalent>(loader, files);
-
-            List<InterfaceTalent> list = null;
-            List<FontTalent> flist = new List<FontTalent>();
-            TalentDictonary.TryGetValue(typeof(LanguageTalent), out list);
-            
-            //Add Partners
-            for(int i=0; i<list.Count; i++)
+            for (int i = 0; i < dirs.Count; i++)
             {
-                flist.Add((FontTalent)(((LanguageTalent)list[i]).getLanguagePartnerTalent()));
-            }
+                String folder = dirs[i].Substring(dirs[i].LastIndexOf('\\') + 1);
+                String deepFolder = Path.Combine(TalentFileSystemLocation, dirs[i]);
+                String[] files = Directory.GetFiles(deepFolder);
 
-            TalentDictonary.Add(typeof(FontTalent), list);
+                if (0 == String.Compare(folder, ManagmentSaveStrings.Language))
+                {
+                    loadTalent<LanguageTalent>(loader, files);
+                }
+                else
+                if (0 == String.Compare(folder, ManagmentSaveStrings.font))
+                {
+                    loadTalent<FontTalent>(loader, files);
+                }
+            }
         }
         public void loadTalent<T>(LoadXMLTalentFile_ loader, String[] files) where T: InterfaceTalent
         {

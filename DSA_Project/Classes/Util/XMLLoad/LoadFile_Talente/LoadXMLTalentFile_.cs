@@ -24,12 +24,9 @@ namespace DSA_Project
 
         //Language
         String FamilyName = "";
-        String speakingName = "";
-        String fontName = "";
-        int speakingComplex = 0;
-        int speakingComplex2 = 0;
-        int fontComplex = 0;
-        int fontComplex2 = 0;
+        String languageTalentName = "";
+        int languageTalentComplex = 0;
+        int languageTalentComplex2 = 0;
 
         private void clear()
         {
@@ -43,12 +40,9 @@ namespace DSA_Project
             requirements    = new List<TalentRequirement>();
 
             FamilyName = "";
-            speakingName = "";
-            fontName = "";
-            speakingComplex = 0;
-            speakingComplex2 = 0;
-            fontComplex = 0;
-            fontComplex2 = 0;
+            languageTalentName = "";
+            languageTalentComplex = 0;
+            languageTalentComplex2 = 0;
         }
 
         public T loadFile<T>(String fileName) where T: InterfaceTalent
@@ -75,36 +69,20 @@ namespace DSA_Project
                 magicClassObject = constructor.Invoke(new object[] { TalentName, BE, diverates, attace, parade });
             } else
             if (typeof(LanguageTalent).IsAssignableFrom(type) || typeof(FontTalent).IsAssignableFrom(type))
-            {
-                LanguageTalent lt;
-                FontTalent ft;
-
-                if (speakingComplex2 == 0)
+            {   
+                if (languageTalentComplex2 == 0)
                 {
-                    lt = new LanguageTalent(FamilyName, speakingName, speakingComplex);
+                    typeArray = new Type[] { typeof(String), typeof(String), typeof(int) };
+                    constructor = type.GetConstructor(typeArray);
+                    magicClassObject = constructor.Invoke(new object[] { FamilyName, languageTalentName, languageTalentComplex });
                 } else
                 {
-                    lt = new LanguageTalent(FamilyName, speakingName, speakingComplex, speakingComplex2);
+                    typeArray = new Type[] { typeof(String), typeof(String), typeof(int), typeof(int) };
+                    constructor = type.GetConstructor(typeArray);
+                    magicClassObject = constructor.Invoke(new object[] { FamilyName, languageTalentName, languageTalentComplex, languageTalentComplex2 });
                 }
-                if(fontComplex2 == 0)
-                {
-                    ft = new FontTalent(FamilyName, fontName, fontComplex);
-                } else
-                {
-                    ft = new FontTalent(FamilyName, fontName, fontComplex, fontComplex2);
-                }
-
-                lt.setPOS(pos);
-                lt.setLanguagePartnerTalent(ft);
-
-                if (typeof(LanguageTalent).IsAssignableFrom(type))
-                {
-                    magicClassObject = lt;
-                } else
-                if (typeof(FontTalent).IsAssignableFrom(type))
-                {
-                    magicClassObject = ft;
-                }
+                LanguageAbstractTalent talent = (LanguageAbstractTalent)magicClassObject;
+                talent.setPOS(pos);
             }
             else
             {
@@ -239,12 +217,12 @@ namespace DSA_Project
                 {
                     case ManagmentXMLStrings.FamilyName: FamilyName = node.InnerText; break;
                     case ManagmentXMLStrings.pos: Int32.TryParse(node.InnerText, out pos); break;
-                    case ManagmentXMLStrings.SpeakingName: speakingName = node.InnerText; break;
-                    case ManagmentXMLStrings.SpeakingComplex: Int32.TryParse(node.InnerText, out speakingComplex); break;
-                    case ManagmentXMLStrings.SpeakingComplexSecond: Int32.TryParse(node.InnerText, out speakingComplex2); break;
-                    case ManagmentXMLStrings.FontName: fontName = node.InnerText; break;
-                    case ManagmentXMLStrings.FontComplex: Int32.TryParse(node.InnerText, out fontComplex); break;
-                    case ManagmentXMLStrings.FontComplexSecond: Int32.TryParse(node.InnerText, out fontComplex2); break;
+                    case ManagmentXMLStrings.SpeakingName: languageTalentName = node.InnerText; break;
+                    case ManagmentXMLStrings.SpeakingComplex: Int32.TryParse(node.InnerText, out languageTalentComplex); break;
+                    case ManagmentXMLStrings.SpeakingComplexSecond: Int32.TryParse(node.InnerText, out languageTalentComplex2); break;
+                    case ManagmentXMLStrings.FontName: languageTalentName = node.InnerText; break;
+                    case ManagmentXMLStrings.FontComplex: Int32.TryParse(node.InnerText, out languageTalentComplex); break;
+                    case ManagmentXMLStrings.FontComplexSecond: Int32.TryParse(node.InnerText, out languageTalentComplex2); break;
                     default: throw new Exception("No such Case");
                 }
             }

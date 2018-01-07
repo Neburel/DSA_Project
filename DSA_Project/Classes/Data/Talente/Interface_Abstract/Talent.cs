@@ -26,7 +26,7 @@ namespace DSA_Project
 
             Diverates = diverates;
         }
-
+        
         public abstract String getProbeStringOne();
         public abstract String getProbeStringTwo();
         
@@ -107,5 +107,7 @@ namespace DSA_Project
         {
             return Charakter.getTaWBons(this).ToString();
         }
+
+        abstract public string getComplexName();
     }
 }

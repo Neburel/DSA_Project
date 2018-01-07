@@ -317,6 +317,7 @@ namespace DSA_Project
             String Taw = null;
             String AT = null;
             String PA = null;
+            String speakingMother = null;
 
             foreach(XmlNode node in TalentNode)
             {
@@ -326,9 +327,11 @@ namespace DSA_Project
                     case ManagmentXMLStrings.TAW: Taw = node.InnerText; break;
                     case ManagmentXMLStrings.attack: AT = node.InnerText; break;
                     case ManagmentXMLStrings.Parade: PA = node.InnerText; break;
-                    default: throw new Exception();
+                    case ManagmentXMLStrings.SpeakingMother: speakingMother = node.InnerText; break; 
+                    default: throw new Exception(node.Name + " " + node.InnerText);
                 }
             }
+            if (Name == null) return;
 
             Name = Name.Replace(".", " ");
 
@@ -348,7 +351,12 @@ namespace DSA_Project
                 Int32.TryParse(PA, out x);
                 ftalent.setPA(x);
             }
-            
+            if (speakingMother != null)
+            {
+                LanguageTalent lt = (LanguageTalent)talent;
+                lt.setMotherMark(speakingMother);
+            }
+
         }
         private static void loadTalentVersion1(XmlNode TalentNode, Charakter charakter)
         {
@@ -375,78 +383,37 @@ namespace DSA_Project
         }
         private static void loadTalentLanguage(XmlNode TalentNode, Charakter charakter)
         {
-            /*
-            foreach(XmlNode LanguageFamily in TalentNode)
-            {
-                String familyName = "";
-                XmlNode innerNode = null;
+            LanguageTalent Typelanguage = new LanguageTalent("Type", "", 0, 0);
+            Dictionary<String, List<LanguageTalent>> dictonary = new Dictionary<String, List<LanguageTalent>>();
+            List<InterfaceTalent> InterfaceTalentList = charakter.getTalentList(Typelanguage);
+            List<LanguageTalent> languageTalentList = new List<LanguageTalent>();
 
+            for (int i = 0; i < InterfaceTalentList.Count; i++)
+            {
+                languageTalentList.Add((LanguageTalent)InterfaceTalentList[i]);
+            }
+            for (int i = 0; i < languageTalentList.Count; i++)
+            {
+                List<LanguageTalent> talentList = null;
+                String FamilyName = ((LanguageTalent)languageTalentList[i]).getFamilyName();
+                if (!dictonary.TryGetValue(FamilyName, out talentList))
+                {
+                    talentList = new List<LanguageTalent>();
+                    dictonary.Add(FamilyName, talentList);
+                }
+                talentList.Add((LanguageTalent)languageTalentList[i]);
+            }
+
+            foreach (XmlNode LanguageFamily in TalentNode)
+            {
                 foreach (XmlNode Node in LanguageFamily)
                 {
                     switch (Node.Name)
                     {
-                        case (ManagmentXMLStrings.FamilyName): familyName = Node.InnerText; break;
-                        case (ManagmentXMLStrings.Language): innerNode = Node; break;
-                    }
-
-                    if (String.Compare(familyName, "") != 0 && innerNode != null)
-                    {
-                        if (String.Compare(familyName, "Zwergisch-Familie") == 0)
-                        {
-                            Console.WriteLine("Test");
-                        }
-
-
-                        int x = charakter.getFamilyCount();
-                        LanguageFamily family = null;
-
-                        for (int i = 0; i < x; i++)
-                        {
-                            LanguageFamily fam = charakter.getFamily(i);
-                            if (String.Compare(fam.getName(), familyName) == 0)
-                            {
-                                family = fam;
-                                break;
-                            }
-                        }
-                        if (family != null)
-                        {
-                            String Speakingname = "";
-                            String SpeakingTaW = "";
-                            String SpeakingMother = "";
-                            String FontName = "";
-                            String FontTaW = "";
-
-                            foreach (XmlNode node in innerNode)
-                            {
-                                switch (node.Name)
-                                {
-                                    case (ManagmentXMLStrings.SpeakingName): Speakingname = node.InnerText; break;
-                                    case (ManagmentXMLStrings.SpeakingTaW): SpeakingTaW = node.InnerText; break;
-                                    case (ManagmentXMLStrings.SpeakingMother): SpeakingMother = node.InnerText; break;
-                                    case (ManagmentXMLStrings.FontName): FontName = node.InnerText; break;
-                                    case (ManagmentXMLStrings.FontTaW): FontTaW = node.InnerText; break;
-                                }
-                            }
-
-                            for (int i = 0; i < family.count(); i++)
-                            {
-                                LanguageTalent lt = family.getlanguageTalent(i);
-                                FontTalent ft = family.getFontTalent(i);
-
-                                if (String.Compare(Speakingname, lt.getName()) == 0 && String.Compare(FontName, ft.getName()) == 0)
-                                {
-                                    lt.setTaw(SpeakingTaW);
-                                    lt.setMotherMark(SpeakingMother);
-                                    ft.setTaw(FontTaW);
-                                }
-                            }
-
-                        }
+                        case (ManagmentXMLStrings.Language): loadTalentVersion2(Node, charakter); ; break;
                     }
                 }
-             }
-            */
+            }
         }
         
     }

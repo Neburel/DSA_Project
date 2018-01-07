@@ -40,6 +40,7 @@ namespace DSA_Project
         public const String TAW                     = "TAW";
 
         public const String TalentBriefElement      = "TalentBrief";
+        public const String Talent                  = "Talent";
         public const String Talente                 = "Talente";
         public const String PhysicalTalentElement   = "PhysicalTalent";
 
@@ -63,6 +64,7 @@ namespace DSA_Project
         public const String LanguageFamily          = "Language-Family";
         public const String FamilyName              = "FamilyName";
         public const String Language                = "Language";
+        public const String Font                    = "Font";
         public const String SpeakingName            = "SpeakingName";
         public const String SpeakingComplex         = "SpeakingComplex";
         public const String SpeakingMother          = "SpeakingMother";

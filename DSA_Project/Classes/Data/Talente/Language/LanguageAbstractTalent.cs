@@ -8,7 +8,6 @@ namespace DSA_Project
 {
     public abstract class LanguageAbstractTalent : notFighting
     {
-        LanguageAbstractTalent talent = null;
         int pos = 0;
         String FamilyName = "";
         String motherMark = "";
@@ -26,24 +25,7 @@ namespace DSA_Project
         {
             return FamilyName;
         }
-
-        public void setLanguagePartnerTalent(LanguageAbstractTalent languageTalent)
-        {
-            talent = languageTalent;
-            languageTalent.setPOS(pos);
-            languageTalent.setLanguagePartner(this);
-        }
-        private void setLanguagePartner(LanguageAbstractTalent languageTalent)
-        {
-            talent = languageTalent;
-        }
-
-
-        public LanguageAbstractTalent getLanguagePartnerTalent()
-        {
-            return talent;
-        }
-
+       
         public void setMotherMark(String name)
         {
             if(String.Compare(name, "") == 0)
@@ -62,14 +44,15 @@ namespace DSA_Project
         public void setPOS(int pos)
         {
             this.pos = pos;
-            if (talent != null)
-            {
-                talent.setPOS(pos);
-            }
         }
         public int getPOS()
         {
             return pos;
+        }
+
+        public override string getComplexName()
+        {
+            return this.FamilyName + "_" + this.getName() + pos;
         }
     }
 }

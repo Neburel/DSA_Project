@@ -33,5 +33,8 @@ namespace DSA_Project
         public static String TalentClose        = "close";
         public static String TalentWeaponless   = "weaponless";
         public static String TalentRange        = "range";
+        //Language Ordner
+        public static string font = "Font";
+        public static string Language = "Language";
     }
 }

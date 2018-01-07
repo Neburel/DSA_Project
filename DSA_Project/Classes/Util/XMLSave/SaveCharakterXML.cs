@@ -62,6 +62,8 @@ namespace DSA_Project
             }
             characterFile.Save(fileName);
         }
+        //########################################################################################################################
+        //HeroPage
         public static void saveBasisDaten(Charakter charakter, XmlDocument characterFile, XmlElement element)
         {
             String[] names = Enum.GetNames(typeof(DSA_BASICVALUES));
@@ -193,24 +195,29 @@ namespace DSA_Project
                 talentinnerElement.AppendChild(tawBonus);
             }
         }
+        //########################################################################################################################
+        //TalentPage
         private static void saveTalents(Charakter charakter, XmlDocument characterFile, XmlElement element)
         {
-            XmlElement GeneralElement = characterFile.CreateElement(ManagmentXMLStrings.GeneralTalent);
-            XmlElement FightingElement = characterFile.CreateElement(ManagmentXMLStrings.FightingTalent);
+            XmlElement GeneralElement   = characterFile.CreateElement(ManagmentXMLStrings.GeneralTalent);
+            XmlElement FightingElement  = characterFile.CreateElement(ManagmentXMLStrings.FightingTalent);
+            XmlElement LanguageElement  = characterFile.CreateElement(ManagmentXMLStrings.Language);
+
+            Dictionary<String, XmlNode> familyNodes = new Dictionary<string, XmlNode>(0);
 
             List<InterfaceTalent> talentList = charakter.getallTalentList();
-                       
 
-            for(int i=0; i<talentList.Count; i++)
+
+            for (int i = 0; i < talentList.Count; i++)
             {
-                if(talentList[i] as TalentGeneral != null)
+                if (talentList[i] as TalentGeneral != null)
                 {
                     saveTalent(talentList[i], characterFile, GeneralElement);
-                } else 
-                if(talentList[i] as TalentFighting != null)
+                } else
+                if (talentList[i] as TalentFighting != null)
                 {
                     TalentFighting fighting = (TalentFighting)talentList[i];
-                    XmlElement TElement =  saveTalent(talentList[i], characterFile, FightingElement);
+                    XmlElement TElement = saveTalent(talentList[i], characterFile, FightingElement);
 
                     String pa = fighting.getPA();
                     String at = fighting.getAT().ToString();
@@ -220,62 +227,58 @@ namespace DSA_Project
 
                     TElement.AppendChild(atElement).InnerText = at;
                     TElement.AppendChild(paElement).InnerText = pa;
+                } else
+                if (talentList[i] as LanguageAbstractTalent != null)
+                {
+                    LanguageAbstractTalent talent = (LanguageAbstractTalent)talentList[i];
+                    String familyName = talent.getFamilyName();
+                    XmlNode FamilyElement = null;
+                    XmlElement underLanguage = null;
+
+                    if (!familyNodes.TryGetValue(familyName, out FamilyElement))
+                    {
+                        FamilyElement = characterFile.CreateElement(ManagmentXMLStrings.LanguageFamily);
+                        LanguageElement.AppendChild(FamilyElement);
+                        familyNodes.Add(familyName, FamilyElement);
+
+                        XmlElement FamilyName = characterFile.CreateElement(ManagmentXMLStrings.FamilyName);
+                        FamilyName.InnerText = familyName;
+                        FamilyElement.AppendChild(FamilyName);
+                    }
+
+                    if(talentList[i] as LanguageTalent != null)
+                    {
+                        underLanguage = characterFile.CreateElement(ManagmentXMLStrings.Language);
+                    } else
+                    if(talentList[i] as FontTalent != null)
+                    {
+                        underLanguage = characterFile.CreateElement(ManagmentXMLStrings.Font);
+                    }
+                    else
+                    {
+                        throw new Exception("Corruption");
+                    }
+
+                    FamilyElement.AppendChild(underLanguage);
+                    XmlElement ele = saveTalent(talent, characterFile, underLanguage);
+                    
+                    if(talentList[i] as LanguageTalent !=null)
+                    {
+                        LanguageTalent lt = (LanguageTalent)(talent);
+                        XmlNode lastnode = characterFile.CreateElement(ManagmentXMLStrings.SpeakingMother);
+                        lastnode.InnerText = lt.getMotherMark();
+                        ele.AppendChild(lastnode);
+                    }
                 }
-                
             }
             
-
-            //Language
-            /*
-            XmlElement LanguageElement = characterFile.CreateElement(ManagmentXMLStrings.Language);
-            int x = charakter.getFamilyCount();
-            for (int i = 0; i < x; i++)
-            {
-                XmlElement FamilyElement = characterFile.CreateElement(ManagmentXMLStrings.LanguageFamily);
-                LanguageElement.AppendChild(FamilyElement);
-
-                LanguageFamily family = charakter.getFamily(i);
-                XmlElement FamilyName = characterFile.CreateElement(ManagmentXMLStrings.FamilyName);
-                FamilyName.InnerText = family.getName();
-                FamilyElement.AppendChild(FamilyName);
-                
-                for (int j = 0; j < family.count(); j++)
-                {
-                    XmlElement underLanguage = characterFile.CreateElement(ManagmentXMLStrings.Language);
-                    FamilyElement.AppendChild(underLanguage);
-
-                    LanguageTalent lt = family.getlanguageTalent(j);
-                    XmlElement ltName = characterFile.CreateElement(ManagmentXMLStrings.SpeakingName);
-                    XmlElement TaWElement = characterFile.CreateElement(ManagmentXMLStrings.SpeakingTaW);
-                    XmlElement MotherElement = characterFile.CreateElement(ManagmentXMLStrings.SpeakingMother);
-
-                    ltName.InnerText = lt.getName();
-                    TaWElement.InnerText = lt.getTaW();
-                    MotherElement.InnerText = lt.getMotherMark();
-
-                    underLanguage.AppendChild(ltName);
-                    underLanguage.AppendChild(TaWElement);
-                    underLanguage.AppendChild(MotherElement);
-
-                    FontTalent ft = family.getFontTalent(j);
-                    XmlElement FTName = characterFile.CreateElement(ManagmentXMLStrings.FontName);
-                    XmlElement TaWElement2 = characterFile.CreateElement(ManagmentXMLStrings.FontTaW);
-                    FTName.InnerText = ft.getName();
-                    TaWElement2.InnerText = ft.getTaW();
-
-                    underLanguage.AppendChild(FTName);
-                    underLanguage.AppendChild(TaWElement2);
-                }
-            }
-            */
-
             element.AppendChild(GeneralElement);
             element.AppendChild(FightingElement);
-            //element.AppendChild(LanguageElement);
+            element.AppendChild(LanguageElement);
         }
         private static XmlElement saveTalent(InterfaceTalent talent, XmlDocument characterFile, XmlElement element)
         {
-            String name = talent.getName();
+            String name = talent.getComplexName();
             String taw = talent.getTaW().ToString();
 
             name = nameRplacements(name);

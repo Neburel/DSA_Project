@@ -68,5 +68,10 @@ namespace DSA_Project
         {
             return getProbeValuePA().ToString();
         }
+
+        public override string getComplexName()
+        {
+            return this.getName();
+        }
     }
 }
