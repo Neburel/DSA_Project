@@ -296,6 +296,8 @@ namespace DSA_Project
         }
         public void addTalent<T>(List<InterfaceTalent> talent) where T: InterfaceTalent
         {
+            if (talent == null) return;
+
             for(int i=0; i<talent.Count; i++)
             {
                 this.addTalent<T>(talent[i]);

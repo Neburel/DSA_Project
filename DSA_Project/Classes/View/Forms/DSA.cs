@@ -59,6 +59,7 @@ namespace DSA_Project
             txtAbenteuerpunkte.Text = controll.AdvanturePoints().ToString();
 
             setUPTalentBox();
+            setUPTalentPage();
 
             loadHeroPageBasicValues();
             loadHeroPageAttributMark();
@@ -828,7 +829,7 @@ namespace DSA_Project
             TalentPageRadioButtonsGeneralTalents = new List<RadioButton> { radioKörperlicheTalente, radioSozialTalente, radioNaturTalente, radioKnowldageTalente, radioCraftingTalent };
             TalentPageRadioButtonsFightingTalents = new List<RadioButton> { radioButtonWeaponless, radioButtonClose, radioButtonRange };
 
-            TalentPageRadioButtons = new List<RadioButton> { radioKörperlicheTalente, radioSozialTalente, radioNaturTalente, radioKnowldageTalente, radioCraftingTalent, radioButtonWeaponless, radioButtonClose, radioButtonRange, talentPageRadioGifts };
+            TalentPageRadioButtons          = new List<RadioButton> { radioKörperlicheTalente, radioSozialTalente, radioNaturTalente, radioKnowldageTalente, radioCraftingTalent, radioButtonWeaponless, radioButtonClose, radioButtonRange, talentPageRadioGifts };
 
             radioKörperlicheTalente.Tag     = new TalentPhysical(null, null, null, null, null);
             radioSozialTalente.Tag          = new TalentSocial(null, null, null, null, null);
@@ -840,7 +841,7 @@ namespace DSA_Project
             radioButtonClose.Tag            = new TalentClose(null, null, null, DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, false);
             radioButtonRange.Tag            = new TalentRange(null, null, null, DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, false);
 
-            talentPageRadioGifts.Tag     = new GiftTalent(null, null);
+            talentPageRadioGifts.Tag        = new GiftTalent(null, null);
 
             btnTalentLetterNext.Tag = "+";
             btnTalentLetterLast.Tag = "-";
@@ -848,6 +849,8 @@ namespace DSA_Project
             btnTalentLetterNext.Click += new EventHandler(btnTalentLetterPage_Click);
             btnTalentLetterLast.Click += new EventHandler(btnTalentLetterPage_Click);
 
+            talentPageComboBoxGifts.DataSource = null;
+            talentPageComboBoxGifts.Items.Clear();
             talentPageComboBoxGifts.DataSource = controll.getTalentListController<GiftTalent>();
             talentPageComboBoxGifts.SelectedValueChanged += learingBoxComboBoxTawChanged;
             talentPageBTNlearingGift.Click += learningGift;
@@ -1324,8 +1327,11 @@ namespace DSA_Project
             List<InterfaceTalent> InterfaceLanguageTalentList   = controll.getTalentList(Typelanguage);
             List<InterfaceTalent> InterfaceFontTalentList       = controll.getTalentList(TypeFont);
 
-            List<LanguageTalent> languageTalentList = new List<LanguageTalent>();
-            List<FontTalent> FontTalentList         = new List<FontTalent>();
+            if (InterfaceLanguageTalentList == null) InterfaceLanguageTalentList = new List<InterfaceTalent>(0);
+            if (InterfaceFontTalentList == null) InterfaceFontTalentList = new List<InterfaceTalent>(0);
+
+            List<LanguageTalent> languageTalentList = new List<LanguageTalent>(0);
+            List<FontTalent> FontTalentList         = new List<FontTalent>(0);
 
             for (int i=0; i< InterfaceLanguageTalentList.Count; i++)
             {
@@ -1348,6 +1354,7 @@ namespace DSA_Project
             comboBoxLanguagePageSelection.DataSource = new BindingSource(sourceDictionary, null);
             comboBoxLanguagePageSelection.DisplayMember = "Key";
             comboBoxLanguagePageSelection.SelectedValueChanged += setLanguagePageComboBox;
+          
         }
         private void setBoxes(List<LanguageAbstractTalent> llist, List<LanguageAbstractTalent> flist)
         {
@@ -1434,8 +1441,18 @@ namespace DSA_Project
         }
         private void setLanguagePageComboBox(Object sender, EventArgs e)
         {
-            KeyValuePair<String, Dictionary<Type, List<LanguageAbstractTalent>>> selected = (KeyValuePair<String, Dictionary<Type, List<LanguageAbstractTalent>>>)comboBoxLanguagePageSelection.SelectedValue;
-            Dictionary<Type, List<LanguageAbstractTalent>> dselected = selected.Value;
+            KeyValuePair<String, Dictionary<Type, List<LanguageAbstractTalent>>> selected;
+            Dictionary<Type, List<LanguageAbstractTalent>> dselected;
+
+            try
+            {
+                selected    = (KeyValuePair<String, Dictionary<Type, List<LanguageAbstractTalent>>>)comboBoxLanguagePageSelection.SelectedValue;
+                dselected   = selected.Value;
+            }
+            catch
+            {
+                return;
+            }
 
             List<LanguageAbstractTalent> languageList;
             List<LanguageAbstractTalent> fontList;

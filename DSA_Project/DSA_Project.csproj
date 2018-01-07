@@ -1104,33 +1104,6 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\PNP\Talents\Gifts\Empathie.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\PNP\Talents\Gifts\Gefahreninstinkt.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\PNP\Talents\Gifts\Geräuschhexerei.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\PNP\Talents\Gifts\Kräfteschub.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\PNP\Talents\Gifts\Magiegespür.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\PNP\Talents\Gifts\Prophezeien.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\PNP\Talents\Gifts\Talentschub.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\PNP\Talents\Gifts\Tierempathie.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\PNP\Talents\Gifts\Zwergennase .xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\PNP\Talents\Language\EinzelneSprachen.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1208,6 +1181,7 @@
     <Folder Include="Resources\PNP\Talents\FightingTalents\close\" />
     <Folder Include="Resources\PNP\Talents\FightingTalents\range\" />
     <Folder Include="Resources\PNP\Talents\FightingTalents\weaponless\" />
+    <Folder Include="Resources\PNP\Talents\Gifts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
