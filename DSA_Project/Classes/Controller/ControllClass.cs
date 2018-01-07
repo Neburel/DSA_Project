@@ -78,7 +78,7 @@ namespace DSA_Project
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                Charakter = LoadCharakterXML.loadCharakter(openFileDialog.FileName, createNewCharater());
+                Charakter = LoadCharakterXML.loadCharakter(openFileDialog.FileName, createNewCharater(), controllTalent);
             }
             form.load();
         }
@@ -89,8 +89,7 @@ namespace DSA_Project
             String path;
             path = Path.Combine(ManagmentSaveStrings.currentDirectory, getRootPath());
             path = Path.Combine(path, ManagmentSaveStrings.SaveLocation);
-
-
+            
             controllTalent = new ControllTalent(charakter, getResourcePath());
             charakter.addTalent<TalentClose>(controllTalent.getTalentList<TalentClose>());
             charakter.addTalent<TalentRange>(controllTalent.getTalentList<TalentRange>());
@@ -299,6 +298,10 @@ namespace DSA_Project
         }
         //###################################################################################################################################
         //Talente
+        public void addTalent(InterfaceTalent talent)
+        {
+            Charakter.addTalent(talent);
+        }
         public InterfaceTalent getTalent(InterfaceTalent type, int number)
         {
             return Charakter.getTalent(type, number);
@@ -306,6 +309,10 @@ namespace DSA_Project
         public List<InterfaceTalent>getTalentList(InterfaceTalent type)
         {
             return Charakter.getTalentList(type); 
+        }
+        public List<InterfaceTalent>getTalentListController<T>() where T : InterfaceTalent
+        {
+            return controllTalent.getTalentList<T>();
         }
         public List<InterfaceTalent> getallTalentList()
         {

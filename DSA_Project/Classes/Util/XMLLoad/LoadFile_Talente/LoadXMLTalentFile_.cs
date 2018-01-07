@@ -8,7 +8,7 @@ using System.Xml;
 
 namespace DSA_Project
 {
-    class LoadXMLTalentFile_
+    public class LoadXMLTalentFile_
     {
         private String[] AttributeNames = Enum.GetNames(typeof(DSA_ATTRIBUTE));
 
@@ -83,6 +83,12 @@ namespace DSA_Project
                 }
                 LanguageAbstractTalent talent = (LanguageAbstractTalent)magicClassObject;
                 talent.setPOS(pos);
+            } else
+            if (typeof(GiftTalent).IsAssignableFrom(type))
+            {
+                typeArray = new Type[] { typeof(String), typeof(List<DSA_ATTRIBUTE>) };
+                constructor = type.GetConstructor(typeArray);
+                magicClassObject = constructor.Invoke(new object[] { TalentName, probe });
             }
             else
             {

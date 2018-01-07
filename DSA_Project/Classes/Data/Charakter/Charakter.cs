@@ -301,6 +301,21 @@ namespace DSA_Project
                 this.addTalent<T>(talent[i]);
             }
         }
+        public void addTalent(InterfaceTalent talent)
+        {
+            talent.setCharacter(this);
+            List<InterfaceTalent> list = null;
+            if (TalentDictionary.TryGetValue(talent.GetType(), out list))
+            {
+                list.Add(talent);
+            }
+            else
+            {
+                list = new List<InterfaceTalent>(0);
+                TalentDictionary.Add(talent.GetType(), list);
+                this.addTalent(talent);
+            }
+        }
         public InterfaceTalent getTalent<T>(int number)
         {
             List<InterfaceTalent> list = null;
@@ -319,6 +334,8 @@ namespace DSA_Project
         }
         public InterfaceTalent getTalent(InterfaceTalent talent, int number) 
         {
+            if (talent == null) { return null; }
+
             List<InterfaceTalent> list = null;
             if (TalentDictionary.TryGetValue(talent.GetType(), out list)){
                 if (number < list.Count)

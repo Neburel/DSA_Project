@@ -41,6 +41,42 @@
             this.btnSaveCharacter = new System.Windows.Forms.Button();
             this.btnLoadCharacter = new System.Windows.Forms.Button();
             this.talents = new System.Windows.Forms.TabPage();
+            this.talentPageGroupBoxGiftsLearning = new System.Windows.Forms.GroupBox();
+            this.talentPageComboBoxGifts = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.talentPageLearningBoxtxtTaW = new System.Windows.Forms.TextBox();
+            this.talentPageBTNlearingGift = new System.Windows.Forms.Button();
+            this.groupBoxTaWB = new System.Windows.Forms.GroupBox();
+            this.talentpageTaWBonus30 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus29 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus28 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus27 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus26 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus25 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus24 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus23 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus22 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus21 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus20 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus19 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus18 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus17 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus16 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus15 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus14 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus13 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus12 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus11 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus10 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus9 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus8 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus7 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus6 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus5 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus4 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus3 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus2 = new System.Windows.Forms.TextBox();
+            this.talentpageTaWBonus1 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtTalentLetterCurrentPage = new System.Windows.Forms.TextBox();
             this.btnTalentLetterLast = new System.Windows.Forms.Button();
@@ -107,6 +143,7 @@
             this.PTAT4 = new System.Windows.Forms.TextBox();
             this.PTAT1 = new System.Windows.Forms.TextBox();
             this.groupBoxTalentLetterTalente = new System.Windows.Forms.GroupBox();
+            this.talentPageRadioGifts = new System.Windows.Forms.RadioButton();
             this.radioButtonRange = new System.Windows.Forms.RadioButton();
             this.radioButtonClose = new System.Windows.Forms.RadioButton();
             this.radioButtonWeaponless = new System.Windows.Forms.RadioButton();
@@ -1055,40 +1092,11 @@
             this.txtRewardPage = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.groupBoxTaWB = new System.Windows.Forms.GroupBox();
-            this.talentpageTaWBonus30 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus29 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus28 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus27 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus26 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus25 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus24 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus23 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus22 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus21 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus20 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus19 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus18 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus17 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus16 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus15 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus14 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus13 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus12 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus11 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus10 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus9 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus8 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus7 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus6 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus5 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus4 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus3 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus2 = new System.Windows.Forms.TextBox();
-            this.talentpageTaWBonus1 = new System.Windows.Forms.TextBox();
             this.tabPageTools.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.talents.SuspendLayout();
+            this.talentPageGroupBoxGiftsLearning.SuspendLayout();
+            this.groupBoxTaWB.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBoxKampf.SuspendLayout();
             this.groupBoxTalentLetterTalente.SuspendLayout();
@@ -1118,7 +1126,6 @@
             this.groupBox6.SuspendLayout();
             this.Rewards.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBoxTaWB.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPageTools
@@ -1202,6 +1209,7 @@
             // 
             resources.ApplyResources(this.talents, "talents");
             this.talents.BackColor = System.Drawing.SystemColors.Control;
+            this.talents.Controls.Add(this.talentPageGroupBoxGiftsLearning);
             this.talents.Controls.Add(this.groupBoxTaWB);
             this.talents.Controls.Add(this.groupBox3);
             this.talents.Controls.Add(this.groupBoxKampf);
@@ -1215,6 +1223,225 @@
             this.talents.Controls.Add(this.groupBoxProbe);
             this.talents.Controls.Add(this.groupBoxTalentName);
             this.talents.Name = "talents";
+            // 
+            // talentPageGroupBoxGiftsLearning
+            // 
+            this.talentPageGroupBoxGiftsLearning.Controls.Add(this.talentPageComboBoxGifts);
+            this.talentPageGroupBoxGiftsLearning.Controls.Add(this.label3);
+            this.talentPageGroupBoxGiftsLearning.Controls.Add(this.talentPageLearningBoxtxtTaW);
+            this.talentPageGroupBoxGiftsLearning.Controls.Add(this.talentPageBTNlearingGift);
+            resources.ApplyResources(this.talentPageGroupBoxGiftsLearning, "talentPageGroupBoxGiftsLearning");
+            this.talentPageGroupBoxGiftsLearning.Name = "talentPageGroupBoxGiftsLearning";
+            this.talentPageGroupBoxGiftsLearning.TabStop = false;
+            // 
+            // talentPageComboBoxGifts
+            // 
+            this.talentPageComboBoxGifts.FormattingEnabled = true;
+            resources.ApplyResources(this.talentPageComboBoxGifts, "talentPageComboBoxGifts");
+            this.talentPageComboBoxGifts.Name = "talentPageComboBoxGifts";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // talentPageLearningBoxtxtTaW
+            // 
+            resources.ApplyResources(this.talentPageLearningBoxtxtTaW, "talentPageLearningBoxtxtTaW");
+            this.talentPageLearningBoxtxtTaW.Name = "talentPageLearningBoxtxtTaW";
+            this.talentPageLearningBoxtxtTaW.ReadOnly = true;
+            // 
+            // talentPageBTNlearingGift
+            // 
+            resources.ApplyResources(this.talentPageBTNlearingGift, "talentPageBTNlearingGift");
+            this.talentPageBTNlearingGift.Name = "talentPageBTNlearingGift";
+            this.talentPageBTNlearingGift.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxTaWB
+            // 
+            resources.ApplyResources(this.groupBoxTaWB, "groupBoxTaWB");
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus30);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus29);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus28);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus27);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus26);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus25);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus24);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus23);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus22);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus21);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus20);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus19);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus18);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus17);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus16);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus15);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus14);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus13);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus12);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus11);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus10);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus9);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus8);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus7);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus6);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus5);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus4);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus3);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus2);
+            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus1);
+            this.groupBoxTaWB.Name = "groupBoxTaWB";
+            this.groupBoxTaWB.TabStop = false;
+            // 
+            // talentpageTaWBonus30
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus30, "talentpageTaWBonus30");
+            this.talentpageTaWBonus30.Name = "talentpageTaWBonus30";
+            // 
+            // talentpageTaWBonus29
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus29, "talentpageTaWBonus29");
+            this.talentpageTaWBonus29.Name = "talentpageTaWBonus29";
+            // 
+            // talentpageTaWBonus28
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus28, "talentpageTaWBonus28");
+            this.talentpageTaWBonus28.Name = "talentpageTaWBonus28";
+            // 
+            // talentpageTaWBonus27
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus27, "talentpageTaWBonus27");
+            this.talentpageTaWBonus27.Name = "talentpageTaWBonus27";
+            // 
+            // talentpageTaWBonus26
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus26, "talentpageTaWBonus26");
+            this.talentpageTaWBonus26.Name = "talentpageTaWBonus26";
+            // 
+            // talentpageTaWBonus25
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus25, "talentpageTaWBonus25");
+            this.talentpageTaWBonus25.Name = "talentpageTaWBonus25";
+            // 
+            // talentpageTaWBonus24
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus24, "talentpageTaWBonus24");
+            this.talentpageTaWBonus24.Name = "talentpageTaWBonus24";
+            // 
+            // talentpageTaWBonus23
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus23, "talentpageTaWBonus23");
+            this.talentpageTaWBonus23.Name = "talentpageTaWBonus23";
+            // 
+            // talentpageTaWBonus22
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus22, "talentpageTaWBonus22");
+            this.talentpageTaWBonus22.Name = "talentpageTaWBonus22";
+            // 
+            // talentpageTaWBonus21
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus21, "talentpageTaWBonus21");
+            this.talentpageTaWBonus21.Name = "talentpageTaWBonus21";
+            // 
+            // talentpageTaWBonus20
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus20, "talentpageTaWBonus20");
+            this.talentpageTaWBonus20.Name = "talentpageTaWBonus20";
+            // 
+            // talentpageTaWBonus19
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus19, "talentpageTaWBonus19");
+            this.talentpageTaWBonus19.Name = "talentpageTaWBonus19";
+            // 
+            // talentpageTaWBonus18
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus18, "talentpageTaWBonus18");
+            this.talentpageTaWBonus18.Name = "talentpageTaWBonus18";
+            // 
+            // talentpageTaWBonus17
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus17, "talentpageTaWBonus17");
+            this.talentpageTaWBonus17.Name = "talentpageTaWBonus17";
+            // 
+            // talentpageTaWBonus16
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus16, "talentpageTaWBonus16");
+            this.talentpageTaWBonus16.Name = "talentpageTaWBonus16";
+            // 
+            // talentpageTaWBonus15
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus15, "talentpageTaWBonus15");
+            this.talentpageTaWBonus15.Name = "talentpageTaWBonus15";
+            // 
+            // talentpageTaWBonus14
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus14, "talentpageTaWBonus14");
+            this.talentpageTaWBonus14.Name = "talentpageTaWBonus14";
+            // 
+            // talentpageTaWBonus13
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus13, "talentpageTaWBonus13");
+            this.talentpageTaWBonus13.Name = "talentpageTaWBonus13";
+            // 
+            // talentpageTaWBonus12
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus12, "talentpageTaWBonus12");
+            this.talentpageTaWBonus12.Name = "talentpageTaWBonus12";
+            // 
+            // talentpageTaWBonus11
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus11, "talentpageTaWBonus11");
+            this.talentpageTaWBonus11.Name = "talentpageTaWBonus11";
+            // 
+            // talentpageTaWBonus10
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus10, "talentpageTaWBonus10");
+            this.talentpageTaWBonus10.Name = "talentpageTaWBonus10";
+            // 
+            // talentpageTaWBonus9
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus9, "talentpageTaWBonus9");
+            this.talentpageTaWBonus9.Name = "talentpageTaWBonus9";
+            // 
+            // talentpageTaWBonus8
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus8, "talentpageTaWBonus8");
+            this.talentpageTaWBonus8.Name = "talentpageTaWBonus8";
+            // 
+            // talentpageTaWBonus7
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus7, "talentpageTaWBonus7");
+            this.talentpageTaWBonus7.Name = "talentpageTaWBonus7";
+            // 
+            // talentpageTaWBonus6
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus6, "talentpageTaWBonus6");
+            this.talentpageTaWBonus6.Name = "talentpageTaWBonus6";
+            // 
+            // talentpageTaWBonus5
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus5, "talentpageTaWBonus5");
+            this.talentpageTaWBonus5.Name = "talentpageTaWBonus5";
+            // 
+            // talentpageTaWBonus4
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus4, "talentpageTaWBonus4");
+            this.talentpageTaWBonus4.Name = "talentpageTaWBonus4";
+            // 
+            // talentpageTaWBonus3
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus3, "talentpageTaWBonus3");
+            this.talentpageTaWBonus3.Name = "talentpageTaWBonus3";
+            // 
+            // talentpageTaWBonus2
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus2, "talentpageTaWBonus2");
+            this.talentpageTaWBonus2.Name = "talentpageTaWBonus2";
+            // 
+            // talentpageTaWBonus1
+            // 
+            resources.ApplyResources(this.talentpageTaWBonus1, "talentpageTaWBonus1");
+            this.talentpageTaWBonus1.Name = "talentpageTaWBonus1";
             // 
             // groupBox3
             // 
@@ -1731,6 +1958,7 @@
             // 
             // groupBoxTalentLetterTalente
             // 
+            this.groupBoxTalentLetterTalente.Controls.Add(this.talentPageRadioGifts);
             this.groupBoxTalentLetterTalente.Controls.Add(this.radioButtonRange);
             this.groupBoxTalentLetterTalente.Controls.Add(this.radioButtonClose);
             this.groupBoxTalentLetterTalente.Controls.Add(this.radioButtonWeaponless);
@@ -1742,6 +1970,14 @@
             resources.ApplyResources(this.groupBoxTalentLetterTalente, "groupBoxTalentLetterTalente");
             this.groupBoxTalentLetterTalente.Name = "groupBoxTalentLetterTalente";
             this.groupBoxTalentLetterTalente.TabStop = false;
+            // 
+            // talentPageRadioGifts
+            // 
+            resources.ApplyResources(this.talentPageRadioGifts, "talentPageRadioGifts");
+            this.talentPageRadioGifts.Checked = true;
+            this.talentPageRadioGifts.Name = "talentPageRadioGifts";
+            this.talentPageRadioGifts.TabStop = true;
+            this.talentPageRadioGifts.UseVisualStyleBackColor = true;
             // 
             // radioButtonRange
             // 
@@ -7996,192 +8232,6 @@
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // groupBoxTaWB
-            // 
-            resources.ApplyResources(this.groupBoxTaWB, "groupBoxTaWB");
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus30);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus29);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus28);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus27);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus26);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus25);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus24);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus23);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus22);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus21);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus20);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus19);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus18);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus17);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus16);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus15);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus14);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus13);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus12);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus11);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus10);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus9);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus8);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus7);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus6);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus5);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus4);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus3);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus2);
-            this.groupBoxTaWB.Controls.Add(this.talentpageTaWBonus1);
-            this.groupBoxTaWB.Name = "groupBoxTaWB";
-            this.groupBoxTaWB.TabStop = false;
-            // 
-            // talentpageTaWBonus30
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus30, "talentpageTaWBonus30");
-            this.talentpageTaWBonus30.Name = "talentpageTaWBonus30";
-            // 
-            // talentpageTaWBonus29
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus29, "talentpageTaWBonus29");
-            this.talentpageTaWBonus29.Name = "talentpageTaWBonus29";
-            // 
-            // talentpageTaWBonus28
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus28, "talentpageTaWBonus28");
-            this.talentpageTaWBonus28.Name = "talentpageTaWBonus28";
-            // 
-            // talentpageTaWBonus27
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus27, "talentpageTaWBonus27");
-            this.talentpageTaWBonus27.Name = "talentpageTaWBonus27";
-            // 
-            // talentpageTaWBonus26
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus26, "talentpageTaWBonus26");
-            this.talentpageTaWBonus26.Name = "talentpageTaWBonus26";
-            // 
-            // talentpageTaWBonus25
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus25, "talentpageTaWBonus25");
-            this.talentpageTaWBonus25.Name = "talentpageTaWBonus25";
-            // 
-            // talentpageTaWBonus24
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus24, "talentpageTaWBonus24");
-            this.talentpageTaWBonus24.Name = "talentpageTaWBonus24";
-            // 
-            // talentpageTaWBonus23
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus23, "talentpageTaWBonus23");
-            this.talentpageTaWBonus23.Name = "talentpageTaWBonus23";
-            // 
-            // talentpageTaWBonus22
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus22, "talentpageTaWBonus22");
-            this.talentpageTaWBonus22.Name = "talentpageTaWBonus22";
-            // 
-            // talentpageTaWBonus21
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus21, "talentpageTaWBonus21");
-            this.talentpageTaWBonus21.Name = "talentpageTaWBonus21";
-            // 
-            // talentpageTaWBonus20
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus20, "talentpageTaWBonus20");
-            this.talentpageTaWBonus20.Name = "talentpageTaWBonus20";
-            // 
-            // talentpageTaWBonus19
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus19, "talentpageTaWBonus19");
-            this.talentpageTaWBonus19.Name = "talentpageTaWBonus19";
-            // 
-            // talentpageTaWBonus18
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus18, "talentpageTaWBonus18");
-            this.talentpageTaWBonus18.Name = "talentpageTaWBonus18";
-            // 
-            // talentpageTaWBonus17
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus17, "talentpageTaWBonus17");
-            this.talentpageTaWBonus17.Name = "talentpageTaWBonus17";
-            // 
-            // talentpageTaWBonus16
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus16, "talentpageTaWBonus16");
-            this.talentpageTaWBonus16.Name = "talentpageTaWBonus16";
-            // 
-            // talentpageTaWBonus15
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus15, "talentpageTaWBonus15");
-            this.talentpageTaWBonus15.Name = "talentpageTaWBonus15";
-            // 
-            // talentpageTaWBonus14
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus14, "talentpageTaWBonus14");
-            this.talentpageTaWBonus14.Name = "talentpageTaWBonus14";
-            // 
-            // talentpageTaWBonus13
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus13, "talentpageTaWBonus13");
-            this.talentpageTaWBonus13.Name = "talentpageTaWBonus13";
-            // 
-            // talentpageTaWBonus12
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus12, "talentpageTaWBonus12");
-            this.talentpageTaWBonus12.Name = "talentpageTaWBonus12";
-            // 
-            // talentpageTaWBonus11
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus11, "talentpageTaWBonus11");
-            this.talentpageTaWBonus11.Name = "talentpageTaWBonus11";
-            // 
-            // talentpageTaWBonus10
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus10, "talentpageTaWBonus10");
-            this.talentpageTaWBonus10.Name = "talentpageTaWBonus10";
-            // 
-            // talentpageTaWBonus9
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus9, "talentpageTaWBonus9");
-            this.talentpageTaWBonus9.Name = "talentpageTaWBonus9";
-            // 
-            // talentpageTaWBonus8
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus8, "talentpageTaWBonus8");
-            this.talentpageTaWBonus8.Name = "talentpageTaWBonus8";
-            // 
-            // talentpageTaWBonus7
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus7, "talentpageTaWBonus7");
-            this.talentpageTaWBonus7.Name = "talentpageTaWBonus7";
-            // 
-            // talentpageTaWBonus6
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus6, "talentpageTaWBonus6");
-            this.talentpageTaWBonus6.Name = "talentpageTaWBonus6";
-            // 
-            // talentpageTaWBonus5
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus5, "talentpageTaWBonus5");
-            this.talentpageTaWBonus5.Name = "talentpageTaWBonus5";
-            // 
-            // talentpageTaWBonus4
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus4, "talentpageTaWBonus4");
-            this.talentpageTaWBonus4.Name = "talentpageTaWBonus4";
-            // 
-            // talentpageTaWBonus3
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus3, "talentpageTaWBonus3");
-            this.talentpageTaWBonus3.Name = "talentpageTaWBonus3";
-            // 
-            // talentpageTaWBonus2
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus2, "talentpageTaWBonus2");
-            this.talentpageTaWBonus2.Name = "talentpageTaWBonus2";
-            // 
-            // talentpageTaWBonus1
-            // 
-            resources.ApplyResources(this.talentpageTaWBonus1, "talentpageTaWBonus1");
-            this.talentpageTaWBonus1.Name = "talentpageTaWBonus1";
-            // 
             // DSA
             // 
             resources.ApplyResources(this, "$this");
@@ -8193,6 +8243,10 @@
             this.groupBox16.PerformLayout();
             this.talents.ResumeLayout(false);
             this.talents.PerformLayout();
+            this.talentPageGroupBoxGiftsLearning.ResumeLayout(false);
+            this.talentPageGroupBoxGiftsLearning.PerformLayout();
+            this.groupBoxTaWB.ResumeLayout(false);
+            this.groupBoxTaWB.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBoxKampf.ResumeLayout(false);
@@ -8250,8 +8304,6 @@
             this.Rewards.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBoxTaWB.ResumeLayout(false);
-            this.groupBoxTaWB.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -9315,6 +9367,12 @@
         private System.Windows.Forms.TextBox talentpageTaWBonus3;
         private System.Windows.Forms.TextBox talentpageTaWBonus2;
         private System.Windows.Forms.TextBox talentpageTaWBonus1;
+        private System.Windows.Forms.GroupBox talentPageGroupBoxGiftsLearning;
+        private System.Windows.Forms.ComboBox talentPageComboBoxGifts;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox talentPageLearningBoxtxtTaW;
+        private System.Windows.Forms.Button talentPageBTNlearingGift;
+        private System.Windows.Forms.RadioButton talentPageRadioGifts;
     }
 }
 

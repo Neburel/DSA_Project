@@ -58,6 +58,8 @@ namespace DSA_Project
             }
         public String getDeviateString()
         {
+            if (Diverates == null) return "";
+
             if (Diverates.Count == 0)
             {
                 return "-";

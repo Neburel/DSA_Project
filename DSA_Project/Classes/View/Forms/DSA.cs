@@ -13,9 +13,8 @@ namespace DSA_Project
 {
     public partial class DSA : Form
     {
+        System.Drawing.Image backround = (System.Drawing.Image)DSA_Project.Properties.Resources.Old_Parchment_Wallpaper_15;
         private ControllClass controll;
-        
-        System.Drawing.Image backround = (System.Drawing.Image) DSA_Project.Properties.Resources.Old_Parchment_Wallpaper_15;
 
         public DSA()
         {
@@ -24,10 +23,6 @@ namespace DSA_Project
             SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             
             InitializeComponent();
-            
-
-
-
             SetUPForm();
             
             load();
@@ -833,7 +828,7 @@ namespace DSA_Project
             TalentPageRadioButtonsGeneralTalents = new List<RadioButton> { radioKörperlicheTalente, radioSozialTalente, radioNaturTalente, radioKnowldageTalente, radioCraftingTalent };
             TalentPageRadioButtonsFightingTalents = new List<RadioButton> { radioButtonWeaponless, radioButtonClose, radioButtonRange };
 
-            TalentPageRadioButtons = new List<RadioButton> { radioKörperlicheTalente, radioSozialTalente, radioNaturTalente, radioKnowldageTalente, radioCraftingTalent, radioButtonWeaponless, radioButtonClose, radioButtonRange };
+            TalentPageRadioButtons = new List<RadioButton> { radioKörperlicheTalente, radioSozialTalente, radioNaturTalente, radioKnowldageTalente, radioCraftingTalent, radioButtonWeaponless, radioButtonClose, radioButtonRange, talentPageRadioGifts };
 
             radioKörperlicheTalente.Tag     = new TalentPhysical(null, null, null, null, null);
             radioSozialTalente.Tag          = new TalentSocial(null, null, null, null, null);
@@ -844,12 +839,18 @@ namespace DSA_Project
             radioButtonWeaponless.Tag       = new TalentWeaponless(null, null, null, DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, false);
             radioButtonClose.Tag            = new TalentClose(null, null, null, DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, false);
             radioButtonRange.Tag            = new TalentRange(null, null, null, DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, false);
-            
+
+            talentPageRadioGifts.Tag     = new GiftTalent(null, null);
+
             btnTalentLetterNext.Tag = "+";
             btnTalentLetterLast.Tag = "-";
 
             btnTalentLetterNext.Click += new EventHandler(btnTalentLetterPage_Click);
             btnTalentLetterLast.Click += new EventHandler(btnTalentLetterPage_Click);
+
+            talentPageComboBoxGifts.DataSource = controll.getTalentListController<GiftTalent>();
+            talentPageComboBoxGifts.SelectedValueChanged += learingBoxComboBoxTawChanged;
+            talentPageBTNlearingGift.Click += learningGift;
 
             for(int i=0; i<SUpportedTalentCOunt; i++)
             {
@@ -864,11 +865,19 @@ namespace DSA_Project
             {
                 TalentPageRadioButtonsFightingTalents[i].CheckedChanged += new EventHandler(TalentPageFightingTalentsRadioButtonChanged);
             }
+            talentPageRadioGifts.Click += new EventHandler(TalentPageGiftTalentRadioButtonChanged);
         }
         public void refreshTalentPage()
         {
-            radioCraftingTalent.Checked = true;
-            radioKörperlicheTalente.Checked = true;
+            for(int i=0; i< TalentPageRadioButtons.Count; i++)
+            {
+                if (TalentPageRadioButtons[i].Checked)
+                {
+                    TalentPageRadioButtons[i].Checked = false;
+                    TalentPageRadioButtons[i].Checked = true;
+                    break;
+                }
+            }
         }
         private void setTalentBoxeZero(int number)
         {
@@ -967,6 +976,17 @@ namespace DSA_Project
                 }
             }
         }
+        private void talentStandardBoxinput(InterfaceTalent talent, int i)
+        {
+            talentNameLabels[i].Text = talent.getName();
+            talentProbeTextBoxs[i].Text = talent.getProbeStringOne();
+            talentWürfeTextBoxs[i].Text = talent.getProbeStringTwo();
+            talentTaWTextBoxes[i].Text = talent.getTaW().ToString();
+            talentpageTaWBonusTextBoxes[i].Text = talent.getTAWBonus();
+            talentBeTextBoxes[i].Text = talent.getBe().ToString();
+            talentSpezialisierungTextBoxes[i].Text = "";
+            talentAbleitungTextBoxes[i].Text = talent.getDeviateString();
+        }
         private void TalentPageGeneralTalentRadioButtonChanged(object sender, EventArgs e)
         {
             RadioButton button = (RadioButton)sender;
@@ -977,19 +997,18 @@ namespace DSA_Project
             int i = 0;
             groupBoxAnforderungen.Visible = true;
             groupBoxKampf.Visible = false;
+            talentPageGroupBoxGiftsLearning.Visible = false;
+            groupBoxBe.Visible = true;
+            groupBoxBilliger.Visible = true;
+            groupBoxSpezialisierung.Visible = true;
+            groupBoxAnforderungen.Visible = true;
+            groupBoxAbleiten.Visible = true;
 
             for (i = 0; i < SUpportedTalentCOunt; i++)
             {
                 TalentGeneral talent = (TalentGeneral)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
                 if (talent == null) { break; }
-                talentNameLabels[i].Text = talent.getName();
-                talentProbeTextBoxs[i].Text = talent.getProbeStringOne();
-                talentWürfeTextBoxs[i].Text = talent.getProbeStringTwo();
-                talentTaWTextBoxes[i].Text = talent.getTaW().ToString();
-                talentpageTaWBonusTextBoxes[i].Text = talent.getTAWBonus();
-                talentBeTextBoxes[i].Text = talent.getBe().ToString();
-                talentSpezialisierungTextBoxes[i].Text = "";
-                talentAbleitungTextBoxes[i].Text = talent.getDeviateString();
+                talentStandardBoxinput(talent, i);
                 talentAnforderungsTextBoxes[i].Text = talent.getRequirementString();
             }
 
@@ -1015,20 +1034,19 @@ namespace DSA_Project
 
             groupBoxAnforderungen.Visible = false;
             groupBoxKampf.Visible = true;
+            talentPageGroupBoxGiftsLearning.Visible = false;
+            groupBoxBe.Visible = true;
+            groupBoxBilliger.Visible = true;
+            groupBoxSpezialisierung.Visible = true;
+            groupBoxAbleiten.Visible = true;
 
             for (i = 0; i < SUpportedTalentCOunt; i++)
             {
                 int x = 0;
                 TalentFighting FightingTalent = (TalentFighting)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
                 if (FightingTalent == null) { break; }
-                talentNameLabels[i].Text = FightingTalent.getName();
-                talentProbeTextBoxs[i].Text = FightingTalent.getProbeStringOne();
-                talentWürfeTextBoxs[i].Text = FightingTalent.getProbeStringTwo();
-                talentTaWTextBoxes[i].Text = FightingTalent.getTaW().ToString();
-                talentpageTaWBonusTextBoxes[i].Text = FightingTalent.getTAWBonus();
-                talentBeTextBoxes[i].Text = FightingTalent.getBe().ToString();
-                talentSpezialisierungTextBoxes[i].Text = "";
-                talentAbleitungTextBoxes[i].Text = FightingTalent.getDeviateString();
+                talentStandardBoxinput(FightingTalent, i);
+                
                 talentATTextBoxes[i].Text = FightingTalent.getAT().ToString();
                 talentPATextBoxes[i].Text = FightingTalent.getPA().ToString();
 
@@ -1036,7 +1054,6 @@ namespace DSA_Project
                 {
                     talentWürfeTextBoxs[i].Text = FightingTalent.getPA();
                 }
-
             }
             groupBoxProbe.Left = groupBoxTalentName.Right + 5;
             groupBoxTaW.Left = groupBoxProbe.Right + 5;
@@ -1048,7 +1065,64 @@ namespace DSA_Project
             groupBoxAbleiten.Left = groupBoxSpezialisierung.Right + 5;
 
             setTalentBoxeZero(i);
-            return;
+        }
+        private void TalentPageGiftTalentRadioButtonChanged(object sender, EventArgs e)
+        {
+            int i = 0;
+            RadioButton button = (RadioButton)sender;
+            if (button.Checked == false) return;
+
+            InterfaceTalent type = (InterfaceTalent)button.Tag;
+
+            for (i = 0; i < SUpportedTalentCOunt; i++)
+            {
+                int x = 0;
+                GiftTalent giftTalent = (GiftTalent)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
+                if (giftTalent == null) { break; }
+                talentStandardBoxinput(giftTalent, i);
+            }
+
+            groupBoxAnforderungen.Visible = true;
+            groupBoxKampf.Visible = false;
+            talentPageGroupBoxGiftsLearning.Visible = true;
+            groupBoxBe.Visible = false;
+            groupBoxBilliger.Visible = false;
+            groupBoxSpezialisierung.Visible = false;
+            groupBoxAnforderungen.Visible = false;
+            groupBoxAbleiten.Visible = false;
+
+            groupBoxProbe.Left = groupBoxTalentName.Right + 5;
+            groupBoxTaW.Left = groupBoxProbe.Right + 5;
+            groupBoxTaWB.Left = groupBoxTaW.Right + 5;
+            groupBoxBe.Left = groupBoxTaWB.Right + 5;
+            groupBoxBilliger.Left = groupBoxBe.Right + 5;
+            groupBoxSpezialisierung.Left = groupBoxBilliger.Right + 5;
+            groupBoxAnforderungen.Left = groupBoxSpezialisierung.Right + 5;
+            groupBoxAbleiten.Left = groupBoxAnforderungen.Right + 5;
+
+            setTalentBoxeZero(i);
+        }
+        private void learingBoxComboBoxTawChanged(object sender, EventArgs e)
+        {
+            GiftTalent talent = (GiftTalent)talentPageComboBoxGifts.SelectedValue;
+            if (talent == null)
+            {
+                talentPageLearningBoxtxtTaW.Text = "";
+                return;
+            }
+            talentPageLearningBoxtxtTaW.Text = talent.getProbeStringTwo();
+        }
+        private void learningGift(object sender, EventArgs e)
+        {
+            GiftTalent talent = (GiftTalent)talentPageComboBoxGifts.SelectedValue;
+            List<InterfaceTalent> list = (List<InterfaceTalent>)talentPageComboBoxGifts.DataSource;
+            controll.addTalent(talent);
+            list.Remove(talent);
+            talentPageComboBoxGifts.DataSource = null;
+            talentPageComboBoxGifts.Items.Clear();
+            talentPageComboBoxGifts.DataSource = list;
+
+            TalentPageGiftTalentRadioButtonChanged(talentPageRadioGifts, null);
         }
         private void TAWChange(object sender, EventArgs e)
         {
@@ -1131,7 +1205,6 @@ namespace DSA_Project
         private List<TextBox> LanguagePageFontComplexTextBoxes;
         private List<TextBox> LanguagePageFontTaWTextBoxes;
         private List<TextBox> LanguagePageFontProbeTextBoxes;
-
         private Dictionary<Type, List<LanguageAbstractTalent>> sortLanguageDictonary(Dictionary<Type, List<LanguageAbstractTalent>> dictionary) 
         {
             List<Type> keyList = new List<Type>(dictionary.Keys);

@@ -76,6 +76,8 @@ namespace DSA_Project
         public const String FontTaW                 = "FontTaW";
         public const String pos                     = "POS";
         //################################################################################################################
+        //Gifts
+        public const String Gifts                   = "Gifts";
     }
 
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    class ControllTalent
+    public class ControllTalent
     {
         private Dictionary<Type, List<InterfaceTalent>> TalentDictonary = new Dictionary<Type, List<InterfaceTalent>>();
         String currentdirectoryPath = Directory.GetCurrentDirectory();
@@ -43,6 +43,7 @@ namespace DSA_Project
             loadGeneralTalents(ResourcePath);
             loadFightingTalent(ResourcePath);
             loadLanguageTalent(ResourcePath);
+            loadGiftTalent(ResourcePath);
         }
         private void loadGeneralTalents(String ResourcePath)
         {
@@ -129,6 +130,14 @@ namespace DSA_Project
                 }
             }
         }
+        private void loadGiftTalent(String ResourcePath)
+        {
+            LoadXMLTalentFile_ loader = new LoadXMLTalentFile_();
+            String TalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.GiftTalentFileSystemLocation);
+            String[] files = Directory.GetFiles(TalentFileSystemLocation);
+
+            loadTalent<GiftTalent>(loader, files);
+        }
         public void loadTalent<T>(LoadXMLTalentFile_ loader, String[] files) where T: InterfaceTalent
         {
             List<InterfaceTalent> list = new List<InterfaceTalent>();
@@ -146,24 +155,21 @@ namespace DSA_Project
             TalentDictonary.TryGetValue(typeof(T), out list);
             return list;
         }
-
-
-        
-
-        //ALT, neu zu Implementieren
-        private List<InterfaceTalent> loadGiftTalent(String FileSystemLocation)
+        public InterfaceTalent getTalent(String name)
         {
-            List<InterfaceTalent> llist = new List<InterfaceTalent>();
-            String[] files = Directory.GetFiles(FileSystemLocation);
-            LoadXMLGiftTalentFile LoadXMLGiftTalentFile = new LoadXMLGiftTalentFile();
-
-            foreach (String file in files)
+            foreach (KeyValuePair<Type, List<InterfaceTalent>> pair in TalentDictonary)
             {
-                llist.Add(LoadXMLGiftTalentFile.loadFile(file));
+                List<InterfaceTalent> list = pair.Value;
+                for (int i = 0; i < list.Count; i++)
+                {
+                    InterfaceTalent talent = list[i];
+                    if (String.Compare(talent.getComplexName(), name) == 0)
+                    {
+                        return talent;
+                    }
+                }
             }
-            return llist;
-        }        
+            return null;
+        }
     }
-    
-
 }

@@ -202,6 +202,7 @@ namespace DSA_Project
             XmlElement GeneralElement   = characterFile.CreateElement(ManagmentXMLStrings.GeneralTalent);
             XmlElement FightingElement  = characterFile.CreateElement(ManagmentXMLStrings.FightingTalent);
             XmlElement LanguageElement  = characterFile.CreateElement(ManagmentXMLStrings.Language);
+            XmlElement GiftElement      = characterFile.CreateElement(ManagmentXMLStrings.Gifts); 
 
             Dictionary<String, XmlNode> familyNodes = new Dictionary<string, XmlNode>(0);
 
@@ -269,12 +270,18 @@ namespace DSA_Project
                         lastnode.InnerText = lt.getMotherMark();
                         ele.AppendChild(lastnode);
                     }
+                } else 
+                if (talentList[i] as GiftTalent != null)
+                {
+                    GiftTalent talent = (GiftTalent)talentList[i];
+                    saveTalent(talentList[i], characterFile, GiftElement);
                 }
             }
             
             element.AppendChild(GeneralElement);
             element.AppendChild(FightingElement);
             element.AppendChild(LanguageElement);
+            element.AppendChild(GiftElement);
         }
         private static XmlElement saveTalent(InterfaceTalent talent, XmlDocument characterFile, XmlElement element)
         {

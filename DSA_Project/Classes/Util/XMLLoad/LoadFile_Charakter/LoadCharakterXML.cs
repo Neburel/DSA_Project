@@ -11,13 +11,17 @@ namespace DSA_Project
     //*toDO: try Am obersten Punkt, bei Misserfolg alles als Korrupt erklären (Simple Lösung)
     static class LoadCharakterXML
     {
-        public static Charakter loadCharakter(String fileName, Charakter charakter)
+        private static ControllTalent tControll; 
+
+        public static Charakter loadCharakter(String fileName, Charakter charakter, ControllTalent Tcontroller)
         {
             XmlDocument characterFile   = new XmlDocument();
             XmlNode saveFile            = null;
             XmlNode characterNode       = null;
             XmlNode heldenbriefNode     = null;
             XmlNode talentbriefNode     = null;
+
+            tControll = Tcontroller;
 
             characterFile.Load(fileName);
 
@@ -308,6 +312,7 @@ namespace DSA_Project
                     case (ManagmentXMLStrings.GeneralTalent): loadTalentVersion2(TalentType, charakter); break;
                     case (ManagmentXMLStrings.FightingTalent): loadTalentVersion2(TalentType, charakter); break;
                     case (ManagmentXMLStrings.Language): loadTalentLanguage(TalentType, charakter); break;
+                    case (ManagmentXMLStrings.Gifts): loadTalentGift(TalentType, charakter); break;
                 }
             }
         }
@@ -336,7 +341,12 @@ namespace DSA_Project
             Name = Name.Replace(".", " ");
 
             InterfaceTalent talent = charakter.getTalent(Name);
-            if (talent == null) return;
+            if (talent == null)
+            {
+                talent = tControll.getTalent(Name);
+                if (talent == null) return;
+                charakter.addTalent(talent);
+            }
             talent.setTaw(Taw);            
 
             if(AT!=null & PA != null)
@@ -415,6 +425,9 @@ namespace DSA_Project
                 }
             }
         }
-        
+        private static void loadTalentGift(XmlNode TalentNode, Charakter charakter)
+        {
+            loadTalentVersion2(TalentNode, charakter);
+        }
     }
 }
