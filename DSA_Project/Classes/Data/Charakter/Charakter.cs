@@ -247,14 +247,6 @@ namespace DSA_Project
             return featureManagment.getTalentTawBonus(talent);
         }
         
-
-        public List<InterfaceTalent> getAllTalentList()
-        {
-            List<InterfaceTalent> talentList = new List<InterfaceTalent>();
-
-            return talentList;
-        }
-
         public int getAdvanturePoints()
         {
             return this.adventurePoints;

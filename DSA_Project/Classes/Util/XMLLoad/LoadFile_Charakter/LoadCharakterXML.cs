@@ -272,7 +272,7 @@ namespace DSA_Project
         }
         private static void LoadFeatureTalente(XmlNode talentNode, Charakter charakter, Feature feature)
         {
-            List<InterfaceTalent> listTalente = charakter.getAllTalentList();
+            List<InterfaceTalent> listTalente = charakter.getallTalentList();
 
             foreach(XmlNode innerTalent in talentNode)
             {

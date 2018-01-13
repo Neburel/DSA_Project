@@ -275,13 +275,14 @@ namespace DSA_Project
             CreateFeature createFeature;
             Feature feature = Charakter.getFeature(type, number);
 
+
             if (feature == null)
             {
-                createFeature = new CreateFeature(Charakter.getAllTalentList(), type);
+                createFeature = new CreateFeature(Charakter.getallTalentList(), type);
             }
             else
             {
-                createFeature = new CreateFeature(feature, Charakter.getAllTalentList(), type);
+                createFeature = new CreateFeature(feature, Charakter.getallTalentList(), type);
             }
             createFeature.ShowDialog();
             feature = createFeature.feature();
