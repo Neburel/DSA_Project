@@ -42,10 +42,7 @@ namespace DSA_Project
             PA = getATPA(PA, AT, pa);
         }
 
-        public override String getProbeStringOne()
-        {
-            return getProbeValueAT().ToString(); ;
-        }
+        
         public int getAT()
         {
             return AT;
@@ -57,13 +54,19 @@ namespace DSA_Project
         }
         public int getProbeValueAT()
         {
+            if (Charakter == null) { return 0; }
             return Charakter.getAdvancedValueMAX(Probe[0]) + AT;
         }
         public int getProbeValuePA()
         {
+            if (Charakter == null) { return 0; }
             return Charakter.getAdvancedValueMAX(Probe[1]) + PA;
         }
 
+        public override String getProbeStringOne()
+        {
+            return getProbeValueAT().ToString(); ;
+        }
         public override string getProbeStringTwo()
         {
             return getProbeValuePA().ToString();

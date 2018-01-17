@@ -25,6 +25,7 @@ namespace DSA_Project
             this.Be = be;
 
             Diverates = diverates;
+            Charakter = null;
         }
         
         public abstract String getProbeStringOne();
@@ -107,6 +108,11 @@ namespace DSA_Project
 
         public string getTAWBonus()
         {
+            if (Charakter == null)
+            {
+                return (0).ToString();
+            }
+
             return Charakter.getTaWBons(this).ToString();
         }
 

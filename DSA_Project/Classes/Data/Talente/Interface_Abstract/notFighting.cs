@@ -32,7 +32,6 @@ namespace DSA_Project
                 return "-";
             }
 
-
             int ret = 0;
             for (int i = 0; i < getProbeCount(); i++)
             {
@@ -42,6 +41,8 @@ namespace DSA_Project
         }
         public String getRequirementString()
         {
+            if (requirement == null) return "";
+
             if (requirement.Count == 0)
             {
                 return "-";

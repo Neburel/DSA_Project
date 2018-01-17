@@ -70,7 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Classes\Controller\" />
-    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\TestResources\Talents\Test_LoadXMLTalentFile\Basic_Construction_01.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
