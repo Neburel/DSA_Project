@@ -75,11 +75,10 @@
     <Compile Include="Classes\Managment\ManagmentXMLStrings.cs" />
     <Compile Include="Classes\Managment\ManagmentSaveStrings.cs" />
     <Compile Include="Classes\Util\program\CreateFileStructure.cs" />
-    <Compile Include="Classes\Util\XMLLoad\LoadFile_Talente\LoadXMLGiftTalentFile.cs" />
-    <Compile Include="Classes\Util\XMLLoad\LoadFile_Talente\LoadXMLTalentFile_.cs" />
+    <Compile Include="Classes\Util\XMLLoad\LoadFile_Talente\Interface_LoadXMLTalentFile.cs" />
+    <Compile Include="Classes\Util\XMLLoad\LoadFile_Talente\LoadXMLTalentFile.cs" />
     <Compile Include="Classes\Util\XMLSave\SaveXMLTalent.cs" />
     <Compile Include="Classes\Util\XMLLoad\LoadFile_Charakter\LoadCharakterXML.cs" />
-    <Compile Include="Classes\Util\XMLLoad\LoadFile_Talente\LoadXMLTalentFile.cs" />
     <Compile Include="Classes\Util\XMLSave\SaveCharakterXML.cs" />
     <Compile Include="Classes\View\Forms\CreateFightingTalent.cs">
       <SubType>Form</SubType>

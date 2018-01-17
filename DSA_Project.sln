@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA_Project", "DSA_Project\DSA_Project.csproj", "{B0B0A2DE-8287-4744-91B4-5DBA252D4296}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA_ProjectTests1", "DSA_ProjectTests1\DSA_ProjectTests1.csproj", "{769E9967-57CE-4EB5-B291-0839F4FE06FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B0B0A2DE-8287-4744-91B4-5DBA252D4296}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0B0A2DE-8287-4744-91B4-5DBA252D4296}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0B0A2DE-8287-4744-91B4-5DBA252D4296}.Release|Any CPU.Build.0 = Release|Any CPU
+		{769E9967-57CE-4EB5-B291-0839F4FE06FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{769E9967-57CE-4EB5-B291-0839F4FE06FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{769E9967-57CE-4EB5-B291-0839F4FE06FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{769E9967-57CE-4EB5-B291-0839F4FE06FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

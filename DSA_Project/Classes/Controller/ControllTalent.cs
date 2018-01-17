@@ -47,7 +47,7 @@ namespace DSA_Project
         }
         private void loadGeneralTalents(String ResourcePath)
         {
-            LoadXMLTalentFile_ loader = new LoadXMLTalentFile_();
+            Interface_LoadXMLTalentFile loader = new LoadXMLTalentFile();
             String GeneralTalentFileSystemLocation  = Path.Combine(ResourcePath, ManagmentSaveStrings.GeneralTalentFilesSystemLocation);
             List<String> dirs                       = new List<String>(Directory.EnumerateDirectories(GeneralTalentFileSystemLocation));
 
@@ -81,7 +81,7 @@ namespace DSA_Project
         }
         private void loadFightingTalent(String ResourcePath)
         {
-            LoadXMLTalentFile_ loader = new LoadXMLTalentFile_();
+            Interface_LoadXMLTalentFile loader = new LoadXMLTalentFile();
             String TalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.FightTalentFilesSystemLocation);
             List<String> dirs = new List<String>(Directory.EnumerateDirectories(TalentFileSystemLocation));
 
@@ -109,7 +109,7 @@ namespace DSA_Project
         }
         private void loadLanguageTalent(String ResourcePath)
         {
-            LoadXMLTalentFile_ loader = new LoadXMLTalentFile_();
+            Interface_LoadXMLTalentFile loader = new LoadXMLTalentFile();
             String TalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.LanguageTalentFileSystemLocation);
             List<String> dirs = new List<String>(Directory.EnumerateDirectories(TalentFileSystemLocation));
 
@@ -132,13 +132,13 @@ namespace DSA_Project
         }
         private void loadGiftTalent(String ResourcePath)
         {
-            LoadXMLTalentFile_ loader = new LoadXMLTalentFile_();
+            Interface_LoadXMLTalentFile loader = new LoadXMLTalentFile();
             String TalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.GiftTalentFileSystemLocation);
             String[] files = Directory.GetFiles(TalentFileSystemLocation);
 
             loadTalent<GiftTalent>(loader, files);
         }
-        public void loadTalent<T>(LoadXMLTalentFile_ loader, String[] files) where T: InterfaceTalent
+        public void loadTalent<T>(Interface_LoadXMLTalentFile loader, String[] files) where T: InterfaceTalent
         {
             List<InterfaceTalent> list = new List<InterfaceTalent>();
             Type type = typeof(T);
