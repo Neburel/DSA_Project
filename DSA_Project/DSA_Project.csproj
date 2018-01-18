@@ -140,55 +140,55 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\DSA\SaveGame\Kazarik_2.xml" />
-    <Content Include="Resources\DSA\Talents\Language\Font\EinzelneSprachen_Drachisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\EinzelneSprachen_Drachisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\EinzelneSprachen_Koboldisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\EinzelneSprachen_Koboldisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\EinzelneSprachen_Rabensprache.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\EinzelneSprachen_Rabensprache.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\EinzelneSprachen_Rssahh.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\EinzelneSprachen_Rssahh.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\EinzelneSprachen_Trollisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\EinzelneSprachen_Trollisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\EinzelneSprachen_Zyklopäisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\EinzelneSprachen_Zyklopäisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Elfisch_Asdharia.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Elfisch_Asdharia.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Elfisch_Isdira.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Elfisch_Isdira.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Garethi_Aureliani.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Garethi_Aureliani.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Garethi_Bosparano.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Garethi_Bosparano.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Garethi_Garethi.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Garethi_Garethi.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Garethi_Imperiale Schriftzeichen.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Garethi_Imperiale Schriftzeichen.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Geheimschriften_Amulashtra.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Geheimschriften_Amulashtra.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Geheimschriften_Arkanil .xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Geheimschriften_Arkanil .xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Geheimschriften_Drakhard-Zinken.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Geheimschriften_Drakhard-Zinken.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Geheimschriften_Gimaril.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Geheimschriften_Gimaril.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Geheimschriften_Nanduria.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Geheimschriften_Nanduria.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\DSA\Talents\FightingTalents\close\Anderthalbhänder.xml">
@@ -589,184 +589,184 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Rissoal_Mahrisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Rissoal_Mahrisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Thorwalsch_Fjarnisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Thorwalsch_Fjarnisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Thorwalsch_Gjalskisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Thorwalsch_Gjalskisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Thorwalsch_Hjaldingsch.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Thorwalsch_Hjaldingsch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Thorwalsch_Thorwalsch.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Thorwalsch_Thorwalsch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Tulamidya_Alaani.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Tulamidya_Alaani.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Tulamidya_Alte Kemi.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Tulamidya_Alte Kemi.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Tulamidya_AltesAlaani.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Tulamidya_AltesAlaani.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Tulamidya_Chrmk.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Tulamidya_Chrmk.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Tulamidya_Glyphen .xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Tulamidya_Glyphen .xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Tulamidya_Ruuz.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Tulamidya_Ruuz.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Tulamidya_Tulamidya.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Tulamidya_Tulamidya.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Tulamidya_Tulamidya_Schrift.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Tulamidya_Tulamidya_Schrift.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Tulamidya_Tulamidya_Schrift2.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Tulamidya_Tulamidya_Schrift2.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Tulamidya_Ur-Tulamidya.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Tulamidya_Ur-Tulamidya.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Tulamidya_Ur-Tulamidya_Schrift.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Tulamidya_Ur-Tulamidya_Schrift.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Tulamidya_Zelemja.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Tulamidya_Zelemja.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Zwergisch_Angram.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Zwergisch_Angram.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Zwergisch_Rogolan.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\Zwergisch_Rogolan.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\EinzelneSprachen_Neckergesang.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\EinzelneSprachen_Neckergesang.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\EinzelneSprachen_Nujuka.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\EinzelneSprachen_Nujuka.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\EinzelneSprachen_ZLit.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\EinzelneSprachen_ZLit.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\EinzelneSprachen_Zyklopäisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\EinzelneSprachen_Zyklopäisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\EinzelneSprachen_Rabensprache.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\EinzelneSprachen_Rabensprache.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\EinzelneSprachen_Goblinisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\EinzelneSprachen_Goblinisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\EinzelneSprachen_Grolmisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\EinzelneSprachen_Grolmisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\EinzelneSprachen_Koboldisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\EinzelneSprachen_Koboldisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\EinzelneSprachen_Mohisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\EinzelneSprachen_Mohisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\EinzelneSprachen_Molochisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\EinzelneSprachen_Molochisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\EinzelneSprachen_Drachisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\EinzelneSprachen_Drachisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\EinzelneSprachen_Rssahh.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\EinzelneSprachen_Rssahh.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\EinzelneSprachen_Chuchas.xml">
+    <Content Include="Resources\DSA\Talents\Language\01_OLD_Font\EinzelneSprachen_Chuchas.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\EinzelneSprachen_Trollisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\EinzelneSprachen_Trollisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Elfisch_Asdharia.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Elfisch_Asdharia.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Elfisch_Isdira.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Elfisch_Isdira.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Geheimsprachen_Atak.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Geheimsprachen_Atak.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Geheimsprachen_Zhayad.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Geheimsprachen_Zhayad.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Geheimsprachen_Füchsisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Geheimsprachen_Füchsisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Orkisch_Ologhaijan.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Orkisch_Ologhaijan.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Orkisch_Oloarkh.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Orkisch_Oloarkh.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Rissoal_Rissoal.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Rissoal_Rissoal.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Rissoal_Mahrisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Rissoal_Mahrisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Thorwalsch_Gjalskisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Thorwalsch_Gjalskisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Thorwalsch_Thorwalsch.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Thorwalsch_Thorwalsch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Thorwalsch_Fjarnisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Thorwalsch_Fjarnisch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Thorwalsch_Hjaldingsch.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Thorwalsch_Hjaldingsch.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Tulamidya_Ruuz.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Tulamidya_Ruuz.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Tulamidya_Alte Kemi.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Tulamidya_Alte Kemi.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Tulamidya_Tulamidya.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Tulamidya_Tulamidya.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Tulamidya_Alaani.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Tulamidya_Alaani.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Tulamidya_Ur-Tulamidya.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Tulamidya_Ur-Tulamidya.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Tulamidya_Zhulchammaqra.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Tulamidya_Zhulchammaqra.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Tulamidya_Zelemja.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Tulamidya_Zelemja.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Tulamidya_Ferkina.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Tulamidya_Ferkina.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Garethi_Imperiale Schriftzeichen.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Garethi_Imperiale Schriftzeichen.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Garethi_Garethi.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Garethi_Garethi.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Garethi_Bosparano.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Garethi_Bosparano.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Garethi_Aureliani.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Garethi_Aureliani.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Zwergisch_Rogolan.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Zwergisch_Rogolan.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Zwergisch_Angram.xml">
+    <Content Include="Resources\DSA\Talents\Language\02_OLD_Language\Zwergisch_Angram.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\PicturesDiv\Old-Parchment-Wallpaper-15.jpg" />
@@ -1177,6 +1177,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\DSA\Talents\01_TMP\" />
+    <Folder Include="Resources\DSA\Talents\Language\Font\" />
+    <Folder Include="Resources\DSA\Talents\Language\Language\" />
     <Folder Include="Resources\PNP\Talents\FightingTalents\close\" />
     <Folder Include="Resources\PNP\Talents\FightingTalents\range\" />
     <Folder Include="Resources\PNP\Talents\FightingTalents\weaponless\" />

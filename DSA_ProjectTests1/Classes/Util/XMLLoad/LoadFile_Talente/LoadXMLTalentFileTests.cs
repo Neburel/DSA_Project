@@ -70,7 +70,7 @@ namespace DSA_Project.Tests
         {
             Assert.AreEqual(currentType, talent.GetType());
             Assert.AreEqual(currentName, talent.getName());
-            Assert.AreEqual(currentComplexeName, talent.getComplexName());
+            Assert.AreEqual(currentComplexeName, talent.getName());
             Assert.AreEqual(currentProbeCount, talent.getProbeCount());
             Assert.AreEqual(currentProbeStringOne, talent.getProbeStringOne());
             Assert.AreEqual(currentProbeStringTwo, talent.getProbeStringTwo());
@@ -94,27 +94,6 @@ namespace DSA_Project.Tests
 
         //##########################################################################################################################
         //Teste Laden der Basic Structur
-        [TestMethod()]
-        public void loadBasicStructurTalentGeneral()
-        {
-            String file = Path.Combine(ResourcePath, "Basic_Construction_01.xml");
-            currentName = "BasicConstructionTalent01";
-            currentComplexeName = "BasicConstructionTalent01";
-            currentProbeStringOne = "-";
-            currentProbeStringTwo = "";
-            currentBE = "-";
-            currentDeviate = "-";
-            currentTAW = "-";
-            currentTAWBonus = "0";
-            currentProbeCount = 0;
-            currentRequirementString = "-";
-
-            TalentGeneral talent = loader.loadFile<TalentGeneral>(file);
-            currentType = typeof(TalentGeneral);
-
-            controllInterfaceTalent(talent);
-            controllTalentGeneral(talent);
-        }
         [TestMethod()]
         public void loadBasicStructurTalentCrafting()
         {
@@ -244,31 +223,6 @@ namespace DSA_Project.Tests
         }
 
         [TestMethod()]
-        public void loadBasicStructurTalentFighting()
-        {
-            String file = Path.Combine(ResourcePath, "Basic_Construction_01.xml");
-            currentName = "BasicConstructionTalent01";
-            currentComplexeName = "BasicConstructionTalent01";
-            currentProbeStringOne = "0";
-            currentProbeStringTwo = "0";
-            currentBE = "-";
-            currentDeviate = "-";
-            currentTAW = "-";
-            currentTAWBonus = "0";
-            currentProbeCount = 2;
-
-            currentAT = 0;
-            currentPA = "---";
-            currentProbeValueAT = 0;
-            currentProbeValuePA = 0;
-
-            InterfaceTalent talent = loader.loadFile<TalentFighting>(file);
-            currentType = typeof(TalentFighting);
-
-            controllInterfaceTalent(talent);
-            controllTalentFighting((TalentFighting)talent);
-        }
-        [TestMethod()]
         public void loadBasicStructurTalentClose()
         {
             String file = Path.Combine(ResourcePath, "Basic_Construction_01.xml");
@@ -339,6 +293,75 @@ namespace DSA_Project.Tests
 
             InterfaceTalent talent = loader.loadFile<TalentWeaponless>(file);
             currentType = typeof(TalentWeaponless);
+
+            controllInterfaceTalent(talent);
+            controllTalentFighting((TalentFighting)talent);
+        }
+        //##########################################################################################################################
+        //Teste Laden einer Kompleten Talentdatei "Complete_Construction_01.xml" (Angaben für alles)
+        [TestMethod()]
+        public void loadCompleteStructurTalentGeneral()
+        {
+            String file = Path.Combine(ResourcePath, "Complete_Construction_01.xml");
+            currentName                 = "CompleteConstructionTalent01";
+            currentComplexeName         = "CompleteConstructionTalent01";
+            currentProbeStringOne       = "-";
+            currentProbeStringTwo       = "MU/KL/SO/KK";
+            currentBE                   = "SingleBE";
+            currentDeviate              = "TestTwoDiverateOne(10), TestTwoDiverateTwo";
+            currentTAW                  = "-";
+            currentTAWBonus             = "0";
+            currentProbeCount           = 4;
+            currentRequirementString    = "10+ TwoRequirementOne 20, TwoRequirementTwo";
+            
+            TalentGeneral talent = loader.loadFile<TalentCrafting>(file);
+            currentType = typeof(TalentCrafting);
+
+            controllInterfaceTalent(talent);
+            controllTalentGeneral(talent);
+        }
+        [TestMethod()]
+        public void loadCompleteStructurTalentGift()
+        {
+            String file             = Path.Combine(ResourcePath, "Complete_Construction_01.xml");
+            currentName             = "CompleteConstructionTalent01";
+            currentComplexeName     = "CompleteConstructionTalent01";
+            currentProbeStringOne   = "-";
+            currentProbeStringTwo   = "MU/KL/SO/KK";
+            currentBE               = "-";
+            currentDeviate          = "";
+            currentTAW              = "-";
+            currentTAWBonus         = "0";
+            currentProbeCount       = 4;
+            currentRequirementString = "";
+
+            GiftTalent talent = loader.loadFile<GiftTalent>(file);
+            currentType = typeof(GiftTalent);
+
+            controllInterfaceTalent(talent);
+            controllTalentGeneral(talent);
+        }
+        [TestMethod()]
+        public void loadCompleteStructurTalentWeaponless()
+        {
+            String file                 = Path.Combine(ResourcePath, "Complete_Construction_01.xml");
+            currentName                 = "CompleteConstructionTalent01";
+            currentComplexeName         = "CompleteConstructionTalent01";
+            currentProbeStringOne       = "0";
+            currentProbeStringTwo       = "0";
+            currentBE                   = "SingleBE";
+            currentDeviate              = "TestTwoDiverateOne(10), TestTwoDiverateTwo";
+            currentTAW                  = "-";
+            currentTAWBonus             = "0";
+            currentProbeCount           = 2;
+
+            currentAT                   = 0;
+            currentPA                   = "0";
+            currentProbeValueAT         = 0;
+            currentProbeValuePA         = 0;
+
+            InterfaceTalent talent      = loader.loadFile<TalentWeaponless>(file);
+            currentType                 = typeof(TalentWeaponless);
 
             controllInterfaceTalent(talent);
             controllTalentFighting((TalentFighting)talent);

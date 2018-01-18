@@ -27,14 +27,15 @@ namespace DSA_Project
             Diverates = diverates;
             Charakter = null;
         }
-        
-        public abstract String getProbeStringOne();
-        public abstract String getProbeStringTwo();
-        
+
         public void setCharacter(Charakter charakter)
         {
             this.Charakter = charakter;
         }
+        public abstract String getProbeStringOne();
+        public abstract String getProbeStringTwo();
+        
+        
         private void setTaw(int taw)
         {
             learned = true;

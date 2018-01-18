@@ -31,9 +31,9 @@ namespace DSA_Project
                 for(int j = i+1; j<talentlist.Count; j++)
                 {
                     InterfaceTalent currentTalent = talentlist[j];
-                    if(String.Compare(checkTalent.getComplexName(), currentTalent.getComplexName()) == 0)
+                    if(String.Compare(checkTalent.getName(), currentTalent.getName()) == 0)
                     {
-                        throw new Exception("Doppeltes Talent Entdeckt: " + checkTalent + " mit dem Coomplexen Namen:" + checkTalent.getComplexName() + " mit dem Typ:" + checkTalent.GetType() + " und " + currentTalent + " mit dem Complexen Namen:" + currentTalent.getComplexName() + " " + currentTalent.GetType());
+                        throw new Exception("Doppeltes Talent Entdeckt: " + checkTalent + " mit dem Typ:" + checkTalent.GetType() + " " + currentTalent.GetType());
                     }
                 }
             }
@@ -163,7 +163,7 @@ namespace DSA_Project
                 for (int i = 0; i < list.Count; i++)
                 {
                     InterfaceTalent talent = list[i];
-                    if (String.Compare(talent.getComplexName(), name) == 0)
+                    if (String.Compare(talent.getName(), name) == 0)
                     {
                         return talent;
                     }

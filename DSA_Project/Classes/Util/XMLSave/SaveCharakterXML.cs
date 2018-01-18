@@ -285,7 +285,7 @@ namespace DSA_Project
         }
         private static XmlElement saveTalent(InterfaceTalent talent, XmlDocument characterFile, XmlElement element)
         {
-            String name = talent.getComplexName();
+            String name = talent.getName();
             String taw = talent.getTaW().ToString();
 
             name = nameRplacements(name);

@@ -12,8 +12,26 @@ namespace DSA_Project
         {
             requirement = requirements;
         }
-        
 
+        public override String getProbeStringOne()
+        {
+            if (learned == false)
+            {
+                return "-";
+            }
+            if(Charakter == null)
+            {
+                return (0).ToString();
+            }
+
+            int ret = 0;
+
+            for (int i = 0; i < getProbeCount(); i++)
+            {
+                ret = ret + Charakter.getAttribute_Max(Probe[i]) + getTawWithBonus();
+            }
+            return ret.ToString();
+        }
         public override String getProbeStringTwo()
         {
             String ret = "";
@@ -24,21 +42,7 @@ namespace DSA_Project
             }
             return ret;
         }
-
-        public override string getProbeStringOne()
-        {
-            if(learned == false)
-            {
-                return "-";
-            }
-
-            int ret = 0;
-            for (int i = 0; i < getProbeCount(); i++)
-            {
-                ret = ret + Charakter.getAttribute_Max(Probe[i]) + getTawWithBonus();
-            }
-            return ret.ToString();
-        }
+        
         public String getRequirementString()
         {
             if (requirement == null) return "";

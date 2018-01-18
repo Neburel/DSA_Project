@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DSA_Project
 {
-    public class TalentFighting : Talent<DSA_ADVANCEDVALUES>
+    abstract public class TalentFighting : Talent<DSA_ADVANCEDVALUES>
     {
         bool parade = true;
         private int AT;

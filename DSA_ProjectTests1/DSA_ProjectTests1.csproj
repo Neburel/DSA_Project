@@ -72,6 +72,10 @@
     <Folder Include="Classes\Controller\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\TestResources\Talents\Test_LoadXMLTalentFile\Complete_Construction_01.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Resources\TestResources\Talents\Test_LoadXMLTalentFile\Basic_Construction_01.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

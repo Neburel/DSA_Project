@@ -12,7 +12,6 @@ namespace DSA_Project
         void setTaw(String taw);
         int getProbeCount();
         String getName();
-        String getComplexName();                //Einmaliger Name!
         String getBe();
         String getTaW();
         String getTAWBonus();
