@@ -31,7 +31,7 @@
       </Requirement>
     </Requirements>
     <FightingTalent>
-      <attack>ENTRÜCKUNG</attack>
+      <attack>BEHERSCHUNGSWERT</attack>
       <Parade>true</Parade>
     </FightingTalent>
   </Talent>

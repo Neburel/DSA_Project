@@ -1,0 +1,27 @@
+<TalentLetter>
+  <Talent>
+    <Name>CompleteConstructionTalent02</Name>
+    <BE>TwoBEOne</BE>
+    <BE>TwoBETwo</BE>
+    <Probe>
+      <Attribut>KL</Attribut>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent></Talent>
+        <Value></Value>
+      </Diverate>
+    </Diverates>
+    <Requirements>
+      <Requirement>
+        <Talent>OneRequirementOne</Talent>
+        <Value>5</Value>
+        <NeedAT>8</NeedAT>
+      </Requirement>
+    </Requirements>
+    <FightingTalent>
+      <attack>ENTRÜCKUNG</attack>
+      <Parade>False</Parade>
+    </FightingTalent>
+  </Talent>
+</TalentLetter>

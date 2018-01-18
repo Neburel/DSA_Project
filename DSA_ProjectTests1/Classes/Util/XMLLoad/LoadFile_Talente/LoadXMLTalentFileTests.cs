@@ -20,6 +20,7 @@ namespace DSA_Project.Tests
         private String currentComplexeName;
         private String currentProbeStringOne;
         private String currentProbeStringTwo;
+        private String currentProbeStringThree;
         private String currentBE;
         private String currentDeviate;
         private String currentTAW;
@@ -52,6 +53,7 @@ namespace DSA_Project.Tests
             currentComplexeName = null;
             currentProbeStringOne = null;
             currentProbeStringTwo = null;
+            currentProbeStringThree = null;
             currentBE = null;
             currentDeviate = null;
             currentTAW = null;
@@ -90,6 +92,7 @@ namespace DSA_Project.Tests
             Assert.AreEqual(currentPA, talent.getPA());
             Assert.AreEqual(currentProbeValueAT, talent.getProbeValueAT());
             Assert.AreEqual(currentProbeValuePA, talent.getProbeValuePA());
+            Assert.AreEqual(currentProbeStringThree, talent.getProbeStringThree());
         }
 
         //##########################################################################################################################
@@ -230,6 +233,7 @@ namespace DSA_Project.Tests
             currentComplexeName = "BasicConstructionTalent01";
             currentProbeStringOne = "0";
             currentProbeStringTwo = "0";
+            currentProbeStringThree = "ATTACKE_BASIS";
             currentBE = "-";
             currentDeviate = "-";
             currentTAW = "-";
@@ -255,6 +259,7 @@ namespace DSA_Project.Tests
             currentComplexeName = "BasicConstructionTalent01";
             currentProbeStringOne = "0";
             currentProbeStringTwo = "0";
+            currentProbeStringThree = "ATTACKE_BASIS";
             currentBE = "-";
             currentDeviate = "-";
             currentTAW = "-";
@@ -280,6 +285,7 @@ namespace DSA_Project.Tests
             currentComplexeName = "BasicConstructionTalent01";
             currentProbeStringOne = "0";
             currentProbeStringTwo = "0";
+            currentProbeStringThree = "ATTACKE_BASIS";
             currentBE = "-";
             currentDeviate = "-";
             currentTAW = "-";
@@ -298,9 +304,9 @@ namespace DSA_Project.Tests
             controllTalentFighting((TalentFighting)talent);
         }
         //##########################################################################################################################
-        //Teste Laden einer Kompleten Talentdatei "Complete_Construction_01.xml" (Angaben für alles)
+        //Teste Laden einer Kompleten Talentdatei 
         [TestMethod()]
-        public void loadCompleteStructurTalentGeneral()
+        public void loadCompleteStructurTalentCrafting()
         {
             String file = Path.Combine(ResourcePath, "Complete_Construction_01.xml");
             currentName                 = "CompleteConstructionTalent01";
@@ -314,6 +320,27 @@ namespace DSA_Project.Tests
             currentProbeCount           = 4;
             currentRequirementString    = "10+ TwoRequirementOne 20, TwoRequirementTwo";
             
+            TalentGeneral talent = loader.loadFile<TalentCrafting>(file);
+            currentType = typeof(TalentCrafting);
+
+            controllInterfaceTalent(talent);
+            controllTalentGeneral(talent);
+        }
+        [TestMethod()]
+        public void loadCompleteStructurTalentSocial()
+        {
+            String file = Path.Combine(ResourcePath, "Complete_Construction_02.xml");
+            currentName = "CompleteConstructionTalent02";
+            currentComplexeName = "CompleteConstructionTalent02";
+            currentProbeStringOne = "-";
+            currentProbeStringTwo = "KL";
+            currentBE = "TwoBETwo";
+            currentDeviate = "";
+            currentTAW = "-";
+            currentTAWBonus = "0";
+            currentProbeCount = 1;
+            currentRequirementString = "8+ OneRequirementOne 5";
+
             TalentGeneral talent = loader.loadFile<TalentCrafting>(file);
             currentType = typeof(TalentCrafting);
 
@@ -349,6 +376,7 @@ namespace DSA_Project.Tests
             currentComplexeName         = "CompleteConstructionTalent01";
             currentProbeStringOne       = "0";
             currentProbeStringTwo       = "0";
+            currentProbeStringThree     = "BEHERSCHUNGSWERT";
             currentBE                   = "SingleBE";
             currentDeviate              = "TestTwoDiverateOne(10), TestTwoDiverateTwo";
             currentTAW                  = "-";
@@ -362,6 +390,32 @@ namespace DSA_Project.Tests
 
             InterfaceTalent talent      = loader.loadFile<TalentWeaponless>(file);
             currentType                 = typeof(TalentWeaponless);
+
+            controllInterfaceTalent(talent);
+            controllTalentFighting((TalentFighting)talent);
+        }
+        [TestMethod()]
+        public void loadCompleteStructurTalentClose()
+        {
+            String file = Path.Combine(ResourcePath, "Complete_Construction_02.xml");
+            currentName = "CompleteConstructionTalent02";
+            currentComplexeName = "CompleteConstructionTalent02";
+            currentProbeStringOne = "0";
+            currentProbeStringTwo = "0";
+            currentProbeStringThree = "ENTRÜCKUNG";
+            currentBE = "TwoBETwo";
+            currentDeviate = "";
+            currentTAW = "-";
+            currentTAWBonus = "0";
+            currentProbeCount = 2;
+
+            currentAT = 0;
+            currentPA = "---";
+            currentProbeValueAT = 0;
+            currentProbeValuePA = 0;
+
+            InterfaceTalent talent = loader.loadFile<TalentWeaponless>(file);
+            currentType = typeof(TalentWeaponless);
 
             controllInterfaceTalent(talent);
             controllTalentFighting((TalentFighting)talent);
