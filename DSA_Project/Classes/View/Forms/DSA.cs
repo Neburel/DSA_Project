@@ -1227,11 +1227,14 @@ namespace DSA_Project
                 }
                 for(int i=list.Count; i<highestpos; i++)
                 {
+                    throw new Exception("ÜBERARBEITEN!");
+                    /*
                     Type type = keyList[j];
                     Type[] typeArray = new Type[] { typeof(String), typeof(String), typeof(int) };
                     ConstructorInfo constructor = type.GetConstructor(typeArray);
                     object magicClassObject = constructor.Invoke(new object[] { list[0].getFamilyName(), "", 0 });
-                    list.Add((LanguageAbstractTalent)magicClassObject);                    
+                    list.Add((LanguageAbstractTalent)magicClassObject);                
+                    */
                 }
                 bool hit = true;
                 LanguageAbstractTalent talent;
@@ -1268,15 +1271,18 @@ namespace DSA_Project
             }
             return dictionary;
         }
+        
         private Dictionary<String, Dictionary<Type, List<LanguageAbstractTalent>>> createDataSourceDictonary<T>(Dictionary<String, Dictionary<Type, List<LanguageAbstractTalent>>> sourceDictionary, List<T> sourcelist) where T : LanguageAbstractTalent
         {
+            throw new Exception("ÜBERARBEITEN!");
+            /*
             for (int i = 0; i < sourcelist.Count; i++)
             {
                 Dictionary<Type, List<LanguageAbstractTalent>> dictionary = null;
                 List<LanguageAbstractTalent> list = null;
                 
 
-                String FamilyName = sourcelist[i].getFamilyName();
+                String FamilyName           = sourcelist[i].getFamilyName();
                 if(!sourceDictionary.TryGetValue(FamilyName, out dictionary))
                 {
                     dictionary = new Dictionary<Type, List<LanguageAbstractTalent>>(0);
@@ -1290,6 +1296,8 @@ namespace DSA_Project
                 list.Add(sourcelist[i]);
             }
             return sourceDictionary;
+            */
+            return null;
         }
         private void setUPLanguagePage()
         {
@@ -1321,6 +1329,8 @@ namespace DSA_Project
         }
         private void loadLanguagePage()
         {
+            throw new Exception("ÜBERARBEITEN!");
+            /*
             LanguageTalent Typelanguage = new LanguageTalent("Type", "", 0, 0);
             FontTalent TypeFont         = new FontTalent("Type", "", 0, 0);
 
@@ -1354,10 +1364,11 @@ namespace DSA_Project
             comboBoxLanguagePageSelection.DataSource = new BindingSource(sourceDictionary, null);
             comboBoxLanguagePageSelection.DisplayMember = "Key";
             comboBoxLanguagePageSelection.SelectedValueChanged += setLanguagePageComboBox;
-          
+            */
         }
         private void setBoxes(List<LanguageAbstractTalent> llist, List<LanguageAbstractTalent> flist)
         {
+            /*
             int i = 0;
             int length = llist.Count;
             if (length < flist.Count) { length = flist.Count; }
@@ -1437,7 +1448,7 @@ namespace DSA_Project
                 LanguagePageFontTaWTextBoxes[i].Text = "";
                 LanguagePageFontProbeTextBoxes[i].Text = "";
             }
-
+            */
         }
         private void setLanguagePageComboBox(Object sender, EventArgs e)
         {

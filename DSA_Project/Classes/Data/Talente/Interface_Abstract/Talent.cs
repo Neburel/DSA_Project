@@ -116,7 +116,5 @@ namespace DSA_Project
 
             return Charakter.getTaWBons(this).ToString();
         }
-
-        abstract public string getComplexName();
     }
 }

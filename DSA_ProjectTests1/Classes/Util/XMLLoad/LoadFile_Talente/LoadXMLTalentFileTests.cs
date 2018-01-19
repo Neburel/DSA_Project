@@ -226,6 +226,49 @@ namespace DSA_Project.Tests
         }
 
         [TestMethod()]
+        public void loadBasicStructurFontTalent()
+        {
+            String file = Path.Combine(ResourcePath, "Basic_Construction_01.xml");
+            currentName = "BasicConstructionTalent01";
+            currentComplexeName = "BasicConstructionTalent01";
+            currentProbeStringOne = "-";
+            currentProbeStringTwo = "KL/KL/FF";
+            currentBE = "-";
+            currentDeviate = "";   //Der Unterschied ist Tatsächlich Vorhanden!
+            currentTAW = "-";
+            currentTAWBonus = "0";
+            currentProbeCount = 3;
+            currentRequirementString = "";
+
+            InterfaceTalent talent = loader.loadFile<FontTalent>(file);
+            currentType = typeof(FontTalent);
+
+            controllInterfaceTalent(talent);
+            controllTalentGeneral((notFighting)talent);
+        }
+        [TestMethod()]
+        public void loadBasicStructurLanguageTalent()
+        {
+            String file = Path.Combine(ResourcePath, "Basic_Construction_01.xml");
+            currentName = "BasicConstructionTalent01";
+            currentComplexeName = "BasicConstructionTalent01";
+            currentProbeStringOne = "-";
+            currentProbeStringTwo = "KL/IN/CH";
+            currentBE = "-";
+            currentDeviate = "";   
+            currentTAW = "-";
+            currentTAWBonus = "0";
+            currentProbeCount = 3;
+            currentRequirementString = "";
+
+            InterfaceTalent talent = loader.loadFile<LanguageTalent>(file);
+            currentType = typeof(LanguageTalent);
+
+            controllInterfaceTalent(talent);
+            controllTalentGeneral((notFighting)talent);
+        }
+
+        [TestMethod()]
         public void loadBasicStructurTalentClose()
         {
             String file = Path.Combine(ResourcePath, "Basic_Construction_01.xml");
@@ -367,6 +410,48 @@ namespace DSA_Project.Tests
 
             controllInterfaceTalent(talent);
             controllTalentGeneral(talent);
+        }
+        [TestMethod()]
+        public void loadCompleteStructurTalentFont()
+        {
+            String file = Path.Combine(ResourcePath, "Complete_Construction_01.xml");
+            currentName = "CompleteConstructionTalent01";
+            currentComplexeName = "CompleteConstructionTalent01";
+            currentProbeStringOne = "-";
+            currentProbeStringTwo = "KL/KL/FF";
+            currentBE = "-";
+            currentDeviate = "";   //Der Unterschied ist Tatsächlich Vorhanden!
+            currentTAW = "-";
+            currentTAWBonus = "0";
+            currentProbeCount = 3;
+            currentRequirementString = "";
+
+            InterfaceTalent talent = loader.loadFile<FontTalent>(file);
+            currentType = typeof(FontTalent);
+
+            controllInterfaceTalent(talent);
+            controllTalentGeneral((notFighting)talent);
+        }
+        [TestMethod()]
+        public void loadCompleteStructurTalentLanguage()
+        {
+            String file = Path.Combine(ResourcePath, "Complete_Construction_02.xml");
+            currentName = "CompleteConstructionTalent02";
+            currentComplexeName = "CompleteConstructionTalent02";
+            currentProbeStringOne = "-";
+            currentProbeStringTwo = "KL/IN/CH";
+            currentBE = "-";
+            currentDeviate = "";   //Der Unterschied ist Tatsächlich Vorhanden!
+            currentTAW = "-";
+            currentTAWBonus = "0";
+            currentProbeCount = 3;
+            currentRequirementString = "";
+
+            InterfaceTalent talent = loader.loadFile<LanguageTalent>(file);
+            currentType = typeof(LanguageTalent);
+
+            controllInterfaceTalent(talent);
+            controllTalentGeneral((notFighting)talent);
         }
         [TestMethod()]
         public void loadCompleteStructurTalentWeaponless()

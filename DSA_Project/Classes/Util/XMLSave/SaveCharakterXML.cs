@@ -231,6 +231,8 @@ namespace DSA_Project
                 } else
                 if (talentList[i] as LanguageAbstractTalent != null)
                 {
+                    throw new Exception("ÜBERARBEITEN!");
+                    /*
                     LanguageAbstractTalent talent = (LanguageAbstractTalent)talentList[i];
                     String familyName = talent.getFamilyName();
                     XmlNode FamilyElement = null;
@@ -270,6 +272,7 @@ namespace DSA_Project
                         lastnode.InnerText = lt.getMotherMark();
                         ele.AppendChild(lastnode);
                     }
+                    */
                 } else 
                 if (talentList[i] as GiftTalent != null)
                 {

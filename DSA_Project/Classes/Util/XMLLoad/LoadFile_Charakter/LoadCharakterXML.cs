@@ -393,6 +393,8 @@ namespace DSA_Project
         }
         private static void loadTalentLanguage(XmlNode TalentNode, Charakter charakter)
         {
+            throw new Exception("ÜBERARBEITEN!");
+            /*
             LanguageTalent Typelanguage = new LanguageTalent("Type", "", 0, 0);
             Dictionary<String, List<LanguageTalent>> dictonary = new Dictionary<String, List<LanguageTalent>>();
             List<InterfaceTalent> InterfaceTalentList = charakter.getTalentList(Typelanguage);
@@ -424,6 +426,7 @@ namespace DSA_Project
                     }
                 }
             }
+            */
         }
         private static void loadTalentGift(XmlNode TalentNode, Charakter charakter)
         {

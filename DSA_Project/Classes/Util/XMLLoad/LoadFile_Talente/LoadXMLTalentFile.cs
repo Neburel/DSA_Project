@@ -18,6 +18,7 @@ namespace DSA_Project
         private List<DSA_ATTRIBUTE> probe               = new List<DSA_ATTRIBUTE>();
         private List<TalentDeviate> diverates           = new List<TalentDeviate>();
         private List<TalentRequirement>requirements     = new List<TalentRequirement>();
+        private List<String> BElist                     = new List<String>();
         private string BE = "";
         private bool parade = false;
         private DSA_ADVANCEDVALUES attace;
@@ -33,11 +34,11 @@ namespace DSA_Project
             pos = 0;
 
             TalentName      = "";
-            BE              = "";
             parade          = false;
-            probe           = new List<DSA_ATTRIBUTE>();
-            diverates       = new List<TalentDeviate>();
-            requirements    = new List<TalentRequirement>();
+            probe           = new List<DSA_ATTRIBUTE>(0);
+            diverates       = new List<TalentDeviate>(0);
+            requirements    = new List<TalentRequirement>(0);
+            BElist          = new List<String>(0);
 
             FamilyName = "";
             languageTalentName = "";
@@ -48,14 +49,20 @@ namespace DSA_Project
         public T loadFile<T>(String fileName) where T: InterfaceTalent
         {
             clear();
-
-            ConstructorInfo constructor = null;
-            object magicClassObject     = null;
-
-            Type type = typeof(T);
-            Type[] typeArray = null;
             load(fileName);
 
+            String BE = "";
+
+            if(BElist.Count > 0)
+            {
+                BE = BElist[BElist.Count - 1];
+            }
+            
+            ConstructorInfo constructor = null;
+            object magicClassObject     = null;
+            Type type                   = typeof(T);
+            Type[] typeArray            = null;
+            
             if (typeof(TalentGeneral).IsAssignableFrom(type))
             {
                 typeArray = new Type[] { typeof(String), typeof(List<DSA_ATTRIBUTE>), typeof(String), typeof(List<TalentDeviate>), typeof(List<TalentRequirement>) };
@@ -69,20 +76,10 @@ namespace DSA_Project
                 magicClassObject = constructor.Invoke(new object[] { TalentName, BE, diverates, attace, parade });
             } else
             if (typeof(LanguageTalent).IsAssignableFrom(type) || typeof(FontTalent).IsAssignableFrom(type))
-            {   
-                if (languageTalentComplex2 == 0)
-                {
-                    typeArray = new Type[] { typeof(String), typeof(String), typeof(int) };
-                    constructor = type.GetConstructor(typeArray);
-                    magicClassObject = constructor.Invoke(new object[] { FamilyName, languageTalentName, languageTalentComplex });
-                } else
-                {
-                    typeArray = new Type[] { typeof(String), typeof(String), typeof(int), typeof(int) };
-                    constructor = type.GetConstructor(typeArray);
-                    magicClassObject = constructor.Invoke(new object[] { FamilyName, languageTalentName, languageTalentComplex, languageTalentComplex2 });
-                }
-                LanguageAbstractTalent talent = (LanguageAbstractTalent)magicClassObject;
-                talent.setPOS(pos);
+            {
+                typeArray = new Type[] { typeof(String), typeof(List<String>) };
+                constructor = type.GetConstructor(typeArray);
+                magicClassObject = constructor.Invoke(new object[] { TalentName, BElist });                
             } else
             if (typeof(GiftTalent).IsAssignableFrom(type))
             {
@@ -103,17 +100,11 @@ namespace DSA_Project
 
             XmlNode TalentLetterElement = talentFile.SelectSingleNode("/" + ManagmentXMLStrings.TalentLetterElement);
             XmlNode TalentElement = TalentLetterElement.SelectSingleNode(ManagmentXMLStrings.TalentElement);
-            XmlNode LanguageElement = TalentLetterElement.SelectSingleNode(ManagmentXMLStrings.Language);
 
             if (TalentElement != null)
             {
                 loadGeneralTalent(TalentElement);
             }
-            if(LanguageElement != null)
-            {
-                loadLanguageTalent(LanguageElement);
-            }
-            
         }
         //################################################################################################
         private void loadGeneralTalent(XmlNode TalentElement)
@@ -124,7 +115,7 @@ namespace DSA_Project
                 {
                     case ManagmentXMLStrings.Name: TalentName = node.InnerText; break;
                     case ManagmentXMLStrings.Probe: loadProbe(node); break;
-                    case ManagmentXMLStrings.BE: BE = node.InnerText; break;
+                    case ManagmentXMLStrings.BE: BElist.Add(node.InnerText); break;
                     case ManagmentXMLStrings.Diverates: loadDiverates(node); break;
                     case ManagmentXMLStrings.Requirements: loadRequirements(node); break;
                     case ManagmentXMLStrings.FightingTalent: loadFightingTalent(node); break;
@@ -215,24 +206,5 @@ namespace DSA_Project
             }
         }
         //################################################################################################
-        private void loadLanguageTalent(XmlNode LanguageElement)
-        {
-            foreach (XmlNode node in LanguageElement)
-            {
-                switch (node.Name)
-                {
-                    case ManagmentXMLStrings.FamilyName: FamilyName = node.InnerText; break;
-                    case ManagmentXMLStrings.pos: Int32.TryParse(node.InnerText, out pos); break;
-                    case ManagmentXMLStrings.SpeakingName: languageTalentName = node.InnerText; break;
-                    case ManagmentXMLStrings.SpeakingComplex: Int32.TryParse(node.InnerText, out languageTalentComplex); break;
-                    case ManagmentXMLStrings.SpeakingComplexSecond: Int32.TryParse(node.InnerText, out languageTalentComplex2); break;
-                    case ManagmentXMLStrings.FontName: languageTalentName = node.InnerText; break;
-                    case ManagmentXMLStrings.FontComplex: Int32.TryParse(node.InnerText, out languageTalentComplex); break;
-                    case ManagmentXMLStrings.FontComplexSecond: Int32.TryParse(node.InnerText, out languageTalentComplex2); break;
-                    default: throw new Exception("No such Case");
-                }
-            }
-        }
-
     }
 }

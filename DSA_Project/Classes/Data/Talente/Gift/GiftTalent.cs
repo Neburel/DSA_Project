@@ -10,11 +10,6 @@ namespace DSA_Project
     {
         public GiftTalent(String name, List<DSA_ATTRIBUTE> probe) : base(name, probe, "", null, null)
         {
-        }
-
-        public override string getComplexName()
-        {
-            return this.getName();
-        }
+        }        
     }
 }

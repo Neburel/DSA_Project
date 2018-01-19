@@ -9,23 +9,42 @@ namespace DSA_Project
     public abstract class LanguageAbstractTalent : notFighting
     {
         int pos = 0;
-        String FamilyName = "";
         String motherMark = "";
 
-        public LanguageAbstractTalent(String FamilyName, String name, List<DSA_ATTRIBUTE> probe, int complex) : base(name, probe, complex.ToString(), null, null)
+        public LanguageAbstractTalent(String name, List<DSA_ATTRIBUTE> probe, List<String>complex) : base(name, probe, convertComplexListtoString(complex), null, null){}
+        static private String convertComplexListtoString(List<String> complex)
         {
-            this.FamilyName = FamilyName;
-        }
-        public LanguageAbstractTalent(String FamilyName, String name, List<DSA_ATTRIBUTE> probe, int complex1, int complex2) : base(name, probe, complex1.ToString() + "(" + complex2.ToString() + ")", null, null)
-        {
-            this.FamilyName = FamilyName;
-        }
+            String ret = "";
+            for(int i=0; i<complex.Count; i++)
+            {
+                int x = 0;
 
-        public String getFamilyName()
-        {
-            return FamilyName;
+                if (Int32.TryParse(complex[i], out x))
+                {
+                    if (i == 0)
+                    {
+                        ret = ret + complex[i].ToString();
+                    }
+                    else
+                    {
+                        if (i == 1)
+                        {
+                            ret = ret + "(" + complex[i].ToString();
+                        }
+                        else
+                        {
+                            ret = ret + "," + complex[i].ToString();
+                        }
+                        if (i == (complex.Count - 1))
+                        {
+                            ret = ret + ")";
+                        }
+                    }
+                }
+            }
+            return ret;
         }
-       
+               
         public void setMotherMark(String name)
         {
             if(String.Compare(name, "") == 0)
@@ -36,23 +55,18 @@ namespace DSA_Project
                 motherMark = "X";
             }
         }
-        public String getMotherMark()
-        {
-            return motherMark;
-        }
-
         public void setPOS(int pos)
         {
             this.pos = pos;
+        }
+        public String getMotherMark()
+        {
+            return motherMark;
         }
         public int getPOS()
         {
             return pos;
         }
-
-        public override string getComplexName()
-        {
-            return this.FamilyName + "_" + this.getName() + pos;
-        }
+        
     }
 }

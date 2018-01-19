@@ -75,10 +75,5 @@ namespace DSA_Project
         {
             return this.Probe[0].ToString();
         }
-
-        public override string getComplexName()
-        {
-            return this.getName();
-        }
     }
 }
