@@ -8,7 +8,7 @@ namespace DSA_Project
 {
     public class GiftTalent : notFighting
     {
-        public GiftTalent(String name, List<DSA_ATTRIBUTE> probe) : base(name, probe, "", null, null)
+        public GiftTalent(String name, List<DSA_ATTRIBUTE> probe) : base(name, probe, "", new List<TalentDeviate>(0), new List<TalentRequirement>(0))
         {
         }        
     }

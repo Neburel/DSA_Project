@@ -8,10 +8,9 @@ namespace DSA_Project
 {
     public abstract class LanguageAbstractTalent : notFighting
     {
-        int pos = 0;
         String motherMark = "";
 
-        public LanguageAbstractTalent(String name, List<DSA_ATTRIBUTE> probe, List<String>complex) : base(name, probe, convertComplexListtoString(complex), null, null){}
+        public LanguageAbstractTalent(String name, List<DSA_ATTRIBUTE> probe, List<String>complex) : base(name, probe, convertComplexListtoString(complex), new List<TalentDeviate>(), new List<TalentRequirement>()){}
         static private String convertComplexListtoString(List<String> complex)
         {
             String ret = "";
@@ -55,18 +54,10 @@ namespace DSA_Project
                 motherMark = "X";
             }
         }
-        public void setPOS(int pos)
-        {
-            this.pos = pos;
-        }
         public String getMotherMark()
         {
             return motherMark;
         }
-        public int getPOS()
-        {
-            return pos;
-        }
-        
+          
     }
 }

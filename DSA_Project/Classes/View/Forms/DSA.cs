@@ -1220,10 +1220,13 @@ namespace DSA_Project
                 int highestpos = 0;
                 for(int i=0; i<list.Count; i++)
                 {
+                    throw new Exception("ÜBERARBEITEN!");
+                    /*
                     if (highestpos < list[i].getPOS())
                     {
                         highestpos = list[i].getPOS();
                     }
+                    */
                 }
                 for(int i=list.Count; i<highestpos; i++)
                 {
@@ -1247,7 +1250,9 @@ namespace DSA_Project
                     talent2 = null;
 
                     for (int i = 0; i < list.Count; i++)
-                    {   
+                    {
+                        throw new Exception("ÜBERARBEITEN!");
+                        /*
                         int pos = -1;
                         int pos2 = -1;
 
@@ -1266,6 +1271,7 @@ namespace DSA_Project
                                 hit = true;
                             }
                         }
+                        */
                     }
                 }
             }

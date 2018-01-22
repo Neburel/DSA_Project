@@ -137,6 +137,10 @@ namespace DSA_Project
             talentBoni.Add(talent, BonusTaw);
         }
 
+        public DSA_FEATURES getFeatureType()
+        {
+            return this.type;
+        }
 
         public String getName()
         {

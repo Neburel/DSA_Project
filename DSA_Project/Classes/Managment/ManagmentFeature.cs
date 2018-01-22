@@ -36,8 +36,10 @@ namespace DSA_Project
                 energienMali.Add((DSA_ENERGIEN)i, 0);
             }
         }
-        public void addFeature(DSA_FEATURES type,Feature feature, int number)
+        public void addFeature(Feature feature, int number)
         {
+            DSA_FEATURES type = feature.getFeatureType();
+
             if (HighestNumber < number)
             {
                 HighestNumber = number;

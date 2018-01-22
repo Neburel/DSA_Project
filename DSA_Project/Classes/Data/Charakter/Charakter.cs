@@ -227,9 +227,9 @@ namespace DSA_Project
             return (getEnergieVOR(energie)+getEnergiePERM(energie))+getEnergieMALI(energie);
         }
         
-        public void addFeature(DSA_FEATURES type, int number, Feature feature)
+        public void addFeature(int number, Feature feature)
         {
-            featureManagment.addFeature(type, feature, number);
+            featureManagment.addFeature(feature, number);
         }       
         public Feature getFeature(DSA_FEATURES type, int number)
         {

@@ -8,10 +8,7 @@ namespace DSA_Project
 {
     abstract public class notFighting : Talent<DSA_ATTRIBUTE>
     {
-        public notFighting(String name, List<DSA_ATTRIBUTE> probe, String be, List<TalentDeviate>diverates, List<TalentRequirement>requirements) : base(name, probe, be, diverates)
-        {
-            requirement = requirements;
-        }
+        public notFighting(String name, List<DSA_ATTRIBUTE> probe, String be, List<TalentDeviate>diverates, List<TalentRequirement>requirements) : base(name, probe, be, diverates, requirements){}
 
         public override String getProbeStringOne()
         {
@@ -39,30 +36,6 @@ namespace DSA_Project
             {
                 if (i != 0) ret = ret + "/";
                 ret = ret + Probe[i];
-            }
-            return ret;
-        }
-        
-        public String getRequirementString()
-        {
-            if (requirement == null) return "";
-
-            if (requirement.Count == 0)
-            {
-                return "-";
-            }
-
-            String ret = "";
-            for(int i=0; i<requirement.Count; i++)
-            {
-                if (i != 0) { ret = ret + ", "; }
-                String TalentName = requirement[i].getTalentName();
-                int value = requirement[i].getValue();
-                int needAt = requirement[i].getNeededAtValue();
-
-                if (needAt != 0) { ret = ret + needAt.ToString() + "+" + " "; }
-                ret = ret + TalentName;
-                if (value != 0) { ret = ret + " " + value.ToString(); }
             }
             return ret;
         }

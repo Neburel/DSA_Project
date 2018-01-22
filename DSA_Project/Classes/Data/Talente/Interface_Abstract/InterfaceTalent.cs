@@ -10,13 +10,21 @@ namespace DSA_Project
     {
         void setCharacter(Charakter charakter);
         void setTaw(String taw);
+        
         int getProbeCount();
-        String getName();
+
         String getBe();
+        String getName();
         String getTaW();
         String getTAWBonus();
         String getProbeStringOne();
         String getProbeStringTwo();
         String getDeviateString();
+        String getRequirementString();
+
+        List<TalentDeviate> getDeviateList();
+        List<TalentRequirement> getRequirementList();
+
+        
     }
 }

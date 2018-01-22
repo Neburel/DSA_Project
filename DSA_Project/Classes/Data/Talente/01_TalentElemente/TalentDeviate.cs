@@ -13,11 +13,9 @@ namespace DSA_Project
      * */
     public class TalentDeviate
     {
-        private InterfaceTalent Talent;
         private String Talentname;
         private int RequirementTaW;
       
-
         public TalentDeviate(String TalentName, int requirementTaW)
         {
             this.Talentname         = TalentName;

@@ -289,7 +289,7 @@ namespace DSA_Project
 
             if (feature == null) return null;
 
-            Charakter.addFeature(type, number, feature);
+            Charakter.addFeature(number, feature);
 
             return feature;
         }

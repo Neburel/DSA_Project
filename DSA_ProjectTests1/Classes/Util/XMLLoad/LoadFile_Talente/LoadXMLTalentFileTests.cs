@@ -1,11 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DSA_Project;
 using System;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DSA_Project.Tests
 {
@@ -212,11 +207,11 @@ namespace DSA_Project.Tests
             currentProbeStringOne = "-";
             currentProbeStringTwo = "";
             currentBE = "-";
-            currentDeviate = "";   //Der Unterschied ist Tatsächlich Vorhanden!
+            currentDeviate = "-";   //Der Unterschied ist Tatsächlich Vorhanden!
             currentTAW = "-";
             currentTAWBonus = "0";
             currentProbeCount = 0;
-            currentRequirementString = "";    
+            currentRequirementString = "-";    
 
             InterfaceTalent talent = loader.loadFile<GiftTalent>(file);
             currentType = typeof(GiftTalent);
@@ -234,11 +229,11 @@ namespace DSA_Project.Tests
             currentProbeStringOne = "-";
             currentProbeStringTwo = "KL/KL/FF";
             currentBE = "-";
-            currentDeviate = "";   //Der Unterschied ist Tatsächlich Vorhanden!
+            currentDeviate = "-";   //Der Unterschied ist Tatsächlich Vorhanden!
             currentTAW = "-";
             currentTAWBonus = "0";
             currentProbeCount = 3;
-            currentRequirementString = "";
+            currentRequirementString = "-";
 
             InterfaceTalent talent = loader.loadFile<FontTalent>(file);
             currentType = typeof(FontTalent);
@@ -255,11 +250,11 @@ namespace DSA_Project.Tests
             currentProbeStringOne = "-";
             currentProbeStringTwo = "KL/IN/CH";
             currentBE = "-";
-            currentDeviate = "";   
+            currentDeviate = "-";   
             currentTAW = "-";
             currentTAWBonus = "0";
             currentProbeCount = 3;
-            currentRequirementString = "";
+            currentRequirementString = "-";
 
             InterfaceTalent talent = loader.loadFile<LanguageTalent>(file);
             currentType = typeof(LanguageTalent);
@@ -399,11 +394,11 @@ namespace DSA_Project.Tests
             currentProbeStringOne   = "-";
             currentProbeStringTwo   = "MU/KL/SO/KK";
             currentBE               = "-";
-            currentDeviate          = "";
+            currentDeviate          = "-";
             currentTAW              = "-";
             currentTAWBonus         = "0";
             currentProbeCount       = 4;
-            currentRequirementString = "";
+            currentRequirementString = "-";
 
             GiftTalent talent = loader.loadFile<GiftTalent>(file);
             currentType = typeof(GiftTalent);
@@ -420,11 +415,11 @@ namespace DSA_Project.Tests
             currentProbeStringOne = "-";
             currentProbeStringTwo = "KL/KL/FF";
             currentBE = "-";
-            currentDeviate = "";   //Der Unterschied ist Tatsächlich Vorhanden!
+            currentDeviate = "-";   //Der Unterschied ist Tatsächlich Vorhanden!
             currentTAW = "-";
             currentTAWBonus = "0";
             currentProbeCount = 3;
-            currentRequirementString = "";
+            currentRequirementString = "-";
 
             InterfaceTalent talent = loader.loadFile<FontTalent>(file);
             currentType = typeof(FontTalent);
@@ -441,11 +436,11 @@ namespace DSA_Project.Tests
             currentProbeStringOne = "-";
             currentProbeStringTwo = "KL/IN/CH";
             currentBE = "-";
-            currentDeviate = "";   //Der Unterschied ist Tatsächlich Vorhanden!
+            currentDeviate = "-";   //Der Unterschied ist Tatsächlich Vorhanden!
             currentTAW = "-";
             currentTAWBonus = "0";
             currentProbeCount = 3;
-            currentRequirementString = "";
+            currentRequirementString = "-";
 
             InterfaceTalent talent = loader.loadFile<LanguageTalent>(file);
             currentType = typeof(LanguageTalent);

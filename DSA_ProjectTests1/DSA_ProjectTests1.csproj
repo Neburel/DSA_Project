@@ -56,6 +56,23 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="01_TestUtil\RandomGenerator.cs" />
+    <Compile Include="Classes\Data\Talente\Fighting\TalentCloseTests.cs" />
+    <Compile Include="Classes\Data\Talente\Fighting\TalentFightingTests.cs" />
+    <Compile Include="Classes\Data\Talente\Fighting\TalentRangeTests.cs" />
+    <Compile Include="Classes\Data\Talente\Fighting\TalentWeaponlessTests.cs" />
+    <Compile Include="Classes\Data\Talente\Gift\GiftTalentTests.cs" />
+    <Compile Include="Classes\Data\Talente\Interface_Abstract\TalentTests.cs" />
+    <Compile Include="Classes\Data\Talente\Interface_Abstract\notFightingTests.cs" />
+    <Compile Include="Classes\Data\Talente\Language\FontTalentTests.cs" />
+    <Compile Include="Classes\Data\Talente\Language\LanguageAbstractTalentTests.cs" />
+    <Compile Include="Classes\Data\Talente\Language\LanguageTalentTests.cs" />
+    <Compile Include="Classes\Data\Talente\TalentGeneral\TalentCraftingTests.cs" />
+    <Compile Include="Classes\Data\Talente\TalentGeneral\TalentGeneralTests.cs" />
+    <Compile Include="Classes\Data\Talente\TalentGeneral\TalentKnwoldageTests.cs" />
+    <Compile Include="Classes\Data\Talente\TalentGeneral\TalentNatureTests.cs" />
+    <Compile Include="Classes\Data\Talente\TalentGeneral\TalentPhysicalTests.cs" />
+    <Compile Include="Classes\Data\Talente\TalentGeneral\TalentSocialTests.cs" />
     <Compile Include="Classes\Util\XMLLoad\LoadFile_Talente\LoadXMLTalentFileTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

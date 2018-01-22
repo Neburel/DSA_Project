@@ -6,44 +6,53 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    public abstract class Talent<T> : InterfaceTalent
+    public abstract class Talent<T> : TalentBase
     {
         internal bool learned = false;
         internal Charakter Charakter;
         internal List<T> Probe;
-        internal List<TalentDeviate> Diverates;
-        internal List<TalentRequirement> requirement;
+        private List<TalentDeviate> Deviate;
+        private List<TalentDeviate> notUsedDeviate;
+        private List<TalentDeviate> usedDeviate;
+        private List<TalentRequirement> Requirement;
+        private Dictionary<String, InterfaceTalent> talentDictonary;
 
         private int TaW;
         private String Name;
         private String Be;
         
-        public Talent(String name, List<T> probe, String be, List<TalentDeviate> diverates)
+        public Talent(String name, List<T> probe, String be, List<TalentDeviate> diverates, List<TalentRequirement> requirements)
         {
-            this.Name = name;
-            this.Probe = probe;
-            this.Be = be;
+            this.Charakter          = null;
+            this.Be                 = be;
+            this.TaW                = 0;
+            this.Name               = name;
+            this.Probe              = probe;
+            this.Deviate            = diverates;
+            this.Requirement        = requirements;
+            this.TaWDeviateBonus    = 0;
+            this.notUsedDeviate     = new List<TalentDeviate>(0);
+            this.usedDeviate        = new List<TalentDeviate>(0);
+            this.talentDictonary    = new Dictionary<String, InterfaceTalent>(0);
 
-            Diverates = diverates;
-            Charakter = null;
+            if(probe == null | diverates== null || requirements == null)
+            {
+                throw new Exception("TalentCreationError: Tryed to Implement a Talent with a null List");
+            }
+
+            foreach(TalentDeviate dev in Deviate)
+            {
+                notUsedDeviate.Add(dev);
+            }
         }
-
-        public void setCharacter(Charakter charakter)
+        
+        public override void setCharacter(Charakter charakter)
         {
             this.Charakter = charakter;
         }
-        public abstract String getProbeStringOne();
-        public abstract String getProbeStringTwo();
-        
-        
-        private void setTaw(int taw)
+        public override void setTaw(String taw)
         {
-            learned = true;
-            TaW = taw;
-        }
-        public void setTaw(String taw)
-        {
-            if(String.Compare(taw, "-") == 0)
+            if (String.Compare(taw, "-") == 0)
             {
                 learned = false;
             }
@@ -54,67 +63,167 @@ namespace DSA_Project
                 setTaw(value);
             }
         }
-        public String getName()
-            {
-                return Name;
-            }
-        public String getDeviateString()
+
+        public override int getProbeCount()
         {
-            if (Diverates == null) return "";
-
-            if (Diverates.Count == 0)
-            {
-                return "-";
-            }
-
-            String ret = "";
-            for(int i=0; i<Diverates.Count;i++)
-            {
-                if (i > 0)
-                {
-                    ret = ret + ", ";
-                }
-                TalentDeviate diverate = Diverates[i];
-                if (diverate.getRequiredTaW() == 0)
-                {
-                    ret = ret + diverate.getName();
-                } else
-                {
-                    ret = ret + diverate.getName() + "(" + diverate.getRequiredTaW().ToString() + ")";
-                }
-            }
-            return ret;
+            return Probe.Count;
         }
-        public int getProbeCount()
-            {
-                return Probe.Count;
-            }
-        public String getBe()
-            {
-                if (Be == "") { return "-"; }
-                return Be;
-            }
-        public String getTaW()
+
+        public override List<TalentDeviate> getDeviateList()
+        {
+            return Deviate;
+        }
+        public override List<TalentRequirement> getRequirementList()
+        {
+            return Requirement;
+        }
+
+        public override String ToString()
+        { return this.Name; }
+        public override String getBe()
+        {
+            if (Be == "") { return "-"; }
+            return Be;
+        }
+        public override String getTaW()
         {
             if (learned == false) { return "-"; }
 
             return TaW.ToString();
         }
-        internal int getTawWithBonus()
+        public override String getName()
         {
-            return TaW + Charakter.getTaWBons(this);
+            return Name;
         }
-
-        public override string ToString() { return this.Name; }
-
-        public string getTAWBonus()
+        public override String getTAWBonus()
         {
             if (Charakter == null)
             {
                 return (0).ToString();
             }
 
-            return Charakter.getTaWBons(this).ToString();
+            return (Charakter.getTaWBons(this) + TaWDeviateBonus).ToString();
+        }
+        public override String getDeviateString()
+        {
+            if (Deviate == null) return "";
+
+            if (Deviate.Count == 0)
+            {
+                return "-";
+            }
+
+            String ret = "";
+            for (int i = 0; i < Deviate.Count; i++)
+            {
+                if (i > 0)
+                {
+                    ret = ret + ", ";
+                }
+                TalentDeviate diverate = Deviate[i];
+                if (diverate.getRequiredTaW() == 0)
+                {
+                    ret = ret + diverate.getName();
+                }
+                else
+                {
+                    ret = ret + diverate.getName() + "(" + diverate.getRequiredTaW().ToString() + ")";
+                }
+            }
+            return ret;
+        }
+        public override String getRequirementString()
+        {
+            if (Requirement == null) return "";
+
+            if (Requirement.Count == 0)
+            {
+                return "-";
+            }
+
+            String ret = "";
+            for (int i = 0; i < Requirement.Count; i++)
+            {
+                if (i != 0) { ret = ret + ", "; }
+                String TalentName = Requirement[i].getTalentName();
+                int value = Requirement[i].getValue();
+                int needAt = Requirement[i].getNeededAtValue();
+
+                if (needAt != 0) { ret = ret + needAt.ToString() + "+" + " "; }
+                ret = ret + TalentName;
+                if (value != 0) { ret = ret + " " + value.ToString(); }
+            }
+            return ret;
+        }
+
+        private void setTaw(int taw)
+        {
+            learned = true;
+            TaW = taw;
+
+            int localTaW = getTawWithBonus();
+            List<TalentDeviate> used        = new List<TalentDeviate>(0);
+            List<TalentDeviate> notused     = new List<TalentDeviate>(0);
+
+            DeviateCalculate();
+        }
+        private void DeviateCalculate()
+        {
+            int localTaW = getTawWithBonus();
+            List<TalentDeviate> used = new List<TalentDeviate>(0);
+            List<TalentDeviate> notused = new List<TalentDeviate>(0);
+
+            foreach (TalentDeviate dev in notUsedDeviate)
+            {
+                if (dev.getRequiredTaW() <= localTaW)
+                {
+                    TalentBase talent = (TalentBase)talentSearch(dev.getName());
+                    talent.addDeviateBonus();
+                    used.Add(dev);
+                }
+            }
+            foreach (TalentDeviate dev in usedDeviate)
+            {
+                if (dev.getRequiredTaW() > localTaW)
+                {
+                    TalentBase talent = (TalentBase)talentSearch(dev.getName());
+                    talent.removeDeviateBonus();
+                    notused.Add(dev);
+                }
+            }
+            for (int i = 0; i < used.Count; i++)
+            {
+                notUsedDeviate.Remove(used[i]);
+                usedDeviate.Add(used[i]);
+            }
+            for (int i = 0; i < notused.Count; i++)
+            {
+                usedDeviate.Remove(notused[i]);
+                notUsedDeviate.Add(notused[i]);
+            }
+        }
+                
+        internal int getTawWithBonus()
+        {
+            if (Charakter == null) throw new Exception("Charakter is null");
+
+            return TaW + Charakter.getTaWBons(this) + TaWDeviateBonus; 
+        }
+
+        private InterfaceTalent talentSearch(String name)
+        {
+            InterfaceTalent talent = null;
+
+            if (!talentDictonary.TryGetValue(name, out talent))
+            {
+                talent = this.Charakter.getTalent(name); ;
+                if (talent != null)
+                {
+                    talentDictonary.Add(name, talent);
+                }
+            }
+
+            return talent;
         }
     }
 }

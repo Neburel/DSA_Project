@@ -12,7 +12,7 @@ namespace DSA_Project
         private int AT;
         private int PA;
 
-        public TalentFighting(String name, String be, List<TalentDeviate>diverates, DSA_ADVANCEDVALUES at, bool parade) :base (name, new List<DSA_ADVANCEDVALUES> { at, DSA_ADVANCEDVALUES.PARADE_BASIS }, be, diverates)
+        public TalentFighting(String name, String be, List<TalentDeviate>diverates, DSA_ADVANCEDVALUES at, bool parade) :base (name, new List<DSA_ADVANCEDVALUES> { at, DSA_ADVANCEDVALUES.PARADE_BASIS }, be, diverates, new List<TalentRequirement>(0))
         {
             AT = 0;
             PA = 0;
@@ -32,6 +32,16 @@ namespace DSA_Project
             }
             return ownValue;
         }
+        public int getAT()
+        {
+            return AT;
+        }
+        public String getPA()
+        {
+            if (parade == false) return "---";
+            return PA.ToString();
+        }
+
         public void setAT(int at)
         {
             AT = getATPA(AT, PA, at);
@@ -42,16 +52,6 @@ namespace DSA_Project
             PA = getATPA(PA, AT, pa);
         }
 
-        
-        public int getAT()
-        {
-            return AT;
-        }
-        public String getPA()
-        {
-            if (parade == false) return "---";
-            return PA.ToString();
-        }
         public int getProbeValueAT()
         {
             if (Charakter == null) { return 0; }
@@ -67,7 +67,7 @@ namespace DSA_Project
         {
             return getProbeValueAT().ToString(); ;
         }
-        public override string getProbeStringTwo()
+        public override String getProbeStringTwo()
         {
             return getProbeValuePA().ToString();
         }

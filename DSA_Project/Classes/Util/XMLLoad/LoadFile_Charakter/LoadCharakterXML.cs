@@ -191,7 +191,7 @@ namespace DSA_Project
                 {
                     throw new Exception();
                 }
-                charakter.addFeature(type, number, feature);
+                charakter.addFeature(number, feature);
             }
         }
         private static Feature loadFeature(XmlNode featureNode, Charakter charakter, int number, DSA_FEATURES type)
