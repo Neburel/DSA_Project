@@ -1,0 +1,12 @@
+<TalentLetter>
+  <Talent>
+    <Name>Musizieren</Name>
+    <Probe>
+      <Attribute>IN</Attribute>
+      <Attribute>CH</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates />
+    <Requirements />
+  </Talent>
+</TalentLetter>

@@ -1,0 +1,33 @@
+<TalentLetter>
+  <Talent>
+    <Name>Handel</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>CH</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Hauswirtschaft</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Geographie</Talent>
+        <Value>15</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Schätzen</Talent>
+        <Value>15</Value>
+      </Diverate>
+    </Diverates>
+    <Requirements>
+      <Requirements>
+        <Talent>Rechnen</Talent>
+        <Value>4</Value>
+        <NeedAT>
+        </NeedAT>
+      </Requirements>
+    </Requirements>
+  </Talent>
+</TalentLetter>

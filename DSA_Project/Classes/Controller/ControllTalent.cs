@@ -12,7 +12,7 @@ namespace DSA_Project
         private Dictionary<Type, List<InterfaceTalent>> TalentDictonary = new Dictionary<Type, List<InterfaceTalent>>();
         String currentdirectoryPath = Directory.GetCurrentDirectory();
 
-        public ControllTalent(Charakter charakter, String ResourcePath)
+        public ControllTalent(String ResourcePath)
         {
             loadTalents(ResourcePath);
             checkforDoppelTalents();
@@ -33,13 +33,35 @@ namespace DSA_Project
                     InterfaceTalent currentTalent = talentlist[j];
                     if(String.Compare(checkTalent.getName(), currentTalent.getName()) == 0)
                     {
-                        throw new Exception("Doppeltes Talent Entdeckt: " + checkTalent + " mit dem Typ:" + checkTalent.GetType() + " " + currentTalent.GetType());
+                        throw new FileLoadException("Doppeltes Talent Entdeckt: " + checkTalent + " mit dem Typ:" + checkTalent.GetType() + " " + currentTalent.GetType());
                     }
                 }
             }
         }
+        private void checkTalentDictionarys(String ResourcePath)
+        {
+            String GeneralTalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.GeneralTalentFilesSystemLocation);
+            String FightingTalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.FightTalentFilesSystemLocation);
+            String LanguageTalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.LanguageTalentFileSystemLocation);
+            String GiftTalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.GiftTalentFileSystemLocation);
+
+            List<String> fileSystemList = new List<String>{ GeneralTalentFileSystemLocation , FightingTalentFileSystemLocation, LanguageTalentFileSystemLocation, GiftTalentFileSystemLocation };
+
+            for(int i=0; i<fileSystemList.Count; i++)
+            {
+                if (!Directory.Exists(fileSystemList[i]))
+                {
+                    throw new SystemException("Das File System " + fileSystemList[i] + " exestiert nicht");
+                }
+            }
+
+            Directory.Exists(GeneralTalentFileSystemLocation);
+        }
+
         private void loadTalents(String ResourcePath)
         {
+            checkTalentDictionarys(ResourcePath);
+
             loadGeneralTalents(ResourcePath);
             loadFightingTalent(ResourcePath);
             loadLanguageTalent(ResourcePath);
@@ -47,7 +69,7 @@ namespace DSA_Project
         }
         private void loadGeneralTalents(String ResourcePath)
         {
-            Interface_LoadXMLTalentFile loader = new LoadXMLTalentFile();
+            Interface_LoadFile_TalentFile loader = new LoadFile_TalentFile();
             String GeneralTalentFileSystemLocation  = Path.Combine(ResourcePath, ManagmentSaveStrings.GeneralTalentFilesSystemLocation);
             List<String> dirs                       = new List<String>(Directory.EnumerateDirectories(GeneralTalentFileSystemLocation));
 
@@ -81,7 +103,7 @@ namespace DSA_Project
         }
         private void loadFightingTalent(String ResourcePath)
         {
-            Interface_LoadXMLTalentFile loader = new LoadXMLTalentFile();
+            Interface_LoadFile_TalentFile loader = new LoadFile_TalentFile();
             String TalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.FightTalentFilesSystemLocation);
             List<String> dirs = new List<String>(Directory.EnumerateDirectories(TalentFileSystemLocation));
 
@@ -109,7 +131,7 @@ namespace DSA_Project
         }
         private void loadLanguageTalent(String ResourcePath)
         {
-            Interface_LoadXMLTalentFile loader = new LoadXMLTalentFile();
+            Interface_LoadFile_TalentFile loader = new LoadFile_TalentFile();
             String TalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.LanguageTalentFileSystemLocation);
             List<String> dirs = new List<String>(Directory.EnumerateDirectories(TalentFileSystemLocation));
 
@@ -132,13 +154,13 @@ namespace DSA_Project
         }
         private void loadGiftTalent(String ResourcePath)
         {
-            Interface_LoadXMLTalentFile loader = new LoadXMLTalentFile();
+            Interface_LoadFile_TalentFile loader = new LoadFile_TalentFile();
             String TalentFileSystemLocation = Path.Combine(ResourcePath, ManagmentSaveStrings.GiftTalentFileSystemLocation);
             String[] files = Directory.GetFiles(TalentFileSystemLocation);
 
             loadTalent<GiftTalent>(loader, files);
         }
-        public void loadTalent<T>(Interface_LoadXMLTalentFile loader, String[] files) where T: InterfaceTalent
+        public void loadTalent<T>(Interface_LoadFile_TalentFile loader, String[] files) where T: InterfaceTalent
         {
             List<InterfaceTalent> list = new List<InterfaceTalent>();
             Type type = typeof(T);
@@ -153,6 +175,9 @@ namespace DSA_Project
         {
             List<InterfaceTalent> list = null;
             TalentDictonary.TryGetValue(typeof(T), out list);
+
+            if (list == null) list = new List<InterfaceTalent>(0);
+
             return list;
         }
         public InterfaceTalent getTalent(String name)

@@ -1,0 +1,18 @@
+<TalentLetter>
+  <Talent>
+    <Name>Maurer</Name>
+    <Probe>
+      <Attribute>FF</Attribute>
+      <Attribute>GE</Attribute>
+      <Attribute>KK</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Baukunst</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

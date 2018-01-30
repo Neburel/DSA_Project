@@ -1,0 +1,23 @@
+<TalentLetter>
+  <Talent>
+    <Name>Heilkunde Seele</Name>
+    <Probe>
+      <Attribute>IN</Attribute>
+      <Attribute>CH</Attribute>
+      <Attribute>CH</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Menschenkenntnis</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Überzeugen</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

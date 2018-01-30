@@ -1,0 +1,18 @@
+<TalentLetter>
+  <Talent>
+    <Name>Heilkunde Wunden</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>CH</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Anatomie</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

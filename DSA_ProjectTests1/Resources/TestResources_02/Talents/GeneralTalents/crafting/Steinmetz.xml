@@ -1,0 +1,35 @@
+<TalentLetter>
+  <Talent>
+    <Name>Steinmetz</Name>
+    <Probe>
+      <Attribute>FF</Attribute>
+      <Attribute>FF</Attribute>
+      <Attribute>KK</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Baukunst</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Maurer</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Bergbau</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements>
+      <Requirements>
+        <Talent>Gesteinskunde</Talent>
+        <Value>4</Value>
+        <NeedAT>
+        </NeedAT>
+      </Requirements>
+    </Requirements>
+  </Talent>
+</TalentLetter>

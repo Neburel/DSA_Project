@@ -1,0 +1,23 @@
+<TalentLetter>
+  <Talent>
+    <Name>Dolche</Name>
+    <Probe />
+    <Diverates>
+      <Diverate>
+        <Talent>Fechtwaffen</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Raufen</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+    <FightingTalent>
+      <attack>ATTACKE_BASIS</attack>
+      <Parade>True</Parade>
+    </FightingTalent>
+  </Talent>
+</TalentLetter>

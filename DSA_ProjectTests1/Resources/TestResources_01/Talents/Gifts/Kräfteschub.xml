@@ -1,0 +1,10 @@
+<TalentLetter>
+  <Talent>
+    <Name>Kräfteschub</Name>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>KO</Attribute>
+    </Probe>
+  </Talent>
+</TalentLetter>

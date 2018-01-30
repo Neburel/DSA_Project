@@ -1,0 +1,18 @@
+<TalentLetter>
+  <Talent>
+    <Name>Geographie</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Sagen/Legenden</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

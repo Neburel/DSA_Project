@@ -1,0 +1,21 @@
+<TalentLetter>
+  <Talent>
+    <Name>Hauswirtschaft</Name>
+    <Probe>
+      <Attribute>IN</Attribute>
+      <Attribute>CH</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Rechnen (Buchführung)</Talent>
+        <Value>15</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Galanterie (Festegestaltung)</Talent>
+        <Value>15</Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

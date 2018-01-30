@@ -95,5 +95,13 @@ namespace DSA_Project.Tests
         {
             attributeList = RandomGenerator.generateAttributList();
         }
+
+        [TestMethod]
+        public override void testGetProbeStringOne_CharakternotSet()
+        {
+            InterfaceTalent talent  = getNotFightingWithDeviateRequirement();
+            charakter               = null;
+            Assert.AreEqual(getProbeStringOne(), talent.getProbeStringOne());
+        }
     }
 }

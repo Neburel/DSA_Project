@@ -40,5 +40,29 @@ namespace DSA_Project.Tests
             return this.requirementList;
         }
         
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException), "TalentCreationError: Tryed to Implement a Talent with a null List")]
+        public void allNullTestRequirement()
+        {
+            TalentCrafting talent = new TalentCrafting("", null, "", null, null);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException), "TalentCreationError: Tryed to Implement a Talent with a null List")]
+        public void ProbeNullTestRequirement()
+        {
+            TalentCrafting talent = new TalentCrafting("", null, "", new List<TalentDeviate>(), new List<TalentRequirement>());
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException), "TalentCreationError: Tryed to Implement a Talent with a null List")]
+        public void TalentDeviateNullTestRequirement()
+        {
+            TalentCrafting talent = new TalentCrafting("", new List<DSA_ATTRIBUTE>(), "", null, new List<TalentRequirement>());
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException), "TalentCreationError: Tryed to Implement a Talent with a null List")]
+        public void TalentRequirementNullTestRequirement()
+        {
+            TalentCrafting talent = new TalentCrafting("", new List<DSA_ATTRIBUTE>(), "", new List<TalentDeviate>(), null);
+        }
     }
 }

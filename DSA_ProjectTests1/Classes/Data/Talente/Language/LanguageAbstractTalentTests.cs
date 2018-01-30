@@ -60,7 +60,7 @@ namespace DSA_Project.Tests
         {
             Random random = new Random();
             List<String> ret = new List<String>(0);
-            int x = random.Next(maxComplexCount);
+            int x = random.Next(2, maxComplexCount);
 
             for (int i = 0; i < x; i++)
             {

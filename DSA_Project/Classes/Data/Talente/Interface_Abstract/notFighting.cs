@@ -16,10 +16,6 @@ namespace DSA_Project
             {
                 return "-";
             }
-            if(Charakter == null)
-            {
-                return (0).ToString();
-            }
 
             int ret = 0;
 

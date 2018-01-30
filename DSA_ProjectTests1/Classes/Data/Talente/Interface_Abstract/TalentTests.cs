@@ -188,6 +188,16 @@ namespace DSA_Project.Tests
         }
         
         [TestMethod]
+        abstract public void testGetProbeStringOne_CharakternotSet();
+        [TestMethod]
+        public void testGetProbeStringTwo_CharakterSet()
+        {
+            InterfaceTalent talent = getTalentWithDeviateRequirement();
+            talent.setCharacter(charakter);
+            Assert.AreEqual(getProbeStringTwo(), talent.getProbeStringTwo());
+        }
+        
+        [TestMethod]
         public void testtoString()
         {
             InterfaceTalent talent = getTalentWithDeviateRequirement();
@@ -278,6 +288,25 @@ namespace DSA_Project.Tests
             {
                 Assert.AreEqual(requirementList, talent.getRequirementList());
             }
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(NullReferenceException), "Character null")]
+        public void setTaWwithoutTaW()
+        {
+            InterfaceTalent talent = getTalentWithDeviateRequirement();
+            talent.setTaw("0");
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(Exception))]
+        public void Talent_notExistingDiverate()
+        {
+            TalentCrafting craftingTalent = new TalentCrafting("notExist", RandomGenerator.generateAttributList(), "", new List<TalentDeviate> { new TalentDeviate("____", 0) }, new List<TalentRequirement>());
+            charakter.addTalent(craftingTalent);
+            craftingTalent.setTaw("10");
+            Assert.Fail();
         }
     }
 }

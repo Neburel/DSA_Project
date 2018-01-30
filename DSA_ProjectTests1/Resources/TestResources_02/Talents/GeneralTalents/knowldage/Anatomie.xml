@@ -1,0 +1,29 @@
+<TalentLetter>
+  <Talent>
+    <Name>Anatomie</Name>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>KL</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Heilkunde Wunde</Talent>
+        <Value>5</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Heilkunde Krankheiten</Talent>
+        <Value>5</Value>
+      </Diverate>
+    </Diverates>
+    <Requirements>
+      <Requirements>
+        <Talent>Keine Totenangst</Talent>
+        <Value>
+        </Value>
+        <NeedAT>
+        </NeedAT>
+      </Requirements>
+    </Requirements>
+  </Talent>
+</TalentLetter>

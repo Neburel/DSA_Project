@@ -113,6 +113,14 @@ namespace DSA_Project.Tests
         }
 
         [TestMethod]
+        public override void testGetProbeStringOne_CharakternotSet()
+        {
+            InterfaceTalent talent = getTalentWithDeviateRequirement();
+            charakter = null;
+            Assert.AreEqual(getProbeStringOne(), talent.getProbeStringOne());
+        }
+
+        [TestMethod]
         public void getProbeStringThree()
         {
             talent = getTalentFightingWithDeviateRequirement();

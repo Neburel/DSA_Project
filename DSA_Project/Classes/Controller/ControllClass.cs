@@ -90,19 +90,19 @@ namespace DSA_Project
             path = Path.Combine(ManagmentSaveStrings.currentDirectory, getRootPath());
             path = Path.Combine(path, ManagmentSaveStrings.SaveLocation);
             
-            controllTalent = new ControllTalent(charakter, getResourcePath());
-            charakter.addTalent<TalentClose>(controllTalent.getTalentList<TalentClose>());
-            charakter.addTalent<TalentRange>(controllTalent.getTalentList<TalentRange>());
-            charakter.addTalent<TalentWeaponless>(controllTalent.getTalentList<TalentWeaponless>());
+            controllTalent = new ControllTalent(getResourcePath());
+            charakter.addTalent(controllTalent.getTalentList<TalentClose>());
+            charakter.addTalent(controllTalent.getTalentList<TalentRange>());
+            charakter.addTalent(controllTalent.getTalentList<TalentWeaponless>());
 
-            charakter.addTalent<TalentCrafting>(controllTalent.getTalentList<TalentCrafting>());
-            charakter.addTalent<TalentKnwoldage>(controllTalent.getTalentList<TalentKnwoldage>());
-            charakter.addTalent<TalentNature>(controllTalent.getTalentList<TalentNature>());
-            charakter.addTalent<TalentPhysical>(controllTalent.getTalentList<TalentPhysical>());
-            charakter.addTalent<TalentSocial>(controllTalent.getTalentList<TalentSocial>());
+            charakter.addTalent(controllTalent.getTalentList<TalentCrafting>());
+            charakter.addTalent(controllTalent.getTalentList<TalentKnwoldage>());
+            charakter.addTalent(controllTalent.getTalentList<TalentNature>());
+            charakter.addTalent(controllTalent.getTalentList<TalentPhysical>());
+            charakter.addTalent(controllTalent.getTalentList<TalentSocial>());
 
-            charakter.addTalent<LanguageTalent>(controllTalent.getTalentList<LanguageTalent>());
-            charakter.addTalent<FontTalent>(controllTalent.getTalentList<FontTalent>());
+            charakter.addTalent(controllTalent.getTalentList<LanguageTalent>());
+            charakter.addTalent(controllTalent.getTalentList<FontTalent>());
 
             return charakter;
         }
@@ -231,10 +231,6 @@ namespace DSA_Project
         {
             return Charakter.getEnergiePERM(energie);
         }
-        public int EnergieMOD(DSA_ENERGIEN enegie)
-        {
-            return Charakter.getEnergieMOD(enegie);
-        }
         public int EnergieMALI(DSA_ENERGIEN energie)
         {
             return Charakter.getEnergieMALI(energie);
@@ -278,11 +274,11 @@ namespace DSA_Project
 
             if (feature == null)
             {
-                createFeature = new CreateFeature(Charakter.getallTalentList(), type);
+                createFeature = new CreateFeature(Charakter.getTalentList_allTalents(), type);
             }
             else
             {
-                createFeature = new CreateFeature(feature, Charakter.getallTalentList(), type);
+                createFeature = new CreateFeature(feature, Charakter.getTalentList_allTalents(), type);
             }
             createFeature.ShowDialog();
             feature = createFeature.feature();
@@ -309,7 +305,7 @@ namespace DSA_Project
         }
         public List<InterfaceTalent>getTalentList(InterfaceTalent type)
         {
-            return Charakter.getTalentList(type); 
+            return Charakter.getTalentList_TalentType(type); 
         }
         public List<InterfaceTalent>getTalentListController<T>() where T : InterfaceTalent
         {
@@ -317,7 +313,7 @@ namespace DSA_Project
         }
         public List<InterfaceTalent> getallTalentList()
         {
-            return Charakter.getallTalentList();
+            return Charakter.getTalentList_allTalents();
         }
     }
 }

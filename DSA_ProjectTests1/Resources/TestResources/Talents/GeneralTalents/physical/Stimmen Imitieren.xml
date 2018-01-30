@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Stimmen Imitieren</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>CH</Attribute>
+    </Probe>
+    <BE>BE-4</BE>
+    <Requirements>
+      <Requirement>
+        <Talent>Sinnenschärfe</Talent>
+        <Value>4</Value>
+      </Requirement>
+    </Requirements>
+    <Diverates>
+      <Diverate>
+        <Talent>Gaukeleien</Talent>
+        <Value>5</Value>
+      </Diverate>
+    </Diverates>
+  </Talent>
+</TalentLetter>

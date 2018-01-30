@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Schauspielerei</Name>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>KL</Attribute>
+      <Attribute>CH</Attribute>
+    </Probe>
+    <Requirements>
+      <Requirement>
+        <Talent>Etikette</Talent>
+        <Value>4</Value>
+      </Requirement>
+      <Requirement>
+        <Talent>Sich Verkleiden</Talent>
+        <Value>4</Value>
+      </Requirement>
+      <Requirement>
+        <Talent>Singen</Talent>
+        <Value>4</Value>
+      </Requirement>
+      <Requirement>
+        <Talent>Überreden</Talent>
+        <Value>4</Value>
+      </Requirement>
+      <Requirement>
+        <Talent>Überzeugen</Talent>
+        <Value>4</Value>
+      </Requirement>
+    </Requirements>
+    <Diverates>
+      <Diverate>
+        <Talent>Überreden</Talent>
+        <Value>0</Value>
+      </Diverate>
+    </Diverates>
+  </Talent>
+</TalentLetter>

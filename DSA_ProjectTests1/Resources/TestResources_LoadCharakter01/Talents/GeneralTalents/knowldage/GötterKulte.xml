@@ -1,0 +1,23 @@
+<TalentLetter>
+  <Talent>
+    <Name>Götter/Kulte</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Geschichtswissen</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Sagen/Legenden</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

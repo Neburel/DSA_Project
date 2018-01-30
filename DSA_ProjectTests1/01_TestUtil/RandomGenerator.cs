@@ -30,6 +30,8 @@ namespace DSA_Project.Tests
         }
         public static List<DSA_ATTRIBUTE> generateAttributList()
         {
+            //Generiert eine Zufällige Reihenfolge von Attributen
+
             Random random = new Random();
             int length = random.Next(maxAttributLength);
             int enumLength = Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length;

@@ -1,0 +1,23 @@
+<TalentLetter>
+  <Talent>
+    <Name>Seefahrt</Name>
+    <Probe>
+      <Attribute>FF</Attribute>
+      <Attribute>GE</Attribute>
+      <Attribute>KK</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Boote Fahren</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Steuermann</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

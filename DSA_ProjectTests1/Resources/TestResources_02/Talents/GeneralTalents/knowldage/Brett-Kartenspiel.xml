@@ -1,0 +1,23 @@
+<TalentLetter>
+  <Talent>
+    <Name>Brett-/Kartenspiel</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Kriegskunst (Strategie)</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Rechnen</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

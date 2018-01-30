@@ -1,0 +1,30 @@
+<TalentLetter>
+  <Talent>
+    <Name>Kartographie</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>KL</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Orientierung</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Sternenkunde</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements>
+      <Requirements>
+        <Talent>Malen/Zeichnen</Talent>
+        <Value>4</Value>
+        <NeedAT>
+        </NeedAT>
+      </Requirements>
+    </Requirements>
+  </Talent>
+</TalentLetter>

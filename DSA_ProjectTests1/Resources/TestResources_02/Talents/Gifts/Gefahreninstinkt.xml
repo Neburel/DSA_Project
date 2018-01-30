@@ -1,0 +1,10 @@
+<TalentLetter>
+  <Talent>
+    <Name>Gefahreninstinkt</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>IN</Attribute>
+    </Probe>
+  </Talent>
+</TalentLetter>

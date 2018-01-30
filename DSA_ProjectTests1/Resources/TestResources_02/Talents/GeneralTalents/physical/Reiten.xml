@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Reiten</Name>
+    <Probe>
+      <Attribute>CH</Attribute>
+      <Attribute>GE</Attribute>
+      <Attribute>KK</Attribute>
+    </Probe>
+    <BE>BE-2</BE>
+    <Diverates>
+      <Diverate>
+        <Talent>Körperbeherrschung</Talent>
+        <Value>0</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Akrobatik</Talent>
+        <Value>15</Value>
+      </Diverate>
+    </Diverates>
+  </Talent>
+</TalentLetter>

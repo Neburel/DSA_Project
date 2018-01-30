@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.IO;
 
+
 namespace DSA_Project
 {
     //*toDO: try Am obersten Punkt, bei Misserfolg alles als Korrupt erklären (Simple Lösung)
-    static class LoadCharakterXML
+    public static class LoadCharakterXML
     {
-        private static ControllTalent tControll; 
+        private static ControllTalent tControll;
 
         public static Charakter loadCharakter(String fileName, Charakter charakter, ControllTalent Tcontroller)
         {
@@ -182,7 +183,7 @@ namespace DSA_Project
             {
                 i++;
                 Feature feature = loadFeature(node, charakter, i, type);
-                feature.setType(type);
+                //feature.setType(type);
 
                 int number = 0;
                 String Number = node.Name.Substring(BasicString.Length, node.Name.Length - BasicString.Length);
@@ -272,7 +273,7 @@ namespace DSA_Project
         }
         private static void LoadFeatureTalente(XmlNode talentNode, Charakter charakter, Feature feature)
         {
-            List<InterfaceTalent> listTalente = charakter.getallTalentList();
+            List<InterfaceTalent> listTalente = charakter.getTalentList_allTalents();
 
             foreach(XmlNode innerTalent in talentNode)
             {
@@ -393,7 +394,7 @@ namespace DSA_Project
         }
         private static void loadTalentLanguage(XmlNode TalentNode, Charakter charakter)
         {
-            throw new Exception("ÜBERARBEITEN!");
+            Console.WriteLine("Zu Überarbeiten. Exception Fehlt damit vorläufige Test Funktionieren");
             /*
             LanguageTalent Typelanguage = new LanguageTalent("Type", "", 0, 0);
             Dictionary<String, List<LanguageTalent>> dictonary = new Dictionary<String, List<LanguageTalent>>();

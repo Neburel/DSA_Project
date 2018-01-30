@@ -1,0 +1,24 @@
+<TalentLetter>
+  <Talent>
+    <Name>Infanteriewaffen</Name>
+    <BE>BE-4</BE>
+    <Probe />
+    <Diverates>
+      <Diverate>
+        <Talent>Speere</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Zweihand-Hiebwaffen</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+    <FightingTalent>
+      <attack>ATTACKE_BASIS</attack>
+      <Parade>True</Parade>
+    </FightingTalent>
+  </Talent>
+</TalentLetter>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    class ManagmentFeature
+    public class ManagmentFeature
     {
         private enum ACTION { ADD, REMOVE}
 
@@ -163,7 +163,7 @@ namespace DSA_Project
         }
         private void CalculateTalentBonus(Feature feature, int factor)
         {
-            List<InterfaceTalent> tlist = feature.TalentListwithBonus();
+            List<InterfaceTalent> tlist = feature.getTalentListwithBonus();
             foreach(InterfaceTalent talent in tlist)
             {
                 int currentTaWBonus = 0;

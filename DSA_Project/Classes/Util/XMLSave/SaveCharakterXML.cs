@@ -126,7 +126,7 @@ namespace DSA_Project
         }
         public static void saveFeature(Charakter charakter, XmlDocument characterFile, XmlElement element, DSA_FEATURES type)
         {
-            for (int i = 0; i <= charakter.getHighistFeatureNumber(type); i++)
+            for (int i = 0; i <= charakter.getHighistFeatureNumber(); i++)
             {
                 Feature feature = charakter.getFeature(type, i);
                 if (feature != null)
@@ -181,7 +181,7 @@ namespace DSA_Project
                     AdvancedElement.AppendChild(characterFile.CreateElement(AdvanedNames[i])).InnerText = x.ToString();
                 }
             }
-            foreach (InterfaceTalent talent in feature.TalentListwithBonus())
+            foreach (InterfaceTalent talent in feature.getTalentListwithBonus())
             {
                 XmlElement talentinnerElement = characterFile.CreateElement(ManagmentXMLStrings.TalentElement);
                 XmlElement nameElement = characterFile.CreateElement(ManagmentXMLStrings.Name);
@@ -206,7 +206,7 @@ namespace DSA_Project
 
             Dictionary<String, XmlNode> familyNodes = new Dictionary<string, XmlNode>(0);
 
-            List<InterfaceTalent> talentList = charakter.getallTalentList();
+            List<InterfaceTalent> talentList = charakter.getTalentList_allTalents();
 
 
             for (int i = 0; i < talentList.Count; i++)

@@ -7,7 +7,7 @@ namespace DSA_Project.Tests
     [TestClass()]
     public class LoadXMLTalentFileTests
     {
-        private Interface_LoadXMLTalentFile loader;
+        private Interface_LoadFile_TalentFile loader;
         private String ResourcePath;
 
         private Type currentType;
@@ -30,7 +30,7 @@ namespace DSA_Project.Tests
         [TestInitialize()]
         public void initialize()
         {
-            loader = new LoadXMLTalentFile();
+            loader = new LoadFile_TalentFile();
             ResourcePath = ManagmentSaveStrings.currentDirectory;
             ResourcePath = Path.Combine(ResourcePath, ManagmentSaveStrings.Recources);
             ResourcePath = Path.Combine(ResourcePath, "TestResources");
@@ -501,5 +501,13 @@ namespace DSA_Project.Tests
             controllTalentFighting((TalentFighting)talent);
         }
         //##########################################################################################################################
+        [TestMethod()]
+        [ExpectedException(typeof(NotSupportedException), "Corrupt File Detected")]
+        public void loadCorruptFile()
+        {
+            String file = Path.Combine(ResourcePath, "CorruptFile.xml");
+            InterfaceTalent talent = loader.loadFile<TalentWeaponless>(file);
+            Assert.IsFalse(true);
+        }
     }
 }

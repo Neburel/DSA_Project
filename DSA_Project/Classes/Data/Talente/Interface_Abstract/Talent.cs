@@ -26,7 +26,7 @@ namespace DSA_Project
             this.Charakter          = null;
             this.Be                 = be;
             this.TaW                = 0;
-            this.Name               = name;
+            this.Name               = name.Trim();
             this.Probe              = probe;
             this.Deviate            = diverates;
             this.Requirement        = requirements;
@@ -35,9 +35,9 @@ namespace DSA_Project
             this.usedDeviate        = new List<TalentDeviate>(0);
             this.talentDictonary    = new Dictionary<String, InterfaceTalent>(0);
 
-            if(probe == null | diverates== null || requirements == null)
+            if(probe == null || diverates== null || requirements == null)
             {
-                throw new Exception("TalentCreationError: Tryed to Implement a Talent with a null List");
+                throw new ArgumentNullException("TalentCreationError: Tryed to Implement a Talent with a null List");
             }
 
             foreach(TalentDeviate dev in Deviate)
@@ -56,6 +56,7 @@ namespace DSA_Project
             {
                 learned = false;
             }
+            if (Charakter == null) { throw new NullReferenceException("Character null"); }
 
             Boolean numeric = Int32.TryParse(taw, out int value);
             if (numeric)
@@ -106,8 +107,6 @@ namespace DSA_Project
         }
         public override String getDeviateString()
         {
-            if (Deviate == null) return "";
-
             if (Deviate.Count == 0)
             {
                 return "-";
@@ -134,8 +133,6 @@ namespace DSA_Project
         }
         public override String getRequirementString()
         {
-            if (Requirement == null) return "";
-
             if (Requirement.Count == 0)
             {
                 return "-";
@@ -205,14 +202,13 @@ namespace DSA_Project
                 
         internal int getTawWithBonus()
         {
-            if (Charakter == null) throw new Exception("Charakter is null");
-
             return TaW + Charakter.getTaWBons(this) + TaWDeviateBonus; 
         }
 
         private InterfaceTalent talentSearch(String name)
         {
             InterfaceTalent talent = null;
+            name = name.Trim();
 
             if (!talentDictonary.TryGetValue(name, out talent))
             {
@@ -220,6 +216,9 @@ namespace DSA_Project
                 if (talent != null)
                 {
                     talentDictonary.Add(name, talent);
+                } else
+                {
+                    throw new Exception("Deviate Talent Name Exestiert im Charakter nicht. Talent " + this.Name + " muss Korregiert werden. TalentType: " + this.GetType() + " Deviate Name: " + name);
                 }
             }
 

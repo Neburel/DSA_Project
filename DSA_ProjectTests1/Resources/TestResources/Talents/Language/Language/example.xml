@@ -1,0 +1,10 @@
+<TalentLetter>
+  <Talent>
+    <Name>example Language2</Name>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>IN</Attribute>
+    </Probe>
+  </Talent>
+</TalentLetter>

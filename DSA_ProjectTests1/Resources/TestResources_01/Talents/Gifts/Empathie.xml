@@ -1,0 +1,10 @@
+<TalentLetter>
+  <Talent>
+    <Name>Empathie</Name>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>IN</Attribute>
+    </Probe>
+  </Talent>
+</TalentLetter>

@@ -1,0 +1,13 @@
+<TalentLetter>
+  <Talent>
+    <Name>Bogen</Name>
+    <BE>BE-3</BE>
+    <Probe />
+    <Diverates />
+    <Requirements />
+    <FightingTalent>
+      <attack>FERNKAMPF_BASIS</attack>
+      <Parade>False</Parade>
+    </FightingTalent>
+  </Talent>
+</TalentLetter>

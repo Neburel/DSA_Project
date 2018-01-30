@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Fesseln/Entfesseln</Name>
+    <Probe>
+      <Attribute>FF</Attribute>
+      <Attribute>GE</Attribute>
+      <Attribute>KK</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Seiler</Talent>
+        <Value>0</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Seefahrt</Talent>
+        <Value>0</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Entfesseln: Akrobatik (Winden)</Talent>
+        <Value>5</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Ringen-PA</Talent>
+        <Value>10</Value>
+      </Diverate>
+    </Diverates>
+  </Talent>
+</TalentLetter>
+
+

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Schwimmen</Name>
+    <Probe>
+      <Attribute>GE</Attribute>
+      <Attribute>KO</Attribute>
+      <Attribute>KK</Attribute>
+    </Probe>
+    <BE>BEx2</BE>
+    <Diverates>
+      <Diverate>
+        <Talent>Athletik </Talent>
+        <Value>15</Value>
+      </Diverate>
+    </Diverates>
+  </Talent>
+</TalentLetter>

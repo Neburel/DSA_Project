@@ -1,0 +1,12 @@
+<TalentLetter>
+  <Talent>
+    <Name>Winzer</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>FF</Attribute>
+      <Attribute>KK</Attribute>
+    </Probe>
+    <Diverates />
+    <Requirements />
+  </Talent>
+</TalentLetter>

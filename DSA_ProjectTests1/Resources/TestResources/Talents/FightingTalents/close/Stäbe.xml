@@ -1,0 +1,13 @@
+<TalentLetter>
+  <Talent>
+    <Name>Stäbe</Name>
+    <BE>BE-2</BE>
+    <Probe />
+    <Diverates />
+    <Requirements />
+    <FightingTalent>
+      <attack>ATTACKE_BASIS</attack>
+      <Parade>True</Parade>
+    </FightingTalent>
+  </Talent>
+</TalentLetter>

@@ -57,6 +57,11 @@
   </Choose>
   <ItemGroup>
     <Compile Include="01_TestUtil\RandomGenerator.cs" />
+    <Compile Include="Classes\Controller\ControllTalentTests.cs" />
+    <Compile Include="Classes\Data\Charakter\CharakterTestsAbstract.cs" />
+    <Compile Include="Classes\Data\Charakter\Charakter_Test\CharakterTests01.cs" />
+    <Compile Include="Classes\Data\Charakter\FeatureTests.cs" />
+    <Compile Include="Classes\Data\Talente\01_TalentElemente\TalentRequirementTests.cs" />
     <Compile Include="Classes\Data\Talente\Fighting\TalentCloseTests.cs" />
     <Compile Include="Classes\Data\Talente\Fighting\TalentFightingTests.cs" />
     <Compile Include="Classes\Data\Talente\Fighting\TalentRangeTests.cs" />
@@ -66,6 +71,7 @@
     <Compile Include="Classes\Data\Talente\Interface_Abstract\notFightingTests.cs" />
     <Compile Include="Classes\Data\Talente\Language\FontTalentTests.cs" />
     <Compile Include="Classes\Data\Talente\Language\LanguageAbstractTalentTests.cs" />
+    <Compile Include="Classes\Data\Talente\Language\LanguageTalentTests_01.cs" />
     <Compile Include="Classes\Data\Talente\Language\LanguageTalentTests.cs" />
     <Compile Include="Classes\Data\Talente\TalentGeneral\TalentCraftingTests.cs" />
     <Compile Include="Classes\Data\Talente\TalentGeneral\TalentGeneralTests.cs" />
@@ -73,8 +79,23 @@
     <Compile Include="Classes\Data\Talente\TalentGeneral\TalentNatureTests.cs" />
     <Compile Include="Classes\Data\Talente\TalentGeneral\TalentPhysicalTests.cs" />
     <Compile Include="Classes\Data\Talente\TalentGeneral\TalentSocialTests.cs" />
+    <Compile Include="Classes\Managment\ManagmentFeatureTests.cs" />
+    <Compile Include="Classes\Util\XMLLoad\LoadFile_Charakter\LoadCharakterXMLTest_01.cs" />
+    <Compile Include="Classes\Util\XMLLoad\LoadFile_Charakter\Abstract_LoadCharakterXMLTests.cs" />
     <Compile Include="Classes\Util\XMLLoad\LoadFile_Talente\LoadXMLTalentFileTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Resources\TestResources_03\Talents\FightingTalents\platzhalter">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\TestResources_03\Talents\GeneralTalents\platzhalter">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\TestResources_03\Talents\Gifts\platzhalter">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\TestResources_03\Talents\Language\platzhalter">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -86,9 +107,2147 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\Controller\" />
+    <Folder Include="Resources\TestResources_02\Talents\Language\Font\" />
+    <Folder Include="Resources\TestResources_02\Talents\Language\Language\" />
+    <Folder Include="Resources\TestResources_LoadCharakter01\Talents\01_TMP\" />
+    <Folder Include="Resources\TestResources_LoadCharakter01\Talents\Language\Font\" />
+    <Folder Include="Resources\TestResources_LoadCharakter01\Talents\Language\Language\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\TestResources_LoadCharakter01\SaveGame\Kazarik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\close\Anderthalbhänder.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\close\Dolche.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\close\Fechtwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\close\Hiebwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\close\Infanteriewaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\close\Kettenstäbe.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\close\Kettenwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\close\Lanzenreiten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\close\Peitsche.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\close\Schwerter.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\close\Speere.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\close\Stäbe.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\close\Säbel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\close\Zweihand-Hiebwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\close\Zweihandflegel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\close\Zweihandschwerter-säbel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\range\Armbrust.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\range\Belagerungswaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\range\Blasrohr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\range\Bogen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\range\Diskus.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\range\Schleuder.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\range\Wurfbeile.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\range\Wurfmesser .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\range\Wurfspeere.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\weaponless\Raufen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\FightingTalents\weaponless\Ringen .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Abrichten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Ackerbau.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Alchimie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Bergbau.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Bogenbau.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Boote Fahren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Brauer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Drucker.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Fahrzeug Lenken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Falschspiel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Feinmechanik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Feuersteinbearbeitung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Fleischer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\GerberKürschner.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Glaskunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Grobschmied.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Handel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Hauswirtschaft.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Heilkunde Gift.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Heilkunde Krankheiten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Heilkunde Seele.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Heilkunde Wunden.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Holzbearbeitung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Kartographie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Kochen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Kristallzucht.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Lederarbeiten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\MalenZeichnen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Maurer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Metallguss.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Musizieren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Schlösser Knacken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Schnaps Brennen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Schneidern.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Seefahrt.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Seiler.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Steinmetz.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\SteinschneiderJuwelier.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Stellmacher.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Stoffe Färben.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Tätowieren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Töpfern.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Viehzucht.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Webkunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Winzer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\crafting\Zimmermann.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Anatomie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Baukunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Brett-Kartenspiel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Geographie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Geschichtswissen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Gesteinskunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\GötterKulte.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Heraldik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Hüttenkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Kriegskunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Kryptographie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Magiekunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Mechanik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Pflanzenkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Philosophie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Rechnen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Rechtskunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\SagenLegenden.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Schätzen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Sprachenkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Staatskunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Sternkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\knowldage\Tierkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\nature\Fallenstellen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\nature\Fesseln-Entfesseln.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\nature\Fischen-Angeln.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\nature\Fährtensuchen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\nature\Orientierung.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\nature\Wettervorhersage.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\nature\Wildnisleben.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Akrobatik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Athletik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Fliegen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Gaukeleien.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Klettern.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Körperbeherrschung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Reiten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Schleichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Schwimmen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Selbstbeherrschung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Sich Verstecken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Singen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Sinnenschärfe.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Skifahren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Stimmen Imitieren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Tanzen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Taschendiebstahl.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\physical\Zechen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\social\Betören.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\social\Etikette.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\social\Gassenwissen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\social\Lehren.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\social\Menschenkenntnis.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\social\Schauspielerei.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\social\Schriftlicher Ausdruck.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\social\Sich Verkleiden.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\social\Überreden.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\GeneralTalents\social\Überzeugen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Gifts\Empathie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Gifts\Gefahreninstinkt.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Gifts\Geräuschhexerei.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Gifts\Kräfteschub.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Gifts\Magiegespür.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Gifts\Prophezeien.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Gifts\Talentschub.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Gifts\Tierempathie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Gifts\Zwergennase .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\EinzelneSprachen_Chuchas.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\EinzelneSprachen_Drachisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\EinzelneSprachen_Koboldisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\EinzelneSprachen_Rabensprache.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\EinzelneSprachen_Rssahh.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\EinzelneSprachen_Trollisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\EinzelneSprachen_Zyklopäisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Elfisch_Asdharia.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Elfisch_Isdira.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Garethi_Aureliani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Garethi_Bosparano.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Garethi_Garethi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Garethi_Imperiale Schriftzeichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Geheimschriften_Amulashtra.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Geheimschriften_Arkanil .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Geheimschriften_Drakhard-Zinken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Geheimschriften_Gimaril.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Geheimschriften_Nanduria.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Rissoal_Mahrisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Thorwalsch_Fjarnisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Thorwalsch_Gjalskisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Thorwalsch_Hjaldingsch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Thorwalsch_Thorwalsch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Tulamidya_Alaani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Tulamidya_Alte Kemi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Tulamidya_AltesAlaani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Tulamidya_Chrmk.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Tulamidya_Glyphen .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Tulamidya_Ruuz.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Tulamidya_Tulamidya.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Tulamidya_Tulamidya_Schrift.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Tulamidya_Tulamidya_Schrift2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Tulamidya_Ur-Tulamidya.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Tulamidya_Ur-Tulamidya_Schrift.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Tulamidya_Zelemja.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Zwergisch_Angram.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\01_OLD_Font\Zwergisch_Rogolan.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\EinzelneSprachen_Drachisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\EinzelneSprachen_Goblinisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\EinzelneSprachen_Grolmisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\EinzelneSprachen_Koboldisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\EinzelneSprachen_Mohisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\EinzelneSprachen_Molochisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\EinzelneSprachen_Neckergesang.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\EinzelneSprachen_Nujuka.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\EinzelneSprachen_Rabensprache.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\EinzelneSprachen_Rssahh.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\EinzelneSprachen_Trollisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\EinzelneSprachen_ZLit.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\EinzelneSprachen_Zyklopäisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Elfisch_Asdharia.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Elfisch_Isdira.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Garethi_Aureliani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Garethi_Bosparano.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Garethi_Garethi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Garethi_Imperiale Schriftzeichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Geheimsprachen_Atak.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Geheimsprachen_Füchsisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Geheimsprachen_Zhayad.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Orkisch_Oloarkh.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Orkisch_Ologhaijan.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Rissoal_Mahrisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Rissoal_Rissoal.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Thorwalsch_Fjarnisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Thorwalsch_Gjalskisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Thorwalsch_Hjaldingsch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Thorwalsch_Thorwalsch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Tulamidya_Alaani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Tulamidya_Alte Kemi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Tulamidya_Ferkina.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Tulamidya_Ruuz.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Tulamidya_Tulamidya.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Tulamidya_Ur-Tulamidya.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Tulamidya_Zelemja.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Tulamidya_Zhulchammaqra.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Zwergisch_Angram.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01\Talents\Language\02_OLD_Language\Zwergisch_Rogolan.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\SaveGame\Kazarik.xml" />
+    <Content Include="Resources\TestResources\Talents\Test_LoadXMLTalentFile\CorruptFile.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\close\Anderthalbhänder.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\close\Dolche.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\close\Fechtwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\close\Hiebwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\close\Infanteriewaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\close\Kettenstäbe.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\close\Kettenwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\close\Lanzenreiten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\close\Peitsche.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\close\Schwerter.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\close\Speere.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\close\Stäbe.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\close\Säbel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\close\Zweihand-Hiebwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\close\Zweihandflegel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\close\Zweihandschwerter-säbel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\range\Armbrust.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\range\Belagerungswaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\range\Blasrohr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\range\Bogen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\range\Diskus.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\range\Schleuder.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\range\Wurfbeile.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\range\Wurfmesser .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\range\Wurfspeere.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\weaponless\Raufen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\FightingTalents\weaponless\Ringen .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Abrichten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Ackerbau.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Alchimie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Bergbau.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Bogenbau.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Boote Fahren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Brauer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Drucker.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Fahrzeug Lenken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Feinmechanik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Feuersteinbearbeitung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Fleischer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\GerberKürschner.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Glaskunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Grobschmied.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Handel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Hauswirtschaft.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Heilkunde Gift.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Heilkunde Krankheiten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Heilkunde Seele.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Heilkunde Wunden.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Holzbearbeitung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Kartographie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Kochen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Kristallzucht.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Lederarbeiten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\MalenZeichnen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Maurer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Metallguss.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Musizieren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Schlösser Knacken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Schnaps Brennen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Schneidern.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Seefahrt.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Seiler.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Steinmetz.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\SteinschneiderJuwelier.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Stellmacher.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Stoffe Färben.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Tätowieren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Töpfern.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Viehzucht.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Webkunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Winzer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\crafting\Zimmermann.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Anatomie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Baukunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Brett-Kartenspiel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Geographie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Geschichtswissen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Gesteinskunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\GötterKulte.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Heraldik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Hüttenkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Kriegskunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Kryptographie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Magiekunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Mechanik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Pflanzenkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Philosophie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Rechnen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Rechtskunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\SagenLegenden.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Schätzen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Sprachenkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Staatskunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Sternkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\knowldage\Tierkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\nature\Fallenstellen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\nature\Fesseln-Entfesseln.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\nature\Fischen-Angeln.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\nature\Fährtensuchen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\nature\Orientierung.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\nature\Wettervorhersage.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\nature\Wildnisleben.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Akrobatik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Athletik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Fliegen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Gaukeleien.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Klettern.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Körperbeherrschung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Reiten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Schleichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Schwimmen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Selbstbeherrschung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Sich Verstecken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Singen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Sinnenschärfe.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Skifahren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Stimmen Imitieren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Tanzen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Taschendiebstahl.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\physical\Zechen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\social\Betören.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\social\Etikette.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\social\Gassenwissen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\social\Lehren.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\social\Menschenkenntnis.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\social\Schauspielerei.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\social\Schriftlicher Ausdruck.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\social\Sich Verkleiden.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\social\Überreden.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\GeneralTalents\social\Überzeugen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Gifts\Empathie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Gifts\Gefahreninstinkt - Kopieren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Gifts\Gefahreninstinkt.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Gifts\Geräuschhexerei.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Gifts\Kräfteschub.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Gifts\Magiegespür.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Gifts\Prophezeien.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Gifts\Talentschub.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Gifts\Tierempathie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Gifts\Zwergennase .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\EinzelneSprachen_Chuchas.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\EinzelneSprachen_Drachisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\EinzelneSprachen_Koboldisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\EinzelneSprachen_Rabensprache.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\EinzelneSprachen_Rssahh.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\EinzelneSprachen_Trollisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\EinzelneSprachen_Zyklopäisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Elfisch_Asdharia.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Elfisch_Isdira.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Garethi_Aureliani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Garethi_Bosparano.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Garethi_Garethi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Garethi_Imperiale Schriftzeichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Geheimschriften_Amulashtra.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Geheimschriften_Arkanil .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Geheimschriften_Drakhard-Zinken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Geheimschriften_Gimaril.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Geheimschriften_Nanduria.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Rissoal_Mahrisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Thorwalsch_Fjarnisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Thorwalsch_Gjalskisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Thorwalsch_Hjaldingsch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Thorwalsch_Thorwalsch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Tulamidya_Alaani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Tulamidya_Alte Kemi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Tulamidya_AltesAlaani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Tulamidya_Chrmk.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Tulamidya_Glyphen .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Tulamidya_Ruuz.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Tulamidya_Tulamidya.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Tulamidya_Tulamidya_Schrift.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Tulamidya_Tulamidya_Schrift2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Tulamidya_Ur-Tulamidya.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Tulamidya_Ur-Tulamidya_Schrift.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Tulamidya_Zelemja.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Zwergisch_Angram.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\01_OLD_Font\Zwergisch_Rogolan.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\EinzelneSprachen_Drachisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\EinzelneSprachen_Goblinisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\EinzelneSprachen_Grolmisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\EinzelneSprachen_Koboldisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\EinzelneSprachen_Mohisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\EinzelneSprachen_Molochisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\EinzelneSprachen_Neckergesang.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\EinzelneSprachen_Nujuka.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\EinzelneSprachen_Rabensprache.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\EinzelneSprachen_Rssahh.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\EinzelneSprachen_Trollisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\EinzelneSprachen_ZLit.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\EinzelneSprachen_Zyklopäisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Elfisch_Asdharia.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Elfisch_Isdira.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Garethi_Aureliani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Garethi_Bosparano.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Garethi_Garethi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Garethi_Imperiale Schriftzeichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Geheimsprachen_Atak.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Geheimsprachen_Füchsisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Geheimsprachen_Zhayad.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Orkisch_Oloarkh.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Orkisch_Ologhaijan.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Rissoal_Mahrisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Rissoal_Rissoal.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Thorwalsch_Fjarnisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Thorwalsch_Gjalskisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Thorwalsch_Hjaldingsch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Thorwalsch_Thorwalsch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Tulamidya_Alaani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Tulamidya_Alte Kemi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Tulamidya_Ferkina.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Tulamidya_Ruuz.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Tulamidya_Tulamidya.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Tulamidya_Ur-Tulamidya.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Tulamidya_Zelemja.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Tulamidya_Zhulchammaqra.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Zwergisch_Angram.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Language\02_OLD_Language\Zwergisch_Rogolan.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\Font\example.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\Language\example.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Test_LoadXMLTalentFile\Basic_Construction_01.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Test_LoadXMLTalentFile\Complete_Construction_01.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_02\Talents\Test_LoadXMLTalentFile\Complete_Construction_02.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\close\Anderthalbhänder.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\close\Dolche.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\close\Fechtwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\close\Hiebwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\close\Infanteriewaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\close\Kettenstäbe.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\close\Kettenwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\close\Lanzenreiten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\close\Peitsche.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\close\Schwerter.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\close\Speere.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\close\Stäbe.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\close\Säbel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\close\Zweihand-Hiebwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\close\Zweihandflegel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\close\Zweihandschwerter-säbel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\range\Armbrust.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\range\Belagerungswaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\range\Blasrohr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\range\Bogen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\range\Diskus.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\range\Schleuder.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\range\Wurfbeile.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\range\Wurfmesser .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\range\Wurfspeere.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\weaponless\Raufen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\FightingTalents\weaponless\Ringen .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\Gifts\Empathie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\Gifts\Gefahreninstinkt.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\Gifts\Geräuschhexerei.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\Gifts\Kräfteschub.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\Gifts\Magiegespür.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\Gifts\Prophezeien.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\Gifts\Talentschub.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\Gifts\Tierempathie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_01\Talents\Gifts\Zwergennase .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\close\Anderthalbhänder.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\close\Dolche.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\close\Fechtwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\close\Hiebwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\close\Infanteriewaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\close\Kettenstäbe.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\close\Kettenwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\close\Lanzenreiten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\close\Peitsche.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\close\Schwerter.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\close\Speere.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\close\Stäbe.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\close\Säbel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\close\Zweihand-Hiebwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\close\Zweihandflegel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\close\Zweihandschwerter-säbel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\range\Armbrust.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\range\Belagerungswaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\range\Blasrohr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\range\Bogen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\range\Diskus.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\range\Schleuder.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\range\Wurfbeile.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\range\Wurfmesser .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\range\Wurfspeere.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\weaponless\Raufen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\FightingTalents\weaponless\Ringen .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Abrichten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Ackerbau.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Alchimie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Bergbau.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Bogenbau.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Boote Fahren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Brauer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Drucker.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Fahrzeug Lenken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Feinmechanik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Feuersteinbearbeitung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Fleischer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\GerberKürschner.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Glaskunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Grobschmied.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Handel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Hauswirtschaft.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Heilkunde Gift.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Heilkunde Krankheiten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Heilkunde Seele.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Heilkunde Wunden.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Holzbearbeitung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Kartographie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Kochen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Kristallzucht.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Lederarbeiten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\MalenZeichnen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Maurer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Metallguss.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Musizieren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Schlösser Knacken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Schnaps Brennen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Schneidern.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Seefahrt.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Seiler.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Steinmetz.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\SteinschneiderJuwelier.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Stellmacher.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Stoffe Färben.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Tätowieren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Töpfern.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Viehzucht.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Webkunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Winzer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\crafting\Zimmermann.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Anatomie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Baukunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Brett-Kartenspiel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Geographie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Geschichtswissen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Gesteinskunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\GötterKulte.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Heraldik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Hüttenkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Kriegskunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Kryptographie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Magiekunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Mechanik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Pflanzenkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Philosophie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Rechnen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Rechtskunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\SagenLegenden.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Schätzen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Sprachenkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Staatskunst.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Sternkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Tierkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\nature\Fallenstellen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\nature\Fesseln-Entfesseln.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\nature\Fischen-Angeln.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\nature\Fährtensuchen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\nature\Orientierung.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\nature\Wettervorhersage.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\nature\Wildnisleben.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Akrobatik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Athletik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Fliegen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Gaukeleien.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Klettern.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Körperbeherrschung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Reiten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Schleichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Schwimmen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Selbstbeherrschung.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Sich Verstecken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Singen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Sinnenschärfe.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Skifahren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Stimmen Imitieren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Tanzen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Taschendiebstahl.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Zechen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\social\Betören.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\social\Etikette.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\social\Gassenwissen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\social\Lehren.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\social\Menschenkenntnis.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\social\Schauspielerei.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\social\Schriftlicher Ausdruck.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\social\Sich Verkleiden.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\social\Überreden.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\GeneralTalents\social\Überzeugen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Gifts\Empathie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Gifts\Gefahreninstinkt.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Gifts\Geräuschhexerei.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Gifts\Kräfteschub.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Gifts\Magiegespür.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Gifts\Prophezeien.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Gifts\Talentschub.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Gifts\Tierempathie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Gifts\Zwergennase .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\EinzelneSprachen_Chuchas.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\EinzelneSprachen_Drachisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\EinzelneSprachen_Koboldisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\EinzelneSprachen_Rabensprache.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\EinzelneSprachen_Rssahh.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\EinzelneSprachen_Trollisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\EinzelneSprachen_Zyklopäisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Elfisch_Asdharia.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Elfisch_Isdira.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Garethi_Aureliani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Garethi_Bosparano.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Garethi_Garethi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Garethi_Imperiale Schriftzeichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Geheimschriften_Amulashtra.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Geheimschriften_Arkanil .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Geheimschriften_Drakhard-Zinken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Geheimschriften_Gimaril.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Geheimschriften_Nanduria.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Rissoal_Mahrisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Thorwalsch_Fjarnisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Thorwalsch_Gjalskisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Thorwalsch_Hjaldingsch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Thorwalsch_Thorwalsch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Tulamidya_Alaani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Tulamidya_Alte Kemi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Tulamidya_AltesAlaani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Tulamidya_Chrmk.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Tulamidya_Glyphen .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Tulamidya_Ruuz.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Tulamidya_Tulamidya.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Tulamidya_Tulamidya_Schrift.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Tulamidya_Tulamidya_Schrift2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Tulamidya_Ur-Tulamidya.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Tulamidya_Ur-Tulamidya_Schrift.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Tulamidya_Zelemja.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Zwergisch_Angram.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\01_OLD_Font\Zwergisch_Rogolan.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\EinzelneSprachen_Drachisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\EinzelneSprachen_Goblinisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\EinzelneSprachen_Grolmisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\EinzelneSprachen_Koboldisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\EinzelneSprachen_Mohisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\EinzelneSprachen_Molochisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\EinzelneSprachen_Neckergesang.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\EinzelneSprachen_Nujuka.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\EinzelneSprachen_Rabensprache.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\EinzelneSprachen_Rssahh.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\EinzelneSprachen_Trollisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\EinzelneSprachen_ZLit.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\EinzelneSprachen_Zyklopäisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Elfisch_Asdharia.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Elfisch_Isdira.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Garethi_Aureliani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Garethi_Bosparano.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Garethi_Garethi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Garethi_Imperiale Schriftzeichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Geheimsprachen_Atak.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Geheimsprachen_Füchsisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Geheimsprachen_Zhayad.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Orkisch_Oloarkh.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Orkisch_Ologhaijan.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Rissoal_Mahrisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Rissoal_Rissoal.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Thorwalsch_Fjarnisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Thorwalsch_Gjalskisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Thorwalsch_Hjaldingsch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Thorwalsch_Thorwalsch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Tulamidya_Alaani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Tulamidya_Alte Kemi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Tulamidya_Ferkina.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Tulamidya_Ruuz.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Tulamidya_Tulamidya.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Tulamidya_Ur-Tulamidya.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Tulamidya_Zelemja.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Tulamidya_Zhulchammaqra.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Zwergisch_Angram.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources\Talents\Language\02_OLD_Language\Zwergisch_Rogolan.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\TestResources\Talents\Test_LoadXMLTalentFile\Complete_Construction_02.xml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -1,0 +1,23 @@
+<TalentLetter>
+  <Talent>
+    <Name>Ackerbau</Name>
+    <Probe>
+      <Attribute>IN</Attribute>
+      <Attribute>FF</Attribute>
+      <Attribute>KO</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Viehzucht</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Pflanzenkunde</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>
