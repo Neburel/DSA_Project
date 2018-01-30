@@ -1,0 +1,24 @@
+<TalentLetter>
+  <Talent>
+    <Name>Anderthalbhänder</Name>
+    <BE>BE-2</BE>
+    <Probe />
+    <Diverates>
+      <Diverate>
+        <Talent>Schwerter</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Zweihandschwerter/-säbel</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+    <FightingTalent>
+      <attack>ATTACKE_BASIS</attack>
+      <Parade>True</Parade>
+    </FightingTalent>
+  </Talent>
+</TalentLetter>

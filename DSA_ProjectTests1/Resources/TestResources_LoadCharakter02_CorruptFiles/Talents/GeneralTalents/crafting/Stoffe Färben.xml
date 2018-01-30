@@ -1,0 +1,18 @@
+<TalentLetter>
+  <Talent>
+    <Name>Stoffe Färben</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>FF</Attribute>
+      <Attribute>KK</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Alchimie</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

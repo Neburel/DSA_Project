@@ -1,0 +1,22 @@
+<TalentLetter>
+  <Talent>
+    <Name>Schätzen</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>IN</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Handel o. Juwelier o. Feinm. (Goldschmied) </Talent>
+        <Value>5</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Zimmermann </Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

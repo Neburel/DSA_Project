@@ -183,14 +183,13 @@ namespace DSA_Project
             {
                 i++;
                 Feature feature = loadFeature(node, charakter, i, type);
-                //feature.setType(type);
 
                 int number = 0;
                 String Number = node.Name.Substring(BasicString.Length, node.Name.Length - BasicString.Length);
 
                 if (!Int32.TryParse(Number, out number))
                 {
-                    throw new Exception();
+                    throw new Exception("Fehler bei der Featurenummerierung");
                 }
                 charakter.addFeature(number, feature);
             }
@@ -297,7 +296,7 @@ namespace DSA_Project
 
                 if(talent == null)
                 {
-                    throw new Exception("Talent darf nicht null sein");
+                    throw new ArgumentNullException("Das Talent " + name + " exestiert nicht, wurde aber versucht in dem Feature " + feature.getName() + " zu laden");
                 }
 
                 feature.addTalent(talent, x);
@@ -333,7 +332,6 @@ namespace DSA_Project
                     case ManagmentXMLStrings.TAW: Taw = node.InnerText; break;
                     case ManagmentXMLStrings.attack: AT = node.InnerText; break;
                     case ManagmentXMLStrings.Parade: PA = node.InnerText; break;
-                    case ManagmentXMLStrings.SpeakingMother: speakingMother = node.InnerText; break; 
                     default: throw new Exception(node.Name + " " + node.InnerText);
                 }
             }

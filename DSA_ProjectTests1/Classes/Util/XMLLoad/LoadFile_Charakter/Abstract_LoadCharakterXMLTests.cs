@@ -14,6 +14,9 @@ namespace DSA_Project.Tests
     {
         private ControllTalent controllTalent;
 
+        abstract public String getResourceName();
+        abstract public String getSaveFileName();
+
         [TestInitialize]
         public void setUP_Abstract_LoadCharakterXMLTest()
         {
@@ -21,9 +24,9 @@ namespace DSA_Project.Tests
 
             String path;
             path = Path.Combine(ManagmentSaveStrings.currentDirectory, ManagmentSaveStrings.Recources);
-            path = Path.Combine(path, "TestResources_LoadCharakter01");
+            path = Path.Combine(path, getResourceName());
             path = Path.Combine(path, ManagmentSaveStrings.SaveLocation);
-            path = Path.Combine(path, "Kazarik.xml");
+            path = Path.Combine(path, getSaveFileName());
 
             charakter = LoadCharakterXML.loadCharakter(path, charakter, this.controllTalent);
         }
@@ -32,7 +35,7 @@ namespace DSA_Project.Tests
         {
             String path;
             path = Path.Combine(ManagmentSaveStrings.currentDirectory, ManagmentSaveStrings.Recources);
-            path = Path.Combine(path, "TestResources_LoadCharakter01");
+            path = Path.Combine(path, getResourceName());
 
             if (controllTalent == null)
             {

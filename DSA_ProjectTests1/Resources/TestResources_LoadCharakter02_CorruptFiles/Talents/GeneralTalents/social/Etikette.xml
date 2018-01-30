@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Etikette</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>CH</Attribute>
+    </Probe>
+    <Diverates>
+    </Diverates>
+  </Talent>
+</TalentLetter>

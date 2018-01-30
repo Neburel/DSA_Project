@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Lehren</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>CH</Attribute>
+    </Probe>
+    <Requirements>
+      <Requirement>
+        <Talent>Menschenkenntnis</Talent>
+        <NeedAT>10</NeedAT>
+        <Value>4</Value>
+      </Requirement>
+    </Requirements>
+    <Diverates>
+      <Diverate>
+        <Talent>Überzeugen</Talent>
+        <Value>0</Value>
+      </Diverate>
+    </Diverates>
+  </Talent>
+</TalentLetter>

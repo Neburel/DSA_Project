@@ -11,6 +11,15 @@ namespace DSA_Project.Tests
     [TestClass()]
     public class LoadCharakterXMLTest_01 : Abstract_LoadCharakterXMLTests
     {
+        public override string getResourceName()
+        {
+            return "TestResources_LoadCharakter01_Standart";
+        }
+        public override string getSaveFileName()
+        {
+            return "Kazarik.xml";
+        }
+
         public override Dictionary<DSA_BASICVALUES, string> getBasicValuesDictionary()
         {
             Dictionary<DSA_BASICVALUES, String> dic = new Dictionary<DSA_BASICVALUES, string>(0);
@@ -111,11 +120,7 @@ namespace DSA_Project.Tests
 
             return dic;
         }
-
-
-
-
-
+        
         public override int getAdventurePoints()
         {
             return 0;
@@ -127,14 +132,6 @@ namespace DSA_Project.Tests
         {
             return new Dictionary<DSA_ATTRIBUTE, bool>();
         }
-
-        
-        
-
-        
-
-        
-
         
     }
 }

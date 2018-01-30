@@ -1,0 +1,13 @@
+<TalentLetter>
+  <Talent>
+    <Name>Seiler</Name>
+    <Probe>
+      <Attribute>FF</Attribute>
+      <Attribute>FF</Attribute>
+      <Attribute>KK</Attribute>
+    </Probe>
+    <Diverates>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

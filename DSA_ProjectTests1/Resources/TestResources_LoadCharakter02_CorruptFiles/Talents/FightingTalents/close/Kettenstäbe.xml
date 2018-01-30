@@ -1,0 +1,24 @@
+<TalentLetter>
+  <Talent>
+    <Name>Kettenstäbe</Name>
+    <BE>BE-1</BE>
+    <Probe />
+    <Diverates>
+      <Diverate>
+        <Talent>Kettenwaffen</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Zweihandflegel</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+    <FightingTalent>
+      <attack>ATTACKE_BASIS</attack>
+      <Parade>True</Parade>
+    </FightingTalent>
+  </Talent>
+</TalentLetter>

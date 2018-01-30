@@ -1,0 +1,23 @@
+<TalentLetter>
+  <Talent>
+    <Name>Rechtskunde</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Etikette</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Staatskunst</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>
