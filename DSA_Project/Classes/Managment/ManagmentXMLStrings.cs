@@ -61,10 +61,12 @@ namespace DSA_Project
 
         //################################################################################################################
         //Language File
-        public const String LanguageFamily          = "Language-Family";
+        public const String LanguageFamily          = "LanguageFamily";
         public const String FamilyName              = "FamilyName";
+        public const String Row                     = "Row";
         public const String Language                = "Language";
         public const String Font                    = "Font";
+
         public const String SpeakingName            = "SpeakingName";
         public const String SpeakingComplex         = "SpeakingComplex";
         public const String SpeakingMother          = "SpeakingMother";

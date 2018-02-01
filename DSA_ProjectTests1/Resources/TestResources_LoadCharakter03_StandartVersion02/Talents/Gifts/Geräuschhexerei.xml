@@ -1,0 +1,10 @@
+<TalentLetter>
+  <Talent>
+    <Name>Geräuschhexerei</Name>
+    <Probe>
+      <Attribute>IN</Attribute>
+      <Attribute>CH</Attribute>
+      <Attribute>KO</Attribute>
+    </Probe>
+  </Talent>
+</TalentLetter>

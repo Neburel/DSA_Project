@@ -130,7 +130,10 @@ namespace DSA_Project.Tests
 
         public override Dictionary<DSA_ATTRIBUTE, bool> getAttributeMarkedDictonary()
         {
-            return new Dictionary<DSA_ATTRIBUTE, bool>();
+            Dictionary<DSA_ATTRIBUTE, bool> dic = new Dictionary<DSA_ATTRIBUTE, bool>(0);
+            dic.Add(DSA_ATTRIBUTE.MU, true);
+
+            return dic;
         }
         
     }

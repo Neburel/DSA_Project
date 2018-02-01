@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
@@ -11,6 +12,7 @@ using System.Windows.Forms;
 
 namespace DSA_Project
 {
+    [ExcludeFromCodeCoverage]
     public partial class DSA : Form
     {
         System.Drawing.Image backround = (System.Drawing.Image)DSA_Project.Properties.Resources.Old_Parchment_Wallpaper_15;
@@ -66,7 +68,6 @@ namespace DSA_Project
             loadHeroPageMoney();
             loadHeroPageFeature();
             loadRewardPageRewards();
-            loadLanguagePage();
 
             refreshTalentPage();
             refreshHeroPageAdvancedValues();
@@ -831,17 +832,17 @@ namespace DSA_Project
 
             TalentPageRadioButtons          = new List<RadioButton> { radioKörperlicheTalente, radioSozialTalente, radioNaturTalente, radioKnowldageTalente, radioCraftingTalent, radioButtonWeaponless, radioButtonClose, radioButtonRange, talentPageRadioGifts };
 
-            radioKörperlicheTalente.Tag     = new TalentPhysical(null, null, null, null, null);
-            radioSozialTalente.Tag          = new TalentSocial(null, null, null, null, null);
-            radioNaturTalente.Tag           = new TalentNature(null, null, null, null, null);
-            radioKnowldageTalente.Tag       = new TalentKnwoldage(null, null, null, null, null);
-            radioCraftingTalent.Tag         = new TalentCrafting(null, null, null, null, null);
+            radioKörperlicheTalente.Tag     = new TalentPhysical("Tag", new List<DSA_ATTRIBUTE>(0), "", new List<TalentDeviate>(0), new List<TalentRequirement>(0));
+            radioSozialTalente.Tag          = new TalentSocial("Tag", new List<DSA_ATTRIBUTE>(0), "", new List<TalentDeviate>(0), new List<TalentRequirement>(0));
+            radioNaturTalente.Tag           = new TalentNature("Tag", new List<DSA_ATTRIBUTE>(0), "", new List<TalentDeviate>(0), new List<TalentRequirement>(0));
+            radioKnowldageTalente.Tag       = new TalentKnwoldage("Tag", new List<DSA_ATTRIBUTE>(0), "", new List<TalentDeviate>(0), new List<TalentRequirement>(0));
+            radioCraftingTalent.Tag         = new TalentCrafting("Tag", new List<DSA_ATTRIBUTE>(0), "", new List<TalentDeviate>(0), new List<TalentRequirement>(0));
 
-            radioButtonWeaponless.Tag       = new TalentWeaponless(null, null, null, DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, false);
-            radioButtonClose.Tag            = new TalentClose(null, null, null, DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, false);
-            radioButtonRange.Tag            = new TalentRange(null, null, null, DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, false);
+            radioButtonWeaponless.Tag       = new TalentWeaponless("Tag", "", new List<TalentDeviate>(0), DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, false);
+            radioButtonClose.Tag            = new TalentClose("Tag", "", new List<TalentDeviate>(0), DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, false);
+            radioButtonRange.Tag            = new TalentRange("Tag", "", new List<TalentDeviate>(0), DSA_ADVANCEDVALUES.ARTEFAKTKONTROLLE, false);
 
-            talentPageRadioGifts.Tag        = new GiftTalent(null, null);
+            talentPageRadioGifts.Tag        = new GiftTalent("Tag", new List<DSA_ATTRIBUTE>(0));
 
             btnTalentLetterNext.Tag = "+";
             btnTalentLetterLast.Tag = "-";
@@ -1208,103 +1209,7 @@ namespace DSA_Project
         private List<TextBox> LanguagePageFontComplexTextBoxes;
         private List<TextBox> LanguagePageFontTaWTextBoxes;
         private List<TextBox> LanguagePageFontProbeTextBoxes;
-        private Dictionary<Type, List<LanguageAbstractTalent>> sortLanguageDictonary(Dictionary<Type, List<LanguageAbstractTalent>> dictionary) 
-        {
-            List<Type> keyList = new List<Type>(dictionary.Keys);
 
-            for(int j=0; j<keyList.Count; j++)
-            {
-                List<LanguageAbstractTalent> list = null;
-                dictionary.TryGetValue(keyList[j], out list);
-
-                int highestpos = 0;
-                for(int i=0; i<list.Count; i++)
-                {
-                    throw new Exception("ÜBERARBEITEN!");
-                    /*
-                    if (highestpos < list[i].getPOS())
-                    {
-                        highestpos = list[i].getPOS();
-                    }
-                    */
-                }
-                for(int i=list.Count; i<highestpos; i++)
-                {
-                    throw new Exception("ÜBERARBEITEN!");
-                    /*
-                    Type type = keyList[j];
-                    Type[] typeArray = new Type[] { typeof(String), typeof(String), typeof(int) };
-                    ConstructorInfo constructor = type.GetConstructor(typeArray);
-                    object magicClassObject = constructor.Invoke(new object[] { list[0].getFamilyName(), "", 0 });
-                    list.Add((LanguageAbstractTalent)magicClassObject);                
-                    */
-                }
-                bool hit = true;
-                LanguageAbstractTalent talent;
-                LanguageAbstractTalent talent2;
-
-                while (hit == true)
-                {
-                    hit = false;
-                    talent = null;
-                    talent2 = null;
-
-                    for (int i = 0; i < list.Count; i++)
-                    {
-                        throw new Exception("ÜBERARBEITEN!");
-                        /*
-                        int pos = -1;
-                        int pos2 = -1;
-
-                        talent = list[i];
-                        pos = talent.getPOS()-1;
-
-                        if (pos != -1)
-                        {
-                            talent2 = list[pos];
-                            pos2 = talent2.getPOS() - 1;
-
-                            if (pos != pos2)
-                            {
-                                list[pos] = talent;
-                                list[i] = talent2;
-                                hit = true;
-                            }
-                        }
-                        */
-                    }
-                }
-            }
-            return dictionary;
-        }
-        
-        private Dictionary<String, Dictionary<Type, List<LanguageAbstractTalent>>> createDataSourceDictonary<T>(Dictionary<String, Dictionary<Type, List<LanguageAbstractTalent>>> sourceDictionary, List<T> sourcelist) where T : LanguageAbstractTalent
-        {
-            throw new Exception("ÜBERARBEITEN!");
-            /*
-            for (int i = 0; i < sourcelist.Count; i++)
-            {
-                Dictionary<Type, List<LanguageAbstractTalent>> dictionary = null;
-                List<LanguageAbstractTalent> list = null;
-                
-
-                String FamilyName           = sourcelist[i].getFamilyName();
-                if(!sourceDictionary.TryGetValue(FamilyName, out dictionary))
-                {
-                    dictionary = new Dictionary<Type, List<LanguageAbstractTalent>>(0);
-                    sourceDictionary.Add(FamilyName, dictionary);
-                }
-                if(!dictionary.TryGetValue(typeof(T), out list))
-                {
-                    list = new List<LanguageAbstractTalent>();
-                    dictionary.Add(typeof(T), list);
-                }
-                list.Add(sourcelist[i]);
-            }
-            return sourceDictionary;
-            */
-            return null;
-        }
         private void setUPLanguagePage()
         {
             LanguagePageLanguageNameTextBoxes       = new List<TextBox> { txtLanguagePageLanguageName1, txtLanguagePageLanguageName2, txtLanguagePageLanguageName3, txtLanguagePageLanguageName4, txtLanguagePageLanguageName5, txtLanguagePageLanguageName6, txtLanguagePageLanguageName7, txtLanguagePageLanguageName8, txtLanguagePageLanguageName9, txtLanguagePageLanguageName10, txtLanguagePageLanguageName11, txtLanguagePageLanguageName12, txtLanguagePageLanguageName13, txtLanguagePageLanguageName14, txtLanguagePageLanguageName15, txtLanguagePageLanguageName16, txtLanguagePageLanguageName17, txtLanguagePageLanguageName18, txtLanguagePageLanguageName19, txtLanguagePageLanguageName20, txtLanguagePageLanguageName21, txtLanguagePageLanguageName22, txtLanguagePageLanguageName23, txtLanguagePageLanguageName24, txtLanguagePageLanguageName25, txtLanguagePageLanguageName26, txtLanguagePageLanguageName27, txtLanguagePageLanguageName28, txtLanguagePageLanguageName29, txtLanguagePageLanguageName30 };
@@ -1320,234 +1225,42 @@ namespace DSA_Project
 
             for (int i=0; i<LanguagePageSupportedBoxes; i++)
             {
-                LanguagePageLanguageNameTextBoxes[i].TextAlign = HorizontalAlignment.Left;
-                LanguagePageFontNameTextBoxes[i].TextAlign = HorizontalAlignment.Left;
-                LanguagePageLanguageTaWTextBoxes[i].Tag = i;
-                LanguagePageFontTaWTextBoxes[i].Tag = i;
-                LanguagePageLanguageMotherTextBoxes[i].Tag = i;
+                LanguagePageLanguageNameTextBoxes[i].TextAlign  = HorizontalAlignment.Left;
+                LanguagePageFontNameTextBoxes[i].TextAlign      = HorizontalAlignment.Left;
+               
+                LanguagePageLanguageTaWTextBoxes[i].KeyUp   += setTaW;
+                LanguagePageFontTaWTextBoxes[i].KeyUp       += setTaW;
 
-                LanguagePageLanguageTaWTextBoxes[i].KeyUp += setLanguagePageTaWLanguage;
-                LanguagePageFontTaWTextBoxes[i].KeyUp += setLanguagePageTaWFont;
+                LanguagePageLanguageTaWTextBoxes[i].Tag     = LanguagePageLanguageNameTextBoxes[i];
+                LanguagePageLanguageMotherTextBoxes[i].Tag  = LanguagePageLanguageNameTextBoxes[i];
+                LanguagePageFontTaWTextBoxes[i].Tag         = LanguagePageFontNameTextBoxes[i];
+
                 LanguagePageLanguageMotherTextBoxes[i].KeyUp += setMotherMark;
             }
-
-            loadLanguagePage();
-        }
-        private void loadLanguagePage()
-        {
-            throw new Exception("ÜBERARBEITEN!");
-            /*
-            LanguageTalent Typelanguage = new LanguageTalent("Type", "", 0, 0);
-            FontTalent TypeFont         = new FontTalent("Type", "", 0, 0);
-
-            List<InterfaceTalent> InterfaceLanguageTalentList   = controll.getTalentList(Typelanguage);
-            List<InterfaceTalent> InterfaceFontTalentList       = controll.getTalentList(TypeFont);
-
-            if (InterfaceLanguageTalentList == null) InterfaceLanguageTalentList = new List<InterfaceTalent>(0);
-            if (InterfaceFontTalentList == null) InterfaceFontTalentList = new List<InterfaceTalent>(0);
-
-            List<LanguageTalent> languageTalentList = new List<LanguageTalent>(0);
-            List<FontTalent> FontTalentList         = new List<FontTalent>(0);
-
-            for (int i=0; i< InterfaceLanguageTalentList.Count; i++)
-            {
-                languageTalentList.Add((LanguageTalent)InterfaceLanguageTalentList[i]);
-            }
-            for(int i=0; i<InterfaceFontTalentList.Count; i++)
-            {
-                FontTalentList.Add((FontTalent)InterfaceFontTalentList[i]);
-            }
-
-            Dictionary<String, Dictionary<Type, List<LanguageAbstractTalent>>> sourceDictionary = new Dictionary<String, Dictionary<Type, List<LanguageAbstractTalent>>>();
-            sourceDictionary = createDataSourceDictonary(sourceDictionary, languageTalentList);
-            sourceDictionary = createDataSourceDictonary(sourceDictionary, FontTalentList);
-
-            foreach(Dictionary<Type, List<LanguageAbstractTalent>> dic in sourceDictionary.Values)
-            {
-                sortLanguageDictonary(dic);
-            }
-            
-            comboBoxLanguagePageSelection.DataSource = new BindingSource(sourceDictionary, null);
-            comboBoxLanguagePageSelection.DisplayMember = "Key";
+            comboBoxLanguagePageSelection.DataSource = controll.getFamilyList();
             comboBoxLanguagePageSelection.SelectedValueChanged += setLanguagePageComboBox;
-            */
+            refreshLanguagePage();
         }
-        private void setBoxes(List<LanguageAbstractTalent> llist, List<LanguageAbstractTalent> flist)
+        private void refreshLanguagePage()
         {
-            /*
-            int i = 0;
-            int length = llist.Count;
-            if (length < flist.Count) { length = flist.Count; }
-
-            for (i = 0; i < length; i++)
+            for (int i = 0; i < SUpportedTalentCOunt; i++)
             {
-                LanguageTalent lt = null;
-                LanguageAbstractTalent ft = null;
-
-                if(i < llist.Count)
-                {
-                    lt = (LanguageTalent)llist[i];
-                }
-                if(i < flist.Count)
-                {
-                    ft = flist[i];
-                }
-
-                if (lt == null)
-                {
-                    lt = new LanguageTalent("", "", 0);
-                }
-                else
-                {
-                    txtLanguagePageLanguageProbe.Text = lt.getProbeStringTwo();
-                }
-                if (ft == null)
-                {
-                    ft = new FontTalent("", "", 0);
-                } else
-                {
-                    txtLanguagePageFontProbe.Text = ft.getProbeStringTwo();
-                }
-                
-
-                if (String.Compare(lt.getName(), "") != 0)
-                {
-                    LanguagePageLanguageNameTextBoxes[i].Text = lt.getName();
-                    LanguagePageLanguageComplexTextBoxes[i].Text = lt.getBe();
-                    LanguagePageLanguageTaWTextBoxes[i].Text = lt.getTaW().ToString();
-                    LanguagePageLanguageProbeTextBoxes[i].Text = lt.getProbeStringOne();
-                    LanguagePageLanguageMotherTextBoxes[i].Text = lt.getMotherMark();
-                }
-                else
-                {
-                    LanguagePageLanguageNameTextBoxes[i].Text = "";
-                    LanguagePageLanguageComplexTextBoxes[i].Text = "";
-                    LanguagePageLanguageTaWTextBoxes[i].Text = "";
-                    LanguagePageLanguageProbeTextBoxes[i].Text = "";
-                    LanguagePageLanguageMotherTextBoxes[i].Text = "";
-                }
-                if (String.Compare(ft.getName(), "") != 0)
-                {
-                    LanguagePageFontNameTextBoxes[i].Text = ft.getName();
-                    LanguagePageFontComplexTextBoxes[i].Text = ft.getBe();
-                    LanguagePageFontTaWTextBoxes[i].Text = ft.getTaW().ToString();
-                    LanguagePageFontProbeTextBoxes[i].Text = ft.getProbeStringOne();
-                }
-                else
-                {
-                    LanguagePageFontNameTextBoxes[i].Text = "";
-                    LanguagePageFontComplexTextBoxes[i].Text = "";
-                    LanguagePageFontTaWTextBoxes[i].Text = "";
-                    LanguagePageFontProbeTextBoxes[i].Text = "";
-                }
+                controll.displayLanguageRow((String)comboBoxLanguagePageSelection.SelectedValue, i,
+                    LanguagePageLanguageNameTextBoxes[i], LanguagePageLanguageComplexTextBoxes[i], LanguagePageLanguageTaWTextBoxes[i], LanguagePageLanguageProbeTextBoxes[i], LanguagePageLanguageMotherTextBoxes[i],
+                    LanguagePageFontNameTextBoxes[i], LanguagePageFontComplexTextBoxes[i], LanguagePageFontTaWTextBoxes[i], LanguagePageFontProbeTextBoxes[i]);
             }
-            for(;i<LanguagePageSupportedBoxes; i++)
-            {
-                LanguagePageLanguageNameTextBoxes[i].Text = "";
-                LanguagePageLanguageComplexTextBoxes[i].Text = "";
-                LanguagePageLanguageTaWTextBoxes[i].Text = "";
-                LanguagePageLanguageProbeTextBoxes[i].Text = "";
-                LanguagePageLanguageMotherTextBoxes[i].Text = "";
-
-                LanguagePageFontNameTextBoxes[i].Text = "";
-                LanguagePageFontComplexTextBoxes[i].Text = "";
-                LanguagePageFontTaWTextBoxes[i].Text = "";
-                LanguagePageFontProbeTextBoxes[i].Text = "";
-            }
-            */
         }
         private void setLanguagePageComboBox(Object sender, EventArgs e)
         {
-            KeyValuePair<String, Dictionary<Type, List<LanguageAbstractTalent>>> selected;
-            Dictionary<Type, List<LanguageAbstractTalent>> dselected;
-
-            try
-            {
-                selected    = (KeyValuePair<String, Dictionary<Type, List<LanguageAbstractTalent>>>)comboBoxLanguagePageSelection.SelectedValue;
-                dselected   = selected.Value;
-            }
-            catch
-            {
-                return;
-            }
-
-            List<LanguageAbstractTalent> languageList;
-            List<LanguageAbstractTalent> fontList;
-
-            if(!dselected.TryGetValue(typeof(LanguageTalent), out languageList))
-            {
-                languageList = new List<LanguageAbstractTalent>(0);
-            }
-            if(!dselected.TryGetValue(typeof(FontTalent), out fontList))
-            {
-                fontList = new List<LanguageAbstractTalent>(0);
-            }
-            setBoxes(languageList, fontList);
-        }
-        private void setLanguagePageTaWLanguage(Object sender, EventArgs e)
-        {
-            TextBox box = (TextBox)sender;
-            int i = (int)box.Tag;
-
-            KeyValuePair<String, Dictionary<Type, List<LanguageAbstractTalent>>> selected = (KeyValuePair<String, Dictionary<Type, List<LanguageAbstractTalent>>>)comboBoxLanguagePageSelection.SelectedValue;
-            Dictionary<Type, List<LanguageAbstractTalent>> dselected = selected.Value;
-
-            List<LanguageAbstractTalent> languageList;
-            List<LanguageAbstractTalent> fontList;
-
-            dselected.TryGetValue(typeof(LanguageTalent), out languageList);
-            dselected.TryGetValue(typeof(FontTalent), out fontList);
-
-            LanguageTalent lt = (LanguageTalent)languageList[i];
-
-            lt.setTaw(box.Text);
-
-            LanguagePageLanguageNameTextBoxes[i].Text = lt.getName();
-            LanguagePageLanguageComplexTextBoxes[i].Text = lt.getBe();
-            LanguagePageLanguageTaWTextBoxes[i].Text = lt.getTaW().ToString();
-            LanguagePageLanguageProbeTextBoxes[i].Text = lt.getProbeStringOne();
-        }
-        private void setLanguagePageTaWFont(Object sender, EventArgs e)
-        {
-            TextBox box = (TextBox)sender;
-            int i = (int)box.Tag;
-
-            KeyValuePair<String, Dictionary<Type, List<LanguageAbstractTalent>>> selected = (KeyValuePair<String, Dictionary<Type, List<LanguageAbstractTalent>>>)comboBoxLanguagePageSelection.SelectedValue;
-            Dictionary<Type, List<LanguageAbstractTalent>> dselected = selected.Value;
-
-            List<LanguageAbstractTalent> languageList;
-            List<LanguageAbstractTalent> fontList;
-
-            dselected.TryGetValue(typeof(LanguageTalent), out languageList);
-            dselected.TryGetValue(typeof(FontTalent), out fontList);
-
-            FontTalent ft = (FontTalent)fontList[i];
-
-            ft.setTaw(box.Text);
-
-            LanguagePageFontNameTextBoxes[i].Text = ft.getName();
-            LanguagePageFontComplexTextBoxes[i].Text = ft.getBe();
-            LanguagePageFontTaWTextBoxes[i].Text = ft.getTaW().ToString();
-            LanguagePageFontProbeTextBoxes[i].Text = ft.getProbeStringOne();
+            refreshLanguagePage();
         }
         private void setMotherMark(Object sender, EventArgs e)
         {
-            TextBox box = (TextBox)sender;
-            int i = (int)box.Tag;
+            TextBox box     = (TextBox)sender;
+            TextBox name    = (TextBox)box.Tag;
 
-            KeyValuePair<String, Dictionary<Type, List<LanguageAbstractTalent>>> selected = (KeyValuePair<String, Dictionary<Type, List<LanguageAbstractTalent>>>)comboBoxLanguagePageSelection.SelectedValue;
-            Dictionary<Type, List<LanguageAbstractTalent>> dselected = selected.Value;
-
-            List<LanguageAbstractTalent> languageList;
-            List<LanguageAbstractTalent> fontList;
-
-            dselected.TryGetValue(typeof(LanguageTalent), out languageList);
-            dselected.TryGetValue(typeof(FontTalent), out fontList);
-
-            LanguageTalent lt = (LanguageTalent)languageList[i];
-
-            lt.setMotherMark(LanguagePageLanguageMotherTextBoxes[i].Text);
-            LanguagePageLanguageMotherTextBoxes[i].Text = lt.getMotherMark();
+            controll.setMotherMark(box.Text, name.Text);
+            refreshLanguagePage();
         }
         //#########################################################################################################################################################################
         //RewardPage 
@@ -1617,5 +1330,16 @@ namespace DSA_Project
             Console.WriteLine(BoxNumber);
         }
         //#########################################################################################################################################################################
+
+
+
+        private void setTaW(Object sender, EventArgs e)
+        {
+            TextBox box     = (TextBox)sender;
+            TextBox name    = (TextBox)box.Tag;
+
+            controll.setTaw(box.Text, name.Text);
+            refreshLanguagePage();
+        }
     }
 }

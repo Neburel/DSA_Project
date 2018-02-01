@@ -1,0 +1,247 @@
+<CharacterBogen>
+  <HeldenBrief>
+    <BasisDaten>
+      <NAME>Kazarik</NAME>
+      <ALTER>25</ALTER>
+      <GESCHLECHT>männlich</GESCHLECHT>
+      <GRÖSE>168</GRÖSE>
+      <GEWICHT>50</GEWICHT>
+      <AUGENFARBE>grün</AUGENFARBE>
+      <HAUTFARBE>hell</HAUTFARBE>
+      <HAARFARBE>schwarze</HAARFARBE>
+      <FAMILIENSTAND>ledig</FAMILIENSTAND>
+      <GOTTHEIT>Firun</GOTTHEIT>
+      <RASSE>Tiefling</RASSE>
+      <KULTUR>Sonnenanbeter</KULTUR>
+      <PROFESSION>Jäger</PROFESSION>
+    </BasisDaten>
+    <Attribute>
+      <MU>
+        <Value>8</Value>
+      </MU>
+      <KL>
+        <Value>9</Value>
+      </KL>
+      <IN>
+        <Value>10</Value>
+      </IN>
+      <CH>
+        <Value>7</Value>
+      </CH>
+      <FF>
+        <Value>10</Value>
+      </FF>
+      <GE>
+        <Value>12</Value>
+      </GE>
+      <KO>
+        <Value>8</Value>
+      </KO>
+      <KK>
+        <Value>12</Value>
+      </KK>
+      <SO>
+        <Value>5</Value>
+      </SO>
+    </Attribute>
+    <Advanced>
+      <ATTACKE_BASIS>7</ATTACKE_BASIS>
+      <PARADE_BASIS>7</PARADE_BASIS>
+      <FERNKAMPF_BASIS>7</FERNKAMPF_BASIS>
+      <INITATIVE_BASIS>8</INITATIVE_BASIS>
+      <BEHERSCHUNGSWERT>0</BEHERSCHUNGSWERT>
+      <ARTEFAKTKONTROLLE>15</ARTEFAKTKONTROLLE>
+      <WUNDSCHWELLE>4</WUNDSCHWELLE>
+      <ENTRÜCKUNG>0</ENTRÜCKUNG>
+      <GESCHWINDIGKEIT>10</GESCHWINDIGKEIT>
+    </Advanced>
+    <Money>
+      <D>100</D>
+      <S>4</S>
+      <H>6</H>
+      <K>5</K>
+      <BANK>39</BANK>
+    </Money>
+    <Features>
+      <Advantages>
+        <Number1>
+          <Name>Tiefling(Sonnenanbeter)</Name>
+          <Description>Intuition (+2) bei Dunkelheit, Geruchsimmun, Zwergenmagen</Description>
+          <Value>X</Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number1>
+        <Number2>
+          <Name>Schlangenmensch</Name>
+          <Description>
+          </Description>
+          <Value>1</Value>
+          <GP>
+          </GP>
+          <Attribute>
+            <GE>1</GE>
+          </Attribute>
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number2>
+        <Number3>
+          <Name>Erdkruste</Name>
+          <Description>
+          </Description>
+          <Value>2</Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie>
+            <LEBENSENERGIE>4</LEBENSENERGIE>
+          </Energie>
+          <Advanced />
+          <Talente />
+        </Number3>
+        <Number4>
+          <Name>Diabolische Nächte</Name>
+          <Description>
+          </Description>
+          <Value>X</Value>
+          <GP>
+          </GP>
+          <Attribute>
+            <CH>1</CH>
+          </Attribute>
+          <Energie>
+            <AUSDAUER>5</AUSDAUER>
+          </Energie>
+          <Advanced />
+          <Talente />
+        </Number4>
+        <Number5>
+          <Name>Leichte Krankheitsresistenz</Name>
+          <Description>10%</Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number5>
+        <Number30>
+          <Name>Belohnung Gewinnspiel</Name>
+          <Description>1 Freies Talent (Noch zu Verteilen)</Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number30>
+        <Number31>
+          <Name>Abenteuer Gefängnis</Name>
+          <Description>1 Freier Talentpunkt(Noch zu Verteilen)</Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie>
+            <AUSDAUER>5</AUSDAUER>
+            <KARMAENERGIE>10</KARMAENERGIE>
+          </Energie>
+          <Advanced />
+          <Talente>
+            <Talent>
+              <Name>Überzeugen</Name>
+              <TAW>1</TAW>
+            </Talent>
+            <Talent>
+              <Name>Überreden</Name>
+              <TAW>1</TAW>
+            </Talent>
+          </Talente>
+        </Number31>
+      </Advantages>
+      <DisAdvantages>
+        <Number1>
+          <Name>Tiefling(Sonnenanbeter)</Name>
+          <Description>Intuition (-1) + Überhitzung bei Helligkeit</Description>
+          <Value>X</Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number1>
+        <Number2>
+          <Name>Un-Charismatisch</Name>
+          <Description>
+          </Description>
+          <Value>1</Value>
+          <GP>
+          </GP>
+          <Attribute>
+            <CH>-1</CH>
+          </Attribute>
+          <Energie />
+          <Advanced />
+          <Talente>
+            <Talent>
+              <Name>Betören</Name>
+              <TAW>-2</TAW>
+            </Talent>
+          </Talente>
+        </Number2>
+        <Number3>
+          <Name>Rassismus(höheres Volk)</Name>
+          <Description>
+          </Description>
+          <Value>2</Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number3>
+        <Number4>
+          <Name>Diabolische Nächte</Name>
+          <Description>
+          </Description>
+          <Value>X</Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced>
+            <ENTRÜCKUNG>-1</ENTRÜCKUNG>
+          </Advanced>
+          <Talente />
+        </Number4>
+        <Number5>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number5>
+      </DisAdvantages>
+    </Features>
+    <AdventurePoints>0</AdventurePoints>
+  </HeldenBrief>
+ 
+</CharacterBogen>

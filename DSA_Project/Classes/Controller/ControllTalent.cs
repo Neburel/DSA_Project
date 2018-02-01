@@ -33,7 +33,7 @@ namespace DSA_Project
                     InterfaceTalent currentTalent = talentlist[j];
                     if(String.Compare(checkTalent.getName(), currentTalent.getName()) == 0)
                     {
-                        throw new FileLoadException("Doppeltes Talent Entdeckt: " + checkTalent + " mit dem Typ:" + checkTalent.GetType() + " " + currentTalent.GetType());
+                        throw new FileLoadException("Doppeltes Talent Entdeckt: " + checkTalent.getName() + " mit dem Typ:" + checkTalent.GetType() + " " + currentTalent.GetType() + " BE:" + checkTalent.getBe() );
                     }
                 }
             }

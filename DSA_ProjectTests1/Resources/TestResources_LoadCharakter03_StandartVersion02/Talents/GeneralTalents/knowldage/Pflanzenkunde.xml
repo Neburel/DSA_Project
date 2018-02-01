@@ -1,0 +1,20 @@
+<TalentLetter>
+  <Talent>
+    <Name>Pflanzenkunde</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates />
+    <Requirements>
+      <Requirements>
+        <Talent>Wildnisleben</Talent>
+        <Value>
+        </Value>
+        <NeedAT>
+        </NeedAT>
+      </Requirements>
+    </Requirements>
+  </Talent>
+</TalentLetter>

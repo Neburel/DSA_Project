@@ -18,6 +18,7 @@
     <Attribute>
       <MU>
         <Value>8</Value>
+        <Marked>True</Marked>
       </MU>
       <KL>
         <Value>9</Value>
@@ -842,5 +843,14 @@
         </Talent>
       </RANGE>
     </FightingTalent>
+    <Language>
+      <FontTalent>
+        <Talent>
+          <Name>Atak</Name>
+          <TAW>21</TAW>
+          <SpeakingMother>X</SpeakingMother>
+        </Talent>
+      </FontTalent>
+    </Language>
   </TalentBrief>
 </CharacterBogen>

@@ -13,6 +13,7 @@ namespace DSA_Project
     public static class LoadCharakterXML
     {
         private static ControllTalent tControll;
+        private static List<String> comments;
 
         public static Charakter loadCharakter(String fileName, Charakter charakter, ControllTalent Tcontroller)
         {
@@ -22,6 +23,7 @@ namespace DSA_Project
             XmlNode heldenbriefNode     = null;
             XmlNode talentbriefNode     = null;
 
+            comments = new List<String>();
             tControll = Tcontroller;
 
             characterFile.Load(fileName);
@@ -311,8 +313,8 @@ namespace DSA_Project
                 {
                     case (ManagmentXMLStrings.GeneralTalent): loadTalentVersion2(TalentType, charakter); break;
                     case (ManagmentXMLStrings.FightingTalent): loadTalentVersion2(TalentType, charakter); break;
-                    case (ManagmentXMLStrings.Language): loadTalentLanguage(TalentType, charakter); break;
-                    case (ManagmentXMLStrings.Gifts): loadTalentGift(TalentType, charakter); break;
+                    case (ManagmentXMLStrings.Language): loadTalentVersion2(TalentType, charakter); break;
+                    case (ManagmentXMLStrings.Gifts): loadTalentVersion2(TalentType, charakter); break;
                 }
             }
         }
@@ -332,10 +334,14 @@ namespace DSA_Project
                     case ManagmentXMLStrings.TAW: Taw = node.InnerText; break;
                     case ManagmentXMLStrings.attack: AT = node.InnerText; break;
                     case ManagmentXMLStrings.Parade: PA = node.InnerText; break;
+                    case ManagmentXMLStrings.SpeakingMother: speakingMother = node.InnerText; break;
                     default: throw new Exception(node.Name + " " + node.InnerText);
                 }
             }
-            if (Name == null) return;
+            if (Name == null)
+            {
+                throw new MissingMemberException("Corrput File. Talent Without Name");
+            }
 
             Name = Name.Replace(".", " ");
 
@@ -343,7 +349,11 @@ namespace DSA_Project
             if (talent == null)
             {
                 talent = tControll.getTalent(Name);
-                if (talent == null) return;
+                if (talent == null)
+                {
+                    Console.WriteLine("Schreibe kommentar in Log Script: Das Talent exestiert im aktuellen Kontext nicht " + Name);
+                    return;
+                }
                 charakter.addTalent(talent);
             }
             talent.setTaw(Taw);            
@@ -389,47 +399,6 @@ namespace DSA_Project
             {
                 loadTalentVersion1(TalentNode, charakter);
             }
-        }
-        private static void loadTalentLanguage(XmlNode TalentNode, Charakter charakter)
-        {
-            Console.WriteLine("Zu Überarbeiten. Exception Fehlt damit vorläufige Test Funktionieren");
-            /*
-            LanguageTalent Typelanguage = new LanguageTalent("Type", "", 0, 0);
-            Dictionary<String, List<LanguageTalent>> dictonary = new Dictionary<String, List<LanguageTalent>>();
-            List<InterfaceTalent> InterfaceTalentList = charakter.getTalentList(Typelanguage);
-            List<LanguageTalent> languageTalentList = new List<LanguageTalent>();
-
-            for (int i = 0; i < InterfaceTalentList.Count; i++)
-            {
-                languageTalentList.Add((LanguageTalent)InterfaceTalentList[i]);
-            }
-            for (int i = 0; i < languageTalentList.Count; i++)
-            {
-                List<LanguageTalent> talentList = null;
-                String FamilyName = ((LanguageTalent)languageTalentList[i]).getFamilyName();
-                if (!dictonary.TryGetValue(FamilyName, out talentList))
-                {
-                    talentList = new List<LanguageTalent>();
-                    dictonary.Add(FamilyName, talentList);
-                }
-                talentList.Add((LanguageTalent)languageTalentList[i]);
-            }
-
-            foreach (XmlNode LanguageFamily in TalentNode)
-            {
-                foreach (XmlNode Node in LanguageFamily)
-                {
-                    switch (Node.Name)
-                    {
-                        case (ManagmentXMLStrings.Language): loadTalentVersion2(Node, charakter); ; break;
-                    }
-                }
-            }
-            */
-        }
-        private static void loadTalentGift(XmlNode TalentNode, Charakter charakter)
-        {
-            loadTalentVersion2(TalentNode, charakter);
         }
     }
 }

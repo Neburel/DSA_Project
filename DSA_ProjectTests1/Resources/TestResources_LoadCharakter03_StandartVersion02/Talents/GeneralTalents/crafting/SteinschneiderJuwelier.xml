@@ -1,0 +1,29 @@
+<TalentLetter>
+  <Talent>
+    <Name>Steinschneider/Juwelier</Name>
+    <Probe>
+      <Attribute>IN</Attribute>
+      <Attribute>FF</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Feinmechanik</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Kristallzucht</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements>
+      <Requirements>
+        <Talent>Gesteinskunde</Talent>
+        <Value>10</Value>
+        <NeedAT>4</NeedAT>
+      </Requirements>
+    </Requirements>
+  </Talent>
+</TalentLetter>

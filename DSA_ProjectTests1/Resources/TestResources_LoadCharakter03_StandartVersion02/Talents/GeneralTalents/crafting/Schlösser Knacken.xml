@@ -1,0 +1,17 @@
+<TalentLetter>
+  <Talent>
+    <Name>Schlösser Knacken</Name>
+    <Probe>
+      <Attribute>IN</Attribute>
+      <Attribute>FF</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Feinmechanik</Talent>
+        <Value>5</Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

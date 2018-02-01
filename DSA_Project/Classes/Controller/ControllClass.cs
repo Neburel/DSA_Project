@@ -37,7 +37,9 @@ namespace DSA_Project
         protected DSA form;
         private Charakter Charakter;
         private ControllTalent controllTalent;
-        
+        ControllLanguageFamily controllLanguageFamily;
+
+
         public ControllClass(DSA form)
         {
             this.form = form;
@@ -104,6 +106,8 @@ namespace DSA_Project
             charakter.addTalent(controllTalent.getTalentList<LanguageTalent>());
             charakter.addTalent(controllTalent.getTalentList<FontTalent>());
 
+            controllLanguageFamily = new ControllLanguageFamily(charakter, getResourcePath());
+
             return charakter;
         }
         //###################################################################################################################################
@@ -112,7 +116,7 @@ namespace DSA_Project
         {
             setUPBasicValues();
             setUPMoney();
-            setUPAttribute();
+            setUPAttribute();            
         }
         //###################################################################################################################################
         //Einrichtung der Attribute
@@ -314,6 +318,94 @@ namespace DSA_Project
         public List<InterfaceTalent> getallTalentList()
         {
             return Charakter.getTalentList_allTalents();
+        }
+        //#######################################################################################################################################################################################################################
+        //LanguageFamily
+        public List<String> getFamilyList()
+        {
+            List<String> stringList = new List<String>();
+            List<LanguageFamily> list = controllLanguageFamily.getFamilyList();
+            for(int i=0; i<list.Count; i++)
+            {
+                stringList.Add(list[i].getName());
+            }
+
+            return stringList;
+        }
+        private LanguageFamily getFamilybyName(String name)
+        {
+            List<LanguageFamily> list = controllLanguageFamily.getFamilyList();
+            for(int i=0; i<list.Count; i++)
+            {
+                if(String.Compare(list[i].getName(), name) == 0)
+                {
+                    return list[i];
+                }
+            }
+            throw new ArgumentOutOfRangeException("The Name:" + name + " is no Possible choise");
+        }
+        public void displayLanguageRow(String FamilyName, int number, TextBox lName, TextBox lbe, TextBox lTaW, TextBox lProbeString, TextBox lmark, TextBox fname, TextBox fbe, TextBox fTaW, TextBox fProbeString)
+        {
+            LanguageFamily family = getFamilybyName(FamilyName);
+            LanguageTalent lt = new LanguageTalent("", new List<string>());
+            FontTalent ft = new FontTalent("", new List<string>());
+            
+
+            if (family.Count() > number)
+            {
+                lt = family.getLanguageTalent(number);
+                ft = family.GetFontTalent(number);
+            }
+            
+            if(0 == String.Compare("", lt.getName()))
+            {
+                lName.Text = "";
+                lbe.Text = "";
+                lTaW.Text = "";
+                lProbeString.Text = "";
+                lmark.Text = "";
+            } else
+            {
+                lName.Text = lt.getName();
+                lbe.Text = lt.getBe();
+                lTaW.Text = lt.getTaW();
+                lProbeString.Text = lt.getProbeStringOne();
+                lmark.Text = lt.getMotherMark();
+            }
+            if(0 == String.Compare("", ft.getName()))
+            {
+                fname.Text = "";
+                fbe.Text = "";
+                fTaW.Text = "";
+                fProbeString.Text = "";
+            } else
+            {
+                fname.Text = ft.getName();
+                fbe.Text = ft.getBe();
+                fTaW.Text = ft.getTaW();
+                fProbeString.Text = ft.getProbeStringOne();
+            }
+        }
+        public void setMotherMark(String mark, String TalentName)
+        {
+            LanguageTalent talent = null;
+            try
+            {
+                talent = (LanguageTalent)Charakter.getTalent(TalentName);
+            } catch
+            {
+                throw new InvalidCastException();
+            }
+            talent.setMotherMark(mark);  
+        }
+
+
+
+
+        public void setTaw(String TaW, String TalentName)
+        {
+            InterfaceTalent talent = Charakter.getTalent(TalentName);
+            talent.setTaw(TaW);
         }
     }
 }

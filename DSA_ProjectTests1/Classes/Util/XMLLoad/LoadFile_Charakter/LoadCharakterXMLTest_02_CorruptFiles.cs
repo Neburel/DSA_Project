@@ -56,5 +56,35 @@ namespace DSA_Project.Tests
         {
             Charakter charakter = loadCharakter("TestResources_LoadCharakter02_CorruptFiles", "Kazarik_CorruptFeatureNumber.xml");            
         }
+        [TestMethod]
+        public void LoadFile_Charakter_CorruptTalentName()
+        {
+            Charakter charakter = loadCharakter("TestResources_LoadCharakter02_CorruptFiles", "Kazarik_CorruptTalentName.xml");
+            Assert.IsTrue(true);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(MissingMemberException), "Corrput File. Talent Without Name")]
+        public void LoadFile_Charakter_CorruptTalentNameMissing()
+        {
+            Charakter charakter = loadCharakter("TestResources_LoadCharakter02_CorruptFiles", "Kazarik_CorruptTalentNameMissing.xml");
+        }
+        [TestMethod]
+        [ExpectedException(typeof(Exception), "this file is not Supported")]
+        public void LoadFile_Charakter_CorruptMissingTalentNode()
+        {
+            Charakter charakter = loadCharakter("TestResources_LoadCharakter02_CorruptFiles", "Kazarik_CorruptMissingTalentNode.xml");
+        }
+        [TestMethod]
+        [ExpectedException(typeof(Exception), "this file is not Supported")]
+        public void LoadFile_Charakter_CorruptMissingCharakterNode()
+        {
+            Charakter charakter = loadCharakter("TestResources_LoadCharakter02_CorruptFiles", "Kazarik_CorruptCharakterNodeMissing.xml");
+        }
+        [TestMethod]
+        [ExpectedException(typeof(Exception), "this file is not Supported")]
+        public void LoadFile_Charakter_CorruptMissingHeroLetterNode()
+        {
+            Charakter charakter = loadCharakter("TestResources_LoadCharakter02_CorruptFiles", "Kazarik_CorruptMissingHeroLetterNode.xml");
+        }
     }
 }

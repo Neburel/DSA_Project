@@ -13,7 +13,8 @@ namespace DSA_Project
         private String[] AttributeNames = Enum.GetNames(typeof(DSA_ATTRIBUTE));
         
         //Einfache Talente
-        private string TalentName;
+        private String TalentName;
+        private String FileName;
         private List<DSA_ATTRIBUTE> probe               = new List<DSA_ATTRIBUTE>();
         private List<TalentDeviate> diverates           = new List<TalentDeviate>();
         private List<TalentRequirement>requirements     = new List<TalentRequirement>();
@@ -31,7 +32,6 @@ namespace DSA_Project
             requirements    = new List<TalentRequirement>(0);
             BElist          = new List<String>(0);
         }
-
         private Boolean TestIFxmlFile(String filename)
         {
             String ending = filename.Substring(filename.Length-3);
@@ -45,6 +45,7 @@ namespace DSA_Project
 
         public T loadFile<T>(String fileName) where T: InterfaceTalent
         {
+            this.FileName = fileName;
             if (!TestIFxmlFile(fileName))
             {
                 return (T)(Object)null;
@@ -117,7 +118,7 @@ namespace DSA_Project
                     case ManagmentXMLStrings.Diverates: loadDiverates(node); break;
                     case ManagmentXMLStrings.Requirements: loadRequirements(node); break;
                     case ManagmentXMLStrings.FightingTalent: loadFightingTalent(node); break;
-                    default: throw new NotSupportedException("Corrupt File Detected");
+                    default: throw new NotSupportedException("Corrupt File Detected" + FileName);
                 }
             }
         }

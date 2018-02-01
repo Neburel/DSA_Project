@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Wildnisleben</Name>
+    <Probe>
+      <Attribute>IN</Attribute>
+      <Attribute>GE</Attribute>
+      <Attribute>KO</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Tierkunde</Talent>
+        <Value>0</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Pflanzenkunde</Talent>
+        <Value>0</Value>
+      </Diverate>
+    </Diverates>
+  </Talent>
+</TalentLetter>

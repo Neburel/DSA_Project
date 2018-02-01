@@ -842,5 +842,11 @@
         </Talent>
       </RANGE>
     </FightingTalent>
+    <Gifts>
+      <Talent>
+        <Name>Empathie</Name>
+        <TAW>1</TAW>
+      </Talent>
+    </Gifts>
   </TalentBrief>
 </CharacterBogen>

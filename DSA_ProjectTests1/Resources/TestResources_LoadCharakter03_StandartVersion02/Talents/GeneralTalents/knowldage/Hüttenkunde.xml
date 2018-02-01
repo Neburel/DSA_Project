@@ -1,0 +1,27 @@
+<TalentLetter>
+  <Talent>
+    <Name>Hüttenkunde</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>KO</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Alchimie</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Grobschmied </Talent>
+        <Value>15</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Metallguss</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>
