@@ -7,7 +7,7 @@ using System.Xml;
 
 namespace DSA_Project
 {
-    static class SaveCharakterXML
+    public static class SaveCharakterXML
     {
         public static void saveCharakter(Charakter charakter, string fileName)
         {
@@ -64,7 +64,7 @@ namespace DSA_Project
         }
         //########################################################################################################################
         //HeroPage
-        public static void saveBasisDaten(Charakter charakter, XmlDocument characterFile, XmlElement element)
+        private static void saveBasisDaten(Charakter charakter, XmlDocument characterFile, XmlElement element)
         {
             String[] names = Enum.GetNames(typeof(DSA_BASICVALUES));
             int length = Enum.GetNames(typeof(DSA_BASICVALUES)).Length;
@@ -78,7 +78,7 @@ namespace DSA_Project
                 }
             }
         }
-        public static void saveAttribute(Charakter charakter, XmlDocument characterFile, XmlElement element)
+        private static void saveAttribute(Charakter charakter, XmlDocument characterFile, XmlElement element)
         {
             String[] names = Enum.GetNames(typeof(DSA_ATTRIBUTE));
             int length = Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length;
@@ -100,7 +100,7 @@ namespace DSA_Project
                 element.AppendChild(type);
             }
         }
-        public static void saveAdvancedValues(Charakter charakter, XmlDocument characterFile, XmlElement element)
+        private static void saveAdvancedValues(Charakter charakter, XmlDocument characterFile, XmlElement element)
         {
             String[] names = Enum.GetNames(typeof(DSA_ADVANCEDVALUES));
             int length = Enum.GetNames(typeof(DSA_ADVANCEDVALUES)).Length;
@@ -110,7 +110,7 @@ namespace DSA_Project
                 element.AppendChild(characterFile.CreateElement(names[i])).InnerText = charakter.getAdvancedValueAKT((DSA_ADVANCEDVALUES)i).ToString();
             }
         }
-        public static void saveMoney(Charakter charakter, XmlDocument characterFile, XmlElement element)
+        private static void saveMoney(Charakter charakter, XmlDocument characterFile, XmlElement element)
         {
             String[] names = Enum.GetNames(typeof(DSA_MONEY));
             int length = Enum.GetNames(typeof(DSA_MONEY)).Length;
@@ -120,11 +120,11 @@ namespace DSA_Project
                 element.AppendChild(characterFile.CreateElement(names[i])).InnerText = charakter.getMoney((DSA_MONEY)i).ToString();
             }
         }
-        public static void saveAdventurePoints(Charakter charakter, XmlElement Elementadvanturepoints)
+        private static void saveAdventurePoints(Charakter charakter, XmlElement Elementadvanturepoints)
         {
             Elementadvanturepoints.InnerText = charakter.getAdvanturePoints().ToString();
         }
-        public static void saveFeature(Charakter charakter, XmlDocument characterFile, XmlElement element, DSA_FEATURES type)
+        private static void saveFeature(Charakter charakter, XmlDocument characterFile, XmlElement element, DSA_FEATURES type)
         {
             for (int i = 0; i <= charakter.getHighistFeatureNumber(); i++)
             {
@@ -231,48 +231,18 @@ namespace DSA_Project
                 } else
                 if (talentList[i] as LanguageAbstractTalent != null)
                 {
-                    throw new Exception("ÜBERARBEITEN!");
-                    /*
-                    LanguageAbstractTalent talent = (LanguageAbstractTalent)talentList[i];
-                    String familyName = talent.getFamilyName();
-                    XmlNode FamilyElement = null;
-                    XmlElement underLanguage = null;
+                    LanguageAbstractTalent ltalent = (LanguageAbstractTalent)talentList[i];
+                    String motherMark = ltalent.getMotherMark();
+                    XmlElement LElement = saveTalent(talentList[i], characterFile, LanguageElement);
 
-                    if (!familyNodes.TryGetValue(familyName, out FamilyElement))
+                    XmlElement motherMarkElement = characterFile.CreateElement(ManagmentXMLStrings.SpeakingMother);
+                    motherMarkElement.InnerText = motherMark;
+
+                    if(0==String.Compare("", motherMark))
                     {
-                        FamilyElement = characterFile.CreateElement(ManagmentXMLStrings.LanguageFamily);
-                        LanguageElement.AppendChild(FamilyElement);
-                        familyNodes.Add(familyName, FamilyElement);
-
-                        XmlElement FamilyName = characterFile.CreateElement(ManagmentXMLStrings.FamilyName);
-                        FamilyName.InnerText = familyName;
-                        FamilyElement.AppendChild(FamilyName);
+                        LElement.AppendChild(motherMarkElement);
                     }
 
-                    if(talentList[i] as LanguageTalent != null)
-                    {
-                        underLanguage = characterFile.CreateElement(ManagmentXMLStrings.Language);
-                    } else
-                    if(talentList[i] as FontTalent != null)
-                    {
-                        underLanguage = characterFile.CreateElement(ManagmentXMLStrings.Font);
-                    }
-                    else
-                    {
-                        throw new Exception("Corruption");
-                    }
-
-                    FamilyElement.AppendChild(underLanguage);
-                    XmlElement ele = saveTalent(talent, characterFile, underLanguage);
-                    
-                    if(talentList[i] as LanguageTalent !=null)
-                    {
-                        LanguageTalent lt = (LanguageTalent)(talent);
-                        XmlNode lastnode = characterFile.CreateElement(ManagmentXMLStrings.SpeakingMother);
-                        lastnode.InnerText = lt.getMotherMark();
-                        ele.AppendChild(lastnode);
-                    }
-                    */
                 } else 
                 if (talentList[i] as GiftTalent != null)
                 {

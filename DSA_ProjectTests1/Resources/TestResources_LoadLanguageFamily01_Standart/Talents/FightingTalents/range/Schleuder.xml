@@ -1,0 +1,13 @@
+<TalentLetter>
+  <Talent>
+    <Name>Schleuder</Name>
+    <BE>BE-2</BE>
+    <Probe />
+    <Diverates />
+    <Requirements />
+    <FightingTalent>
+      <attack>FERNKAMPF_BASIS</attack>
+      <Parade>False</Parade>
+    </FightingTalent>
+  </Talent>
+</TalentLetter>

@@ -11,11 +11,9 @@
     <Diverates>
       <Diverate>
         <Talent>Taschendiebstahl</Talent>
-        <Value>0</Value>
       </Diverate>
       <Diverate>
         <Talent>Falschspiel</Talent>
-        <Value>0</Value>
       </Diverate>
     </Diverates>
   </Talent>

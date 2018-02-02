@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Singen</Name>
+    <Probe>
+      <Attribute>IN</Attribute>
+      <Attribute>CH</Attribute>
+      <Attribute>CH</Attribute>
+    </Probe>
+    <BE>BE-3</BE>
+  </Talent>
+</TalentLetter>

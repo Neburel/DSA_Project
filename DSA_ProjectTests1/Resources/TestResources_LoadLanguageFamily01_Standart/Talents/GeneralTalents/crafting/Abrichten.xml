@@ -1,0 +1,34 @@
+<TalentLetter>
+  <Talent>
+    <Name>Abrichten</Name>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>CH</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Viehzucht</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Tierkunde</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Reiten</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements>
+      <Requirements>
+        <Talent>Tierkunde</Talent>
+        <Value>10</Value>
+        <NeedAT>4</NeedAT>
+      </Requirements>
+    </Requirements>
+  </Talent>
+</TalentLetter>

@@ -1,0 +1,24 @@
+<TalentLetter>
+  <Talent>
+    <Name>Wurfmesser </Name>
+    <BE>BE-3</BE>
+    <Probe />
+    <Diverates>
+      <Diverate>
+        <Talent>Wurfbeile</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Wurfspeere</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+    <FightingTalent>
+      <attack>FERNKAMPF_BASIS</attack>
+      <Parade>False</Parade>
+    </FightingTalent>
+  </Talent>
+</TalentLetter>

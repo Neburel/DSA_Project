@@ -15,7 +15,7 @@ namespace DSA_Project.Tests
         {
             return "TestResources_LoadCharakter03_StandartVersion02";
         }
-        public override string getSaveFileName()
+        public override string getLoadFileName()
         {
             return "Kazarik.xml";
         }
@@ -142,6 +142,22 @@ namespace DSA_Project.Tests
 
             return dic;
         }
-        
+
+        public override Dictionary<string, int> getTalentTaWDictionary()
+        {
+            Dictionary<String, int> dic = new Dictionary<String, int>();
+            dic.Add("Abrichten", 1);
+            dic.Add("Ackerbau", 2);
+            dic.Add("Stellmacher", 1);
+            dic.Add("Stoffe Färben", 1);
+            dic.Add("Tätowieren", 0);
+
+            return dic;
+        }
+
+        public override List<string> getGiftTalents()
+        {
+            return new List<string>();
+        }
     }
 }

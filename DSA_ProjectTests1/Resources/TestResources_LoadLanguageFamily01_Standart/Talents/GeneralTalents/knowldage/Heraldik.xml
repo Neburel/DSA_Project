@@ -1,0 +1,18 @@
+<TalentLetter>
+  <Talent>
+    <Name>Heraldik</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>KL</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Etikette</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

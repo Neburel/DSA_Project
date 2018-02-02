@@ -20,6 +20,7 @@ namespace DSA_Project.Tests
         private Dictionary<DSA_ATTRIBUTE, bool> attributeMarkedDictionary;
         private Dictionary<DSA_MONEY, int> moneyDictionary;
         private List<InterfaceTalent> talentList;
+        private Dictionary<String, int> talentTaWDictionary;
         private Dictionary<Feature, int> featureDictionary;
         private int advanturePoints;
 
@@ -30,12 +31,16 @@ namespace DSA_Project.Tests
         public abstract Dictionary<DSA_ATTRIBUTE, bool> getAttributeMarkedDictonary();
         public abstract Dictionary<DSA_MONEY, int> getmoneyDictionary();
         public abstract Dictionary<Feature, int> getFeatureDictionary();
+        public abstract Dictionary<String, int> getTalentTaWDictionary();
         public abstract List<InterfaceTalent> getTalentList();
+
         public abstract int getAdventurePoints();
 
         [TestInitialize]
         public void setUP()
         {
+            Console.WriteLine("CharakterTestsAbstract");
+
             charakter           = new Charakter();
             managmentFeature    = new ManagmentFeature();
 
@@ -183,11 +188,31 @@ namespace DSA_Project.Tests
         private void setUP_Talente()
         {
             talentList = getTalentList();
+            talentTaWDictionary = getTalentTaWDictionary();
 
-            for(int i=0; i< talentList.Count; i++)
+            for (int i=0; i< talentList.Count; i++)
             {
                 charakter.addTalent(talentList[i]);
             }
+            List<String> keys = new List<string>(talentTaWDictionary.Keys);
+            for(int i=0; i<talentTaWDictionary.Keys.Count; i++)
+            {
+                int taw = 0;
+                InterfaceTalent talent = charakter.getTalent(keys[i]);
+                if(talentTaWDictionary.TryGetValue(keys[i], out taw))
+                {
+                    if (talent == null)
+                    {
+                        throw new Exception("TestFalsch Talent fehlt. " + keys[i]);
+                    }
+                    talent.setTaw(taw.ToString());
+                } else
+                {
+                    throw new Exception();
+                }
+
+            }
+
         }
         private void setUP_Andere()
         {
@@ -628,6 +653,21 @@ namespace DSA_Project.Tests
         {
             List<InterfaceTalent> list = charakter.getTalentList_allTalents();
             Assert.AreEqual(talentList.Count, list.Count);
+        }
+        [TestMethod]
+        public void Charakter_CheckTaW()
+        {
+            for(int i=0; i<talentList.Count; i++)
+            {
+                int taw = 0;
+                if(talentTaWDictionary.TryGetValue(talentList[i].getName(), out taw))
+                {
+                    Assert.AreEqual(taw.ToString(), talentList[i].getTaW());
+                } else
+                {
+                    Assert.AreEqual("-", talentList[i].getTaW(), talentList[i].getName());
+                }
+            }
         }
         //##################################################################################################################
     }

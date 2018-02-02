@@ -1,0 +1,13 @@
+<TalentLetter>
+  <Talent>
+    <Name>Fahrzeug Lenken</Name>
+    <Probe>
+      <Attribute>IN</Attribute>
+      <Attribute>CH</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates>
+    </Diverates>
+    <Requirements />
+  </Talent>
+</TalentLetter>

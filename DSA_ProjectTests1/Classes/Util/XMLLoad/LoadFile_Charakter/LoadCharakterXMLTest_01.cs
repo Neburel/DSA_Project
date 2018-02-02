@@ -15,11 +15,23 @@ namespace DSA_Project.Tests
         {
             return "TestResources_LoadCharakter01_Standart";
         }
-        public override string getSaveFileName()
+        public override string getLoadFileName()
         {
             return "Kazarik.xml";
         }
 
+        public override int getAdventurePoints()
+        {
+            return 0;
+        }
+        public override List<String> getGiftTalents()
+        {
+            List<String> list = new List<String>(0);
+            list.Add("Empathie");
+            list.Add("Gefahreninstinkt");
+
+            return list;
+        }
         public override Dictionary<DSA_BASICVALUES, string> getBasicValuesDictionary()
         {
             Dictionary<DSA_BASICVALUES, String> dic = new Dictionary<DSA_BASICVALUES, string>(0);
@@ -52,6 +64,13 @@ namespace DSA_Project.Tests
             dic.Add(DSA_ATTRIBUTE.KK, 12);
             dic.Add(DSA_ATTRIBUTE.SO, 5);
 
+
+            return dic;
+        }
+        public override Dictionary<DSA_ATTRIBUTE, bool> getAttributeMarkedDictonary()
+        {
+            Dictionary<DSA_ATTRIBUTE, bool> dic = new Dictionary<DSA_ATTRIBUTE, bool>(0);
+            dic.Add(DSA_ATTRIBUTE.MU, true);
 
             return dic;
         }
@@ -120,21 +139,55 @@ namespace DSA_Project.Tests
 
             return dic;
         }
-        
-        public override int getAdventurePoints()
+       
+        public override Dictionary<String, int> getTalentTaWDictionary()
         {
-            return 0;
-        }
+            Dictionary<String, int> dic = new Dictionary<String, int>();
 
-        
+            dic.Add("Akrobatik", 1);
+            dic.Add("Fliegen", 0);
+            dic.Add("Klettern", 2);
+            dic.Add("Körperbeherrschung", 2);
+            dic.Add("Reiten", 0);
+            dic.Add("Schleichen", 2);
+            dic.Add("Schwimmen", 2);
+            dic.Add("Selbstbeherrschung", 1);
+            dic.Add("Sich Verstecken", 2);
+            dic.Add("Singen", 0);
+            dic.Add("Sinnenschärfe", 2);
+            dic.Add("Skifahren", 0);
+            dic.Add("Stimmen Imitieren", 0);
+            dic.Add("Tanzen", 1);
+            dic.Add("Zechen", 3);
 
-        public override Dictionary<DSA_ATTRIBUTE, bool> getAttributeMarkedDictonary()
-        {
-            Dictionary<DSA_ATTRIBUTE, bool> dic = new Dictionary<DSA_ATTRIBUTE, bool>(0);
-            dic.Add(DSA_ATTRIBUTE.MU, true);
+            dic.Add("Betören", 0);
+            dic.Add("Etikette", 0);
+            dic.Add("Gassenwissen", 1);
+            dic.Add("Lehren", 0);
+            dic.Add("Menschenkenntnis", 1);
+            dic.Add("Schauspielerei", 0);
+            dic.Add("Schriftlicher Ausdruck", 0);
+            dic.Add("Sich Verkleiden", 0);
+            dic.Add("Überreden", 1);
+            dic.Add("Überzeugen", 1);
+
+            dic.Add("Fallenstellen", 1);
+            dic.Add("Fesseln/Entfesseln", 1);
+            dic.Add("Fischen/Angeln", 2);
+            dic.Add("Fährtensuchen", 4);
+            dic.Add("Orientierung", 3);
+
+            dic.Add("Anatomie", 1);
+            dic.Add("Baukunst", 0);
 
             return dic;
         }
         
+
+        [TestInitialize]
+        public void setUP_Abstract_LoadCharakterXMLTest01()
+        {
+            Console.WriteLine("LoadCharakterXMLTest_01");
+        }
     }
 }

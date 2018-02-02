@@ -139,7 +139,7 @@ namespace DSA_Project.Tests
                     ret = ret + ", ";
                 }
                 TalentDeviate diverate = trd[i];
-                if (diverate.getRequiredTaW() == 0)
+                if (diverate.getRequiredTaW() == 10)
                 {
                     ret = ret + diverate.getName();
                 }

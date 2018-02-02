@@ -352,7 +352,7 @@ namespace DSA_Project.Tests
             currentProbeStringOne       = "-";
             currentProbeStringTwo       = "MU/KL/SO/KK";
             currentBE                   = "SingleBE";
-            currentDeviate              = "TestTwoDiverateOne(10), TestTwoDiverateTwo";
+            currentDeviate              = "TestTwoDiverateOne, TestTwoDiverateTwo(0)";
             currentTAW                  = "-";
             currentTAWBonus             = "0";
             currentProbeCount           = 4;
@@ -458,7 +458,7 @@ namespace DSA_Project.Tests
             currentProbeStringTwo       = "0";
             currentProbeStringThree     = "BEHERSCHUNGSWERT";
             currentBE                   = "SingleBE";
-            currentDeviate              = "TestTwoDiverateOne(10), TestTwoDiverateTwo";
+            currentDeviate              = "TestTwoDiverateOne, TestTwoDiverateTwo(0)";
             currentTAW                  = "-";
             currentTAWBonus             = "0";
             currentProbeCount           = 2;

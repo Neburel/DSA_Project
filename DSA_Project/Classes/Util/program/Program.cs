@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DSA_Project
 {
+    [ExcludeFromCodeCoverage]
     static class Program
     {
         /// <summary>
@@ -14,18 +16,9 @@ namespace DSA_Project
         [STAThread]
         static void Main()
         {
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new DSA());
-            
-            //Application.Run(new CreateFeature());
-        }
-
-        static void createFileStructure()
-        {
-            CreateFileStructure.createFileStructure("DSA");
-            CreateFileStructure.createFileStructure("PNP");
         }
     }
 }

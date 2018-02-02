@@ -120,7 +120,7 @@ namespace DSA_Project
                     ret = ret + ", ";
                 }
                 TalentDeviate diverate = Deviate[i];
-                if (diverate.getRequiredTaW() == 0)
+                if (diverate.getRequiredTaW() == 10)
                 {
                     ret = ret + diverate.getName();
                 }
@@ -172,7 +172,9 @@ namespace DSA_Project
 
             foreach (TalentDeviate dev in notUsedDeviate)
             {
-                if (dev.getRequiredTaW() <= localTaW)
+                int requiredTaW = dev.getRequiredTaW();
+
+                if (requiredTaW <= localTaW)
                 {
                     TalentBase talent = (TalentBase)talentSearch(dev.getName());
                     talent.addDeviateBonus();

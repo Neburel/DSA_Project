@@ -1,0 +1,13 @@
+<TalentLetter>
+  <Talent>
+    <Name>Blasrohr</Name>
+    <BE>BE-5</BE>
+    <Probe />
+    <Diverates />
+    <Requirements />
+    <FightingTalent>
+      <attack>FERNKAMPF_BASIS</attack>
+      <Parade>False</Parade>
+    </FightingTalent>
+  </Talent>
+</TalentLetter>

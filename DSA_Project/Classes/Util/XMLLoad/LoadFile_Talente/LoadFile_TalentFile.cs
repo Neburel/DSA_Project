@@ -142,17 +142,26 @@ namespace DSA_Project
             {
                 TalentDeviate diverate;
                 String TalentName = "";
-                int Value = 0;
+                String value = null;
+                int x = 0 ;
 
                 foreach (XmlNode node in Diveratenode)
                 {
                     switch (node.Name)
                     {
                         case ManagmentXMLStrings.TalentElement:    TalentName = node.InnerText; break;
-                        case ManagmentXMLStrings.Value:            int x; Int32.TryParse(node.InnerText, out x); Value = x; ; break;
+                        case ManagmentXMLStrings.Value:            value = node.InnerText; break;
                     }
                 }
-                diverate = new TalentDeviate(TalentName, Value);
+
+
+                if (!Int32.TryParse(value, out x))
+                {
+                    x = 10;
+                }
+                
+
+                diverate = new TalentDeviate(TalentName, x);
                 this.diverates.Add(diverate);
             }
         }

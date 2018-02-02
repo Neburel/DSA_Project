@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Menschenkenntnis</Name>
+    <Probe>
+      <Attribute>KL</Attribute>
+      <Attribute>IN</Attribute>
+      <Attribute>CH</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Heilkunde Seele</Talent>
+        <Value>5</Value>
+      </Diverate>
+    </Diverates>
+  </Talent>
+</TalentLetter>

@@ -77,7 +77,6 @@
     <Compile Include="Classes\Managment\ManagmentForm.cs" />
     <Compile Include="Classes\Managment\ManagmentXMLStrings.cs" />
     <Compile Include="Classes\Managment\ManagmentSaveStrings.cs" />
-    <Compile Include="Classes\Util\program\CreateFileStructure.cs" />
     <Compile Include="Classes\Util\XMLLoad\LoadFile_LanguageFamily\LoadFile_LanguageFamily.cs" />
     <Compile Include="Classes\Util\XMLLoad\LoadFile_Talente\Interface_LoadFile_TalentFile.cs" />
     <Compile Include="Classes\Util\XMLLoad\LoadFile_Talente\LoadFile_TalentFile.cs" />
@@ -143,7 +142,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\DSA\SaveGame\Kazarik_2.xml" />
+    <Content Include="Resources\DSA\SaveGame\Kazarik_2.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Falschspiel.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -570,12 +572,15 @@
     </Content>
     <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Körperbeherrschung.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Klettern.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Resources\DSA\Talents\GeneralTalents\physical\Athletik.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Resources\DSA\Talents\GeneralTalents\social\Überzeugen.xml">
       <SubType>Designer</SubType>

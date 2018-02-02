@@ -1,0 +1,23 @@
+<TalentLetter>
+  <Talent>
+    <Name>Falschspiel</Name>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>CH</Attribute>
+      <Attribute>FF</Attribute>
+    </Probe>
+    <Diverates>
+      <Diverate>
+        <Talent>Gaukeleien</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements>
+      <Requirements>
+        <Talent>Menschenkenntnis</Talent>
+        <Value>4</Value>
+      </Requirements>
+    </Requirements>
+  </Talent>
+</TalentLetter>

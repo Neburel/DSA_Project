@@ -9,7 +9,6 @@ using System.IO;
 
 namespace DSA_Project
 {
-    //*toDO: try Am obersten Punkt, bei Misserfolg alles als Korrupt erklären (Simple Lösung)
     public static class LoadCharakterXML
     {
         private static ControllTalent tControll;
@@ -372,7 +371,7 @@ namespace DSA_Project
             }
             if (speakingMother != null)
             {
-                LanguageTalent lt = (LanguageTalent)talent;
+                LanguageAbstractTalent lt = (LanguageAbstractTalent)talent;
                 lt.setMotherMark(speakingMother);
             }
 
@@ -395,8 +394,9 @@ namespace DSA_Project
                 {
                     loadTalentNode(Talent, charakter);
                 }
-            } catch
+            } catch(Exception e)
             {
+                Console.WriteLine(e.Message);
                 loadTalentVersion1(TalentNode, charakter);
             }
         }

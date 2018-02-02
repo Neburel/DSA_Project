@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TalentLetter>
+  <Talent>
+    <Name>Klettern</Name>
+    <Probe>
+      <Attribute>MU</Attribute>
+      <Attribute>GE</Attribute>
+      <Attribute>KK</Attribute>
+    </Probe>
+    <BE>BEx2</BE>
+    <Diverates>
+      <Diverate>
+        <Talent>Athletik</Talent>
+        <Value>5</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Akrobatik</Talent>
+        <Value>5</Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Körperbeherrschung</Talent>
+        <Value>0</Value>
+      </Diverate>
+    </Diverates>
+  </Talent>
+</TalentLetter>

@@ -24,7 +24,5 @@ namespace DSA_Project
 
         List<TalentDeviate> getDeviateList();
         List<TalentRequirement> getRequirementList();
-
-        
     }
 }

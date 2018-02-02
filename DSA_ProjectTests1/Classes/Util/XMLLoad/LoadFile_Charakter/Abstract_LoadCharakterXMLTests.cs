@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using DSA_ProjectTests1._01_TestUtil;
 
 namespace DSA_Project.Tests
 {
@@ -14,19 +15,37 @@ namespace DSA_Project.Tests
     {
         private ControllTalent controllTalent;
 
+        abstract public List<String> getGiftTalents();
         abstract public String getResourceName();
-        abstract public String getSaveFileName();
+        abstract public String getLoadFileName();
+        internal virtual String getSaveFileName()
+        {
+            return getLoadFileName();
+        }
+
+        internal virtual bool getSaveFirst()
+        {
+            return false;
+        }
 
         [TestInitialize]
         public void setUP_Abstract_LoadCharakterXMLTest()
         {
+            Console.WriteLine("setUP_Abstract_LoadCharakterXMLTest");
+
             setUP_Controller();
 
             String path;
             path = Path.Combine(ManagmentSaveStrings.currentDirectory, ManagmentSaveStrings.Recources);
             path = Path.Combine(path, getResourceName());
             path = Path.Combine(path, ManagmentSaveStrings.SaveLocation);
-            path = Path.Combine(path, getSaveFileName());
+            path = Path.Combine(path, getLoadFileName());
+
+            if (getSaveFirst() == true)
+            {
+                String file = ResourceAcess.getSaveFile(getResourceName(), getSaveFileName());
+                SaveCharakterXML.saveCharakter(charakter, file);
+            }
 
             charakter = LoadCharakterXML.loadCharakter(path, charakter, this.controllTalent);
         }
@@ -36,7 +55,7 @@ namespace DSA_Project.Tests
             String path;
             path = Path.Combine(ManagmentSaveStrings.currentDirectory, ManagmentSaveStrings.Recources);
             path = Path.Combine(path, getResourceName());
-
+            
             if (controllTalent == null)
             {
                 controllTalent = new ControllTalent(path);
@@ -47,6 +66,7 @@ namespace DSA_Project.Tests
             setUP_Controller();
 
             List<InterfaceTalent> list = new List<InterfaceTalent>();
+            List<String> gifts = getGiftTalents();
 
             list.AddRange(controllTalent.getTalentList<TalentClose>());
             list.AddRange(controllTalent.getTalentList<TalentRange>());
@@ -60,6 +80,12 @@ namespace DSA_Project.Tests
 
             list.AddRange(controllTalent.getTalentList<LanguageTalent>());
             list.AddRange(controllTalent.getTalentList<FontTalent>());
+
+            for(int i=0; i<gifts.Count; i++)
+            {
+                InterfaceTalent talent = controllTalent.getTalent(gifts[i]);
+                list.Add(talent);
+            }
 
 
             return list;

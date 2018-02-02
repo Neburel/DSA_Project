@@ -27,7 +27,7 @@ namespace DSA_Project
             for(int i=0; i<files.Length; i++)
             {
                 LanguageFamily family = loader.loadFile(files[i], charakter);
-                list.Add(family);
+                if(family!=null) list.Add(family);
             }
         }
         public List<LanguageFamily> getFamilyList()

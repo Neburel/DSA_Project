@@ -111,6 +111,15 @@ namespace DSA_Project.Tests
         {
             return 5;
         }
-        
+
+        public override Dictionary<String, int> getTalentTaWDictionary()
+        {
+            Dictionary<String, int> dic = new Dictionary<String, int>();
+            dic.Add("CraftingTalent01", 5);
+            dic.Add("TalentClose", 0);
+            dic.Add("CraftingTalent02", -3);
+
+            return dic;
+        }
     }
 }
