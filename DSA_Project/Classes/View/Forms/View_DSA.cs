@@ -61,7 +61,6 @@ namespace DSA_Project
             txtAbenteuerpunkte.Text = controll.AdvanturePoints().ToString();
 
             setUPTalentBox();
-            setUPTalentPage();
 
             loadHeroPageBasicValues();
             loadHeroPageAttributMark();
@@ -141,16 +140,15 @@ namespace DSA_Project
                 setlblName(atr, name);
             }
         }
+        
         //#########################################################################################################################################################################
         //ToolPage
         private void setUPtoolPage()
         {
-            List<Button> toolPageButtons = new List<Button> { btnLoadCharacter, btnSaveCharacter, btnToolChangeDSA_PNP, btnCreateTalent, btncreateFightingTalent};
-            btnLoadCharacter.Click += new EventHandler(btnLoadCharacter_Click);
-            btnSaveCharacter.Click += new EventHandler(btnSaveCharacter_Click);
-            btnToolChangeDSA_PNP.Click += new EventHandler(btnToolChangeDSA_PNP_Click);
-            btnCreateTalent.Click += new EventHandler(btnCreateTalent_Click);
-            btncreateFightingTalent.Click += new EventHandler(btncreateFightingTalent_Click);
+            List<Button> toolPageButtons    = new List<Button> { btnLoadCharacter, btnSaveCharacter, btnToolChangeDSA_PNP};
+            btnLoadCharacter.Click          += new EventHandler(btnLoadCharacter_Click);
+            btnSaveCharacter.Click          += new EventHandler(btnSaveCharacter_Click);
+            btnToolChangeDSA_PNP.Click      += new EventHandler(btnToolChangeDSA_PNP_Click);
         }
         private void btnLoadCharacter_Click(object sender, EventArgs e)
         {
@@ -178,18 +176,6 @@ namespace DSA_Project
             }
             this.load();
         }
-        private void btnCreateTalent_Click(object sender, EventArgs e)
-        {
-            String st = Path.Combine(controll.getResourcePath(), ManagmentSaveStrings.GeneralTalentFilesSystemLocation);
-            CreateTalent createTalent = new CreateTalent(st);
-            createTalent.ShowDialog();
-        }
-        private void btncreateFightingTalent_Click(object sender, EventArgs e)
-        {
-            String st = Path.Combine(controll.getResourcePath(), ManagmentSaveStrings.FightTalentFilesSystemLocation);
-            CreateTalent createTalent = new CreateTalent(st);
-            createTalent.ShowDialog();
-        }
         //#########################################################################################################################################################################
         //HeroPage Attribute
         private List<Label> HeroPageAttributLabels;
@@ -204,15 +190,15 @@ namespace DSA_Project
             HeroPageAttributMAXBoxes = new List<TextBox> { txtMutMAX, txtKlugheitMAX, txtIntuitionMAX, txtCharismaMAX, txtFingerfertigkeitMAX, txtGewandheitMAX, txtKonstitutionMAX, txtKörperkraftMAX, txtSozialstatusMAX };
 
 
-            lblMut.Tag = txtMutAKT.Tag = txtMutMOD.Tag = txtMutMAX.Tag = DSA_ATTRIBUTE.MU;
-            lblKlugheit.Tag = txtKlugheitAKT.Tag = txtKlugheitMOD.Tag = txtKlugheitMAX.Tag = DSA_ATTRIBUTE.KL;
-            lblIntuition.Tag = txtIntuitionAKT.Tag = txtIntuitionMOD.Tag = txtIntuitionMAX.Tag = DSA_ATTRIBUTE.IN;
-            lblCharisma.Tag = txtCharismaAKT.Tag = txtCharismaMOD.Tag = txtCharismaMAX.Tag = DSA_ATTRIBUTE.CH;
-            lblFingerfertigkeit.Tag = txtFingerfertigkeitAKT.Tag = txtFingerfertigkeitMOD.Tag = txtFingerfertigkeitMAX.Tag = DSA_ATTRIBUTE.FF;
-            lblGewandheit.Tag = txtGewandheitAKT.Tag = txtGewandheitMOD.Tag = txtGewandheitMAX.Tag = DSA_ATTRIBUTE.GE;
-            lblKonstitution.Tag = txtKonstitutionAKT.Tag = txtKonstitutionMOD.Tag = txtKonstitutionMAX.Tag = DSA_ATTRIBUTE.KO;
-            lblKörperkraft.Tag = txtKörperkraftAKT.Tag = txtKörperkraftMOD.Tag = txtKörperkraftMAX.Tag = DSA_ATTRIBUTE.KK;
-            lblSozialstatus.Tag = txtSozialstatusAKT.Tag = txtSozialstatusMOD.Tag = txtSozialstatusMAX.Tag = DSA_ATTRIBUTE.SO;
+            lblMut.Tag              = txtMutAKT.Tag                 = txtMutMOD.Tag                 = txtMutMAX.Tag                 = DSA_ATTRIBUTE.MU;
+            lblKlugheit.Tag         = txtKlugheitAKT.Tag            = txtKlugheitMOD.Tag            = txtKlugheitMAX.Tag            = DSA_ATTRIBUTE.KL;
+            lblIntuition.Tag        = txtIntuitionAKT.Tag           = txtIntuitionMOD.Tag           = txtIntuitionMAX.Tag           = DSA_ATTRIBUTE.IN;
+            lblCharisma.Tag         = txtCharismaAKT.Tag            = txtCharismaMOD.Tag            = txtCharismaMAX.Tag            = DSA_ATTRIBUTE.CH;
+            lblFingerfertigkeit.Tag = txtFingerfertigkeitAKT.Tag    = txtFingerfertigkeitMOD.Tag    = txtFingerfertigkeitMAX.Tag    = DSA_ATTRIBUTE.FF;
+            lblGewandheit.Tag       = txtGewandheitAKT.Tag          = txtGewandheitMOD.Tag          = txtGewandheitMAX.Tag          = DSA_ATTRIBUTE.GE;
+            lblKonstitution.Tag     = txtKonstitutionAKT.Tag        = txtKonstitutionMOD.Tag        = txtKonstitutionMAX.Tag        = DSA_ATTRIBUTE.KO;
+            lblKörperkraft.Tag      = txtKörperkraftAKT.Tag         = txtKörperkraftMOD.Tag         = txtKörperkraftMAX.Tag         = DSA_ATTRIBUTE.KK;
+            lblSozialstatus.Tag     = txtSozialstatusAKT.Tag        = txtSozialstatusMOD.Tag        = txtSozialstatusMAX.Tag        = DSA_ATTRIBUTE.SO;
 
             for (int i = 0; i < HeroPageAttributAKTBoxes.Count; i++)
             {
@@ -240,27 +226,50 @@ namespace DSA_Project
         }
         public void loadHeroPageAttributMark()
         {
-            //Doppelter Aufruf != Ursprüngliches Ergebnis --->Schrot!!! ---> Wiederspricht neuer Structur von Kontroll, ZU ÜBERARBEITEN
-            controll.changeAttributMark(DSA_ATTRIBUTE.MU, lblMut, txtMutAKT, txtMutMOD, txtMutMAX);
-            controll.changeAttributMark(DSA_ATTRIBUTE.KL, lblKlugheit, txtKlugheitAKT, txtKlugheitMOD, txtKlugheitMAX);
-            controll.changeAttributMark(DSA_ATTRIBUTE.CH, lblCharisma, txtCharismaAKT, txtCharismaMOD, txtCharismaMAX);
-            controll.changeAttributMark(DSA_ATTRIBUTE.FF, lblFingerfertigkeit, txtFingerfertigkeitAKT, txtFingerfertigkeitMOD, txtFingerfertigkeitMAX);
-            controll.changeAttributMark(DSA_ATTRIBUTE.GE, lblGewandheit, txtGewandheitAKT, txtGewandheitMOD, txtGewandheitMAX);
-            controll.changeAttributMark(DSA_ATTRIBUTE.KO, lblKonstitution, txtKonstitutionAKT, txtKonstitutionMOD, txtKonstitutionMAX);
-            controll.changeAttributMark(DSA_ATTRIBUTE.KK, lblKörperkraft, txtKörperkraftAKT, txtKörperkraftMOD, txtKörperkraftMAX);
-            controll.changeAttributMark(DSA_ATTRIBUTE.SO, lblSozialstatus, txtSozialstatusAKT, txtSozialstatusMOD, txtSozialstatusMAX);
-            controll.changeAttributMark(DSA_ATTRIBUTE.IN, lblIntuition, txtIntuitionAKT, txtIntuitionMOD, txtIntuitionMAX);
+            for(int i=0; i<Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length; i++)
+            {
+                DSA_ATTRIBUTE atr = (DSA_ATTRIBUTE)i;
+                bool marked = controll.getAttributMark(atr);
+                if (marked == true)
+                {
+                    markAttribut(atr);
+                } else
+                {
+                    dismarkAttribut(atr);
+                }
+            }
+        }
+        private void markAttribut(DSA_ATTRIBUTE atr)
+        {
+            controll.setAttributMark(atr, true);
 
-            controll.changeAttributMark(DSA_ATTRIBUTE.MU, lblMut, txtMutAKT, txtMutMOD, txtMutMAX);
-            controll.changeAttributMark(DSA_ATTRIBUTE.KL, lblKlugheit, txtKlugheitAKT, txtKlugheitMOD, txtKlugheitMAX);
-            controll.changeAttributMark(DSA_ATTRIBUTE.CH, lblCharisma, txtCharismaAKT, txtCharismaMOD, txtCharismaMAX);
-            controll.changeAttributMark(DSA_ATTRIBUTE.FF, lblFingerfertigkeit, txtFingerfertigkeitAKT, txtFingerfertigkeitMOD, txtFingerfertigkeitMAX);
-            controll.changeAttributMark(DSA_ATTRIBUTE.GE, lblGewandheit, txtGewandheitAKT, txtGewandheitMOD, txtGewandheitMAX);
-            controll.changeAttributMark(DSA_ATTRIBUTE.KO, lblKonstitution, txtKonstitutionAKT, txtKonstitutionMOD, txtKonstitutionMAX);
-            controll.changeAttributMark(DSA_ATTRIBUTE.KK, lblKörperkraft, txtKörperkraftAKT, txtKörperkraftMOD, txtKörperkraftMAX);
-            controll.changeAttributMark(DSA_ATTRIBUTE.SO, lblSozialstatus, txtSozialstatusAKT, txtSozialstatusMOD, txtSozialstatusMAX);
-            controll.changeAttributMark(DSA_ATTRIBUTE.IN, lblIntuition, txtIntuitionAKT, txtIntuitionMOD, txtIntuitionMAX);
-            //Doppelter Aufruf != Ursprüngliches Ergebnis --->Schrot!!!
+            for (int i = 0; i < HeroPageAttributAKTBoxes.Count; i++)
+            {
+                if ((DSA_ATTRIBUTE)HeroPageAttributAKTBoxes[i].Tag == atr)
+                {
+                    HeroPageAttributLabels[i].ForeColor = Color.Red;
+
+                    HeroPageAttributAKTBoxes[i].BackColor = Color.Yellow;
+                    HeroPageAttributMODBoxes[i].BackColor = Color.GreenYellow;
+                    HeroPageAttributMAXBoxes[i].BackColor = Color.GreenYellow;
+                }
+            }
+        }
+        private void dismarkAttribut(DSA_ATTRIBUTE atr)
+        {
+            controll.setAttributMark(atr, false);
+
+            for (int i = 0; i < HeroPageAttributAKTBoxes.Count; i++)
+            {
+                if ((DSA_ATTRIBUTE)HeroPageAttributAKTBoxes[i].Tag == atr)
+                {
+                    HeroPageAttributLabels[i].ForeColor = Color.Black;
+
+                    HeroPageAttributAKTBoxes[i].BackColor = ManagmentForm.activeColor;
+                    HeroPageAttributMODBoxes[i].BackColor = ManagmentForm.inactiveColor;
+                    HeroPageAttributMAXBoxes[i].BackColor = ManagmentForm.inactiveColor;
+                }
+            }
         }
         private void setboxVisible(DSA_ATTRIBUTE atr, bool vis)
         {
@@ -297,8 +306,17 @@ namespace DSA_Project
         private void AttributeLabel_Click(object sender, EventArgs e)
         {
             Label lbl = (Label)sender;
-            int x = (int)(DSA_ATTRIBUTE)lbl.Tag;
-            controll.changeAttributMark((DSA_ATTRIBUTE)lbl.Tag, HeroPageAttributLabels[x], HeroPageAttributAKTBoxes[x], HeroPageAttributMODBoxes[x], HeroPageAttributMAXBoxes[x]);
+            DSA_ATTRIBUTE atr = (DSA_ATTRIBUTE)lbl.Tag;
+
+            bool marked = controll.getAttributMark(atr);
+            if (marked == false)
+            {
+                markAttribut(atr);
+            }
+            else
+            {
+                dismarkAttribut(atr);
+            }
         }
         //#########################################################################################################################################################################
         //HeroPage AdvancedValues
@@ -792,7 +810,7 @@ namespace DSA_Project
         
         //#########################################################################################################################################################################
         //TalentPage 
-        private int SUpportedTalentCOunt = 30;
+        private int SupportedTalentCount = 30;
         private List<Label> talentNameLabels;
         private List<GroupBox> talentGroupBoxes;
         private List<TextBox> talentProbeTextBoxs;
@@ -856,7 +874,7 @@ namespace DSA_Project
             talentPageComboBoxGifts.SelectedValueChanged += learingBoxComboBoxTawChanged;
             talentPageBTNlearingGift.Click += learningGift;
 
-            for(int i=0; i<SUpportedTalentCOunt; i++)
+            for(int i=0; i<SupportedTalentCount; i++)
             {
                 talentpageTaWBonusTextBoxes[i].BackColor = SystemColors.InactiveBorder;
                 talentpageTaWBonusTextBoxes[i].ReadOnly = true;
@@ -885,7 +903,7 @@ namespace DSA_Project
         }
         private void setTalentBoxeZero(int number)
         {
-            for (int i = number; i < SUpportedTalentCOunt; i++)
+            for (int i = number; i < SupportedTalentCount; i++)
             {
                 talentNameLabels[i].Text = "             ";
                 talentProbeTextBoxs[i].Text = "";
@@ -907,7 +925,7 @@ namespace DSA_Project
             int x = 0;
             Int32.TryParse(page, out x);
 
-            return (x - 1) * SUpportedTalentCOunt + (boxnumber - 1);
+            return (x - 1) * SupportedTalentCount + (boxnumber - 1);
         }
         private InterfaceTalent getTalent(int number)
         {
@@ -920,28 +938,6 @@ namespace DSA_Project
                     talent = controll.getTalent(type, number);
                 }
             }
-
-            /*
-            for (int i = 0; i < TalentPageRadioButtonsGeneralTalents.Count; i++)
-            {
-                if (TalentPageRadioButtonsGeneralTalents[i].Checked)
-                {
-                    DSA_GENERALTALENTS talenttype = (DSA_GENERALTALENTS)TalentPageRadioButtonsGeneralTalents[i].Tag;
-                    talent = controll.getTalent(talenttype, number);
-                    return talent;
-                }
-            }
-
-            for (int i = 0; i < TalentPageRadioButtonsFightingTalents.Count; i++)
-            {
-                if (TalentPageRadioButtonsFightingTalents[i].Checked)
-                {
-                    DSA_FIGHTINGTALENTS talenttype = (DSA_FIGHTINGTALENTS)TalentPageRadioButtonsFightingTalents[i].Tag;
-                    talent = controll.getTalent(talenttype, number);
-                    return talent;
-                }
-            }
-            */
             return talent;
         }
         private void btnTalentLetterPage_Click(object sender, EventArgs e)
@@ -1008,7 +1004,7 @@ namespace DSA_Project
             groupBoxAnforderungen.Visible = true;
             groupBoxAbleiten.Visible = true;
 
-            for (i = 0; i < SUpportedTalentCOunt; i++)
+            for (i = 0; i < SupportedTalentCount; i++)
             {
                 TalentGeneral talent = (TalentGeneral)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
                 if (talent == null) { break; }
@@ -1044,7 +1040,7 @@ namespace DSA_Project
             groupBoxSpezialisierung.Visible = true;
             groupBoxAbleiten.Visible = true;
 
-            for (i = 0; i < SUpportedTalentCOunt; i++)
+            for (i = 0; i < SupportedTalentCount; i++)
             {
                 int x = 0;
                 TalentFighting FightingTalent = (TalentFighting)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
@@ -1078,9 +1074,8 @@ namespace DSA_Project
 
             InterfaceTalent type = (InterfaceTalent)button.Tag;
 
-            for (i = 0; i < SUpportedTalentCOunt; i++)
+            for (i = 0; i < SupportedTalentCount; i++)
             {
-                int x = 0;
                 GiftTalent giftTalent = (GiftTalent)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
                 if (giftTalent == null) { break; }
                 talentStandardBoxinput(giftTalent, i);
@@ -1243,7 +1238,7 @@ namespace DSA_Project
         }
         private void refreshLanguagePage()
         {
-            for (int i = 0; i < SUpportedTalentCOunt; i++)
+            for (int i = 0; i < SupportedTalentCount; i++)
             {
                 controll.displayLanguageRow((String)comboBoxLanguagePageSelection.SelectedValue, i,
                     LanguagePageLanguageNameTextBoxes[i], LanguagePageLanguageComplexTextBoxes[i], LanguagePageLanguageTaWTextBoxes[i], LanguagePageLanguageProbeTextBoxes[i], LanguagePageLanguageMotherTextBoxes[i],
@@ -1284,7 +1279,7 @@ namespace DSA_Project
             int page = 0;
             Int32.TryParse(txtRewardPage.Text, out page);
 
-            int number = (SUpportedTalentCOunt * page);
+            int number = (SupportedTalentCount * page);
 
             for (int i = 0; i < supportedRewardBoxes; i++)
             {
@@ -1311,7 +1306,6 @@ namespace DSA_Project
             rewadDescriptionBoxes[boxNumber].Text = feature.getDescription();
 
             this.refreshHeroPage();
-
         }
         private void setRewardPageReward_DiscriptionBox(Object sender, EventArgs e)
         {
@@ -1323,7 +1317,7 @@ namespace DSA_Project
             int page = 0;
             Int32.TryParse(txtRewardPage.Text, out page);
 
-            number = (SUpportedTalentCOunt * page) + BoxNumber;
+            number = (SupportedTalentCount * page) + BoxNumber;
 
             CreateReward(number, BoxNumber, DSA_FEATURES.VORTEIL);
 
@@ -1340,6 +1334,11 @@ namespace DSA_Project
 
             controll.setTaw(box.Text, name.Text);
             refreshLanguagePage();
+        }
+
+        private void TAWChange(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

@@ -165,29 +165,14 @@ namespace DSA_Project
         {
             return Charakter.getSummeAttributeMAX();
         }
-        public void changeAttributMark(DSA_ATTRIBUTE att, Label lblAttribut, TextBox txtAKT, TextBox txtMOD, TextBox txtMax)
+
+        public bool getAttributMark(DSA_ATTRIBUTE atr)
         {
-            bool x = !Charakter.getMarkedAttribut(att);
-            Charakter.setMarkedAttribut(att, x);
-
-            if (!x)
-            {
-                lblAttribut.ForeColor = Color.Black;
-                lblAttribut.Font = new Font(lblAttribut.Font, FontStyle.Regular);
-
-                txtAKT.BackColor = ManagmentForm.activeColor;
-                txtMOD.BackColor = ManagmentForm.inactiveColor;
-                txtMax.BackColor = ManagmentForm.inactiveColor;
-            }
-            else
-            {
-                lblAttribut.ForeColor = Color.Red;
-
-                txtAKT.BackColor = Color.Yellow;
-                txtMOD.BackColor = Color.GreenYellow;
-                txtMax.BackColor = Color.GreenYellow;
-            }
-            Charakter.setMarkedAttribut(att, x);
+            return Charakter.getMarkedAttribut(atr);    
+        }
+        public void setAttributMark(DSA_ATTRIBUTE atr, bool a)
+        {
+            Charakter.setMarkedAttribut(atr, a);
         }
         //###################################################################################################################################
         //Einrichtung der BasicValues
