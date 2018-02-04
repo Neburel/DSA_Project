@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    abstract public class notFighting : Talent<DSA_ATTRIBUTE>
+    abstract public class TalentnotFighting : Talent<DSA_ATTRIBUTE>
     {
-        public notFighting(String name, List<DSA_ATTRIBUTE> probe, String be, List<TalentDeviate>diverates, List<TalentRequirement>requirements) : base(name, probe, be, diverates, requirements){}
+        public TalentnotFighting(String name, List<DSA_ATTRIBUTE> probe, String be, List<TalentDeviate>diverates, List<TalentRequirement>requirements) : base(name, probe, be, diverates, requirements){}
 
         public override String getProbeStringOne()
         {

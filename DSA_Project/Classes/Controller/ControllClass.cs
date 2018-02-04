@@ -317,7 +317,7 @@ namespace DSA_Project
 
             return stringList;
         }
-        private LanguageFamily getFamilybyName(String name)
+        public LanguageFamily getFamilybyName(String name)
         {
             List<LanguageFamily> list = controllLanguageFamily.getFamilyList();
             for(int i=0; i<list.Count; i++)
@@ -328,48 +328,6 @@ namespace DSA_Project
                 }
             }
             throw new ArgumentOutOfRangeException("The Name:" + name + " is no Possible choise");
-        }
-        public void displayLanguageRow(String FamilyName, int number, TextBox lName, TextBox lbe, TextBox lTaW, TextBox lProbeString, TextBox lmark, TextBox fname, TextBox fbe, TextBox fTaW, TextBox fProbeString)
-        {
-            LanguageFamily family = getFamilybyName(FamilyName);
-            LanguageTalent lt = new LanguageTalent("", new List<string>());
-            FontTalent ft = new FontTalent("", new List<string>());
-            
-
-            if (family.Count() > number)
-            {
-                lt = family.getLanguageTalent(number);
-                ft = family.GetFontTalent(number);
-            }
-            
-            if(0 == String.Compare("", lt.getName()))
-            {
-                lName.Text = "";
-                lbe.Text = "";
-                lTaW.Text = "";
-                lProbeString.Text = "";
-                lmark.Text = "";
-            } else
-            {
-                lName.Text = lt.getName();
-                lbe.Text = lt.getBe();
-                lTaW.Text = lt.getTaW();
-                lProbeString.Text = lt.getProbeStringOne();
-                lmark.Text = lt.getMotherMark();
-            }
-            if(0 == String.Compare("", ft.getName()))
-            {
-                fname.Text = "";
-                fbe.Text = "";
-                fTaW.Text = "";
-                fProbeString.Text = "";
-            } else
-            {
-                fname.Text = ft.getName();
-                fbe.Text = ft.getBe();
-                fTaW.Text = ft.getTaW();
-                fProbeString.Text = ft.getProbeStringOne();
-            }
         }
         public void setMotherMark(String mark, String TalentName)
         {

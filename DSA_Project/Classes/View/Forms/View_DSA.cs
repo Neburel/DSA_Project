@@ -29,7 +29,7 @@ namespace DSA_Project
             
             load();
             refreshHeroPage();
-            refreshTalentPage();
+            TalentPage_refresh();
         }
         //#########################################################################################################################################################################
         //Tools
@@ -41,14 +41,14 @@ namespace DSA_Project
             setUPHeroPageAdvanced();
             setUPHeroPageMoney();
             setUPHeroPageEnergien();
-            setUPHeroPageFeatureLists();
+            HeroPage_setUPFeatureLists();
 
             controll = (ControllClass)new ControllClassDSA(this);
 
             setUPTalentBox();
-            setUPTalentPage();
+            TalentPage_setUP();
             setUPRewardPageRewards();
-            setUPLanguagePage();
+            LanguagePage_setUP();
             
             DoubleBuffered = true;
             this.DoubleBuffered = true;
@@ -65,10 +65,10 @@ namespace DSA_Project
             loadHeroPageBasicValues();
             loadHeroPageAttributMark();
             loadHeroPageMoney();
-            loadHeroPageFeature();
+            HeroPage_loadFeature();
             loadRewardPageRewards();
 
-            refreshTalentPage();
+            TalentPage_refresh();
             refreshHeroPageAdvancedValues();
         }
         public void refreshHeroPage()
@@ -346,7 +346,7 @@ namespace DSA_Project
                 HeroPageAdvancedMAXBoxes[i].TextChanged += new EventHandler(txtAdvancedValueMAX_TextChanged);
             }
         }
-        public void refreshHeroPageAdvancedValues()
+        private void refreshHeroPageAdvancedValues()
         {
             txtAttackeBaisAKT.Text = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.ATTACKE_BASIS).ToString();
             txtParadeBasisAKT.Text = controll.AdvancedValueAKT(DSA_ADVANCEDVALUES.PARADE_BASIS).ToString();
@@ -429,7 +429,7 @@ namespace DSA_Project
                 HeroPageEnergienERGBoxes[i].TextChanged += new EventHandler(txtEnergienERG_TextChanged);
             }
         }
-        public void refreshHeroPageEnergie()
+        private void refreshHeroPageEnergie()
         {
             txtLebensenergieVOR.Text = controll.EnergieVOR(DSA_ENERGIEN.LEBENSENERGIE).ToString();
             txtAusdauerVOR.Text = controll.EnergieVOR(DSA_ENERGIEN.AUSDAUER).ToString();
@@ -714,51 +714,51 @@ namespace DSA_Project
         }
         //#########################################################################################################################################################################
         //HeroPage Feature
-        private int HeroPageSupportedAdvantagesDisadvantagesBoxes = 15;
-        private List<TextBox> featureAdvantagesNameBox;
-        private List<TextBox> featureDisdvantagesNameBox;
-        private List<TextBox> featureAdvantagesDescriptionBox;
-        private List<TextBox> featureDisAdvantagesDescriptionBox;
-        private List<TextBox> featureAdvantagesGPBox;
-        private List<TextBox> featureDisAdvantagesGPBox;
-        private List<TextBox> featureAdvantagesValueBox;
-        private List<TextBox> featureDisAdvantagesValueBox;
-        private void setUPHeroPageFeatureLists()
+        private int HeroPage_SupportedAdvantagesDisadvantagesBoxes = 15;
+        private List<TextBox> HeroPage_featureAdvantagesNameBox;
+        private List<TextBox> HeroPage_featureDisdvantagesNameBox;
+        private List<TextBox> HeroPage_featureAdvantagesDescriptionBox;
+        private List<TextBox> HeroPage_featureDisAdvantagesDescriptionBox;
+        private List<TextBox> HeroPage_featureAdvantagesGPBox;
+        private List<TextBox> HeroPage_featureDisAdvantagesGPBox;
+        private List<TextBox> HeroPage_featureAdvantagesValueBox;
+        private List<TextBox> HeroPage_featureDisAdvantagesValueBox;
+        private void HeroPage_setUPFeatureLists()
         {
-            featureAdvantagesNameBox = new List<TextBox> { txtVorteil1Name, txtVorteil2Name, txtVorteil3Name, txtVorteil4Name, txtVorteil5Name, txtVorteil6Name, txtVorteil7Name, txtVorteil8Name, txtVorteil9Name, txtVorteil10Name, txtVorteil11Name, txtVorteil12Name, txtVorteil13Name, txtVorteil14Name, txtVorteil15Name };
-            featureDisdvantagesNameBox = new List<TextBox> { txtNachteil1Name, txtNachteil2Name, txtNachteil3Name, txtNachteil4Name, txtNachteil5Name, txtNachteil6Name, txtNachteil7Name, txtNachteil8Name, txtNachteil9Name, txtNachteil10Name, txtNachteil11Name, txtNachteil12Name, txtNachteil13Name, txtNachteil14Name, txtNachteil15Name };
-            featureAdvantagesDescriptionBox = new List<TextBox> { txtVorteil1Beschreibung, txtVorteil2Beschreibung, txtVorteil3Beschreibung, txtVorteil4Beschreibung, txtVorteil5Beschreibung, txtVorteil6Beschreibung, txtVorteil7Beschreibung, txtVorteil8Beschreibung, txtVorteil9Beschreibung, txtVorteil10Beschreibung, txtVorteil11Beschreibung, txtVorteil12Beschreibung, txtVorteil13Beschreibung, txtVorteil14Beschreibung, txtVorteil15Beschreibung };
-            featureDisAdvantagesDescriptionBox = new List<TextBox> { txtNachteil1Beschreibung, txtNachteil2Beschreibung, txtNachteil3Beschreibung, txtNachteil4Beschreibung, txtNachteil5Beschreibung, txtNachteil6Beschreibung, txtNachteil7Beschreibung, txtNachteil8Beschreibung, txtNachteil9Beschreibung, txtNachteil10Beschreibung, txtNachteil11Beschreibung, txtNachteil12Beschreibung, txtNachteil13Beschreibung, txtNachteil14Beschreibung, txtNachteil15Beschreibung };
-            featureAdvantagesGPBox = new List<TextBox> { txtVorteil1GP, txtVorteil2GP, txtVorteil3GP, txtVorteil4GP, txtVorteil5GP, txtVorteil6GP, txtVorteil7GP, txtVorteil8GP, txtVorteil9GP, txtVorteil10GP, txtVorteil11GP, txtVorteil12GP, txtVorteil13GP, txtVorteil14GP, txtVorteil15GP };
-            featureDisAdvantagesGPBox = new List<TextBox> { txtNachteil1GP, txtNachteil2GP, txtNachteil3GP, txtNachteil4GP, txtNachteil5GP, txtNachteil6GP, txtNachteil7GP, txtNachteil8GP, txtNachteil9GP, txtNachteil10GP, txtNachteil11GP, txtNachteil12GP, txtNachteil13GP, txtNachteil14GP, txtNachteil15GP };
-            featureAdvantagesValueBox = new List<TextBox> { txtVorteil1Wert, txtVorteil2Wert, txtVorteil3Wert, txtVorteil4Wert, txtVorteil5Wert, txtVorteil6Wert, txtVorteil7Wert, txtVorteil8Wert, txtVorteil9Wert, txtVorteil10Wert, txtVorteil11Wert, txtVorteil12Wert, txtVorteil13Wert, txtVorteil14Wert, txtVorteil15Wert };
-            featureDisAdvantagesValueBox = new List<TextBox> { txtNachteil1Wert, txtNachteil2Wert, txtNachteil3Wert, txtNachteil4Wert, txtNachteil5Wert, txtNachteil6Wert, txtNachteil7Wert, txtNachteil8Wert, txtNachteil9Wert, txtNachteil10Wert, txtNachteil11Wert, txtNachteil12Wert, txtNachteil13Wert, txtNachteil14Wert, txtNachteil15Wert };
+            HeroPage_featureAdvantagesNameBox = new List<TextBox> { txtVorteil1Name, txtVorteil2Name, txtVorteil3Name, txtVorteil4Name, txtVorteil5Name, txtVorteil6Name, txtVorteil7Name, txtVorteil8Name, txtVorteil9Name, txtVorteil10Name, txtVorteil11Name, txtVorteil12Name, txtVorteil13Name, txtVorteil14Name, txtVorteil15Name };
+            HeroPage_featureDisdvantagesNameBox = new List<TextBox> { txtNachteil1Name, txtNachteil2Name, txtNachteil3Name, txtNachteil4Name, txtNachteil5Name, txtNachteil6Name, txtNachteil7Name, txtNachteil8Name, txtNachteil9Name, txtNachteil10Name, txtNachteil11Name, txtNachteil12Name, txtNachteil13Name, txtNachteil14Name, txtNachteil15Name };
+            HeroPage_featureAdvantagesDescriptionBox = new List<TextBox> { txtVorteil1Beschreibung, txtVorteil2Beschreibung, txtVorteil3Beschreibung, txtVorteil4Beschreibung, txtVorteil5Beschreibung, txtVorteil6Beschreibung, txtVorteil7Beschreibung, txtVorteil8Beschreibung, txtVorteil9Beschreibung, txtVorteil10Beschreibung, txtVorteil11Beschreibung, txtVorteil12Beschreibung, txtVorteil13Beschreibung, txtVorteil14Beschreibung, txtVorteil15Beschreibung };
+            HeroPage_featureDisAdvantagesDescriptionBox = new List<TextBox> { txtNachteil1Beschreibung, txtNachteil2Beschreibung, txtNachteil3Beschreibung, txtNachteil4Beschreibung, txtNachteil5Beschreibung, txtNachteil6Beschreibung, txtNachteil7Beschreibung, txtNachteil8Beschreibung, txtNachteil9Beschreibung, txtNachteil10Beschreibung, txtNachteil11Beschreibung, txtNachteil12Beschreibung, txtNachteil13Beschreibung, txtNachteil14Beschreibung, txtNachteil15Beschreibung };
+            HeroPage_featureAdvantagesGPBox = new List<TextBox> { txtVorteil1GP, txtVorteil2GP, txtVorteil3GP, txtVorteil4GP, txtVorteil5GP, txtVorteil6GP, txtVorteil7GP, txtVorteil8GP, txtVorteil9GP, txtVorteil10GP, txtVorteil11GP, txtVorteil12GP, txtVorteil13GP, txtVorteil14GP, txtVorteil15GP };
+            HeroPage_featureDisAdvantagesGPBox = new List<TextBox> { txtNachteil1GP, txtNachteil2GP, txtNachteil3GP, txtNachteil4GP, txtNachteil5GP, txtNachteil6GP, txtNachteil7GP, txtNachteil8GP, txtNachteil9GP, txtNachteil10GP, txtNachteil11GP, txtNachteil12GP, txtNachteil13GP, txtNachteil14GP, txtNachteil15GP };
+            HeroPage_featureAdvantagesValueBox = new List<TextBox> { txtVorteil1Wert, txtVorteil2Wert, txtVorteil3Wert, txtVorteil4Wert, txtVorteil5Wert, txtVorteil6Wert, txtVorteil7Wert, txtVorteil8Wert, txtVorteil9Wert, txtVorteil10Wert, txtVorteil11Wert, txtVorteil12Wert, txtVorteil13Wert, txtVorteil14Wert, txtVorteil15Wert };
+            HeroPage_featureDisAdvantagesValueBox = new List<TextBox> { txtNachteil1Wert, txtNachteil2Wert, txtNachteil3Wert, txtNachteil4Wert, txtNachteil5Wert, txtNachteil6Wert, txtNachteil7Wert, txtNachteil8Wert, txtNachteil9Wert, txtNachteil10Wert, txtNachteil11Wert, txtNachteil12Wert, txtNachteil13Wert, txtNachteil14Wert, txtNachteil15Wert };
 
-            for (int i = 0; i < featureAdvantagesNameBox.Count; i++)
+            for (int i = 0; i < HeroPage_featureAdvantagesNameBox.Count; i++)
             {
-                featureAdvantagesNameBox[i].Tag = featureAdvantagesDescriptionBox[i].Tag = featureAdvantagesGPBox[i].Tag = featureAdvantagesValueBox[i].Tag = new HeroPageFeatureTag(DSA_FEATURES.VORTEIL, i + 1);
-                featureDisdvantagesNameBox[i].Tag = featureDisAdvantagesDescriptionBox[i].Tag = featureDisAdvantagesGPBox[i].Tag = featureDisAdvantagesValueBox[i].Tag = new HeroPageFeatureTag(DSA_FEATURES.NACHTEIL, i + 1);
+                HeroPage_featureAdvantagesNameBox[i].Tag = HeroPage_featureAdvantagesDescriptionBox[i].Tag = HeroPage_featureAdvantagesGPBox[i].Tag = HeroPage_featureAdvantagesValueBox[i].Tag = new HeroPageFeatureTag(DSA_FEATURES.VORTEIL, i + 1);
+                HeroPage_featureDisdvantagesNameBox[i].Tag = HeroPage_featureDisAdvantagesDescriptionBox[i].Tag = HeroPage_featureDisAdvantagesGPBox[i].Tag = HeroPage_featureDisAdvantagesValueBox[i].Tag = new HeroPageFeatureTag(DSA_FEATURES.NACHTEIL, i + 1);
 
-                featureAdvantagesNameBox[i].Click += new EventHandler(txtFeatureBox_Clicked);
-                featureAdvantagesDescriptionBox[i].Click += new EventHandler(txtFeatureBox_Clicked);
-                featureAdvantagesGPBox[i].Click += new EventHandler(txtFeatureBox_Clicked);
-                featureAdvantagesValueBox[i].Click += new EventHandler(txtFeatureBox_Clicked);
+                HeroPage_featureAdvantagesNameBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
+                HeroPage_featureAdvantagesDescriptionBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
+                HeroPage_featureAdvantagesGPBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
+                HeroPage_featureAdvantagesValueBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
 
-                featureDisdvantagesNameBox[i].Click += new EventHandler(txtFeatureBox_Clicked);
-                featureDisAdvantagesDescriptionBox[i].Click += new EventHandler(txtFeatureBox_Clicked);
-                featureDisAdvantagesGPBox[i].Click += new EventHandler(txtFeatureBox_Clicked);
-                featureDisAdvantagesValueBox[i].Click += new EventHandler(txtFeatureBox_Clicked);
+                HeroPage_featureDisdvantagesNameBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
+                HeroPage_featureDisAdvantagesDescriptionBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
+                HeroPage_featureDisAdvantagesGPBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
+                HeroPage_featureDisAdvantagesValueBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
             }
         }
-        private void loadHeroPageFeature()
+        private void HeroPage_loadFeature()
         {
-            for (int i = 0; i < HeroPageSupportedAdvantagesDisadvantagesBoxes; i++)
+            for (int i = 0; i < HeroPage_SupportedAdvantagesDisadvantagesBoxes; i++)
             {
-                loadHeroPageFeature(featureAdvantagesNameBox[i], featureAdvantagesDescriptionBox[i], featureAdvantagesValueBox[i], featureAdvantagesGPBox[i], DSA_FEATURES.VORTEIL, i + 1);
-                loadHeroPageFeature(featureDisdvantagesNameBox[i], featureDisAdvantagesDescriptionBox[i], featureDisAdvantagesValueBox[i], featureDisAdvantagesGPBox[i], DSA_FEATURES.NACHTEIL, i + 1);
+                HeroPage_loadFeature(HeroPage_featureAdvantagesNameBox[i], HeroPage_featureAdvantagesDescriptionBox[i], HeroPage_featureAdvantagesValueBox[i], HeroPage_featureAdvantagesGPBox[i], DSA_FEATURES.VORTEIL, i + 1);
+                HeroPage_loadFeature(HeroPage_featureDisdvantagesNameBox[i], HeroPage_featureDisAdvantagesDescriptionBox[i], HeroPage_featureDisAdvantagesValueBox[i], HeroPage_featureDisAdvantagesGPBox[i], DSA_FEATURES.NACHTEIL, i + 1);
             }
         }
-        private void loadHeroPageFeature(TextBox name, TextBox description, TextBox value, TextBox gp, DSA_FEATURES type, int number)
+        private void HeroPage_loadFeature(TextBox name, TextBox description, TextBox value, TextBox gp, DSA_FEATURES type, int number)
         {
             Feature feature = controll.FeatureExisting(number, type);
 
@@ -776,14 +776,14 @@ namespace DSA_Project
                 gp.Text = feature.getGP();
             }
         }
-        private void txtFeatureBox_Clicked(object sender, EventArgs e)
+        private void HeroPage_txtFeatureBox_Clicked(object sender, EventArgs e)
         {
             TextBox box = (TextBox)sender;
             HeroPageFeatureTag s = (HeroPageFeatureTag)box.Tag;
 
-            CreateFeature(s.number, s.type);
+            HeroPage_CreateFeature(s.number, s.type);
         }
-        private void CreateFeature(int number, DSA_FEATURES type)
+        private void HeroPage_CreateFeature(int number, DSA_FEATURES type)
         {
             Feature feature = controll.Feature(number, type);
             number = number - 1;        //AUsgleich Nummerierung Echt / Programm    
@@ -793,62 +793,56 @@ namespace DSA_Project
             switch (type)
             {
                 case DSA_FEATURES.VORTEIL:
-                    featureAdvantagesNameBox[number].Text = feature.getName();
-                    featureAdvantagesDescriptionBox[number].Text = feature.getDescription();
-                    featureAdvantagesGPBox[number].Text = feature.getGP();
-                    featureAdvantagesValueBox[number].Text = feature.getValue();
+                    HeroPage_featureAdvantagesNameBox[number].Text = feature.getName();
+                    HeroPage_featureAdvantagesDescriptionBox[number].Text = feature.getDescription();
+                    HeroPage_featureAdvantagesGPBox[number].Text = feature.getGP();
+                    HeroPage_featureAdvantagesValueBox[number].Text = feature.getValue();
                     break;
                 case DSA_FEATURES.NACHTEIL:
-                    featureDisdvantagesNameBox[number].Text = feature.getName();
-                    featureDisAdvantagesDescriptionBox[number].Text = feature.getDescription();
-                    featureDisAdvantagesGPBox[number].Text = feature.getGP();
-                    featureDisAdvantagesValueBox[number].Text = feature.getValue();
+                    HeroPage_featureDisdvantagesNameBox[number].Text = feature.getName();
+                    HeroPage_featureDisAdvantagesDescriptionBox[number].Text = feature.getDescription();
+                    HeroPage_featureDisAdvantagesGPBox[number].Text = feature.getGP();
+                    HeroPage_featureDisAdvantagesValueBox[number].Text = feature.getValue();
                     break;
             }
             this.refreshHeroPage();
         }
-        
         //#########################################################################################################################################################################
         //TalentPage 
-        private int SupportedTalentCount = 30;
-        private List<Label> talentNameLabels;
-        private List<GroupBox> talentGroupBoxes;
-        private List<TextBox> talentProbeTextBoxs;
-        private List<TextBox> talentWürfeTextBoxs;
-        private List<TextBox> talentTaWTextBoxes;
-        private List<TextBox> talentpageTaWBonusTextBoxes;
-        private List<TextBox> talentBeTextBoxes;
-        private List<TextBox> talentBilligerTextBoxes;
-        private List<TextBox> talentSpezialisierungTextBoxes;
-        private List<TextBox> talentAnforderungsTextBoxes;
-        private List<TextBox> talentAbleitungTextBoxes;
-        private List<TextBox> talentATTextBoxes;
-        private List<TextBox> talentPATextBoxes;
-        private List<RadioButton> TalentPageRadioButtons;
-        private List<RadioButton> TalentPageRadioButtonsGeneralTalents;
-        private List<RadioButton> TalentPageRadioButtonsFightingTalents;
-        private void setUPTalentPage()
+        private int TalentPage_CountBoxes = 30;
+        private List<Label> TalentPage_NameLabels;
+        private List<TextBox> TalentPage_ProbeTextBoxs;
+        private List<TextBox> TalentPage_WürfeTextBoxs;
+        private List<TextBox> TalentPage_TaWTextBoxes;
+        private List<TextBox> TalentPage_TaWBonusTextBoxes;
+        private List<TextBox> TalentPage_BeTextBoxes;
+        private List<TextBox> TalentPage_BilligerTextBoxes;
+        private List<TextBox> TalentPage_SpezialisierungTextBoxes;
+        private List<TextBox> TalentPage_AnforderungsTextBoxes;
+        private List<TextBox> TalentPage_AbleitungTextBoxes;
+        private List<TextBox> TalentPage_ATTextBoxes;
+        private List<TextBox> TalentPage_PATextBoxes;
+        private List<GroupBox> TalentPage_GroupBoxes;
+        private List<RadioButton> TalentPage_RadioButtons;
+        private void TalentPage_setUP()
         {
             txtTalentLetterCurrentPage.Text = "1";
 
-            talentNameLabels = new List<Label> { PTName1, PTName2, PTName3, PTName4, PTName5, PTName6, PTName7, PTName8, PTName9, PTName10, PTName11, PTName12, PTName13, PTName14, PTName15, PTName16, PTName17, PTName18, PTName19, PTName20, PTName21, PTName22, PTName23, PTName24, PTName25, PTName26, PTName27, PTName28, PTName29, PTName30 };
-            talentProbeTextBoxs = new List<TextBox> { PTProbe1, PTProbe2, PTProbe3, PTProbe4, PTProbe5, PTProbe6, PTProbe7, PTProbe8, PTProbe9, PTProbe10, PTProbe11, PTProbe12, PTProbe13, PTProbe14, PTProbe15, PTProbe16, PTProbe17, PTProbe18, PTProbe19, PTProbe20, PTProbe21, PTProbe22, PTProbe23, PTProbe24, PTProbe25, PTProbe26, PTProbe27, PTProbe28, PTProbe29, PTProbe30 };
-            talentWürfeTextBoxs = new List<TextBox> { PTWürfe1, PTWürfe2, PTWürfe3, PTWürfe4, PTWürfe5, PTWürfe6, PTWürfe7, PTWürfe8, PTWürfe9, PTWürfe10, PTWürfe11, PTWürfe12, PTWürfe13, PTWürfe14, PTWürfe15, PTWürfe16, PTWürfe17, PTWürfe18, PTWürfe19, PTWürfe20, PTWürfe21, PTWürfe22, PTWürfe23, PTWürfe24, PTWürfe25, PTWürfe26, PTWürfe27, PTWürfe28, PTWürfe29, PTWürfe30 };
-            talentTaWTextBoxes = new List<TextBox> { PTTaw1, PTTaw2, PTTaw3, PTTaw4, PTTaw5, PTTaw6, PTTaw7, PTTaw8, PTTaw9, PTTaw10, PTTaw11, PTTaw12, PTTaw13, PTTaw14, PTTaw15, PTTaw16, PTTaw17, PTTaw18, PTTaw19, PTTaw20, PTTaw21, PTTaw22, PTTaw23, PTTaw24, PTTaw25, PTTaw26, PTTaw27, PTTaw28, PTTaw29, PTTaw30 };
-            talentpageTaWBonusTextBoxes = new List<TextBox> { talentpageTaWBonus1, talentpageTaWBonus2, talentpageTaWBonus3, talentpageTaWBonus4, talentpageTaWBonus5, talentpageTaWBonus6, talentpageTaWBonus7, talentpageTaWBonus8, talentpageTaWBonus9, talentpageTaWBonus10, talentpageTaWBonus11, talentpageTaWBonus12, talentpageTaWBonus13, talentpageTaWBonus14, talentpageTaWBonus15, talentpageTaWBonus16, talentpageTaWBonus17, talentpageTaWBonus18, talentpageTaWBonus19, talentpageTaWBonus20, talentpageTaWBonus21, talentpageTaWBonus22, talentpageTaWBonus23, talentpageTaWBonus24, talentpageTaWBonus25, talentpageTaWBonus26, talentpageTaWBonus27, talentpageTaWBonus28, talentpageTaWBonus29, talentpageTaWBonus30 };
-            talentBeTextBoxes = new List<TextBox> { PTBe1, PTBe2, PTBe3, PTBe4, PTBe5, PTBe6, PTBe7, PTBe8, PTBe9, PTBe10, PTBe11, PTBe12, PTBe13, PTBe14, PTBe15, PTBe16, PTBe17, PTBe18, PTBe19, PTBe20, PTBe21, PTBe22, PTBe23, PTBe24, PTBe25, PTBe26, PTBe27, PTBe28, PTBe29, PTBe30 };
-            talentBilligerTextBoxes = new List<TextBox> { PTBilliger1, PTBilliger2, PTBilliger3, PTBilliger4, PTBilliger5, PTBilliger6, PTBilliger7, PTBilliger8, PTBilliger9, PTBilliger10, PTBilliger11, PTBilliger12, PTBilliger13, PTBilliger14, PTBilliger15, PTBilliger16, PTBilliger17, PTBilliger18, PTBilliger19, PTBilliger20, PTBilliger21, PTBilliger22, PTBilliger23, PTBilliger24, PTBilliger25, PTBilliger26, PTBilliger27, PTBilliger28, PTBilliger29, PTBilliger30 };
-            talentSpezialisierungTextBoxes = new List<TextBox> { PTSpezialisierung1, PTSpezialisierung2, PTSpezialisierung3, PTSpezialisierung4, PTSpezialisierung5, PTSpezialisierung6, PTSpezialisierung7, PTSpezialisierung8, PTSpezialisierung9, PTSpezialisierung10, PTSpezialisierung11, PTSpezialisierung12, PTSpezialisierung13, PTSpezialisierung14, PTSpezialisierung15, PTSpezialisierung16, PTSpezialisierung17, PTSpezialisierung18, PTSpezialisierung19, PTSpezialisierung20, PTSpezialisierung21, PTSpezialisierung22, PTSpezialisierung23, PTSpezialisierung24, PTSpezialisierung25, PTSpezialisierung26, PTSpezialisierung27, PTSpezialisierung28, PTSpezialisierung29, PTSpezialisierung30 };
-            talentAnforderungsTextBoxes = new List<TextBox> { PTAnforderungen1, PTAnforderungen2, PTAnforderungen3, PTAnforderungen4, PTAnforderungen5, PTAnforderungen6, PTAnforderungen7, PTAnforderungen8, PTAnforderungen9, PTAnforderungen10, PTAnforderungen11, PTAnforderungen12, PTAnforderungen13, PTAnforderungen14, PTAnforderungen15, PTAnforderungen16, PTAnforderungen17, PTAnforderungen18, PTAnforderungen19, PTAnforderungen20, PTAnforderungen21, PTAnforderungen22, PTAnforderungen23, PTAnforderungen24, PTAnforderungen25, PTAnforderungen26, PTAnforderungen27, PTAnforderungen28, PTAnforderungen29, PTAnforderungen30 };
-            talentAbleitungTextBoxes = new List<TextBox> { PTAbleiten1, PTAbleiten2, PTAbleiten3, PTAbleiten4, PTAbleiten5, PTAbleiten6, PTAbleiten7, PTAbleiten8, PTAbleiten9, PTAbleiten10, PTAbleiten11, PTAbleiten12, PTAbleiten13, PTAbleiten14, PTAbleiten15, PTAbleiten16, PTAbleiten17, PTAbleiten18, PTAbleiten19, PTAbleiten20, PTAbleiten21, PTAbleiten22, PTAbleiten23, PTAbleiten24, PTAbleiten25, PTAbleiten26, PTAbleiten27, PTAbleiten28, PTAbleiten29, PTAbleiten30 };
-            talentATTextBoxes = new List<TextBox> { PTAT1, PTAT2, PTAT3, PTAT4, PTAT5, PTAT6, PTAT7, PTAT8, PTAT9, PTAT10, PTAT11, PTAT12, PTAT13, PTAT14, PTAT15, PTAT16, PTAT17, PTAT18, PTAT19, PTAT20, PTAT21, PTAT22, PTAT23, PTAT24, PTAT25, PTAT26, PTAT27, PTAT28, PTAT29, PTAT30 };
-            talentPATextBoxes = new List<TextBox> { PTPA1, PTPA2, PTPA3, PTPA4, PTPA5, PTPA6, PTPA7, PTPA8, PTPA9, PTPA10, PTPA11, PTPA12, PTPA13, PTPA14, PTPA15, PTPA16, PTPA17, PTPA18, PTPA19, PTPA20, PTPA21, PTPA22, PTPA23, PTPA24, PTPA25, PTPA26, PTPA27, PTPA28, PTPA29, PTPA30 };
-            talentGroupBoxes = new List<GroupBox> { groupBoxTalentName, groupBoxProbe, groupBoxTaW, groupBoxAnforderungen, groupBoxAbleiten, groupBoxBe, groupBoxKampf, groupBoxSpezialisierung, groupBoxBilliger };
+            TalentPage_NameLabels = new List<Label> { PTName1, PTName2, PTName3, PTName4, PTName5, PTName6, PTName7, PTName8, PTName9, PTName10, PTName11, PTName12, PTName13, PTName14, PTName15, PTName16, PTName17, PTName18, PTName19, PTName20, PTName21, PTName22, PTName23, PTName24, PTName25, PTName26, PTName27, PTName28, PTName29, PTName30 };
+            TalentPage_ProbeTextBoxs = new List<TextBox> { PTProbe1, PTProbe2, PTProbe3, PTProbe4, PTProbe5, PTProbe6, PTProbe7, PTProbe8, PTProbe9, PTProbe10, PTProbe11, PTProbe12, PTProbe13, PTProbe14, PTProbe15, PTProbe16, PTProbe17, PTProbe18, PTProbe19, PTProbe20, PTProbe21, PTProbe22, PTProbe23, PTProbe24, PTProbe25, PTProbe26, PTProbe27, PTProbe28, PTProbe29, PTProbe30 };
+            TalentPage_WürfeTextBoxs = new List<TextBox> { PTWürfe1, PTWürfe2, PTWürfe3, PTWürfe4, PTWürfe5, PTWürfe6, PTWürfe7, PTWürfe8, PTWürfe9, PTWürfe10, PTWürfe11, PTWürfe12, PTWürfe13, PTWürfe14, PTWürfe15, PTWürfe16, PTWürfe17, PTWürfe18, PTWürfe19, PTWürfe20, PTWürfe21, PTWürfe22, PTWürfe23, PTWürfe24, PTWürfe25, PTWürfe26, PTWürfe27, PTWürfe28, PTWürfe29, PTWürfe30 };
+            TalentPage_TaWTextBoxes = new List<TextBox> { PTTaw1, PTTaw2, PTTaw3, PTTaw4, PTTaw5, PTTaw6, PTTaw7, PTTaw8, PTTaw9, PTTaw10, PTTaw11, PTTaw12, PTTaw13, PTTaw14, PTTaw15, PTTaw16, PTTaw17, PTTaw18, PTTaw19, PTTaw20, PTTaw21, PTTaw22, PTTaw23, PTTaw24, PTTaw25, PTTaw26, PTTaw27, PTTaw28, PTTaw29, PTTaw30 };
+            TalentPage_TaWBonusTextBoxes = new List<TextBox> { talentpageTaWBonus1, talentpageTaWBonus2, talentpageTaWBonus3, talentpageTaWBonus4, talentpageTaWBonus5, talentpageTaWBonus6, talentpageTaWBonus7, talentpageTaWBonus8, talentpageTaWBonus9, talentpageTaWBonus10, talentpageTaWBonus11, talentpageTaWBonus12, talentpageTaWBonus13, talentpageTaWBonus14, talentpageTaWBonus15, talentpageTaWBonus16, talentpageTaWBonus17, talentpageTaWBonus18, talentpageTaWBonus19, talentpageTaWBonus20, talentpageTaWBonus21, talentpageTaWBonus22, talentpageTaWBonus23, talentpageTaWBonus24, talentpageTaWBonus25, talentpageTaWBonus26, talentpageTaWBonus27, talentpageTaWBonus28, talentpageTaWBonus29, talentpageTaWBonus30 };
+            TalentPage_BeTextBoxes = new List<TextBox> { PTBe1, PTBe2, PTBe3, PTBe4, PTBe5, PTBe6, PTBe7, PTBe8, PTBe9, PTBe10, PTBe11, PTBe12, PTBe13, PTBe14, PTBe15, PTBe16, PTBe17, PTBe18, PTBe19, PTBe20, PTBe21, PTBe22, PTBe23, PTBe24, PTBe25, PTBe26, PTBe27, PTBe28, PTBe29, PTBe30 };
+            TalentPage_BilligerTextBoxes = new List<TextBox> { PTBilliger1, PTBilliger2, PTBilliger3, PTBilliger4, PTBilliger5, PTBilliger6, PTBilliger7, PTBilliger8, PTBilliger9, PTBilliger10, PTBilliger11, PTBilliger12, PTBilliger13, PTBilliger14, PTBilliger15, PTBilliger16, PTBilliger17, PTBilliger18, PTBilliger19, PTBilliger20, PTBilliger21, PTBilliger22, PTBilliger23, PTBilliger24, PTBilliger25, PTBilliger26, PTBilliger27, PTBilliger28, PTBilliger29, PTBilliger30 };
+            TalentPage_SpezialisierungTextBoxes = new List<TextBox> { PTSpezialisierung1, PTSpezialisierung2, PTSpezialisierung3, PTSpezialisierung4, PTSpezialisierung5, PTSpezialisierung6, PTSpezialisierung7, PTSpezialisierung8, PTSpezialisierung9, PTSpezialisierung10, PTSpezialisierung11, PTSpezialisierung12, PTSpezialisierung13, PTSpezialisierung14, PTSpezialisierung15, PTSpezialisierung16, PTSpezialisierung17, PTSpezialisierung18, PTSpezialisierung19, PTSpezialisierung20, PTSpezialisierung21, PTSpezialisierung22, PTSpezialisierung23, PTSpezialisierung24, PTSpezialisierung25, PTSpezialisierung26, PTSpezialisierung27, PTSpezialisierung28, PTSpezialisierung29, PTSpezialisierung30 };
+            TalentPage_AnforderungsTextBoxes = new List<TextBox> { PTAnforderungen1, PTAnforderungen2, PTAnforderungen3, PTAnforderungen4, PTAnforderungen5, PTAnforderungen6, PTAnforderungen7, PTAnforderungen8, PTAnforderungen9, PTAnforderungen10, PTAnforderungen11, PTAnforderungen12, PTAnforderungen13, PTAnforderungen14, PTAnforderungen15, PTAnforderungen16, PTAnforderungen17, PTAnforderungen18, PTAnforderungen19, PTAnforderungen20, PTAnforderungen21, PTAnforderungen22, PTAnforderungen23, PTAnforderungen24, PTAnforderungen25, PTAnforderungen26, PTAnforderungen27, PTAnforderungen28, PTAnforderungen29, PTAnforderungen30 };
+            TalentPage_AbleitungTextBoxes = new List<TextBox> { PTAbleiten1, PTAbleiten2, PTAbleiten3, PTAbleiten4, PTAbleiten5, PTAbleiten6, PTAbleiten7, PTAbleiten8, PTAbleiten9, PTAbleiten10, PTAbleiten11, PTAbleiten12, PTAbleiten13, PTAbleiten14, PTAbleiten15, PTAbleiten16, PTAbleiten17, PTAbleiten18, PTAbleiten19, PTAbleiten20, PTAbleiten21, PTAbleiten22, PTAbleiten23, PTAbleiten24, PTAbleiten25, PTAbleiten26, PTAbleiten27, PTAbleiten28, PTAbleiten29, PTAbleiten30 };
+            TalentPage_ATTextBoxes = new List<TextBox> { PTAT1, PTAT2, PTAT3, PTAT4, PTAT5, PTAT6, PTAT7, PTAT8, PTAT9, PTAT10, PTAT11, PTAT12, PTAT13, PTAT14, PTAT15, PTAT16, PTAT17, PTAT18, PTAT19, PTAT20, PTAT21, PTAT22, PTAT23, PTAT24, PTAT25, PTAT26, PTAT27, PTAT28, PTAT29, PTAT30 };
+            TalentPage_PATextBoxes = new List<TextBox> { PTPA1, PTPA2, PTPA3, PTPA4, PTPA5, PTPA6, PTPA7, PTPA8, PTPA9, PTPA10, PTPA11, PTPA12, PTPA13, PTPA14, PTPA15, PTPA16, PTPA17, PTPA18, PTPA19, PTPA20, PTPA21, PTPA22, PTPA23, PTPA24, PTPA25, PTPA26, PTPA27, PTPA28, PTPA29, PTPA30 };
+            TalentPage_GroupBoxes = new List<GroupBox> { groupBoxTalentName, groupBoxProbe, groupBoxTaW, groupBoxAnforderungen, groupBoxAbleiten, groupBoxBe, groupBoxKampf, groupBoxSpezialisierung, groupBoxBilliger };
 
-            TalentPageRadioButtonsGeneralTalents = new List<RadioButton> { radioKörperlicheTalente, radioSozialTalente, radioNaturTalente, radioKnowldageTalente, radioCraftingTalent };
-            TalentPageRadioButtonsFightingTalents = new List<RadioButton> { radioButtonWeaponless, radioButtonClose, radioButtonRange };
-
-            TalentPageRadioButtons          = new List<RadioButton> { radioKörperlicheTalente, radioSozialTalente, radioNaturTalente, radioKnowldageTalente, radioCraftingTalent, radioButtonWeaponless, radioButtonClose, radioButtonRange, talentPageRadioGifts };
+            TalentPage_RadioButtons          = new List<RadioButton> { radioKörperlicheTalente, radioSozialTalente, radioNaturTalente, radioKnowldageTalente, radioCraftingTalent, radioButtonWeaponless, radioButtonClose, radioButtonRange, talentPageRadioGifts };
 
             radioKörperlicheTalente.Tag     = new TalentPhysical("Tag", new List<DSA_ATTRIBUTE>(0), "", new List<TalentDeviate>(0), new List<TalentRequirement>(0));
             radioSozialTalente.Tag          = new TalentSocial("Tag", new List<DSA_ATTRIBUTE>(0), "", new List<TalentDeviate>(0), new List<TalentRequirement>(0));
@@ -865,8 +859,8 @@ namespace DSA_Project
             btnTalentLetterNext.Tag = "+";
             btnTalentLetterLast.Tag = "-";
 
-            btnTalentLetterNext.Click += new EventHandler(btnTalentLetterPage_Click);
-            btnTalentLetterLast.Click += new EventHandler(btnTalentLetterPage_Click);
+            btnTalentLetterNext.Click += new EventHandler(TalentPage_btnTalentLetterPage_Click);
+            btnTalentLetterLast.Click += new EventHandler(TalentPage_btnTalentLetterPage_Click);
 
             talentPageComboBoxGifts.DataSource = null;
             talentPageComboBoxGifts.Items.Clear();
@@ -874,73 +868,173 @@ namespace DSA_Project
             talentPageComboBoxGifts.SelectedValueChanged += learingBoxComboBoxTawChanged;
             talentPageBTNlearingGift.Click += learningGift;
 
-            for(int i=0; i<SupportedTalentCount; i++)
+            for(int i=0; i<TalentPage_CountBoxes; i++)
             {
-                talentpageTaWBonusTextBoxes[i].BackColor = SystemColors.InactiveBorder;
-                talentpageTaWBonusTextBoxes[i].ReadOnly = true;
+                TalentPage_TaWBonusTextBoxes[i].BackColor = SystemColors.InactiveBorder;
+                TalentPage_TaWBonusTextBoxes[i].ReadOnly = true;
             }
-            for (int i = 0; i < TalentPageRadioButtonsGeneralTalents.Count; i++)
+            for (int i = 0; i < TalentPage_RadioButtons.Count; i++)
             {
-                TalentPageRadioButtonsGeneralTalents[i].CheckedChanged += new EventHandler(TalentPageGeneralTalentRadioButtonChanged);
+                TalentPage_RadioButtons[i].CheckedChanged += new EventHandler(TalentPage_RadioButtonChanged);
             }
-            for (int i = 0; i < TalentPageRadioButtonsFightingTalents.Count; i++)
-            {
-                TalentPageRadioButtonsFightingTalents[i].CheckedChanged += new EventHandler(TalentPageFightingTalentsRadioButtonChanged);
-            }
-            talentPageRadioGifts.Click += new EventHandler(TalentPageGiftTalentRadioButtonChanged);
+            TalentPage_RadioButtons[0].Checked = true;
         }
-        public void refreshTalentPage()
+        public void TalentPage_refresh()
         {
-            for(int i=0; i< TalentPageRadioButtons.Count; i++)
+            for(int i=0; i< TalentPage_RadioButtons.Count; i++)
             {
-                if (TalentPageRadioButtons[i].Checked)
+                if(TalentPage_RadioButtons[i].Checked == true)
                 {
-                    TalentPageRadioButtons[i].Checked = false;
-                    TalentPageRadioButtons[i].Checked = true;
+                    InterfaceTalent type = (InterfaceTalent)TalentPage_RadioButtons[i].Tag;
+                    TalentPage_DisplayTalent(type);
                     break;
                 }
             }
         }
-        private void setTalentBoxeZero(int number)
+        private void TalentPage_ClearBoxes(int i)
         {
-            for (int i = number; i < SupportedTalentCount; i++)
-            {
-                talentNameLabels[i].Text = "             ";
-                talentProbeTextBoxs[i].Text = "";
-                talentWürfeTextBoxs[i].Text = "";
-                talentTaWTextBoxes[i].Text = "";
-                talentBeTextBoxes[i].Text = "";
-                talentBeTextBoxes[i].Text = "";
-                talentSpezialisierungTextBoxes[i].Text = "";
-                talentAbleitungTextBoxes[i].Text = "";
-                talentAnforderungsTextBoxes[i].Text = "";
-                talentATTextBoxes[i].Text = "";
-                talentPATextBoxes[i].Text = "";
-                talentpageTaWBonusTextBoxes[i].Text = "";
-            }
+            TalentPage_NameLabels[i].Text = "             ";
+            TalentPage_ProbeTextBoxs[i].Text = "";
+            TalentPage_WürfeTextBoxs[i].Text = "";
+            TalentPage_TaWTextBoxes[i].Text = "";
+            TalentPage_BeTextBoxes[i].Text = "";
+            TalentPage_BeTextBoxes[i].Text = "";
+            TalentPage_SpezialisierungTextBoxes[i].Text = "";
+            TalentPage_AbleitungTextBoxes[i].Text = "";
+            TalentPage_AnforderungsTextBoxes[i].Text = "";
+            TalentPage_ATTextBoxes[i].Text = "";
+            TalentPage_PATextBoxes[i].Text = "";
+            TalentPage_TaWBonusTextBoxes[i].Text = "";
         }
-        private int TalentPagegetTalentNumberForBox(int boxnumber)
-        {
-            String page = txtTalentLetterCurrentPage.Text;
-            int x = 0;
-            Int32.TryParse(page, out x);
-
-            return (x - 1) * SupportedTalentCount + (boxnumber - 1);
-        }
-        private InterfaceTalent getTalent(int number)
+        private InterfaceTalent TalentPage_getTalent(int number)
         {
             InterfaceTalent talent = null;
-            for(int i=0;  i<TalentPageRadioButtons.Count; i++)
+            for (int i = 0; i < TalentPage_RadioButtons.Count; i++)
             {
-                if (TalentPageRadioButtons[i].Checked)
+                if (TalentPage_RadioButtons[i].Checked)
                 {
-                    InterfaceTalent type = (InterfaceTalent)TalentPageRadioButtons[i].Tag;
+                    InterfaceTalent type = (InterfaceTalent)TalentPage_RadioButtons[i].Tag;
                     talent = controll.getTalent(type, number);
                 }
             }
             return talent;
         }
-        private void btnTalentLetterPage_Click(object sender, EventArgs e)
+        private void TalentPage_DisplayTalent(InterfaceTalent type)
+        {
+            Type talentType = type.GetType();
+
+            if (typeof(TalentnotFighting).IsAssignableFrom(talentType))
+            {
+                TalentPage_DisplaynotFightingTalents((TalentnotFighting)type);
+            }
+            else if (typeof(TalentFighting).IsAssignableFrom(talentType))
+            {
+                TalentPage_DisplayFightingTalents((TalentFighting)type);
+            }
+            else
+            {
+                throw new Exception("This is unexpected");
+            }
+        }
+        private void TalentPage_DisplayFightingTalents(TalentFighting type)
+        {
+            groupBoxAnforderungen.Visible = false;
+            groupBoxKampf.Visible = true;
+            talentPageGroupBoxGiftsLearning.Visible = false;
+            groupBoxBe.Visible = true;
+            groupBoxBilliger.Visible = true;
+            groupBoxSpezialisierung.Visible = true;
+            groupBoxAbleiten.Visible = true;
+
+            for (int i = 0; i < TalentPage_CountBoxes; i++)
+            {
+                int x = 0;
+                TalentFighting talent = (TalentFighting)controll.getTalent(type, TalentPage_getTalentNumberwithPage(i));
+                if (talent == null)
+                {
+                    TalentPage_ClearBoxes(i);
+                }
+                else
+                {
+                    TalentPage_DisplayTalentStandartBoxes(talent, i);
+
+                    TalentPage_ATTextBoxes[i].Text = talent.getAT().ToString();
+                    TalentPage_PATextBoxes[i].Text = talent.getPA().ToString();
+
+                    if (!Int32.TryParse(talent.getPA(), out x))
+                    {
+                        TalentPage_WürfeTextBoxs[i].Text = talent.getPA();
+                    }
+                }
+            }
+
+            groupBoxProbe.Left = groupBoxTalentName.Right + 5;
+            groupBoxTaW.Left = groupBoxProbe.Right + 5;
+            groupBoxTaWB.Left = groupBoxTaW.Right + 5;
+            groupBoxKampf.Left = groupBoxTaWB.Right + 5;
+            groupBoxBe.Left = groupBoxKampf.Right + 5;
+            groupBoxBilliger.Left = groupBoxBe.Right + 5;
+            groupBoxSpezialisierung.Left = groupBoxBilliger.Right + 5;
+            groupBoxAbleiten.Left = groupBoxSpezialisierung.Right + 5;
+        }
+        private void TalentPage_DisplaynotFightingTalents(TalentnotFighting type)
+        {
+            groupBoxAnforderungen.Visible           = true;
+            groupBoxKampf.Visible                   = false;
+            talentPageGroupBoxGiftsLearning.Visible = false;
+            groupBoxBe.Visible                      = true;
+            groupBoxBilliger.Visible                = true;
+            groupBoxSpezialisierung.Visible         = true;
+            groupBoxAnforderungen.Visible           = true;
+            groupBoxAbleiten.Visible                = true;
+
+            if (typeof(GiftTalent).IsAssignableFrom(type.GetType()))
+            {
+                talentPageGroupBoxGiftsLearning.Visible = true;
+            }
+
+            for (int i = 0; i < TalentPage_CountBoxes; i++)
+            {
+                TalentGeneral talent = (TalentGeneral)controll.getTalent(type, TalentPage_getTalentNumberwithPage(i));
+                if (talent == null)
+                {
+                    TalentPage_ClearBoxes(i);
+                } else
+                {
+                    TalentPage_DisplayTalentStandartBoxes(talent, i);
+                    TalentPage_AnforderungsTextBoxes[i].Text = talent.getRequirementString();
+                }
+            }
+
+            groupBoxProbe.Left = groupBoxTalentName.Right + 5;
+            groupBoxTaW.Left = groupBoxProbe.Right + 5;
+            groupBoxTaWB.Left = groupBoxTaW.Right + 5;
+            groupBoxBe.Left = groupBoxTaWB.Right + 5;
+            groupBoxBilliger.Left = groupBoxBe.Right + 5;
+            groupBoxSpezialisierung.Left = groupBoxBilliger.Right + 5;
+            groupBoxAnforderungen.Left = groupBoxSpezialisierung.Right + 5;
+            groupBoxAbleiten.Left = groupBoxAnforderungen.Right + 5;
+        }
+        private void TalentPage_DisplayTalentStandartBoxes(InterfaceTalent talent, int i)
+        {
+            TalentPage_NameLabels[i].Text               = talent.getName();
+            TalentPage_ProbeTextBoxs[i].Text            = talent.getProbeStringOne();
+            TalentPage_WürfeTextBoxs[i].Text            = talent.getProbeStringTwo();
+            TalentPage_TaWTextBoxes[i].Text             = talent.getTaW().ToString();
+            TalentPage_TaWBonusTextBoxes[i].Text        = talent.getTAWBonus();
+            TalentPage_BeTextBoxes[i].Text              = talent.getBe().ToString();
+            TalentPage_SpezialisierungTextBoxes[i].Text = "";
+            TalentPage_AbleitungTextBoxes[i].Text       = talent.getDeviateString();
+        }
+        private int TalentPage_getTalentNumberwithPage(int number)
+        {
+            int x       = 0;
+            String page = txtTalentLetterCurrentPage.Text;
+            Int32.TryParse(page, out x);
+
+            return (x - 1) * TalentPage_CountBoxes + number;
+        }
+        private void TalentPage_btnTalentLetterPage_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             String page = txtTalentLetterCurrentPage.Text;
@@ -962,144 +1056,15 @@ namespace DSA_Project
             }
             txtTalentLetterCurrentPage.Text = x.ToString();
 
-            List<RadioButton> rButtonsTotal = new List<RadioButton>();
-            rButtonsTotal.AddRange(TalentPageRadioButtonsGeneralTalents);
-            rButtonsTotal.AddRange(TalentPageRadioButtonsFightingTalents);
-
-            for (int i = 0; i < rButtonsTotal.Count; i++)
-            {
-                if (rButtonsTotal[i].Checked == true)
-                {
-                    rButtonsTotal[i].Checked = false;
-                    rButtonsTotal[i].Checked = true;
-                    break;
-                }
-            }
+            TalentPage_refresh();
         }
-        private void talentStandardBoxinput(InterfaceTalent talent, int i)
-        {
-            talentNameLabels[i].Text = talent.getName();
-            talentProbeTextBoxs[i].Text = talent.getProbeStringOne();
-            talentWürfeTextBoxs[i].Text = talent.getProbeStringTwo();
-            talentTaWTextBoxes[i].Text = talent.getTaW().ToString();
-            talentpageTaWBonusTextBoxes[i].Text = talent.getTAWBonus();
-            talentBeTextBoxes[i].Text = talent.getBe().ToString();
-            talentSpezialisierungTextBoxes[i].Text = "";
-            talentAbleitungTextBoxes[i].Text = talent.getDeviateString();
-        }
-        private void TalentPageGeneralTalentRadioButtonChanged(object sender, EventArgs e)
+        private void TalentPage_RadioButtonChanged(object sender, EventArgs e)
         {
             RadioButton button = (RadioButton)sender;
             if (button.Checked == false) return;
 
             InterfaceTalent type = (InterfaceTalent)button.Tag;
-
-            int i = 0;
-            groupBoxAnforderungen.Visible = true;
-            groupBoxKampf.Visible = false;
-            talentPageGroupBoxGiftsLearning.Visible = false;
-            groupBoxBe.Visible = true;
-            groupBoxBilliger.Visible = true;
-            groupBoxSpezialisierung.Visible = true;
-            groupBoxAnforderungen.Visible = true;
-            groupBoxAbleiten.Visible = true;
-
-            for (i = 0; i < SupportedTalentCount; i++)
-            {
-                TalentGeneral talent = (TalentGeneral)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
-                if (talent == null) { break; }
-                talentStandardBoxinput(talent, i);
-                talentAnforderungsTextBoxes[i].Text = talent.getRequirementString();
-            }
-
-            groupBoxProbe.Left = groupBoxTalentName.Right + 5;
-            groupBoxTaW.Left = groupBoxProbe.Right + 5;
-            groupBoxTaWB.Left = groupBoxTaW.Right + 5;
-            groupBoxBe.Left = groupBoxTaWB.Right + 5;
-            groupBoxBilliger.Left = groupBoxBe.Right + 5;
-            groupBoxSpezialisierung.Left = groupBoxBilliger.Right + 5;
-            groupBoxAnforderungen.Left = groupBoxSpezialisierung.Right + 5;
-            groupBoxAbleiten.Left = groupBoxAnforderungen.Right + 5;
-
-            setTalentBoxeZero(i);
-            return;
-        }
-        private void TalentPageFightingTalentsRadioButtonChanged(object sender, EventArgs e)
-        {
-            int i = 0;
-            RadioButton button = (RadioButton)sender;
-            if (button.Checked == false) return;
-
-            InterfaceTalent type = (InterfaceTalent)button.Tag;
-
-            groupBoxAnforderungen.Visible = false;
-            groupBoxKampf.Visible = true;
-            talentPageGroupBoxGiftsLearning.Visible = false;
-            groupBoxBe.Visible = true;
-            groupBoxBilliger.Visible = true;
-            groupBoxSpezialisierung.Visible = true;
-            groupBoxAbleiten.Visible = true;
-
-            for (i = 0; i < SupportedTalentCount; i++)
-            {
-                int x = 0;
-                TalentFighting FightingTalent = (TalentFighting)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
-                if (FightingTalent == null) { break; }
-                talentStandardBoxinput(FightingTalent, i);
-                
-                talentATTextBoxes[i].Text = FightingTalent.getAT().ToString();
-                talentPATextBoxes[i].Text = FightingTalent.getPA().ToString();
-
-                if (!Int32.TryParse(FightingTalent.getPA(), out x))
-                {
-                    talentWürfeTextBoxs[i].Text = FightingTalent.getPA();
-                }
-            }
-            groupBoxProbe.Left = groupBoxTalentName.Right + 5;
-            groupBoxTaW.Left = groupBoxProbe.Right + 5;
-            groupBoxTaWB.Left = groupBoxTaW.Right + 5;
-            groupBoxKampf.Left = groupBoxTaWB.Right + 5;
-            groupBoxBe.Left = groupBoxKampf.Right + 5;
-            groupBoxBilliger.Left = groupBoxBe.Right + 5;
-            groupBoxSpezialisierung.Left = groupBoxBilliger.Right + 5;
-            groupBoxAbleiten.Left = groupBoxSpezialisierung.Right + 5;
-
-            setTalentBoxeZero(i);
-        }
-        private void TalentPageGiftTalentRadioButtonChanged(object sender, EventArgs e)
-        {
-            int i = 0;
-            RadioButton button = (RadioButton)sender;
-            if (button.Checked == false) return;
-
-            InterfaceTalent type = (InterfaceTalent)button.Tag;
-
-            for (i = 0; i < SupportedTalentCount; i++)
-            {
-                GiftTalent giftTalent = (GiftTalent)controll.getTalent(type, TalentPagegetTalentNumberForBox(i + 1));
-                if (giftTalent == null) { break; }
-                talentStandardBoxinput(giftTalent, i);
-            }
-
-            groupBoxAnforderungen.Visible = true;
-            groupBoxKampf.Visible = false;
-            talentPageGroupBoxGiftsLearning.Visible = true;
-            groupBoxBe.Visible = false;
-            groupBoxBilliger.Visible = false;
-            groupBoxSpezialisierung.Visible = false;
-            groupBoxAnforderungen.Visible = false;
-            groupBoxAbleiten.Visible = false;
-
-            groupBoxProbe.Left = groupBoxTalentName.Right + 5;
-            groupBoxTaW.Left = groupBoxProbe.Right + 5;
-            groupBoxTaWB.Left = groupBoxTaW.Right + 5;
-            groupBoxBe.Left = groupBoxTaWB.Right + 5;
-            groupBoxBilliger.Left = groupBoxBe.Right + 5;
-            groupBoxSpezialisierung.Left = groupBoxBilliger.Right + 5;
-            groupBoxAnforderungen.Left = groupBoxSpezialisierung.Right + 5;
-            groupBoxAbleiten.Left = groupBoxAnforderungen.Right + 5;
-
-            setTalentBoxeZero(i);
+            TalentPage_DisplayTalent(type);
         }
         private void learingBoxComboBoxTawChanged(object sender, EventArgs e)
         {
@@ -1121,9 +1086,9 @@ namespace DSA_Project
             talentPageComboBoxGifts.Items.Clear();
             talentPageComboBoxGifts.DataSource = list;
 
-            TalentPageGiftTalentRadioButtonChanged(talentPageRadioGifts, null);
+            TalentPage_refresh();
         }
-        private void TAWChange(object sender, EventArgs e)
+        private void TalentPage_TAWChange(object sender, EventArgs e)
         {
             int BoxNumber;
             TextBox box = (TextBox)sender;
@@ -1132,23 +1097,13 @@ namespace DSA_Project
             String number = NameString.Substring(BasicString.Length, NameString.Length - BasicString.Length);
             Int32.TryParse(number, out BoxNumber);
 
-            InterfaceTalent talent = getTalent(TalentPagegetTalentNumberForBox(BoxNumber));
-
+            InterfaceTalent talent = TalentPage_getTalent(TalentPage_getTalentNumberwithPage(BoxNumber-1));
             if (talent == null) return;
 
-            talent.setTaw(box.Text);
-            box.Text = talent.getTaW().ToString();
-            talentProbeTextBoxs[BoxNumber - 1].Text = talent.getProbeStringOne();
+            controll.setTaw(box.Text, talent.getName());
+            TalentPage_refresh();
         }
-        private void TAWBChange(object sender, EventArgs e)
-        {
-            TextBox box = (TextBox)sender;
-            int number = getBoxNumber("talentpageTaWBonus", box.Name);
-            InterfaceTalent talent = getTalent(TalentPagegetTalentNumberForBox(number));
-            if (talent == null) return;
-            box.Text = talent.getTAWBonus();
-        }
-        private void ATChanged(object sender, EventArgs e)
+        private void TalentPage_ATChanged(object sender, EventArgs e)
         {
             TextBox box = (TextBox)sender;
             if (box.Visible == false) return;
@@ -1159,7 +1114,7 @@ namespace DSA_Project
             String Boxnumber = NameString.Substring(BasicString.Length, NameString.Length - BasicString.Length);
             Int32.TryParse(Boxnumber, out BoxNumber);
 
-            TalentFighting talent = (TalentFighting)getTalent(TalentPagegetTalentNumberForBox(BoxNumber));
+            TalentFighting talent = (TalentFighting)TalentPage_getTalent(TalentPage_getTalentNumberwithPage(BoxNumber-1));
             if (talent == null) return;
 
             int result;
@@ -1168,9 +1123,9 @@ namespace DSA_Project
             talent.setAT(result);
             box.Text = talent.getAT().ToString();
 
-            talentProbeTextBoxs[BoxNumber - 1].Text = talent.getProbeStringOne();
+            TalentPage_refresh();
         }
-        private void PAChanged(object sender, EventArgs e)
+        private void TalentPage_PAChanged(object sender, EventArgs e)
         {
             TextBox box = (TextBox)sender;
             if (box.Visible == false) return;
@@ -1181,81 +1136,124 @@ namespace DSA_Project
             String Boxnumber = NameString.Substring(BasicString.Length, NameString.Length - BasicString.Length);
             Int32.TryParse(Boxnumber, out BoxNumber);
 
-            TalentFighting talent = (TalentFighting)getTalent(TalentPagegetTalentNumberForBox(BoxNumber));
+            TalentFighting talent = (TalentFighting)TalentPage_getTalent(TalentPage_getTalentNumberwithPage(BoxNumber-1));
             if (talent == null) return;
 
             int result;
             Int32.TryParse(box.Text, out result);
 
             talent.setPA(result);
-            box.Text = talent.getPA().ToString();
-
-            talentWürfeTextBoxs[BoxNumber - 1].Text = talent.getProbeStringTwo();
+            TalentPage_refresh();
         }
         //#########################################################################################################################################################################
         //LanguagePage
         private int LanguagePageSupportedBoxes = 30;
-        private List<TextBox> LanguagePageLanguageNameTextBoxes;
-        private List<TextBox> LanguagePageLanguageMotherTextBoxes;
-        private List<TextBox> LanguagePageLanguageComplexTextBoxes;
-        private List<TextBox> LanguagePageLanguageTaWTextBoxes;
-        private List<TextBox> LanguagePageLanguageProbeTextBoxes;
-        private List<TextBox> LanguagePageFontNameTextBoxes;
-        private List<TextBox> LanguagePageFontComplexTextBoxes;
-        private List<TextBox> LanguagePageFontTaWTextBoxes;
-        private List<TextBox> LanguagePageFontProbeTextBoxes;
+        private List<TextBox> LanguagePage_LanguageNameTextBoxes;
+        private List<TextBox> LanguagePage_LanguageMotherTextBoxes;
+        private List<TextBox> LanguagePage_LanguageComplexTextBoxes;
+        private List<TextBox> LanguagePage_LanguageTaWTextBoxes;
+        private List<TextBox> LanguagePage_LanguageProbeTextBoxes;
+        private List<TextBox> LanguagePage_FontNameTextBoxes;
+        private List<TextBox> LanguagePage_FontComplexTextBoxes;
+        private List<TextBox> LanguagePage_FontTaWTextBoxes;
+        private List<TextBox> LanguagePage_FontProbeTextBoxes;
 
-        private void setUPLanguagePage()
+        private void LanguagePage_setUP()
         {
-            LanguagePageLanguageNameTextBoxes       = new List<TextBox> { txtLanguagePageLanguageName1, txtLanguagePageLanguageName2, txtLanguagePageLanguageName3, txtLanguagePageLanguageName4, txtLanguagePageLanguageName5, txtLanguagePageLanguageName6, txtLanguagePageLanguageName7, txtLanguagePageLanguageName8, txtLanguagePageLanguageName9, txtLanguagePageLanguageName10, txtLanguagePageLanguageName11, txtLanguagePageLanguageName12, txtLanguagePageLanguageName13, txtLanguagePageLanguageName14, txtLanguagePageLanguageName15, txtLanguagePageLanguageName16, txtLanguagePageLanguageName17, txtLanguagePageLanguageName18, txtLanguagePageLanguageName19, txtLanguagePageLanguageName20, txtLanguagePageLanguageName21, txtLanguagePageLanguageName22, txtLanguagePageLanguageName23, txtLanguagePageLanguageName24, txtLanguagePageLanguageName25, txtLanguagePageLanguageName26, txtLanguagePageLanguageName27, txtLanguagePageLanguageName28, txtLanguagePageLanguageName29, txtLanguagePageLanguageName30 };
-            LanguagePageLanguageMotherTextBoxes     = new List<TextBox> { txtLanguagePageLanguageMother1, txtLanguagePageLanguageMother2, txtLanguagePageLanguageMother3, txtLanguagePageLanguageMother4, txtLanguagePageLanguageMother5, txtLanguagePageLanguageMother6, txtLanguagePageLanguageMother7, txtLanguagePageLanguageMother8, txtLanguagePageLanguageMother9, txtLanguagePageLanguageMother10, txtLanguagePageLanguageMother11, txtLanguagePageLanguageMother12, txtLanguagePageLanguageMother13, txtLanguagePageLanguageMother14, txtLanguagePageLanguageMother15, txtLanguagePageLanguageMother16, txtLanguagePageLanguageMother17, txtLanguagePageLanguageMother18, txtLanguagePageLanguageMother19, txtLanguagePageLanguageMother20, txtLanguagePageLanguageMother21, txtLanguagePageLanguageMother22, txtLanguagePageLanguageMother23, txtLanguagePageLanguageMother24, txtLanguagePageLanguageMother25, txtLanguagePageLanguageMother26, txtLanguagePageLanguageMother27, txtLanguagePageLanguageMother28, txtLanguagePageLanguageMother29, txtLanguagePageLanguageMother30 };
-            LanguagePageLanguageComplexTextBoxes    = new List<TextBox> { txtLanguagePageLanguageComplex1, txtLanguagePageLanguageComplex2, txtLanguagePageLanguageComplex3, txtLanguagePageLanguageComplex4, txtLanguagePageLanguageComplex5, txtLanguagePageLanguageComplex6, txtLanguagePageLanguageComplex7, txtLanguagePageLanguageComplex8, txtLanguagePageLanguageComplex9, txtLanguagePageLanguageComplex10, txtLanguagePageLanguageComplex11, txtLanguagePageLanguageComplex12, txtLanguagePageLanguageComplex13, txtLanguagePageLanguageComplex14, txtLanguagePageLanguageComplex15, txtLanguagePageLanguageComplex16, txtLanguagePageLanguageComplex17, txtLanguagePageLanguageComplex18, txtLanguagePageLanguageComplex19, txtLanguagePageLanguageComplex20, txtLanguagePageLanguageComplex21, txtLanguagePageLanguageComplex22, txtLanguagePageLanguageComplex23, txtLanguagePageLanguageComplex24, txtLanguagePageLanguageComplex25, txtLanguagePageLanguageComplex26, txtLanguagePageLanguageComplex27, txtLanguagePageLanguageComplex28, txtLanguagePageLanguageComplex29, txtLanguagePageLanguageComplex30 };
-            LanguagePageLanguageTaWTextBoxes        = new List<TextBox> { txtLanguagePageLanguageTaW1, txtLanguagePageLanguageTaW2, txtLanguagePageLanguageTaW3, txtLanguagePageLanguageTaW4, txtLanguagePageLanguageTaW5, txtLanguagePageLanguageTaW6, txtLanguagePageLanguageTaW7, txtLanguagePageLanguageTaW8, txtLanguagePageLanguageTaW9, txtLanguagePageLanguageTaW10, txtLanguagePageLanguageTaW11, txtLanguagePageLanguageTaW12, txtLanguagePageLanguageTaW13, txtLanguagePageLanguageTaW14, txtLanguagePageLanguageTaW15, txtLanguagePageLanguageTaW16, txtLanguagePageLanguageTaW17, txtLanguagePageLanguageTaW18, txtLanguagePageLanguageTaW19, txtLanguagePageLanguageTaW20, txtLanguagePageLanguageTaW21, txtLanguagePageLanguageTaW22, txtLanguagePageLanguageTaW23, txtLanguagePageLanguageTaW24, txtLanguagePageLanguageTaW25, txtLanguagePageLanguageTaW26, txtLanguagePageLanguageTaW27, txtLanguagePageLanguageTaW28, txtLanguagePageLanguageTaW29, txtLanguagePageLanguageTaW30 };
-            LanguagePageLanguageProbeTextBoxes      = new List<TextBox> { txtLanguagePageLanguageProbe1, txtLanguagePageLanguageProbe2, txtLanguagePageLanguageProbe3, txtLanguagePageLanguageProbe4, txtLanguagePageLanguageProbe5, txtLanguagePageLanguageProbe6, txtLanguagePageLanguageProbe7, txtLanguagePageLanguageProbe8, txtLanguagePageLanguageProbe9, txtLanguagePageLanguageProbe10, txtLanguagePageLanguageProbe11, txtLanguagePageLanguageProbe12, txtLanguagePageLanguageProbe13, txtLanguagePageLanguageProbe14, txtLanguagePageLanguageProbe15, txtLanguagePageLanguageProbe16, txtLanguagePageLanguageProbe17, txtLanguagePageLanguageProbe18, txtLanguagePageLanguageProbe19, txtLanguagePageLanguageProbe20, txtLanguagePageLanguageProbe21, txtLanguagePageLanguageProbe22, txtLanguagePageLanguageProbe23, txtLanguagePageLanguageProbe24, txtLanguagePageLanguageProbe25, txtLanguagePageLanguageProbe26, txtLanguagePageLanguageProbe27, txtLanguagePageLanguageProbe28, txtLanguagePageLanguageProbe29, txtLanguagePageLanguageProbe30 };
+            LanguagePage_LanguageNameTextBoxes       = new List<TextBox> { txtLanguagePageLanguageName1, txtLanguagePageLanguageName2, txtLanguagePageLanguageName3, txtLanguagePageLanguageName4, txtLanguagePageLanguageName5, txtLanguagePageLanguageName6, txtLanguagePageLanguageName7, txtLanguagePageLanguageName8, txtLanguagePageLanguageName9, txtLanguagePageLanguageName10, txtLanguagePageLanguageName11, txtLanguagePageLanguageName12, txtLanguagePageLanguageName13, txtLanguagePageLanguageName14, txtLanguagePageLanguageName15, txtLanguagePageLanguageName16, txtLanguagePageLanguageName17, txtLanguagePageLanguageName18, txtLanguagePageLanguageName19, txtLanguagePageLanguageName20, txtLanguagePageLanguageName21, txtLanguagePageLanguageName22, txtLanguagePageLanguageName23, txtLanguagePageLanguageName24, txtLanguagePageLanguageName25, txtLanguagePageLanguageName26, txtLanguagePageLanguageName27, txtLanguagePageLanguageName28, txtLanguagePageLanguageName29, txtLanguagePageLanguageName30 };
+            LanguagePage_LanguageMotherTextBoxes     = new List<TextBox> { txtLanguagePageLanguageMother1, txtLanguagePageLanguageMother2, txtLanguagePageLanguageMother3, txtLanguagePageLanguageMother4, txtLanguagePageLanguageMother5, txtLanguagePageLanguageMother6, txtLanguagePageLanguageMother7, txtLanguagePageLanguageMother8, txtLanguagePageLanguageMother9, txtLanguagePageLanguageMother10, txtLanguagePageLanguageMother11, txtLanguagePageLanguageMother12, txtLanguagePageLanguageMother13, txtLanguagePageLanguageMother14, txtLanguagePageLanguageMother15, txtLanguagePageLanguageMother16, txtLanguagePageLanguageMother17, txtLanguagePageLanguageMother18, txtLanguagePageLanguageMother19, txtLanguagePageLanguageMother20, txtLanguagePageLanguageMother21, txtLanguagePageLanguageMother22, txtLanguagePageLanguageMother23, txtLanguagePageLanguageMother24, txtLanguagePageLanguageMother25, txtLanguagePageLanguageMother26, txtLanguagePageLanguageMother27, txtLanguagePageLanguageMother28, txtLanguagePageLanguageMother29, txtLanguagePageLanguageMother30 };
+            LanguagePage_LanguageComplexTextBoxes    = new List<TextBox> { txtLanguagePageLanguageComplex1, txtLanguagePageLanguageComplex2, txtLanguagePageLanguageComplex3, txtLanguagePageLanguageComplex4, txtLanguagePageLanguageComplex5, txtLanguagePageLanguageComplex6, txtLanguagePageLanguageComplex7, txtLanguagePageLanguageComplex8, txtLanguagePageLanguageComplex9, txtLanguagePageLanguageComplex10, txtLanguagePageLanguageComplex11, txtLanguagePageLanguageComplex12, txtLanguagePageLanguageComplex13, txtLanguagePageLanguageComplex14, txtLanguagePageLanguageComplex15, txtLanguagePageLanguageComplex16, txtLanguagePageLanguageComplex17, txtLanguagePageLanguageComplex18, txtLanguagePageLanguageComplex19, txtLanguagePageLanguageComplex20, txtLanguagePageLanguageComplex21, txtLanguagePageLanguageComplex22, txtLanguagePageLanguageComplex23, txtLanguagePageLanguageComplex24, txtLanguagePageLanguageComplex25, txtLanguagePageLanguageComplex26, txtLanguagePageLanguageComplex27, txtLanguagePageLanguageComplex28, txtLanguagePageLanguageComplex29, txtLanguagePageLanguageComplex30 };
+            LanguagePage_LanguageTaWTextBoxes        = new List<TextBox> { txtLanguagePageLanguageTaW1, txtLanguagePageLanguageTaW2, txtLanguagePageLanguageTaW3, txtLanguagePageLanguageTaW4, txtLanguagePageLanguageTaW5, txtLanguagePageLanguageTaW6, txtLanguagePageLanguageTaW7, txtLanguagePageLanguageTaW8, txtLanguagePageLanguageTaW9, txtLanguagePageLanguageTaW10, txtLanguagePageLanguageTaW11, txtLanguagePageLanguageTaW12, txtLanguagePageLanguageTaW13, txtLanguagePageLanguageTaW14, txtLanguagePageLanguageTaW15, txtLanguagePageLanguageTaW16, txtLanguagePageLanguageTaW17, txtLanguagePageLanguageTaW18, txtLanguagePageLanguageTaW19, txtLanguagePageLanguageTaW20, txtLanguagePageLanguageTaW21, txtLanguagePageLanguageTaW22, txtLanguagePageLanguageTaW23, txtLanguagePageLanguageTaW24, txtLanguagePageLanguageTaW25, txtLanguagePageLanguageTaW26, txtLanguagePageLanguageTaW27, txtLanguagePageLanguageTaW28, txtLanguagePageLanguageTaW29, txtLanguagePageLanguageTaW30 };
+            LanguagePage_LanguageProbeTextBoxes      = new List<TextBox> { txtLanguagePageLanguageProbe1, txtLanguagePageLanguageProbe2, txtLanguagePageLanguageProbe3, txtLanguagePageLanguageProbe4, txtLanguagePageLanguageProbe5, txtLanguagePageLanguageProbe6, txtLanguagePageLanguageProbe7, txtLanguagePageLanguageProbe8, txtLanguagePageLanguageProbe9, txtLanguagePageLanguageProbe10, txtLanguagePageLanguageProbe11, txtLanguagePageLanguageProbe12, txtLanguagePageLanguageProbe13, txtLanguagePageLanguageProbe14, txtLanguagePageLanguageProbe15, txtLanguagePageLanguageProbe16, txtLanguagePageLanguageProbe17, txtLanguagePageLanguageProbe18, txtLanguagePageLanguageProbe19, txtLanguagePageLanguageProbe20, txtLanguagePageLanguageProbe21, txtLanguagePageLanguageProbe22, txtLanguagePageLanguageProbe23, txtLanguagePageLanguageProbe24, txtLanguagePageLanguageProbe25, txtLanguagePageLanguageProbe26, txtLanguagePageLanguageProbe27, txtLanguagePageLanguageProbe28, txtLanguagePageLanguageProbe29, txtLanguagePageLanguageProbe30 };
 
-            LanguagePageFontNameTextBoxes           = new List<TextBox> { txtLanguagePageFontName1, txtLanguagePageFontName2, txtLanguagePageFontName3, txtLanguagePageFontName4, txtLanguagePageFontName5, txtLanguagePageFontName6, txtLanguagePageFontName7, txtLanguagePageFontName8, txtLanguagePageFontName9, txtLanguagePageFontName10, txtLanguagePageFontName11, txtLanguagePageFontName12, txtLanguagePageFontName13, txtLanguagePageFontName14, txtLanguagePageFontName15, txtLanguagePageFontName16, txtLanguagePageFontName17, txtLanguagePageFontName18, txtLanguagePageFontName19, txtLanguagePageFontName20, txtLanguagePageFontName21, txtLanguagePageFontName22, txtLanguagePageFontName23, txtLanguagePageFontName24, txtLanguagePageFontName25, txtLanguagePageFontName26, txtLanguagePageFontName27, txtLanguagePageFontName28, txtLanguagePageFontName29, txtLanguagePageFontName30 };
-            LanguagePageFontComplexTextBoxes        = new List<TextBox> { txtLanguagePageFontComplex1, txtLanguagePageFontComplex2, txtLanguagePageFontComplex3, txtLanguagePageFontComplex4, txtLanguagePageFontComplex5, txtLanguagePageFontComplex6, txtLanguagePageFontComplex7, txtLanguagePageFontComplex8, txtLanguagePageFontComplex9, txtLanguagePageFontComplex10, txtLanguagePageFontComplex11, txtLanguagePageFontComplex12, txtLanguagePageFontComplex13, txtLanguagePageFontComplex14, txtLanguagePageFontComplex15, txtLanguagePageFontComplex16, txtLanguagePageFontComplex17, txtLanguagePageFontComplex18, txtLanguagePageFontComplex19, txtLanguagePageFontComplex20, txtLanguagePageFontComplex21, txtLanguagePageFontComplex22, txtLanguagePageFontComplex23, txtLanguagePageFontComplex24, txtLanguagePageFontComplex25, txtLanguagePageFontComplex26, txtLanguagePageFontComplex27, txtLanguagePageFontComplex28, txtLanguagePageFontComplex29, txtLanguagePageFontComplex30 };
-            LanguagePageFontTaWTextBoxes            = new List<TextBox> { txtLanguagePageFontTaW1, txtLanguagePageFontTaW2, txtLanguagePageFontTaW3, txtLanguagePageFontTaW4, txtLanguagePageFontTaW5, txtLanguagePageFontTaW6, txtLanguagePageFontTaW7, txtLanguagePageFontTaW8, txtLanguagePageFontTaW9, txtLanguagePageFontTaW10, txtLanguagePageFontTaW11, txtLanguagePageFontTaW12, txtLanguagePageFontTaW13, txtLanguagePageFontTaW14, txtLanguagePageFontTaW15, txtLanguagePageFontTaW16, txtLanguagePageFontTaW17, txtLanguagePageFontTaW18, txtLanguagePageFontTaW19, txtLanguagePageFontTaW20, txtLanguagePageFontTaW21, txtLanguagePageFontTaW22, txtLanguagePageFontTaW23, txtLanguagePageFontTaW24, txtLanguagePageFontTaW25, txtLanguagePageFontTaW26, txtLanguagePageFontTaW27, txtLanguagePageFontTaW28, txtLanguagePageFontTaW29, txtLanguagePageFontTaW30 };
-            LanguagePageFontProbeTextBoxes          = new List<TextBox> { txtLanguagePageFontProbe1, txtLanguagePageFontProbe2, txtLanguagePageFontProbe3, txtLanguagePageFontProbe4, txtLanguagePageFontProbe5, txtLanguagePageFontProbe6, txtLanguagePageFontProbe7, txtLanguagePageFontProbe8, txtLanguagePageFontProbe9, txtLanguagePageFontProbe10, txtLanguagePageFontProbe11, txtLanguagePageFontProbe12, txtLanguagePageFontProbe13, txtLanguagePageFontProbe14, txtLanguagePageFontProbe15, txtLanguagePageFontProbe16, txtLanguagePageFontProbe17, txtLanguagePageFontProbe18, txtLanguagePageFontProbe19, txtLanguagePageFontProbe20, txtLanguagePageFontProbe21, txtLanguagePageFontProbe22, txtLanguagePageFontProbe23, txtLanguagePageFontProbe24, txtLanguagePageFontProbe25, txtLanguagePageFontProbe26, txtLanguagePageFontProbe27, txtLanguagePageFontProbe28, txtLanguagePageFontProbe29, txtLanguagePageFontProbe30 };
+            LanguagePage_FontNameTextBoxes           = new List<TextBox> { txtLanguagePageFontName1, txtLanguagePageFontName2, txtLanguagePageFontName3, txtLanguagePageFontName4, txtLanguagePageFontName5, txtLanguagePageFontName6, txtLanguagePageFontName7, txtLanguagePageFontName8, txtLanguagePageFontName9, txtLanguagePageFontName10, txtLanguagePageFontName11, txtLanguagePageFontName12, txtLanguagePageFontName13, txtLanguagePageFontName14, txtLanguagePageFontName15, txtLanguagePageFontName16, txtLanguagePageFontName17, txtLanguagePageFontName18, txtLanguagePageFontName19, txtLanguagePageFontName20, txtLanguagePageFontName21, txtLanguagePageFontName22, txtLanguagePageFontName23, txtLanguagePageFontName24, txtLanguagePageFontName25, txtLanguagePageFontName26, txtLanguagePageFontName27, txtLanguagePageFontName28, txtLanguagePageFontName29, txtLanguagePageFontName30 };
+            LanguagePage_FontComplexTextBoxes        = new List<TextBox> { txtLanguagePageFontComplex1, txtLanguagePageFontComplex2, txtLanguagePageFontComplex3, txtLanguagePageFontComplex4, txtLanguagePageFontComplex5, txtLanguagePageFontComplex6, txtLanguagePageFontComplex7, txtLanguagePageFontComplex8, txtLanguagePageFontComplex9, txtLanguagePageFontComplex10, txtLanguagePageFontComplex11, txtLanguagePageFontComplex12, txtLanguagePageFontComplex13, txtLanguagePageFontComplex14, txtLanguagePageFontComplex15, txtLanguagePageFontComplex16, txtLanguagePageFontComplex17, txtLanguagePageFontComplex18, txtLanguagePageFontComplex19, txtLanguagePageFontComplex20, txtLanguagePageFontComplex21, txtLanguagePageFontComplex22, txtLanguagePageFontComplex23, txtLanguagePageFontComplex24, txtLanguagePageFontComplex25, txtLanguagePageFontComplex26, txtLanguagePageFontComplex27, txtLanguagePageFontComplex28, txtLanguagePageFontComplex29, txtLanguagePageFontComplex30 };
+            LanguagePage_FontTaWTextBoxes            = new List<TextBox> { txtLanguagePageFontTaW1, txtLanguagePageFontTaW2, txtLanguagePageFontTaW3, txtLanguagePageFontTaW4, txtLanguagePageFontTaW5, txtLanguagePageFontTaW6, txtLanguagePageFontTaW7, txtLanguagePageFontTaW8, txtLanguagePageFontTaW9, txtLanguagePageFontTaW10, txtLanguagePageFontTaW11, txtLanguagePageFontTaW12, txtLanguagePageFontTaW13, txtLanguagePageFontTaW14, txtLanguagePageFontTaW15, txtLanguagePageFontTaW16, txtLanguagePageFontTaW17, txtLanguagePageFontTaW18, txtLanguagePageFontTaW19, txtLanguagePageFontTaW20, txtLanguagePageFontTaW21, txtLanguagePageFontTaW22, txtLanguagePageFontTaW23, txtLanguagePageFontTaW24, txtLanguagePageFontTaW25, txtLanguagePageFontTaW26, txtLanguagePageFontTaW27, txtLanguagePageFontTaW28, txtLanguagePageFontTaW29, txtLanguagePageFontTaW30 };
+            LanguagePage_FontProbeTextBoxes          = new List<TextBox> { txtLanguagePageFontProbe1, txtLanguagePageFontProbe2, txtLanguagePageFontProbe3, txtLanguagePageFontProbe4, txtLanguagePageFontProbe5, txtLanguagePageFontProbe6, txtLanguagePageFontProbe7, txtLanguagePageFontProbe8, txtLanguagePageFontProbe9, txtLanguagePageFontProbe10, txtLanguagePageFontProbe11, txtLanguagePageFontProbe12, txtLanguagePageFontProbe13, txtLanguagePageFontProbe14, txtLanguagePageFontProbe15, txtLanguagePageFontProbe16, txtLanguagePageFontProbe17, txtLanguagePageFontProbe18, txtLanguagePageFontProbe19, txtLanguagePageFontProbe20, txtLanguagePageFontProbe21, txtLanguagePageFontProbe22, txtLanguagePageFontProbe23, txtLanguagePageFontProbe24, txtLanguagePageFontProbe25, txtLanguagePageFontProbe26, txtLanguagePageFontProbe27, txtLanguagePageFontProbe28, txtLanguagePageFontProbe29, txtLanguagePageFontProbe30 };
 
             for (int i=0; i<LanguagePageSupportedBoxes; i++)
             {
-                LanguagePageLanguageNameTextBoxes[i].TextAlign  = HorizontalAlignment.Left;
-                LanguagePageFontNameTextBoxes[i].TextAlign      = HorizontalAlignment.Left;
+                LanguagePage_LanguageNameTextBoxes[i].TextAlign  = HorizontalAlignment.Left;
+                LanguagePage_FontNameTextBoxes[i].TextAlign      = HorizontalAlignment.Left;
                
-                LanguagePageLanguageTaWTextBoxes[i].KeyUp   += setTaW;
-                LanguagePageFontTaWTextBoxes[i].KeyUp       += setTaW;
+                LanguagePage_LanguageTaWTextBoxes[i].KeyUp   += LanguagePage_setTaW;
+                LanguagePage_FontTaWTextBoxes[i].KeyUp       += LanguagePage_setTaW;
 
-                LanguagePageLanguageTaWTextBoxes[i].Tag     = LanguagePageLanguageNameTextBoxes[i];
-                LanguagePageLanguageMotherTextBoxes[i].Tag  = LanguagePageLanguageNameTextBoxes[i];
-                LanguagePageFontTaWTextBoxes[i].Tag         = LanguagePageFontNameTextBoxes[i];
+                LanguagePage_LanguageTaWTextBoxes[i].Tag     = LanguagePage_LanguageNameTextBoxes[i];
+                LanguagePage_LanguageMotherTextBoxes[i].Tag  = LanguagePage_LanguageNameTextBoxes[i];
+                LanguagePage_FontTaWTextBoxes[i].Tag         = LanguagePage_FontNameTextBoxes[i];
 
-                LanguagePageLanguageMotherTextBoxes[i].KeyUp += setMotherMark;
+                LanguagePage_LanguageMotherTextBoxes[i].KeyUp += LanguagePage_setMotherBox;
             }
             comboBoxLanguagePageSelection.DataSource = controll.getFamilyList();
-            comboBoxLanguagePageSelection.SelectedValueChanged += setLanguagePageComboBox;
-            refreshLanguagePage();
+            comboBoxLanguagePageSelection.SelectedValueChanged += LanguagePage_setComboBox;
+            LanguagePage_refresh();
         }
-        private void refreshLanguagePage()
+        private void LanguagePage_refresh()
         {
-            for (int i = 0; i < SupportedTalentCount; i++)
+            for(int i=0; i<TalentPage_CountBoxes; i++)
             {
-                controll.displayLanguageRow((String)comboBoxLanguagePageSelection.SelectedValue, i,
-                    LanguagePageLanguageNameTextBoxes[i], LanguagePageLanguageComplexTextBoxes[i], LanguagePageLanguageTaWTextBoxes[i], LanguagePageLanguageProbeTextBoxes[i], LanguagePageLanguageMotherTextBoxes[i],
-                    LanguagePageFontNameTextBoxes[i], LanguagePageFontComplexTextBoxes[i], LanguagePageFontTaWTextBoxes[i], LanguagePageFontProbeTextBoxes[i]);
+                LanguageFamily family   = controll.getFamilybyName((String)comboBoxLanguagePageSelection.SelectedValue);
+                LanguageTalent lt       = new LanguageTalent("", new List<string>());
+                FontTalent ft           = new FontTalent("", new List<string>());
+
+                if (family.Count() > i)
+                {
+                    lt = family.getLanguageTalent(i);
+                    ft = family.GetFontTalent(i);
+                }
+
+                if (0 == String.Compare("", lt.getName()))
+                {
+                    LanguagePage_LanguageNameTextBoxes[i].Text = "";
+                    LanguagePage_LanguageComplexTextBoxes[i].Text = "";
+                    LanguagePage_LanguageTaWTextBoxes[i].Text = "";
+                    LanguagePage_LanguageProbeTextBoxes[i].Text = "";
+                    LanguagePage_LanguageMotherTextBoxes[i].Text = "";
+                }
+                else
+                {
+                    LanguagePage_LanguageNameTextBoxes[i].Text = lt.getName();
+                    LanguagePage_LanguageComplexTextBoxes[i].Text = lt.getBe();
+                    LanguagePage_LanguageTaWTextBoxes[i].Text = lt.getTaW();
+                    LanguagePage_LanguageProbeTextBoxes[i].Text = lt.getProbeStringOne();
+                    LanguagePage_LanguageMotherTextBoxes[i].Text = lt.getMotherMark();
+                }
+                if (0 == String.Compare("", ft.getName()))
+                {
+                    LanguagePage_FontNameTextBoxes[i].Text = "";
+                    LanguagePage_FontComplexTextBoxes[i].Text = "";
+                    LanguagePage_FontTaWTextBoxes[i].Text = "";
+                    LanguagePage_FontProbeTextBoxes[i].Text = "";
+                }
+                else
+                {
+                    LanguagePage_FontNameTextBoxes[i].Text = ft.getName();
+                    LanguagePage_FontComplexTextBoxes[i].Text = ft.getBe();
+                    LanguagePage_FontTaWTextBoxes[i].Text = ft.getTaW();
+                    LanguagePage_FontProbeTextBoxes[i].Text = ft.getProbeStringOne();
+                }
             }
         }
-        private void setLanguagePageComboBox(Object sender, EventArgs e)
+        private void LanguagePage_setTaW(Object sender, EventArgs e)
         {
-            refreshLanguagePage();
+            TextBox box = (TextBox)sender;
+            TextBox name = (TextBox)box.Tag;
+
+            controll.setTaw(box.Text, name.Text);
+            LanguagePage_refresh();
         }
-        private void setMotherMark(Object sender, EventArgs e)
+        private void LanguagePage_setComboBox(Object sender, EventArgs e)
+        {
+            LanguagePage_refresh();
+        }
+        private void LanguagePage_setMotherBox(Object sender, EventArgs e)
         {
             TextBox box     = (TextBox)sender;
             TextBox name    = (TextBox)box.Tag;
 
             controll.setMotherMark(box.Text, name.Text);
-            refreshLanguagePage();
+            LanguagePage_refresh();
         }
         //#########################################################################################################################################################################
         //RewardPage 
@@ -1279,7 +1277,7 @@ namespace DSA_Project
             int page = 0;
             Int32.TryParse(txtRewardPage.Text, out page);
 
-            int number = (SupportedTalentCount * page);
+            int number = (TalentPage_CountBoxes * page);
 
             for (int i = 0; i < supportedRewardBoxes; i++)
             {
@@ -1317,28 +1315,15 @@ namespace DSA_Project
             int page = 0;
             Int32.TryParse(txtRewardPage.Text, out page);
 
-            number = (SupportedTalentCount * page) + BoxNumber;
+            number = (TalentPage_CountBoxes * page) + BoxNumber;
 
             CreateReward(number, BoxNumber, DSA_FEATURES.VORTEIL);
-
-            Console.WriteLine(BoxNumber);
         }
         //#########################################################################################################################################################################
 
 
 
-        private void setTaW(Object sender, EventArgs e)
-        {
-            TextBox box     = (TextBox)sender;
-            TextBox name    = (TextBox)box.Tag;
-
-            controll.setTaw(box.Text, name.Text);
-            refreshLanguagePage();
-        }
-
-        private void TAWChange(object sender, KeyEventArgs e)
-        {
-
-        }
+        
+        
     }
 }

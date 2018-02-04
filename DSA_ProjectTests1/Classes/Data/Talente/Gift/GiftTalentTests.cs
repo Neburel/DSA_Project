@@ -12,19 +12,19 @@ namespace DSA_Project.Tests
     public class GiftTalentTests : notFightingTests
     {
 
-        public override notFighting getnotFightingWithoutDeviateRequirement()
+        public override TalentnotFighting getnotFightingWithoutDeviateRequirement()
         {
             return new GiftTalent(TalentName, attributeList);
         }
-        public override notFighting getnotFightingWithDeviate()
+        public override TalentnotFighting getnotFightingWithDeviate()
         {
             return new GiftTalent(TalentName, attributeList);
         }
-        public override notFighting getnotFightingWithRequirement()
+        public override TalentnotFighting getnotFightingWithRequirement()
         {
             return new GiftTalent(TalentName, attributeList);
         }
-        public override notFighting getNotFightingWithDeviateRequirement()
+        public override TalentnotFighting getNotFightingWithDeviateRequirement()
         {
             return new GiftTalent(TalentName, attributeList);
         }

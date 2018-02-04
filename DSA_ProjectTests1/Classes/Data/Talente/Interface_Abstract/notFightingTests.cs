@@ -12,7 +12,7 @@ namespace DSA_Project.Tests
     public abstract class notFightingTests : TalentTests<DSA_ATTRIBUTE>
     {
         internal List<DSA_ATTRIBUTE> attributeList;
-        private notFighting talent;
+        private TalentnotFighting talent;
 
         public override InterfaceTalent getTalentWithoutDeviateRequirement()
         {
@@ -35,10 +35,10 @@ namespace DSA_Project.Tests
             return talent;
         }
         
-        public abstract notFighting getnotFightingWithoutDeviateRequirement();
-        public abstract notFighting getnotFightingWithDeviate();
-        public abstract notFighting getnotFightingWithRequirement();
-        public abstract notFighting getNotFightingWithDeviateRequirement();
+        public abstract TalentnotFighting getnotFightingWithoutDeviateRequirement();
+        public abstract TalentnotFighting getnotFightingWithDeviate();
+        public abstract TalentnotFighting getnotFightingWithRequirement();
+        public abstract TalentnotFighting getNotFightingWithDeviateRequirement();
 
         public override List<DSA_ATTRIBUTE> getProbeList()
         {

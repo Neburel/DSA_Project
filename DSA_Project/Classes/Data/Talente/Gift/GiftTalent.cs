@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    public class GiftTalent : notFighting
+    public class GiftTalent : TalentnotFighting
     {
         public GiftTalent(String name, List<DSA_ATTRIBUTE> probe) : base(name, probe, "", new List<TalentDeviate>(0), new List<TalentRequirement>(0))
         {

@@ -77,7 +77,7 @@ namespace DSA_Project.Tests
             Assert.AreEqual(currentTAW, talent.getTaW());
             Assert.AreEqual(currentTAWBonus, talent.getTAWBonus());
         }
-        public void controllTalentGeneral(notFighting talent)
+        public void controllTalentGeneral(TalentnotFighting talent)
         {
             Assert.AreEqual(currentRequirementString, talent.getRequirementString());
         }
@@ -217,7 +217,7 @@ namespace DSA_Project.Tests
             currentType = typeof(GiftTalent);
 
             controllInterfaceTalent(talent);
-            controllTalentGeneral((notFighting)talent);
+            controllTalentGeneral((TalentnotFighting)talent);
         }
 
         [TestMethod()]
@@ -239,7 +239,7 @@ namespace DSA_Project.Tests
             currentType = typeof(FontTalent);
 
             controllInterfaceTalent(talent);
-            controllTalentGeneral((notFighting)talent);
+            controllTalentGeneral((TalentnotFighting)talent);
         }
         [TestMethod()]
         public void loadBasicStructurLanguageTalent()
@@ -260,7 +260,7 @@ namespace DSA_Project.Tests
             currentType = typeof(LanguageTalent);
 
             controllInterfaceTalent(talent);
-            controllTalentGeneral((notFighting)talent);
+            controllTalentGeneral((TalentnotFighting)talent);
         }
 
         [TestMethod()]
@@ -425,7 +425,7 @@ namespace DSA_Project.Tests
             currentType = typeof(FontTalent);
 
             controllInterfaceTalent(talent);
-            controllTalentGeneral((notFighting)talent);
+            controllTalentGeneral((TalentnotFighting)talent);
         }
         [TestMethod()]
         public void loadCompleteStructurTalentLanguage()
@@ -446,7 +446,7 @@ namespace DSA_Project.Tests
             currentType = typeof(LanguageTalent);
 
             controllInterfaceTalent(talent);
-            controllTalentGeneral((notFighting)talent);
+            controllTalentGeneral((TalentnotFighting)talent);
         }
         [TestMethod()]
         public void loadCompleteStructurTalentWeaponless()

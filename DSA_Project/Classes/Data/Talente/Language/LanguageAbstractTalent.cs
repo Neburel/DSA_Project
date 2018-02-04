@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    public abstract class LanguageAbstractTalent : notFighting
+    public abstract class LanguageAbstractTalent : TalentnotFighting
     {
         String motherMark = "";
 

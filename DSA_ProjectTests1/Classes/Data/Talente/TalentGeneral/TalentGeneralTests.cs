@@ -20,21 +20,21 @@ namespace DSA_Project.Tests
         public abstract TalentGeneral getTalentGeneralWithRequirement();
         public abstract TalentGeneral getTalentGeneralWithDeviateRequirement();
         
-        public override notFighting getnotFightingWithoutDeviateRequirement()
+        public override TalentnotFighting getnotFightingWithoutDeviateRequirement()
         {
-            return (notFighting)getTalentGeneralWithoutDeviateRequirement();
+            return (TalentnotFighting)getTalentGeneralWithoutDeviateRequirement();
         }
-        public override notFighting getnotFightingWithDeviate()
+        public override TalentnotFighting getnotFightingWithDeviate()
         {
-            return (notFighting)getTalentGeneralWithDeviate();
+            return (TalentnotFighting)getTalentGeneralWithDeviate();
         }
-        public override notFighting getnotFightingWithRequirement()
+        public override TalentnotFighting getnotFightingWithRequirement()
         {
-            return (notFighting)getTalentGeneralWithRequirement();
+            return (TalentnotFighting)getTalentGeneralWithRequirement();
         }
-        public override notFighting getNotFightingWithDeviateRequirement()
+        public override TalentnotFighting getNotFightingWithDeviateRequirement()
         {
-            return (notFighting)getTalentGeneralWithDeviateRequirement();
+            return (TalentnotFighting)getTalentGeneralWithDeviateRequirement();
         }
 
         public override String getBEString()

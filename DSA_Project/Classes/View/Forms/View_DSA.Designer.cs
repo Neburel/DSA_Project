@@ -3963,207 +3963,207 @@
             // 
             resources.ApplyResources(this.PTTaw1, "PTTaw1");
             this.PTTaw1.Name = "PTTaw1";
-            this.PTTaw1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw2
             // 
             resources.ApplyResources(this.PTTaw2, "PTTaw2");
             this.PTTaw2.Name = "PTTaw2";
-            this.PTTaw2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw3
             // 
             resources.ApplyResources(this.PTTaw3, "PTTaw3");
             this.PTTaw3.Name = "PTTaw3";
-            this.PTTaw3.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw3.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw4
             // 
             resources.ApplyResources(this.PTTaw4, "PTTaw4");
             this.PTTaw4.Name = "PTTaw4";
-            this.PTTaw4.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw4.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw5
             // 
             resources.ApplyResources(this.PTTaw5, "PTTaw5");
             this.PTTaw5.Name = "PTTaw5";
-            this.PTTaw5.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw5.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw5.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw5.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw6
             // 
             resources.ApplyResources(this.PTTaw6, "PTTaw6");
             this.PTTaw6.Name = "PTTaw6";
-            this.PTTaw6.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw6.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw6.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw6.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw7
             // 
             resources.ApplyResources(this.PTTaw7, "PTTaw7");
             this.PTTaw7.Name = "PTTaw7";
-            this.PTTaw7.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw7.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw7.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw7.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw8
             // 
             resources.ApplyResources(this.PTTaw8, "PTTaw8");
             this.PTTaw8.Name = "PTTaw8";
-            this.PTTaw8.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw8.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw8.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw8.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw9
             // 
             resources.ApplyResources(this.PTTaw9, "PTTaw9");
             this.PTTaw9.Name = "PTTaw9";
-            this.PTTaw9.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw9.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw9.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw9.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw10
             // 
             resources.ApplyResources(this.PTTaw10, "PTTaw10");
             this.PTTaw10.Name = "PTTaw10";
-            this.PTTaw10.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw10.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw10.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw10.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw11
             // 
             resources.ApplyResources(this.PTTaw11, "PTTaw11");
             this.PTTaw11.Name = "PTTaw11";
-            this.PTTaw11.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw11.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw11.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw11.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw12
             // 
             resources.ApplyResources(this.PTTaw12, "PTTaw12");
             this.PTTaw12.Name = "PTTaw12";
-            this.PTTaw12.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw12.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw12.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw12.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw13
             // 
             resources.ApplyResources(this.PTTaw13, "PTTaw13");
             this.PTTaw13.Name = "PTTaw13";
-            this.PTTaw13.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw13.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw13.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw13.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw14
             // 
             resources.ApplyResources(this.PTTaw14, "PTTaw14");
             this.PTTaw14.Name = "PTTaw14";
-            this.PTTaw14.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw14.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw14.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw14.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw15
             // 
             resources.ApplyResources(this.PTTaw15, "PTTaw15");
             this.PTTaw15.Name = "PTTaw15";
-            this.PTTaw15.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw15.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw15.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw15.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw16
             // 
             resources.ApplyResources(this.PTTaw16, "PTTaw16");
             this.PTTaw16.Name = "PTTaw16";
-            this.PTTaw16.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw16.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw16.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw16.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw17
             // 
             resources.ApplyResources(this.PTTaw17, "PTTaw17");
             this.PTTaw17.Name = "PTTaw17";
-            this.PTTaw17.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw17.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw17.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw17.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw18
             // 
             resources.ApplyResources(this.PTTaw18, "PTTaw18");
             this.PTTaw18.Name = "PTTaw18";
-            this.PTTaw18.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw18.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw18.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw18.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw19
             // 
             resources.ApplyResources(this.PTTaw19, "PTTaw19");
             this.PTTaw19.Name = "PTTaw19";
-            this.PTTaw19.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw19.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw19.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw19.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw20
             // 
             resources.ApplyResources(this.PTTaw20, "PTTaw20");
             this.PTTaw20.Name = "PTTaw20";
-            this.PTTaw20.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw20.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw20.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw20.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw21
             // 
             resources.ApplyResources(this.PTTaw21, "PTTaw21");
             this.PTTaw21.Name = "PTTaw21";
-            this.PTTaw21.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw21.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw21.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw21.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw22
             // 
             resources.ApplyResources(this.PTTaw22, "PTTaw22");
             this.PTTaw22.Name = "PTTaw22";
-            this.PTTaw22.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw22.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw22.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw22.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw23
             // 
             resources.ApplyResources(this.PTTaw23, "PTTaw23");
             this.PTTaw23.Name = "PTTaw23";
-            this.PTTaw23.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw23.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw23.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw23.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw24
             // 
             resources.ApplyResources(this.PTTaw24, "PTTaw24");
             this.PTTaw24.Name = "PTTaw24";
-            this.PTTaw24.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw24.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw24.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw24.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw25
             // 
             resources.ApplyResources(this.PTTaw25, "PTTaw25");
             this.PTTaw25.Name = "PTTaw25";
-            this.PTTaw25.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw25.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw25.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw25.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw26
             // 
             resources.ApplyResources(this.PTTaw26, "PTTaw26");
             this.PTTaw26.Name = "PTTaw26";
-            this.PTTaw26.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw26.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw26.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw26.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw27
             // 
             resources.ApplyResources(this.PTTaw27, "PTTaw27");
             this.PTTaw27.Name = "PTTaw27";
-            this.PTTaw27.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw27.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw27.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw27.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw28
             // 
             resources.ApplyResources(this.PTTaw28, "PTTaw28");
             this.PTTaw28.Name = "PTTaw28";
-            this.PTTaw28.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw28.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw28.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw28.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw29
             // 
             resources.ApplyResources(this.PTTaw29, "PTTaw29");
             this.PTTaw29.Name = "PTTaw29";
-            this.PTTaw29.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw29.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw29.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw29.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // PTTaw30
             // 
             resources.ApplyResources(this.PTTaw30, "PTTaw30");
             this.PTTaw30.Name = "PTTaw30";
-            this.PTTaw30.TextChanged += new System.EventHandler(this.TAWChange);
-            this.PTTaw30.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TAWChange);
+            this.PTTaw30.TextChanged += new System.EventHandler(this.TalentPage_TAWChange);
+            this.PTTaw30.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TalentPage_TAWChange);
             // 
             // groupBoxBe
             // 
@@ -5389,420 +5389,420 @@
             this.PTAT1.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT1, "PTAT1");
             this.PTAT1.Name = "PTAT1";
-            this.PTAT1.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT1.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT4
             // 
             this.PTAT4.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT4, "PTAT4");
             this.PTAT4.Name = "PTAT4";
-            this.PTAT4.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT4.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT5
             // 
             this.PTAT5.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT5, "PTAT5");
             this.PTAT5.Name = "PTAT5";
-            this.PTAT5.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT5.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT3
             // 
             this.PTAT3.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT3, "PTAT3");
             this.PTAT3.Name = "PTAT3";
-            this.PTAT3.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT3.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT2
             // 
             this.PTAT2.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT2, "PTAT2");
             this.PTAT2.Name = "PTAT2";
-            this.PTAT2.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT2.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT6
             // 
             this.PTAT6.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT6, "PTAT6");
             this.PTAT6.Name = "PTAT6";
-            this.PTAT6.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT6.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT9
             // 
             this.PTAT9.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT9, "PTAT9");
             this.PTAT9.Name = "PTAT9";
-            this.PTAT9.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT9.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT10
             // 
             this.PTAT10.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT10, "PTAT10");
             this.PTAT10.Name = "PTAT10";
-            this.PTAT10.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT10.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT8
             // 
             this.PTAT8.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT8, "PTAT8");
             this.PTAT8.Name = "PTAT8";
-            this.PTAT8.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT8.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT7
             // 
             this.PTAT7.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT7, "PTAT7");
             this.PTAT7.Name = "PTAT7";
-            this.PTAT7.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT7.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT11
             // 
             this.PTAT11.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT11, "PTAT11");
             this.PTAT11.Name = "PTAT11";
-            this.PTAT11.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT11.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT14
             // 
             this.PTAT14.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT14, "PTAT14");
             this.PTAT14.Name = "PTAT14";
-            this.PTAT14.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT14.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT15
             // 
             this.PTAT15.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT15, "PTAT15");
             this.PTAT15.Name = "PTAT15";
-            this.PTAT15.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT15.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT13
             // 
             this.PTAT13.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT13, "PTAT13");
             this.PTAT13.Name = "PTAT13";
-            this.PTAT13.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT13.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT12
             // 
             this.PTAT12.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT12, "PTAT12");
             this.PTAT12.Name = "PTAT12";
-            this.PTAT12.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT12.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT16
             // 
             this.PTAT16.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT16, "PTAT16");
             this.PTAT16.Name = "PTAT16";
-            this.PTAT16.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT16.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT18
             // 
             this.PTAT18.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT18, "PTAT18");
             this.PTAT18.Name = "PTAT18";
-            this.PTAT18.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT18.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT17
             // 
             this.PTAT17.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT17, "PTAT17");
             this.PTAT17.Name = "PTAT17";
-            this.PTAT17.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT17.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTPA1
             // 
             this.PTPA1.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA1, "PTPA1");
             this.PTPA1.Name = "PTPA1";
-            this.PTPA1.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA1.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA4
             // 
             this.PTPA4.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA4, "PTPA4");
             this.PTPA4.Name = "PTPA4";
-            this.PTPA4.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA4.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA5
             // 
             this.PTPA5.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA5, "PTPA5");
             this.PTPA5.Name = "PTPA5";
-            this.PTPA5.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA5.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA3
             // 
             this.PTPA3.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA3, "PTPA3");
             this.PTPA3.Name = "PTPA3";
-            this.PTPA3.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA3.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA2
             // 
             this.PTPA2.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA2, "PTPA2");
             this.PTPA2.Name = "PTPA2";
-            this.PTPA2.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA2.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA6
             // 
             this.PTPA6.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA6, "PTPA6");
             this.PTPA6.Name = "PTPA6";
-            this.PTPA6.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA6.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA9
             // 
             this.PTPA9.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA9, "PTPA9");
             this.PTPA9.Name = "PTPA9";
-            this.PTPA9.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA9.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA10
             // 
             this.PTPA10.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA10, "PTPA10");
             this.PTPA10.Name = "PTPA10";
-            this.PTPA10.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA10.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA8
             // 
             this.PTPA8.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA8, "PTPA8");
             this.PTPA8.Name = "PTPA8";
-            this.PTPA8.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA8.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA7
             // 
             this.PTPA7.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA7, "PTPA7");
             this.PTPA7.Name = "PTPA7";
-            this.PTPA7.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA7.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA11
             // 
             this.PTPA11.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA11, "PTPA11");
             this.PTPA11.Name = "PTPA11";
-            this.PTPA11.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA11.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA14
             // 
             this.PTPA14.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA14, "PTPA14");
             this.PTPA14.Name = "PTPA14";
-            this.PTPA14.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA14.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA15
             // 
             this.PTPA15.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA15, "PTPA15");
             this.PTPA15.Name = "PTPA15";
-            this.PTPA15.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA15.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA13
             // 
             this.PTPA13.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA13, "PTPA13");
             this.PTPA13.Name = "PTPA13";
-            this.PTPA13.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA13.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA12
             // 
             this.PTPA12.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA12, "PTPA12");
             this.PTPA12.Name = "PTPA12";
-            this.PTPA12.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA12.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA16
             // 
             this.PTPA16.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA16, "PTPA16");
             this.PTPA16.Name = "PTPA16";
-            this.PTPA16.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA16.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA18
             // 
             this.PTPA18.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA18, "PTPA18");
             this.PTPA18.Name = "PTPA18";
-            this.PTPA18.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA18.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA17
             // 
             this.PTPA17.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA17, "PTPA17");
             this.PTPA17.Name = "PTPA17";
-            this.PTPA17.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA17.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTAT19
             // 
             this.PTAT19.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT19, "PTAT19");
             this.PTAT19.Name = "PTAT19";
-            this.PTAT19.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT19.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT20
             // 
             this.PTAT20.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT20, "PTAT20");
             this.PTAT20.Name = "PTAT20";
-            this.PTAT20.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT20.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT22
             // 
             this.PTAT22.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT22, "PTAT22");
             this.PTAT22.Name = "PTAT22";
-            this.PTAT22.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT22.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT21
             // 
             this.PTAT21.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT21, "PTAT21");
             this.PTAT21.Name = "PTAT21";
-            this.PTAT21.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT21.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTPA19
             // 
             this.PTPA19.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA19, "PTPA19");
             this.PTPA19.Name = "PTPA19";
-            this.PTPA19.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA19.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA20
             // 
             this.PTPA20.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA20, "PTPA20");
             this.PTPA20.Name = "PTPA20";
-            this.PTPA20.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA20.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA22
             // 
             this.PTPA22.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA22, "PTPA22");
             this.PTPA22.Name = "PTPA22";
-            this.PTPA22.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA22.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA21
             // 
             this.PTPA21.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA21, "PTPA21");
             this.PTPA21.Name = "PTPA21";
-            this.PTPA21.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA21.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTAT23
             // 
             this.PTAT23.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT23, "PTAT23");
             this.PTAT23.Name = "PTAT23";
-            this.PTAT23.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT23.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTPA23
             // 
             this.PTPA23.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA23, "PTPA23");
             this.PTPA23.Name = "PTPA23";
-            this.PTPA23.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA23.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTAT26
             // 
             this.PTAT26.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT26, "PTAT26");
             this.PTAT26.Name = "PTAT26";
-            this.PTAT26.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT26.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT27
             // 
             this.PTAT27.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT27, "PTAT27");
             this.PTAT27.Name = "PTAT27";
-            this.PTAT27.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT27.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT25
             // 
             this.PTAT25.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT25, "PTAT25");
             this.PTAT25.Name = "PTAT25";
-            this.PTAT25.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT25.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT24
             // 
             this.PTAT24.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT24, "PTAT24");
             this.PTAT24.Name = "PTAT24";
-            this.PTAT24.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT24.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT28
             // 
             this.PTAT28.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT28, "PTAT28");
             this.PTAT28.Name = "PTAT28";
-            this.PTAT28.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT28.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT30
             // 
             this.PTAT30.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT30, "PTAT30");
             this.PTAT30.Name = "PTAT30";
-            this.PTAT30.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT30.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTAT29
             // 
             this.PTAT29.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTAT29, "PTAT29");
             this.PTAT29.Name = "PTAT29";
-            this.PTAT29.TextChanged += new System.EventHandler(this.ATChanged);
+            this.PTAT29.TextChanged += new System.EventHandler(this.TalentPage_ATChanged);
             // 
             // PTPA26
             // 
             this.PTPA26.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA26, "PTPA26");
             this.PTPA26.Name = "PTPA26";
-            this.PTPA26.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA26.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA27
             // 
             this.PTPA27.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA27, "PTPA27");
             this.PTPA27.Name = "PTPA27";
-            this.PTPA27.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA27.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA25
             // 
             this.PTPA25.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA25, "PTPA25");
             this.PTPA25.Name = "PTPA25";
-            this.PTPA25.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA25.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA24
             // 
             this.PTPA24.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA24, "PTPA24");
             this.PTPA24.Name = "PTPA24";
-            this.PTPA24.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA24.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA28
             // 
             this.PTPA28.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA28, "PTPA28");
             this.PTPA28.Name = "PTPA28";
-            this.PTPA28.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA28.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA30
             // 
             this.PTPA30.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA30, "PTPA30");
             this.PTPA30.Name = "PTPA30";
-            this.PTPA30.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA30.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // PTPA29
             // 
             this.PTPA29.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.PTPA29, "PTPA29");
             this.PTPA29.Name = "PTPA29";
-            this.PTPA29.TextChanged += new System.EventHandler(this.PAChanged);
+            this.PTPA29.TextChanged += new System.EventHandler(this.TalentPage_PAChanged);
             // 
             // groupBox3
             // 

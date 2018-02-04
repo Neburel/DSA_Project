@@ -20,19 +20,19 @@ namespace DSA_Project.Tests
         public abstract LanguageAbstractTalent getLanguageAbstractTalentWithRequirement();
         public abstract LanguageAbstractTalent getLanguageAbstractTalentWithDeviateRequirement();
 
-        public override notFighting getnotFightingWithDeviate()
+        public override TalentnotFighting getnotFightingWithDeviate()
         {
             return getLanguageAbstractTalentWithoutDeviateRequirement();
         }
-        public override notFighting getNotFightingWithDeviateRequirement()
+        public override TalentnotFighting getNotFightingWithDeviateRequirement()
         {
             return getLanguageAbstractTalentWithDeviate();
         }
-        public override notFighting getnotFightingWithoutDeviateRequirement()
+        public override TalentnotFighting getnotFightingWithoutDeviateRequirement()
         {
             return getLanguageAbstractTalentWithRequirement();
         }
-        public override notFighting getnotFightingWithRequirement()
+        public override TalentnotFighting getnotFightingWithRequirement()
         {
             return getLanguageAbstractTalentWithDeviateRequirement();
         }
