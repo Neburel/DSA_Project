@@ -57,7 +57,7 @@ namespace DSA_Project
             setUPHeroPageEnergien();
             HeroPage_setUPFeatureLists();
 
-            controll = (ControllClass)new ControllClassDSA(this);
+            setUPForm_DSA();
 
             setUPTalentBox();
             TalentPage_setUP();
@@ -70,7 +70,74 @@ namespace DSA_Project
               , true);
 
         }
-        public void load()
+        private void setUPForm_DSA()
+        {
+            this.Name   = "DSA";
+            this.Text   = "DSA";
+            controll    = new ControllClass(ManagmentSaveStrings.DSA);
+
+            for (int i = 0; i < Enum.GetNames(typeof(DSA_BASICVALUES)).Length; i++)
+            {
+                setLBLVisible((DSA_BASICVALUES)i, true);
+                setBOXVisible((DSA_BASICVALUES)i, true);
+            }
+            for (int i = 0; i < Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length; i++)
+            {
+                setBOXVisible((DSA_ATTRIBUTE)i, true);
+            }
+            for (int i = 0; i < Enum.GetNames(typeof(DSA_MONEY)).Length; i++)
+            {
+                setBOXVisible((DSA_MONEY)i, true);
+            }
+
+            setLBLVisible(DSA_BASICVALUES.FREEVALUE1, true, "Modifikatoren:");
+            setLBLVisible(DSA_BASICVALUES.FREEVALUE2, false);
+            setLBLVisible(DSA_BASICVALUES.FREEVALUE3, false);
+            setLBLVisible(DSA_BASICVALUES.FREEVALUE4, true, "Göttergeschenke:");
+            setLBLVisible(DSA_BASICVALUES.FREEVALUE5, false);
+            setLBLVisible(DSA_BASICVALUES.FREEVALUE6, false);
+            setLBLVisible(DSA_BASICVALUES.FREEVALUE7, false);
+
+            setLBLVisible(DSA_MONEY.D, true, "Geld");
+            setLBLVisible(DSA_MONEY.BANK, true, "Bank");            
+        }   
+        private void setUPForm_PNP()
+        {
+            controll    = new ControllClass(ManagmentSaveStrings.PNP);
+            this.Name   = "PNP";
+            this.Text   = "PNP";
+
+            for (int i = 0; i < Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length; i++)
+            {
+                setBOXVisible((DSA_ATTRIBUTE)i, true);
+            }
+            for (int i = 0; i < Enum.GetNames(typeof(DSA_BASICVALUES)).Length; i++)
+            {
+                setLBLVisible((DSA_BASICVALUES)i, true);
+            }
+            for (int i = 0; i < Enum.GetNames(typeof(DSA_MONEY)).Length; i++)
+            {
+                setLBLVisible((DSA_MONEY)i, false);
+                setBOXVisible((DSA_MONEY)i, false);
+            }
+
+            setBOXVisible(DSA_ATTRIBUTE.SO, false);
+
+            setLBLVisible(DSA_BASICVALUES.GOTTHEIT, true, "Glaube:");
+            setLBLVisible(DSA_BASICVALUES.FREEVALUE1, true, "Modifikatoren:");
+            setLBLVisible(DSA_BASICVALUES.FREEVALUE2, false);
+            setLBLVisible(DSA_BASICVALUES.FREEVALUE3, false);
+            setLBLVisible(DSA_BASICVALUES.FREEVALUE4, true, "Techstufe:");
+            setLBLVisible(DSA_BASICVALUES.FREEVALUE5, true, "Fraktion:");
+            setBOXVisible(DSA_BASICVALUES.FREEVALUE6, false);
+            setLBLVisible(DSA_BASICVALUES.FREEVALUE6, false);
+            setBOXVisible(DSA_BASICVALUES.FREEVALUE7, false);
+            setLBLVisible(DSA_BASICVALUES.FREEVALUE7, false);
+
+            setBOXVisible(DSA_MONEY.BANK, true);
+            setLBLVisible(DSA_MONEY.BANK, true, "Codes");
+        }
+        private void load()
         {
             txtAbenteuerpunkte.Text = controll.AdvanturePoints().ToString();
 
@@ -85,7 +152,7 @@ namespace DSA_Project
             TalentPage_refresh();
             refreshHeroPageAdvancedValues();
         }
-        public void refreshHeroPage()
+        private void refreshHeroPage()
         {
             refreshHeroPageAttributValues();
             refreshHeroPageAdvancedValues();
@@ -98,7 +165,7 @@ namespace DSA_Project
             Int32.TryParse(number, out BoxNumber);
             return BoxNumber;
         }
-        public void setBOXVisible<Tenum>(Tenum stat, bool visible) where Tenum: struct, IComparable, IFormattable, IConvertible
+        private void setBOXVisible<Tenum>(Tenum stat, bool visible) where Tenum: struct, IComparable, IFormattable, IConvertible
         {
             if (typeof(Tenum) == typeof(DSA_BASICVALUES))
             {
@@ -123,11 +190,11 @@ namespace DSA_Project
                 setboxVisible(atr, visible);
             }
         }
-        public void setLBLVisible<Tenum>(Tenum stat, bool visible)
+        private void setLBLVisible<Tenum>(Tenum stat, bool visible)
         {
             setLBLVisible(stat, visible, null);
         }
-        public void setLBLVisible<Tenum>(Tenum stat, bool visible, String name)
+        private void setLBLVisible<Tenum>(Tenum stat, bool visible, String name)
         {
             if (typeof(Tenum) == typeof(DSA_BASICVALUES))
             {
@@ -166,6 +233,7 @@ namespace DSA_Project
         private void btnLoadCharacter_Click(object sender, EventArgs e)
         {
             controll.load();
+            this.load();
         }
         private void btnSaveCharacter_Click(object sender, EventArgs e)
         {
@@ -173,19 +241,12 @@ namespace DSA_Project
         }
         private void btnToolChangeDSA_PNP_Click(object sender, EventArgs e)
         {
-            Type classa = controll.GetType();
-            Type classb = new ControllClassDSA(this).GetType();
-
-            if (classa.Equals(classb))
+            if (String.Compare(this.Name, "PNP")==0)
             {
-                controll = new ControllClassPNP(this);
-                this.Name = "PNP";
-                this.Text = "PNP";
-            } else
+                setUPForm_DSA();
+            } else if(String.Compare(this.Name, "DSA") ==0)
             {
-                controll = new ControllClassDSA(this);
-                this.Name = "DSA";
-                this.Text = "DSA";
+                setUPForm_PNP();
             }
             this.load();
         }
@@ -305,16 +366,19 @@ namespace DSA_Project
         {
             TextBox box = (TextBox)sender;
             box.Text = controll.AttributeAKT((DSA_ATTRIBUTE)box.Tag, box.Text).ToString();
+            refreshHeroPage();
         }
         private void AttributMOD_KeyUp(object sender, EventArgs e)
         {
             TextBox box = (TextBox)sender;
             box.Text = controll.AttributeMOD((DSA_ATTRIBUTE)box.Tag, box.Text).ToString();
+            refreshHeroPage();
         }
         private void AttributMAX_KeyUp(object sender, EventArgs e)
         {
             TextBox box = (TextBox)sender;
             box.Text = controll.AttributeMAX((DSA_ATTRIBUTE)box.Tag, box.Text).ToString();
+            refreshHeroPage();
         }
         private void AttributeLabel_Click(object sender, EventArgs e)
         {

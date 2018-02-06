@@ -97,7 +97,7 @@ namespace DSA_Project.Tests
         }
 
         [TestMethod]
-        public override void testGetProbeStringOne_CharakternotSet()
+        public override void TalentTest_getProbeStringOne_CharakternotSet()
         {
             InterfaceTalent talent  = getNotFightingWithDeviateRequirement();
             charakter               = null;

@@ -13,7 +13,7 @@ namespace DSA_Project.Tests
     {
         public override List<DSA_ATTRIBUTE> getProbeList()
         {
-            return new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.FF };
+            return new List<DSA_ATTRIBUTE> { DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.KL, DSA_ATTRIBUTE.IN };
         }
 
         public override LanguageAbstractTalent getLanguageAbstractTalentWithDeviate()

@@ -1,10 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DSA_Project;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DSA_Project.Tests
 {
@@ -164,7 +161,7 @@ namespace DSA_Project.Tests
         }
         
         [TestMethod]
-        public void JustGeneratetTest_WithoutDiverateRequirement()
+        public void TalentTest_JustGeneratetTest_WithoutDiverateRequirement()
         {
             charakter = null;
 
@@ -188,9 +185,9 @@ namespace DSA_Project.Tests
         }
         
         [TestMethod]
-        abstract public void testGetProbeStringOne_CharakternotSet();
+        abstract public void TalentTest_getProbeStringOne_CharakternotSet();
         [TestMethod]
-        public void testGetProbeStringTwo_CharakterSet()
+        public void TalentTest_getProbeStringTwo_CharakterSet()
         {
             InterfaceTalent talent = getTalentWithDeviateRequirement();
             talent.setCharacter(charakter);
@@ -198,14 +195,14 @@ namespace DSA_Project.Tests
         }
         
         [TestMethod]
-        public void testtoString()
+        public void TalentTest_toString()
         {
             InterfaceTalent talent = getTalentWithDeviateRequirement();
             Assert.AreEqual(getTalentName(), talent.ToString());
         }
         
         [TestMethod]
-        public void setTaW()
+        public void TalentTest_setTaW()
         {
             InterfaceTalent talent  = getTalentWithoutDeviateRequirement();
             int TaW                 = random.Next(maxTaW);
@@ -223,7 +220,7 @@ namespace DSA_Project.Tests
         }
 
         [TestMethod]
-        public void setBonusTaW()
+        public void TalentTest_setBonusTaW()
         {
             InterfaceTalent talent = getTalentWithoutDeviateRequirement();
             Charakter charakter = RandomGenerator.generateCharacter();
@@ -235,7 +232,7 @@ namespace DSA_Project.Tests
         }
 
         [TestMethod]
-        public void testDeviate()
+        public void TalentTest_Deviate()
         {
             InterfaceTalent talent          = getTalentWithDeviate();
             List<TalentDeviate> deviateList = getTalentDeviateList();
@@ -274,7 +271,7 @@ namespace DSA_Project.Tests
         }
 
         [TestMethod]
-        public void testRequirement()
+        public void TalentTest_Requirement()
         {
             InterfaceTalent talent                  = getTalentWithRequirement();
             List<TalentRequirement> requirementList = getTalentRequirementList();
@@ -292,7 +289,7 @@ namespace DSA_Project.Tests
 
         [TestMethod()]
         [ExpectedException(typeof(NullReferenceException), "Character null")]
-        public void setTaWwithoutTaW()
+        public void TalentTest_setTaWwithoutTaW()
         {
             InterfaceTalent talent = getTalentWithDeviateRequirement();
             talent.setTaw("0");
@@ -301,7 +298,7 @@ namespace DSA_Project.Tests
 
         [TestMethod()]
         [ExpectedException(typeof(Exception))]
-        public void Talent_notExistingDiverate()
+        public void TalentTest_notExistingDiverate()
         {
             TalentCrafting craftingTalent = new TalentCrafting("notExist", RandomGenerator.generateAttributList(), "", new List<TalentDeviate> { new TalentDeviate("____", 0) }, new List<TalentRequirement>());
             charakter.addTalent(craftingTalent);

@@ -48,6 +48,7 @@ namespace DSA_Project
                 {
                     Exception e = new Exception("This file is not Supported");
                     Log.throwError(e);
+                    throw e;
                 }
             }
 
@@ -193,6 +194,7 @@ namespace DSA_Project
                 {
                     Exception e = new Exception("Fehler bei der Featurenummerierung");
                     Log.throwError(e);
+                    throw e;
                 }
                 charakter.addFeature(number, feature);
             }
@@ -301,6 +303,7 @@ namespace DSA_Project
                 {
                     Exception e = new ArgumentNullException("Das Talent " + name + " exestiert nicht, wurde aber versucht in dem Feature " + feature.getName() + " zu laden");
                     Log.throwError(e);
+                    throw e;
                 }
 
                 feature.addTalent(talent, x);
@@ -344,6 +347,7 @@ namespace DSA_Project
             {
                 Exception e = new MissingMemberException("Corrput File. Talent Without Name");
                 Log.throwError(e);
+                throw e;
             }
 
             Name = Name.Replace(".", " ");

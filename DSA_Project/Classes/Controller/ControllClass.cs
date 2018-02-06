@@ -19,17 +19,17 @@ namespace DSA_Project
     public enum DSA_BASICVALUES { NAME, ALTER, GESCHLECHT, GRÖSE, GEWICHT, AUGENFARBE, HAUTFARBE, HAARFARBE, FAMILIENSTAND, ANREDE, GOTTHEIT, RASSE, KULTUR, PROFESSION, FREEVALUE1, FREEVALUE2, FREEVALUE3, FREEVALUE4, FREEVALUE5, FREEVALUE6, FREEVALUE7 }
     public enum DSA_MONEY { D, S, H, K, BANK }
     //###########################################################################################################################################################################################################################################################
-    public abstract class ControllClass
+    public class ControllClass
     {
-        protected DSA form;
+        private String rootPath;
         private Charakter Charakter;
         private ControllTalent controllTalent;
-        ControllLanguageFamily controllLanguageFamily;
+        private ControllLanguageFamily controllLanguageFamily;
 
 
-        public ControllClass(DSA form)
+        public ControllClass(String rootPath)
         {
-            this.form = form;
+            this.rootPath = rootPath;
             setUP();
             Charakter = createNewCharater();
         }
@@ -37,11 +37,10 @@ namespace DSA_Project
         //Tools
         //###################################################################################################################################
         //Laden und Speichern von Daten 
-        protected abstract String getRootPath();
         public String getResourcePath()
         {
             String path = Path.Combine(ManagmentSaveStrings.currentDirectory, ManagmentSaveStrings.Recources);
-            path        = Path.Combine(path, getRootPath());
+            path        = Path.Combine(path, rootPath);
             return path;
         }
         public void save()
@@ -69,14 +68,13 @@ namespace DSA_Project
             {
                 Charakter = LoadCharakterXML.loadCharakter(openFileDialog.FileName, createNewCharater(), controllTalent);
             }
-            form.load();
         }
         public Charakter createNewCharater()
         {
             Charakter charakter = new Charakter();
 
             String path;
-            path = Path.Combine(ManagmentSaveStrings.currentDirectory, getRootPath());
+            path = Path.Combine(ManagmentSaveStrings.currentDirectory, rootPath);
             path = Path.Combine(path, ManagmentSaveStrings.SaveLocation);
             
             controllTalent = new ControllTalent(getResourcePath());
@@ -100,14 +98,10 @@ namespace DSA_Project
         //###################################################################################################################################
         //Einrichtung der Form
         private void setUP()
-        {
-            setUPBasicValues();
-            setUPMoney();
-            setUPAttribute();            
+        {  
         }
         //###################################################################################################################################
         //Einrichtung der Attribute
-        protected abstract void setUPAttribute();
         public int AttributeAKT(DSA_ATTRIBUTE attribute)
         {
             return Charakter.getAttributeAKT(attribute);
@@ -119,7 +113,6 @@ namespace DSA_Project
             {
                 Charakter.setAttribute(attribute, wert_int);
             }
-            form.refreshHeroPage();
             return AttributeAKT(attribute);
         }
         public int AttributeMOD(DSA_ATTRIBUTE attribute)
@@ -132,8 +125,7 @@ namespace DSA_Project
             if (isNumeric == true)
             {
                 /*Dieser Wert Soll Aktuell noch nicht geändert werden*/
-            }
-            form.refreshHeroPage();
+            }            
             return AttributeMOD(attribute);
         }
         public int AttributeMAX(DSA_ATTRIBUTE attribute)
@@ -163,7 +155,6 @@ namespace DSA_Project
         }
         //###################################################################################################################################
         //Einrichtung der BasicValues
-        protected abstract void setUPBasicValues();
         public String BasicValue(DSA_BASICVALUES value)
         {
             return Charakter.getBasicValue(value);
@@ -186,7 +177,6 @@ namespace DSA_Project
             {
                 Charakter.setAdvancedValueAKT(advancedValue, value_out);
             }
-            form.refreshHeroPage();
             return AdvancedValueAKT(advancedValue);
         }
         public int AdvancedValueMOD(DSA_ADVANCEDVALUES advancedValue)
@@ -217,7 +207,6 @@ namespace DSA_Project
         }
         //###################################################################################################################################
         //Einrichtung der Anderen
-        protected abstract void setUPMoney();
         public int Money(DSA_MONEY type)
         {
             return Charakter.getMoney(type);

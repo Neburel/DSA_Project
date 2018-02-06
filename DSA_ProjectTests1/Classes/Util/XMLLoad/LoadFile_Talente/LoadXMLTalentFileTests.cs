@@ -227,7 +227,7 @@ namespace DSA_Project.Tests
             currentName = "BasicConstructionTalent01";
             currentComplexeName = "BasicConstructionTalent01";
             currentProbeStringOne = "-";
-            currentProbeStringTwo = "KL/KL/FF";
+            currentProbeStringTwo = "KL/KL/IN";
             currentBE = "-";
             currentDeviate = "-";   //Der Unterschied ist Tatsächlich Vorhanden!
             currentTAW = "-";
@@ -413,7 +413,7 @@ namespace DSA_Project.Tests
             currentName = "CompleteConstructionTalent01";
             currentComplexeName = "CompleteConstructionTalent01";
             currentProbeStringOne = "-";
-            currentProbeStringTwo = "KL/KL/FF";
+            currentProbeStringTwo = "KL/KL/IN";
             currentBE = "-";
             currentDeviate = "-";   //Der Unterschied ist Tatsächlich Vorhanden!
             currentTAW = "-";

@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DSA_Project
 {
+    [ExcludeFromCodeCoverage]
     public static class Log
     {
         private static void writeMessage(String line)
@@ -33,7 +35,7 @@ namespace DSA_Project
             String localDateTime = DateTime.Now.ToString();
 
             if (!File.Exists(LogFile))
-            {
+            {   
                 String[] lines = { localDateTime + " Created" };
                 System.IO.File.WriteAllLines(@LogFile, lines);
             }
@@ -48,7 +50,6 @@ namespace DSA_Project
             String exception = e.GetType().ToString();
 
             writeMessage(exception + ", " + e.Message);
-            throw e;
         }
     }
 }
