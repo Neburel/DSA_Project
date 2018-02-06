@@ -15,6 +15,20 @@ namespace DSA_Project
     [ExcludeFromCodeCoverage]
     public partial class DSA : Form
     {
+        //#########################################################################################################################################################################
+        //Structs
+        public struct HeroPageFeatureTag
+        {
+            public DSA_FEATURES type;
+            public int number;
+
+            public HeroPageFeatureTag(DSA_FEATURES t, int n)
+            {
+                type = t;
+                number = n;
+            }
+        }
+        //#########################################################################################################################################################################
         System.Drawing.Image backround = (System.Drawing.Image)DSA_Project.Properties.Resources.Old_Parchment_Wallpaper_15;
         private ControllClass controll;
 
@@ -140,7 +154,6 @@ namespace DSA_Project
                 setlblName(atr, name);
             }
         }
-        
         //#########################################################################################################################################################################
         //ToolPage
         private void setUPtoolPage()
@@ -224,7 +237,7 @@ namespace DSA_Project
             txtGesamtAKT.Text = controll.getAttributeAKTSumme().ToString();
             txtGesamtMAX.Text = controll.getAttributeMAXSumme().ToString();
         }
-        public void loadHeroPageAttributMark()
+        private void loadHeroPageAttributMark()
         {
             for(int i=0; i<Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length; i++)
             {
@@ -824,6 +837,19 @@ namespace DSA_Project
         private List<TextBox> TalentPage_PATextBoxes;
         private List<GroupBox> TalentPage_GroupBoxes;
         private List<RadioButton> TalentPage_RadioButtons;
+        private InterfaceTalent TalentPage_getTalent(int number)
+        {
+            InterfaceTalent talent = null;
+            for (int i = 0; i < TalentPage_RadioButtons.Count; i++)
+            {
+                if (TalentPage_RadioButtons[i].Checked)
+                {
+                    InterfaceTalent type = (InterfaceTalent)TalentPage_RadioButtons[i].Tag;
+                    talent = controll.getTalent(type, number);
+                }
+            }
+            return talent;
+        }
         private void TalentPage_setUP()
         {
             txtTalentLetterCurrentPage.Text = "1";
@@ -865,8 +891,8 @@ namespace DSA_Project
             talentPageComboBoxGifts.DataSource = null;
             talentPageComboBoxGifts.Items.Clear();
             talentPageComboBoxGifts.DataSource = controll.getTalentListController<GiftTalent>();
-            talentPageComboBoxGifts.SelectedValueChanged += learingBoxComboBoxTawChanged;
-            talentPageBTNlearingGift.Click += learningGift;
+            talentPageComboBoxGifts.SelectedValueChanged += TalentPage_learingBoxComboBoxTawChanged;
+            talentPageBTNlearingGift.Click += TalentPage_learningGift;
 
             for(int i=0; i<TalentPage_CountBoxes; i++)
             {
@@ -905,19 +931,6 @@ namespace DSA_Project
             TalentPage_ATTextBoxes[i].Text = "";
             TalentPage_PATextBoxes[i].Text = "";
             TalentPage_TaWBonusTextBoxes[i].Text = "";
-        }
-        private InterfaceTalent TalentPage_getTalent(int number)
-        {
-            InterfaceTalent talent = null;
-            for (int i = 0; i < TalentPage_RadioButtons.Count; i++)
-            {
-                if (TalentPage_RadioButtons[i].Checked)
-                {
-                    InterfaceTalent type = (InterfaceTalent)TalentPage_RadioButtons[i].Tag;
-                    talent = controll.getTalent(type, number);
-                }
-            }
-            return talent;
         }
         private void TalentPage_DisplayTalent(InterfaceTalent type)
         {
@@ -1066,7 +1079,7 @@ namespace DSA_Project
             InterfaceTalent type = (InterfaceTalent)button.Tag;
             TalentPage_DisplayTalent(type);
         }
-        private void learingBoxComboBoxTawChanged(object sender, EventArgs e)
+        private void TalentPage_learingBoxComboBoxTawChanged(object sender, EventArgs e)
         {
             GiftTalent talent = (GiftTalent)talentPageComboBoxGifts.SelectedValue;
             if (talent == null)
@@ -1076,7 +1089,7 @@ namespace DSA_Project
             }
             talentPageLearningBoxtxtTaW.Text = talent.getProbeStringTwo();
         }
-        private void learningGift(object sender, EventArgs e)
+        private void TalentPage_learningGift(object sender, EventArgs e)
         {
             GiftTalent talent = (GiftTalent)talentPageComboBoxGifts.SelectedValue;
             List<InterfaceTalent> list = (List<InterfaceTalent>)talentPageComboBoxGifts.DataSource;

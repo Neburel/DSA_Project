@@ -117,12 +117,6 @@ namespace DSA_Project
             markedAttributs.Remove(att);
             markedAttributs.Add(att, b);
         }
-        public bool getMarkedAttribut(DSA_ATTRIBUTE att)
-        {
-            bool b;
-            markedAttributs.TryGetValue(att, out b);
-            return b;
-        }
         public int getSummeAttributeAKT()
         {
             int summe = 0;
@@ -162,6 +156,12 @@ namespace DSA_Project
             attributeAKT.TryGetValue(attribute, out akt);
 
             return (akt + featurePoints);
+        }
+        public bool getMarkedAttribut(DSA_ATTRIBUTE att)
+        {
+            bool b;
+            markedAttributs.TryGetValue(att, out b);
+            return b;
         }
         //###############################################################################################################################################
         //Advanced Values

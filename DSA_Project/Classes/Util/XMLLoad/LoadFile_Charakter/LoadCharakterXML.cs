@@ -46,7 +46,8 @@ namespace DSA_Project
             {
                 if(characterNode == null || heldenbriefNode == null || talentbriefNode == null)
                 {
-                    throw new Exception("this file is not Supported");
+                    Exception e = new Exception("This file is not Supported");
+                    Log.throwError(e);
                 }
             }
 
@@ -190,7 +191,8 @@ namespace DSA_Project
 
                 if (!Int32.TryParse(Number, out number))
                 {
-                    throw new Exception("Fehler bei der Featurenummerierung");
+                    Exception e = new Exception("Fehler bei der Featurenummerierung");
+                    Log.throwError(e);
                 }
                 charakter.addFeature(number, feature);
             }
@@ -297,7 +299,8 @@ namespace DSA_Project
 
                 if(talent == null)
                 {
-                    throw new ArgumentNullException("Das Talent " + name + " exestiert nicht, wurde aber versucht in dem Feature " + feature.getName() + " zu laden");
+                    Exception e = new ArgumentNullException("Das Talent " + name + " exestiert nicht, wurde aber versucht in dem Feature " + feature.getName() + " zu laden");
+                    Log.throwError(e);
                 }
 
                 feature.addTalent(talent, x);
@@ -339,7 +342,8 @@ namespace DSA_Project
             }
             if (Name == null)
             {
-                throw new MissingMemberException("Corrput File. Talent Without Name");
+                Exception e = new MissingMemberException("Corrput File. Talent Without Name");
+                Log.throwError(e);
             }
 
             Name = Name.Replace(".", " ");
@@ -350,7 +354,7 @@ namespace DSA_Project
                 talent = tControll.getTalent(Name);
                 if (talent == null)
                 {
-                    Console.WriteLine("Schreibe kommentar in Log Script: Das Talent exestiert im aktuellen Kontext nicht " + Name);
+                    Log.writeLogLine("LoadCharakterXML: Das Talent exestiert im aktuellen Kontext nicht " + Name);
                     return;
                 }
                 charakter.addTalent(talent);

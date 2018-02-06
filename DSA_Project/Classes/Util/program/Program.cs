@@ -16,6 +16,8 @@ namespace DSA_Project
         [STAThread]
         static void Main()
         {
+            Log.writeLogLine("Start DSA_Project");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new DSA());

@@ -12,19 +12,6 @@ using System.Drawing;
 namespace DSA_Project
 {
     //##########################################################################################################################################################################################################################################################
-    //Structs
-    public struct HeroPageFeatureTag
-    {
-        public DSA_FEATURES type;
-        public int number;
-
-        public HeroPageFeatureTag(DSA_FEATURES t, int n)
-        {
-            type = t;
-            number = n;
-        }
-    }
-    //##########################################################################################################################################################################################################################################################
     //Enums
     public enum DSA_ATTRIBUTE { MU, KL, IN, CH, FF, GE, KO, KK, SO }
     public enum DSA_ENERGIEN { LEBENSENERGIE, AUSDAUER, ASTRALENERGIE, KARMAENERGIE, MAGIERESISTENZ }
