@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Reflection;
 using System.ComponentModel;
 using System.Drawing;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DSA_Project
 {
@@ -30,53 +31,26 @@ namespace DSA_Project
         public ControllClass(String rootPath)
         {
             this.rootPath = rootPath;
-            setUP();
             Charakter = createNewCharater();
         }
         //###################################################################################################################################
         //Tools
         //###################################################################################################################################
         //Laden und Speichern von Daten 
-        public String getResourcePath()
+        private String getResourcePath()
         {
             String path = Path.Combine(ManagmentSaveStrings.currentDirectory, ManagmentSaveStrings.Recources);
             path        = Path.Combine(path, rootPath);
             return path;
         }
-        public void save()
-        {
-            String path = Path.Combine(getResourcePath(), ManagmentSaveStrings.SaveLocation);
-
-            SaveFileDialog savefileDialog = new SaveFileDialog();
-            savefileDialog.InitialDirectory = path;
-            savefileDialog.Filter = "xmlFiles |*xml";
-
-            if (savefileDialog.ShowDialog() == DialogResult.OK)
-            {
-                SaveCharakterXML.saveCharakter(Charakter, savefileDialog.FileName);
-            }
-        }
-        public void load()
-        {
-            String path = Path.Combine(getResourcePath(), ManagmentSaveStrings.SaveLocation);
-            
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = path;
-            openFileDialog.Filter = "xmlFiles |*xml";
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                Charakter = LoadCharakterXML.loadCharakter(openFileDialog.FileName, createNewCharater(), controllTalent);
-            }
-        }
-        public Charakter createNewCharater()
+        private Charakter createNewCharater()
         {
             Charakter charakter = new Charakter();
 
             String path;
             path = Path.Combine(ManagmentSaveStrings.currentDirectory, rootPath);
             path = Path.Combine(path, ManagmentSaveStrings.SaveLocation);
-            
+
             controllTalent = new ControllTalent(getResourcePath());
             charakter.addTalent(controllTalent.getTalentList<TalentClose>());
             charakter.addTalent(controllTalent.getTalentList<TalentRange>());
@@ -95,10 +69,34 @@ namespace DSA_Project
 
             return charakter;
         }
-        //###################################################################################################################################
-        //Einrichtung der Form
-        private void setUP()
-        {  
+        [ExcludeFromCodeCoverage]
+        public void save()
+        {
+            String path = Path.Combine(getResourcePath(), ManagmentSaveStrings.SaveLocation);
+
+            SaveFileDialog savefileDialog = new SaveFileDialog();
+            savefileDialog.InitialDirectory = path;
+            savefileDialog.Filter = "xmlFiles |*xml";
+
+            if (savefileDialog.ShowDialog() == DialogResult.OK)
+            {
+                SaveCharakterXML.saveCharakter(Charakter, savefileDialog.FileName);
+            }
+        }
+        [ExcludeFromCodeCoverage]
+        public void load()
+        {
+
+            String path = Path.Combine(getResourcePath(), ManagmentSaveStrings.SaveLocation);
+            
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = path;
+            openFileDialog.Filter = "xmlFiles |*xml";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                Charakter = LoadCharakterXML.loadCharakter(openFileDialog.FileName, createNewCharater(), controllTalent);
+            }
         }
         //###################################################################################################################################
         //Einrichtung der Attribute
@@ -144,7 +142,6 @@ namespace DSA_Project
         {
             return Charakter.getSummeAttributeMAX();
         }
-
         public bool getAttributMark(DSA_ATTRIBUTE atr)
         {
             return Charakter.getMarkedAttribut(atr);    
@@ -223,7 +220,7 @@ namespace DSA_Project
         public int AdvanturePoints(int number)
         {
             Charakter.setAdventurePoints(number);
-            return Charakter.getAdvanturePoints();
+            return AdvanturePoints();
         }
         public int AdvanturePoints()
         {
@@ -231,6 +228,7 @@ namespace DSA_Project
         }
         //###################################################################################################################################
         //Einrichtung der Feature
+        [ExcludeFromCodeCoverage]
         public Feature Feature(int number, DSA_FEATURES type)
         {
             CreateFeature createFeature;
@@ -254,6 +252,7 @@ namespace DSA_Project
 
             return feature;
         }
+        [ExcludeFromCodeCoverage]
         public Feature FeatureExisting(int number, DSA_FEATURES type)
         {
             return Charakter.getFeature(type, number);
@@ -272,13 +271,13 @@ namespace DSA_Project
         {
             return Charakter.getTalentList_TalentType(type); 
         }
-        public List<InterfaceTalent>getTalentListController<T>() where T : InterfaceTalent
-        {
-            return controllTalent.getTalentList<T>();
-        }
         public List<InterfaceTalent> getallTalentList()
         {
             return Charakter.getTalentList_allTalents();
+        }
+        public List<T> getTalentListController<T>() where T : InterfaceTalent
+        {
+            return controllTalent.getTalentList<T>();
         }
         //#######################################################################################################################################################################################################################
         //LanguageFamily
@@ -311,11 +310,11 @@ namespace DSA_Project
             try
             {
                 talent = (LanguageTalent)Charakter.getTalent(TalentName);
-            } catch
-            {
-                throw new InvalidCastException();
             }
-            talent.setMotherMark(mark);  
+            finally
+            {
+                talent.setMotherMark(mark);
+            }
         }
 
 

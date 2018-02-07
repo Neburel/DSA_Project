@@ -287,7 +287,7 @@ namespace DSA_Project
         {
             TalentDictionary = new Dictionary<Type, List<InterfaceTalent>>();
         }
-        public void addTalent(List<InterfaceTalent> talent) 
+        public void addTalent<T>(List<T> talent) where T: InterfaceTalent
         {
             if (talent == null) return;
             for (int i=0; i<talent.Count; i++)

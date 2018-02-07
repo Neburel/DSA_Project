@@ -171,15 +171,6 @@ namespace DSA_Project
             }
             TalentDictonary.Add(type, list);
         }
-        public List<InterfaceTalent> getTalentList<T>() where T: InterfaceTalent
-        {
-            List<InterfaceTalent> list = null;
-            TalentDictonary.TryGetValue(typeof(T), out list);
-
-            if (list == null) list = new List<InterfaceTalent>(0);
-
-            return list;
-        }
         public InterfaceTalent getTalent(String name)
         {
             foreach (KeyValuePair<Type, List<InterfaceTalent>> pair in TalentDictonary)
@@ -195,6 +186,21 @@ namespace DSA_Project
                 }
             }
             return null;
+        }
+        public List<T> getTalentList<T>() where T : InterfaceTalent
+        {
+            List<InterfaceTalent> list = null;
+            TalentDictonary.TryGetValue(typeof(T), out list);
+
+            if (list == null) list = new List<InterfaceTalent>(0);
+
+            List<T> tlist = new List<T>(0);
+            for (int i = 0; i < list.Count; i++)
+            {
+                tlist.Add((T)list[i]);
+            }
+
+            return tlist;
         }
     }
 }

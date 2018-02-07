@@ -22,7 +22,7 @@ namespace DSA_Project.Tests
             ResourcePath = Path.Combine(ResourcePath, "TestResources");
             controller = new ControllTalent(ResourcePath);
 
-            List<InterfaceTalent> list = controller.getTalentList<TalentWeaponless>();
+            List<TalentWeaponless> list = controller.getTalentList<TalentWeaponless>();
             Assert.AreEqual(2, list.Count);
 
             InterfaceTalent talent = controller.getTalent("Raufen");
