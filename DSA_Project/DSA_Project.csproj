@@ -146,6 +146,50 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Content Include="Resources\DSA\Talents\Language\Font\Drakhard-Zinken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\Font\Zhayad Zeichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\LanguageFamily\Gehemschriften.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\LanguageFamily\Geheimsprachen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\LanguageFamily\Einzelne .xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\LanguageFamily\Rissoal.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\LanguageFamily\Orkisch.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\LanguageFamily\Zwergisch.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\LanguageFamily\Elfisch.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\LanguageFamily\Thorwalsch.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\LanguageFamily\Tulamidya.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\DSA\Talents\Language\Language\Tulamidya.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\Language\Font\Alte Kemi Zeichen.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -368,7 +412,7 @@
     <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Falschspiel.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\EinzelneSprachen_Drachisch.xml">
+    <Content Include="Resources\DSA\Talents\Language\Font\Drakned.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\DSA\Talents\Language\Font\Kusliker Zeichen.xml">
@@ -395,7 +439,7 @@
     <Content Include="Resources\DSA\Talents\Language\Font\Arkanil.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Font\Drakhard-Zinken.xml">
+    <Content Include="Resources\DSA\Talents\Language\Font\Drakhard.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\DSA\Talents\Language\Font\Gimaril.xml">
@@ -925,9 +969,6 @@
     <Content Include="Resources\DSA\Talents\Language\Language\Alte Kemi.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\DSA\Talents\Language\Language\Tulamidya.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\DSA\Talents\Language\Language\Alaani.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1292,6 +1333,7 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Resources\PNP\SaveGame\merker">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

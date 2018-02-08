@@ -1,0 +1,17 @@
+﻿<TalentLetter>
+  <LanguageFamily>
+    <Name>Geheimsprachen</Name>
+    <Row>
+      <Language>Zhayad</Language>
+      <Font>Zhayad Zeichen</Font>
+    </Row>
+    <Row>
+      <Language>Atak</Language>
+      <Font></Font>
+    </Row>
+    <Row>
+      <Language>Füchsisch</Language>
+      <Font></Font>
+    </Row>
+  </LanguageFamily>
+</TalentLetter>

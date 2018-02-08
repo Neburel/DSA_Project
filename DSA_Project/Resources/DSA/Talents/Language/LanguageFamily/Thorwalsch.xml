@@ -1,0 +1,21 @@
+﻿<TalentLetter>
+  <LanguageFamily>
+    <Name>Thorwalsch-Familie</Name>
+    <Row>
+      <Language>Hjaldingsch</Language>
+      <Font>Hjaldingsche Runen</Font>
+    </Row>
+    <Row>
+      <Language>Thorwalsch</Language>
+      <Font>Kusliker Zeichen</Font>
+    </Row>
+    <Row>
+      <Language>Gjalskisch</Language>
+      <Font>Gjalskisch Zeichen</Font>
+    </Row>
+    <Row>
+      <Language>Fjarnisch</Language>
+      <Font></Font>
+    </Row>
+  </LanguageFamily>
+</TalentLetter>

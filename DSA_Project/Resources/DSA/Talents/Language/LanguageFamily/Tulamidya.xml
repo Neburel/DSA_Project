@@ -1,0 +1,57 @@
+﻿<TalentLetter>
+  <LanguageFamily>
+    <Name>Tulamidya-Familie</Name>
+    <Row>
+      <Language>Tulamidya</Language>
+      <Font>Kusliker Zeichen</Font>
+    </Row>
+    <Row>
+      <Language></Language>
+      <Font>Tulamidya Zeichen</Font>
+    </Row>
+    <Row>
+      <Language></Language>
+      <Font>G. Glyphen v. Unau</Font>
+    </Row>
+    <Row>
+      <Language>Ur-Tulamidya</Language>
+      <Font>Tulamidya Zeichen</Font>
+    </Row>
+    <Row>
+      <Language></Language>
+      <Font>Ur-Tulamidya Zeichen</Font>
+    </Row>
+    <Row>
+      <Language></Language>
+      <Font>Chrmk</Font>
+    </Row>
+    <Row>
+      <Language>Zelemja</Language>
+      <Font>Chrmk</Font>
+    </Row>
+    <Row>
+      <Language>Alaani</Language>
+      <Font>Kusliker Zeichen</Font>
+    </Row>
+    <Row>
+      <Language></Language>
+      <Font>Altes Alaani</Font>
+    </Row>
+    <Row>
+      <Language>Zhulchammaqra</Language>
+      <Font></Font>
+    </Row>
+    <Row>
+      <Language>Ferkina</Language>
+      <Font></Font>
+    </Row>
+    <Row>
+      <Language>Ruuz</Language>
+      <Font>Ur-Tulamidya Zeichen</Font>
+    </Row>
+    <Row>
+      <Language>Alte Kemi</Language>
+      <Font>Alte Kemi Zeichen</Font>
+    </Row>
+  </LanguageFamily>
+</TalentLetter>

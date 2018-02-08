@@ -1,0 +1,25 @@
+﻿<TalentLetter>
+  <LanguageFamily>
+    <Name>Geheimschriften</Name>
+    <Row>
+      <Language></Language>
+      <Font>Gimaril</Font>
+    </Row>
+    <Row>
+      <Language></Language>
+      <Font>Nanduria</Font>
+    </Row>
+    <Row>
+      <Language></Language>
+      <Font>Amulashtra</Font>
+    </Row>
+    <Row>
+      <Language></Language>
+      <Font>Arkanil</Font>
+    </Row>
+    <Row>
+      <Language></Language>
+      <Font>Drakhard-Zinken</Font>
+    </Row>
+  </LanguageFamily>
+</TalentLetter>

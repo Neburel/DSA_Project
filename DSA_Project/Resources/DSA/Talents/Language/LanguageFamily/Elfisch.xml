@@ -1,0 +1,13 @@
+﻿<TalentLetter>
+  <LanguageFamily>
+    <Name>Elfisch-Familie</Name>
+    <Row>
+      <Language>Isdira</Language>
+      <Font>Isdira Zeichen</Font>
+    </Row>
+    <Row>
+      <Language>Asdharia</Language>
+      <Font>Asdharia Zeichen</Font>
+    </Row>
+  </LanguageFamily>
+</TalentLetter>

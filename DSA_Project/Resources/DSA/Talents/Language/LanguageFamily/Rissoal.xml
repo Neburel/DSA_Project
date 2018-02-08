@@ -1,0 +1,13 @@
+﻿<TalentLetter>
+  <LanguageFamily>
+    <Name>Rissoal-Familie</Name>
+    <Row>
+      <Language>Mahrisch</Language>
+      <Font>Mahrische Glyphen</Font>
+    </Row>
+    <Row>
+      <Language>Rissoal</Language>
+      <Font></Font>
+    </Row>
+  </LanguageFamily>
+</TalentLetter>

@@ -31,7 +31,6 @@ namespace DSA_Project
         //#########################################################################################################################################################################
         System.Drawing.Image backround = (System.Drawing.Image)DSA_Project.Properties.Resources.Old_Parchment_Wallpaper_15;
         private ControllClass controll;
-
         public DSA()
         {
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
@@ -149,6 +148,7 @@ namespace DSA_Project
             HeroPage_loadFeature();
             loadRewardPageRewards();
 
+            refreshHeroPage();
             TalentPage_refresh();
             refreshHeroPageAdvancedValues();
         }
@@ -1273,6 +1273,9 @@ namespace DSA_Project
                 LanguageFamily family   = controll.getFamilybyName((String)comboBoxLanguagePageSelection.SelectedValue);
                 LanguageTalent lt       = new LanguageTalent("", new List<string>());
                 FontTalent ft           = new FontTalent("", new List<string>());
+
+                txtLanguagePageLanguageProbe.Text   = lt.getProbeStringTwo();
+                txtLanguagePageFontProbe.Text       = ft.getProbeStringTwo();
 
                 if (family.Count() > i)
                 {

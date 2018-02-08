@@ -13,7 +13,8 @@ namespace DSA_Project
         LanguageFamily LanguageFamily;
         Charakter charakter;
         String FileName;
-        
+        String FamilyName;
+
         private Boolean TestIFxmlFile(String filename)
         {
             String ending = filename.Substring(filename.Length-3);
@@ -58,8 +59,6 @@ namespace DSA_Project
         //################################################################################################
         private void loadFamily(XmlNode LanguageFamilyElement)
         {
-            String FamilyName;
-
             foreach (XmlNode node in LanguageFamilyElement)
             {
                 switch (node.Name)
@@ -74,11 +73,11 @@ namespace DSA_Project
         }
         private void loadRow(XmlNode rowElement)
         {
-            String FontName = null;
-            String LanguageName = null;
+            String FontName         = null;
+            String LanguageName     = null;
 
-            FontTalent fTalent = null;
-            LanguageTalent ltalent = null;
+            FontTalent fTalent      = null;
+            LanguageTalent ltalent  = null;
 
             foreach (XmlNode node in rowElement)
             {
@@ -90,16 +89,36 @@ namespace DSA_Project
             }
             if (0 != String.Compare("", FontName) && FontName != null)
             {
-                fTalent = (FontTalent)charakter.getTalent(FontName);
+                InterfaceTalent talent = charakter.getTalent(FontName);
+                if (talent == null)
+                {
+                    Log.writeLogLine("Laden der Language Family " + FamilyName + ". Das Talent " + FontName + " exestiert nicht" );
+                }
+                else
+                {
+                    if (typeof(FontTalent).IsAssignableFrom(talent.GetType()))
+                    {
+                        fTalent = (FontTalent)charakter.getTalent(FontName);
+                    }
+                    else
+                    {
+                        Log.writeLogLine("Laden der Language Family " + FamilyName + ". Das Talent " + talent.getName() + " ist kein FontTalent");
+                    }
+                }
             }
-            else
-            {
-                fTalent = new FontTalent("",new List<string>());
-            }
+
+
             if (0 != String.Compare("", LanguageName) && LanguageName != null)
             {
                 ltalent = (LanguageTalent)charakter.getTalent(LanguageName);
-            } else
+            }
+
+
+            if (fTalent == null)
+            {
+                fTalent = new FontTalent("", new List<string>());
+            }
+            if (ltalent == null)
             {
                 ltalent = new LanguageTalent("", new List<string>());
             }

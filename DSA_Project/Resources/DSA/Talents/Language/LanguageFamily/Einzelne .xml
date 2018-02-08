@@ -1,0 +1,65 @@
+﻿<TalentLetter>
+  <LanguageFamily>
+    <Name>Einzelne Sprachen</Name>
+    <Row>
+      <Language>Drachisch</Language>
+      <Font>Drakned</Font>
+    </Row>
+    <Row>
+      <Language>Rssahh</Language>
+      <Font>Chrmk</Font>
+    </Row>
+    <Row>
+      <Language></Language>
+      <Font>Chuchas</Font>
+    </Row>
+    <Row>
+      <Language>Trollisch</Language>
+      <Font>Raumbilderschrift</Font>
+    </Row>
+    <Row>
+      <Language>Goblinisch</Language>
+      <Font></Font>
+    </Row>
+    <Row>
+      <Language>Grolmisch</Language>
+      <Font></Font>
+    </Row>
+    <Row>
+      <Language>Koboldisch</Language>
+      <Font></Font>
+    </Row>
+    <Row>
+      <Language>Mohisch</Language>
+      <Font></Font>
+    </Row>
+    <Row>
+      <Language>Molochisch</Language>
+      <Font></Font>
+    </Row>
+    <Row>
+      <Language>Neckergesang</Language>
+      <Font></Font>
+    </Row>
+    <Row>
+      <Language>Nujuka</Language>
+      <Font></Font>
+    </Row>
+    <Row>
+      <Language>Z´Lit</Language>
+      <Font></Font>
+    </Row>
+    <Row>
+      <Language>Zyklopäisch</Language>
+      <Font>Kusliker Zeichen</Font>
+    </Row>
+    <Row>
+      <Language>Rabensprache</Language>
+      <Font>Kusliker Zeichen</Font>
+    </Row>
+    <Row>
+      <Language></Language>
+      <Font>Tulamidya Zeichen</Font>
+    </Row>
+  </LanguageFamily>
+</TalentLetter>

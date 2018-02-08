@@ -1,0 +1,13 @@
+﻿<TalentLetter>
+  <LanguageFamily>
+    <Name>Orkisch-Familie</Name>
+    <Row>
+      <Language>Ologhaijan</Language>
+      <Font></Font>
+    </Row>
+    <Row>
+      <Language>Oloarkh</Language>
+      <Font></Font>
+    </Row>
+  </LanguageFamily>
+</TalentLetter>

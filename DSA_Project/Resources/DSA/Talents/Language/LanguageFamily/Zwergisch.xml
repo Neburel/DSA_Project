@@ -1,0 +1,13 @@
+﻿<TalentLetter>
+  <LanguageFamily>
+    <Name>Zwergisch-Familie</Name>
+    <Row>
+      <Language>Rogolan</Language>
+      <Font>Rogolan Zeichen</Font>
+    </Row>
+    <Row>
+      <Language>Angram</Language>
+      <Font>Angram Zeichen</Font>
+    </Row>
+  </LanguageFamily>
+</TalentLetter>
