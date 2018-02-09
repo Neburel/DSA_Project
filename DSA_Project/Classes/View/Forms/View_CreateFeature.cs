@@ -166,9 +166,7 @@ namespace DSA_Project
             newFeature.setAdvancedValues(DSA_ADVANCEDVALUES.INITATIVE_BASIS, convertToInt(txtInitiative.Text));
             newFeature.setAdvancedValues(DSA_ADVANCEDVALUES.PARADE_BASIS, convertToInt(txtParade.Text));
             newFeature.setAdvancedValues(DSA_ADVANCEDVALUES.WUNDSCHWELLE, convertToInt(txtWundschwelle.Text));
-
-            //newFeature.setType(ftype);
-
+            
             foreach (InterfaceTalent talent in talente.Keys)
             {
                 int x;
@@ -187,6 +185,9 @@ namespace DSA_Project
                 {
                     foreach (InterfaceTalent talent in talente.Keys)
                     {
+                        String a = ListTalente.Items[i].Text;
+                        String b = talent.getName();
+
                         if (0 == String.Compare(ListTalente.Items[i].Text, talent.getName()))
                         {
                             talente.Remove(talent);
@@ -217,15 +218,14 @@ namespace DSA_Project
                 {
                     foreach(InterfaceTalent talent in talente.Keys)
                     {
-                        if(0 == String.Compare(ListTalente.Items[i].Name, talent.getName()))
+                        if (0 == String.Compare(ListTalente.Items[i].Text, talent.getName()))
                         {
                             talente.Remove(talent);
                             break;
                         }
                     }
                     ListTalente.Items[i].Remove();
-                }
-                
+                }                
             }
         }
 
