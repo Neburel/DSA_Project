@@ -1,0 +1,17 @@
+﻿<TalentLetter>
+  <LanguageFamily>
+    <Name>Garethi-Familie</Name>
+    <Row>
+      <Language>Aureliani</Language>
+      <Font>Aureliani</Font>
+    </Row>
+    <Row>
+      <Language>Aureliani</Language>
+      <Font>Kusliker Zeichen</Font>
+    </Row>
+    <Row>
+      <Language></Language>
+      <Font>Imperiale Schriftzeichen</Font>
+    </Row>
+  </LanguageFamily>
+</TalentLetter>

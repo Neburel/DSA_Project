@@ -31,6 +31,9 @@ namespace DSA_Project.Tests
             TalentFighting ftalent = (TalentFighting)talent;
             Assert.AreEqual("BE", ftalent.getBe());
             Assert.AreEqual("0", ftalent.getPA());
+            
+            List<TalentNature> ln = controller.getTalentList< TalentNature>();
+            Assert.AreEqual(0, ln.Count);
         }
         
         [TestMethod]

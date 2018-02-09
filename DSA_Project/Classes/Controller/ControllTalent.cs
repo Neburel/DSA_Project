@@ -191,9 +191,7 @@ namespace DSA_Project
         {
             List<InterfaceTalent> list = null;
             TalentDictonary.TryGetValue(typeof(T), out list);
-
-            if (list == null) list = new List<InterfaceTalent>(0);
-
+            
             List<T> tlist = new List<T>(0);
             for (int i = 0; i < list.Count; i++)
             {

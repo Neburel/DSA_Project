@@ -288,6 +288,19 @@ namespace DSA_Project.Tests
 
             Assert.AreEqual(5.ToString(), crafting.getTaW());
         }
+        [TestMethod]
+        public void ControllClass_SimpleTest_TalentListnotExist()
+        {
+            TalentCrafting crafting = new TalentCrafting("Test", new List<DSA_ATTRIBUTE>(), "BE", new List<TalentDeviate>(), new List<TalentRequirement>());
+            GiftTalent gift = new GiftTalent("Test2", new List<DSA_ATTRIBUTE>()); 
+
+            List<TalentCrafting> controllerList = controll.getTalentListController<TalentCrafting>();
+            List<InterfaceTalent> talentListChar = controll.getTalentList(gift);
+            List<InterfaceTalent> allTalentList = controll.getallTalentList();
+
+            Assert.AreEqual(0, talentListChar.Count);
+
+        }
         //Family ###########################################################################
         [TestMethod]
         public void ControllClass_SimpleTest_Family()

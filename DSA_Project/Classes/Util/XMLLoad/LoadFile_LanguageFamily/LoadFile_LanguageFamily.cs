@@ -110,7 +110,22 @@ namespace DSA_Project
 
             if (0 != String.Compare("", LanguageName) && LanguageName != null)
             {
-                ltalent = (LanguageTalent)charakter.getTalent(LanguageName);
+                InterfaceTalent talent = charakter.getTalent(LanguageName);
+                if (talent == null)
+                {
+                    Log.writeLogLine("Laden der Language Family " + FamilyName + ". Das Talent " + LanguageName + " exestiert nicht");
+                }
+                else
+                {
+                    if (typeof(LanguageTalent).IsAssignableFrom(talent.GetType()))
+                    {
+                        ltalent = (LanguageTalent)charakter.getTalent(LanguageName);
+                    }
+                    else
+                    {
+                        Log.writeLogLine("Laden der Language Family " + FamilyName + ". Das Talent " + talent.getName() + " ist kein LanguageTalent");
+                    }
+                }
             }
 
 

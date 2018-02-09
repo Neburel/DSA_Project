@@ -17,7 +17,7 @@ namespace DSA_Project
     {
         //#########################################################################################################################################################################
         //Structs
-        public struct HeroPageFeatureTag
+        private struct HeroPageFeatureTag
         {
             public DSA_FEATURES type;
             public int number;

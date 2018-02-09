@@ -53,5 +53,57 @@ namespace DSA_Project.Tests
             Assert.AreEqual(null, family);
             
         }
+        [TestMethod()]
+        public void LanguageFamily_loadFile_FontTalentNotExist()
+        {
+            Charakter charakter = new Charakter();
+            String Resource = ResourceAcess.getResourceDir("TestResources_LoadCharakter02_CorruptFiles");
+            String file = ResourceAcess.getLanguageFamilyFile("TestResources_LoadCharakter02_CorruptFiles", "Korrupt_Font.xml");
+            ControllTalent controll = new ControllTalent(Resource);
+            LoadFile_LanguageFamily loader = new LoadFile_LanguageFamily();
+            charakter.addTalent(controll.getTalentList<LanguageTalent>());
+            charakter.addTalent(controll.getTalentList<FontTalent>());
+
+            LanguageFamily family = loader.loadFile(file, charakter);
+        }
+        [TestMethod()]
+        public void LanguageFamily_loadFile_LanguageTalentNotExist()
+        {
+            Charakter charakter = new Charakter();
+            String Resource = ResourceAcess.getResourceDir("TestResources_LoadCharakter02_CorruptFiles");
+            String file = ResourceAcess.getLanguageFamilyFile("TestResources_LoadCharakter02_CorruptFiles", "Korrupt_Language.xml");
+            ControllTalent controll = new ControllTalent(Resource);
+            LoadFile_LanguageFamily loader = new LoadFile_LanguageFamily();
+            charakter.addTalent(controll.getTalentList<LanguageTalent>());
+            charakter.addTalent(controll.getTalentList<FontTalent>());
+
+            LanguageFamily family = loader.loadFile(file, charakter);
+        }
+        [TestMethod()]
+        public void LanguageFamily_loadFile_FontTalentisLanguage()
+        {
+            Charakter charakter = new Charakter();
+            String Resource = ResourceAcess.getResourceDir("TestResources_LoadCharakter02_CorruptFiles");
+            String file = ResourceAcess.getLanguageFamilyFile("TestResources_LoadCharakter02_CorruptFiles", "Korrupt_Font_FontisLanguage.xml");
+            ControllTalent controll = new ControllTalent(Resource);
+            LoadFile_LanguageFamily loader = new LoadFile_LanguageFamily();
+            charakter.addTalent(controll.getTalentList<LanguageTalent>());
+            charakter.addTalent(controll.getTalentList<FontTalent>());
+
+            LanguageFamily family = loader.loadFile(file, charakter);
+        }
+        [TestMethod()]
+        public void LanguageFamily_loadFile_LanguageTalentisFont()
+        {
+            Charakter charakter = new Charakter();
+            String Resource = ResourceAcess.getResourceDir("TestResources_LoadCharakter02_CorruptFiles");
+            String file = ResourceAcess.getLanguageFamilyFile("TestResources_LoadCharakter02_CorruptFiles", "Korrupt_Language_LanguageisFont.xml");
+            ControllTalent controll = new ControllTalent(Resource);
+            LoadFile_LanguageFamily loader = new LoadFile_LanguageFamily();
+            charakter.addTalent(controll.getTalentList<LanguageTalent>());
+            charakter.addTalent(controll.getTalentList<FontTalent>());
+
+            LanguageFamily family = loader.loadFile(file, charakter);
+        }
     }
 }

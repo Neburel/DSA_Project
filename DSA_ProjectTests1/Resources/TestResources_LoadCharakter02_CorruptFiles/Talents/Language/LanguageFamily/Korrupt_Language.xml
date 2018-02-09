@@ -1,0 +1,21 @@
+﻿<TalentLetter>
+  <LanguageFamily>
+    <Name>Garethi-Familie</Name>
+    <Row>
+      <Language>Gi</Language>
+      <Font></Font>
+    </Row>
+    <Row>
+      <Language>Bosparano</Language>
+      <Font>Kusliker Zeichen</Font>
+    </Row>
+    <Row>
+      <Language>Aureliani</Language>
+      <Font>Kusliker Zeichen</Font>
+    </Row>
+    <Row>
+      <Language></Language>
+      <Font>Imperiale Schriftzeichen</Font>
+    </Row>
+  </LanguageFamily>
+</TalentLetter>

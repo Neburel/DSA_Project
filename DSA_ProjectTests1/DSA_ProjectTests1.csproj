@@ -117,13 +117,290 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Resources\TestResources\Talents\GeneralTalents\nature\" />
     <Folder Include="Resources\TestResources_02\Talents\Language\Font\" />
     <Folder Include="Resources\TestResources_02\Talents\Language\Language\" />
     <Folder Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\01_TMP\" />
-    <Folder Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\" />
-    <Folder Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Betören.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Etikette.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Gassenwissen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Lehren.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Menschenkenntnis.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Schauspielerei.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Schriftlicher Ausdruck.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Sich Verkleiden.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Überreden.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Überzeugen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Betören.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Etikette.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Gassenwissen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Lehren.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Menschenkenntnis.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Schauspielerei.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Schriftlicher Ausdruck.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Sich Verkleiden.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Überreden.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Überzeugen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Alte Kemi Zeichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Altes Alaani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Amulashtra.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Angram Zeichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Arkanil.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Asdharia Zeichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Chrmk.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Chuchas.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Drakhard-Zinken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\EinzelneSprachen_Drachisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\G. Glyphen v. Unau.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Gimaril.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Gjalskisch Zeichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Hjaldingsche Runen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Imperiale Schriftzeichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Isdira Zeichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Kusliker Zeichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Mahrische Glyphen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Nanduria.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Raumbilderschrift.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Rogolan Zeichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Tulamidya Zeichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Font\Ur-Tulamidya Zeichen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\LanguageFamily\Korrupt_Language_LanguageisFont.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\LanguageFamily\Korrupt_Language.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\LanguageFamily\Korrupt_Font_FontisLanguage.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\LanguageFamily\Korrupt_Font.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Alaani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Alte Kemi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Angram.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Asdharia.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Atak.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Aureliani.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Bosparano.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Drachisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Ferkina.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Fjarnisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Füchsisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Garethi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Gjalskisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Goblinisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Grolmisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Hjaldingsch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Isdira.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Koboldisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Mahrisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Mohisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Molochisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Neckergesang.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Nujuka.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Oloarkh.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Ologhaijan.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Rabensprache.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Rissoal.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Rogolan.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Rssahh.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Ruuz.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Thorwalsch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Trollisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Tulamidya.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Ur-Tulamidya.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Zelemja.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Zhayad.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Zhulchammaqra.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\ZLit.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\Language\Zyklopäisch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\TestResources_LoadLanguageFamily01_Standart\SaveGame\Kazarik.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1968,46 +2245,6 @@
     <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\physical\Zechen.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Betören.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Etikette.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Gassenwissen.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Lehren.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Menschenkenntnis.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Schauspielerei.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Schriftlicher Ausdruck.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Sich Verkleiden.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Überreden.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\GeneralTalents\social\Überzeugen.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Gifts\Empathie.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -2033,237 +2270,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Gifts\Zwergennase .xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\EinzelneSprachen_Chuchas.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\EinzelneSprachen_Drachisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\EinzelneSprachen_Koboldisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\EinzelneSprachen_Rabensprache.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\EinzelneSprachen_Rssahh.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\EinzelneSprachen_Trollisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\EinzelneSprachen_Zyklopäisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Elfisch_Asdharia.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Elfisch_Isdira.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Garethi_Aureliani.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Garethi_Bosparano.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Garethi_Garethi.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Garethi_Imperiale Schriftzeichen.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Geheimschriften_Amulashtra.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Geheimschriften_Arkanil .xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Geheimschriften_Drakhard-Zinken.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Geheimschriften_Gimaril.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Geheimschriften_Nanduria.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Rissoal_Mahrisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Thorwalsch_Fjarnisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Thorwalsch_Gjalskisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Thorwalsch_Hjaldingsch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Thorwalsch_Thorwalsch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Tulamidya_Alaani.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Tulamidya_Alte Kemi.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Tulamidya_AltesAlaani.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Tulamidya_Chrmk.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Tulamidya_Glyphen .xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Tulamidya_Ruuz.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Tulamidya_Tulamidya.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Tulamidya_Tulamidya_Schrift.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Tulamidya_Tulamidya_Schrift2.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Tulamidya_Ur-Tulamidya.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Tulamidya_Ur-Tulamidya_Schrift.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Tulamidya_Zelemja.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Zwergisch_Angram.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\01_OLD_Font\Zwergisch_Rogolan.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\EinzelneSprachen_Drachisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\EinzelneSprachen_Goblinisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\EinzelneSprachen_Grolmisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\EinzelneSprachen_Koboldisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\EinzelneSprachen_Mohisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\EinzelneSprachen_Molochisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\EinzelneSprachen_Neckergesang.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\EinzelneSprachen_Nujuka.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\EinzelneSprachen_Rabensprache.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\EinzelneSprachen_Rssahh.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\EinzelneSprachen_Trollisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\EinzelneSprachen_ZLit.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\EinzelneSprachen_Zyklopäisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Elfisch_Asdharia.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Elfisch_Isdira.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Garethi_Aureliani.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Garethi_Bosparano.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Garethi_Garethi.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Garethi_Imperiale Schriftzeichen.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Geheimsprachen_Atak.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Geheimsprachen_Füchsisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Geheimsprachen_Zhayad.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Orkisch_Oloarkh.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Orkisch_Ologhaijan.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Rissoal_Mahrisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Rissoal_Rissoal.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Thorwalsch_Fjarnisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Thorwalsch_Gjalskisch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Thorwalsch_Hjaldingsch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Thorwalsch_Thorwalsch.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Tulamidya_Alaani.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Tulamidya_Alte Kemi.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Tulamidya_Ferkina.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Tulamidya_Ruuz.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Tulamidya_Tulamidya.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Tulamidya_Ur-Tulamidya.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Tulamidya_Zelemja.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Tulamidya_Zhulchammaqra.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Zwergisch_Angram.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter02_CorruptFiles\Talents\Language\02_OLD_Language\Zwergisch_Rogolan.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\TestResources_LoadCharakter01_Standart\SaveGame\Kazarik.xml">
@@ -2637,46 +2643,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\physical\Zechen.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Betören.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Etikette.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Gassenwissen.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Lehren.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Menschenkenntnis.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Schauspielerei.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Schriftlicher Ausdruck.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Sich Verkleiden.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Überreden.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\GeneralTalents\social\Überzeugen.xml">
-      <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\TestResources_LoadCharakter01_Standart\Talents\Gifts\Empathie.xml">
@@ -3787,34 +3753,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\TestResources\Talents\GeneralTalents\knowldage\Tierkunde.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources\Talents\GeneralTalents\nature\Fallenstellen.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources\Talents\GeneralTalents\nature\Fesseln-Entfesseln.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources\Talents\GeneralTalents\nature\Fischen-Angeln.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources\Talents\GeneralTalents\nature\Fährtensuchen.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources\Talents\GeneralTalents\nature\Orientierung.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources\Talents\GeneralTalents\nature\Wettervorhersage.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\TestResources\Talents\GeneralTalents\nature\Wildnisleben.xml">
-      <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\TestResources\Talents\GeneralTalents\physical\Akrobatik.xml">
