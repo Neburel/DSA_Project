@@ -59,6 +59,9 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo_das_Schwarze_Auge.svg.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -137,6 +140,7 @@
     <Compile Include="Classes\View\Forms\View_CreateFeature.Designer.cs">
       <DependentUpon>View_CreateFeature.cs</DependentUpon>
     </Compile>
+    <Content Include="Logo_das_Schwarze_Auge.svg.ico" />
     <Content Include="Log\log.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -190,6 +194,7 @@
     <Content Include="Resources\DSA\Talents\Language\Language\Tulamidya.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\PicturesDiv\Logo_das_Schwarze_Auge.svg.png" />
     <Content Include="Resources\PNP\Talents\Language\Font\Alte Kemi Zeichen.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
