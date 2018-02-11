@@ -54,20 +54,24 @@
     <ManifestKeyFile>DSA_Project_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Logo_das_Schwarze_Auge.svg.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\PicturesDiv\Logo_das_Schwarze_Auge.svg.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>DSA_Project.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup />
+  <PropertyGroup />
   <PropertyGroup>
-    <NoWin32Manifest>true</NoWin32Manifest>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -147,7 +151,13 @@
     <Compile Include="Classes\View\Forms\View_CreateFeature.Designer.cs">
       <DependentUpon>View_CreateFeature.cs</DependentUpon>
     </Compile>
-    <Content Include="Logo_das_Schwarze_Auge.svg.ico" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Content Include="Resources\DSA\SaveGame\Kazarik_2.xml" />
+    <Content Include="Resources\PicturesDiv\Logo_das_Schwarze_Auge.svg.ico" />
     <Content Include="Log\log.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -202,6 +212,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\PicturesDiv\Logo_das_Schwarze_Auge.svg.png" />
+    <Content Include="Resources\PNP\SaveGame\Selina.xml" />
     <Content Include="Resources\PNP\Talents\Language\Font\Alte Kemi Zeichen.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -417,10 +428,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\DSA\SaveGame\Kazarik_2.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Falschspiel.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1346,8 +1353,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="ClassDiagram1.cd" />
-    <None Include="Resources\PNP\SaveGame\merker">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Content Include="Resources\DSA\Talents\GeneralTalents\social\Sich Verkleiden.xml">
       <SubType>Designer</SubType>

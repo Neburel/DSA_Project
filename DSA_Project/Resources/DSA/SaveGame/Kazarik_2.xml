@@ -58,11 +58,11 @@
         <GESCHWINDIGKEIT>10</GESCHWINDIGKEIT>
       </Advanced>
       <Money>
-        <D>87</D>
-        <S>5</S>
+        <D>80</D>
+        <S>7</S>
         <H>6</H>
-        <K>8</K>
-        <BANK>39</BANK>
+        <K>7</K>
+        <BANK>0</BANK>
       </Money>
       <Features>
         <Advantages>
@@ -250,6 +250,49 @@
             <Advanced />
             <Talente />
           </Number35>
+          <Number36>
+            <Name>Buch(Fleischerei der Schritt zum Perfekten Schnitt)</Name>
+            <Description>Einfachere Innereien Können gezielt Entfernt werden</Description>
+            <Value>
+            </Value>
+            <GP>
+            </GP>
+            <Attribute />
+            <Energie />
+            <Advanced />
+            <Talente>
+              <Talent>
+                <Name>Fleischer</Name>
+                <TAW>2</TAW>
+              </Talent>
+              <Talent>
+                <Name>Tierkunde</Name>
+                <TAW>1</TAW>
+              </Talent>
+              <Talent>
+                <Name>Anatomie</Name>
+                <TAW>1</TAW>
+              </Talent>
+            </Talente>
+          </Number36>
+          <Number37>
+            <Name>Spielsüchtig (mehr als 200 Dublonen in Glücksspielen)</Name>
+            <Description>
+            </Description>
+            <Value>
+            </Value>
+            <GP>
+            </GP>
+            <Attribute />
+            <Energie />
+            <Advanced />
+            <Talente>
+              <Talent>
+                <Name>Brett-/Kartenspiel</Name>
+                <TAW>1</TAW>
+              </Talent>
+            </Talente>
+          </Number37>
         </Advantages>
         <DisAdvantages>
           <Number1>
@@ -324,7 +367,7 @@
           </Number5>
         </DisAdvantages>
       </Features>
-      <AdventurePoints>0</AdventurePoints>
+      <AdventurePoints>105</AdventurePoints>
     </HeldenBrief>
     <TalentBrief>
       <GeneralTalent>
@@ -362,6 +405,10 @@
         </Talent>
         <Talent>
           <Name>Fahrzeug.Lenken</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
+          <Name>Falschspiel</Name>
           <TAW>0</TAW>
         </Talent>
         <Talent>
@@ -561,10 +608,6 @@
           <TAW>1</TAW>
         </Talent>
         <Talent>
-          <Name>Metallkunde</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
           <Name>Pflanzenkunde</Name>
           <TAW>3</TAW>
         </Talent>
@@ -637,7 +680,7 @@
           <TAW>1</TAW>
         </Talent>
         <Talent>
-          <Name>Atlethik</Name>
+          <Name>Athletik</Name>
           <TAW>2</TAW>
         </Talent>
         <Talent>
@@ -885,7 +928,7 @@
           <Parade>---</Parade>
         </Talent>
         <Talent>
-          <Name>Wurfmesser.</Name>
+          <Name>Wurfmesser</Name>
           <TAW>1</TAW>
           <attack>1</attack>
           <Parade>---</Parade>
@@ -909,6 +952,393 @@
           <Parade>0</Parade>
         </Talent>
       </FightingTalent>
-     </TalentBrief>
+      <Language>
+        <Talent>
+          <Name>Alaani</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Alte.Kemi</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Angram</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Asdharia</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Atak</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Aureliani</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Bosparano</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Drachisch</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Ferkina</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Fjarnisch</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Füchsisch</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Garethi</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Gjalskisch</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Goblinisch</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Grolmisch</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Hjaldingsch</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Isdira</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Koboldisch</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Mahrisch</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Mohisch</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Molochisch</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Neckergesang</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Nujuka</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Oloarkh</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Ologhaijan</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Rabensprache</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Rissoal</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Rogolan</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Rssahh</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Ruuz</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Thorwalsch</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Trollisch</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Tulamidya</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Ur-Tulamidya</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Zelemja</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Zhayad</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Zhulchammaqra</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Z´Lit</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Zyklopäisch</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Alte.Kemi.Zeichen</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Altes.Alaani</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Amulashtra</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Angram.Zeichen</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Arkanil</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Asdharia.Zeichen</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Chrmk</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Chuchas</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Drakhard-Zinken</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Drakhard</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Drakned</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>G..Glyphen.v..Unau</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Gimaril</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Gjalskisch.Zeichen</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Hjaldingsche.Runen</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Imperiale.Schriftzeichen</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Isdira.Zeichen</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Kusliker.Zeichen</Name>
+          <TAW>1</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Mahrische.Glyphen</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Nanduria</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Raumbilderschrift</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Rogolan.Zeichen</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Tulamidya.Zeichen</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Ur-Tulamidya.Zeichen</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+        <Talent>
+          <Name>Zhayad.Zeichen</Name>
+          <TAW>-</TAW>
+          <SpeakingMother>
+          </SpeakingMother>
+        </Talent>
+      </Language>
+      <Gifts />
+    </TalentBrief>
   </CharacterBogen>
 </SaveFile>
