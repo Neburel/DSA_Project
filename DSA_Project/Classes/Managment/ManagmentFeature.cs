@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
+    /**
+     * Elementarer Fehler im Managment Feature Vorhanden!!!!
+     * Werten Feature Elemente auserhalb von den Manager Editiert, und nicht vernünftig über ihn Entfernt berechnet
+     * werden diese Daten nicht übernommen..... 
+     * Dieser Fehler macht die Verwendung von Features unnötig Umständlich
+     **/
     public class ManagmentFeature
     {
         private enum ACTION { ADD, REMOVE}

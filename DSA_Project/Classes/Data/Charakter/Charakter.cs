@@ -21,7 +21,7 @@ namespace DSA_Project
 
         //###############################################################################################################################################
         //Features
-        ManagmentFeature featureManagment = new ManagmentFeature();
+        private ManagmentFeature featureManagment = new ManagmentFeature();
         public void addFeature(int number, Feature feature)
         {
             featureManagment.addFeature(feature, number);

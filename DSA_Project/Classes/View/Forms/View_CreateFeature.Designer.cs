@@ -1,6 +1,6 @@
 ﻿namespace DSA_Project
 {
-    partial class CreateFeature
+    partial class View_CreateFeature
     {
         /// <summary>
         /// Required designer variable.
@@ -108,7 +108,6 @@
             this.txtSozialstatus.Size = new System.Drawing.Size(24, 20);
             this.txtSozialstatus.TabIndex = 159;
             this.txtSozialstatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSozialstatus.TextChanged += new System.EventHandler(this.txtSozialstatus_TextChanged);
             // 
             // label26
             // 
@@ -126,7 +125,6 @@
             this.txtKörperkraft.Size = new System.Drawing.Size(24, 20);
             this.txtKörperkraft.TabIndex = 157;
             this.txtKörperkraft.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtKörperkraft.TextChanged += new System.EventHandler(this.txtKörperkraft_TextChanged);
             // 
             // label25
             // 
@@ -144,7 +142,6 @@
             this.txtKonstitution.Size = new System.Drawing.Size(24, 20);
             this.txtKonstitution.TabIndex = 155;
             this.txtKonstitution.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtKonstitution.TextChanged += new System.EventHandler(this.txtKonstitution_TextChanged);
             // 
             // label24
             // 
@@ -162,7 +159,6 @@
             this.txtGewandheit.Size = new System.Drawing.Size(24, 20);
             this.txtGewandheit.TabIndex = 153;
             this.txtGewandheit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtGewandheit.TextChanged += new System.EventHandler(this.txtGewandheit_TextChanged);
             // 
             // txtFingerfertigkeit
             // 
@@ -171,7 +167,6 @@
             this.txtFingerfertigkeit.Size = new System.Drawing.Size(24, 20);
             this.txtFingerfertigkeit.TabIndex = 152;
             this.txtFingerfertigkeit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtFingerfertigkeit.TextChanged += new System.EventHandler(this.txtFingerfertigkeit_TextChanged);
             // 
             // txtCharisma
             // 
@@ -180,7 +175,6 @@
             this.txtCharisma.Size = new System.Drawing.Size(24, 20);
             this.txtCharisma.TabIndex = 151;
             this.txtCharisma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCharisma.TextChanged += new System.EventHandler(this.txtCharisma_TextChanged);
             // 
             // txtIntuition
             // 
@@ -189,7 +183,6 @@
             this.txtIntuition.Size = new System.Drawing.Size(24, 20);
             this.txtIntuition.TabIndex = 150;
             this.txtIntuition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtIntuition.TextChanged += new System.EventHandler(this.txtIntuition_TextChanged);
             // 
             // txtKlugheit
             // 
@@ -198,7 +191,6 @@
             this.txtKlugheit.Size = new System.Drawing.Size(24, 20);
             this.txtKlugheit.TabIndex = 149;
             this.txtKlugheit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtKlugheit.TextChanged += new System.EventHandler(this.txtKlugheit_TextChanged);
             // 
             // txtMut
             // 
@@ -207,7 +199,6 @@
             this.txtMut.Size = new System.Drawing.Size(24, 20);
             this.txtMut.TabIndex = 148;
             this.txtMut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtMut.TextChanged += new System.EventHandler(this.txtMut_TextChanged);
             // 
             // label18
             // 
@@ -322,7 +313,6 @@
             this.txtGP.Name = "txtGP";
             this.txtGP.Size = new System.Drawing.Size(44, 20);
             this.txtGP.TabIndex = 171;
-            this.txtGP.TextChanged += new System.EventHandler(this.txtGP_TextChanged);
             // 
             // label2
             // 
@@ -357,7 +347,6 @@
             this.txtValue.Name = "txtValue";
             this.txtValue.Size = new System.Drawing.Size(44, 20);
             this.txtValue.TabIndex = 169;
-            this.txtValue.TextChanged += new System.EventHandler(this.txtValue_TextChanged);
             // 
             // txtName
             // 
@@ -423,7 +412,6 @@
             this.txtBonusTaW.Name = "txtBonusTaW";
             this.txtBonusTaW.Size = new System.Drawing.Size(52, 20);
             this.txtBonusTaW.TabIndex = 164;
-            this.txtBonusTaW.TextChanged += new System.EventHandler(this.txtBonusTaW_TextChanged);
             // 
             // label5
             // 
@@ -525,7 +513,6 @@
             this.txtLebensenergie.Size = new System.Drawing.Size(24, 20);
             this.txtLebensenergie.TabIndex = 148;
             this.txtLebensenergie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtLebensenergie.TextChanged += new System.EventHandler(this.txtLebensenergie_TextChanged);
             // 
             // txtAusdauer
             // 
@@ -534,7 +521,6 @@
             this.txtAusdauer.Size = new System.Drawing.Size(24, 20);
             this.txtAusdauer.TabIndex = 149;
             this.txtAusdauer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAusdauer.TextChanged += new System.EventHandler(this.txtAusdauer_TextChanged);
             // 
             // txtMagieresistenz
             // 
@@ -543,7 +529,6 @@
             this.txtMagieresistenz.Size = new System.Drawing.Size(24, 20);
             this.txtMagieresistenz.TabIndex = 152;
             this.txtMagieresistenz.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtMagieresistenz.TextChanged += new System.EventHandler(this.txtMagieresistenz_TextChanged);
             // 
             // txtAstralenergie
             // 
@@ -552,7 +537,6 @@
             this.txtAstralenergie.Size = new System.Drawing.Size(24, 20);
             this.txtAstralenergie.TabIndex = 150;
             this.txtAstralenergie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAstralenergie.TextChanged += new System.EventHandler(this.txtAstralenergie_TextChanged);
             // 
             // txtKarmaenergie
             // 
@@ -561,7 +545,6 @@
             this.txtKarmaenergie.Size = new System.Drawing.Size(24, 20);
             this.txtKarmaenergie.TabIndex = 151;
             this.txtKarmaenergie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtKarmaenergie.TextChanged += new System.EventHandler(this.txtKarmaenergie_TextChanged);
             // 
             // groupBox5
             // 
@@ -606,7 +589,6 @@
             this.txtGeschwindigkeit.Size = new System.Drawing.Size(24, 20);
             this.txtGeschwindigkeit.TabIndex = 160;
             this.txtGeschwindigkeit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtGeschwindigkeit.TextChanged += new System.EventHandler(this.txtGeschwindigkeit_TextChanged);
             // 
             // label27
             // 
@@ -624,7 +606,6 @@
             this.txtEntrückung.Size = new System.Drawing.Size(24, 20);
             this.txtEntrückung.TabIndex = 158;
             this.txtEntrückung.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtEntrückung.TextChanged += new System.EventHandler(this.txtEntrückung_TextChanged);
             // 
             // label17
             // 
@@ -642,7 +623,6 @@
             this.txtWundschwelle.Size = new System.Drawing.Size(24, 20);
             this.txtWundschwelle.TabIndex = 156;
             this.txtWundschwelle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtWundschwelle.TextChanged += new System.EventHandler(this.Wundschwelle_TextChanged);
             // 
             // label16
             // 
@@ -660,7 +640,6 @@
             this.txtArtefaktKontrolle.Size = new System.Drawing.Size(24, 20);
             this.txtArtefaktKontrolle.TabIndex = 154;
             this.txtArtefaktKontrolle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtArtefaktKontrolle.TextChanged += new System.EventHandler(this.txtArtefaktKontrolle_TextChanged);
             // 
             // label8
             // 
@@ -714,7 +693,6 @@
             this.txtAttacke.Size = new System.Drawing.Size(24, 20);
             this.txtAttacke.TabIndex = 148;
             this.txtAttacke.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAttacke.TextChanged += new System.EventHandler(this.txtAttacke_TextChanged);
             // 
             // txtParade
             // 
@@ -723,7 +701,6 @@
             this.txtParade.Size = new System.Drawing.Size(24, 20);
             this.txtParade.TabIndex = 149;
             this.txtParade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtParade.TextChanged += new System.EventHandler(this.txtParade_TextChanged);
             // 
             // txtBeherschungswert
             // 
@@ -732,7 +709,6 @@
             this.txtBeherschungswert.Size = new System.Drawing.Size(24, 20);
             this.txtBeherschungswert.TabIndex = 152;
             this.txtBeherschungswert.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBeherschungswert.TextChanged += new System.EventHandler(this.txtBeherschungswert_TextChanged);
             // 
             // txtFernkampf
             // 
@@ -741,7 +717,6 @@
             this.txtFernkampf.Size = new System.Drawing.Size(24, 20);
             this.txtFernkampf.TabIndex = 150;
             this.txtFernkampf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtFernkampf.TextChanged += new System.EventHandler(this.txtFernkampf_TextChanged);
             // 
             // txtInitiative
             // 
@@ -750,9 +725,8 @@
             this.txtInitiative.Size = new System.Drawing.Size(24, 20);
             this.txtInitiative.TabIndex = 151;
             this.txtInitiative.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtInitiative.TextChanged += new System.EventHandler(this.txtInitiative_TextChanged);
             // 
-            // CreateFeature
+            // View_CreateFeature
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -763,7 +737,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "CreateFeature";
+            this.Name = "View_CreateFeature";
             this.Text = "CreateFeature";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
