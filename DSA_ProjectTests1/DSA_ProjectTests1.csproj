@@ -61,6 +61,7 @@
     <Compile Include="Classes\Controller\ControllClassTests.cs" />
     <Compile Include="Classes\Controller\ControllLanguageFamilyTests.cs" />
     <Compile Include="Classes\Controller\ControllTalentTests.cs" />
+    <Compile Include="Classes\Controller\ControllView_CreateFeatureTests.cs" />
     <Compile Include="Classes\Data\Charakter\CharakterTestsAbstract.cs" />
     <Compile Include="Classes\Data\Charakter\Charakter_Test\CharakterTests01.cs" />
     <Compile Include="Classes\Data\Charakter\FeatureTests.cs" />

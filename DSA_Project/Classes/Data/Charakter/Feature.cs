@@ -129,7 +129,12 @@ namespace DSA_Project
         public void addTalent(InterfaceTalent talent, int BonusTaw)
         {
             BonusTaw = checkValue(BonusTaw);
+            talentBoni.Remove(talent);
             talentBoni.Add(talent, BonusTaw);
+        }
+        public void removeTalent(InterfaceTalent talent)
+        {
+            talentBoni.Remove(talent);
         }
 
         public DSA_FEATURES getFeatureType()

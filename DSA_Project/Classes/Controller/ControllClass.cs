@@ -231,23 +231,15 @@ namespace DSA_Project
         [ExcludeFromCodeCoverage]
         public Feature Feature(int number, DSA_FEATURES type)
         {
-            CreateFeature createFeature;
             Feature feature = Charakter.getFeature(type, number);
-
+            ControllView_CreateFeature viewController = new ControllView_CreateFeature(Charakter.getTalentList_allTalents());
 
             if (feature == null)
             {
-                createFeature = new CreateFeature(Charakter.getTalentList_allTalents(), type);
+                feature = new Feature(type);
             }
-            else
-            {
-                createFeature = new CreateFeature(feature, Charakter.getTalentList_allTalents(), type);
-            }
-            createFeature.ShowDialog();
-            feature = createFeature.feature();
 
-            if (feature == null) return null;
-
+            feature = viewController.editFeature(feature);
             Charakter.addFeature(number, feature);
 
             return feature;

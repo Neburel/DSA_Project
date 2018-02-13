@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Controller\ControllTalent.cs" />
+    <Compile Include="Classes\Controller\ControllView_CreateFeature.cs" />
     <Compile Include="Classes\Data\Charakter\Charakter.cs" />
     <Compile Include="Classes\Controller\ControllClass.cs" />
     <Compile Include="Classes\Data\Charakter\Feature.cs" />
@@ -423,9 +424,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\DSA\Talents\GeneralTalents\crafting\Falschspiel.xml">
@@ -1352,7 +1350,6 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
