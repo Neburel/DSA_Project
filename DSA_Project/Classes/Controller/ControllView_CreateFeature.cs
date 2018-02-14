@@ -18,7 +18,7 @@ namespace DSA_Project
         public Feature editFeature(Feature feature)
         {
             /*Clone Feature* -> Nötig wegen Elementaren Fehler im Manager*/
-            Feature cloneFeature = new Feature(feature.getFeatureType());
+            Feature cloneFeature = new Feature();
             cloneFeature.setName(feature.getName());
             cloneFeature.setDescription(feature.getSimpleDescription());
             cloneFeature.setGP(feature.getGP());

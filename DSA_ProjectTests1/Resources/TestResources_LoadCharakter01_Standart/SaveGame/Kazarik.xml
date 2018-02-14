@@ -64,8 +64,7 @@
       <BANK>39</BANK>
     </Money>
     <Features>
-      <Advantages>
-        <Number1>
+        <Number0>
           <Name>Tiefling(Sonnenanbeter)</Name>
           <Description>Intuition (+2) bei Dunkelheit, Geruchsimmun, Zwergenmagen</Description>
           <Value>X</Value>
@@ -75,8 +74,8 @@
           <Energie />
           <Advanced />
           <Talente />
-        </Number1>
-        <Number2>
+        </Number0>
+        <Number1>
           <Name>Schlangenmensch</Name>
           <Description>
           </Description>
@@ -89,8 +88,8 @@
           <Energie />
           <Advanced />
           <Talente />
-        </Number2>
-        <Number3>
+        </Number1>
+        <Number2>
           <Name>Erdkruste</Name>
           <Description>
           </Description>
@@ -103,8 +102,8 @@
           </Energie>
           <Advanced />
           <Talente />
-        </Number3>
-        <Number4>
+        </Number2>
+        <Number3>
           <Name>Diabolische Nächte</Name>
           <Description>
           </Description>
@@ -119,8 +118,8 @@
           </Energie>
           <Advanced />
           <Talente />
-        </Number4>
-        <Number5>
+        </Number3>
+        <Number4>
           <Name>Leichte Krankheitsresistenz</Name>
           <Description>10%</Description>
           <Value>
@@ -131,7 +130,7 @@
           <Energie />
           <Advanced />
           <Talente />
-        </Number5>
+        </Number4>
         <Number30>
           <Name>Belohnung Gewinnspiel</Name>
           <Description>1 Freies Talent (Noch zu Verteilen)</Description>
@@ -168,9 +167,8 @@
             </Talent>
           </Talente>
         </Number31>
-      </Advantages>
-      <DisAdvantages>
-        <Number1>
+ 
+        <Number15>
           <Name>Tiefling(Sonnenanbeter)</Name>
           <Description>Intuition (-1) + Überhitzung bei Helligkeit</Description>
           <Value>X</Value>
@@ -180,8 +178,8 @@
           <Energie />
           <Advanced />
           <Talente />
-        </Number1>
-        <Number2>
+        </Number15>
+        <Number16>
           <Name>Un-Charismatisch</Name>
           <Description>
           </Description>
@@ -199,8 +197,8 @@
               <TAW>-2</TAW>
             </Talent>
           </Talente>
-        </Number2>
-        <Number3>
+        </Number16>
+        <Number17>
           <Name>Rassismus(höheres Volk)</Name>
           <Description>
           </Description>
@@ -211,8 +209,8 @@
           <Energie />
           <Advanced />
           <Talente />
-        </Number3>
-        <Number4>
+        </Number17>
+        <Number18>
           <Name>Diabolische Nächte</Name>
           <Description>
           </Description>
@@ -225,8 +223,8 @@
             <ENTRÜCKUNG>-1</ENTRÜCKUNG>
           </Advanced>
           <Talente />
-        </Number4>
-        <Number5>
+        </Number18>
+        <Number19>
           <Name>
           </Name>
           <Description>
@@ -239,8 +237,7 @@
           <Energie />
           <Advanced />
           <Talente />
-        </Number5>
-      </DisAdvantages>
+        </Number19>
     </Features>
     <AdventurePoints>0</AdventurePoints>
   </HeldenBrief>

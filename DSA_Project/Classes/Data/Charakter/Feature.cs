@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace DSA_Project
 {
-    public enum DSA_FEATURES { VORTEIL, NACHTEIL }
-
     public class Feature
     {
-        private DSA_FEATURES type = DSA_FEATURES.VORTEIL;
-
         private String[] attributeAcronyms  = Enum.GetNames(typeof(DSA_ATTRIBUTE));
         private String[] energienAcronyms   = Enum.GetNames(typeof(DSA_ENERGIEN));
         private String[] advancedAcronyms   = Enum.GetNames(typeof(DSA_ADVANCEDVALUES));
@@ -25,48 +21,33 @@ namespace DSA_Project
         private Dictionary<DSA_ENERGIEN, int> energieBonus;
         private Dictionary<DSA_ADVANCEDVALUES, int> advancedBonus;
         private Dictionary<InterfaceTalent, int> talentBoni;
-        
-        public Feature(DSA_FEATURES type)
-        {
-            setUP(type);
 
+        public Feature()
+        {
             setName("");
             setDescription("");
             setValue("");
-            setGP("");            
+            setGP("");
+
+            setUP();
         }
-        public Feature(String Name, String Description, String Value, String GP, DSA_FEATURES type)
+        public Feature(String Name, String Description, String Value, String GP)
         {
             setName(Name);
             setDescription(Description);
             setValue(Value);
             setGP(GP);
 
-            setUP(type);
+            setUP();
         }
         
-        private void setUP(DSA_FEATURES type)
+        private void setUP()
         {
             attributeBonus  = new Dictionary<DSA_ATTRIBUTE, int>();
             energieBonus    = new Dictionary<DSA_ENERGIEN, int>();
             advancedBonus   = new Dictionary<DSA_ADVANCEDVALUES, int>();
             talentBoni      = new Dictionary<InterfaceTalent, int>();
-            this.type = type;
         }
-        private int checkValue(int value)
-        {
-            if (value < 0 && DSA_FEATURES.VORTEIL == type)
-            {
-                value = value * -1;
-            }
-
-            if (value > 0 && DSA_FEATURES.NACHTEIL == type)
-            {
-                value = value * -1;
-            }
-            return value;
-        }
-
         public void setGP(String GP)
         {
             var isNumeric = int.TryParse(GP, out var wert_int);
@@ -107,28 +88,21 @@ namespace DSA_Project
 
         public void setAttributeBonus(DSA_ATTRIBUTE attribute, int value)
         {
-            value = checkValue(value);
             attributeBonus.Remove(attribute);
             attributeBonus.Add(attribute, value);
         }
         public void setEnergieBonus(DSA_ENERGIEN energie, int value)
         {
-            if(energie != DSA_ENERGIEN.KARMAENERGIE)
-            {
-                value = checkValue(value);
-            }
             energieBonus.Remove(energie);
             energieBonus.Add(energie, value);
         }
         public void setAdvancedValues(DSA_ADVANCEDVALUES values, int value)
         {
-            value = checkValue(value);
             advancedBonus.Remove(values);
             advancedBonus.Add(values, value);
         }
         public void addTalent(InterfaceTalent talent, int BonusTaw)
         {
-            BonusTaw = checkValue(BonusTaw);
             talentBoni.Remove(talent);
             talentBoni.Add(talent, BonusTaw);
         }
@@ -136,12 +110,6 @@ namespace DSA_Project
         {
             talentBoni.Remove(talent);
         }
-
-        public DSA_FEATURES getFeatureType()
-        {
-            return this.type;
-        }
-
         public String getGP()
         {
             return GP;
@@ -155,14 +123,6 @@ namespace DSA_Project
             return Value;
         }
         public String getDescription()
-        {
-            return getDescription(this.type);
-        }
-        public String getSimpleDescription()
-        {
-            return this.Description;
-        }
-        private String getDescription(DSA_FEATURES type)
         {
             Char[] trimSymbol = new Char[] { ' ', ',' };
 
@@ -182,7 +142,10 @@ namespace DSA_Project
 
             return totalDescription;
         }
-
+        public String getSimpleDescription()
+        {
+            return this.Description;
+        }
         public int getTaWBonus(InterfaceTalent talent)
         {
             int x = 0;

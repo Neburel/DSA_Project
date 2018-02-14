@@ -32,7 +32,7 @@ namespace DSA_Project.Tests
         public void ControllView_CreateFeatureTests_setFeature()
         {
             ControllView_CreateFeature controll = new ControllView_CreateFeature(getTalentList());
-            Feature feature = new Feature(DSA_FEATURES.VORTEIL);
+            Feature feature = new Feature();
             controll.setFeature(feature);
 
             Assert.AreEqual(feature, controll.getFeature());
@@ -41,7 +41,7 @@ namespace DSA_Project.Tests
         public void ControllView_CreateFeatureTests_setName()
         {
             ControllView_CreateFeature controll = new ControllView_CreateFeature(getTalentList());
-            Feature feature = new Feature(DSA_FEATURES.VORTEIL);
+            Feature feature = new Feature();
             controll.setFeature(feature);
 
             Assert.AreEqual(feature, controll.getFeature());
@@ -55,7 +55,7 @@ namespace DSA_Project.Tests
         public void ControllView_CreateFeatureTests_setDescription()
         {
             ControllView_CreateFeature controll = new ControllView_CreateFeature(getTalentList());
-            Feature feature = new Feature(DSA_FEATURES.VORTEIL);
+            Feature feature = new Feature();
             controll.setFeature(feature);
 
             Assert.AreEqual(feature, controll.getFeature());
@@ -69,7 +69,7 @@ namespace DSA_Project.Tests
         public void ControllView_CreateFeatureTests_setGP()
         {
             ControllView_CreateFeature controll = new ControllView_CreateFeature(getTalentList());
-            Feature feature = new Feature(DSA_FEATURES.VORTEIL);
+            Feature feature = new Feature();
             controll.setFeature(feature);
 
             Assert.AreEqual(feature, controll.getFeature());
@@ -84,7 +84,7 @@ namespace DSA_Project.Tests
         public void ControllView_CreateFeatureTests_setValue()
         {
             ControllView_CreateFeature controll = new ControllView_CreateFeature(getTalentList());
-            Feature feature = new Feature(DSA_FEATURES.VORTEIL);
+            Feature feature = new Feature();
             controll.setFeature(feature);
 
             Assert.AreEqual(feature, controll.getFeature());
@@ -100,7 +100,7 @@ namespace DSA_Project.Tests
         {
             Random rand = new Random();
             ControllView_CreateFeature controll = new ControllView_CreateFeature(getTalentList());
-            Feature feature = new Feature(DSA_FEATURES.VORTEIL);
+            Feature feature = new Feature();
             controll.setFeature(feature);
 
             Assert.AreEqual(feature, controll.getFeature());
@@ -121,7 +121,7 @@ namespace DSA_Project.Tests
         {
             Random rand = new Random();
             ControllView_CreateFeature controll = new ControllView_CreateFeature(getTalentList());
-            Feature feature = new Feature(DSA_FEATURES.VORTEIL);
+            Feature feature = new Feature();
             controll.setFeature(feature);
 
             Assert.AreEqual(feature, controll.getFeature());
@@ -141,7 +141,7 @@ namespace DSA_Project.Tests
         {
             Random rand = new Random();
             ControllView_CreateFeature controll = new ControllView_CreateFeature(getTalentList());
-            Feature feature = new Feature(DSA_FEATURES.VORTEIL);
+            Feature feature = new Feature();
             controll.setFeature(feature);
 
             Assert.AreEqual(feature, controll.getFeature());
@@ -162,7 +162,7 @@ namespace DSA_Project.Tests
         {
             Random rand = new Random();
             ControllView_CreateFeature controll = new ControllView_CreateFeature(getTalentList());
-            Feature feature = new Feature(DSA_FEATURES.VORTEIL);
+            Feature feature = new Feature();
             controll.setFeature(feature);
 
             Assert.AreEqual(feature, controll.getFeature());
@@ -190,7 +190,7 @@ namespace DSA_Project.Tests
             tlist.Add(talenta);
 
             ControllView_CreateFeature controll = new ControllView_CreateFeature(tlist);
-            Feature feature = new Feature(DSA_FEATURES.VORTEIL);
+            Feature feature = new Feature();
             controll.setFeature(feature);
 
             List<InterfaceTalent> list = controll.getTalentList();
@@ -206,7 +206,7 @@ namespace DSA_Project.Tests
             tlist.Add(talenta);
 
             ControllView_CreateFeature controll = new ControllView_CreateFeature(tlist);
-            Feature feature = new Feature(DSA_FEATURES.VORTEIL);
+            Feature feature = new Feature();
             controll.setFeature(feature);
 
             List<String> list = controll.TalentewithBonus();
@@ -230,7 +230,7 @@ namespace DSA_Project.Tests
             InterfaceTalent talenta = new TalentCrafting("CraftingTalent", RandomGenerator.generateAttributList(), "BE", new List<TalentDeviate>(), new List<TalentRequirement>());
             
             ControllView_CreateFeature controll = new ControllView_CreateFeature(tlist);
-            Feature feature = new Feature(DSA_FEATURES.VORTEIL);
+            Feature feature = new Feature();
             controll.setFeature(feature);
 
             List<String> list = controll.TalentewithBonus();
@@ -251,7 +251,7 @@ namespace DSA_Project.Tests
             tlist.Add(talenta);
 
             ControllView_CreateFeature controll = new ControllView_CreateFeature(tlist);
-            Feature feature = new Feature(DSA_FEATURES.VORTEIL);
+            Feature feature = new Feature();
             controll.setFeature(feature);
 
             List<String> list = controll.TalentewithBonus();

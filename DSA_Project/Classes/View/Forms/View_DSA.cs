@@ -16,19 +16,6 @@ namespace DSA_Project
     public partial class DSA : Form
     {
         //#########################################################################################################################################################################
-        //Structs
-        private struct HeroPageFeatureTag
-        {
-            public DSA_FEATURES type;
-            public int number;
-
-            public HeroPageFeatureTag(DSA_FEATURES t, int n)
-            {
-                type = t;
-                number = n;
-            }
-        }
-        //#########################################################################################################################################################################
         System.Drawing.Image backround = (System.Drawing.Image)DSA_Project.Properties.Resources.Old_Parchment_Wallpaper_15;
         private ControllClass controll;
         public DSA()
@@ -791,53 +778,38 @@ namespace DSA_Project
         }
         //#########################################################################################################################################################################
         //HeroPage Feature
-        private int HeroPage_SupportedAdvantagesDisadvantagesBoxes = 15;
-        private List<TextBox> HeroPage_featureAdvantagesNameBox;
-        private List<TextBox> HeroPage_featureDisdvantagesNameBox;
-        private List<TextBox> HeroPage_featureAdvantagesDescriptionBox;
-        private List<TextBox> HeroPage_featureDisAdvantagesDescriptionBox;
-        private List<TextBox> HeroPage_featureAdvantagesGPBox;
-        private List<TextBox> HeroPage_featureDisAdvantagesGPBox;
-        private List<TextBox> HeroPage_featureAdvantagesValueBox;
-        private List<TextBox> HeroPage_featureDisAdvantagesValueBox;
+        private int HeroPage_SupportedFeatureBoxes = 30;
+        private List<TextBox> HeroPage_featureNameBox;
+        private List<TextBox> HeroPage_featureDescriptionBox;
+        private List<TextBox> HeroPage_featureGPBox;
+        private List<TextBox> HeroPage_featureValueBox;
         private void HeroPage_setUPFeatureLists()
         {
-            HeroPage_featureAdvantagesNameBox = new List<TextBox> { txtVorteil1Name, txtVorteil2Name, txtVorteil3Name, txtVorteil4Name, txtVorteil5Name, txtVorteil6Name, txtVorteil7Name, txtVorteil8Name, txtVorteil9Name, txtVorteil10Name, txtVorteil11Name, txtVorteil12Name, txtVorteil13Name, txtVorteil14Name, txtVorteil15Name };
-            HeroPage_featureDisdvantagesNameBox = new List<TextBox> { txtNachteil1Name, txtNachteil2Name, txtNachteil3Name, txtNachteil4Name, txtNachteil5Name, txtNachteil6Name, txtNachteil7Name, txtNachteil8Name, txtNachteil9Name, txtNachteil10Name, txtNachteil11Name, txtNachteil12Name, txtNachteil13Name, txtNachteil14Name, txtNachteil15Name };
-            HeroPage_featureAdvantagesDescriptionBox = new List<TextBox> { txtVorteil1Beschreibung, txtVorteil2Beschreibung, txtVorteil3Beschreibung, txtVorteil4Beschreibung, txtVorteil5Beschreibung, txtVorteil6Beschreibung, txtVorteil7Beschreibung, txtVorteil8Beschreibung, txtVorteil9Beschreibung, txtVorteil10Beschreibung, txtVorteil11Beschreibung, txtVorteil12Beschreibung, txtVorteil13Beschreibung, txtVorteil14Beschreibung, txtVorteil15Beschreibung };
-            HeroPage_featureDisAdvantagesDescriptionBox = new List<TextBox> { txtNachteil1Beschreibung, txtNachteil2Beschreibung, txtNachteil3Beschreibung, txtNachteil4Beschreibung, txtNachteil5Beschreibung, txtNachteil6Beschreibung, txtNachteil7Beschreibung, txtNachteil8Beschreibung, txtNachteil9Beschreibung, txtNachteil10Beschreibung, txtNachteil11Beschreibung, txtNachteil12Beschreibung, txtNachteil13Beschreibung, txtNachteil14Beschreibung, txtNachteil15Beschreibung };
-            HeroPage_featureAdvantagesGPBox = new List<TextBox> { txtVorteil1GP, txtVorteil2GP, txtVorteil3GP, txtVorteil4GP, txtVorteil5GP, txtVorteil6GP, txtVorteil7GP, txtVorteil8GP, txtVorteil9GP, txtVorteil10GP, txtVorteil11GP, txtVorteil12GP, txtVorteil13GP, txtVorteil14GP, txtVorteil15GP };
-            HeroPage_featureDisAdvantagesGPBox = new List<TextBox> { txtNachteil1GP, txtNachteil2GP, txtNachteil3GP, txtNachteil4GP, txtNachteil5GP, txtNachteil6GP, txtNachteil7GP, txtNachteil8GP, txtNachteil9GP, txtNachteil10GP, txtNachteil11GP, txtNachteil12GP, txtNachteil13GP, txtNachteil14GP, txtNachteil15GP };
-            HeroPage_featureAdvantagesValueBox = new List<TextBox> { txtVorteil1Wert, txtVorteil2Wert, txtVorteil3Wert, txtVorteil4Wert, txtVorteil5Wert, txtVorteil6Wert, txtVorteil7Wert, txtVorteil8Wert, txtVorteil9Wert, txtVorteil10Wert, txtVorteil11Wert, txtVorteil12Wert, txtVorteil13Wert, txtVorteil14Wert, txtVorteil15Wert };
-            HeroPage_featureDisAdvantagesValueBox = new List<TextBox> { txtNachteil1Wert, txtNachteil2Wert, txtNachteil3Wert, txtNachteil4Wert, txtNachteil5Wert, txtNachteil6Wert, txtNachteil7Wert, txtNachteil8Wert, txtNachteil9Wert, txtNachteil10Wert, txtNachteil11Wert, txtNachteil12Wert, txtNachteil13Wert, txtNachteil14Wert, txtNachteil15Wert };
+            HeroPage_featureNameBox = new List<TextBox> { txtVorteil1Name, txtVorteil2Name, txtVorteil3Name, txtVorteil4Name, txtVorteil5Name, txtVorteil6Name, txtVorteil7Name, txtVorteil8Name, txtVorteil9Name, txtVorteil10Name, txtVorteil11Name, txtVorteil12Name, txtVorteil13Name, txtVorteil14Name, txtVorteil15Name, txtNachteil1Name, txtNachteil2Name, txtNachteil3Name, txtNachteil4Name, txtNachteil5Name, txtNachteil6Name, txtNachteil7Name, txtNachteil8Name, txtNachteil9Name, txtNachteil10Name, txtNachteil11Name, txtNachteil12Name, txtNachteil13Name, txtNachteil14Name, txtNachteil15Name };
+            HeroPage_featureDescriptionBox = new List<TextBox> { txtVorteil1Beschreibung, txtVorteil2Beschreibung, txtVorteil3Beschreibung, txtVorteil4Beschreibung, txtVorteil5Beschreibung, txtVorteil6Beschreibung, txtVorteil7Beschreibung, txtVorteil8Beschreibung, txtVorteil9Beschreibung, txtVorteil10Beschreibung, txtVorteil11Beschreibung, txtVorteil12Beschreibung, txtVorteil13Beschreibung, txtVorteil14Beschreibung, txtVorteil15Beschreibung, txtNachteil1Beschreibung, txtNachteil2Beschreibung, txtNachteil3Beschreibung, txtNachteil4Beschreibung, txtNachteil5Beschreibung, txtNachteil6Beschreibung, txtNachteil7Beschreibung, txtNachteil8Beschreibung, txtNachteil9Beschreibung, txtNachteil10Beschreibung, txtNachteil11Beschreibung, txtNachteil12Beschreibung, txtNachteil13Beschreibung, txtNachteil14Beschreibung, txtNachteil15Beschreibung };
+            HeroPage_featureGPBox = new List<TextBox> { txtVorteil1GP, txtVorteil2GP, txtVorteil3GP, txtVorteil4GP, txtVorteil5GP, txtVorteil6GP, txtVorteil7GP, txtVorteil8GP, txtVorteil9GP, txtVorteil10GP, txtVorteil11GP, txtVorteil12GP, txtVorteil13GP, txtVorteil14GP, txtVorteil15GP, txtNachteil1GP, txtNachteil2GP, txtNachteil3GP, txtNachteil4GP, txtNachteil5GP, txtNachteil6GP, txtNachteil7GP, txtNachteil8GP, txtNachteil9GP, txtNachteil10GP, txtNachteil11GP, txtNachteil12GP, txtNachteil13GP, txtNachteil14GP, txtNachteil15GP };
+            HeroPage_featureValueBox = new List<TextBox> { txtVorteil1Wert, txtVorteil2Wert, txtVorteil3Wert, txtVorteil4Wert, txtVorteil5Wert, txtVorteil6Wert, txtVorteil7Wert, txtVorteil8Wert, txtVorteil9Wert, txtVorteil10Wert, txtVorteil11Wert, txtVorteil12Wert, txtVorteil13Wert, txtVorteil14Wert, txtVorteil15Wert, txtNachteil1Wert, txtNachteil2Wert, txtNachteil3Wert, txtNachteil4Wert, txtNachteil5Wert, txtNachteil6Wert, txtNachteil7Wert, txtNachteil8Wert, txtNachteil9Wert, txtNachteil10Wert, txtNachteil11Wert, txtNachteil12Wert, txtNachteil13Wert, txtNachteil14Wert, txtNachteil15Wert };
 
-            for (int i = 0; i < HeroPage_featureAdvantagesNameBox.Count; i++)
+            for (int i = 0; i < HeroPage_featureNameBox.Count; i++)
             {
-                HeroPage_featureAdvantagesNameBox[i].Tag = HeroPage_featureAdvantagesDescriptionBox[i].Tag = HeroPage_featureAdvantagesGPBox[i].Tag = HeroPage_featureAdvantagesValueBox[i].Tag = new HeroPageFeatureTag(DSA_FEATURES.VORTEIL, i + 1);
-                HeroPage_featureDisdvantagesNameBox[i].Tag = HeroPage_featureDisAdvantagesDescriptionBox[i].Tag = HeroPage_featureDisAdvantagesGPBox[i].Tag = HeroPage_featureDisAdvantagesValueBox[i].Tag = new HeroPageFeatureTag(DSA_FEATURES.NACHTEIL, i + 1);
-
-                HeroPage_featureAdvantagesNameBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
-                HeroPage_featureAdvantagesDescriptionBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
-                HeroPage_featureAdvantagesGPBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
-                HeroPage_featureAdvantagesValueBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
-
-                HeroPage_featureDisdvantagesNameBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
-                HeroPage_featureDisAdvantagesDescriptionBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
-                HeroPage_featureDisAdvantagesGPBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
-                HeroPage_featureDisAdvantagesValueBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
+                HeroPage_featureNameBox[i].Tag = HeroPage_featureDescriptionBox[i].Tag = HeroPage_featureGPBox[i].Tag = HeroPage_featureValueBox[i].Tag = i;
+                
+                HeroPage_featureNameBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
+                HeroPage_featureDescriptionBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
+                HeroPage_featureGPBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
+                HeroPage_featureValueBox[i].Click += new EventHandler(HeroPage_txtFeatureBox_Clicked);
             }
         }
         private void HeroPage_loadFeature()
         {
-            for (int i = 0; i < HeroPage_SupportedAdvantagesDisadvantagesBoxes; i++)
+            for (int i = 0; i < HeroPage_SupportedFeatureBoxes; i++)
             {
-                HeroPage_loadFeature(HeroPage_featureAdvantagesNameBox[i], HeroPage_featureAdvantagesDescriptionBox[i], HeroPage_featureAdvantagesValueBox[i], HeroPage_featureAdvantagesGPBox[i], DSA_FEATURES.VORTEIL, i + 1);
-                HeroPage_loadFeature(HeroPage_featureDisdvantagesNameBox[i], HeroPage_featureDisAdvantagesDescriptionBox[i], HeroPage_featureDisAdvantagesValueBox[i], HeroPage_featureDisAdvantagesGPBox[i], DSA_FEATURES.NACHTEIL, i + 1);
+                HeroPage_loadFeature(HeroPage_featureNameBox[i], HeroPage_featureDescriptionBox[i], HeroPage_featureValueBox[i], HeroPage_featureGPBox[i], i);
             }
         }
-        private void HeroPage_loadFeature(TextBox name, TextBox description, TextBox value, TextBox gp, DSA_FEATURES type, int number)
+        private void HeroPage_loadFeature(TextBox name, TextBox description, TextBox value, TextBox gp, int number)
         {
-            Feature feature = controll.FeatureExisting(number, type);
+            Feature feature = controll.FeatureExisting(number);
 
             if (feature == null)
             {
@@ -856,33 +828,16 @@ namespace DSA_Project
         private void HeroPage_txtFeatureBox_Clicked(object sender, EventArgs e)
         {
             TextBox box = (TextBox)sender;
-            HeroPageFeatureTag s = (HeroPageFeatureTag)box.Tag;
+            int number = (int)box.Tag;
 
-            HeroPage_CreateFeature(s.number, s.type);
-        }
-        private void HeroPage_CreateFeature(int number, DSA_FEATURES type)
-        {
-            Feature feature = controll.Feature(number, type);
-            number = number - 1;        //AUsgleich Nummerierung Echt / Programm    
-
+            Feature feature = controll.Feature(number);
             if (feature == null) return;
-
-            switch (type)
-            {
-                case DSA_FEATURES.VORTEIL:
-                    HeroPage_featureAdvantagesNameBox[number].Text = feature.getName();
-                    HeroPage_featureAdvantagesDescriptionBox[number].Text = feature.getDescription();
-                    HeroPage_featureAdvantagesGPBox[number].Text = feature.getGP();
-                    HeroPage_featureAdvantagesValueBox[number].Text = feature.getValue();
-                    break;
-                case DSA_FEATURES.NACHTEIL:
-                    HeroPage_featureDisdvantagesNameBox[number].Text = feature.getName();
-                    HeroPage_featureDisAdvantagesDescriptionBox[number].Text = feature.getDescription();
-                    HeroPage_featureDisAdvantagesGPBox[number].Text = feature.getGP();
-                    HeroPage_featureDisAdvantagesValueBox[number].Text = feature.getValue();
-                    break;
-            }
-            this.refreshHeroPage();
+            
+            HeroPage_featureNameBox[number].Text = feature.getName();
+            HeroPage_featureDescriptionBox[number].Text = feature.getDescription();
+            HeroPage_featureGPBox[number].Text = feature.getGP();
+            HeroPage_featureValueBox[number].Text = feature.getValue();
+            this.refreshHeroPage();            
         }
         //#########################################################################################################################################################################
         //TalentPage 
@@ -1234,7 +1189,6 @@ namespace DSA_Project
         private List<TextBox> LanguagePage_FontComplexTextBoxes;
         private List<TextBox> LanguagePage_FontTaWTextBoxes;
         private List<TextBox> LanguagePage_FontProbeTextBoxes;
-
         private void LanguagePage_setUP()
         {
             LanguagePage_LanguageNameTextBoxes       = new List<TextBox> { txtLanguagePageLanguageName1, txtLanguagePageLanguageName2, txtLanguagePageLanguageName3, txtLanguagePageLanguageName4, txtLanguagePageLanguageName5, txtLanguagePageLanguageName6, txtLanguagePageLanguageName7, txtLanguagePageLanguageName8, txtLanguagePageLanguageName9, txtLanguagePageLanguageName10, txtLanguagePageLanguageName11, txtLanguagePageLanguageName12, txtLanguagePageLanguageName13, txtLanguagePageLanguageName14, txtLanguagePageLanguageName15, txtLanguagePageLanguageName16, txtLanguagePageLanguageName17, txtLanguagePageLanguageName18, txtLanguagePageLanguageName19, txtLanguagePageLanguageName20, txtLanguagePageLanguageName21, txtLanguagePageLanguageName22, txtLanguagePageLanguageName23, txtLanguagePageLanguageName24, txtLanguagePageLanguageName25, txtLanguagePageLanguageName26, txtLanguagePageLanguageName27, txtLanguagePageLanguageName28, txtLanguagePageLanguageName29, txtLanguagePageLanguageName30 };
@@ -1361,7 +1315,7 @@ namespace DSA_Project
 
             for (int i = 0; i < supportedRewardBoxes; i++)
             {
-                Feature feature = controll.FeatureExisting(number+i, DSA_FEATURES.VORTEIL);
+                Feature feature = controll.FeatureExisting(number+i);
                 if (feature != null)
                 {
                     rewardNameBoxes[i].Text = feature.getName();
@@ -1374,9 +1328,9 @@ namespace DSA_Project
                 }
             }
         }
-        private void CreateReward(int rewardNumber, int boxNumber, DSA_FEATURES type)
+        private void CreateReward(int rewardNumber, int boxNumber)
         {
-            Feature feature = controll.Feature(rewardNumber, type);
+            Feature feature = controll.Feature(rewardNumber);
 
             if (feature == null) return;
 
@@ -1397,7 +1351,7 @@ namespace DSA_Project
 
             number = (TalentPage_CountBoxes * page) + BoxNumber;
 
-            CreateReward(number, BoxNumber, DSA_FEATURES.VORTEIL);
+            CreateReward(number, BoxNumber);
         }
         //#########################################################################################################################################################################
 

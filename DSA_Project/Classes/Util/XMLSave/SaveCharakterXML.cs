@@ -21,8 +21,6 @@ namespace DSA_Project
             XmlElement AdvancedValue = characterFile.CreateElement(ManagmentXMLStrings.AdvancedElement);
             XmlElement MoneyElement = characterFile.CreateElement(ManagmentXMLStrings.MoneyElement);
             XmlElement FeatureElement = characterFile.CreateElement(ManagmentXMLStrings.FeatureElement);
-            XmlElement AdvantageElement = characterFile.CreateElement(ManagmentXMLStrings.Advantages);
-            XmlElement DisAdvantageElement = characterFile.CreateElement(ManagmentXMLStrings.DisAdvantages);
             XmlElement TalentBriefElement = characterFile.CreateElement(ManagmentXMLStrings.TalentBriefElement);
             XmlElement AdvanturePoints = characterFile.CreateElement(ManagmentXMLStrings.AdvanturePoints);
 
@@ -31,8 +29,7 @@ namespace DSA_Project
             saveAttribute(charakter, characterFile, AttributeElement);
             saveAdvancedValues(charakter, characterFile, AdvancedValue);
             saveMoney(charakter, characterFile, MoneyElement);
-            saveFeature(charakter, characterFile, AdvantageElement, DSA_FEATURES.VORTEIL);
-            saveFeature(charakter, characterFile, DisAdvantageElement, DSA_FEATURES.NACHTEIL);
+            saveFeature(charakter, characterFile, FeatureElement);
             saveTalents(charakter, characterFile, TalentBriefElement);
             saveAdventurePoints(charakter, AdvanturePoints);
 
@@ -46,9 +43,6 @@ namespace DSA_Project
             HeldenBriefElement.AppendChild(MoneyElement);
             HeldenBriefElement.AppendChild(FeatureElement);
             HeldenBriefElement.AppendChild(AdvanturePoints);
-
-            FeatureElement.AppendChild(AdvantageElement);
-            FeatureElement.AppendChild(DisAdvantageElement);
 
 
             CharakterBogenElement.AppendChild(TalentBriefElement);
@@ -124,11 +118,11 @@ namespace DSA_Project
         {
             Elementadvanturepoints.InnerText = charakter.getAdvanturePoints().ToString();
         }
-        private static void saveFeature(Charakter charakter, XmlDocument characterFile, XmlElement element, DSA_FEATURES type)
+        private static void saveFeature(Charakter charakter, XmlDocument characterFile, XmlElement element)
         {
-            for (int i = 0; i <= charakter.getHighistFeatureNumber(); i++)
+            for (int i = 0; i < charakter.getHighistFeatureNumber(); i++)
             {
-                Feature feature = charakter.getFeature(type, i);
+                Feature feature = charakter.getFeature(i);
                 if (feature != null)
                 {
                     XmlElement newFeature = characterFile.CreateElement(ManagmentXMLStrings.Number + i.ToString());

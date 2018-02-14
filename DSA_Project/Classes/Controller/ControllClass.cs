@@ -229,14 +229,14 @@ namespace DSA_Project
         //###################################################################################################################################
         //Einrichtung der Feature
         [ExcludeFromCodeCoverage]
-        public Feature Feature(int number, DSA_FEATURES type)
+        public Feature Feature(int number)
         {
-            Feature feature = Charakter.getFeature(type, number);
+            Feature feature = Charakter.getFeature(number);
             ControllView_CreateFeature viewController = new ControllView_CreateFeature(Charakter.getTalentList_allTalents());
 
             if (feature == null)
             {
-                feature = new Feature(type);
+                feature = new Feature();
             }
 
             feature = viewController.editFeature(feature);
@@ -245,9 +245,9 @@ namespace DSA_Project
             return feature;
         }
         [ExcludeFromCodeCoverage]
-        public Feature FeatureExisting(int number, DSA_FEATURES type)
+        public Feature FeatureExisting(int number)
         {
-            return Charakter.getFeature(type, number);
+            return Charakter.getFeature(number);
         }
         //###################################################################################################################################
         //Talente
