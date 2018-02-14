@@ -42,7 +42,7 @@ namespace DSA_Project
             List<InterfaceTalent> list =  feature.getTalentListwithBonus();
             for(int i=0; i<list.Count; i++)
             {
-                cloneFeature.addTalent(list[i], feature.getTaWBonus(list[i]));
+                cloneFeature.setTalentBonusTaW(list[i], feature.getTaWBonus(list[i]));
             }
             this.feature = cloneFeature;
 
@@ -171,7 +171,7 @@ namespace DSA_Project
         public void removeTawBonus(String Talent)
         {
             InterfaceTalent italent = getTalentbyName(Talent);
-            feature.removeTalent(italent);
+            feature.removeTalentBonusTaW(italent);
         }
         public void setTawBonus(String Talent, String Taw)
         {
@@ -179,7 +179,7 @@ namespace DSA_Project
             if (italent == null) return;
 
             int x = convertToInt(Taw);
-            feature.addTalent(italent, x);
+            feature.setTalentBonusTaW(italent, x);
         }
         public int getTawBonus(String talent)
         {

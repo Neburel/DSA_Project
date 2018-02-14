@@ -42,8 +42,8 @@ namespace DSA_Project.Tests
             feature5.setEnergieBonus(DSA_ENERGIEN.ASTRALENERGIE, -10);
             feature6.setEnergieBonus(DSA_ENERGIEN.ASTRALENERGIE, -10);
 
-            feature1.addTalent(talent1, 10);
-            feature3.addTalent(talent1, 10);
+            feature1.setTalentBonusTaW(talent1, 10);
+            feature3.setTalentBonusTaW(talent1, 10);
 
             featureManagment.addFeature(feature1, 1);
             featureManagment.addFeature(feature2, 2);

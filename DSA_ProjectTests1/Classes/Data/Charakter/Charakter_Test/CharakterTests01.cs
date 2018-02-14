@@ -60,7 +60,7 @@ namespace DSA_Project.Tests
             dic.Add(feature3, 3);
 
             feature1.setAdvancedValues(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS, 20);
-            feature1.addTalent(talent, 5);
+            feature1.setTalentBonusTaW(talent, 5);
             feature2.setEnergieBonus(DSA_ENERGIEN.AUSDAUER, 8);
             feature3.setAttributeBonus(DSA_ATTRIBUTE.IN, 9);
 

@@ -206,7 +206,14 @@ namespace DSA_Project.Tests
                 advancedBonus.TryGetValue((DSA_ADVANCEDVALUES)i, out x);
                 if (x != 0)
                 {
-                    ret = ret + " " + x + advancedAcronyms[i];
+                    if (0 != String.Compare(ret, ""))
+                    {
+                        ret = ret + ", " + x + advancedAcronyms[i];
+                    }
+                    else
+                    {
+                        ret = x + advancedAcronyms[i];
+                    }
                 }
             }
             return ret;
@@ -699,7 +706,7 @@ namespace DSA_Project.Tests
 
             TalentCrafting testTalent = new TalentCrafting("CraftingTalent", new List<DSA_ATTRIBUTE>(), "", new List<TalentDeviate>(), new List<TalentRequirement>());
 
-            AD_feature.addTalent(testTalent, 10);
+            AD_feature.setTalentBonusTaW(testTalent, 10);
 
             setAttributValues(AD_feature);
 

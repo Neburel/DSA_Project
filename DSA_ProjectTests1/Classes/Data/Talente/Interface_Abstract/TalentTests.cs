@@ -85,7 +85,7 @@ namespace DSA_Project.Tests
                 int j       = random.Next(1, maxFeatureTaW);
                 BonusTaW    = BonusTaW + j;
                 Feature Advancedfeature = new Feature("TestAdvancedFeature_" + i, "Test", "", "");
-                Advancedfeature.addTalent(talent, j);
+                Advancedfeature.setTalentBonusTaW(talent, j);
                 charakter.addFeature(i, Advancedfeature);
             }
             for (int i = 0; i < disadvantages; i++)
@@ -93,7 +93,7 @@ namespace DSA_Project.Tests
                 int j = random.Next(1, maxFeatureTaW);
                 BonusTaW = BonusTaW - j;
                 Feature DisAdvancedfeature = new Feature("TestDisAdvancedFeature_" + i, "Test", "", "");
-                DisAdvancedfeature.addTalent(talent, -j);
+                DisAdvancedfeature.setTalentBonusTaW(talent, -j);
                 charakter.addFeature(advantages + i, DisAdvancedfeature);
             }
 
