@@ -295,7 +295,7 @@ namespace DSA_Project
                     throw e;
                 }
 
-                feature.addTalent(talent, x);
+                feature.setTalentBonusTaW(talent, x);
             }
         }
 

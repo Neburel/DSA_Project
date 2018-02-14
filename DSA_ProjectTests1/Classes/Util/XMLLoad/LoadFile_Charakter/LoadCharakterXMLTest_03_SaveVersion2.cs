@@ -92,14 +92,14 @@ namespace DSA_Project.Tests
             fa3.setEnergieBonus(DSA_ENERGIEN.LEBENSENERGIE, 4);
             fa4.setAttributeBonus(DSA_ATTRIBUTE.CH, 1);
             fa4.setEnergieBonus(DSA_ENERGIEN.AUSDAUER, 5);
-            fa30.addTalent(charakter.getTalent("Armbrust"), 1);
+            fa30.setTalentBonusTaW(charakter.getTalent("Armbrust"), 1);
             fa31.setEnergieBonus(DSA_ENERGIEN.AUSDAUER, 5);
             fa31.setEnergieBonus(DSA_ENERGIEN.KARMAENERGIE, 10);
-            fa31.addTalent(charakter.getTalent("Überzeugen"), 1);
-            fa31.addTalent(charakter.getTalent("Überreden"), 1);
-            fa31.addTalent(charakter.getTalent("Armbrust"), 1);
+            fa31.setTalentBonusTaW(charakter.getTalent("Überzeugen"), 1);
+            fa31.setTalentBonusTaW(charakter.getTalent("Überreden"), 1);
+            fa31.setTalentBonusTaW(charakter.getTalent("Armbrust"), 1);
             fa32.setAttributeBonus(DSA_ATTRIBUTE.IN, 1);
-            fa32.addTalent(charakter.getTalent("Fährtensuchen"), 1);
+            fa32.setTalentBonusTaW(charakter.getTalent("Fährtensuchen"), 1);
 
             dic.Add(fa1, 0);
             dic.Add(fa2, 1);
@@ -117,7 +117,7 @@ namespace DSA_Project.Tests
             Feature fd4 = new Feature("Diabolische Nächte", "", "X", "");
 
             fd2.setAttributeBonus(DSA_ATTRIBUTE.CH, -1);
-            fd2.addTalent(charakter.getTalent("Betören"), -2);
+            fd2.setTalentBonusTaW(charakter.getTalent("Betören"), -2);
             fd4.setAdvancedValues(DSA_ADVANCEDVALUES.ENTRÜCKUNG, -1);
 
             dic.Add(fd1, 15);

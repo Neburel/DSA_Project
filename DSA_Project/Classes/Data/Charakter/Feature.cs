@@ -8,10 +8,6 @@ namespace DSA_Project
 {
     public class Feature
     {
-        private String[] attributeAcronyms  = Enum.GetNames(typeof(DSA_ATTRIBUTE));
-        private String[] energienAcronyms   = Enum.GetNames(typeof(DSA_ENERGIEN));
-        private String[] advancedAcronyms   = Enum.GetNames(typeof(DSA_ADVANCEDVALUES));
-
         private String Name;
         private String Description;
         private String Value;
@@ -50,8 +46,7 @@ namespace DSA_Project
         }
         public void setGP(String GP)
         {
-            var isNumeric = int.TryParse(GP, out var wert_int);
-            if (isNumeric == true)
+            if (int.TryParse(GP, out var wert_int))
             {
                 this.GP = wert_int.ToString();
             }
@@ -101,14 +96,49 @@ namespace DSA_Project
             advancedBonus.Remove(values);
             advancedBonus.Add(values, value);
         }
-        public void addTalent(InterfaceTalent talent, int BonusTaw)
+        public void setTalentBonusTaW(InterfaceTalent talent, int BonusTaw)
         {
             talentBoni.Remove(talent);
             talentBoni.Add(talent, BonusTaw);
         }
-        public void removeTalent(InterfaceTalent talent)
+        public void removeTalentBonusTaW(InterfaceTalent talent)
         {
             talentBoni.Remove(talent);
+        }
+
+        private String getEnumString<T>(Dictionary<T, int> dic) where T : struct, IConvertible
+        {
+            String[] Acronyms = Enum.GetNames(typeof(T));
+            String ret = "";
+            
+            for (int i = 0; i < Acronyms.Length; i++)
+            {
+                T t = (T)(object)i;
+                dic.TryGetValue(t, out int x);
+                if (x != 0)
+                {
+                    if (0 != String.Compare(ret, ""))
+                    {
+                        ret = ret + ", " + x + Acronyms[i];
+                    }
+                    else
+                    {
+                        ret = x + Acronyms[i];
+                    }
+                }
+            }
+            return ret;
+        }
+        private String getTalentString()
+        {
+            String ret = "";
+            foreach (InterfaceTalent talent in talentBoni.Keys)
+            {
+                int x = 0;
+                talentBoni.TryGetValue(talent, out x);
+                ret = ret + talent.getName() + "(" + x + ")";
+            }
+            return ret;
         }
         public String getGP()
         {
@@ -127,13 +157,13 @@ namespace DSA_Project
             Char[] trimSymbol = new Char[] { ' ', ',' };
 
             String totalDescription = String.Copy(this.Description);
-            totalDescription = totalDescription + ", " + getAttributeString();
+            totalDescription = totalDescription + ", " + getEnumString(attributeBonus);
             totalDescription = totalDescription.TrimEnd(trimSymbol);
             totalDescription = totalDescription.TrimEnd(trimSymbol);
-            totalDescription = totalDescription + ", " + getEnergieString();
+            totalDescription = totalDescription + ", " + getEnumString(energieBonus);
             totalDescription = totalDescription.TrimEnd(trimSymbol);
             totalDescription = totalDescription.TrimEnd(trimSymbol);
-            totalDescription = totalDescription + ", " + getAdvancedString();
+            totalDescription = totalDescription + ", " + getEnumString(advancedBonus);
             totalDescription = totalDescription.TrimEnd(trimSymbol);
             totalDescription = totalDescription.TrimEnd(trimSymbol);
             totalDescription = totalDescription + ", " + getTalentString();
@@ -148,8 +178,7 @@ namespace DSA_Project
         }
         public int getTaWBonus(InterfaceTalent talent)
         {
-            int x = 0;
-            if (talentBoni.TryGetValue(talent, out x))
+            if (talentBoni.TryGetValue(talent, out int x))
             {
                 return x;
             }
@@ -157,94 +186,23 @@ namespace DSA_Project
         }
         public int getEnergieBonus(DSA_ENERGIEN energie)
         {
-            int x;
-            energieBonus.TryGetValue(energie, out x);
+            energieBonus.TryGetValue(energie, out int x);
             return x;
         }
         public int getAttributeBonus(DSA_ATTRIBUTE attribute)
         {
-            int x;
-            attributeBonus.TryGetValue(attribute, out x);
+            attributeBonus.TryGetValue(attribute, out int x);
             return x;
         }
         public int getAdvancedValues(DSA_ADVANCEDVALUES value)
         {
-            int x;
-            advancedBonus.TryGetValue(value, out x);
+            advancedBonus.TryGetValue(value, out int x);
             return x;
         }
-
+        
         public List<InterfaceTalent> getTalentListwithBonus()
         {
             return new List<InterfaceTalent>(this.talentBoni.Keys);
-        }
-        
-        private String getAttributeString()
-        {
-            String ret = "";
-            int x = 0;
-            for (int i = 0; i < Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length; i++)
-            {
-                attributeBonus.TryGetValue((DSA_ATTRIBUTE)i, out x);
-                if (x != 0)
-                {
-                    if (0 != String.Compare(ret, ""))
-                    {
-                        ret = ret + ", " + x + attributeAcronyms[i];
-                    }
-                    else
-                    {
-                        ret = x + attributeAcronyms[i];
-                    }
-                }
-            }
-            return ret;
-        }
-        private String getEnergieString()
-        {
-            String ret = "";
-            int x = 0;
-            for (int i = 0; i < Enum.GetNames(typeof(DSA_ENERGIEN)).Length; i++)
-            {
-                energieBonus.TryGetValue((DSA_ENERGIEN)i, out x);
-                if (x != 0)
-                {
-                    if (0 != String.Compare(ret, ""))
-                    {
-                        ret = ret + ", " + x + energienAcronyms[i];
-                    }
-                    else
-                    {
-                        ret = x + energienAcronyms[i];
-                    }
-                }
-            }
-            return ret;
-        }
-        private String getAdvancedString()
-        {
-            String ret = "";
-            int x = 0;
-            for (int i = 0; i < Enum.GetNames(typeof(DSA_ADVANCEDVALUES)).Length; i++)
-            {
-                advancedBonus.TryGetValue((DSA_ADVANCEDVALUES)i, out x);
-                if (x != 0)
-                {
-                    ret = ret + " " + x + advancedAcronyms[i];
-                }
-            }
-            return ret;
-        }
-        private String getTalentString()
-        {
-            String ret = "";
-            foreach (InterfaceTalent talent in talentBoni.Keys)
-            {
-                int x = 0;
-                talentBoni.TryGetValue(talent, out x);
-                ret = ret + talent.getName() + "(" + x + ")";
-            }
-            return ret;
         }
     }
 }
