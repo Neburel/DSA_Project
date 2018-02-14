@@ -152,11 +152,6 @@
     <Compile Include="Classes\View\Forms\View_CreateFeature.Designer.cs">
       <DependentUpon>View_CreateFeature.cs</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
     <Content Include="Resources\DSA\SaveGame\Kazarik_2.xml" />
     <Content Include="Resources\PicturesDiv\Logo_das_Schwarze_Auge.svg.ico" />
     <Content Include="Log\log.txt">
@@ -1351,10 +1346,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\app.manifest" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
     <Content Include="Resources\DSA\Talents\GeneralTalents\social\Sich Verkleiden.xml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -17,6 +17,8 @@ namespace DSA_Project.Tests
         public void setUP_this()
         {
             talentList = new List<InterfaceTalent>();
+            Console.WriteLine("CharakterTests01");
+            Console.WriteLine(this);
         }
 
         public override Dictionary<DSA_ATTRIBUTE, int> getAttributeDictonary()
@@ -47,9 +49,9 @@ namespace DSA_Project.Tests
         {
             Dictionary<Feature, int> dic = new Dictionary<Feature, int>(0);
 
-            Feature feature1 = new Feature("F1", "F1", "0", "0", DSA_FEATURES.VORTEIL);
-            Feature feature2 = new Feature("F2", "F2", "10", "7", DSA_FEATURES.VORTEIL);
-            Feature feature3 = new Feature("F3", "F3", "2", "8", DSA_FEATURES.NACHTEIL);
+            Feature feature1 = new Feature("F1", "F1", "0", "0");
+            Feature feature2 = new Feature("F2", "F2", "10", "7");
+            Feature feature3 = new Feature("F3", "F3", "2", "8");
 
             TalentCrafting talent = new TalentCrafting("Crafting", RandomGenerator.generateAttributList(), "BE", new List<TalentDeviate>(), new List<TalentRequirement>());
 

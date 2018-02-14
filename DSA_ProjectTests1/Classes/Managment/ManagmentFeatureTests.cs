@@ -21,17 +21,17 @@ namespace DSA_Project.Tests
         {
             featureManagment = new ManagmentFeature();
 
-            feature1 = new Feature("Feature1", "Description1", "0", "0", DSA_FEATURES.VORTEIL);
-            Feature feature2 = new Feature("Feature2", "Description1", "0", "0", DSA_FEATURES.VORTEIL);
-            Feature feature3 = new Feature("Feature3", "Description1", "0", "0", DSA_FEATURES.VORTEIL);
-            Feature feature4 = new Feature("Feature4", "Description1", "0", "0", DSA_FEATURES.VORTEIL);
-            feature5 = new Feature("Feature5", "Description1", "0", "0", DSA_FEATURES.NACHTEIL);
-            Feature feature6 = new Feature("Feature6", "Description1", "0", "0", DSA_FEATURES.NACHTEIL);
+            feature1 = new Feature("Feature1", "Description1", "0", "0");
+            Feature feature2 = new Feature("Feature2", "Description1", "0", "0");
+            Feature feature3 = new Feature("Feature3", "Description1", "0", "0");
+            Feature feature4 = new Feature("Feature4", "Description1", "0", "0");
+            feature5 = new Feature("Feature5", "Description1", "0", "0");
+            Feature feature6 = new Feature("Feature6", "Description1", "0", "0");
 
             talent1 = new TalentCrafting("TestTalent", new List<DSA_ATTRIBUTE>(), "BE", new List<TalentDeviate>(), new List<TalentRequirement>());
             
             feature3.setAttributeBonus(DSA_ATTRIBUTE.CH, 5);
-            feature6.setAttributeBonus(DSA_ATTRIBUTE.CH, 2);
+            feature6.setAttributeBonus(DSA_ATTRIBUTE.CH, -2);
 
             feature4.setAdvancedValues(DSA_ADVANCEDVALUES.FERNKAMPF_BASIS, 5);
 
@@ -39,8 +39,8 @@ namespace DSA_Project.Tests
             feature2.setEnergieBonus(DSA_ENERGIEN.ASTRALENERGIE, 2);
             feature3.setEnergieBonus(DSA_ENERGIEN.ASTRALENERGIE, 3);
             feature4.setEnergieBonus(DSA_ENERGIEN.ASTRALENERGIE, 8);
-            feature5.setEnergieBonus(DSA_ENERGIEN.ASTRALENERGIE, 10);
-            feature6.setEnergieBonus(DSA_ENERGIEN.ASTRALENERGIE, 10);
+            feature5.setEnergieBonus(DSA_ENERGIEN.ASTRALENERGIE, -10);
+            feature6.setEnergieBonus(DSA_ENERGIEN.ASTRALENERGIE, -10);
 
             feature1.addTalent(talent1, 10);
             feature3.addTalent(talent1, 10);
@@ -57,8 +57,8 @@ namespace DSA_Project.Tests
         [TestMethod]
         public void ManagmentFeature_getFeature()
         {
-            Assert.AreEqual(feature1, featureManagment.GetFeature(DSA_FEATURES.VORTEIL, 1));
-            Assert.AreEqual(feature5, featureManagment.GetFeature(DSA_FEATURES.NACHTEIL, 5));
+            Assert.AreEqual(feature1, featureManagment.GetFeature(1));
+            Assert.AreEqual(feature5, featureManagment.GetFeature(5));
         }
         [TestMethod]
         public void ManagmentFeature_attributBons()
@@ -84,7 +84,17 @@ namespace DSA_Project.Tests
         [TestMethod]
         public void ManagmentFeature_getHighestNumber()
         {
-            Assert.AreEqual(6, featureManagment.getHighestNumber());
+            Assert.AreEqual(7, featureManagment.Count());
+        }
+        [TestMethod]
+        public void ManagmentFeature_NumberOutofRange()
+        {
+            Feature feature = featureManagment.GetFeature(featureManagment.Count() + 2);
+            Assert.AreEqual(7, featureManagment.Count());
+            Assert.AreEqual("", feature.getName());
+            Assert.AreEqual("", feature.getValue());
+            Assert.AreEqual("", feature.getGP());
+            Assert.AreEqual("", feature.getDescription());
         }
     }
 }

@@ -28,11 +28,11 @@ namespace DSA_Project
         }
         public int getHighistFeatureNumber()
         {
-            return featureManagment.getHighestNumber();
+            return featureManagment.Count();
         }
-        public Feature getFeature(DSA_FEATURES type, int number)
+        public Feature getFeature(int number)
         {
-            return featureManagment.GetFeature(type, number);
+            return featureManagment.GetFeature(number);
         }
         //###############################################################################################################################################
         //Sonstige
