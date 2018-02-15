@@ -181,7 +181,7 @@ namespace DSA_Project.Tests
                 int pos = 0;
                 featureDictionary.TryGetValue(list[i], out pos);
 
-                charakter.addFeature(pos, list[i]);
+                charakter.setFeature(pos, list[i]);
                 managmentFeature.addFeature(list[i], pos);
             }
         }
@@ -238,7 +238,7 @@ namespace DSA_Project.Tests
         [TestMethod]
         public void Charakter_getHighestFeatureNumber()
         {
-            Assert.AreEqual(managmentFeature.getHighestNumber(), charakter.getHighistFeatureNumber());
+            Assert.AreEqual(managmentFeature.getHighestNumber(), charakter.Count_Feature());
         }
         private void testFeatureAdvanced(Feature feature1, Feature feature2)
         {

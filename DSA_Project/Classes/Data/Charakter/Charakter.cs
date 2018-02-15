@@ -1,48 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace DSA_Project
 {
     public class Charakter
-    {   
-        public Charakter()
-        {   
-            setUP_others();
-            setUPTalente();
-            setUPBasicVaues();
-            setUPAttribute();
-            setUPAdvanced();
-            setUPEnegrien();            
-        }
-        
-
+    {
         //###############################################################################################################################################
         //Features
         private ManagmentFeature featureManagment = new ManagmentFeature();
-        public void addFeature(int number, Feature feature)
+        public void setFeature(int number, Feature feature)
         {
             featureManagment.addFeature(feature, number);
-        }
-        public int getHighistFeatureNumber()
-        {
-            return featureManagment.getHighestNumber();
         }
         public Feature getFeature(DSA_FEATURES type, int number)
         {
             return featureManagment.GetFeature(type, number);
         }
+        public int Count_Feature()
+        {
+            return featureManagment.getHighestNumber();
+        }
         //###############################################################################################################################################
         //Sonstige
-        private Dictionary<DSA_MONEY, int> money;
-        private int adventurePoints = 0;
-        private void setUP_others()
-        {
-            int enumMoneyLength = Enum.GetNames(typeof(DSA_MONEY)).Length;
-            money = new Dictionary<DSA_MONEY, int>();
-        }
+        private Dictionary<DSA_MONEY, int> money    = new Dictionary<DSA_MONEY, int>();
+        private int adventurePoints                 = 0;
         public void setAdventurePoints(int points)
         {
             this.adventurePoints = points;
@@ -58,23 +38,12 @@ namespace DSA_Project
         }
         public int getMoney(DSA_MONEY type)
         {
-            int x;
-            money.TryGetValue(type, out x);
+            money.TryGetValue(type, out int x);
             return x;
         }
         //###############################################################################################################################################
         //BasicValues
-        private Dictionary<DSA_BASICVALUES, String> basicValues;
-        private void setUPBasicVaues()
-        {
-            int enumBasicValueLength = Enum.GetNames(typeof(DSA_BASICVALUES)).Length;
-            basicValues = new Dictionary<DSA_BASICVALUES, string>();
-
-            for (int i = 0; i < enumBasicValueLength; i++)
-            {
-                basicValues.Add((DSA_BASICVALUES)i, "");
-            }
-        }
+        private Dictionary<DSA_BASICVALUES, String> basicValues = new Dictionary<DSA_BASICVALUES, String>();
         public void setBasicValues(DSA_BASICVALUES value, String stringValue)
         {
             basicValues.Remove(value);
@@ -82,31 +51,13 @@ namespace DSA_Project
         }
         public String getBasicValue(DSA_BASICVALUES value)
         {
-            String x;
-            basicValues.TryGetValue(value, out x);
+            basicValues.TryGetValue(value, out String x);
             return x;
         }
         //###############################################################################################################################################
         //Attribute
-        private Dictionary<DSA_ATTRIBUTE, int> attributeAKT;
-        private Dictionary<DSA_ATTRIBUTE, bool> markedAttributs;
-        private void setUPAttribute()
-        {
-            int enumAttributLength = Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length;
-
-            attributeAKT = new Dictionary<DSA_ATTRIBUTE, int>();
-            markedAttributs = new Dictionary<DSA_ATTRIBUTE, bool>();
-
-            for (int i = 0; i < Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length; i++)
-            {
-                markedAttributs.Add((DSA_ATTRIBUTE)i, false);
-            }
-
-            for (int i = 0; i < enumAttributLength; i++)
-            {
-                attributeAKT.Add((DSA_ATTRIBUTE)i, 0);
-            }
-        }
+        private Dictionary<DSA_ATTRIBUTE, int> attributeAKT         = new Dictionary<DSA_ATTRIBUTE, int>();
+        private Dictionary<DSA_ATTRIBUTE, bool> markedAttributs     = new Dictionary<DSA_ATTRIBUTE, bool>();    
         public void setAttribute(DSA_ATTRIBUTE attribute, int wert)
         {
             attributeAKT.Remove(attribute);
@@ -120,8 +71,7 @@ namespace DSA_Project
         public int getSummeAttributeAKT()
         {
             int summe = 0;
-            int attributeCount = Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length;
-            for (int i = 0; i < attributeCount; i++)
+            for (int i = 0; i < Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length; i++)
             {
                 summe = summe + getAttributeAKT((DSA_ATTRIBUTE)i);
             }
@@ -130,8 +80,7 @@ namespace DSA_Project
         public int getSummeAttributeMAX()
         {
             int summe = 0;
-            int attributeCount = Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length;
-            for (int i = 0; i < attributeCount; i++)
+            for (int i = 0; i < Enum.GetNames(typeof(DSA_ATTRIBUTE)).Length; i++)
             {
                 summe = summe + getAttribute_Max((DSA_ATTRIBUTE)i);
             }
@@ -139,8 +88,7 @@ namespace DSA_Project
         }
         public int getAttributeAKT(DSA_ATTRIBUTE attribute)
         {
-            int x;
-            attributeAKT.TryGetValue(attribute, out x);
+            attributeAKT.TryGetValue(attribute, out int x);
             return x;
         }
         public int getAttribute_Mod(DSA_ATTRIBUTE attribute)
@@ -149,36 +97,20 @@ namespace DSA_Project
         }
         public int getAttribute_Max(DSA_ATTRIBUTE attribute)
         {
-            int featurePoints;
-            int akt;
-
-            featurePoints = featureManagment.getAttributeBonus(attribute);
-            attributeAKT.TryGetValue(attribute, out akt);
-
-            return (akt + featurePoints);
+            attributeAKT.TryGetValue(attribute, out int akt);
+            return (akt + featureManagment.getAttributeBonus(attribute));
         }
         public bool getMarkedAttribut(DSA_ATTRIBUTE att)
         {
-            bool b;
-            markedAttributs.TryGetValue(att, out b);
+            markedAttributs.TryGetValue(att, out bool b);
             return b;
         }
         //###############################################################################################################################################
         //Advanced Values
-        private Dictionary<DSA_ADVANCEDVALUES, int> advancedValues;
+        private Dictionary<DSA_ADVANCEDVALUES, int> advancedValues = new Dictionary<DSA_ADVANCEDVALUES, int>();
         private int Beherschungswert = 0;
         private int Entrückung = 0;
         private int Geschwindigkeit = 0;
-        private void setUPAdvanced()
-        {
-            int enumAdvatageValuesLength = Enum.GetNames(typeof(DSA_BASICVALUES)).Length;
-            advancedValues = new Dictionary<DSA_ADVANCEDVALUES, int>();
-
-            for (int i = 0; i < enumAdvatageValuesLength; i++)
-            {
-                advancedValues.Add((DSA_ADVANCEDVALUES)i, 0);
-            }
-        }
         public void setAdvancedValueAKT(DSA_ADVANCEDVALUES type, int value)
         {
             switch (type)
@@ -240,15 +172,6 @@ namespace DSA_Project
         }
         //###############################################################################################################################################
         //Energien
-        private void setUPEnegrien()
-        {
-            int enumEnergienLength = Enum.GetNames(typeof(DSA_ENERGIEN)).Length;
-
-            for (int i = 0; i < enumEnergienLength; i++)
-            {
-                money.Add((DSA_MONEY)i, 0);
-            }
-        }
         public int getEnergieVOR(DSA_ENERGIEN energie)
         {
             switch (energie)
@@ -282,11 +205,7 @@ namespace DSA_Project
         }
         //###############################################################################################################################################
         //Talente
-        private Dictionary<Type, List<InterfaceTalent>> TalentDictionary;
-        private void setUPTalente()
-        {
-            TalentDictionary = new Dictionary<Type, List<InterfaceTalent>>();
-        }
+        private Dictionary<Type, List<InterfaceTalent>> TalentDictionary = new Dictionary<Type, List<InterfaceTalent>>();
         public void addTalent<T>(List<T> talent) where T: InterfaceTalent
         {
             if (talent == null) return;
@@ -302,8 +221,7 @@ namespace DSA_Project
             if (getTalent(talent.getName())!=null) { return; }
 
             talent.setCharacter(this);
-            List<InterfaceTalent> list = null;
-            if (TalentDictionary.TryGetValue(talent.GetType(), out list))
+            if (TalentDictionary.TryGetValue(talent.GetType(), out List<InterfaceTalent> list))
             {
                 list.Add(talent);
             }
@@ -311,7 +229,7 @@ namespace DSA_Project
             {
                 list = new List<InterfaceTalent>(0);
                 TalentDictionary.Add(talent.GetType(), list);
-                this.addTalent(talent);
+                list.Add(talent);
             }
         }
         private Boolean controll_TalentExist(InterfaceTalent talent)
@@ -337,9 +255,8 @@ namespace DSA_Project
         public InterfaceTalent getTalent(InterfaceTalent talent, int number) 
         {
             if (talent == null) { return null; }
-
-            List<InterfaceTalent> list = null;
-            if (TalentDictionary.TryGetValue(talent.GetType(), out list)){
+            
+            if (TalentDictionary.TryGetValue(talent.GetType(), out List<InterfaceTalent> list)){
                 if (number < list.Count)
                 {
                     return list[number];
@@ -371,8 +288,7 @@ namespace DSA_Project
         }
         public List<InterfaceTalent>getTalentList_TalentType(InterfaceTalent talent)
         {
-            List<InterfaceTalent> list = null;
-            if (!TalentDictionary.TryGetValue(talent.GetType(), out list))
+            if (!TalentDictionary.TryGetValue(talent.GetType(), out List<InterfaceTalent> list))
             {
                 list = new List<InterfaceTalent>(0);
                 TalentDictionary.Add(talent.GetType(), list);

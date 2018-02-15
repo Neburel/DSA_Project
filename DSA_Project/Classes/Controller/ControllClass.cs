@@ -240,7 +240,7 @@ namespace DSA_Project
             }
 
             feature = viewController.editFeature(feature);
-            Charakter.addFeature(number, feature);
+            Charakter.setFeature(number, feature);
 
             return feature;
         }

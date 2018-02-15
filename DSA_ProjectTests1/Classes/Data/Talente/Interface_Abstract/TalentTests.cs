@@ -86,7 +86,7 @@ namespace DSA_Project.Tests
                 BonusTaW    = BonusTaW + j;
                 Feature Advancedfeature = new Feature("TestAdvancedFeature_" + i, "Test", "", "", DSA_FEATURES.VORTEIL);
                 Advancedfeature.addTalent(talent, j);
-                charakter.addFeature(i, Advancedfeature);
+                charakter.setFeature(i, Advancedfeature);
             }
             for (int i = 0; i < disadvantages; i++)
             {
@@ -94,7 +94,7 @@ namespace DSA_Project.Tests
                 BonusTaW = BonusTaW - j;
                 Feature DisAdvancedfeature = new Feature("TestDisAdvancedFeature_" + i, "Test", "", "", DSA_FEATURES.NACHTEIL);
                 DisAdvancedfeature.addTalent(talent, j);
-                charakter.addFeature(i, DisAdvancedfeature);
+                charakter.setFeature(i, DisAdvancedfeature);
             }
 
             return BonusTaW;

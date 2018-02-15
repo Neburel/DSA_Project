@@ -126,7 +126,7 @@ namespace DSA_Project
         }
         private static void saveFeature(Charakter charakter, XmlDocument characterFile, XmlElement element, DSA_FEATURES type)
         {
-            for (int i = 0; i <= charakter.getHighistFeatureNumber(); i++)
+            for (int i = 0; i <= charakter.Count_Feature(); i++)
             {
                 Feature feature = charakter.getFeature(type, i);
                 if (feature != null)
