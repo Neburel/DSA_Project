@@ -185,7 +185,7 @@ namespace DSA_Project
                     Log.throwError(e);
                     throw e;
                 }
-                charakter.addFeature(number, feature);
+                charakter.setFeature(number, feature);
             }
         }
         private static Feature loadFeature(XmlNode featureNode, Charakter charakter, int number)

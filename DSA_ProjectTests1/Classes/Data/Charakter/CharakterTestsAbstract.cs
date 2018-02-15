@@ -183,7 +183,7 @@ namespace DSA_Project.Tests
                 int pos = 0;
                 featureDictionary.TryGetValue(list[i], out pos);
 
-                charakter.addFeature(pos, list[i]);
+                charakter.setFeature(pos, list[i]);
                 managmentFeature.addFeature(list[i], pos);
             }
         }

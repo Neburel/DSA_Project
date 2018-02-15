@@ -189,8 +189,10 @@ namespace DSA_Project
         }
         public List<T> getTalentList<T>() where T : InterfaceTalent
         {
-            List<InterfaceTalent> list = null;
-            TalentDictonary.TryGetValue(typeof(T), out list);
+            if(!TalentDictonary.TryGetValue(typeof(T), out List<InterfaceTalent> list))
+            {
+                list = new List<InterfaceTalent>(0);
+            }
             
             List<T> tlist = new List<T>(0);
             for (int i = 0; i < list.Count; i++)
