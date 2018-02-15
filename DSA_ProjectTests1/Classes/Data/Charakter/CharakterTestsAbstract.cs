@@ -39,7 +39,9 @@ namespace DSA_Project.Tests
         [TestInitialize]
         public void setUP()
         {
+            Console.WriteLine("Erster Aufrufer: " + this.ToString());
             Console.WriteLine("CharakterTestsAbstract");
+            
 
             charakter           = new Charakter();
             managmentFeature    = new ManagmentFeature();
@@ -238,7 +240,7 @@ namespace DSA_Project.Tests
         [TestMethod]
         public void Charakter_getHighestFeatureNumber()
         {
-            Assert.AreEqual(managmentFeature.getHighestNumber(), charakter.Count_Feature());
+            Assert.AreEqual(managmentFeature.Count(), charakter.getHighistFeatureNumber());
         }
         private void testFeatureAdvanced(Feature feature1, Feature feature2)
         {
@@ -285,17 +287,15 @@ namespace DSA_Project.Tests
             for(int i=0; i< keys.Count; i++)
             {
                 int pos = 0;
-                DSA_FEATURES type = keys[i].getFeatureType();
                 featureDictionary.TryGetValue(keys[i], out pos);
 
                 Feature currentFeature = keys[i];
-                Feature charakterFeature = charakter.getFeature(type, pos);
+                Feature charakterFeature = charakter.getFeature(pos);
 
                 Assert.AreEqual(currentFeature.getDescription(), charakterFeature.getDescription());
                 Assert.AreEqual(currentFeature.getGP(), charakterFeature.getGP());
                 Assert.AreEqual(currentFeature.getName(), charakterFeature.getName());
                 Assert.AreEqual(currentFeature.getSimpleDescription(), charakterFeature.getSimpleDescription());
-                Assert.AreEqual(currentFeature.getFeatureType(), charakterFeature.getFeatureType());                
 
                 testFeatureAdvanced(currentFeature, charakterFeature);
                 testFeatureAttribute(currentFeature, charakterFeature);
@@ -311,8 +311,6 @@ namespace DSA_Project.Tests
 
             for (int i = 0; i < keys.Count; i++)
             {
-                DSA_FEATURES type = keys[i].getFeatureType();
-                
                 for(int j=0; j<talentList.Count; j++)
                 {   
                     Assert.AreEqual(managmentFeature.getTalentTawBonus(talentList[j]), charakter.getTaWBons(talentList[j]));

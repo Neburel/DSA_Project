@@ -165,19 +165,8 @@ namespace DSA_Project
             Int32.TryParse(AdvanturePoints.InnerText, out x);
             charakter.setAdventurePoints(x);
         }
-
+        
         private static void loadFeature(XmlNode featureNode, Charakter charakter)
-        {
-            foreach (XmlNode node in featureNode)
-            {
-                switch (node.Name)
-                {
-                    case ManagmentXMLStrings.Advantages: loadFeature(node, charakter, DSA_FEATURES.VORTEIL); break;
-                    case ManagmentXMLStrings.DisAdvantages: loadFeature(node, charakter, DSA_FEATURES.NACHTEIL); break;
-                }
-            }
-        }
-        private static void loadFeature(XmlNode featureNode, Charakter charakter, DSA_FEATURES type)
         {
             int i = 0;
             String BasicString = "Number";
@@ -185,7 +174,7 @@ namespace DSA_Project
             foreach (XmlNode node in featureNode)
             {
                 i++;
-                Feature feature = loadFeature(node, charakter, i, type);
+                Feature feature = loadFeature(node, charakter, i);
 
                 int number = 0;
                 String Number = node.Name.Substring(BasicString.Length, node.Name.Length - BasicString.Length);
@@ -199,9 +188,9 @@ namespace DSA_Project
                 charakter.setFeature(number, feature);
             }
         }
-        private static Feature loadFeature(XmlNode featureNode, Charakter charakter, int number, DSA_FEATURES type)
+        private static Feature loadFeature(XmlNode featureNode, Charakter charakter, int number)
         {
-            Feature feature = new Feature(type);
+            Feature feature = new Feature();
 
             foreach (XmlNode node in featureNode)
             {
@@ -306,7 +295,7 @@ namespace DSA_Project
                     throw e;
                 }
 
-                feature.addTalent(talent, x);
+                feature.setTalentBonusTaW(talent, x);
             }
         }
 

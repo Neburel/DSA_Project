@@ -11,13 +11,13 @@ namespace DSA_Project
         {
             featureManagment.addFeature(feature, number);
         }
-        public Feature getFeature(DSA_FEATURES type, int number)
+        public Feature getFeature(int number)
         {
-            return featureManagment.GetFeature(type, number);
+            return featureManagment.GetFeature(number);
         }
         public int Count_Feature()
         {
-            return featureManagment.getHighestNumber();
+            return featureManagment.Count();
         }
         //###############################################################################################################################################
         //Sonstige

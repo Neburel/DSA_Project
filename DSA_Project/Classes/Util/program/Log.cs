@@ -15,12 +15,13 @@ namespace DSA_Project
         {
             String localDate        = DateTime.Now.ToShortDateString();
             String localDateTime    = DateTime.Now.ToString();
+            String username         = Environment.UserName;
 
             localDate = localDate.Replace(".", "");
 
             String LogFile = Directory.GetCurrentDirectory();
             LogFile = Path.Combine(LogFile, "Log");
-            LogFile = Path.Combine(LogFile, localDate + ".txt");
+            LogFile = Path.Combine(LogFile, localDate + "_" + username + ".txt");
 
             createLogFile(LogFile);
 

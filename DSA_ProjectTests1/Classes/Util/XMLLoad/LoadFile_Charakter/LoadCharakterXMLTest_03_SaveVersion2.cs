@@ -78,52 +78,52 @@ namespace DSA_Project.Tests
         public override Dictionary<Feature, int> getFeatureDictionary()
         {
             Dictionary<Feature, int> dic = new Dictionary<Feature, int>(0);
-            Feature fa1 = new Feature("Tiefling(Sonnenanbeter)", "Intuition (+2) bei Dunkelheit, Geruchsimmun, Zwergenmagen", "X", "", DSA_FEATURES.VORTEIL);
-            Feature fa2 = new Feature("Schlangenmensch", "", "1", "", DSA_FEATURES.VORTEIL);
-            Feature fa3 = new Feature("Erdkruste", "", "2", "", DSA_FEATURES.VORTEIL);
-            Feature fa4 = new Feature("Diabolische Nächte", "", "X", "", DSA_FEATURES.VORTEIL);
-            Feature fa5 = new Feature("Leichte Krankheitsresistenz", "10%", "", "", DSA_FEATURES.VORTEIL);
-            Feature fa30 = new Feature("Belohnung Gewinnspiel", "", "", "", DSA_FEATURES.VORTEIL);
-            Feature fa31 = new Feature("Abenteuer Gefängnis", "", "", "", DSA_FEATURES.VORTEIL);
+            Feature fa1 = new Feature("Tiefling(Sonnenanbeter)", "Intuition (+2) bei Dunkelheit, Geruchsimmun, Zwergenmagen", "X", "");
+            Feature fa2 = new Feature("Schlangenmensch", "", "1", "");
+            Feature fa3 = new Feature("Erdkruste", "", "2", "");
+            Feature fa4 = new Feature("Diabolische Nächte", "", "X", "");
+            Feature fa5 = new Feature("Leichte Krankheitsresistenz", "10%", "", "");
+            Feature fa30 = new Feature("Belohnung Gewinnspiel", "", "", "");
+            Feature fa31 = new Feature("Abenteuer Gefängnis", "", "", "");
 
-            Feature fa32 = new Feature("Weinachten", "", "", "", DSA_FEATURES.VORTEIL);
+            Feature fa32 = new Feature("Weinachten", "", "", "");
 
             fa2.setAttributeBonus(DSA_ATTRIBUTE.GE, 1);
             fa3.setEnergieBonus(DSA_ENERGIEN.LEBENSENERGIE, 4);
             fa4.setAttributeBonus(DSA_ATTRIBUTE.CH, 1);
             fa4.setEnergieBonus(DSA_ENERGIEN.AUSDAUER, 5);
-            fa30.addTalent(charakter.getTalent("Armbrust"), 1);
+            fa30.setTalentBonusTaW(charakter.getTalent("Armbrust"), 1);
             fa31.setEnergieBonus(DSA_ENERGIEN.AUSDAUER, 5);
             fa31.setEnergieBonus(DSA_ENERGIEN.KARMAENERGIE, 10);
-            fa31.addTalent(charakter.getTalent("Überzeugen"), 1);
-            fa31.addTalent(charakter.getTalent("Überreden"), 1);
-            fa31.addTalent(charakter.getTalent("Armbrust"), 1);
+            fa31.setTalentBonusTaW(charakter.getTalent("Überzeugen"), 1);
+            fa31.setTalentBonusTaW(charakter.getTalent("Überreden"), 1);
+            fa31.setTalentBonusTaW(charakter.getTalent("Armbrust"), 1);
             fa32.setAttributeBonus(DSA_ATTRIBUTE.IN, 1);
-            fa32.addTalent(charakter.getTalent("Fährtensuchen"), 1);
+            fa32.setTalentBonusTaW(charakter.getTalent("Fährtensuchen"), 1);
 
-            dic.Add(fa1, 1);
-            dic.Add(fa2, 2);
-            dic.Add(fa3, 3);
-            dic.Add(fa4, 4);
-            dic.Add(fa5, 5);
+            dic.Add(fa1, 0);
+            dic.Add(fa2, 1);
+            dic.Add(fa3, 2);
+            dic.Add(fa4, 3);
+            dic.Add(fa5, 4);
             dic.Add(fa30, 30);
             dic.Add(fa31, 31);
             dic.Add(fa32, 32);
 
 
-            Feature fd1 = new Feature("Tiefling(Sonnenanbeter)", "Intuition (-1) + Überhitzung bei Helligkeit", "X", "", DSA_FEATURES.NACHTEIL);
-            Feature fd2 = new Feature("Un-Charismatisch", "", "1", "", DSA_FEATURES.NACHTEIL);
-            Feature fd3 = new Feature("Rassismus(höheres Volk)", "", "2", "", DSA_FEATURES.NACHTEIL);
-            Feature fd4 = new Feature("Diabolische Nächte", "", "X", "", DSA_FEATURES.NACHTEIL);
+            Feature fd1 = new Feature("Tiefling(Sonnenanbeter)", "Intuition (-1) + Überhitzung bei Helligkeit", "X", "");
+            Feature fd2 = new Feature("Un-Charismatisch", "", "1", "");
+            Feature fd3 = new Feature("Rassismus(höheres Volk)", "", "2", "");
+            Feature fd4 = new Feature("Diabolische Nächte", "", "X", "");
 
-            fd2.setAttributeBonus(DSA_ATTRIBUTE.CH, 1);
-            fd2.addTalent(charakter.getTalent("Betören"), 2);
+            fd2.setAttributeBonus(DSA_ATTRIBUTE.CH, -1);
+            fd2.setTalentBonusTaW(charakter.getTalent("Betören"), -2);
             fd4.setAdvancedValues(DSA_ADVANCEDVALUES.ENTRÜCKUNG, -1);
 
-            dic.Add(fd1, 1);
-            dic.Add(fd2, 2);
-            dic.Add(fd3, 3);
-            dic.Add(fd4, 4);
+            dic.Add(fd1, 15);
+            dic.Add(fd2, 16);
+            dic.Add(fd3, 17);
+            dic.Add(fd4, 18);
 
             return dic;
         }
@@ -132,9 +132,6 @@ namespace DSA_Project.Tests
         {
             return 0;
         }
-
-        
-
         public override Dictionary<DSA_ATTRIBUTE, bool> getAttributeMarkedDictonary()
         {
             Dictionary<DSA_ATTRIBUTE, bool> dic = new Dictionary<DSA_ATTRIBUTE, bool>(0);
@@ -142,7 +139,6 @@ namespace DSA_Project.Tests
 
             return dic;
         }
-
         public override Dictionary<string, int> getTalentTaWDictionary()
         {
             Dictionary<String, int> dic = new Dictionary<String, int>();
@@ -154,7 +150,6 @@ namespace DSA_Project.Tests
 
             return dic;
         }
-
         public override List<string> getGiftTalents()
         {
             return new List<string>();

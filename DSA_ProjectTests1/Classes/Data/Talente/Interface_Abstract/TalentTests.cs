@@ -84,17 +84,17 @@ namespace DSA_Project.Tests
             {
                 int j       = random.Next(1, maxFeatureTaW);
                 BonusTaW    = BonusTaW + j;
-                Feature Advancedfeature = new Feature("TestAdvancedFeature_" + i, "Test", "", "", DSA_FEATURES.VORTEIL);
-                Advancedfeature.addTalent(talent, j);
-                charakter.setFeature(i, Advancedfeature);
+                Feature Advancedfeature = new Feature("TestAdvancedFeature_" + i, "Test", "", "");
+                Advancedfeature.setTalentBonusTaW(talent, j);
+                charakter.addFeature(i, Advancedfeature);
             }
             for (int i = 0; i < disadvantages; i++)
             {
                 int j = random.Next(1, maxFeatureTaW);
                 BonusTaW = BonusTaW - j;
-                Feature DisAdvancedfeature = new Feature("TestDisAdvancedFeature_" + i, "Test", "", "", DSA_FEATURES.NACHTEIL);
-                DisAdvancedfeature.addTalent(talent, j);
-                charakter.setFeature(i, DisAdvancedfeature);
+                Feature DisAdvancedfeature = new Feature("TestDisAdvancedFeature_" + i, "Test", "", "");
+                DisAdvancedfeature.setTalentBonusTaW(talent, -j);
+                charakter.addFeature(advantages + i, DisAdvancedfeature);
             }
 
             return BonusTaW;
@@ -156,6 +156,8 @@ namespace DSA_Project.Tests
         [TestInitialize]
         public void setUPTalentTest()
         {
+            Console.WriteLine(this.ToString());
+
             charakter = RandomGenerator.generateCharacter();
             TalentName = "Talent_" + RandomGenerator.generateName();
         }
