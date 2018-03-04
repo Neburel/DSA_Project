@@ -8,10 +8,6 @@
       <Attribute>CH</Attribute>
     </Probe>
     <Diverates>
-      <Diverate>
-        <Talent>Galanterie</Talent>
-        <Value>0</Value>
-      </Diverate>
     </Diverates>
   </Talent>
 </TalentLetter>

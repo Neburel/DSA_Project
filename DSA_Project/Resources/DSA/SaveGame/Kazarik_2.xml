@@ -58,314 +58,620 @@
         <GESCHWINDIGKEIT>10</GESCHWINDIGKEIT>
       </Advanced>
       <Money>
-        <D>80</D>
+        <D>66</D>
         <S>7</S>
         <H>6</H>
         <K>7</K>
         <BANK>0</BANK>
       </Money>
       <Features>
-        <Advantages>
-          <Number1>
-            <Name>Tiefling(Sonnenanbeter)</Name>
-            <Description>Intuition (+2) bei Dunkelheit, Geruchsimmun, Zwergenmagen</Description>
-            <Value>X</Value>
-            <GP>
-            </GP>
-            <Attribute />
-            <Energie />
-            <Advanced />
-            <Talente />
-          </Number1>
-          <Number2>
-            <Name>Schlangenmensch</Name>
-            <Description>
-            </Description>
-            <Value>1</Value>
-            <GP>
-            </GP>
-            <Attribute>
-              <GE>1</GE>
-            </Attribute>
-            <Energie />
-            <Advanced />
-            <Talente />
-          </Number2>
-          <Number3>
-            <Name>Erdkruste</Name>
-            <Description>
-            </Description>
-            <Value>2</Value>
-            <GP>
-            </GP>
-            <Attribute />
-            <Energie>
-              <LEBENSENERGIE>4</LEBENSENERGIE>
-            </Energie>
-            <Advanced />
-            <Talente />
-          </Number3>
-          <Number4>
-            <Name>Diabolische Nächte</Name>
-            <Description>
-            </Description>
-            <Value>X</Value>
-            <GP>
-            </GP>
-            <Attribute>
-              <CH>1</CH>
-            </Attribute>
-            <Energie>
-              <AUSDAUER>5</AUSDAUER>
-            </Energie>
-            <Advanced />
-            <Talente />
-          </Number4>
-          <Number5>
-            <Name>Leichte Krankheitsresistenz</Name>
-            <Description>10%</Description>
-            <Value>
-            </Value>
-            <GP>
-            </GP>
-            <Attribute />
-            <Energie />
-            <Advanced />
-            <Talente />
-          </Number5>
-          <Number30>
-            <Name>Belohnung Gewinnspiel</Name>
-            <Description>
-            </Description>
-            <Value>
-            </Value>
-            <GP>
-            </GP>
-            <Attribute />
-            <Energie />
-            <Advanced />
-            <Talente>
-              <Talent>
-                <Name>Armbrust</Name>
-                <TAW>1</TAW>
-              </Talent>
-            </Talente>
-          </Number30>
-          <Number31>
-            <Name>Abenteuer Gefängnis</Name>
-            <Description>
-            </Description>
-            <Value>
-            </Value>
-            <GP>
-            </GP>
-            <Attribute />
-            <Energie>
-              <AUSDAUER>5</AUSDAUER>
-              <KARMAENERGIE>10</KARMAENERGIE>
-            </Energie>
-            <Advanced />
-            <Talente>
-              <Talent>
-                <Name>Überzeugen</Name>
-                <TAW>1</TAW>
-              </Talent>
-              <Talent>
-                <Name>Überreden</Name>
-                <TAW>1</TAW>
-              </Talent>
-              <Talent>
-                <Name>Armbrust</Name>
-                <TAW>1</TAW>
-              </Talent>
-            </Talente>
-          </Number31>
-          <Number32>
-            <Name>Weinachten</Name>
-            <Description>
-            </Description>
-            <Value>
-            </Value>
-            <GP>
-            </GP>
-            <Attribute>
-              <IN>1</IN>
-            </Attribute>
-            <Energie />
-            <Advanced />
-            <Talente>
-              <Talent>
-                <Name>Fährtensuchen</Name>
-                <TAW>1</TAW>
-              </Talent>
-            </Talente>
-          </Number32>
-          <Number33>
-            <Name>Buch(Wie ich zwei Jahre einen Jeti Jagte)</Name>
-            <Description>+2 Fährtensuche bei Schnee</Description>
-            <Value>
-            </Value>
-            <GP>
-            </GP>
-            <Attribute />
-            <Energie />
-            <Advanced />
-            <Talente>
-              <Talent>
-                <Name>Fährtensuchen</Name>
-                <TAW>1</TAW>
-              </Talent>
-            </Talente>
-          </Number33>
-          <Number34>
-            <Name>Buch(Sprachlexikon Istaria)</Name>
-            <Description>
-            </Description>
-            <Value>
-            </Value>
-            <GP>
-            </GP>
-            <Attribute />
-            <Energie />
-            <Advanced />
-            <Talente>
-              <Talent>
-                <Name>Götter/Kulte</Name>
-                <TAW>1</TAW>
-              </Talent>
-            </Talente>
-          </Number34>
-          <Number35>
-            <Name>Event(Tropen)</Name>
-            <Description>
-            </Description>
-            <Value>
-            </Value>
-            <GP>
-            </GP>
-            <Attribute />
-            <Energie>
-              <AUSDAUER>10</AUSDAUER>
-            </Energie>
-            <Advanced />
-            <Talente />
-          </Number35>
-          <Number36>
-            <Name>Buch(Fleischerei der Schritt zum Perfekten Schnitt)</Name>
-            <Description>Einfachere Innereien Können gezielt Entfernt werden</Description>
-            <Value>
-            </Value>
-            <GP>
-            </GP>
-            <Attribute />
-            <Energie />
-            <Advanced />
-            <Talente>
-              <Talent>
-                <Name>Fleischer</Name>
-                <TAW>2</TAW>
-              </Talent>
-              <Talent>
-                <Name>Tierkunde</Name>
-                <TAW>1</TAW>
-              </Talent>
-              <Talent>
-                <Name>Anatomie</Name>
-                <TAW>1</TAW>
-              </Talent>
-            </Talente>
-          </Number36>
-          <Number37>
-            <Name>Spielsüchtig (mehr als 200 Dublonen in Glücksspielen)</Name>
-            <Description>
-            </Description>
-            <Value>
-            </Value>
-            <GP>
-            </GP>
-            <Attribute />
-            <Energie />
-            <Advanced />
-            <Talente>
-              <Talent>
-                <Name>Brett-/Kartenspiel</Name>
-                <TAW>1</TAW>
-              </Talent>
-            </Talente>
-          </Number37>
-        </Advantages>
-        <DisAdvantages>
-          <Number1>
-            <Name>Tiefling(Sonnenanbeter)</Name>
-            <Description>Intuition (-1) + Überhitzung bei Helligkeit</Description>
-            <Value>X</Value>
-            <GP>
-            </GP>
-            <Attribute />
-            <Energie />
-            <Advanced />
-            <Talente />
-          </Number1>
-          <Number2>
-            <Name>Un-Charismatisch</Name>
-            <Description>
-            </Description>
-            <Value>1</Value>
-            <GP>
-            </GP>
-            <Attribute>
-              <CH>-1</CH>
-            </Attribute>
-            <Energie />
-            <Advanced />
-            <Talente>
-              <Talent>
-                <Name>Betören</Name>
-                <TAW>-2</TAW>
-              </Talent>
-            </Talente>
-          </Number2>
-          <Number3>
-            <Name>Rassismus(höheres Volk)</Name>
-            <Description>
-            </Description>
-            <Value>2</Value>
-            <GP>
-            </GP>
-            <Attribute />
-            <Energie />
-            <Advanced />
-            <Talente />
-          </Number3>
-          <Number4>
-            <Name>Diabolische Nächte</Name>
-            <Description>
-            </Description>
-            <Value>X</Value>
-            <GP>
-            </GP>
-            <Attribute />
-            <Energie />
-            <Advanced>
-              <ENTRÜCKUNG>-1</ENTRÜCKUNG>
-            </Advanced>
-            <Talente />
-          </Number4>
-          <Number5>
-            <Name>
-            </Name>
-            <Description>
-            </Description>
-            <Value>
-            </Value>
-            <GP>
-            </GP>
-            <Attribute />
-            <Energie />
-            <Advanced />
-            <Talente />
-          </Number5>
-        </DisAdvantages>
+        <Number0>
+          <Name>Tiefling(Sonnenanbeter)</Name>
+          <Description>Intuition (+2) bei Dunkelheit, Geruchsimmun, Zwergenmagen</Description>
+          <Value>X</Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number0>
+        <Number1>
+          <Name>Schlangenmensch</Name>
+          <Description>
+          </Description>
+          <Value>1</Value>
+          <GP>
+          </GP>
+          <Attribute>
+            <GE>1</GE>
+          </Attribute>
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number1>
+        <Number2>
+          <Name>Erdkruste</Name>
+          <Description>
+          </Description>
+          <Value>2</Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie>
+            <LEBENSENERGIE>4</LEBENSENERGIE>
+          </Energie>
+          <Advanced />
+          <Talente />
+        </Number2>
+        <Number3>
+          <Name>Diabolische Nächte</Name>
+          <Description>
+          </Description>
+          <Value>X</Value>
+          <GP>
+          </GP>
+          <Attribute>
+            <CH>1</CH>
+          </Attribute>
+          <Energie>
+            <AUSDAUER>5</AUSDAUER>
+          </Energie>
+          <Advanced />
+          <Talente />
+        </Number3>
+        <Number4>
+          <Name>Leichte Krankheitsresistenz</Name>
+          <Description>10%</Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number4>
+        <Number5>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number5>
+        <Number6>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number6>
+        <Number7>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number7>
+        <Number8>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number8>
+        <Number9>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number9>
+        <Number10>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number10>
+        <Number11>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number11>
+        <Number12>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number12>
+        <Number13>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number13>
+        <Number14>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number14>
+        <Number15>
+          <Name>Tiefling(Sonnenanbeter)</Name>
+          <Description>Intuition (-1) + Überhitzung bei Helligkeit</Description>
+          <Value>X</Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number15>
+        <Number16>
+          <Name>Un-Charismatisch</Name>
+          <Description>
+          </Description>
+          <Value>1</Value>
+          <GP>
+          </GP>
+          <Attribute>
+            <CH>-1</CH>
+          </Attribute>
+          <Energie />
+          <Advanced />
+          <Talente>
+            <Talent>
+              <Name>Betören</Name>
+              <TAW>-2</TAW>
+            </Talent>
+          </Talente>
+        </Number16>
+        <Number17>
+          <Name>Rassismus(höheres Volk)</Name>
+          <Description>
+          </Description>
+          <Value>2</Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number17>
+        <Number18>
+          <Name>Diabolische Nächte</Name>
+          <Description>
+          </Description>
+          <Value>X</Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced>
+            <ENTRÜCKUNG>-1</ENTRÜCKUNG>
+          </Advanced>
+          <Talente />
+        </Number18>
+        <Number19>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number19>
+        <Number20>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number20>
+        <Number21>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number21>
+        <Number22>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number22>
+        <Number23>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number23>
+        <Number24>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number24>
+        <Number25>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number25>
+        <Number26>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number26>
+        <Number27>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number27>
+        <Number28>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number28>
+        <Number29>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number29>
+        <Number30>
+          <Name>Belohnung Gewinnspiel</Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente>
+            <Talent>
+              <Name>Armbrust</Name>
+              <TAW>1</TAW>
+            </Talent>
+          </Talente>
+        </Number30>
+        <Number31>
+          <Name>Abenteuer Gefängnis</Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie>
+            <AUSDAUER>5</AUSDAUER>
+            <KARMAENERGIE>10</KARMAENERGIE>
+          </Energie>
+          <Advanced />
+          <Talente>
+            <Talent>
+              <Name>Überzeugen</Name>
+              <TAW>1</TAW>
+            </Talent>
+            <Talent>
+              <Name>Überreden</Name>
+              <TAW>1</TAW>
+            </Talent>
+            <Talent>
+              <Name>Armbrust</Name>
+              <TAW>1</TAW>
+            </Talent>
+          </Talente>
+        </Number31>
+        <Number32>
+          <Name>Weinachten</Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute>
+            <IN>1</IN>
+          </Attribute>
+          <Energie />
+          <Advanced />
+          <Talente>
+            <Talent>
+              <Name>Fährtensuchen</Name>
+              <TAW>1</TAW>
+            </Talent>
+          </Talente>
+        </Number32>
+        <Number33>
+          <Name>Buch(Wie ich zwei Jahre einen Jeti Jagte)</Name>
+          <Description>+2 Fährtensuche bei Schnee</Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente>
+            <Talent>
+              <Name>Fährtensuchen</Name>
+              <TAW>1</TAW>
+            </Talent>
+          </Talente>
+        </Number33>
+        <Number34>
+          <Name>Buch(Sprachlexikon Istaria)</Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente>
+            <Talent>
+              <Name>Götter/Kulte</Name>
+              <TAW>1</TAW>
+            </Talent>
+          </Talente>
+        </Number34>
+        <Number35>
+          <Name>Event(Tropen)</Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie>
+            <AUSDAUER>10</AUSDAUER>
+          </Energie>
+          <Advanced />
+          <Talente />
+        </Number35>
+        <Number36>
+          <Name>Buch(Fleischerei der Schritt zum Perfekten Schnitt)</Name>
+          <Description>Einfachere Innereien Können gezielt Entfernt werden</Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente>
+            <Talent>
+              <Name>Fleischer</Name>
+              <TAW>2</TAW>
+            </Talent>
+            <Talent>
+              <Name>Tierkunde</Name>
+              <TAW>1</TAW>
+            </Talent>
+            <Talent>
+              <Name>Anatomie</Name>
+              <TAW>1</TAW>
+            </Talent>
+          </Talente>
+        </Number36>
+        <Number37>
+          <Name>Spielsüchtig (mehr als 200 Dublonen in Glücksspielen)</Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente>
+            <Talent>
+              <Name>Brett-/Kartenspiel</Name>
+              <TAW>1</TAW>
+            </Talent>
+          </Talente>
+        </Number37>
+        <Number38>
+          <Name>Buch(Lesen Lernen Lachen)</Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente>
+            <Talent>
+              <Name>Sprachenkunde</Name>
+              <TAW>2</TAW>
+            </Talent>
+            <Talent>
+              <Name>Altes Alaani</Name>
+              <TAW>1</TAW>
+            </Talent>
+            <Talent>
+              <Name>Kusliker Zeichen</Name>
+              <TAW>1</TAW>
+            </Talent>
+            <Talent>
+              <Name>Alaani</Name>
+              <TAW>1</TAW>
+            </Talent>
+          </Talente>
+        </Number38>
       </Features>
       <AdventurePoints>105</AdventurePoints>
     </HeldenBrief>

@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.IO;
-
+using System.Xml.Linq;
 
 namespace DSA_Project
 {
     public static class LoadCharakterXML
     {
         private static ControllTalent tControll;
-        private static List<String> comments;
+        private static String LastFileName;            //Nur Für Debug Zwecke nutzen!
 
         public static Charakter loadCharakter(String fileName, Charakter charakter, ControllTalent Tcontroller)
         {
@@ -21,10 +21,10 @@ namespace DSA_Project
             XmlNode characterNode       = null;
             XmlNode heldenbriefNode     = null;
             XmlNode talentbriefNode     = null;
-
-            comments = new List<String>();
+            
             tControll = Tcontroller;
-
+            LastFileName = fileName;
+            
             characterFile.Load(fileName);
 
             try
@@ -329,7 +329,7 @@ namespace DSA_Project
                     case ManagmentXMLStrings.attack: AT = node.InnerText; break;
                     case ManagmentXMLStrings.Parade: PA = node.InnerText; break;
                     case ManagmentXMLStrings.SpeakingMother: speakingMother = node.InnerText; break;
-                    default: throw new Exception(node.Name + " " + node.InnerText);
+                    default: throw new Exception("Exception. FileName: " + LastFileName + " TalentNodeName: "+ TalentNode.Name  + " NodeName: " + node.Name + " InnerText:" + node.InnerText);
                 }
             }
             if (Name == null)
@@ -345,31 +345,32 @@ namespace DSA_Project
             if (talent == null)
             {
                 talent = tControll.getTalent(Name);
-                if (talent == null)
-                {
-                    Log.writeLogLine("LoadCharakterXML: Das Talent exestiert im aktuellen Kontext nicht " + Name);
-                    return;
-                }
+            }
+            if (talent != null)
+            {
                 charakter.addTalent(talent);
-            }
-            talent.setTaw(Taw);            
+                talent.setTaw(Taw);
 
-            if(AT!=null & PA != null)
+                if (AT != null & PA != null)
+                {
+                    TalentFighting ftalent = (TalentFighting)talent;
+
+                    int x = 0;
+
+                    Int32.TryParse(AT, out x);
+                    ftalent.setAT(x);
+
+                    Int32.TryParse(PA, out x);
+                    ftalent.setPA(x);
+                }
+                if (speakingMother != null)
+                {
+                    LanguageAbstractTalent lt = (LanguageAbstractTalent)talent;
+                    lt.setMotherMark(speakingMother);
+                }
+            } else
             {
-                TalentFighting ftalent = (TalentFighting)talent;
-
-                int x = 0;
-
-                Int32.TryParse(AT, out x);
-                ftalent.setAT(x);
-
-                Int32.TryParse(PA, out x);
-                ftalent.setPA(x);
-            }
-            if (speakingMother != null)
-            {
-                LanguageAbstractTalent lt = (LanguageAbstractTalent)talent;
-                lt.setMotherMark(speakingMother);
+                Log.writeLogLine("LoadCharakterXML: Das Talent exestiert im aktuellen Kontext nicht " + Name);
             }
 
         }

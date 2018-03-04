@@ -1,0 +1,29 @@
+<TalentLetter>
+  <Talent>
+    <Name>Schwerter</Name>
+    <BE>BE-2</BE>
+    <Probe />
+    <Diverates>
+      <Diverate>
+        <Talent>Anderthalbhänder</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Fechtwaffen</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+      <Diverate>
+        <Talent>Säbel</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+    <FightingTalent>
+      <attack>ATTACKE_BASIS</attack>
+      <Parade>True</Parade>
+    </FightingTalent>
+  </Talent>
+</TalentLetter>

@@ -1,0 +1,19 @@
+<TalentLetter>
+  <Talent>
+    <Name>Speere</Name>
+    <BE>BE-3</BE>
+    <Probe />
+    <Diverates>
+      <Diverate>
+        <Talent>Infanteriewaffen</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+    <FightingTalent>
+      <attack>ATTACKE_BASIS</attack>
+      <Parade>True</Parade>
+    </FightingTalent>
+  </Talent>
+</TalentLetter>

@@ -1,0 +1,13 @@
+<TalentLetter>
+  <Talent>
+    <Name>Peitsche</Name>
+    <BE>BE-1</BE>
+    <Probe />
+    <Diverates />
+    <Requirements />
+    <FightingTalent>
+      <attack>ATTACKE_BASIS</attack>
+      <Parade>False</Parade>
+    </FightingTalent>
+  </Talent>
+</TalentLetter>
