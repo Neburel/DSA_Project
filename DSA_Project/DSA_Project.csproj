@@ -152,7 +152,9 @@
     <Compile Include="Classes\View\Forms\View_CreateFeature.Designer.cs">
       <DependentUpon>View_CreateFeature.cs</DependentUpon>
     </Compile>
-    <Content Include="Resources\DSA\SaveGame\Kazarik_2.xml" />
+    <Content Include="Resources\DSA\SaveGame\Kazarik_2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PicturesDiv\Logo_das_Schwarze_Auge.svg.ico" />
     <Content Include="Log\log.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -208,7 +210,81 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\PicturesDiv\Logo_das_Schwarze_Auge.svg.png" />
-    <Content Include="Resources\PNP\SaveGame\Selina.xml" />
+    <Content Include="Resources\PNP\SaveGame\Selina.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\close\Dolche.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\close\Fechtwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\close\Hiebwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\close\Kettenstäbe.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\close\Kettenwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\close\Lanzenreiten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\close\Peitsche.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\close\Schwerter.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\close\Speere.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\close\Stäbe.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\close\Zweihand-Hiebwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\close\Zweihandflegel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\close\Zweihandschwerter-säbel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\range\Wurfwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\range\Psyinoicwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\range\Granaten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\range\Exoten.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\range\Schwere Waffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\range\Scharfschützengewehr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\range\Schrottflinte.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\range\Gewehr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\range\Pistole.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\weaponless\Raufen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\weaponless\Ringen .xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\Language\Font\Alte Kemi Zeichen.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1153,16 +1229,24 @@
     <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Anatomie.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Antimateriekunde.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Antriebstechnik.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Antimateriekunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Antriebstechnik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Baukunst.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Brett-Kartenspiel.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Elektrizität.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Energiekunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Elektrizität.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Energiekunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Geographie.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1170,47 +1254,75 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Gravitationskunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Gravitationskunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\GötterKulte.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Ionenkunde.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Kommunikation.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Ionenkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Kommunikation.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Kriegskunst.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Kryptographie.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Laserkunde.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Materialkunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Laserkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Materialkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Mechanik.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Metallkunde.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Mutationskunde.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Nanotechnologie.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Metallkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Mutationskunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Nanotechnologie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Pflanzenkunde.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Phasenkunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Phasenkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Philosophie.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Plasmakunde.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Psyionikkunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Plasmakunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Psyionikkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Rechnen.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Rechtskunde.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Robotik.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Robotik.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\SagenLegenden.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Schiffskunde.xml" />
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Schildtechnologie.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Schiffskunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Schildtechnologie.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Schätzen.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1226,7 +1338,9 @@
     <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Tierkunde.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Wellenkunde.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\knowldage\Wellenkunde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\nature\Fallenstellen.xml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -1261,7 +1375,9 @@
     <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Athletik.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Fahren.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Fahren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Fliegen.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1286,7 +1402,9 @@
     <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Selbstbeherrschung.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Sich Verstecken.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Sich Verstecken.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Singen.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1386,9 +1504,6 @@
     <Content Include="Resources\PicturesDiv\aventurien politisch.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\PNP\Talents\FightingTalents\close\" />
-    <Folder Include="Resources\PNP\Talents\FightingTalents\range\" />
-    <Folder Include="Resources\PNP\Talents\FightingTalents\weaponless\" />
     <Folder Include="Resources\PNP\Talents\Gifts\" />
   </ItemGroup>
   <ItemGroup>

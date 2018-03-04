@@ -177,8 +177,11 @@ namespace DSA_Project
                 if (requiredTaW <= localTaW)
                 {
                     TalentBase talent = (TalentBase)talentSearch(dev.getName());
-                    talent.addDeviateBonus();
-                    used.Add(dev);
+                    if (talent != null)
+                    {
+                        talent.addDeviateBonus();
+                        used.Add(dev);
+                    }
                 }
             }
             foreach (TalentDeviate dev in usedDeviate)
@@ -186,8 +189,11 @@ namespace DSA_Project
                 if (dev.getRequiredTaW() > localTaW)
                 {
                     TalentBase talent = (TalentBase)talentSearch(dev.getName());
-                    talent.removeDeviateBonus();
-                    notused.Add(dev);
+                    if (talent != null)
+                    {
+                        talent.removeDeviateBonus();
+                        notused.Add(dev);
+                    }
                 }
             }
             for (int i = 0; i < used.Count; i++)
@@ -220,7 +226,7 @@ namespace DSA_Project
                     talentDictonary.Add(name, talent);
                 } else
                 {
-                    throw new Exception("Deviate Talent Name Exestiert im Charakter nicht. Talent " + this.Name + " muss Korregiert werden. TalentType: " + this.GetType() + " Deviate Name: " + name);
+                    Log.writeLogLine("Deviate Talent Name Exestiert im Charakter nicht. Talent " + this.Name + " muss Korregiert werden. TalentType: " + this.GetType() + " Deviate Name: " + name + ". Die Abeitung wird Ignoriert");
                 }
             }
 

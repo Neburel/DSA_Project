@@ -1,73 +1,74 @@
-<CharacterBogen>
-  <HeldenBrief>
-    <BasisDaten>
-      <NAME>Selina Nesaja</NAME>
-      <ALTER>22</ALTER>
-      <GESCHLECHT>W</GESCHLECHT>
-      <GRÖSE>165</GRÖSE>
-      <GEWICHT>79</GEWICHT>
-      <AUGENFARBE>Gold(leuchtend)</AUGENFARBE>
-      <HAUTFARBE>Hell</HAUTFARBE>
-      <HAARFARBE>Schwarz(hüftlang)</HAARFARBE>
-      <FAMILIENSTAND>Sucherin</FAMILIENSTAND>
-      <GOTTHEIT>Ur-Vater</GOTTHEIT>
-      <RASSE>Syreni(Genpool: Mensch)</RASSE>
-      <KULTUR>Kampfpilot, Abtrünnige Rekrutin, Tochter Allianz Kommandant</KULTUR>
-      <PROFESSION>Pilot, Hacker, Pirat</PROFESSION>
-      <FREEVALUE4>5-7</FREEVALUE4>
-    </BasisDaten>
-    <Attribute>
-      <MU>
-        <Value>8</Value>
-      </MU>
-      <KL>
-        <Value>8</Value>
-      </KL>
-      <IN>
-        <Value>10</Value>
-      </IN>
-      <CH>
-        <Marked>True</Marked>
-        <Value>9</Value>
-      </CH>
-      <FF>
-        <Marked>True</Marked>
-        <Value>12</Value>
-      </FF>
-      <GE>
-        <Value>9</Value>
-      </GE>
-      <KO>
-        <Value>7</Value>
-      </KO>
-      <KK>
-        <Value>9</Value>
-      </KK>
-      <SO>
-        <Value>0</Value>
-      </SO>
-    </Attribute>
-    <Advanced>
-      <ATTACKE_BASIS>6</ATTACKE_BASIS>
-      <PARADE_BASIS>6</PARADE_BASIS>
-      <FERNKAMPF_BASIS>7</FERNKAMPF_BASIS>
-      <INITATIVE_BASIS>7</INITATIVE_BASIS>
-      <BEHERSCHUNGSWERT>0</BEHERSCHUNGSWERT>
-      <ARTEFAKTKONTROLLE>15</ARTEFAKTKONTROLLE>
-      <WUNDSCHWELLE>4</WUNDSCHWELLE>
-      <ENTRÜCKUNG>0</ENTRÜCKUNG>
-      <GESCHWINDIGKEIT>9</GESCHWINDIGKEIT>
-    </Advanced>
-    <Money>
-      <D>0</D>
-      <S>0</S>
-      <H>0</H>
-      <K>0</K>
-      <BANK>0</BANK>
-    </Money>
-    <Features>
-      <Advantages>
-        <Number1>
+<SaveFile>
+  <Version>2.0</Version>
+  <CharacterBogen>
+    <HeldenBrief>
+      <BasisDaten>
+        <NAME>Selina Nesaja</NAME>
+        <ALTER>22</ALTER>
+        <GESCHLECHT>W</GESCHLECHT>
+        <GRÖSE>165</GRÖSE>
+        <GEWICHT>79</GEWICHT>
+        <AUGENFARBE>Gold(leuchtend)</AUGENFARBE>
+        <HAUTFARBE>Hell</HAUTFARBE>
+        <HAARFARBE>Schwarz(hüftlang)</HAARFARBE>
+        <FAMILIENSTAND>Sucherin</FAMILIENSTAND>
+        <GOTTHEIT>Ur-Vater</GOTTHEIT>
+        <RASSE>Syreni(Genpool: Mensch)</RASSE>
+        <KULTUR>Kampfpilot, Abtrünnige Rekrutin, Tochter Allianz Kommandant</KULTUR>
+        <PROFESSION>Pilot, Hacker, Pirat</PROFESSION>
+        <FREEVALUE4>5-7</FREEVALUE4>
+      </BasisDaten>
+      <Attribute>
+        <MU>
+          <Value>8</Value>
+        </MU>
+        <KL>
+          <Value>8</Value>
+        </KL>
+        <IN>
+          <Value>10</Value>
+        </IN>
+        <CH>
+          <Marked>True</Marked>
+          <Value>9</Value>
+        </CH>
+        <FF>
+          <Marked>True</Marked>
+          <Value>12</Value>
+        </FF>
+        <GE>
+          <Value>9</Value>
+        </GE>
+        <KO>
+          <Value>7</Value>
+        </KO>
+        <KK>
+          <Value>9</Value>
+        </KK>
+        <SO>
+          <Value>0</Value>
+        </SO>
+      </Attribute>
+      <Advanced>
+        <ATTACKE_BASIS>6</ATTACKE_BASIS>
+        <PARADE_BASIS>6</PARADE_BASIS>
+        <FERNKAMPF_BASIS>7</FERNKAMPF_BASIS>
+        <INITATIVE_BASIS>7</INITATIVE_BASIS>
+        <BEHERSCHUNGSWERT>0</BEHERSCHUNGSWERT>
+        <ARTEFAKTKONTROLLE>15</ARTEFAKTKONTROLLE>
+        <WUNDSCHWELLE>4</WUNDSCHWELLE>
+        <ENTRÜCKUNG>0</ENTRÜCKUNG>
+        <GESCHWINDIGKEIT>9</GESCHWINDIGKEIT>
+      </Advanced>
+      <Money>
+        <D>0</D>
+        <S>0</S>
+        <H>0</H>
+        <K>0</K>
+        <BANK>0</BANK>
+      </Money>
+      <Features>
+        <Number0>
           <Name>Bezaubernd(Charismatisch)</Name>
           <Description>Hübsches Äußeres, Redegewand</Description>
           <Value>2</Value>
@@ -77,8 +78,8 @@
           <Energie />
           <Advanced />
           <Talente />
-        </Number1>
-        <Number2>
+        </Number0>
+        <Number1>
           <Name>Zielstrebig</Name>
           <Description>Kann effektiv auf ein Einzelnes Ziel zuarbeiten (schneller)</Description>
           <Value>3</Value>
@@ -88,8 +89,8 @@
           <Energie />
           <Advanced />
           <Talente />
-        </Number2>
-        <Number3>
+        </Number1>
+        <Number2>
           <Name>Selektive Wahrnehmung</Name>
           <Description>Nimmt Details besser wahr</Description>
           <Value>2</Value>
@@ -99,8 +100,8 @@
           <Energie />
           <Advanced />
           <Talente />
-        </Number3>
-        <Number4>
+        </Number2>
+        <Number3>
           <Name>Computerfreak</Name>
           <Description>Kann besonders gut mit Computern Umgehen</Description>
           <Value>2</Value>
@@ -110,8 +111,8 @@
           <Energie />
           <Advanced />
           <Talente />
-        </Number4>
-        <Number5>
+        </Number3>
+        <Number4>
           <Name>Psyionischen Seelenbund Gideon Nesaja</Name>
           <Description>Spürt und Empfindet Emotionen des Anderen (Intensität abhängig) (3155 KM Reichweite)</Description>
           <Value>2</Value>
@@ -121,10 +122,148 @@
           <Energie />
           <Advanced />
           <Talente />
+        </Number4>
+        <Number5>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
         </Number5>
-      </Advantages>
-      <DisAdvantages>
-        <Number1>
+        <Number6>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number6>
+        <Number7>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number7>
+        <Number8>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number8>
+        <Number9>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number9>
+        <Number10>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number10>
+        <Number11>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number11>
+        <Number12>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number12>
+        <Number13>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number13>
+        <Number14>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number14>
+        <Number15>
           <Name>Dickköpfig</Name>
           <Description>Will seinen Willen durchsetzen</Description>
           <Value>2</Value>
@@ -134,8 +273,8 @@
           <Energie />
           <Advanced />
           <Talente />
-        </Number1>
-        <Number2>
+        </Number15>
+        <Number16>
           <Name>Hyperaktiv</Name>
           <Description>Kann nicht nichts tun, nicht still sitzen bleiben (nicht Ungeduldig)</Description>
           <Value>3</Value>
@@ -145,8 +284,8 @@
           <Energie />
           <Advanced />
           <Talente />
-        </Number2>
-        <Number3>
+        </Number16>
+        <Number17>
           <Name>Kein Respekt vor Eigentum</Name>
           <Description>Nimmt und benutzt Dinge die ihr nicht gehören</Description>
           <Value>2</Value>
@@ -156,8 +295,8 @@
           <Energie />
           <Advanced />
           <Talente />
-        </Number3>
-        <Number4>
+        </Number17>
+        <Number18>
           <Name>Sadistisch</Name>
           <Description>Mag es andere Leiden zu sehen</Description>
           <Value>2</Value>
@@ -167,8 +306,8 @@
           <Energie />
           <Advanced />
           <Talente />
-        </Number4>
-        <Number5>
+        </Number18>
+        <Number19>
           <Name>Psyionischen Seelenbund Gideon Nesaja</Name>
           <Description>Spürt und Empfindet Emotionen des Anderen (Intensität abhängig) (3155 KM Reichweite)</Description>
           <Value>2</Value>
@@ -178,318 +317,172 @@
           <Energie />
           <Advanced />
           <Talente />
-        </Number5>
-      </DisAdvantages>
-    </Features>
-    <AdventurePoints>125</AdventurePoints>
-  </HeldenBrief>
-  <TalentBrief>
-    <GeneralTalent>
-      <PHYSICAL>
-        <Talent>
-          <Name>Akrobatik</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Atlethik</Name>
-          <TAW>2</TAW>
-        </Talent>
-        <Talent>
-          <Name>Fahren</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Fliegen</Name>
-          <TAW>6</TAW>
-        </Talent>
-        <Talent>
-          <Name>Holzbearbeitung</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Klettern</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Körperbeherrschung</Name>
-          <TAW>2</TAW>
-        </Talent>
-        <Talent>
-          <Name>Mechanzug.steuern</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Metation</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Schleichen</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Schwimmen</Name>
-          <TAW>5</TAW>
-        </Talent>
-        <Talent>
-          <Name>Selbstbeherrschung</Name>
-          <TAW>2</TAW>
-        </Talent>
-        <Talent>
-          <Name>Sich.Verstecken</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Singen</Name>
-          <TAW>2</TAW>
-        </Talent>
-        <Talent>
-          <Name>Sinnenschärfe</Name>
-          <TAW>4</TAW>
-        </Talent>
-        <Talent>
-          <Name>Stimmen.Imitieren</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Tanzen</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Taschendiebstahl</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Zechen</Name>
-          <TAW>1</TAW>
-        </Talent>
-      </PHYSICAL>
-      <SOCIAL>
-        <Talent>
-          <Name>Betören</Name>
-          <TAW>3</TAW>
-        </Talent>
-        <Talent>
-          <Name>Etikette</Name>
-          <TAW>3</TAW>
-        </Talent>
-        <Talent>
-          <Name>Lehren</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Rassenkentnis</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Schauspielerei</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Schriftlicher.Ausdruck</Name>
-          <TAW>2</TAW>
-        </Talent>
-        <Talent>
-          <Name>Sich.Verkleiden</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Untergrundwissen</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Überreden</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Überzeugen</Name>
-          <TAW>2</TAW>
-        </Talent>
-      </SOCIAL>
-      <NATURE>
-        <Talent>
-          <Name>Fallenstellen</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Fesseln/Entfesseln</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Fischen/Angeln</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Fährtensuchen</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Orientierung</Name>
-          <TAW>2</TAW>
-        </Talent>
-        <Talent>
-          <Name>Wettervorhersage</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Wildnisleben</Name>
-          <TAW>1</TAW>
-        </Talent>
-      </NATURE>
-      <KNOWLDAGE>
-        <Talent>
-          <Name>Anatomie</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Antimateriekunde</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Antriebstechnik</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Baukunst</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Brett-/Kartenspiel</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Elektrizität</Name>
-          <TAW>2</TAW>
-        </Talent>
-        <Talent>
-          <Name>Energiekunde</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Geographie</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Geschichtswissen</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Gravitationskunde</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Götter/Kulte</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Ionenkunde</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Kommunikation</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Kriegskunst</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Kryptographie</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Laserkunde</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Materialkunde</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Mechanik</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Metallkunde</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Mutationskunde</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Nanotechnologie</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Pflanzenkunde</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Phasenkunde</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Philosophie</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Plasmakunde</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Psyionikkunde</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Rechnen</Name>
-          <TAW>2</TAW>
-        </Talent>
-        <Talent>
-          <Name>Rechtskunde</Name>
-          <TAW>2</TAW>
-        </Talent>
-        <Talent>
-          <Name>Robotik</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Sagen/Legenden</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Schiffskunde</Name>
-          <TAW>3</TAW>
-        </Talent>
-        <Talent>
-          <Name>Schildtechnologie</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Schätzen</Name>
-          <TAW>2</TAW>
-        </Talent>
-        <Talent>
-          <Name>Sprachenkunde</Name>
-          <TAW>2</TAW>
-        </Talent>
-        <Talent>
-          <Name>Staatskunst</Name>
-          <TAW>1</TAW>
-        </Talent>
-        <Talent>
-          <Name>Sternkunde</Name>
-          <TAW>2</TAW>
-        </Talent>
-        <Talent>
-          <Name>Tierkunde</Name>
-          <TAW>0</TAW>
-        </Talent>
-        <Talent>
-          <Name>Wellenkunde</Name>
-          <TAW>0</TAW>
-        </Talent>
-      </KNOWLDAGE>
-      <CRAFTING>
+        </Number19>
+        <Number20>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number20>
+        <Number21>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number21>
+        <Number22>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number22>
+        <Number23>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number23>
+        <Number24>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number24>
+        <Number25>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number25>
+        <Number26>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number26>
+        <Number27>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number27>
+        <Number28>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number28>
+        <Number29>
+          <Name>
+          </Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute />
+          <Energie />
+          <Advanced />
+          <Talente />
+        </Number29>
+        <Number30>
+          <Name>Weinachten</Name>
+          <Description>
+          </Description>
+          <Value>
+          </Value>
+          <GP>
+          </GP>
+          <Attribute>
+            <KL>1</KL>
+          </Attribute>
+          <Energie />
+          <Advanced />
+          <Talente>
+            <Talent>
+              <Name>Systemadminstration</Name>
+              <TAW>1</TAW>
+            </Talent>
+          </Talente>
+        </Number30>
+      </Features>
+      <AdventurePoints>125</AdventurePoints>
+    </HeldenBrief>
+    <TalentBrief>
+      <GeneralTalent>
         <Talent>
           <Name>Abrichten</Name>
           <TAW>0</TAW>
@@ -674,12 +667,219 @@
           <Name>Zimmermann</Name>
           <TAW>1</TAW>
         </Talent>
-      </CRAFTING>
-    </GeneralTalent>
-    <FightingTalent>
-      <WEAPONLESS />
-      <CLOSE />
-      <RANGE />
-    </FightingTalent>
-  </TalentBrief>
-</CharacterBogen>
+        <Talent>
+          <Name>Anatomie</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
+          <Name>Baukunst</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
+          <Name>Brett-/Kartenspiel</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Geographie</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Geschichtswissen</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Götter/Kulte</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Kriegskunst</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
+          <Name>Kryptographie</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
+          <Name>Mechanik</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Pflanzenkunde</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
+          <Name>Philosophie</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
+          <Name>Rechnen</Name>
+          <TAW>2</TAW>
+        </Talent>
+        <Talent>
+          <Name>Rechtskunde</Name>
+          <TAW>2</TAW>
+        </Talent>
+        <Talent>
+          <Name>Sagen/Legenden</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Schätzen</Name>
+          <TAW>2</TAW>
+        </Talent>
+        <Talent>
+          <Name>Sprachenkunde</Name>
+          <TAW>2</TAW>
+        </Talent>
+        <Talent>
+          <Name>Staatskunst</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Sternkunde</Name>
+          <TAW>2</TAW>
+        </Talent>
+        <Talent>
+          <Name>Tierkunde</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
+          <Name>Fallenstellen</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
+          <Name>Fesseln/Entfesseln</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Fischen/Angeln</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
+          <Name>Fährtensuchen</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
+          <Name>Orientierung</Name>
+          <TAW>2</TAW>
+        </Talent>
+        <Talent>
+          <Name>Wettervorhersage</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
+          <Name>Wildnisleben</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Akrobatik</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
+          <Name>Athletik</Name>
+          <TAW>-</TAW>
+        </Talent>
+        <Talent>
+          <Name>Fliegen</Name>
+          <TAW>6</TAW>
+        </Talent>
+        <Talent>
+          <Name>Klettern</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Körperbeherrschung</Name>
+          <TAW>2</TAW>
+        </Talent>
+        <Talent>
+          <Name>Mechanzug.steuern</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
+          <Name>Metation</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
+          <Name>Schleichen</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Schwimmen</Name>
+          <TAW>5</TAW>
+        </Talent>
+        <Talent>
+          <Name>Selbstbeherrschung</Name>
+          <TAW>2</TAW>
+        </Talent>
+        <Talent>
+          <Name>Sich.Verstecken</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Singen</Name>
+          <TAW>2</TAW>
+        </Talent>
+        <Talent>
+          <Name>Sinnenschärfe</Name>
+          <TAW>4</TAW>
+        </Talent>
+        <Talent>
+          <Name>Stimmen.Imitieren</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
+          <Name>Tanzen</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Taschendiebstahl</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Zechen</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Betören</Name>
+          <TAW>3</TAW>
+        </Talent>
+        <Talent>
+          <Name>Etikette</Name>
+          <TAW>3</TAW>
+        </Talent>
+        <Talent>
+          <Name>Lehren</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Rassenkentnis</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Schauspielerei</Name>
+          <TAW>0</TAW>
+        </Talent>
+        <Talent>
+          <Name>Schriftlicher.Ausdruck</Name>
+          <TAW>2</TAW>
+        </Talent>
+        <Talent>
+          <Name>Sich.Verkleiden</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Untergrundwissen</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Überreden</Name>
+          <TAW>1</TAW>
+        </Talent>
+        <Talent>
+          <Name>Überzeugen</Name>
+          <TAW>2</TAW>
+        </Talent>
+      </GeneralTalent>
+    </TalentBrief>
+  </CharacterBogen>
+</SaveFile>

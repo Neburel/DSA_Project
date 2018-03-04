@@ -1,0 +1,19 @@
+<TalentLetter>
+  <Talent>
+    <Name>Wurfwaffen</Name>
+    <BE>BE-2</BE>
+    <Probe />
+    <Diverates>
+      <Diverate>
+        <Talent>Granaten</Talent>
+        <Value>
+        </Value>
+      </Diverate>
+    </Diverates>
+    <Requirements />
+    <FightingTalent>
+      <attack>FERNKAMPF_BASIS</attack>
+      <Parade>False</Parade>
+    </FightingTalent>
+  </Talent>
+</TalentLetter>

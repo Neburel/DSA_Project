@@ -16,11 +16,7 @@
     <Diverates>
       <Diverate>
         <Talent>Lesen/Schreiben</Talent>
-        <Value>0</Value>
-      </Diverate>
-      <Diverate>
-        <Talent>Überzeugen (Rhetorik schriftlich)</Talent>
-        <Value>5</Value>
+        <Value>10</Value>
       </Diverate>
     </Diverates>
   </Talent>
