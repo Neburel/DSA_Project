@@ -225,6 +225,9 @@
     <Content Include="Resources\PNP\Talents\FightingTalents\close\Kettenstäbe.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\PNP\Talents\FightingTalents\close\Kettenwaffen.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\FightingTalents\close\Lanzenreiten.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1372,7 +1375,9 @@
     <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Athletik.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Fahren.xml" />
+    <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Fahren.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PNP\Talents\GeneralTalents\physical\Fliegen.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
